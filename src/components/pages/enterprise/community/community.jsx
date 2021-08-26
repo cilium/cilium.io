@@ -15,7 +15,7 @@ const items = [
 ];
 
 const Community = () => (
-  <section className="h-20 py-6 mt-20 md:mt-28 lg:mt-36">
+  <section className="py-6 mt-20 md:mt-28 lg:mt-36">
     <Container className="grid items-center grid-cols-1 justify-items-center lg:justify-items-stretch sm:grid-cols-2 gap-y-4 lg:flex lg:justify-between">
       {items.map(({ icon: Icon, title }, index) => (
         <Link to="/" className="flex items-center space-x-4" key={index}>
