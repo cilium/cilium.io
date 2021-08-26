@@ -26,14 +26,14 @@ export default function Example() {
                 className="relative flex items-center justify-end w-full sm:h-10"
                 aria-label="Global"
               >
-                <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
-                  <div className="flex items-center justify-between w-full md:w-auto">
-                    <div className="flex items-center space-x-8">
+                <div className="flex items-center flex-1 lg:absolute lg:inset-y-0 lg:left-0">
+                  <div className="flex items-center justify-between w-full lg:w-auto">
+                    <div className="flex items-center space-x-4 md:space-x-8">
                       <Link to="/">
                         <span className="sr-only">Workflow</span>
                         <Logo />
                       </Link>
-                      <div className="mt-1">
+                      <div className="mt-1.5">
                         <GitHubButton
                           href="https://github.com/cilium/cilium"
                           data-size="large"
@@ -44,7 +44,7 @@ export default function Example() {
                         </GitHubButton>
                       </div>
                     </div>
-                    <div className="flex items-center -mr-2 md:hidden">
+                    <div className="flex items-center -mr-2 lg:hidden">
                       <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md bg-gray-50 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Open main menu</span>
                         <MenuIcon className="w-6 h-6" aria-hidden="true" />
@@ -52,7 +52,7 @@ export default function Example() {
                     </div>
                   </div>
                 </div>
-                <div className="hidden md:flex md:space-x-11 md:items-center">
+                <div className="hidden lg:flex lg:space-x-11 lg:items-center">
                   <span className="inline-flex rounded-md shadow">
                     <Button size="sm" to="#">
                       Enterprise
@@ -82,7 +82,7 @@ export default function Example() {
               leaveTo="opacity-0 scale-95"
             >
               <Popover.Panel
-                className="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
+                className="absolute inset-x-0 top-0 p-2 transition origin-top-right transform lg:hidden"
                 focus
                 static
               >

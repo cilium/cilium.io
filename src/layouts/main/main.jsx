@@ -5,10 +5,8 @@ import Header from 'components/shared/header';
 
 const MainLayout = ({ children }) => (
   <>
-    <div className="relative overflow-hidden">
-      <Header />
-      <main>{children}</main>
-    </div>
+    <Header />
+    <main>{children}</main>
   </>
 );
 
