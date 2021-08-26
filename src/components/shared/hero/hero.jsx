@@ -19,7 +19,11 @@ const Hero = ({ topText, title, description, illustration }) => (
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </div>
-      <img className="flex-1 my-10 lg:w-1/2 md:my-14 lg:my-0 xl:w-max" src={illustration} alt="" />
+      <img
+        className="flex-1 w-full my-10 lg:w-1/2 md:my-14 lg:my-0 xl:w-max"
+        src={illustration}
+        alt=""
+      />
     </Container>
   </section>
 );
@@ -28,6 +32,7 @@ Hero.propTypes = {
   topText: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  illustration: PropTypes.string.isRequired,
 };
 
 export default Hero;
