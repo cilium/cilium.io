@@ -45,7 +45,7 @@ export default function Example() {
                       </div>
                     </div>
                     <div className="flex items-center -mr-2 lg:hidden">
-                      <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md bg-gray-50 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                      <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md bg-gray-50 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
                         <span className="sr-only">Open main menu</span>
                         <MenuIcon className="w-6 h-6" aria-hidden="true" />
                       </Popover.Button>
@@ -82,21 +82,17 @@ export default function Example() {
               leaveTo="opacity-0 scale-95"
             >
               <Popover.Panel
-                className="absolute inset-x-0 top-0 p-2 transition origin-top-right transform lg:hidden"
+                className="absolute inset-x-0 top-0 z-10 p-2 transition origin-top-right transform lg:hidden"
                 focus
                 static
               >
                 <div className="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
                   <div className="flex items-center justify-between px-5 pt-4">
                     <div>
-                      <img
-                        className="w-auto h-8"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                        alt=""
-                      />
+                      <Logo className="w-auto h-8" />
                     </div>
                     <div className="-mr-2">
-                      <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                      <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
                         <span className="sr-only">Close menu</span>
                         <XIcon className="w-6 h-6" aria-hidden="true" />
                       </Popover.Button>
@@ -113,12 +109,9 @@ export default function Example() {
                       </a>
                     ))}
                   </div>
-                  <a
-                    href="#"
-                    className="block w-full px-5 py-3 font-medium text-center text-indigo-600 bg-gray-50 hover:bg-gray-100"
-                  >
-                    Log in
-                  </a>
+                  <Button className="flex justify-center w-full" to="/">
+                    Enterprise
+                  </Button>
                 </div>
               </Popover.Panel>
             </Transition>

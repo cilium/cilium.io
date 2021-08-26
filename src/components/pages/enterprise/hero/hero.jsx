@@ -27,7 +27,7 @@ const Hero = () => (
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </div>
-      <img className="flex-1 lg:w-1/2 my-14 lg:my-0 xl:w-max" src={illustration} alt="" />
+      <img className="flex-1 my-10 lg:w-1/2 md:my-14 lg:my-0 xl:w-max" src={illustration} alt="" />
     </Container>
   </section>
 );
