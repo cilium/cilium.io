@@ -3,16 +3,8 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import Link from 'components/shared/link';
 
-import illustration from './images/illustration.svg';
-
-const topText = 'Originally Created by Isovalent';
-const title = 'Cilium Enterprise Distributions & Training';
-const description =
-  '<p>Cilium was originally created by Isovalent and contributed to the CNCF as an incubation-level project in 2021.</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium. All partners comply with the <a href="#">distribution requirements</a> of the Cilium project.</p>';
-
-const Hero = () => (
+const Hero = ({ topText, title, description, illustration }) => (
   <section className="mt-16">
     <Container className="flex flex-col items-center lg:flex-row lg:space-x-9">
       <div className="flex-1">
@@ -32,8 +24,10 @@ const Hero = () => (
   </section>
 );
 
-Hero.propTypes = {};
-
-Hero.defaultProps = {};
+Hero.propTypes = {
+  topText: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 
 export default Hero;
