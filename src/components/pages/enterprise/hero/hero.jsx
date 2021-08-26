@@ -3,6 +3,7 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import Link from 'components/shared/link';
 
 import illustration from './images/illustration.svg';
 
