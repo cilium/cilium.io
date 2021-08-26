@@ -16,7 +16,7 @@ const Hero = () => (
   <section className="mt-16">
     <Container className="flex flex-col items-center lg:flex-row lg:space-x-9">
       <div className="flex-1">
-        <span className="uppercase tracking-wider leading-none font-bold text-xs text-primary-1 py-2 px-2.5 border-2 border-primary-1 rounded">
+        <span className="inline-block uppercase tracking-wider leading-none font-bold text-xs text-primary-1 py-2 px-2.5 border-2 border-primary-1 rounded">
           {topText}
         </span>
         <Heading className="mt-5" tag="h1" size="lg">
