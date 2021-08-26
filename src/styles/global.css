@@ -5,7 +5,3 @@
     @apply text-base tracking-wide text-black antialiased;
   }
 }
-
-.widget.widget-lg {
-  @apply block;
-}

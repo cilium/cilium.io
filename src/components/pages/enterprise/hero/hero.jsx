@@ -9,7 +9,7 @@ import illustration from './images/illustration.svg';
 const topText = 'Originally Created by Isovalent';
 const title = 'Cilium Enterprise Distributions & Training';
 const description =
-  '<p>Cilium was originally created by Isovalent and contributed to the CNCF as an incubation-level project in 2021</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium. All partners comply with the distribution requirements of the Cilium project.</p>';
+  '<p>Cilium was originally created by Isovalent and contributed to the CNCF as an incubation-level project in 2021.</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium. All partners comply with the <a href="#">distribution requirements</a> of the Cilium project.</p>';
 
 const Hero = () => (
   <section className="mt-16">
@@ -21,9 +21,12 @@ const Hero = () => (
         <Heading className="mt-5" tag="h1" size="lg">
           {title}
         </Heading>
-        <div className="mt-5 space-y-5 text-lg" dangerouslySetInnerHTML={{ __html: description }} />
+        <div
+          className="mt-5 space-y-5 text-lg with-link-primary"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
-      <img className="flex-1 lg:w-1/2 my-14 lg:mt-0 xl:w-max" src={illustration} alt="" />
+      <img className="flex-1 lg:w-1/2 my-14 lg:my-0 xl:w-max" src={illustration} alt="" />
     </Container>
   </section>
 );

@@ -1,0 +1,9 @@
+@tailwind components;
+
+@layer components {
+  .with-link-primary {
+    a {
+      @apply text-primary-1 font-medium;
+    }
+  }
+}
