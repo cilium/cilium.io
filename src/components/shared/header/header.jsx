@@ -1,66 +1,75 @@
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import React, { Fragment } from 'react';
+import GitHubButton from 'react-github-btn';
+
+import Logo from 'images/logo.inline.svg';
+
+import Button from '../button';
+import Container from '../container';
+import Link from '../link';
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Blog', href: '#' },
+  { name: 'Slack', href: '#' },
+  { name: 'Documentation', href: '#' },
 ];
 
 export default function Example() {
   return (
-    <div className="relative pt-6 pb-6">
+    <div className="relative py-5">
       <Popover>
         {({ open }) => (
           <>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <Container size="lg">
               <nav
-                className="relative flex items-center justify-between sm:h-10 md:justify-center"
+                className="relative flex items-center justify-end w-full sm:h-10"
                 aria-label="Global"
               >
                 <div className="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
-                    <a href="#">
-                      <span className="sr-only">Workflow</span>
-                      <img
-                        className="h-8 w-auto sm:h-10"
-                        src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                        alt=""
-                      />
-                    </a>
-                    <div className="-mr-2 flex items-center md:hidden">
-                      <Popover.Button className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                    <div className="flex items-center space-x-8">
+                      <Link to="/">
+                        <span className="sr-only">Workflow</span>
+                        <Logo />
+                      </Link>
+                      <div className="mt-1">
+                        <GitHubButton
+                          href="https://github.com/cilium/cilium"
+                          data-size="large"
+                          data-color-scheme="light"
+                          data-show-count
+                        >
+                          Github Stars
+                        </GitHubButton>
+                      </div>
+                    </div>
+                    <div className="flex items-center -mr-2 md:hidden">
+                      <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md bg-gray-50 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Open main menu</span>
-                        <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                        <MenuIcon className="w-6 h-6" aria-hidden="true" />
                       </Popover.Button>
                     </div>
                   </div>
                 </div>
-                <div className="hidden md:flex md:space-x-10">
+                <div className="hidden md:flex md:space-x-11 md:items-center">
+                  <span className="inline-flex rounded-md shadow">
+                    <Button size="sm" to="#">
+                      Enterprise
+                    </Button>
+                  </span>
                   {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="font-medium text-gray-500 hover:text-gray-900"
+                      className="font-bold leading-none text-black hover:text-gray-900"
                     >
                       {item.name}
                     </a>
                   ))}
                 </div>
-                <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-                  <span className="inline-flex rounded-md shadow">
-                    <a
-                      href="#"
-                      className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
-                    >
-                      Log in
-                    </a>
-                  </span>
-                </div>
               </nav>
-            </div>
+            </Container>
 
             <Transition
               show={open}
@@ -73,23 +82,23 @@ export default function Example() {
               leaveTo="opacity-0 scale-95"
             >
               <Popover.Panel
-                className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                className="absolute inset-x-0 top-0 p-2 transition origin-top-right transform md:hidden"
                 focus
                 static
               >
-                <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-                  <div className="px-5 pt-4 flex items-center justify-between">
+                <div className="overflow-hidden bg-white rounded-lg shadow-md ring-1 ring-black ring-opacity-5">
+                  <div className="flex items-center justify-between px-5 pt-4">
                     <div>
                       <img
-                        className="h-8 w-auto"
+                        className="w-auto h-8"
                         src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                         alt=""
                       />
                     </div>
                     <div className="-mr-2">
-                      <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                      <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Close menu</span>
-                        <XIcon className="h-6 w-6" aria-hidden="true" />
+                        <XIcon className="w-6 h-6" aria-hidden="true" />
                       </Popover.Button>
                     </div>
                   </div>
@@ -98,7 +107,7 @@ export default function Example() {
                       <a
                         key={item.name}
                         href={item.href}
-                        className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                        className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
                       >
                         {item.name}
                       </a>
@@ -106,7 +115,7 @@ export default function Example() {
                   </div>
                   <a
                     href="#"
-                    className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
+                    className="block w-full px-5 py-3 font-medium text-center text-indigo-600 bg-gray-50 hover:bg-gray-100"
                   >
                     Log in
                   </a>
