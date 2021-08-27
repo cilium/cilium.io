@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Community from 'components/pages/enterprise/community';
+import Footer from 'components/pages/enterprise/footer';
 import Hero from 'components/shared/hero';
 import illustration from 'images/shared/hero/illustration-enterprise.svg';
 import MainLayout from 'layouts/main';
@@ -16,7 +16,7 @@ const hero = {
 const IndexPage = () => (
   <MainLayout>
     <Hero {...hero} />
-    <Community />
+    <Footer />
   </MainLayout>
 );
 

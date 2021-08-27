@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Learn from 'components/pages/learn/learn';
 import Hero from 'components/shared/hero';
 import illustration from 'images/shared/hero/illustration-learn.svg';
 import MainLayout from 'layouts/main';
@@ -15,6 +16,7 @@ const hero = {
 const IndexPage = () => (
   <MainLayout>
     <Hero {...hero} />
+    <Learn />
   </MainLayout>
 );
 
