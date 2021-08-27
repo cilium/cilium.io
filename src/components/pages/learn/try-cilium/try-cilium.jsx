@@ -27,7 +27,7 @@ const items = [
 ];
 
 const TryCilium = () => (
-  <section className="pt-24 pb-28 bg-gray-3">
+  <section className="pt-24 mt-28 pb-28 bg-gray-3">
     <Container>
       <Heading tag="h2">{title}</Heading>
       <p className="mt-5 text-lg">{description}</p>

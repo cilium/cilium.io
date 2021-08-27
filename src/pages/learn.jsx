@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Learn from 'components/pages/learn/learn';
+import RelatedProjects from 'components/pages/learn/related-projects';
 import TryCilium from 'components/pages/learn/try-cilium';
 import Hero from 'components/shared/hero';
 import illustration from 'images/shared/hero/illustration-learn.svg';
@@ -14,12 +15,13 @@ const hero = {
   illustration,
 };
 
-const IndexPage = () => (
+const LearnPage = () => (
   <MainLayout>
     <Hero {...hero} />
     <Learn />
     <TryCilium />
+    <RelatedProjects />
   </MainLayout>
 );
 
-export default IndexPage;
+export default LearnPage;

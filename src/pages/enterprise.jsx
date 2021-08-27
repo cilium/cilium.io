@@ -13,11 +13,11 @@ const hero = {
   illustration,
 };
 
-const IndexPage = () => (
+const EnterprisePage = () => (
   <MainLayout>
     <Hero {...hero} />
     <Footer />
   </MainLayout>
 );
 
-export default IndexPage;
+export default EnterprisePage;

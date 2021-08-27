@@ -20,7 +20,7 @@ const FeaturedBlogs = ({ className }) => (
     </Heading>
     <div className="mt-4">
       {items.map(({ linkUrl, linkText }, index) => (
-        <div className="py-6 border-b border-gray-2 last:border-none" key={index}>
+        <div className="py-6 border-b last:pb-0 border-gray-2 last:border-none" key={index}>
           <Link className="flex items-center space-x-4" to={linkUrl}>
             <StarIcon className="flex-shrink-0" />
             <span className="text-xl font-medium">{linkText}</span>
