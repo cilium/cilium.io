@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Learn from 'components/pages/learn/learn';
+import TryCilium from 'components/pages/learn/try-cilium';
 import Hero from 'components/shared/hero';
 import illustration from 'images/shared/hero/illustration-learn.svg';
 import MainLayout from 'layouts/main';
@@ -17,6 +18,7 @@ const IndexPage = () => (
   <MainLayout>
     <Hero {...hero} />
     <Learn />
+    <TryCilium />
   </MainLayout>
 );
 
