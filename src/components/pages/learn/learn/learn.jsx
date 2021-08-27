@@ -4,9 +4,8 @@ import React from 'react';
 import CardItem from 'components/shared/card-item';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import Link from 'components/shared/link';
+import ListWithIcon from 'components/shared/list-with-icon';
 
-import FeaturedBlogs from './featured-blogs';
 import ConceptsIcon from './images/concepts.inline.svg';
 import IntroductionIcon from './images/introduction.inline.svg';
 import NetworkingIcon from './images/networking.inline.svg';
@@ -36,6 +35,16 @@ const items = [
   },
 ];
 
+const featuredBlogs = {
+  title: 'Featured Blogs',
+  items: [
+    { linkUrl: '/', linkText: 'What is Cilium?' },
+    { linkUrl: '/', linkText: 'What is eBPF?' },
+    { linkUrl: '/', linkText: 'eBPF - The Future of Networking & Security' },
+    { linkUrl: '/', linkText: 'GKE Dataplane v2' },
+  ],
+};
+
 const Learn = () => (
   <section className="mt-28">
     <Container>
@@ -59,7 +68,7 @@ const Learn = () => (
             allowFullScreen
           />
         </div>
-        <FeaturedBlogs className="col-start-8 col-end-13" />
+        <ListWithIcon {...featuredBlogs} className="col-start-8 col-end-13" />
       </div>
       <div className="grid grid-cols-12 mt-20 gap-x-8">
         <Podcasts className="col-span-6" />

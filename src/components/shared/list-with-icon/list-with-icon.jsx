@@ -5,15 +5,7 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import StarIcon from 'icons/star.inline.svg';
 
-const title = 'Featured Blogs';
-const items = [
-  { linkUrl: '/', linkText: 'What is Cilium?' },
-  { linkUrl: '/', linkText: 'What is eBPF?' },
-  { linkUrl: '/', linkText: 'eBPF - The Future of Networking & Security' },
-  { linkUrl: '/', linkText: 'GKE Dataplane v2' },
-];
-
-const FeaturedBlogs = ({ className }) => (
+const ListWithIcon = ({ className, title, items }) => (
   <div className={className}>
     <Heading tag="h3" theme="gray">
       {title}
@@ -21,9 +13,9 @@ const FeaturedBlogs = ({ className }) => (
     <div className="mt-4">
       {items.map(({ linkUrl, linkText }, index) => (
         <div className="py-6 border-b last:pb-0 border-gray-2 last:border-none" key={index}>
-          <Link className="flex items-center space-x-4" to={linkUrl}>
+          <Link className="flex space-x-4" to={linkUrl}>
             <StarIcon className="flex-shrink-0" />
-            <span className="text-xl font-medium">{linkText}</span>
+            <span className="text-xl pt-1.5 font-medium">{linkText}</span>
           </Link>
         </div>
       ))}
@@ -31,12 +23,19 @@ const FeaturedBlogs = ({ className }) => (
   </div>
 );
 
-FeaturedBlogs.propTypes = {
+ListWithIcon.propTypes = {
   className: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      linkUrl: PropTypes.string.isRequired,
+      linkText: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
-FeaturedBlogs.defaultProps = {
+ListWithIcon.defaultProps = {
   className: null,
 };
 
-export default FeaturedBlogs;
+export default ListWithIcon;

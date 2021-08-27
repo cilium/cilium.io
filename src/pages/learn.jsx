@@ -1,5 +1,6 @@
 import React from 'react';
 
+import InstallDeploy from 'components/pages/learn/install-deploy';
 import Learn from 'components/pages/learn/learn';
 import RelatedProjects from 'components/pages/learn/related-projects';
 import TryCilium from 'components/pages/learn/try-cilium';
@@ -21,6 +22,7 @@ const LearnPage = () => (
     <Learn />
     <TryCilium />
     <RelatedProjects />
+    <InstallDeploy />
   </MainLayout>
 );
 
