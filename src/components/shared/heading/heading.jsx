@@ -11,7 +11,7 @@ const sizeClassNames = {
 };
 
 const themeClassNames = {
-  gray: 'text-base lg:text-base uppercase text-gray-5 leading-none font-semibold tracking-wide',
+  gray: '!text-base lg:text-base uppercase text-gray-5 leading-none lg:leading-none font-semibold tracking-wide',
 };
 
 const Heading = ({ className: additionalClassName, tag: Tag, size, theme, asHTML, children }) => {

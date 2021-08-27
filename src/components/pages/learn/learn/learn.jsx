@@ -46,17 +46,17 @@ const featuredBlogs = {
 };
 
 const Learn = () => (
-  <section className="mt-28">
+  <section className="mt-20 lg:mt-28">
     <Container>
       <Heading tag="h2">{title}</Heading>
-      <p className="mt-5">{description}</p>
-      <div className="grid grid-cols-3 gap-x-8 mt-14">
+      <p className="mt-5 text-lg">{description}</p>
+      <div className="grid grid-cols-1 gap-8 mt-10 lg:grid-cols-3 lg:mt-14">
         {items.map((item, index) => (
           <CardItem {...item} key={index} />
         ))}
       </div>
-      <div className="grid grid-cols-12 mt-20 gap-x-8">
-        <div className="col-span-6">
+      <div className="grid grid-cols-1 mt-16 lg:mt-20 lg:grid-cols-12 gap-x-8 gap-y-10">
+        <div className="lg:col-span-6 relative pb-[56.25%] order-1 lg:order-none h-0 overflow-hidden">
           <iframe
             width="592"
             height="333"
@@ -64,15 +64,15 @@ const Learn = () => (
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            className="rounded-lg"
+            className="absolute top-0 left-0 w-full h-full rounded-lg"
             allowFullScreen
           />
         </div>
-        <ListWithIcon {...featuredBlogs} className="col-start-8 col-end-13" />
+        <ListWithIcon {...featuredBlogs} className="lg:col-start-7 lg:col-end-13 xl:col-start-8" />
       </div>
-      <div className="grid grid-cols-12 mt-20 gap-x-8">
-        <Podcasts className="col-span-6" />
-        <UserStories className="col-start-8 col-end-13" />
+      <div className="grid grid-cols-1 mt-16 lg:mt-20 lg:grid-cols-12 gap-x-8 gap-y-16">
+        <Podcasts className="lg:col-span-6" />
+        <UserStories className="lg:col-end-13 lg:col-start-7 xl:col-start-8" />
       </div>
     </Container>
   </section>

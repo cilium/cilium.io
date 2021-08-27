@@ -42,21 +42,21 @@ const RelatedProjects = () => {
   `);
   const images = { image1, image2 };
   return (
-    <section className="mt-28">
+    <section className="mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{title}</Heading>
         <p className="mt-5 text-lg">{description}</p>
-        <div className="grid grid-cols-2 gap-8 mt-14">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 mt-14">
           {items.map(({ imageName, title, text, linkUrl, linkText }, index) => {
             const image = images[imageName];
             return (
               <div key={index}>
-                <GatsbyImage className="" image={getImage(image)} alt="" />
+                <GatsbyImage className="w-full h-auto" image={getImage(image)} alt="" />
                 <Heading className="mt-7" tag="h3" size="sm">
                   {title}
                 </Heading>
                 <p
-                  className="mt-4 text-lg max-w-[542px]"
+                  className="mt-4 text-lg md:max-w-[542px]"
                   dangerouslySetInnerHTML={{ __html: text }}
                 />
                 <Link className="mt-5" type="arrow" theme="primary" to={linkUrl}>

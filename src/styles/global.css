@@ -2,6 +2,6 @@
 
 @layer base {
   body {
-    @apply text-base tracking-wide text-black antialiased;
+    @apply text-base text-black antialiased;
   }
 }

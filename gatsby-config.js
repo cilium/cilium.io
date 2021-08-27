@@ -73,7 +73,8 @@ module.exports = {
     },
     'gatsby-alias-imports',
     'gatsby-plugin-postcss',
-    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-sitemap',
+    'gatsby-plugin-image',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

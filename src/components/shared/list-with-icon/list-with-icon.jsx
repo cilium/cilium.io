@@ -10,12 +10,12 @@ const ListWithIcon = ({ className, title, items }) => (
     <Heading tag="h3" theme="gray">
       {title}
     </Heading>
-    <div className="mt-4">
+    <div className="mt-2.5">
       {items.map(({ linkUrl, linkText }, index) => (
-        <div className="py-6 border-b last:pb-0 border-gray-2 last:border-none" key={index}>
+        <div className="py-4 border-b lg:py-6 last:pb-0 border-gray-2 last:border-none" key={index}>
           <Link className="flex space-x-4" to={linkUrl}>
             <StarIcon className="flex-shrink-0" />
-            <span className="text-xl pt-1.5 font-medium">{linkText}</span>
+            <span className="text-lg lg:text-xl pt-1.5 font-medium">{linkText}</span>
           </Link>
         </div>
       ))}
