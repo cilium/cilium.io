@@ -8,14 +8,7 @@ import createMetaImagePath from 'utils/create-meta-image-path';
 const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) => {
   const {
     site: {
-      siteMetadata: {
-        siteTitle,
-        siteDescription,
-        siteUrl,
-        siteImage,
-        siteLanguage,
-        authorTwitterAccount,
-      },
+      siteMetadata: { siteTitle, siteDescription, siteUrl, siteImage, siteLanguage },
     },
   } = useStaticQuery(graphql`
     query SEO {
@@ -26,17 +19,15 @@ const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) 
           siteUrl
           siteImage
           siteLanguage
-          authorTwitterAccount
         }
       }
     }
   `);
 
-  const currentTitle = title || siteTitle;
-  const currentDescription = description || siteDescription;
+  const currentTitle = title ?? siteTitle;
+  const currentDescription = description ?? siteDescription;
   const currentUrl = slug ? `${siteUrl}/${slug}` : siteUrl;
-  const currentImage = image || siteImage;
-  const currentImagePath = createMetaImagePath(currentImage, siteUrl);
+  const currentImagePath = image ? createMetaImagePath(image, siteUrl) : siteUrl + siteImage;
 
   return (
     <Helmet
@@ -56,8 +47,7 @@ const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) 
       <meta property="og:type" content="website" />
       {facebook && <meta property="fb:app_id" content={facebook.appId} />}
       {/* Twitter Card tags */}
-      <meta name="twitter:card" content="summary" />
-      <meta name="twitter:creator" content={authorTwitterAccount} />
+      <meta name="twitter:card" content="summary_large_image" />
     </Helmet>
   );
 };

@@ -8,6 +8,7 @@ import TryCilium from 'components/pages/learn/try-cilium';
 import Hero from 'components/shared/hero';
 import illustration from 'images/shared/hero/illustration-learn.svg';
 import MainLayout from 'layouts/main';
+import SeoMetadata from 'utils/seo-metadata';
 
 const hero = {
   topText: 'Originally Created by Isovalent',
@@ -18,7 +19,7 @@ const hero = {
 };
 
 const LearnPage = () => (
-  <MainLayout>
+  <MainLayout pageMetadata={SeoMetadata.learn}>
     <Hero {...hero} />
     <Learn />
     <TryCilium />

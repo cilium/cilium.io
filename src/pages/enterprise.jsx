@@ -4,6 +4,7 @@ import Footer from 'components/pages/enterprise/footer';
 import Hero from 'components/shared/hero';
 import illustration from 'images/shared/hero/illustration-enterprise.svg';
 import MainLayout from 'layouts/main';
+import SeoMetadata from 'utils/seo-metadata';
 
 const hero = {
   topText: 'Originally Created by Isovalent',
@@ -14,7 +15,7 @@ const hero = {
 };
 
 const EnterprisePage = () => (
-  <MainLayout>
+  <MainLayout pageMetadata={SeoMetadata.enterprise}>
     <Hero {...hero} />
     <Footer />
   </MainLayout>

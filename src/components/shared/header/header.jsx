@@ -40,7 +40,7 @@ export default function Example() {
                           data-color-scheme="light"
                           data-show-count
                         >
-                          Github Stars
+                          GitHub Stars
                         </GitHubButton>
                       </div>
                     </div>
