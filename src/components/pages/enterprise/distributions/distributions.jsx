@@ -37,7 +37,7 @@ const Distributions = () => (
             <Heading tag="h3" size="sm">
               {title}
             </Heading>
-            <p className="mt-3 lg:text-lg">{description}</p>
+            <p className="mt-3 text-lg">{description}</p>
             <Link className="mt-6 lg:mt-8" type="arrow" theme="primary" to={linkUrl}>
               {linkText}
             </Link>

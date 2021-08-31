@@ -2,6 +2,7 @@ import React from 'react';
 
 import Distributions from 'components/pages/enterprise/distributions';
 import Footer from 'components/pages/enterprise/footer';
+import Training from 'components/pages/enterprise/training';
 import Hero from 'components/shared/hero';
 import illustration from 'images/shared/hero/illustration-enterprise.svg';
 import MainLayout from 'layouts/main';
@@ -19,6 +20,7 @@ const EnterprisePage = () => (
   <MainLayout pageMetadata={SeoMetadata.enterprise}>
     <Hero {...hero} />
     <Distributions />
+    <Training />
     <Footer />
   </MainLayout>
 );
