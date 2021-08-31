@@ -24,7 +24,7 @@ const Community = () => (
         {items.map(({ icon: Icon, title }, index) => (
           <Link
             to="/"
-            className="flex flex-col items-center px-8 pb-8 border-2 rounded-lg lg:pb-10 pt-7 border-gray-2"
+            className="flex flex-col items-center px-8 pb-8 border-2 rounded-lg lg:pb-10 pt-7 border-gray-3"
             key={index}
           >
             <Icon className="w-10 h-10" />

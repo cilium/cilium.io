@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Distributions from 'components/pages/enterprise/distributions';
 import Footer from 'components/pages/enterprise/footer';
 import Hero from 'components/shared/hero';
 import illustration from 'images/shared/hero/illustration-enterprise.svg';
@@ -17,6 +18,7 @@ const hero = {
 const EnterprisePage = () => (
   <MainLayout pageMetadata={SeoMetadata.enterprise}>
     <Hero {...hero} />
+    <Distributions />
     <Footer />
   </MainLayout>
 );

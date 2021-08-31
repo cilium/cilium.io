@@ -27,14 +27,14 @@ const items = [
 ];
 
 const TryCilium = () => (
-  <section className="pt-16 pb-20 mt-20 lg:pt-24 lg:mt-28 lg:pb-28 bg-gray-3">
+  <section className="pt-16 pb-20 mt-20 lg:pt-24 lg:mt-28 lg:pb-28 bg-gray-4">
     <Container>
       <Heading tag="h2">{title}</Heading>
       <p className="mt-5 text-lg">{description}</p>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 mt-14">
         {items.map(({ icon: Icon, name, text, buttonUrl, buttonText }, index) => (
           <div
-            className="flex flex-col items-center px-8 pt-12 bg-white border rounded-lg pb-11 border-gray-2"
+            className="flex flex-col items-center px-8 pt-12 bg-white border rounded-lg pb-11 border-gray-3"
             key={index}
           >
             <Icon />

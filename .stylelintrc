@@ -14,6 +14,7 @@
           "extends",
           "tailwind",
           "layer",
+          "variants"
         ]
       }
     ],
@@ -27,6 +28,7 @@
           "extends",
           "tailwind",
           "layer",
+          "variants"
         ]
       }
     ]

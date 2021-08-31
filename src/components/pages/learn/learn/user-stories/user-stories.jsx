@@ -21,7 +21,7 @@ const UserStories = ({ className }) => (
     <div className="mt-8 lg:mt-10 grid auto-rows-[140px] grid-cols-1 xs:grid-cols-2 gap-8">
       {items.map(({ url, logo: Logo }, index) => (
         <Link
-          className="relative flex items-center justify-center border rounded-lg border-gray-2 bg-gray-0"
+          className="relative flex items-center justify-center border rounded-lg border-gray-3"
           key={index}
           to={url}
         >
