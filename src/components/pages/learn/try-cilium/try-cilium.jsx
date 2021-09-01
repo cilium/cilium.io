@@ -14,8 +14,9 @@ const items = [
     icon: GuideSvg,
     name: 'Getting Started Guide',
     text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    buttonUrl: '/',
+    buttonUrl: 'https://docs.cilium.io/en/stable/gettingstarted/k8s-install-default/',
     buttonText: 'Start Learn Cilium',
+    buttonTarget: '_blank',
   },
   {
     icon: InstallFestSvg,
@@ -32,7 +33,7 @@ const TryCilium = () => (
       <Heading tag="h2">{title}</Heading>
       <p className="mt-5 text-lg">{description}</p>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 mt-14">
-        {items.map(({ icon: Icon, name, text, buttonUrl, buttonText }, index) => (
+        {items.map(({ icon: Icon, name, text, buttonUrl, buttonText, buttonTarget }, index) => (
           <div
             className="flex flex-col items-center px-8 pt-12 bg-white border rounded-lg pb-11 border-gray-3"
             key={index}
@@ -42,7 +43,7 @@ const TryCilium = () => (
               {name}
             </Heading>
             <p className="text-lg text-center mt-2.5">{text}</p>
-            <Button className="mt-5" to={buttonUrl}>
+            <Button className="mt-5" target={buttonTarget || ''} to={buttonUrl}>
               {buttonText}
             </Button>
           </div>

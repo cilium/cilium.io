@@ -10,7 +10,6 @@ import ConceptsIcon from './images/concepts.inline.svg';
 import IntroductionIcon from './images/introduction.inline.svg';
 import NetworkingIcon from './images/networking.inline.svg';
 import Logos from './logos';
-import Podcasts from './podcasts';
 import UserStories from './user-stories';
 
 const title = 'Learn about Cilium & eBPF';
@@ -26,12 +25,13 @@ const items = [
     icon: ConceptsIcon,
     name: 'Concepts & Architectures',
     linkUrl: '/',
-    linkText: 'Watch video',
+    linkText: 'Register',
   },
   {
     icon: NetworkingIcon,
     name: 'The Future of eBPF based Networking and Security',
-    linkUrl: '/',
+    linkUrl: 'https://www.youtube.com/watch?v=vNuEx0wB_-4',
+    linkTarget: '_blank',
     linkText: 'Watch video',
   },
 ];
@@ -40,9 +40,17 @@ const featuredBlogs = {
   title: 'Featured Blogs',
   items: [
     { linkUrl: '/', linkText: 'What is Cilium?' },
-    { linkUrl: '/', linkText: 'What is eBPF?' },
-    { linkUrl: '/', linkText: 'eBPF - The Future of Networking & Security' },
-    { linkUrl: '/', linkText: 'GKE Dataplane v2' },
+    { linkUrl: 'https://ebpf.io/what-is-ebpf/', linkTarget: '_blank', linkText: 'What is eBPF?' },
+    {
+      linkUrl: 'https://cilium.io/blog/2020/11/10/ebpf-future-of-networking/',
+      linkText: 'eBPF - The Future of Networking & Security',
+    },
+    {
+      linkUrl:
+        'https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebpf-and-cilium-to-google-kubernetes-engine',
+      linkTarget: '_blank',
+      linkText: 'GKE Dataplane v2',
+    },
   ],
 };
 

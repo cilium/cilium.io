@@ -12,10 +12,10 @@ import SkyLogo from './images/sky.inline.svg';
 
 const title = 'User stories';
 const items = [
-  { url: '/', logo: DatadogLogo },
-  { url: '/', logo: CapitalOneLogo },
+  { url: 'https://www.youtube.com/watch?v=6mTVuZUHLBg', target: '_blank', logo: DatadogLogo },
+  { url: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w', target: '_blank', logo: CapitalOneLogo },
   { url: '/', logo: BellLogo },
-  { url: '/', logo: SkyLogo },
+  { url: 'https://www.youtube.com/watch?v=u-4naOMfs_w', target: '_blank', logo: SkyLogo },
 ];
 const UserStories = ({ className }) => (
   <div className={className}>
@@ -23,10 +23,11 @@ const UserStories = ({ className }) => (
       {title}
     </Heading>
     <div className="mt-8 lg:mt-10 grid auto-rows-[140px] grid-cols-1 xs:grid-cols-2 gap-8">
-      {items.map(({ url, logo: Logo }, index) => (
+      {items.map(({ url, target, logo: Logo }, index) => (
         <Link
           className="relative flex items-center justify-center border rounded-lg border-gray-3"
           key={index}
+          target={target || ''}
           to={url}
         >
           <Logo />

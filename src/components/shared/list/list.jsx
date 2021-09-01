@@ -10,9 +10,9 @@ const List = ({ className, title, items }) => (
       {title}
     </Heading>
     <div className="mt-2.5">
-      {items.map(({ linkUrl, linkText }, index) => (
+      {items.map(({ linkUrl, linkTarget, linkText }, index) => (
         <div className="py-4 border-b lg:py-6 last:pb-0 border-gray-3 last:border-none" key={index}>
-          <Link to={linkUrl}>
+          <Link target={linkTarget || ''} to={linkUrl}>
             <span className="text-lg lg:text-xl pt-1.5 font-medium">{linkText}</span>
           </Link>
         </div>
@@ -28,6 +28,7 @@ List.propTypes = {
     PropTypes.shape({
       linkUrl: PropTypes.string.isRequired,
       linkText: PropTypes.string.isRequired,
+      linkTarget: PropTypes.string,
     })
   ).isRequired,
 };
