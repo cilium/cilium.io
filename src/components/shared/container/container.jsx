@@ -5,7 +5,8 @@ import React from 'react';
 const commonClassNames = 'relative mx-auto px-4 md:px-6 lg:px-10 xl:px-0';
 
 const sizeClassNames = {
-  md: ' max-w-[1216px]',
+  sm: 'max-w-[1008px]',
+  md: 'max-w-[1216px]',
   lg: 'max-w-[1472px] xl:px-10 2xl:px-0',
 };
 
@@ -21,7 +22,7 @@ const Container = ({ className: additionalClassName, size, children, ...otherPro
 
 Container.propTypes = {
   className: PropTypes.string,
-  size: PropTypes.oneOf(['md', 'lg']),
+  size: PropTypes.oneOf(['sm', 'md', 'lg']),
   children: PropTypes.node.isRequired,
 };
 

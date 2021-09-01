@@ -23,7 +23,7 @@ const items = [
     name: 'Weekly InstallFest',
     text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
     buttonUrl: '/',
-    buttonText: 'Check Calendly',
+    buttonText: 'Register',
   },
 ];
 
@@ -39,7 +39,7 @@ const TryCilium = () => (
             key={index}
           >
             <Icon />
-            <Heading className="mt-16" size="sm" tag="h3">
+            <Heading className="!leading-normal mt-17" size="sm" tag="h3">
               {name}
             </Heading>
             <p className="text-lg text-center mt-2.5">{text}</p>

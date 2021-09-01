@@ -13,7 +13,9 @@ const List = ({ className, title, items }) => (
       {items.map(({ linkUrl, linkTarget, linkText }, index) => (
         <div className="py-4 border-b lg:py-6 last:pb-0 border-gray-3 last:border-none" key={index}>
           <Link target={linkTarget || ''} to={linkUrl}>
-            <span className="text-lg lg:text-xl pt-1.5 font-medium">{linkText}</span>
+            <span className="text-lg lg:text-xl lg:leading-normal pt-1.5 font-medium">
+              {linkText}
+            </span>
           </Link>
         </div>
       ))}

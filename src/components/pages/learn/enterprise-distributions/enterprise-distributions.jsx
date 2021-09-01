@@ -30,7 +30,7 @@ const EnterpriseDistributions = () => (
           <Heading size="sm" tag="h3">
             {card.title}
           </Heading>
-          <ul className="mt-4 prose prose-lg">
+          <ul className="mt-3 space-y-2">
             {card.items.map((item, index) => (
               <li
                 className="text-lg pl-4 relative before:absolute before:w-1.5 before:h-1.5 before:bg-black before:rounded-full before:left-0 before:top-1/2 before:-translate-y-1/2"

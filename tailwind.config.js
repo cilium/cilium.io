@@ -35,6 +35,9 @@ module.exports = {
           4: '#F6F7F8',
         },
       },
+      spacing: {
+        17: '4.375rem', // 70px
+      },
     },
   },
   variants: {
