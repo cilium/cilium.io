@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Community from 'components/pages/learn/community';
+import EnterpriseDistributions from 'components/pages/learn/enterprise-distributions';
 import InstallDeploy from 'components/pages/learn/install-deploy';
 import Learn from 'components/pages/learn/learn';
 import RelatedProjects from 'components/pages/learn/related-projects';
@@ -23,6 +24,7 @@ const LearnPage = () => (
     <Hero {...hero} />
     <Learn />
     <TryCilium />
+    <EnterpriseDistributions />
     <RelatedProjects />
     <InstallDeploy />
     <Community />

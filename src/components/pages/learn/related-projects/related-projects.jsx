@@ -46,7 +46,7 @@ const RelatedProjects = () => {
       <Container>
         <Heading tag="h2">{title}</Heading>
         <p className="mt-5 text-lg">{description}</p>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 mt-14">
+        <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:mt-14">
           {items.map(({ imageName, title, text, linkUrl, linkText }, index) => {
             const image = images[imageName];
             return (

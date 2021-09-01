@@ -5,13 +5,17 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import Arrow from 'icons/arrow.inline.svg';
 
-import CapitalOneLogo from './logos/capitalone.inline.svg';
-import DatadogLogo from './logos/datadog.inline.svg';
+import BellLogo from './images/bell.inline.svg';
+import CapitalOneLogo from './images/capitalone.inline.svg';
+import DatadogLogo from './images/datadog.inline.svg';
+import SkyLogo from './images/sky.inline.svg';
 
 const title = 'User stories';
 const items = [
   { url: '/', logo: DatadogLogo },
   { url: '/', logo: CapitalOneLogo },
+  { url: '/', logo: BellLogo },
+  { url: '/', logo: SkyLogo },
 ];
 const UserStories = ({ className }) => (
   <div className={className}>

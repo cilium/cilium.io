@@ -4,11 +4,12 @@ import React from 'react';
 import CardItem from 'components/shared/card-item';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import ListWithIcon from 'components/shared/list-with-icon';
+import List from 'components/shared/list';
 
 import ConceptsIcon from './images/concepts.inline.svg';
 import IntroductionIcon from './images/introduction.inline.svg';
 import NetworkingIcon from './images/networking.inline.svg';
+import Logos from './logos';
 import Podcasts from './podcasts';
 import UserStories from './user-stories';
 
@@ -56,24 +57,10 @@ const Learn = () => (
         ))}
       </div>
       <div className="grid grid-cols-1 mt-16 lg:mt-20 lg:grid-cols-12 gap-x-8 gap-y-10">
-        <div className="lg:col-span-6 relative pb-[56.25%] order-1 lg:order-none h-0 overflow-hidden">
-          <iframe
-            width="592"
-            height="333"
-            src="https://www.youtube.com/embed/ELyib78vjRY"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            className="absolute top-0 left-0 w-full h-full rounded-lg"
-            allowFullScreen
-          />
-        </div>
-        <ListWithIcon {...featuredBlogs} className="lg:col-start-7 lg:col-end-13 xl:col-start-8" />
+        <UserStories className="lg:col-span-5" />
+        <List {...featuredBlogs} className="lg:col-start-7 lg:col-end-12" />
       </div>
-      <div className="grid grid-cols-1 mt-16 lg:mt-20 lg:grid-cols-12 gap-x-8 gap-y-16">
-        <Podcasts className="lg:col-span-6" />
-        <UserStories className="lg:col-end-13 lg:col-start-7 xl:col-start-8" />
-      </div>
+      <Logos className="mt-14 lg:mt-20" />
     </Container>
   </section>
 );
