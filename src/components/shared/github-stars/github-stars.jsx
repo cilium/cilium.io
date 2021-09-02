@@ -1,14 +1,11 @@
 import PropTypes from 'prop-types';
-import React, { useState, useLayoutEffect, useEffect } from 'react';
+import React, { useState, useLayoutEffect } from 'react';
 
-import useWindowSize from 'hooks/use-window-size';
 import GithubLogo from 'icons/github.inline.svg';
 
 import Link from '../link';
 
-const MOBILE_WIDTH = 414;
-
-const FALLBACK_COUNT = 10800;
+const FALLBACK_COUNT = 9000;
 
 const fetchGithubStartsCount = async (cb) => {
   try {
@@ -21,20 +18,11 @@ const fetchGithubStartsCount = async (cb) => {
 };
 
 const GithubStars = ({ className }) => {
-  const { width } = useWindowSize();
-  const [githubButtonText, setGitHubButtonText] = useState();
   const [count, setCount] = useState(FALLBACK_COUNT);
   useLayoutEffect(() => {
     fetchGithubStartsCount(setCount);
   }, []);
 
-  useEffect(() => {
-    if (width < MOBILE_WIDTH) {
-      setGitHubButtonText('GitHub');
-    } else {
-      setGitHubButtonText('GitHub Stars');
-    }
-  }, [width]);
   return (
     <div className={className}>
       <Link
@@ -47,7 +35,7 @@ const GithubStars = ({ className }) => {
       >
         <div className="flex items-center px-2 xs:px-3 border-r h-full border-gray-3 space-x-1.5">
           <GithubLogo className="w-5 h-5" />
-          <span>{githubButtonText}</span>
+          <span>GitHub Stars</span>
         </div>
         <div className="px-2 text-black xs:px-3">
           <span>{`${(count / 1000).toFixed(1)}k`}</span>
