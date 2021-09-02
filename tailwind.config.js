@@ -33,14 +33,11 @@ module.exports = {
           2: '#A7B1BE',
           3: '#E0E5EB',
           4: '#F6F7F8',
+          5: '#D1D7E0',
         },
         hover: {
           1: '#3399FF',
-          2: '#7A3DF5',
         },
-      },
-      spacing: {
-        17: '4.375rem', // 70px
       },
     },
   },

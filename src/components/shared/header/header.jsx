@@ -53,7 +53,7 @@ export default function Example() {
                   </div>
                 </div>
                 <div className="hidden lg:flex lg:space-x-11 lg:items-center">
-                  <span className="inline-flex rounded-md shadow">
+                  <span className="inline-flex rounded-md">
                     <Button size="sm" to="/enterprise">
                       Enterprise
                     </Button>

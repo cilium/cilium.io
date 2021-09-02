@@ -34,18 +34,17 @@ const TryCilium = () => (
       <p className="mt-5 text-lg">{description}</p>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-2 mt-14">
         {items.map(({ icon: Icon, name, text, buttonUrl, buttonText, buttonTarget }, index) => (
-          <div
-            className="flex flex-col items-center px-8 pt-12 bg-white border rounded-lg pb-11 border-gray-3"
-            key={index}
-          >
+          <div className="bg-white border rounded-lg border-gray-3" key={index}>
             <Icon />
-            <Heading className="!leading-normal mt-17" size="sm" tag="h3">
-              {name}
-            </Heading>
-            <p className="text-lg text-center mt-2.5">{text}</p>
-            <Button className="mt-5" target={buttonTarget || ''} to={buttonUrl}>
-              {buttonText}
-            </Button>
+            <div className="flex flex-col items-center px-8 pt-6 pb-11 ">
+              <Heading className="!leading-normal" size="sm" tag="h3">
+                {name}
+              </Heading>
+              <p className="text-lg text-center mt-2.5">{text}</p>
+              <Button className="mt-5" target={buttonTarget || ''} to={buttonUrl}>
+                {buttonText}
+              </Button>
+            </div>
           </div>
         ))}
       </div>

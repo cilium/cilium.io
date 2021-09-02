@@ -11,11 +11,12 @@ const themeClassNames = {
   text: {
     common: 'transition-colors duration-200',
     black: 'text-black hover:text-gray-1',
-    primary: ' uppercase text-primary-1 text-sm hover:text-hover-2 tracking-wider',
+    'black-primary': 'text-black hover:text-primary-1',
+    primary: ' uppercase text-primary-1 text-sm hover:text-gray-1 tracking-wider',
   },
   arrow: {
     common: 'inline-flex items-center text-sm tracking-wider uppercase',
-    primary: 'text-primary-1 hover:text-hover-2',
+    primary: 'text-primary-1 hover:text-gray-1',
   },
 };
 
@@ -28,9 +29,7 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
   );
 
   const content = type === 'arrow' ? <span>{children}</span> : children;
-  const arrow = type === 'arrow' && (
-    <ArrowIcon className="transition-transform ease-out duration-150 ml-2.5 group-hover:translate-x-2" />
-  );
+  const arrow = type === 'arrow' && <ArrowIcon className="ml-2.5" />;
 
   if (to.startsWith('/')) {
     return (

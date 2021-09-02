@@ -25,7 +25,7 @@ const UserStories = ({ className }) => (
     <div className="mt-8 lg:mt-10 grid auto-rows-[140px] grid-cols-1 xs:grid-cols-2 gap-8">
       {items.map(({ url, target, logo: Logo }, index) => (
         <Link
-          className="relative flex items-center justify-center border rounded-lg border-gray-3"
+          className="relative flex items-center justify-center border rounded-lg bg-gray-4 border-gray-3 hover:border-gray-5"
           theme="primary"
           type="text"
           key={index}

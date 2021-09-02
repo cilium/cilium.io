@@ -45,7 +45,7 @@ const Community = () => (
           <Link
             to={url}
             target={target}
-            className="flex flex-col items-center pb-8 border-2 rounded-lg px-7 lg:pb-10 pt-7 border-gray-3"
+            className="flex flex-col items-center pb-8 border rounded-lg px-7 lg:pb-10 pt-7 border-gray-3"
             key={index}
             type="text"
             theme="black"

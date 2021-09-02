@@ -1,9 +1,50 @@
-<svg width="266" height="98" viewBox="0 0 266 98" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect y="76" width="10" height="10" rx="2" fill="#EB4748"/>
-<rect x="256" y="12" width="10" height="10" rx="2" fill="#0080FF"/>
-<path d="M53 17C53 25.8366 60.1634 33 69 33L85 33L85 17C85 8.16344 77.8366 1 69 1C60.1634 1 53 8.16345 53 17Z" fill="white" stroke="#6C7993" stroke-width="2"/>
-<path d="M213 81C213 72.1634 205.837 65 197 65L181 65L181 81C181 89.8366 188.163 97 197 97C205.837 97 213 89.8366 213 81Z" fill="white" stroke="#6C7993" stroke-width="2"/>
-<rect x="101" y="17" width="64" height="64" rx="32" fill="white" stroke="#FFBF00" stroke-width="2"/>
-<circle cx="133" cy="49" r="13" fill="#141A1F"/>
-<path d="M133 42V48.9994L138.021 51.9384" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<svg width="592" height="194" viewBox="0 0 592 194" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="592" height="194">
+<rect width="592" height="194" fill="url(#paint0_radial)"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="-24" y="1" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="40" y="1" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="104" y="1" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="168" y="1" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="232" y="1" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="296" y="1" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="360" y="1" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="424" y="1" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="488" y="1" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="552" y="1" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="-24" y="65" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="40" y="65" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="104" y="65" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="168" y="65" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="232" y="65" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="296" y="65" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="360" y="65" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="424" y="65" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="488" y="65" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="552" y="65" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="-24" y="129" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="40" y="129" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="104" y="129" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="168" y="129" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="232" y="129" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="296" y="129" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="360" y="129" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="424" y="129" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="488" y="129" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+<rect x="552" y="129" width="64" height="64" stroke="#E0E5EB" stroke-width="2"/>
+</g>
+<rect x="163" y="124" width="10" height="10" rx="2" fill="#EB4748"/>
+<rect x="419" y="60" width="10" height="10" rx="2" fill="#0080FF"/>
+<path d="M216 65C216 73.8366 223.163 81 232 81L248 81L248 65C248 56.1634 240.837 49 232 49C223.163 49 216 56.1634 216 65Z" fill="white" stroke="#A7B1BE" stroke-width="2"/>
+<path d="M376 129C376 120.163 368.837 113 360 113L344 113L344 129C344 137.837 351.163 145 360 145C368.837 145 376 137.837 376 129Z" fill="white" stroke="#A7B1BE" stroke-width="2"/>
+<rect x="264" y="65" width="64" height="64" rx="32" fill="white" stroke="#FFBF00" stroke-width="2"/>
+<circle cx="296" cy="97" r="13" fill="#141A1F"/>
+<path d="M296 90V96.9994L301.021 99.9384" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(296 97) rotate(90) scale(97 296)">
+<stop stop-color="#C4C4C4"/>
+<stop offset="0.868724" stop-color="#C4C4C4" stop-opacity="0"/>
+</radialGradient>
+</defs>
 </svg>
