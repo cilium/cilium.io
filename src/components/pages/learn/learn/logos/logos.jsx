@@ -37,7 +37,7 @@ const Logos = ({ className }) => (
     <div className="flex flex-wrap justify-center gap-y-6 lg:gap-y-8 xl:justify-between gap-x-12 lg:gap-x-20">
       {logos1.map((logo, index) => {
         const Logo = logo;
-        return <Logo key={index} />;
+        return <Logo className="w-auto h-10" key={index} />;
       })}
     </div>
   </div>
