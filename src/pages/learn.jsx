@@ -21,7 +21,7 @@ const hero = {
 
 const LearnPage = () => (
   <MainLayout pageMetadata={SeoMetadata.learn}>
-    <Hero {...hero} />
+    <Hero className="mt-16 lg:mt-28" {...hero} />
     <Learn />
     <TryCilium />
     <EnterpriseDistributions />
