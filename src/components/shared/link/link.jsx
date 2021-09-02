@@ -5,16 +5,17 @@ import React from 'react';
 
 import ArrowIcon from 'icons/arrow.inline.svg';
 
-const commonClassNames = 'font-bold leading-none text-sm tracking-wider uppercase group';
+const commonClassNames = 'font-bold leading-none group';
 
 const themeClassNames = {
   text: {
     common: 'transition-colors duration-200',
-    primary: 'text-primary-1',
+    black: 'text-black hover:text-gray-1',
+    primary: ' uppercase text-primary-1 text-sm hover:text-hover-2 tracking-wider',
   },
   arrow: {
-    common: 'inline-flex items-center',
-    primary: 'text-primary-1',
+    common: 'inline-flex items-center text-sm tracking-wider uppercase',
+    primary: 'text-primary-1 hover:text-hover-2',
   },
 };
 

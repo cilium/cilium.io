@@ -5,7 +5,7 @@ import React from 'react';
 import Link from 'components/shared/link';
 
 const commonClassNames =
-  'inline-flex font-bold text-white bg-primary-1 !leading-none whitespace-nowrap rounded outline-none transition-colors duration-200';
+  'inline-flex font-bold text-white bg-primary-1 !leading-none whitespace-nowrap rounded outline-none transition-colors duration-200 hover:bg-hover-1';
 
 const sizeClassNames = {
   sm: 'text-base py-2.5 px-3.5',

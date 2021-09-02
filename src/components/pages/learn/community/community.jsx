@@ -26,9 +26,11 @@ const Community = () => (
             to="/"
             className="flex flex-col items-center px-8 pb-8 border-2 rounded-lg lg:pb-10 pt-7 border-gray-3"
             key={index}
+            type="text"
+            theme="black"
           >
             <Icon className="w-10 h-10" />
-            <span className="mt-5 font-bold text-center xl:leading-none">{title}</span>
+            <span className="mt-5 text-base font-bold text-center xl:leading-none">{title}</span>
           </Link>
         ))}
       </div>

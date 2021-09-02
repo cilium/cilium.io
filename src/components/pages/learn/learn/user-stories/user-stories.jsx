@@ -26,12 +26,14 @@ const UserStories = ({ className }) => (
       {items.map(({ url, target, logo: Logo }, index) => (
         <Link
           className="relative flex items-center justify-center border rounded-lg border-gray-3"
+          theme="primary"
+          type="text"
           key={index}
           target={target || ''}
           to={url}
         >
           <Logo />
-          <Arrow className="absolute bottom-2.5 w-5 h-auto right-2.5 text-primary-1" />
+          <Arrow className="absolute bottom-2.5 w-5 h-auto right-2.5 1" />
         </Link>
       ))}
     </div>

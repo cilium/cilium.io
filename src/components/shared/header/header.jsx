@@ -59,13 +59,15 @@ export default function Example() {
                     </Button>
                   </span>
                   {navigation.map((item) => (
-                    <a
+                    <Link
+                      type="text"
+                      theme="black"
                       key={item.name}
-                      href={item.href}
-                      className="font-bold leading-none text-black hover:text-gray-900"
+                      to={item.href}
+                      className="text-base font-bold leading-none "
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </nav>

@@ -3,7 +3,7 @@
 @layer components {
   .with-link-primary {
     a {
-      @apply text-primary-1 font-medium;
+      @apply text-primary-1 font-medium hover:text-hover-2 duration-200 transition-colors;
     }
   }
 }

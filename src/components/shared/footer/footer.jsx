@@ -18,9 +18,9 @@ const Footer = () => (
   <footer className="py-6 mt-20 lg:mt-28">
     <Container className="grid items-center grid-cols-1 justify-items-center lg:justify-items-stretch sm:grid-cols-2 gap-y-4 lg:flex lg:justify-between">
       {items.map(({ icon: Icon, title }, index) => (
-        <Link to="/" className="flex items-center space-x-4" key={index}>
+        <Link type="text" theme="black" to="/" className="flex items-center space-x-4" key={index}>
           <Icon />
-          <span className="font-bold leading-none">{title}</span>
+          <span className="text-base font-bold leading-none">{title}</span>
         </Link>
       ))}
     </Container>
