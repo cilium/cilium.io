@@ -20,7 +20,7 @@ const Hero = ({ className, topText, title, description, illustration }) => (
         />
       </div>
       <img
-        className="flex-1 w-full my-10 lg:right-10 xl:right-0 lg:-translate-y-1/2 md:max-w-[720px] lg:max-w-[470px] xl:max-w-max lg:absolute lg:top-1/2  md:my-14 lg:my-0 xl:w-max"
+        className="flex-1 w-full my-10 lg:right-10 xl:right-0 lg:-translate-y-1/2 md:max-w-[720px] lg:max-w-[450px] xl:max-w-max lg:absolute lg:top-1/2  md:my-14 lg:my-0 xl:w-max"
         src={illustration}
         alt=""
       />
