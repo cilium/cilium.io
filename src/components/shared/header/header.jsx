@@ -10,9 +10,9 @@ import Container from '../container';
 import Link from '../link';
 
 const navigation = [
-  { name: 'Blog', href: '#' },
-  { name: 'Slack', href: '#' },
-  { name: 'Documentation', href: '#' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Slack', target: '_blank', href: 'https://cilium.herokuapp.com/' },
+  { name: 'Documentation', href: 'https://docs.cilium.io/' },
 ];
 
 export default function Example() {
@@ -54,7 +54,7 @@ export default function Example() {
                 </div>
                 <div className="hidden lg:flex lg:space-x-11 lg:items-center">
                   <span className="inline-flex rounded-md shadow">
-                    <Button size="sm" to="#">
+                    <Button size="sm" to="/enterprise">
                       Enterprise
                     </Button>
                   </span>
@@ -64,7 +64,8 @@ export default function Example() {
                       theme="black"
                       key={item.name}
                       to={item.href}
-                      className="text-base font-bold leading-none "
+                      target={item.target || ''}
+                      className="text-base font-bold leading-none"
                     >
                       {item.name}
                     </Link>
@@ -102,16 +103,19 @@ export default function Example() {
                   </div>
                   <div className="px-2 pt-2 pb-3">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
-                        className="block px-3 py-2 text-base font-medium text-gray-700 rounded-md hover:text-gray-900 hover:bg-gray-50"
+                        to={item.href}
+                        target={item.target}
+                        theme="black"
+                        type="text"
+                        className="block px-3 py-2 text-base font-medium rounded-md"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
-                  <Button className="flex justify-center w-full" to="/">
+                  <Button className="flex justify-center w-full" to="/enterprise">
                     Enterprise
                   </Button>
                 </div>
