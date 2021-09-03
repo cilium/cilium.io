@@ -7,7 +7,7 @@ const commonClassNames = 'font-bold';
 const sizeClassNames = {
   lg: 'text-4xl lg:text-5xl',
   md: 'text-3xl lg:text-4xl',
-  sm: 'text-2xl lg:text-3xl',
+  sm: 'text-2xl lg:text-3xl font-semibold',
 };
 
 const themeClassNames = {
