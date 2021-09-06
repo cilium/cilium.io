@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from 'components/shared/button';
@@ -12,7 +11,7 @@ const items = [
     author: 'by Isovalent',
     title: 'Getting started with Cilium',
     buttonUrl: '/',
-    buttonText: 'Learn more',
+    buttonText: 'Coming soon',
   },
 ];
 const Training = () => (

@@ -25,7 +25,7 @@ const items = [
     icon: ConceptsIcon,
     name: 'Cilium Introduction / AMA <br> Thomas Graf, CO-Founder Cilium',
     linkUrl: '/',
-    linkText: 'Register',
+    linkText: 'Coming soon',
   },
   {
     icon: NetworkingIcon,
