@@ -21,7 +21,7 @@ const items = [
     icon: InstallFestSvg,
     name: 'Weekly InstallFest',
     text: 'Join us at our weekly InstallFest Meetup, learn and discuss how to setup and get started with Cilium.',
-    buttonUrl: '/',
+    buttonUrl: '',
     buttonText: 'Coming soon',
   },
 ];

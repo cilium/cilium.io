@@ -10,7 +10,7 @@ const items = [
   {
     author: 'by Isovalent',
     title: 'Getting started with Cilium',
-    buttonUrl: '/',
+    buttonUrl: '',
     buttonText: 'Coming soon',
   },
 ];
