@@ -13,7 +13,7 @@ const featuredBlogs = {
   items: [
     {
       linkUrl: 'https://cilium.io/blog/2021/05/11/cni-benchmark',
-      linkText: 'CNI Benchmark: Understanding Cilium Network Performance',
+      linkText: 'CNI Benchmark',
     },
     {
       linkUrl: 'https://isovalent.com/blog/post/its-dns',
