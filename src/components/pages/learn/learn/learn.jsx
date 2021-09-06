@@ -17,7 +17,8 @@ const items = [
   {
     icon: IntroductionIcon,
     name: 'Introduction to Cilium',
-    linkUrl: '/',
+    linkUrl: 'https://www.youtube.com/watch?v=80OYrzS1dCA&t=405s',
+    linkTarget: '_blank',
     linkText: 'Watch video',
   },
   {
@@ -38,8 +39,6 @@ const items = [
 const featuredBlogs = {
   title: 'Featured Blogs',
   items: [
-    { linkUrl: '/', linkText: 'What is Cilium?' },
-    { linkUrl: 'https://ebpf.io/what-is-ebpf/', linkTarget: '_blank', linkText: 'What is eBPF?' },
     {
       linkUrl: 'https://cilium.io/blog/2020/11/10/ebpf-future-of-networking/',
       linkText: 'eBPF - The Future of Networking & Security',

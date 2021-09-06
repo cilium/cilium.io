@@ -12,10 +12,9 @@ import MainLayout from 'layouts/main';
 import SeoMetadata from 'utils/seo-metadata';
 
 const hero = {
-  topText: 'Originally Created by Isovalent',
-  title: 'Cilium Getting Started',
+  title: 'What is Cilium?',
   description:
-    '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor purus non enim praesent elementum facilisis</p>',
+    '<p>Cilium is open source software for cloud native networking, security and observability. Cilium provides and secures networking between the applications running in the containers on the Kubernetes of your choice, on the public cloud you are using today.</p><p>Technically Cilium can operate at two different layers: Layer 3/4 is used to provide traditional networking and security services as well as loadbalancing. At Layer 7 Cilium protects and secures modern application protocols such as HTTP, gRPC and Kafka.</p>',
   illustration,
 };
 

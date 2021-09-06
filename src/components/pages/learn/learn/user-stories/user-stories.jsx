@@ -14,7 +14,7 @@ const title = 'User stories';
 const items = [
   { url: 'https://www.youtube.com/watch?v=6mTVuZUHLBg', target: '_blank', logo: DatadogLogo },
   { url: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w', target: '_blank', logo: CapitalOneLogo },
-  { url: '/', logo: BellLogo },
+  { url: 'https://www.youtube.com/watch?v=fNtG0iHYne4', target: '_blank', logo: BellLogo },
   { url: 'https://www.youtube.com/watch?v=u-4naOMfs_w', target: '_blank', logo: SkyLogo },
 ];
 const UserStories = ({ className }) => (

@@ -8,10 +8,12 @@ const Hero = ({ className, topText, title, description, illustration }) => (
   <section className={className}>
     <Container className="flex flex-col items-center lg:flex-row">
       <div className="flex-1 lg:max-w-[490px] xl:max-w-[592px]">
-        <span className="inline-block uppercase tracking-wider leading-none font-bold text-xs text-primary-1 py-2 px-2.5 border-2 border-primary-1 rounded">
-          {topText}
-        </span>
-        <Heading className="mt-5" tag="h1" size="lg">
+        {topText && (
+          <span className="inline-block mb-5 uppercase tracking-wider leading-none font-bold text-xs text-primary-1 py-2 px-2.5 border-2 border-primary-1 rounded">
+            {topText}
+          </span>
+        )}
+        <Heading tag="h1" size="lg">
           {title}
         </Heading>
         <div

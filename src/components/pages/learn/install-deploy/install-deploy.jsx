@@ -11,10 +11,19 @@ const title = 'Install & Deploy Cilium';
 const featuredBlogs = {
   title: 'Featured Blogs',
   items: [
-    { linkUrl: '/', linkText: 'How to monitor Cilium Deployments' },
-    { linkUrl: '/', linkText: 'Troubleshooting Network Issues' },
-    { linkUrl: '/', linkText: 'CNI Benchmark: Understanding Cilium Network Performance' },
-    { linkUrl: '/', linkText: 'Troubleshooting Network Issues' },
+    {
+      linkUrl: 'https://cilium.io/blog/2021/05/11/cni-benchmark',
+      linkText: 'CNI Benchmark: Understanding Cilium Network Performance',
+    },
+    {
+      linkUrl: 'https://isovalent.com/blog/post/its-dns',
+      linkTarget: '_blank',
+      linkText: 'Troubleshooting DNS Issues',
+    },
+    {
+      linkUrl: 'https://cilium.io/blog/2020/10/06/skybet-cilium-migration',
+      linkText: 'How to perform a CNI Live Migration from Flannel+Calico to Cilium',
+    },
   ],
 };
 
