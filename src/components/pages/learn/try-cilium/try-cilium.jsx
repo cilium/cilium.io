@@ -35,7 +35,7 @@ const TryCilium = () => (
           <div className="flex flex-col bg-white border rounded-lg border-gray-3" key={index}>
             <Icon className="w-full h-auto" />
             <div className="flex flex-col items-center px-8 pt-6 pb-11 ">
-              <Heading className="!leading-normal" size="sm" tag="h3">
+              <Heading className="!leading-normal text-center" size="sm" tag="h3">
                 {name}
               </Heading>
               <p className="text-lg text-center mt-2.5">{text}</p>
