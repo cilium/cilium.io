@@ -56,7 +56,7 @@ const Distributions = () => (
                     className="flex space-x-4 md:flex-col md:space-x-0 md:space-y-4 xl:space-y-0 xl:space-x-4 xl:flex-row"
                     key={index}
                   >
-                    <Icon className="flex-shrink-0" />
+                    <Icon className="flex-shrink-0 w-14 h-14 xs:w-max xs:h-auto" />
                     <span
                       className="font-bold flat-breaks lg:flat-none"
                       dangerouslySetInnerHTML={{ __html: name }}
