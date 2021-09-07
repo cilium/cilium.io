@@ -11,7 +11,7 @@ import SeoMetadata from 'utils/seo-metadata';
 const hero = {
   title: 'Cilium Enterprise Distributions & Training',
   description:
-    '<p>Cilium was originally created by <a href="https://isovalent.com/" target="_blank" rel="noopener noreferrer">Isovalent</a> and contributed to the CNCF as an incubation-level project in 2021.</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium. All partners comply with the <a href="#">distribution requirements</a> of the Cilium project.</p>',
+    '<p>Cilium was originally created by <a href="https://isovalent.com/" target="_blank" rel="noopener noreferrer">Isovalent</a> and contributed to the CNCF as an incubation-level project in 2021.</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium.</p>',
   illustration,
 };
 
