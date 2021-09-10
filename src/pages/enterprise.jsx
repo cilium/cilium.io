@@ -20,7 +20,6 @@ const EnterprisePage = () => (
     <Hero className="mt-16 lg:mt-28" {...hero} />
     <Distributions />
     <Training />
-    <Footer />
   </MainLayout>
 );
 
