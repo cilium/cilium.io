@@ -2,12 +2,13 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import AdobeLogo from './images/logo-adobe.inline.svg';
+import AdobeLogo from 'icons/logo-adobe.inline.svg';
+import GoogleLogo from 'icons/logo-google.inline.svg';
+
 import AlibabaCloudLogo from './images/logo-alibaba-cloud.inline.svg';
 import CengnLogo from './images/logo-cengn.inline.svg';
 import DigitalOceanLogo from './images/logo-digital-ocean.inline.svg';
 import GitlabLogo from './images/logo-gitlab.inline.svg';
-import GoogleLogo from './images/logo-google.inline.svg';
 import MasmovilLogo from './images/logo-masmovil.inline.svg';
 import PalantirLogo from './images/logo-palantir.inline.svg';
 import PostFinanceLogo from './images/logo-post-finance.inline.svg';

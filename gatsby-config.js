@@ -4,8 +4,9 @@ require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
-    siteTitle: 'Pixel Point Gatsby Starter', // <title>
-    siteDescription: 'Site Description',
+    siteTitle: 'Cilium - Linux Native, API-Aware Networking and Security for Containers', // <title>
+    siteDescription:
+      'Linux-Native, API-Aware Networking and Security for Containers. Open source project, Fork me on Github',
     // pathPrefix: "",
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',
