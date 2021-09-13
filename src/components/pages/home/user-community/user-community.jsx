@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/a11y';
-import 'swiper/css/effect-fade';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
@@ -60,9 +59,9 @@ const UserCommunity = () => (
         </button>
         <button
           className="absolute -translate-x-1/2 hidden 2xl:flex 2xl:-right-24 top-[calc(50%-3rem)]"
-          id="button-previous"
+          id="button-next"
           type="button"
-          aria-label="Previous slide"
+          aria-label="Next slide"
         >
           <Chevron />
         </button>
@@ -90,10 +89,6 @@ const UserCommunity = () => (
               slidesPerView: 4,
               slidesPerGroup: 4,
             },
-          }}
-          effect="fade"
-          fadeEffect={{
-            crossFade: true,
           }}
           loop
           watchSlidesProgress
