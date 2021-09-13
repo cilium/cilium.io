@@ -21,8 +21,8 @@ const FeaturedTalks = ({ className }) => (
       {title}
     </Heading>
     <div className="grid grid-cols-1 gap-8 mt-8 lg:mt-10 xs:grid-cols-2">
-      {videoUrls.map((url) => (
-        <Link to={url} target="_blank" rel="noopener noreferrer">
+      {videoUrls.map((url, index) => (
+        <Link key={index} to={url} target="_blank" rel="noopener noreferrer">
           <CardSvg className="w-full h-auto" />
         </Link>
       ))}

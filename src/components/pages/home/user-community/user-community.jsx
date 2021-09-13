@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/a11y';
+import 'swiper/css/effect-fade';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
@@ -18,30 +19,6 @@ SwiperCore.use([Navigation, Pagination, A11y]);
 
 const title = 'User Community';
 const items = [
-  {
-    icon: GoogleLogo,
-    text: 'Google chooses Cilium for Google Kubernetes Engine (GKE) networking',
-    linkText: 'Blog',
-    linkUrl: '/',
-  },
-  {
-    icon: AdobeLogo,
-    text: 'What Makes a Good Multi-tenant Kubernetes Solution',
-    linkText: 'Watch video',
-    linkUrl: '/',
-  },
-  {
-    icon: CapitalOneLogo,
-    text: 'Building a Secure and Maintainable PaaS',
-    linkText: 'Watch video',
-    linkUrl: '/',
-  },
-  {
-    icon: DataDogLogo,
-    text: 'How Datadog uses Cilium',
-    linkText: 'Watch video',
-    linkUrl: '/',
-  },
   {
     icon: GoogleLogo,
     text: 'Google chooses Cilium for Google Kubernetes Engine (GKE) networking',
@@ -113,6 +90,10 @@ const UserCommunity = () => (
               slidesPerView: 4,
               slidesPerGroup: 4,
             },
+          }}
+          effect="fade"
+          fadeEffect={{
+            crossFade: true,
           }}
           loop
           watchSlidesProgress

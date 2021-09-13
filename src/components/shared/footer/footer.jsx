@@ -29,7 +29,7 @@ const Footer = () => (
         {navigation.map((menu, index) => (
           <div className="flex flex-col space-y-6" key={index}>
             {menu.map(({ name, href }) => (
-              <Link theme="black" type="text" to={href}>
+              <Link theme="black" type="text" key={name} to={href}>
                 {name}
               </Link>
             ))}
