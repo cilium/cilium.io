@@ -9,16 +9,15 @@ import MainLayout from 'layouts/main';
 import SeoMetadata from 'utils/seo-metadata';
 
 const hero = {
-  topText: 'Originally Created by Isovalent',
   title: 'Cilium Enterprise Distributions & Training',
   description:
-    '<p>Cilium was originally created by Isovalent and contributed to the CNCF as an incubation-level project in 2021.</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium. All partners comply with the <a href="#">distribution requirements</a> of the Cilium project.</p>',
+    '<p>Cilium was originally created by <a href="https://isovalent.com/" target="_blank" rel="noopener noreferrer">Isovalent</a> and contributed to the CNCF as an incubation-level project in 2021.</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium.</p>',
   illustration,
 };
 
 const EnterprisePage = () => (
   <MainLayout pageMetadata={SeoMetadata.enterprise}>
-    <Hero className="mt-16 lg:mt-20" {...hero} />
+    <Hero className="mt-16 lg:mt-28" {...hero} />
     <Distributions />
     <Training />
     <Footer />

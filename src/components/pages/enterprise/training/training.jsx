@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from 'components/shared/button';
@@ -6,25 +5,13 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
 const title = 'Training';
-const description = `The following partners offer Cilium related training in accordance with the <a href="#">training partner</a> requirements of the Cilium project.`;
+const description = `The following partners offer Cilium related trainings.`;
 const items = [
   {
     author: 'by Isovalent',
     title: 'Getting started with Cilium',
-    buttonUrl: '/',
-    buttonText: 'Learn more',
-  },
-  {
-    author: 'by Cloud Native',
-    title: 'Securing Kubernetes with Network Policies',
-    buttonUrl: '/',
-    buttonText: 'Learn more',
-  },
-  {
-    author: 'by Amazon',
-    title: 'Security & Network Obsrvability for Kubernetes',
-    buttonUrl: '/',
-    buttonText: 'Learn more',
+    buttonUrl: '',
+    buttonText: 'Coming soon',
   },
 ];
 const Training = () => (

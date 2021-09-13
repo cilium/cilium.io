@@ -10,15 +10,18 @@ const title = 'Enterprise Distributions';
 const card = {
   title: 'Isovalent',
   items: ['24/7 Enterprise Support with SLA', 'Hardened, Enterprisegrade, Extended EOL'],
-  linkUrl: '/',
+  linkUrl: '/enterprise',
   linkText: 'Learn more',
 };
 
 const resources = {
   title: 'Resources',
   items: [
-    { linkUrl: '/', linkText: 'Lorem Ipsum is simply dummy text of the printing' },
-    { linkUrl: '/', linkText: 'Lorem Ipsum is simply dummy text of the printing' },
+    {
+      linkUrl: ' https://isovalent.com/blog/post/gartner-cool-vendor',
+      linkTarget: '_blank',
+      linkText: 'Isovalent Named Gartner Cool Vendor',
+    },
   ],
 };
 const EnterpriseDistributions = () => (

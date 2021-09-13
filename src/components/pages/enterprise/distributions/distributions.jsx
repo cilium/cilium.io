@@ -14,7 +14,8 @@ const list = [
   {
     title: 'Isovalent Cilium Enterprise',
     description: 'Enterprise Distribution maintained by the creators of Cilium.',
-    linkUrl: '/',
+    linkUrl: 'https://isovalent.com/',
+    linkTarget: '_blank',
     linkText: 'Learn more',
     items: [
       { name: '24/7 Enterprise <br> Support with SLA' },
@@ -32,13 +33,19 @@ const Distributions = () => (
         {title}
       </Heading>
       <div className="mt-10 lg:mt-14">
-        {list.map(({ title, description, linkUrl, linkText, items }, index) => (
+        {list.map(({ title, description, linkUrl, linkTarget, linkText, items }, index) => (
           <div className="p-8 bg-white border rounded-lg md:p-11 border-gray-3" key={index}>
             <Heading tag="h3" size="sm">
               {title}
             </Heading>
             <p className="mt-2.5 text-lg">{description}</p>
-            <Link className="mt-6 lg:mt-8" type="arrow" theme="primary" to={linkUrl}>
+            <Link
+              className="mt-6 lg:mt-8"
+              type="arrow"
+              theme="primary"
+              target={linkTarget || ''}
+              to={linkUrl}
+            >
               {linkText}
             </Link>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-11">
@@ -49,7 +56,7 @@ const Distributions = () => (
                     className="flex space-x-4 md:flex-col md:space-x-0 md:space-y-4 xl:space-y-0 xl:space-x-4 xl:flex-row"
                     key={index}
                   >
-                    <Icon className="flex-shrink-0" />
+                    <Icon className="flex-shrink-0 w-14 h-14 xs:w-max xs:h-auto" />
                     <span
                       className="font-bold flat-breaks lg:flat-none"
                       dangerouslySetInnerHTML={{ __html: name }}

@@ -13,15 +13,17 @@ const items = [
     imageName: 'image1',
     title: 'Hubble UI',
     text: 'Hubble is a fully distributed networking and security observability platform for cloud native workloads. Hubble is open source software and built on top of Cilium and eBPF to enable deep visibility into the communication and behavior of services as well as the networking infrastructure in a completely transparent manner.',
-    linkUrl: '/',
-    linkText: 'learn more',
+    linkUrl: 'https://docs.cilium.io/en/v1.9/gettingstarted/hubble/',
+    linkTarget: '_blank',
+    linkText: 'Learn more',
   },
   {
     imageName: 'image2',
     title: 'Network Policy Editor',
     text: 'Over the years, we have learned a lot about the common challenges while working with many of you in the Cilium community implementing Kubernetes Network Policy. Networkpolicy.io is a free tool to assist you in your journey to assist you with Kubernetes NetworkPolicy.',
-    linkUrl: '/',
-    linkText: 'learn more',
+    linkUrl: 'https://editor.cilium.io/',
+    linkTarget: '_blank',
+    linkText: 'Learn more',
   },
 ];
 
@@ -47,7 +49,7 @@ const RelatedProjects = () => {
         <Heading tag="h2">{title}</Heading>
         <p className="mt-5 text-lg">{description}</p>
         <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:mt-14">
-          {items.map(({ imageName, title, text, linkUrl, linkText }, index) => {
+          {items.map(({ imageName, title, text, linkUrl, linkText, linkTarget }, index) => {
             const image = images[imageName];
             return (
               <div key={index}>
@@ -59,7 +61,13 @@ const RelatedProjects = () => {
                   className="mt-4 text-lg md:max-w-[542px]"
                   dangerouslySetInnerHTML={{ __html: text }}
                 />
-                <Link className="mt-5" type="arrow" theme="primary" to={linkUrl}>
+                <Link
+                  className="mt-5"
+                  type="arrow"
+                  theme="primary"
+                  target={linkTarget || ''}
+                  to={linkUrl}
+                >
                   {linkText}
                 </Link>
               </div>
