@@ -4,4 +4,28 @@
   body {
     @apply text-base text-black antialiased;
   }
+
+  .rounded-image {
+    img {
+      @apply rounded-lg;
+    }
+  }
+}
+
+.swiper {
+  .swiper-slide {
+    @apply h-auto;
+  }
+
+  .swiper-pagination {
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 space-x-2 z-10 flex;
+  }
+
+  .swiper-pagination-bullet {
+    @apply block w-2.5 h-2.5 rounded-full outline-none bg-gray-3;
+  }
+
+  .swiper-pagination-bullet-active {
+    @apply bg-black;
+  }
 }

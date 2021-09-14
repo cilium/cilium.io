@@ -16,15 +16,13 @@ const items = [
 ];
 const Training = () => (
   <section className="mt-20 lg:mt-28">
-    <Container size="sm">
-      <Heading className="text-center" tag="h2">
-        {title}
-      </Heading>
+    <Container>
+      <Heading tag="h2">{title}</Heading>
       <p
-        className="text-lg text-center with-link-primary max-w-[670px] mx-auto mt-5"
+        className="text-lg with-link-primary max-w-[670px] mt-5"
         dangerouslySetInnerHTML={{ __html: description }}
       />
-      <div className="grid grid-cols-1 mt-10 lg:mt-14 gap-y-8">
+      <div className="grid grid-cols-1 max-w-[1008px] mt-10 lg:mt-14 gap-y-8">
         {items.map(({ author, title, buttonUrl, buttonText }, index) => (
           <div
             className="flex flex-col items-start px-8 py-5 space-y-8 border rounded-lg sm:space-y-0 sm:items-center sm:space-x-8 sm:justify-between sm:flex-row border-gray-3"

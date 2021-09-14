@@ -2,7 +2,7 @@ import React from 'react';
 
 import Distributions from 'components/pages/enterprise/distributions';
 import Training from 'components/pages/enterprise/training';
-import Footer from 'components/shared/footer';
+import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
 import illustration from 'images/shared/hero/illustration-enterprise.svg';
 import MainLayout from 'layouts/main';
@@ -20,7 +20,7 @@ const EnterprisePage = () => (
     <Hero className="mt-16 lg:mt-28" {...hero} />
     <Distributions />
     <Training />
-    <Footer />
+    <Community />
   </MainLayout>
 );
 

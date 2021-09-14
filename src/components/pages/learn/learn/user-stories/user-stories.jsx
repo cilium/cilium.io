@@ -4,11 +4,10 @@ import React from 'react';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import Arrow from 'icons/arrow.inline.svg';
-
-import BellLogo from './images/bell.inline.svg';
-import CapitalOneLogo from './images/capitalone.inline.svg';
-import DatadogLogo from './images/datadog.inline.svg';
-import SkyLogo from './images/sky.inline.svg';
+import BellLogo from 'icons/bell.inline.svg';
+import CapitalOneLogo from 'icons/capitalone.inline.svg';
+import DatadogLogo from 'icons/datadog.inline.svg';
+import SkyLogo from 'icons/sky.inline.svg';
 
 const title = 'User stories';
 const items = [

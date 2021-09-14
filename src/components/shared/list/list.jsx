@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Button from 'components/shared/button';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 
-const List = ({ className, title, items }) => (
+const List = ({ className, title, items, buttonUrl, buttonText }) => (
   <div className={className}>
     <Heading tag="h3" theme="gray">
       {title}
@@ -20,6 +21,11 @@ const List = ({ className, title, items }) => (
         </div>
       ))}
     </div>
+    {buttonUrl && buttonText && (
+      <Button className="mt-10" to={buttonUrl}>
+        {buttonText}
+      </Button>
+    )}
   </div>
 );
 
@@ -33,10 +39,14 @@ List.propTypes = {
       linkTarget: PropTypes.string,
     })
   ).isRequired,
+  buttonUrl: PropTypes.string,
+  buttonText: PropTypes.string,
 };
 
 List.defaultProps = {
   className: null,
+  buttonUrl: null,
+  buttonText: null,
 };
 
 export default List;
