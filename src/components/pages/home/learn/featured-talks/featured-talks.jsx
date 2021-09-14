@@ -9,10 +9,10 @@ import CardSvg from './images/card.inline.svg';
 const title = 'Featured talks';
 
 const videoUrls = [
-  'https://www.youtube.com/embed/ELyib78vjRY',
-  'https://www.youtube.com/embed/ELyib78vjRY',
-  'https://www.youtube.com/embed/ELyib78vjRY',
-  'https://www.youtube.com/embed/ELyib78vjRY',
+  'https://youtu.be/vNuEx0wB_-4',
+  'https://youtu.be/fNtG0iHYne4',
+  'https://youtu.be/u-4naOMfs_w',
+  'https://youtu.be/slBAYUDABDA',
 ];
 
 const FeaturedTalks = ({ className }) => (
