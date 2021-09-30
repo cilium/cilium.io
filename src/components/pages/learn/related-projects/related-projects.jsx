@@ -6,14 +6,14 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 
-const title = 'Related Cilium Projects';
-const description = 'Supercharge Kubernetes with powerful Cilium projects';
+const title = 'Related Projects';
+const description = 'Supercharge Kubernetes with these powerful projects';
 const items = [
   {
     imageName: 'image1',
     title: 'Hubble UI',
     text: 'Hubble is a fully distributed networking and security observability platform for cloud native workloads. Hubble is open source software and built on top of Cilium and eBPF to enable deep visibility into the communication and behavior of services as well as the networking infrastructure in a completely transparent manner.',
-    linkUrl: 'https://docs.cilium.io/en/v1.9/gettingstarted/hubble/',
+    linkUrl: 'https://docs.cilium.io/en/latest/gettingstarted/hubble/',
     linkTarget: '_blank',
     linkText: 'Learn more',
   },
