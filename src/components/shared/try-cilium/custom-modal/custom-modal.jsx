@@ -17,7 +17,6 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     left: '50%',
-    minWidth: '90%',
     padding: '0',
     border: 'none',
     borderRadius: '8px',
@@ -38,14 +37,14 @@ const CustomModal = ({ isModalOpen, setIsModalOpen }) => {
       shouldCloseOnOverlayClick
       onRequestClose={handleCloseModal}
     >
-      <div className="relative flex flex-col items-center p-10 text-center border rounded-lg lg:p-16 border-gray-4">
+      <div className="relative flex min-w-[90%] sm:min-w-max flex-col items-center p-8 sm:p-10 text-center border rounded-lg lg:p-16 border-gray-4">
         <Heading tag="h3" size="sm">
           Choose Timezone
         </Heading>
         <p className="max-w-md mt-2.5">
           Select the appropriate timezone for registration.Then you will be directed to Calendly
         </p>
-        <div className="flex flex-col mt-8 space-y-3 sm:space-y-0 sm:space-x-4 lg:space-x-6 sm:flex-row">
+        <div className="flex flex-col mt-8 space-y-3 xs:space-y-0 xs:space-x-4 lg:space-x-6 xs:flex-row">
           <Button
             to="https://calendly.com/cilium-events/cilium-installfest-emea"
             target="_blank"
