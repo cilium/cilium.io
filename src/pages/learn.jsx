@@ -14,7 +14,7 @@ import SeoMetadata from 'utils/seo-metadata';
 const hero = {
   title: 'What is Cilium?',
   description:
-    '<p>Cilium is open source software for cloud native networking, security and observability. Cilium provides and secures networking between the applications running in the containers on the Kubernetes of your choice, on the public cloud you are using today.</p><p>Technically Cilium can operate at two different layers: Layer 3/4 is used to provide traditional networking and security services as well as loadbalancing. At Layer 7 Cilium protects and secures modern application protocols such as HTTP, gRPC and Kafka.</p>',
+    '<p>Cilium is an open source project to provide networking, security, and observability for cloud native environments such as Kubernetes clusters and other container orchestration platforms.</p><p>At the foundation of Cilium is a new Linux kernel technology called eBPF, which enables the dynamic insertion of powerful security, visibility, and networking control logic into the Linux kernel. eBPF is used to provide high-performance networking, multi-cluster and multi-cloud capabilities, advanced load balancing, transparent encryption, extensive network security capabilities, transparent observability, and much more.</p>',
   illustration,
 };
 
@@ -26,7 +26,7 @@ const tryCilium = {
       name: 'Getting Started Guide',
       text: 'Check out the Cilium documentation to quickly get started on a Kubernetes cluster of your choice.',
       buttonUrl: 'https://docs.cilium.io/en/stable/gettingstarted/k8s-install-default/',
-      buttonText: 'Start Learn Cilium',
+      buttonText: 'Learn more',
       buttonTarget: '_blank',
     },
     {
@@ -34,7 +34,7 @@ const tryCilium = {
       name: 'Weekly InstallFest',
       text: 'Join us at our weekly InstallFest Meetup, learn and discuss how to setup and get started with Cilium.',
       buttonUrl: '',
-      buttonText: 'Coming soon',
+      buttonText: 'Register',
     },
   ],
 };
