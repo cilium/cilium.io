@@ -24,8 +24,9 @@ const items = [
   {
     icon: ConceptsIcon,
     name: 'Cilium Introduction / AMA <br> Thomas Graf, CO-Founder Cilium',
-    linkUrl: '',
-    linkText: 'Coming soon',
+    linkTarget: '_blank',
+    linkUrl: 'https://calendly.com/cilium-events/cilium-introduction',
+    linkText: 'Register',
   },
   {
     icon: NetworkingIcon,
@@ -39,6 +40,11 @@ const items = [
 const featuredBlogs = {
   title: 'Featured Blogs',
   items: [
+    {
+      linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
+      linkTarget: '_blank',
+      linkText: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
+    },
     {
       linkUrl: 'https://cilium.io/blog/2020/11/10/ebpf-future-of-networking/',
       linkText: 'eBPF - The Future of Networking & Security',
