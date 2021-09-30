@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import AdobeLogo from 'icons/logo-adobe.inline.svg';
+import AWSLogo from 'icons/logo-aws.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
 
 import AlibabaCloudLogo from './images/logo-alibaba-cloud.inline.svg';
@@ -24,6 +25,7 @@ const logos1 = [
   AlibabaCloudLogo,
   PostFinanceLogo,
   DigitalOceanLogo,
+  AWSLogo,
   UtmostLogo,
   WildLifeLogo,
   CengnLogo,
