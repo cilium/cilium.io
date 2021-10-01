@@ -6,6 +6,9 @@ import AdobeLogo from 'icons/logo-adobe.inline.svg';
 import AWSLogo from 'icons/logo-aws.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
 
+import Container from '../container';
+import Heading from '../heading';
+
 import AlibabaCloudLogo from './images/logo-alibaba-cloud.inline.svg';
 import CengnLogo from './images/logo-cengn.inline.svg';
 import DigitalOceanLogo from './images/logo-digital-ocean.inline.svg';
@@ -18,7 +21,7 @@ import UtmostLogo from './images/logo-utmost.inline.svg';
 import WildLifeLogo from './images/logo-wild-life.inline.svg';
 import YahooLogo from './images/logo-yahoo.inline.svg';
 
-const logos1 = [
+const logos = [
   PalantirLogo,
   AdobeLogo,
   TripLogo,
@@ -35,15 +38,22 @@ const logos1 = [
   GitlabLogo,
 ];
 
-const Logos = ({ className }) => (
-  <div className={classNames(className, 'space-y-8')}>
-    <div className="flex flex-wrap justify-center gap-y-6 lg:gap-y-8 xl:justify-between gap-x-12 lg:gap-x-20">
-      {logos1.map((logo, index) => {
-        const Logo = logo;
-        return <Logo className="w-auto h-10" key={index} />;
-      })}
-    </div>
-  </div>
+const Logos = ({ className, title }) => (
+  <section className={classNames(className, 'space-y-8')}>
+    <Container>
+      {title && (
+        <Heading className="mb-11" tag="h3" theme="gray">
+          {title}
+        </Heading>
+      )}
+      <div className="flex flex-wrap justify-center gap-y-6 lg:gap-y-8 xl:justify-between gap-x-12 lg:gap-x-20">
+        {logos.map((logo, index) => {
+          const Logo = logo;
+          return <Logo className="w-auto h-10" key={index} />;
+        })}
+      </div>
+    </Container>
+  </section>
 );
 
 Logos.propTypes = {

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import CardItem from 'components/shared/card-item';
@@ -9,7 +8,6 @@ import List from 'components/shared/list';
 import ConceptsIcon from './images/concepts.inline.svg';
 import IntroductionIcon from './images/introduction.inline.svg';
 import NetworkingIcon from './images/networking.inline.svg';
-import Logos from './logos';
 import UserStories from './user-stories';
 
 const title = 'Learn about Cilium & eBPF';
@@ -71,7 +69,6 @@ const Learn = () => (
         <UserStories className="lg:col-span-5" />
         <List {...featuredBlogs} className="lg:col-start-7 lg:col-end-12" />
       </div>
-      <Logos className="mt-14 lg:mt-20" />
     </Container>
   </section>
 );
