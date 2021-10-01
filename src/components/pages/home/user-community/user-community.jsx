@@ -1,9 +1,10 @@
 import React from 'react';
-import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
+import SwiperCore, { Navigation, Pagination, A11y, Grid } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/a11y';
+import 'swiper/css/grid';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
@@ -14,7 +15,7 @@ import DataDogLogo from 'icons/datadog.inline.svg';
 import AdobeLogo from 'icons/logo-adobe.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
 
-SwiperCore.use([Navigation, Pagination, A11y]);
+SwiperCore.use([Navigation, Pagination, A11y, Grid]);
 
 const title = 'User Community';
 const items = [
@@ -50,7 +51,7 @@ const UserCommunity = () => (
       <Heading tag="h2">{title}</Heading>
       <div className="relative">
         <button
-          className="absolute -translate-x-1/2  hidden 2xl:flex 2xl:-left-20 top-[calc(50%-3rem)]"
+          className="absolute -translate-x-1/2 hidden 2xl:flex 2xl:-left-20 top-[calc(50%-3rem)]"
           id="button-previous"
           type="button"
           aria-label="Previous slide"
@@ -67,7 +68,7 @@ const UserCommunity = () => (
         </button>
         <Swiper
           className="mt-10 lg:mt-14 !pb-16 swiper"
-          modules={[Navigation, Pagination, A11y]}
+          modules={[Navigation, Pagination, A11y, Grid]}
           navigation={{
             prevEl: '#button-previous',
             nextEl: '#button-next',
@@ -76,22 +77,17 @@ const UserCommunity = () => (
           slidesPerView={1}
           slidesPerGroup={1}
           spaceBetween={32}
+          grid={{
+            rows: 2,
+            fill: 'row',
+          }}
           breakpoints={{
             640: {
-              slidesPerView: 2,
-              slidesPerGroup: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-              slidesPerGroup: 3,
-            },
-            1280: {
               slidesPerView: 4,
               slidesPerGroup: 4,
             },
           }}
           loop
-          watchSlidesProgress
         >
           {items.map(({ icon: Icon, text, linkText, linkUrl }, index) => (
             <SwiperSlide key={index}>
