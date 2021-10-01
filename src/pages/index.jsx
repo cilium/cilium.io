@@ -1,21 +1,13 @@
 import React from 'react';
 
+import Hero from 'components/pages/home/hero';
+import Highlights from 'components/pages/home/highlights';
 import Learn from 'components/pages/home/learn';
 import UserCommunity from 'components/pages/home/user-community';
 import Community from 'components/shared/community';
-import Hero from 'components/shared/hero';
+import Logos from 'components/shared/logos';
 import TryCilium from 'components/shared/try-cilium';
-import illustration from 'images/shared/hero/illustration-learn.svg';
 import MainLayout from 'layouts/main';
-
-const hero = {
-  title: 'eBPF-based Networking, Observability, and Security',
-  description:
-    'Cilium is an open source software for providing, securing and observing network connectivity between container workloads - cloud native, and fueled by the revolutionary Kernel technology eBPF.',
-  buttonText: 'Learn more',
-  buttonUrl: '/learn',
-  illustration,
-};
 
 const tryCilium = {
   title: 'Try Cilium',
@@ -31,15 +23,16 @@ const tryCilium = {
       iconName: 'installFest',
       name: 'Weekly InstallFest',
       text: 'Join us at our weekly InstallFest Meetup, learn and discuss how to setup and get started with Cilium.',
-      buttonUrl: '',
-      buttonText: 'Coming soon',
+      buttonText: 'Register',
     },
   ],
 };
 
 const IndexPage = () => (
   <MainLayout>
-    <Hero className="mt-16 lg:mt-32" {...hero} />
+    <Hero />
+    <Logos className="mt-20 lg:mt-28 xl:mt-36" title="more than 100 companies Trust cilium" />
+    <Highlights />
     <TryCilium {...tryCilium} />
     <UserCommunity />
     <Learn />
