@@ -14,7 +14,7 @@ const buttonUrl = '/learn';
 
 const Hero = () => (
   <section className="mt-16 overflow-hidden lg:mt-32">
-    <Container className="grid grid-cols-12 gap-x-8">
+    <Container className="grid grid-cols-12 md:gap-x-8">
       <div className="col-span-full lg:-mr-8 lg:col-span-6 2xl:col-span-7 2xl:mr-0">
         <Heading
           className="max-w-2xl highlight-words"

@@ -3,6 +3,7 @@ import React from 'react';
 import Hero from 'components/pages/home/hero';
 import Highlights from 'components/pages/home/highlights';
 import Learn from 'components/pages/home/learn';
+import Platforms from 'components/pages/home/platforms';
 import UserCommunity from 'components/pages/home/user-community';
 import Community from 'components/shared/community';
 import Logos from 'components/shared/logos';
@@ -34,6 +35,7 @@ const IndexPage = () => (
     <Logos className="mt-20 lg:mt-28 xl:mt-36" title="more than 100 companies Trust cilium" />
     <Highlights />
     <TryCilium {...tryCilium} />
+    <Platforms />
     <UserCommunity />
     <Learn />
     <Community />

@@ -61,22 +61,22 @@ const items = [
 
 const Highlights = () => (
   <section className="mt-20 lg:mt-28">
-    <Container className="grid grid-cols-3 gap-8">
+    <Container className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
       {items.map(({ icon: Icon, title, description }, index) => (
         <Popover className="relative" key={index}>
           {({ open }) => (
             <>
               <Popover.Button
                 className={classNames(
-                  'flex items-center p-6 border rounded-lg space-x-7 border-gray-3 w-full',
+                  'flex items-center p-6 border rounded-lg border-gray-3 w-full h-full',
                   open && 'border-b-0 rounded-b-none'
                 )}
               >
-                <Icon className="flex-shrink-0" />
-                <Heading className="text-left" size="xs" tag="h3">
+                <Icon className="flex-shrink-0 w-16 h-auto lg:w-max" />
+                <Heading className="mx-6 text-left lg:mx-8" size="xs" tag="h3">
                   {title}
                 </Heading>
-                <ChevronIcon className="flex-shrink-0 w-3 h-6 ml-auto rotate-90" />
+                <ChevronIcon className="flex-shrink-0 w-auto h-4 ml-auto rotate-90 lg:h-6" />
               </Popover.Button>
               <Transition
                 as={Fragment}
