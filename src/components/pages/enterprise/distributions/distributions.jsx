@@ -3,6 +3,7 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
+import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 
 import ClockIcon from './images/clock.inline.svg';
 import GradeIcon from './images/grade.inline.svg';
@@ -12,8 +13,8 @@ const icons = [SupportIcon, GradeIcon, ClockIcon];
 
 const list = [
   {
-    title: 'Isovalent Cilium Enterprise',
-    description: 'Enterprise Distribution maintained by the creators of Cilium.',
+    description:
+      'Isovalent Cilium Enterprise. Enterprise Distribution maintained by the creators of Cilium.',
     linkUrl: 'https://isovalent.com/',
     linkTarget: '_blank',
     linkText: 'Learn more',
@@ -29,26 +30,17 @@ const title = 'Distributions & Support';
 const Distributions = () => (
   <section className="pt-16 pb-20 mt-20 bg-gray-4 lg:pt-24 lg:mt-28 lg:pb-28">
     <Container>
-      <Heading className="text-center" tag="h2">
-        {title}
-      </Heading>
+      <Heading tag="h2">{title}</Heading>
       <div className="mt-10 lg:mt-14">
-        {list.map(({ title, description, linkUrl, linkTarget, linkText, items }, index) => (
-          <div className="p-8 bg-white border rounded-lg md:p-11 border-gray-3" key={index}>
-            <Heading tag="h3" size="sm">
-              {title}
-            </Heading>
-            <p className="mt-2.5 text-lg">{description}</p>
-            <Link
-              className="mt-6 lg:mt-8"
-              type="arrow"
-              theme="primary"
-              target={linkTarget || ''}
-              to={linkUrl}
-            >
-              {linkText}
-            </Link>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3 mt-11">
+        {list.map(({ description, linkUrl, linkTarget, linkText, items }, index) => (
+          <div
+            className="px-8 pb-10 bg-white border rounded-lg pt-7 lg:px-11 md:p-11 border-gray-3"
+            key={index}
+          >
+            <IsovalentLogo />
+            <p className="text-lg border-t mt-7 pt-7 border-gray-3">{description}</p>
+
+            <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-3">
               {items.map(({ name }, index) => {
                 const Icon = icons[index];
                 return (
@@ -65,6 +57,15 @@ const Distributions = () => (
                 );
               })}
             </div>
+            <Link
+              className="mt-6 lg:mt-10"
+              type="arrow"
+              theme="primary"
+              target={linkTarget || ''}
+              to={linkUrl}
+            >
+              {linkText}
+            </Link>
           </div>
         ))}
       </div>

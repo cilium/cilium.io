@@ -32,7 +32,9 @@ const Training = () => (
               <span className="leading-none text-gray-1">{author}</span>
               <h3 className="mt-2 text-xl font-bold lg:text-2xl">{title}</h3>
             </div>
-            <Button to={buttonUrl}>{buttonText}</Button>
+            <Button to={buttonUrl} disabled={!buttonUrl}>
+              {buttonText}
+            </Button>
           </div>
         ))}
       </div>
