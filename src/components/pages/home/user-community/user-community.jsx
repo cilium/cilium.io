@@ -74,20 +74,20 @@ const UserCommunity = ({ className }) => (
     </Heading>
     <div className="relative mt-6 lg:mt-10">
       <button
-        className="absolute -translate-x-1/2 hidden 2xl:flex 2xl:-left-11 top-[calc(50%-3rem)]"
+        className="absolute -translate-x-1/2 hidden xl:flex xl:-left-6 2xl:-left-11 top-[calc(50%-3rem)]"
         id="button-previous"
         type="button"
         aria-label="Previous slide"
       >
-        <Chevron className="w-4 h-auto rotate-180" />
+        <Chevron className="w-3 h-auto rotate-180 2xl:w-4" />
       </button>
       <button
-        className="absolute -translate-x-1/2 hidden 2xl:flex 2xl:-right-14 top-[calc(50%-3rem)]"
+        className="absolute -translate-x-1/2 hidden xl:flex xl:-right-9 2xl:-right-14 top-[calc(50%-3rem)]"
         id="button-next"
         type="button"
         aria-label="Next slide"
       >
-        <Chevron className="w-4 h-auto" />
+        <Chevron className="w-3 h-auto 2xl:w-4" />
       </button>
       <Swiper
         className="!pb-7 lg:!pb-11 swiper"
