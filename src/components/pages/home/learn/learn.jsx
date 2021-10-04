@@ -6,7 +6,6 @@ import List from 'components/shared/list';
 
 import UserCommunity from '../user-community';
 
-import FeaturedTalks from './featured-talks';
 import TwitterCards from './twitter-cards';
 
 const title = 'Learn about Cilium & eBPF';
@@ -14,6 +13,11 @@ const title = 'Learn about Cilium & eBPF';
 const featuredBlogs = {
   title: 'Featured Blogs',
   items: [
+    {
+      linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
+      linkTarget: '_blank',
+      linkText: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
+    },
     {
       linkUrl: '',
       linkText: 'eBPF and Cilium Office Hours - Highlights from Season 1',
