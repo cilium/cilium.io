@@ -5,12 +5,6 @@
     @apply text-base text-black antialiased;
   }
 
-  .rounded-image {
-    img {
-      @apply rounded-lg;
-    }
-  }
-
   .highlight-words {
     span {
       @apply font-bold;

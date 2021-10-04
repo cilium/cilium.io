@@ -4,6 +4,8 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import List from 'components/shared/list';
 
+import UserCommunity from '../user-community';
+
 import FeaturedTalks from './featured-talks';
 import TwitterCards from './twitter-cards';
 
@@ -39,7 +41,7 @@ const Learn = () => (
       <Heading tag="h2">{title}</Heading>
       <div className="grid grid-cols-1 mt-10 lg:mt-14 lg:grid-cols-12 gap-x-8 gap-y-10">
         <List className="lg:col-span-5" {...featuredBlogs} />
-        <FeaturedTalks className="lg:col-start-7 lg:col-end-13 xl:col-end-12" />
+        <UserCommunity className="lg:col-start-7 lg:col-end-13" />
       </div>
       <TwitterCards />
     </Container>

@@ -19,33 +19,12 @@ const hero = {
   illustration,
 };
 
-const tryCilium = {
-  title: 'Try Cilium',
-  items: [
-    {
-      iconName: 'guide',
-      name: 'Getting Started Guide',
-      text: 'Check out the Cilium documentation to quickly get started on a Kubernetes cluster of your choice.',
-      buttonUrl: 'https://docs.cilium.io/en/stable/gettingstarted/k8s-install-default/',
-      buttonText: 'Learn more',
-      buttonTarget: '_blank',
-    },
-    {
-      iconName: 'installFest',
-      name: 'Weekly InstallFest',
-      text: 'Join us at our weekly InstallFest Meetup, learn and discuss how to setup and get started with Cilium.',
-      buttonUrl: '',
-      buttonText: 'Register',
-    },
-  ],
-};
-
 const LearnPage = () => (
   <MainLayout pageMetadata={SeoMetadata.learn}>
     <Hero className="mt-16 lg:mt-28" {...hero} />
     <Learn />
     <Logos className="mt-14 lg:mt-20" />
-    <TryCilium {...tryCilium} />
+    <TryCilium />
     <EnterpriseDistributions />
     <RelatedProjects />
     <InstallDeploy />
