@@ -68,8 +68,8 @@ const Highlights = () => (
             <>
               <Popover.Button
                 className={classNames(
-                  'flex items-center p-6 border rounded-lg border-gray-3 w-full h-full',
-                  open && 'border-b-0 rounded-b-none'
+                  'flex items-center p-6 border rounded-lg border-gray-3 w-full h-full duration-200 transition',
+                  open && 'rounded-b-none shadow-primary border-transparent'
                 )}
               >
                 <Icon className="flex-shrink-0 w-16 h-auto lg:w-max" />
@@ -87,8 +87,11 @@ const Highlights = () => (
                 leaveFrom="opacity-100 translate-y-0"
                 leaveTo="opacity-0 translate-y-1"
               >
-                <Popover.Panel className="absolute z-10 w-full p-6 -translate-x-1/2 bg-white border border-t-0 rounded-b-lg border-gray-3 top-11/12 left-1/2">
-                  <div dangerouslySetInnerHTML={{ __html: description }} />
+                <Popover.Panel className="absolute z-10 w-full px-6 shadow-secondary -translate-x-1/2 text-left bg-white rounded-b-lg left-1/2 top-[98%]">
+                  <div
+                    className="py-6 border-t border-gray-3"
+                    dangerouslySetInnerHTML={{ __html: description }}
+                  />
                 </Popover.Panel>
               </Transition>
             </>

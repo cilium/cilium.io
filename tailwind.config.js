@@ -39,6 +39,10 @@ module.exports = {
           1: '#3399FF',
         },
       },
+      boxShadow: {
+        primary: '0px 5px 20px rgba(0, 0, 0, 0.09)',
+        secondary: '0px 8px 20px rgba(0, 0, 0, 0.09)',
+      },
     },
   },
   variants: {
