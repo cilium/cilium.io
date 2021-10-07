@@ -37,7 +37,7 @@ const items = [
 ];
 
 const Community = () => (
-  <section className="my-11 md:my-20 lg:my-28">
+  <section className="my-10 md:my-20 lg:my-28">
     <Container>
       <Heading tag="h2">{title}</Heading>
       <div className="grid grid-cols-1 gap-4 md:gap-6 lg:gap-8 mt-7 md:mt-10 sm:grid-cols-2 lg:grid-cols-4 lg:mt-14">

@@ -57,15 +57,15 @@ const featuredBlogs = {
 };
 
 const Learn = () => (
-  <section className="mt-20 lg:mt-28">
+  <section className="mt-4 md:mt-20 lg:mt-28">
     <Container>
       <Heading tag="h2">{title}</Heading>
-      <div className="grid grid-cols-1 gap-8 mt-10 lg:grid-cols-3 lg:mt-14">
+      <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 lg:gap-8 md:mt-10 lg:grid-cols-3 lg:mt-14">
         {items.map((item, index) => (
           <CardItem {...item} key={index} />
         ))}
       </div>
-      <div className="grid grid-cols-1 mt-16 lg:mt-20 lg:grid-cols-12 gap-x-8 gap-y-10">
+      <div className="grid grid-cols-1 mt-9 md:mt-14 lg:mt-20 lg:grid-cols-12 gap-x-8 gap-y-8 lg:gap-y-10">
         <UserStories className="lg:col-span-5" />
         <List {...featuredBlogs} className="lg:col-start-7 lg:col-end-12" />
       </div>

@@ -44,11 +44,11 @@ const RelatedProjects = () => {
   `);
   const images = { image1, image2 };
   return (
-    <section className="mt-20 lg:mt-28">
+    <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{title}</Heading>
-        <p className="mt-5 text-lg">{description}</p>
-        <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:mt-14">
+        <p className="mt-5 md:text-lg">{description}</p>
+        <div className="grid grid-cols-1 gap-6 mt-6 md:gap-8 md:mt-10 md:grid-cols-2 lg:mt-14">
           {items.map(({ imageName, title, text, linkUrl, linkText, linkTarget }, index) => {
             const image = images[imageName];
             return (
@@ -58,7 +58,7 @@ const RelatedProjects = () => {
                   {title}
                 </Heading>
                 <p
-                  className="mt-4 text-lg md:max-w-[542px]"
+                  className="mt-4 md:text-lg md:max-w-[542px]"
                   dangerouslySetInnerHTML={{ __html: text }}
                 />
                 <Link

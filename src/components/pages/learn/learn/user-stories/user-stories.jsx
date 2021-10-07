@@ -21,7 +21,7 @@ const UserStories = ({ className }) => (
     <Heading tag="h3" theme="gray">
       {title}
     </Heading>
-    <div className="mt-8 lg:mt-10 grid auto-rows-[140px] grid-cols-1 xs:grid-cols-2 gap-8">
+    <div className="mt-6 md:mt-8 lg:mt-10 grid auto-rows-[80px] md:auto-rows-[110px] lg:auto-rows-[140px] grid-cols-1 xs:grid-cols-2 gap-4 md:gap-6 lg:gap-8">
       {items.map(({ url, target, logo: Logo }, index) => (
         <Link
           className="relative flex items-center justify-center border rounded-lg bg-gray-4 border-gray-3 hover:border-gray-5"
@@ -31,8 +31,8 @@ const UserStories = ({ className }) => (
           target={target || ''}
           to={url}
         >
-          <Logo />
-          <Arrow className="absolute bottom-2.5 w-5 h-auto right-2.5 1" />
+          <Logo className="w-auto h-2/5 sm:h-auto" />
+          <Arrow className="hidden sm:flex absolute bottom-2.5 w-5 h-auto right-2.5 1" />
         </Link>
       ))}
     </div>

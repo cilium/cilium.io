@@ -46,7 +46,7 @@ const Logos = ({ className, title }) => (
           {title}
         </Heading>
       )}
-      <div className="flex flex-wrap justify-center gap-y-6 lg:gap-y-8 xl:justify-between gap-x-12 lg:gap-x-20">
+      <div className="grid flex-wrap grid-cols-2 justify-items-center sm:flex gap-y-5 lg:gap-y-8 xl:justify-between gap-x-6 md:gap-x-12 lg:gap-x-20">
         {logos.map((logo, index) => {
           const Logo = logo;
           return <Logo className="w-auto h-10" key={index} />;

@@ -33,18 +33,18 @@ const TryCilium = () => {
     setIsModalOpen(true);
   };
   return (
-    <section className="pt-16 pb-20 mt-20 lg:pt-24 lg:mt-28 lg:pb-28 bg-gray-4">
+    <section className="py-10 mt-12 md:pt-16 md:pb-20 md:mt-20 lg:pt-24 lg:mt-28 lg:pb-28 bg-gray-4">
       <Container>
         <Heading tag="h2">{title}</Heading>
-        <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:mt-14">
+        <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 lg:gap-8 md:mt-10 md:grid-cols-2 lg:mt-14">
           {items.map(({ icon: Icon, name, text, buttonUrl, buttonText, buttonTarget }, index) => (
             <div className="flex flex-col bg-white border rounded-lg border-gray-3" key={index}>
               <Icon className="w-full h-auto" />
-              <div className="flex flex-col items-center px-8 pt-6 pb-11 ">
+              <div className="flex flex-col items-center p-6 pb-8 md:px-8 md:pt-6 md:pb-11">
                 <Heading className="!leading-normal text-center" size="sm" tag="h3">
                   {name}
                 </Heading>
-                <p className="text-lg text-center mt-2.5">{text}</p>
+                <p className="md:text-lg text-center mt-2.5">{text}</p>
                 <Button
                   className="mt-5"
                   target={buttonTarget || ''}

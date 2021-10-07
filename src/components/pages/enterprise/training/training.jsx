@@ -15,7 +15,7 @@ const items = [
   },
 ];
 const Training = () => (
-  <section className="mt-11 md:mt-20 lg:mt-28">
+  <section className="mt-10 md:mt-20 lg:mt-28">
     <Container>
       <Heading tag="h2">{title}</Heading>
       <p
