@@ -13,7 +13,7 @@ const buttonText = 'Learn more';
 const buttonUrl = '/learn';
 
 const Hero = () => (
-  <section className="mt-16 overflow-hidden lg:mt-32">
+  <section className="mt-5 overflow-hidden md:mt-16 lg:mt-32">
     <Container className="grid grid-cols-12 md:gap-x-8">
       <div className="col-span-full lg:-mr-8 lg:col-span-6 2xl:col-span-7 2xl:mr-0">
         <Heading
@@ -26,16 +26,16 @@ const Hero = () => (
           {title}
         </Heading>
         <div
-          className="mt-5 space-y-5 text-lg with-link-primary lg:max-w-[490px] xl:max-w-[592px]"
+          className="mt-5 space-y-5 md:text-lg with-link-primary lg:max-w-[490px] xl:max-w-[592px]"
           dangerouslySetInnerHTML={{ __html: description }}
         />
-        <Button className="mt-8" to={buttonUrl}>
+        <Button className="mt-6 md:mt-8" to={buttonUrl}>
           {buttonText}
         </Button>
       </div>
       <div className="relative flex justify-center col-span-full lg:col-span-6 2xl:col-span-5 2xl:-ml-8">
         <img
-          className="w-full my-10 lg:left-0 lg:-translate-y-1/2 lg:max-w-max lg:absolute lg:top-1/2 md:my-14 lg:my-0 lg:w-[580px] xl:w-max"
+          className="w-full mt-4 lg:left-0 lg:-translate-y-1/2 lg:max-w-max lg:absolute lg:top-1/2 md:mt-10 lg:mt-0 lg:w-[580px] xl:w-max"
           src={illustration}
           alt=""
         />

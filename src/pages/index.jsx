@@ -13,7 +13,10 @@ import MainLayout from 'layouts/main';
 const IndexPage = () => (
   <MainLayout>
     <Hero />
-    <Logos className="mt-20 lg:mt-28 xl:mt-36" title="More than 100 companies Trust cilium" />
+    <Logos
+      className="mt-10 md:mt-20 lg:mt-28 xl:mt-36"
+      title="More than 100 companies Trust cilium"
+    />
     <Highlights />
     <TryCilium />
     <Platforms />

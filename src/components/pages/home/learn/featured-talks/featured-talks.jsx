@@ -42,10 +42,10 @@ const FeaturedTalks = () => {
   `);
   const placeholders = { card1, card2, card3, card4 };
   return (
-    <section className="mt-20 lg:mt-28">
+    <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{title}</Heading>
-        <div className="grid grid-cols-1 gap-6 mt-10 md:gap-8 lg:mt-14 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 mt-6 md:mt-10 md:gap-6 lg:gap-8 lg:mt-14 sm:grid-cols-3">
           {videoUrls.map(({ thumbnail, url }, index) => {
             const card = placeholders[thumbnail];
             return (

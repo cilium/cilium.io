@@ -25,7 +25,7 @@ const List = ({ className, title, items, buttonUrl, buttonText }) => (
       ))}
     </div>
     {buttonUrl && buttonText && (
-      <Button className="mt-10" to={buttonUrl}>
+      <Button className="mt-6 md:mt-8 lg:mt-10" to={buttonUrl}>
         {buttonText}
       </Button>
     )}

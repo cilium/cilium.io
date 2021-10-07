@@ -60,8 +60,8 @@ const items = [
 ];
 
 const Highlights = () => (
-  <section className="mt-20 lg:mt-28">
-    <Container className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
+  <section className="mt-10 md:mt-20 lg:mt-28">
+    <Container className="grid gap-4 md:gap-6 lg:gap-8 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
       {items.map(({ icon: Icon, title, description }, index) => (
         <Popover className="relative" key={index}>
           {({ open }) => (
@@ -73,7 +73,7 @@ const Highlights = () => (
                 )}
               >
                 <Icon className="flex-shrink-0 w-16 h-auto lg:w-max" />
-                <Heading className="mx-6 text-left lg:mx-8" size="xs" tag="h3">
+                <Heading className="mx-4 text-left md:mx-6 lg:mx-8" size="xs" tag="h3">
                   {title}
                 </Heading>
                 <ChevronIcon className="flex-shrink-0 w-auto h-4 ml-auto rotate-90 lg:h-6" />

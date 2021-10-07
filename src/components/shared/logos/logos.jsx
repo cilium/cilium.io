@@ -42,7 +42,7 @@ const Logos = ({ className, title }) => (
   <section className={classNames(className, 'space-y-8')}>
     <Container>
       {title && (
-        <Heading className="mb-11" tag="h3" theme="gray">
+        <Heading className="mb-6 md:mb-8 lg:mb-11" tag="h3" theme="gray">
           {title}
         </Heading>
       )}
@@ -58,10 +58,12 @@ const Logos = ({ className, title }) => (
 
 Logos.propTypes = {
   className: PropTypes.string,
+  title: PropTypes.string,
 };
 
 Logos.defaultProps = {
   className: null,
+  title: null,
 };
 
 export default Logos;
