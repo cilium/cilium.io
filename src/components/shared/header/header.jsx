@@ -36,7 +36,7 @@ const Header = () => (
                     <GithubStars className="hidden lg:inline-block" />
                   </div>
                   <div className="flex items-center -mr-2 lg:hidden">
-                    <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 rounded-md bg-gray-50 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
+                    <Popover.Button className="inline-flex items-center justify-center p-2 text-black rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
                       <span className="sr-only">Open main menu</span>
                       <MenuIcon className="w-6 h-6" aria-hidden="true" />
                     </Popover.Button>
@@ -86,7 +86,7 @@ const Header = () => (
                     <Logo />
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
+                    <Popover.Button className="inline-flex items-center justify-center p-2 text-black bg-white rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
                       <span className="sr-only">Close menu</span>
                       <XIcon className="w-6 h-6" aria-hidden="true" />
                     </Popover.Button>
