@@ -99,7 +99,7 @@ const UserCommunity = ({ className }) => (
         pagination={{ clickable: true }}
         slidesPerView={1}
         slidesPerGroup={1}
-        spaceBetween={32}
+        spaceBetween={16}
         grid={{
           rows: 2,
           fill: 'row',
@@ -108,10 +108,12 @@ const UserCommunity = ({ className }) => (
           640: {
             slidesPerView: 2,
             slidesPerGroup: 2,
+            spaceBetween: 24,
           },
           1024: {
             slidesPerView: 1,
             slidesPerGroup: 1,
+            spaceBetween: 32,
           },
           1280: {
             slidesPerView: 2,
