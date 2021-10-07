@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import Button from 'components/shared/button';
@@ -62,19 +61,6 @@ const TryCilium = () => {
       <CustomModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
     </section>
   );
-};
-TryCilium.propTypes = {
-  title: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      iconName: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-      buttonUrl: PropTypes.string.isRequired,
-      buttonText: PropTypes.string.isRequired,
-      buttonTarget: PropTypes.string,
-    })
-  ).isRequired,
 };
 
 export default TryCilium;

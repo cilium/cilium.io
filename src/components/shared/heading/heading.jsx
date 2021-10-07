@@ -35,7 +35,7 @@ const Heading = ({
   );
 
   if (asHTML) {
-    return <Tag className={className} dangerouslySetInnerHTML={{ __html: asHTML }} />;
+    return <Tag className={className} dangerouslySetInnerHTML={{ __html: children }} />;
   }
 
   return <Tag className={className}>{children}</Tag>;

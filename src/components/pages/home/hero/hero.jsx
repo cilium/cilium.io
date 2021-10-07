@@ -20,9 +20,11 @@ const Hero = () => (
           className="max-w-2xl highlight-words"
           tag="h1"
           size="lg"
-          asHTML={title}
           fontWeight="normal"
-        />
+          asHTML
+        >
+          {title}
+        </Heading>
         <div
           className="mt-5 space-y-5 text-lg with-link-primary lg:max-w-[490px] xl:max-w-[592px]"
           dangerouslySetInnerHTML={{ __html: description }}
