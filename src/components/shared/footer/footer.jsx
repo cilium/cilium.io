@@ -24,6 +24,7 @@ const Footer = () => (
     <Container className="pt-10 pb-10 border-t lg:pt-14 lg:pb-16 border-gray-3">
       <div className="grid grid-cols-3 space-y-8 md:space-y-10 lg:grid-cols-4 gap-x-8 lg:space-y-0">
         <Link to="/">
+          <span className="sr-only">Cilium</span>
           <Logo className="col-span-1 lg:col-span-1" />
         </Link>
         <div className="grid grid-cols-1 col-span-3 gap-x-8 gap-y-10 xs:grid-cols-2 sm:grid-cols-3">

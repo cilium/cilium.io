@@ -36,9 +36,9 @@ const Header = () => (
                     <GithubStars className="hidden lg:inline-block" />
                   </div>
                   <div className="flex items-center -mr-2 lg:hidden">
-                    <Popover.Button className="inline-flex items-center justify-center p-2 text-black rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
+                    <Popover.Button className="inline-flex items-center justify-center p-1.5 text-black rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
                       <span className="sr-only">Open main menu</span>
-                      <MenuIcon className="w-6 h-6" aria-hidden="true" />
+                      <MenuIcon className="w-7 h-7" aria-hidden="true" />
                     </Popover.Button>
                   </div>
                 </div>
@@ -83,12 +83,13 @@ const Header = () => (
               <div className="overflow-hidden bg-white">
                 <div className="flex items-center justify-between px-5 pt-4">
                   <div>
+                    <span className="sr-only">Cilium</span>
                     <Logo />
                   </div>
                   <div className="-mr-2">
-                    <Popover.Button className="inline-flex items-center justify-center p-2 text-black bg-white rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
+                    <Popover.Button className="inline-flex items-center justify-center text-black bg-white rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
                       <span className="sr-only">Close menu</span>
-                      <XIcon className="w-6 h-6" aria-hidden="true" />
+                      <XIcon className="w-7 h-7" aria-hidden="true" />
                     </Popover.Button>
                   </div>
                 </div>
@@ -102,7 +103,7 @@ const Header = () => (
                         target={item.target}
                         theme="black"
                         type="text"
-                        className="text-base font-medium leading-none text-center rounded-md"
+                        className="text-base font-bold leading-none text-center rounded-md"
                       >
                         {item.name}
                       </Link>
