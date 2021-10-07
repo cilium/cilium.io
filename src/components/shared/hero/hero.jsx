@@ -12,7 +12,7 @@ const Hero = ({ className, title, description, illustration }) => (
           {title}
         </Heading>
         <div
-          className="mt-5 space-y-5 text-lg with-link-primary"
+          className="mt-5 space-y-7 md:space-y-5 text-md md:text-lg with-link-primary"
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </div>

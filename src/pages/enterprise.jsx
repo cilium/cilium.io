@@ -17,7 +17,7 @@ const hero = {
 
 const EnterprisePage = () => (
   <MainLayout pageMetadata={SeoMetadata.enterprise}>
-    <Hero className="mt-16 lg:mt-28" {...hero} />
+    <Hero className="mt-5 md:mt-16 lg:mt-28" {...hero} />
     <Distributions />
     <Training />
     <Community />

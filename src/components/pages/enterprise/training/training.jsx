@@ -15,21 +15,23 @@ const items = [
   },
 ];
 const Training = () => (
-  <section className="mt-20 lg:mt-28">
+  <section className="mt-11 md:mt-20 lg:mt-28">
     <Container>
       <Heading tag="h2">{title}</Heading>
       <p
-        className="text-lg with-link-primary max-w-[670px] mt-5"
+        className="md:text-lg with-link-primary max-w-[670px] mt-5"
         dangerouslySetInnerHTML={{ __html: description }}
       />
-      <div className="grid grid-cols-1 max-w-[1008px] mt-10 lg:mt-14 gap-y-8">
+      <div className="grid grid-cols-1 max-w-[1008px] mt-8 md:mt-10 lg:mt-14 gap-y-8">
         {items.map(({ author, title, buttonUrl, buttonText }, index) => (
           <div
-            className="flex flex-col items-start px-8 py-5 space-y-8 border rounded-lg sm:space-y-0 sm:items-center sm:space-x-8 sm:justify-between sm:flex-row border-gray-3"
+            className="flex flex-col items-start p-6 pt-4 space-y-3 border rounded-lg md:space-y-6 lg:space-y-8 md:px-8 md:py-5 sm:space-y-0 sm:items-center sm:space-x-8 sm:justify-between sm:flex-row border-gray-3"
             key={index}
           >
             <div>
-              <span className="leading-none text-gray-1">{author}</span>
+              <span className="text-sm leading-none md:text-base md:leading-none text-gray-1">
+                {author}
+              </span>
               <h3 className="mt-2 text-xl font-bold lg:text-2xl">{title}</h3>
             </div>
             <Button to={buttonUrl} disabled={!buttonUrl}>

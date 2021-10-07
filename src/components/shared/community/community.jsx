@@ -37,21 +37,23 @@ const items = [
 ];
 
 const Community = () => (
-  <section className="my-20 lg:my-28">
+  <section className="my-11 md:my-20 lg:my-28">
     <Container>
       <Heading tag="h2">{title}</Heading>
-      <div className="grid grid-cols-1 gap-8 mt-10 sm:grid-cols-2 lg:grid-cols-4 lg:mt-14">
+      <div className="grid grid-cols-1 gap-4 md:gap-6 lg:gap-8 mt-7 md:mt-10 sm:grid-cols-2 lg:grid-cols-4 lg:mt-14">
         {items.map(({ icon: Icon, title, url, target }, index) => (
           <Link
             to={url}
             target={target}
-            className="flex flex-col items-center pb-8 border rounded-lg px-7 lg:pb-10 pt-7 border-gray-3"
+            className="flex items-center p-6 border rounded-lg md:pb-8 md:flex-col md:px-7 lg:pb-10 md:pt-7 border-gray-3"
             key={index}
             type="text"
             theme="black"
           >
-            <Icon className="w-10 h-10" />
-            <span className="mt-5 text-lg font-bold text-center xl:leading-none">{title}</span>
+            <Icon className="w-9 h-9 md:w-10 md:h-10" />
+            <span className="ml-4 font-bold text-center md:m-0 md:text-lg md:mt-5 xl:leading-none">
+              {title}
+            </span>
           </Link>
         ))}
       </div>

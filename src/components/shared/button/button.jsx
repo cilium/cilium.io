@@ -9,7 +9,7 @@ const commonClassNames =
 
 const sizeClassNames = {
   sm: 'text-base py-2.5 px-3.5',
-  md: 'text-base py-3 px-5 lg:py-4 lg:px-6 lg:text-lg',
+  md: 'text-base py-2.5 px-3.5 md:py-3 md:px-5 lg:py-4 lg:px-6 lg:text-lg',
 };
 
 const Button = ({
