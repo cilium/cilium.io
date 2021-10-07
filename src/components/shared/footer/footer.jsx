@@ -39,7 +39,7 @@ const Footer = () => (
           ))}
         </div>
       </div>
-      <div className="mt-10 space-y-3 text-sm lg:mt-16 with-link-primary text-gray-1">
+      <div className="mt-10 space-y-3 text-sm lg:mt-16 with-link-primary-light text-gray-1">
         <p>Copyright © 2021 The Linux Foundation® . All rights reserved.</p>
         <p>
           The Linux Foundation has registered trademarks and uses trademarks. For a list of

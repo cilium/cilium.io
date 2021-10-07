@@ -29,7 +29,7 @@ const Training = () => (
             key={index}
           >
             <div>
-              <span className="text-sm leading-none md:text-base md:leading-none text-gray-1">
+              <span className="text-sm font-medium leading-none md:text-base md:leading-none text-gray-1">
                 {author}
               </span>
               <h3 className="mt-2 text-xl font-bold lg:text-2xl">{title}</h3>

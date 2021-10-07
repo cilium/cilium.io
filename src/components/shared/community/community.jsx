@@ -51,7 +51,7 @@ const Community = () => (
             theme="black"
           >
             <Icon className="w-9 h-9 md:w-10 md:h-10" />
-            <span className="ml-4 font-bold text-center md:m-0 md:text-lg md:mt-5 xl:leading-none">
+            <span className="ml-4 font-semibold text-center md:m-0 md:text-lg md:mt-5 xl:leading-none">
               {title}
             </span>
           </Link>
