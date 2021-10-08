@@ -21,7 +21,10 @@ const TwitterCards = () => (
         key={index}
       >
         <TwitterIcon className="w-7 h-7" />
-        <p className="my-3 md:my-5 with-link-primary" dangerouslySetInnerHTML={{ __html: text }} />
+        <p
+          className="my-3 md:my-5 with-link-primary-light"
+          dangerouslySetInnerHTML={{ __html: text }}
+        />
         <span className="mt-auto font-semibold">{name}</span>
       </div>
     ))}
