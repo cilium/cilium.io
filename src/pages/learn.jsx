@@ -8,7 +8,7 @@ import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
 import Logos from 'components/shared/logos';
 import TryCilium from 'components/shared/try-cilium';
-import illustration from 'images/shared/hero/illustration-learn.svg';
+import illustration from 'images/hero-illustration.svg';
 import MainLayout from 'layouts/main';
 import SeoMetadata from 'utils/seo-metadata';
 
@@ -21,9 +21,9 @@ const hero = {
 
 const LearnPage = () => (
   <MainLayout pageMetadata={SeoMetadata.learn}>
-    <Hero className="mt-5 md:mt-16 lg:mt-28" {...hero} />
+    <Hero className="pt-5 md:pt-16 lg:pb-5" {...hero} />
     <Learn />
-    <Logos className="mt-10 md:mt-14 lg:mt-20" />
+    <Logos className="mt-10 md:mt-20 lg:mt-28" />
     <TryCilium />
     <EnterpriseDistributions />
     <RelatedProjects />

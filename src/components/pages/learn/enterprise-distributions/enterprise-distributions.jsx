@@ -23,6 +23,11 @@ const resources = {
   title: 'Resources',
   items: [
     {
+      linkUrl: ' https://isovalent.com/blog/post/gartner-cool-vendor',
+      linkTarget: '_blank',
+      linkText: 'Isovalent Named Gartner Cool Vendor',
+    },
+    {
       linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
       linkTarget: '_blank',
       linkText: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
@@ -37,11 +42,6 @@ const resources = {
       linkUrl: 'https://isovalent.com/blog/post/2021-08-ebpf-foundation-announcement',
       linkTarget: '_blank',
       linkText: 'Facebook, Google, Isovalent, Microsoft, and Netflix announce eBPF Foundation',
-    },
-    {
-      linkUrl: ' https://isovalent.com/blog/post/gartner-cool-vendor',
-      linkTarget: '_blank',
-      linkText: 'Isovalent Named Gartner Cool Vendor',
     },
   ],
 };

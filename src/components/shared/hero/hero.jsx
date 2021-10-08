@@ -6,7 +6,7 @@ import Heading from 'components/shared/heading';
 
 const Hero = ({ className, title, description, illustration }) => (
   <section className={className}>
-    <Container className="flex flex-col items-center lg:flex-row">
+    <Container className="grid xl:gap-x-8 lg:grid-cols-2">
       <div className="flex-1 lg:max-w-[490px] xl:max-w-[592px]">
         <Heading tag="h1" size="lg">
           {title}
@@ -16,11 +16,13 @@ const Hero = ({ className, title, description, illustration }) => (
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </div>
-      <img
-        className="flex-1 w-full my-10 lg:right-10 xl:right-0 lg:-translate-y-1/2 md:max-w-[720px] lg:max-w-[450px] xl:max-w-max lg:absolute lg:top-1/2  md:my-14 lg:my-0 xl:w-max"
-        src={illustration}
-        alt=""
-      />
+      <div className="relative flex justify-center">
+        <img
+          className="flex-1 w-full my-10 lg:-right-10 left-auto xl:left-0 md:max-w-[720px] lg:w-[580px] lg:absolute lg:top-0  md:my-14 lg:my-0 xl:w-max"
+          src={illustration}
+          alt=""
+        />
+      </div>
     </Container>
   </section>
 );

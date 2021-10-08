@@ -8,7 +8,7 @@ const CardItem = ({ icon: Icon, name, linkText, linkUrl, linkTarget }) => (
     <Icon className="flex-shrink-0 w-14 h-14 xs:w-max xs:h-auto" />
     <div className="flex flex-col h-full mt-4 sm:mt-0 lg:mt-4">
       <h3
-        className="mb-4 font-bold leading-normal md:text-lg lg:mb-5 flat-breaks lg:flat-none"
+        className="mb-4 font-bold leading-normal md:text-lg md:leading-normal lg:mb-5"
         dangerouslySetInnerHTML={{ __html: name }}
       />
       <Link className="mt-auto" type="text" theme="primary" target={linkTarget || ''} to={linkUrl}>
