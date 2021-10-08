@@ -4,9 +4,15 @@ import React, { Fragment } from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
-import LockIcon from './images/lock.inline.svg';
-import SearchIcon from './images/search.inline.svg';
-import ServiceIcon from './images/service.inline.svg';
+import AuditIcon from './images/audit.inline.svg';
+import ConnectivityIcon from './images/connectivity.inline.svg';
+import EncryptionIcon from './images/encryption.inline.svg';
+import MetricsIcon from './images/metrics.inline.svg';
+import NativeSupportIcon from './images/native-support.inline.svg';
+import NetworkPolicyIcon from './images/network-policy.inline.svg';
+import ObservabilityIcon from './images/observability.inline.svg';
+import ScalableKubernetesIcon from './images/scalable-kubernetes.inline.svg';
+import VisibilityIcon from './images/visibility.inline.svg';
 import Item from './item/item';
 
 const list = [
@@ -14,17 +20,17 @@ const list = [
     title: 'Networking',
     items: [
       {
-        icon: ServiceIcon,
+        icon: NativeSupportIcon,
         title: 'Native support for service type Load Balancer and Egress',
         description: `<p>Kubernetes doesn't come with an implenentation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
       },
       {
-        icon: ServiceIcon,
+        icon: ScalableKubernetesIcon,
         title: 'Native support for service type Load Balancer and Egress',
         description: `<p>Kubernetes doesn't come with an implenentation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
       },
       {
-        icon: ServiceIcon,
+        icon: ConnectivityIcon,
         title: 'Native support for service type Load Balancer and Egress',
         description: `<p>Kubernetes doesn't come with an implenentation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
       },
@@ -34,17 +40,17 @@ const list = [
     title: 'Observability',
     items: [
       {
-        icon: SearchIcon,
+        icon: VisibilityIcon,
         title: 'Identity-aware Visibility',
         description: `<p>Kubernetes doesn't come with an implenentation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
       },
       {
-        icon: SearchIcon,
+        icon: ObservabilityIcon,
         title: 'Identity-aware Visibility',
         description: `<p>Kubernetes doesn't come with an implenentation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
       },
       {
-        icon: SearchIcon,
+        icon: MetricsIcon,
         title: 'Identity-aware Visibility',
         description: `<p>Kubernetes doesn't come with an implenentation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
       },
@@ -54,19 +60,19 @@ const list = [
     title: 'Security',
     items: [
       {
-        icon: LockIcon,
+        icon: EncryptionIcon,
         title: 'Transparent Encryption',
         description: `<p>Kubernetes doesn't come with an implenentation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
       },
 
       {
-        icon: LockIcon,
+        icon: AuditIcon,
         title: 'Transparent Encryption',
         description: `<p>Kubernetes doesn't come with an implenentation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
       },
 
       {
-        icon: LockIcon,
+        icon: NetworkPolicyIcon,
         title: 'Transparent Encryption',
         description: `<p>Kubernetes doesn't come with an implenentation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
       },
