@@ -85,7 +85,9 @@ const Highlights = () => (
     <Container className="grid gap-4 md:gap-6 lg:gap-8 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
       {list.map(({ title, items }, index) => (
         <div key={index}>
-          <Heading tag="h2">{title}</Heading>
+          <Heading tag="h2" size="sm">
+            {title}
+          </Heading>
           <div className="grid grid-cols-1 gap-4 mt-6 lg:mt-9 md:gap-6 lg:gap-8 auto-rows-fr">
             {items.map((item, index) => (
               <Item {...item} key={index} />

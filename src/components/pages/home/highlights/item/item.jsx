@@ -12,15 +12,15 @@ const Item = ({ icon: Icon, title, description }) => (
       <>
         <Popover.Button
           className={classNames(
-            'flex items-center p-6 border rounded-lg border-gray-3 w-full h-full duration-200 transition',
+            'flex items-center p-5 pl-6 border rounded-lg border-gray-3 w-full h-full duration-200 transition',
             open && 'rounded-b-none shadow-primary border-transparent'
           )}
         >
           <Icon className="flex-shrink-0 w-16 h-auto lg:w-max" />
-          <Heading className="mx-4 text-left md:mx-6 lg:mx-8" size="xs" tag="h3">
+          <Heading className="mx-4 text-left" size="xs" tag="h3">
             {title}
           </Heading>
-          <ChevronIcon className="flex-shrink-0 w-auto h-4 ml-auto rotate-90 lg:h-6" />
+          <ChevronIcon className="flex-shrink-0 w-auto h-4 ml-auto rotate-90" />
         </Popover.Button>
         <Transition
           as={Fragment}

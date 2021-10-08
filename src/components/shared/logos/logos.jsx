@@ -38,15 +38,10 @@ const logos = [
   GitlabLogo,
 ];
 
-const Logos = ({ className, title }) => (
+const Logos = ({ className }) => (
   <section className={classNames(className, 'space-y-8')}>
     <Container>
-      {title && (
-        <Heading className="mb-6 md:mb-8 lg:mb-11" tag="h3" theme="gray">
-          {title}
-        </Heading>
-      )}
-      <div className="grid flex-wrap grid-cols-2 justify-items-center xs:flex gap-y-5 lg:gap-y-8 xs:justify-center xl:justify-between gap-x-6 md:gap-x-12 lg:gap-x-20">
+      <div className="grid flex-wrap grid-cols-2 justify-items-center xs:flex gap-y-5 xs:justify-center xl:justify-between gap-x-6 md:gap-x-12 lg:gap-x-20">
         {logos.map((logo, index) => {
           const Logo = logo;
           return <Logo className="w-auto h-10" key={index} />;
@@ -58,7 +53,6 @@ const Logos = ({ className, title }) => (
 
 Logos.propTypes = {
   className: PropTypes.string,
-  title: PropTypes.string,
 };
 
 Logos.defaultProps = {

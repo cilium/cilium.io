@@ -3,8 +3,7 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
-
-import illustration from './images/illustration-home.svg';
+import illustration from 'images/hero-illustration.svg';
 
 const title =
   'eBPF-based <span>Networking</span>, <span>Observability</span>, and <span>Security</span>';
@@ -36,7 +35,7 @@ const Hero = () => (
       </div>
       <div className="relative flex justify-center col-span-full lg:col-span-6 2xl:col-span-5 2xl:-ml-8">
         <img
-          className="w-full mt-4 lg:-right-10 xl:right-auto lg:-translate-y-1/2 lg:max-w-max lg:absolute lg:top-1/2 md:mt-10 lg:mt-0 lg:w-[580px] xl:w-max"
+          className="w-full mt-4 lg:-right-10 xl:right-auto xl:left-0 lg:max-w-max lg:absolute top-0 xl:-top-16 md:mt-10 lg:mt-0 lg:w-[580px] xl:w-max"
           src={illustration}
           alt=""
         />

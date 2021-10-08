@@ -72,7 +72,7 @@ const UserCommunity = ({ className }) => (
     <Heading tag="h3" theme="gray">
       {title}
     </Heading>
-    <div className="grid gap-4 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-6 lg:gap-8 lg:mt-10">
+    <div className="grid gap-4 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-6 lg:gap-8 lg:mt-8">
       {items.map(({ icon: Icon, text, linkText, linkUrl }, index) => (
         <div
           className="flex flex-col h-full p-6 border rounded-lg md:p-8 bg-gray-4 border-gray-3"

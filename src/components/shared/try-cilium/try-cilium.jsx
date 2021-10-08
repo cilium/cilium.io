@@ -11,7 +11,7 @@ const title = 'Learn more & try Cilium';
 const items = [
   {
     icon: GuideSvg,
-    name: 'Getting Started Guide',
+    name: 'Getting Started',
     text: 'Check out the Cilium documentation to quickly get started on a Kubernetes cluster of your choice.',
     buttons: [
       {
