@@ -9,7 +9,7 @@ import Podcasts from '../learn/podcasts';
 const title = 'Install & Deploy Cilium';
 
 const featuredBlogs = {
-  title: 'Featured Blogs',
+  title: 'Technical Resources',
   items: [
     {
       linkUrl: 'https://cilium.io/blog/2021/05/11/cni-benchmark',

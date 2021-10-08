@@ -5,7 +5,7 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import PlayIcon from 'icons/play.inline.svg';
 
-const title = 'Podcasts';
+const title = 'Other Resources';
 const items = [
   {
     name: 'Programmable Linux Networking with Dan Wendlant and Thomas Graf',

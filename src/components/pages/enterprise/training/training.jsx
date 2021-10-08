@@ -5,7 +5,8 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
 const title = 'Training';
-const description = `The following partners offer Cilium related trainings.`;
+const description =
+  'The following partners offer Cilium related training in accordance with the  training partner requirements of the Cilium project.';
 const items = [
   {
     author: 'by Isovalent',

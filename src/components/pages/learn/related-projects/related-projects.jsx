@@ -7,7 +7,6 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 
 const title = 'Related Projects';
-const description = 'Supercharge Kubernetes with these powerful projects';
 const items = [
   {
     imageName: 'image1',
@@ -47,7 +46,6 @@ const RelatedProjects = () => {
     <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{title}</Heading>
-        <p className="mt-5 md:text-lg">{description}</p>
         <div className="grid grid-cols-1 gap-6 mt-6 md:gap-8 md:mt-10 md:grid-cols-2 lg:mt-14">
           {items.map(({ imageName, title, text, linkUrl, linkText, linkTarget }, index) => {
             const image = images[imageName];

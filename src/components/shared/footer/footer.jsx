@@ -10,7 +10,7 @@ const navigation = [
     { name: 'Documentation', href: '/documentation' },
   ],
   [
-    { name: 'Isovalent', href: 'https://isovalent.com/', target: '_blank' },
+    { name: 'Enterprise', href: '/enterprise' },
     { name: 'eBPF', href: 'https://ebpf.io/', target: '_blank' },
   ],
   [

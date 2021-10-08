@@ -21,10 +21,10 @@ const items = [
   },
   {
     icon: ConceptsIcon,
-    name: 'Cilium Introduction / AMA <br> Thomas Graf, CO-Founder Cilium',
+    name: 'Weekly Virtual Cilium <br> Introduction & AMA with <br> Thomas Graf, Co-Creator Cilium',
     linkTarget: '_blank',
     linkUrl: 'https://calendly.com/cilium-events/cilium-introduction',
-    linkText: 'Register',
+    linkText: 'Join',
   },
   {
     icon: NetworkingIcon,
