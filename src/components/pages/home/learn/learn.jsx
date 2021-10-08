@@ -43,9 +43,9 @@ const Learn = () => (
   <section className="mt-10 md:mt-20 lg:mt-28">
     <Container>
       <Heading tag="h2">{title}</Heading>
-      <div className="grid grid-cols-1 mt-6 md:mt-10 lg:mt-14 lg:grid-cols-12 gap-x-8 gap-y-10">
-        <List className="lg:col-span-5" {...featuredBlogs} />
-        <UserCommunity className="lg:col-start-7 lg:col-end-13" />
+      <div className="grid grid-cols-1 mt-6 md:mt-10 lg:mt-14 lg:grid-cols-12 gap-x-8 gap-y-10 md:gap-y-20">
+        <List className="lg:col-span-10" {...featuredBlogs} />
+        <UserCommunity className="col-span-full" />
       </div>
       <TwitterCards />
     </Container>

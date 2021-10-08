@@ -11,8 +11,8 @@ const title = 'Featured talks';
 
 const videoUrls = [
   { thumbnail: 'card1', url: 'https://youtu.be/vNuEx0wB_-4' },
-  { thumbnail: 'card2', url: 'https://youtu.be/fNtG0iHYne4' },
-  { thumbnail: 'card3', url: 'https://youtu.be/u-4naOMfs_w' },
+  { thumbnail: 'card2', url: 'https://youtu.be/u-4naOMfs_w' },
+  { thumbnail: 'card3', url: 'https://youtu.be/80OYrzS1dCA?t=437' },
 ];
 
 const FeaturedTalks = () => {
@@ -29,11 +29,6 @@ const FeaturedTalks = () => {
         }
       }
       card3: file(relativePath: { eq: "pages/home/featured-talks/card-3.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 608)
-        }
-      }
-      card4: file(relativePath: { eq: "pages/home/featured-talks/card-4.png" }) {
         childImageSharp {
           gatsbyImageData(width: 608)
         }
