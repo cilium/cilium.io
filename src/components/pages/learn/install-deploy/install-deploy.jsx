@@ -6,7 +6,7 @@ import List from 'components/shared/list';
 
 import Podcasts from '../learn/podcasts';
 
-const title = 'Install & Deploy Cilium';
+const title = 'Other Resources';
 
 const featuredBlogs = {
   title: 'Technical Resources',
