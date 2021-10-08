@@ -28,17 +28,17 @@ const list = [
 
 const title = 'Distributions & Support';
 const Distributions = () => (
-  <section className="pb-12 mt-2 md:pb-20 pt-11 md:pt-16 md:mt-20 bg-gray-4 lg:pt-24 lg:mt-28 lg:pb-28">
+  <section className="pb-12 mt-2 md:pb-20 pt-11 md:pt-16 md:mt-20 bg-gray-4 lg:pt-24 lg:mt-28 lg:pb-28 xl:pb-32">
     <Container>
       <Heading tag="h2">{title}</Heading>
       <div className="mt-6 md:mt-10 lg:mt-14">
         {list.map(({ description, linkUrl, linkTarget, linkText, items }, index) => (
           <div
-            className="p-6 bg-white border rounded-lg lg:px-11 md:p-11 border-gray-3"
+            className="p-6 bg-white border rounded-lg border-gray-3 md:p-11 md:pb-10 lg:px-11 lg:pt-7"
             key={index}
           >
             <IsovalentLogo className="w-auto h-8 md:h-auto" />
-            <p className="pt-6 mt-6 text-base border-t md:text-lg border-gray-3">{description}</p>
+            <p className="text-base border-t pt-7 mt-7 md:text-lg border-gray-3">{description}</p>
 
             <div className="grid grid-cols-1 gap-6 mt-8 lg:gap-8 md:mt-10 md:grid-cols-3">
               {items.map(({ name }, index) => {
