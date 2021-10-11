@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Banner from 'components/pages/home/banner';
 import Hero from 'components/pages/home/hero';
 import Highlights from 'components/pages/home/highlights';
 import Learn from 'components/pages/home/learn';
@@ -9,7 +10,6 @@ import TwitterCards from 'components/pages/home/twitter-cards';
 import UserCommunity from 'components/pages/home/user-community';
 import Community from 'components/shared/community';
 import Logos from 'components/shared/logos';
-import TryCilium from 'components/shared/try-cilium';
 import MainLayout from 'layouts/main';
 
 const userCommunity1 = {
@@ -179,7 +179,7 @@ const IndexPage = () => (
     <UserCommunity {...userCommunity1} />
     <Highlights />
     <Logos className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" />
-    <TryCilium />
+    <Banner />
     <Platforms />
     <FeaturedTalks />
     <Learn />
