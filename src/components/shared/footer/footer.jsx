@@ -13,10 +13,7 @@ const navigation = [
     { name: 'Enterprise', href: '/enterprise' },
     { name: 'eBPF', href: 'https://ebpf.io/', target: '_blank' },
   ],
-  [
-    { name: 'Getting Started Guide', href: '/' },
-    { name: 'Weekly InstallFest', href: '/' },
-  ],
+  [{ name: 'Learn', href: '/learn' }],
 ];
 
 const Footer = () => (
