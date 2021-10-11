@@ -17,7 +17,7 @@ const Item = ({ icon: Icon, title, description }) => (
           )}
         >
           <Icon className="flex-shrink-0 w-16 h-auto lg:w-max" />
-          <Heading className="mx-4 text-left" size="xs" tag="h3">
+          <Heading className="mx-4 text-left" size="xxs" tag="h3">
             {title}
           </Heading>
           <ChevronIcon className="flex-shrink-0 w-auto h-4 ml-auto rotate-90" />

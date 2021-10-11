@@ -70,13 +70,10 @@ const RelatedProjects = () => {
                   image={getImage(image)}
                   alt=""
                 />
-                <Heading className="mt-7" tag="h3" size="sm">
+                <Heading className="mt-7" tag="h3" size="xs">
                   {title}
                 </Heading>
-                <p
-                  className="mt-5 md:text-lg md:max-w-[542px]"
-                  dangerouslySetInnerHTML={{ __html: text }}
-                />
+                <p className="mt-5 md:max-w-[542px]" dangerouslySetInnerHTML={{ __html: text }} />
                 <Link
                   className="mt-5"
                   type="arrow"

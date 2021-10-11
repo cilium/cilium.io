@@ -6,7 +6,8 @@ const sizeClassNames = {
   lg: 'text-4xl lg:text-5xl',
   md: 'text-3xl lg:text-4xl',
   sm: 'text-2xl lg:text-3xl font-semibold',
-  xs: 'text-base',
+  xs: 'text-lg lg:text-2xl',
+  xxs: 'text-base',
 };
 
 const fontWeightClassName = {
