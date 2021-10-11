@@ -22,7 +22,7 @@ const Architecture = () => {
   `);
   return (
     <section className="mt-10 md:mt-20 lg:mt-28">
-      <Container className="grid grid-cols-12 gap-y-6 gap-x-8">
+      <Container className="grid grid-cols-12 gap-y-6 md:gap-x-8">
         <div className="col-span-full lg:col-span-5">
           <Heading tag="h2">{title}</Heading>
           <p className="mt-5 md:text-lg">{description}</p>

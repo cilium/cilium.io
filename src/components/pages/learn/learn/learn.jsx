@@ -14,24 +14,41 @@ const title = 'Learn about Cilium & eBPF';
 const items = [
   {
     icon: IntroductionIcon,
-    name: 'Introduction to Cilium',
-    linkUrl: 'https://www.youtube.com/watch?v=80OYrzS1dCA&t=405s',
-    linkTarget: '_blank',
-    linkText: 'Watch video',
+    name: '10min Introduction to Cilium by Thomas Graf, Cilium Co-Creator',
+    links: [
+      {
+        linkUrl: 'https://www.youtube.com/watch?v=80OYrzS1dCA&t=405s',
+        linkTarget: '_blank',
+        linkText: 'Watch video',
+      },
+    ],
   },
   {
     icon: ConceptsIcon,
     name: 'Weekly Virtual Cilium Introduction & AMA with Thomas Graf, Co-Creator Cilium',
-    linkTarget: '_blank',
-    linkUrl: 'https://calendly.com/cilium-events/cilium-introduction',
-    linkText: 'Join',
+    links: [
+      {
+        isCalendlyPopUp: true,
+        linkTarget: '_blank',
+        linkUrl: 'https://calendly.com/cilium-events/cilium-introduction',
+        linkText: 'Join',
+      },
+    ],
   },
   {
     icon: NetworkingIcon,
     name: 'The Future of eBPF based Networking and Security',
-    linkUrl: 'https://www.youtube.com/watch?v=vNuEx0wB_-4',
-    linkTarget: '_blank',
-    linkText: 'Watch video',
+    links: [
+      {
+        linkUrl: 'https://www.youtube.com/watch?v=vNuEx0wB_-4',
+        linkTarget: '_blank',
+        linkText: 'Watch video',
+      },
+      {
+        linkUrl: 'https://cilium.io/blog/2020/11/10/ebpf-future-of-networking/',
+        linkText: 'Read blog',
+      },
+    ],
   },
 ];
 
