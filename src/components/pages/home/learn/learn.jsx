@@ -4,10 +4,7 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import List from 'components/shared/list';
 
-import TwitterCards from '../twitter-cards';
-import UserCommunity from '../user-community';
-
-const title = 'Learn about Cilium & eBPF';
+const title = 'Latest News & Blogs';
 
 const featuredBlogs = {
   title: 'Featured Blogs',
