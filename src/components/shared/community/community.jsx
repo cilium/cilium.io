@@ -30,7 +30,7 @@ const items = [
   },
   {
     icon: YoutubeIcon,
-    title: 'Whatch Echo Livestream',
+    title: 'Watch Echo Livestream',
     url: 'https://www.youtube.com/channel/UCJFUxkVQTBJh3LD1wYBWvuQ',
     target: '_blank',
   },
