@@ -51,7 +51,7 @@ const UserCommunity = ({ title, items }) => (
               <div className="pt-4 mt-auto space-x-6 leading-none border-t border-gray-3">
                 {links.map(({ linkUrl, linkText, linkTarget }, index) => (
                   <Link
-                    className="relative first:before:hidden before:w-1 before:h-1 before:absolute before:rounded-full before:bg-gray-5 before:bottom-1.5 before:-left-3.5"
+                    className="relative first:before:hidden before:w-1 before:h-1 before:absolute before:rounded-full before:bg-gray-5 before:top-1/2 before:-translate-y-1/2 before:-left-3.5"
                     key={index}
                     type="text"
                     theme="primary"
