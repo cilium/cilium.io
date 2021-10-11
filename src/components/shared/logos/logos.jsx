@@ -3,22 +3,21 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import AdobeLogo from 'icons/logo-adobe.inline.svg';
+import AlibabaCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
 import AWSLogo from 'icons/logo-aws.inline.svg';
+import CengnLogo from 'icons/logo-cengn.inline.svg';
+import DigitalOceanLogo from 'icons/logo-digital-ocean.inline.svg';
+import GitlabLogo from 'icons/logo-gitlab.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
+import MasmovilLogo from 'icons/logo-masmovil.inline.svg';
+import PalantirLogo from 'icons/logo-palantir.inline.svg';
+import TripLogo from 'icons/logo-trip.inline.svg';
+import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
 
 import Container from '../container';
-import Heading from '../heading';
 
-import AlibabaCloudLogo from './images/logo-alibaba-cloud.inline.svg';
-import CengnLogo from './images/logo-cengn.inline.svg';
-import DigitalOceanLogo from './images/logo-digital-ocean.inline.svg';
-import GitlabLogo from './images/logo-gitlab.inline.svg';
-import MasmovilLogo from './images/logo-masmovil.inline.svg';
-import PalantirLogo from './images/logo-palantir.inline.svg';
 import PostFinanceLogo from './images/logo-post-finance.inline.svg';
-import TripLogo from './images/logo-trip.inline.svg';
 import UtmostLogo from './images/logo-utmost.inline.svg';
-import WildLifeLogo from './images/logo-wild-life.inline.svg';
 import YahooLogo from './images/logo-yahoo.inline.svg';
 
 const logos = [
@@ -57,7 +56,6 @@ Logos.propTypes = {
 
 Logos.defaultProps = {
   className: null,
-  title: null,
 };
 
 export default Logos;
