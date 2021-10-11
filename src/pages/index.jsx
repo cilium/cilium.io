@@ -55,12 +55,12 @@ const userCommunity1 = {
       ],
     },
     {
-      iconName: 'datadog',
-      text: 'How Datadog uses Cilium',
+      iconName: 'aws',
+      text: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
       links: [
         {
-          linkText: 'Watch video',
-          linkUrl: 'https://www.youtube.com/watch?v=6mTVuZUHLBg&ab_channel=eBPFSummit',
+          linkText: 'Read blog',
+          linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
           linkTarget: '_blank',
         },
       ],
@@ -88,12 +88,12 @@ const userCommunity2 = {
       ],
     },
     {
-      iconName: 'palantir',
-      text: 'Past, present and future of Cilium and Hubble at Palantir',
+      iconName: 'bell',
+      text: 'Why eBPF is changing the Telco networking space?',
       links: [
         {
           linkText: 'Watch video',
-          linkUrl: 'https://www.youtube.com/watch?v=7UQ2CU6UEGY&ab_channel=eBPFSummit',
+          linkUrl: 'https://www.youtube.com/watch?v=fNtG0iHYne4',
           linkTarget: '_blank',
         },
       ],

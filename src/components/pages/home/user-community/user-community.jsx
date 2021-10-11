@@ -4,32 +4,32 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
+import BellLogo from 'icons/bell.inline.svg';
 import CapitalOneLogo from 'icons/capitalone.inline.svg';
-import DataDogLogo from 'icons/datadog.inline.svg';
 import AdobeLogo from 'icons/logo-adobe.inline.svg';
 import AlibabaCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
+import AWSLogo from 'icons/logo-aws.inline.svg';
 import CengnLogo from 'icons/logo-cengn.inline.svg';
 import DigitalOceanLogo from 'icons/logo-digital-ocean.inline.svg';
 import GitlabLogo from 'icons/logo-gitlab.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
 import MasmovilLogo from 'icons/logo-masmovil.inline.svg';
-import PalantirLogo from 'icons/logo-palantir.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
 
 const icons = {
   google: GoogleLogo,
   adobe: AdobeLogo,
-  datadog: DataDogLogo,
+  aws: AWSLogo,
   capitalOne: CapitalOneLogo,
   alibabaCloud: AlibabaCloudLogo,
   cengn: CengnLogo,
   digitalOcean: DigitalOceanLogo,
   gitlab: GitlabLogo,
   masmovil: MasmovilLogo,
-  palantir: PalantirLogo,
   trip: TripLogo,
   wildLife: WildLifeLogo,
+  bell: BellLogo,
 };
 
 const UserCommunity = ({ title, items }) => (
