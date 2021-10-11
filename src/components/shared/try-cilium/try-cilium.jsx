@@ -64,7 +64,7 @@ const TryCilium = () => (
                 >
                   {has2Buttons
                     ? buttons.map(({ buttonUrl, buttonText }, index) => (
-                        <Button key={index} theme="primary">
+                        <Button key={index}>
                           <PopupButton
                             url={buttonUrl}
                             styles={{ fontWeight: 700 }}
@@ -73,12 +73,7 @@ const TryCilium = () => (
                         </Button>
                       ))
                     : buttons.map(({ buttonText, buttonUrl, buttonTarget }, index) => (
-                        <Button
-                          key={index}
-                          theme="primary"
-                          to={buttonUrl}
-                          target={buttonTarget || ''}
-                        >
+                        <Button key={index} to={buttonUrl} target={buttonTarget || ''}>
                           {buttonText}
                         </Button>
                       ))}

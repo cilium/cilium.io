@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Banner from 'components/pages/home/banner';
+import Discover from 'components/pages/home/discover';
 import Hero from 'components/pages/home/hero';
 import Highlights from 'components/pages/home/highlights';
 import Learn from 'components/pages/home/learn';
@@ -178,7 +179,8 @@ const IndexPage = () => (
     <Hero />
     <UserCommunity {...userCommunity1} />
     <Highlights />
-    <Logos className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" />
+    <Logos className="mt-10 md:mt-20 lg:mt-28" />
+    <Discover />
     <Banner />
     <Platforms />
     <FeaturedTalks />
