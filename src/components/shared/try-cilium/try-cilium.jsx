@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 import Button from 'components/shared/button';
@@ -46,24 +47,32 @@ const TryCilium = () => (
     <Container>
       <Heading tag="h2">{title}</Heading>
       <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 lg:gap-8 md:mt-10 md:grid-cols-2 lg:mt-14">
-        {items.map(({ icon: Icon, name, text, buttons }, index) => (
-          <div className="flex flex-col bg-white border rounded-lg border-gray-3" key={index}>
-            <Icon className="w-full h-auto" />
-            <div className="flex flex-col items-center flex-grow p-6 pb-8 md:px-8 md:pt-6 md:pb-11">
-              <Heading className="!leading-normal text-center" size="sm" tag="h3">
-                {name}
-              </Heading>
-              <p className="md:text-lg text-center mt-2.5 mb-5">{text}</p>
-              <div className="flex mt-auto space-x-3 lg:space-x-5">
-                {buttons.map(({ buttonUrl, buttonText, buttonTarget }, index) => (
-                  <Button key={index} target={buttonTarget || ''} to={buttonUrl}>
-                    {buttonText}
-                  </Button>
-                ))}
+        {items.map(({ icon: Icon, name, text, buttons }, index) => {
+          const has2Buttons = buttons.length === 2;
+          return (
+            <div className="flex flex-col bg-white border rounded-lg border-gray-3" key={index}>
+              <Icon className="w-full h-auto" />
+              <div className="flex flex-col items-center flex-grow p-6 pb-8 md:px-8 md:pt-6 md:pb-11">
+                <Heading className="!leading-normal text-center" size="sm" tag="h3">
+                  {name}
+                </Heading>
+                <p className="md:text-lg text-center mt-2.5 mb-5">{text}</p>
+                <div
+                  className={classNames(
+                    'mt-auto',
+                    has2Buttons && 'grid xs:grid-cols-2 gap-3 lg:gap-x-5'
+                  )}
+                >
+                  {buttons.map(({ buttonUrl, buttonText, buttonTarget }, index) => (
+                    <Button key={index} target={buttonTarget || ''} to={buttonUrl}>
+                      {buttonText}
+                    </Button>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </Container>
   </section>
