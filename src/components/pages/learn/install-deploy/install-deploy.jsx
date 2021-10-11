@@ -6,7 +6,7 @@ import List from 'components/shared/list';
 
 import Podcasts from '../learn/podcasts';
 
-const title = 'Other Resources';
+const title = 'Digging Deeper';
 
 const featuredBlogs = {
   title: 'Technical Resources',
