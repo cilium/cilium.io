@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import { PopupButton } from 'react-calendly';
 
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
@@ -8,11 +9,11 @@ import Heading from 'components/shared/heading';
 import GuideSvg from './images/guide.inline.svg';
 import InstallFestSvg from './images/installfest.inline.svg';
 
-const title = 'Learn more & try Cilium';
+const title = 'Get Hands-On With Cilium';
 const items = [
   {
     icon: GuideSvg,
-    name: 'Getting Started',
+    name: 'Do it yourself Tutorials',
     text: 'Check out the Cilium documentation to quickly get started on a Kubernetes cluster of your choice.',
     buttons: [
       {
@@ -25,18 +26,16 @@ const items = [
 
   {
     icon: InstallFestSvg,
-    name: 'Weekly InstallFest',
+    name: 'Weekly Community InstallFest',
     text: 'Join us at our weekly InstallFest and learn how to setup and get started with Cilium.',
     buttons: [
       {
-        buttonUrl: 'https://calendly.com/cilium-events/cilium-installfest-emea',
+        buttonUrl: 'https://calendly.com/cilium-events/cilim-installfest-emea',
         buttonText: 'Join Europe',
-        buttonTarget: '_blank',
       },
       {
         buttonUrl: 'https://calendly.com/cilium-events/cilium-installfest-na',
         buttonText: 'Join Americas',
-        buttonTarget: '_blank',
       },
     ],
   },
@@ -63,11 +62,26 @@ const TryCilium = () => (
                     has2Buttons && 'grid xs:grid-cols-2 gap-3 lg:gap-x-5'
                   )}
                 >
-                  {buttons.map(({ buttonUrl, buttonText, buttonTarget }, index) => (
-                    <Button key={index} target={buttonTarget || ''} to={buttonUrl}>
-                      {buttonText}
-                    </Button>
-                  ))}
+                  {has2Buttons
+                    ? buttons.map(({ buttonUrl, buttonText }, index) => (
+                        <Button key={index} theme="primary">
+                          <PopupButton
+                            url={buttonUrl}
+                            styles={{ fontWeight: 700 }}
+                            text={buttonText}
+                          />
+                        </Button>
+                      ))
+                    : buttons.map(({ buttonText, buttonUrl, buttonTarget }, index) => (
+                        <Button
+                          key={index}
+                          theme="primary"
+                          to={buttonUrl}
+                          target={buttonTarget || ''}
+                        >
+                          {buttonText}
+                        </Button>
+                      ))}
                 </div>
               </div>
             </div>
