@@ -59,7 +59,7 @@ const RelatedProjects = () => {
     <section className="mt-10 md:mt-20 lg:mt-36">
       <Container>
         <Heading tag="h2">{title}</Heading>
-        <div className="grid grid-cols-1 gap-6 mt-6 md:gap-x-8 gap-y-8 md:gap-y-12 md:mt-10 md:grid-cols-2 lg:mt-14">
+        <div className="grid grid-cols-1 gap-6 mt-6 md:gap-x-8 gap-y-8 md:gap-y-12 md:mt-10 md:grid-cols-2 lg:grid-cols-3 lg:mt-14">
           {items.map(({ imageName, title, text, linkUrl, linkText, linkTarget }, index) => {
             const image = images[imageName];
             return (
