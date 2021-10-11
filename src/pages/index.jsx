@@ -176,9 +176,9 @@ const userCommunity2 = {
 const IndexPage = () => (
   <MainLayout>
     <Hero />
-    <Logos className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" />
-    <Highlights />
     <UserCommunity {...userCommunity1} />
+    <Highlights />
+    <Logos className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" />
     <TryCilium />
     <Platforms />
     <FeaturedTalks />

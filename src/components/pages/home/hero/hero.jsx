@@ -1,16 +1,17 @@
 import React from 'react';
 
+import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
+import SlackIcon from 'icons/slack.inline.svg';
+import YoutubeIcon from 'icons/youtube.inline.svg';
 import illustration from 'images/hero-illustration.svg';
 
 const title =
   'eBPF-based <span>Networking</span>, <span>Observability</span>, and <span>Security</span>';
 const description =
   'Cilium is an open source software for providing, securing and observing network connectivity between container workloads - cloud native, and fueled by the revolutionary Kernel technology eBPF.';
-const linkText = 'Learn more';
-const linkUrl = '/learn';
 
 const Hero = () => (
   <section className="pt-5 md:pt-16 lg:pt-32">
@@ -29,9 +30,35 @@ const Hero = () => (
           className="mt-4 md:mt-5 space-y-5 md:text-lg with-link-primary lg:max-w-[490px] xl:max-w-[592px]"
           dangerouslySetInnerHTML={{ __html: description }}
         />
-        <Link className="mt-4 md:mt-5" type="arrow" theme="primary" to={linkUrl}>
-          {linkText}
-        </Link>
+        <div className="flex flex-col items-start mt-4 sm:items-center sm:flex-row xl:items-center md:mt-5 xl:flex-row ">
+          <Button theme="primary" to="/learn">
+            Discover Cilium
+          </Button>
+          <div className="flex mt-6 space-x-6 sm:ml-6 sm:mt-0 xl:ml-11">
+            <Link
+              className="flex items-center space-x-3"
+              to="https://cilium.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              type="text"
+              theme="primary"
+            >
+              <SlackIcon className="w-auto h-4" />
+              <span>Join Slack</span>
+            </Link>
+            <Link
+              className="flex items-center space-x-3"
+              to="https://www.youtube.com/channel/UCJFUxkVQTBJh3LD1wYBWvuQ"
+              target="_blank"
+              rel="noopener noreferrer"
+              type="text"
+              theme="primary"
+            >
+              <YoutubeIcon className="w-auto h-6" />
+              <span>Join Echo</span>
+            </Link>
+          </div>
+        </div>
       </div>
       <div className="relative flex justify-center col-span-full lg:col-span-6 2xl:col-span-5 2xl:-ml-8">
         <img
