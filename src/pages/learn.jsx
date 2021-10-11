@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Highlights from 'components/pages/home/highlights';
 import EnterpriseDistributions from 'components/pages/learn/enterprise-distributions';
 import InstallDeploy from 'components/pages/learn/install-deploy';
 import Learn from 'components/pages/learn/learn';
 import RelatedProjects from 'components/pages/learn/related-projects';
+import UseCases from 'components/pages/learn/use-cases';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
 import Logos from 'components/shared/logos';
@@ -22,8 +24,10 @@ const hero = {
 const LearnPage = () => (
   <MainLayout pageMetadata={SeoMetadata.learn}>
     <Hero className="pt-5 md:pt-16 lg:pb-5" {...hero} />
-    <Learn />
+    <UseCases />
+    <Highlights className="mt-10 md:mt-20" />
     <Logos className="mt-10 md:mt-20 lg:mt-28" />
+    <Learn />
     <TryCilium />
     <EnterpriseDistributions />
     <RelatedProjects />

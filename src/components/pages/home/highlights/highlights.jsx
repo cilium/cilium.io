@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
@@ -80,9 +80,9 @@ const list = [
   },
 ];
 
-const Highlights = () => (
-  <section className="mt-10 md:mt-20 lg:mt-28">
-    <Container className="grid gap-4 md:gap-6 lg:gap-8 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr">
+const Highlights = ({ className }) => (
+  <section className={className}>
+    <Container className="grid gap-4 md:gap-6 lg:gap-8 md:grid-cols-2 xl:grid-cols-3 md:auto-rows-fr">
       {list.map(({ title, items }, index) => (
         <div key={index}>
           <Heading tag="h2" size="sm">
@@ -98,5 +98,13 @@ const Highlights = () => (
     </Container>
   </section>
 );
+
+Highlights.propTypes = {
+  className: PropTypes.string,
+};
+
+Highlights.defaultProps = {
+  className: null,
+};
 
 export default Highlights;

@@ -178,7 +178,7 @@ const IndexPage = () => (
   <MainLayout>
     <Hero />
     <UserCommunity {...userCommunity1} />
-    <Highlights />
+    <Highlights className="mt-10 md:mt-20 lg:mt-28" />
     <Logos className="mt-10 md:mt-20 lg:mt-28" />
     <Discover />
     <Banner />

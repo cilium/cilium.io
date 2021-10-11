@@ -57,7 +57,7 @@ const featuredBlogs = {
 };
 
 const Learn = () => (
-  <section className="mt-4 md:mt-20 lg:mt-28">
+  <section className="mt-10 md:mt-20 lg:mt-28">
     <Container>
       <Heading tag="h2">{title}</Heading>
       <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 lg:gap-8 md:mt-10 lg:grid-cols-3 lg:mt-14">
