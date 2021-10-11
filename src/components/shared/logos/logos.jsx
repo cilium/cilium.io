@@ -21,20 +21,19 @@ import UtmostLogo from './images/logo-utmost.inline.svg';
 import YahooLogo from './images/logo-yahoo.inline.svg';
 
 const logos = [
-  PalantirLogo,
+  UtmostLogo,
   AdobeLogo,
   TripLogo,
-  AlibabaCloudLogo,
+  GitlabLogo,
   PostFinanceLogo,
-  DigitalOceanLogo,
-  AWSLogo,
-  UtmostLogo,
   WildLifeLogo,
+  AWSLogo,
+  DigitalOceanLogo,
   CengnLogo,
   YahooLogo,
   GoogleLogo,
   MasmovilLogo,
-  GitlabLogo,
+  AlibabaCloudLogo,
 ];
 
 const Logos = ({ className }) => (
