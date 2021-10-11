@@ -35,7 +35,9 @@ const Discover = () => {
               {buttonText}
             </Button>
           </div>
-          <GatsbyImage image={getImage(illustration)} alt="" />
+          <div>
+            <GatsbyImage image={getImage(illustration)} alt="" />
+          </div>
         </div>
       </Container>
     </section>

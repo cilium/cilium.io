@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Highlights from 'components/pages/home/highlights';
+import Architecture from 'components/pages/learn/architecture';
 import EnterpriseDistributions from 'components/pages/learn/enterprise-distributions';
 import InstallDeploy from 'components/pages/learn/install-deploy';
 import Learn from 'components/pages/learn/learn';
@@ -26,6 +27,7 @@ const LearnPage = () => (
     <Hero className="pt-5 md:pt-16 lg:pb-5" {...hero} />
     <UseCases />
     <Highlights className="mt-10 md:mt-20" />
+    <Architecture />
     <Logos className="mt-10 md:mt-20 lg:mt-28" />
     <Learn />
     <TryCilium />
