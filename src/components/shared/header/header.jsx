@@ -44,7 +44,7 @@ const Header = () => (
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:flex lg:space-x-11 lg:items-center">
+              <div className="hidden lg:flex lg:space-x-8 xl:space-x-11 lg:items-center">
                 <span className="inline-flex rounded-md">
                   <Button size="sm" to="/enterprise">
                     Enterprise
