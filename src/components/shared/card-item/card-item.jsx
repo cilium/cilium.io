@@ -43,6 +43,7 @@ const CardItem = ({ icon: Icon, name, text, links }) => (
 CardItem.propTypes = {
   icon: PropTypes.func.isRequired,
   name: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       isCalendlyPopUp: PropTypes.bool,
