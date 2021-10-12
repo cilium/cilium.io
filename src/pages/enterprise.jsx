@@ -4,7 +4,7 @@ import Distributions from 'components/pages/enterprise/distributions';
 import Training from 'components/pages/enterprise/training';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
-import illustration from 'images/shared/hero/illustration-enterprise.svg';
+import illustration from 'images/hero-illustration.svg';
 import MainLayout from 'layouts/main';
 import SeoMetadata from 'utils/seo-metadata';
 
@@ -17,7 +17,7 @@ const hero = {
 
 const EnterprisePage = () => (
   <MainLayout pageMetadata={SeoMetadata.enterprise}>
-    <Hero className="mt-16 lg:mt-28" {...hero} />
+    <Hero className="pt-5 md:pt-16 xl:pb-20" {...hero} />
     <Distributions />
     <Training />
     <Community />

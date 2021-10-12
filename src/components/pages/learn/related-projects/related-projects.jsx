@@ -6,14 +6,13 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 
-const title = 'Related Cilium Projects';
-const description = 'Supercharge Kubernetes with powerful Cilium projects';
+const title = 'Related Projects';
 const items = [
   {
     imageName: 'image1',
     title: 'Hubble UI',
     text: 'Hubble is a fully distributed networking and security observability platform for cloud native workloads. Hubble is open source software and built on top of Cilium and eBPF to enable deep visibility into the communication and behavior of services as well as the networking infrastructure in a completely transparent manner.',
-    linkUrl: 'https://docs.cilium.io/en/v1.9/gettingstarted/hubble/',
+    linkUrl: 'https://docs.cilium.io/en/latest/gettingstarted/hubble/',
     linkTarget: '_blank',
     linkText: 'Learn more',
   },
@@ -25,10 +24,18 @@ const items = [
     linkTarget: '_blank',
     linkText: 'Learn more',
   },
+  {
+    imageName: 'image3',
+    title: 'eBPF Library for Go',
+    text: 'eBPF is a pure Go library that provides utilities for loading, compiling, and debugging eBPF programs. It has minimal external dependencies and is intended to be used in long running processes.',
+    linkUrl: 'https://github.com/cilium/ebpf',
+    linkTarget: '_blank',
+    linkText: 'Learn more',
+  },
 ];
 
 const RelatedProjects = () => {
-  const { image1, image2 } = useStaticQuery(graphql`
+  const { image1, image2, image3 } = useStaticQuery(graphql`
     query {
       image1: file(relativePath: { eq: "pages/learn/related-projects/image-1.jpg" }) {
         childImageSharp {
@@ -40,27 +47,33 @@ const RelatedProjects = () => {
           gatsbyImageData(width: 592)
         }
       }
+      image3: file(relativePath: { eq: "pages/learn/related-projects/image-3.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(width: 592)
+        }
+      }
     }
   `);
-  const images = { image1, image2 };
+  const images = { image1, image2, image3 };
   return (
-    <section className="mt-20 lg:mt-28">
+    <section className="mt-10 md:mt-20 lg:mt-36">
       <Container>
         <Heading tag="h2">{title}</Heading>
-        <p className="mt-5 text-lg">{description}</p>
-        <div className="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:mt-14">
+        <div className="grid grid-cols-1 gap-6 mt-6 md:gap-x-8 gap-y-8 md:gap-y-12 md:mt-10 md:grid-cols-2 lg:grid-cols-3 lg:mt-14">
           {items.map(({ imageName, title, text, linkUrl, linkText, linkTarget }, index) => {
             const image = images[imageName];
             return (
               <div key={index}>
-                <GatsbyImage className="w-full h-auto" image={getImage(image)} alt="" />
-                <Heading className="mt-7" tag="h3" size="sm">
+                <GatsbyImage
+                  className="w-full h-auto"
+                  objectFit="contain"
+                  image={getImage(image)}
+                  alt=""
+                />
+                <Heading className="mt-7" tag="h3" size="xs">
                   {title}
                 </Heading>
-                <p
-                  className="mt-4 text-lg md:max-w-[542px]"
-                  dangerouslySetInnerHTML={{ __html: text }}
-                />
+                <p className="mt-5 md:max-w-[542px]" dangerouslySetInnerHTML={{ __html: text }} />
                 <Link
                   className="mt-5"
                   type="arrow"

@@ -27,6 +27,7 @@ module.exports = {
         black: '#141A1F',
         primary: {
           1: '#0080FF',
+          2: '#0A53A5',
         },
         gray: {
           1: '#6C7993',
@@ -38,6 +39,13 @@ module.exports = {
         hover: {
           1: '#3399FF',
         },
+        additional: {
+          4: '#D6EBFF',
+        },
+      },
+      boxShadow: {
+        primary: '0px 5px 20px rgba(0, 0, 0, 0.09)',
+        secondary: '0px 10px 20px rgba(0, 0, 0, 0.09)',
       },
     },
   },

@@ -3,7 +3,13 @@
 @layer components {
   .with-link-primary {
     a {
-      @apply text-primary-1 font-medium hover:text-gray-1 duration-200 transition-colors;
+      @apply text-primary-1 font-semibold hover:text-gray-1 duration-200 transition-colors;
+    }
+  }
+
+  .with-link-primary-light {
+    a {
+      @apply text-primary-1 hover:text-gray-1 duration-200 transition-colors;
     }
   }
 }

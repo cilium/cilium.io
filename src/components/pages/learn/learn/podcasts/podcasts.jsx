@@ -39,7 +39,10 @@ const Podcasts = ({ className }) => (
     </Heading>
     <div className="mt-3.5">
       {items.map(({ name, type, target, url }, index) => (
-        <div className="py-4 border-b lg:py-6 last:pb-0 border-gray-3 last:border-none" key={index}>
+        <div
+          className="py-3 border-b md:py-4 lg:py-6 last:pb-0 border-gray-3 last:border-none"
+          key={index}
+        >
           <Link
             className="flex space-x-4"
             theme="black-primary"
@@ -49,7 +52,7 @@ const Podcasts = ({ className }) => (
           >
             <PlayIcon className="flex-shrink-0" />
             <div className="flex flex-col lg:pt-1.5">
-              <span className="text-lg font-medium lg:text-xl ">{name}</span>
+              <span className="text-lg font-medium leading-relaxed lg:text-xl ">{name}</span>
               <span className="mt-2 text-sm font-medium leading-none text-gray-1">{type}</span>
             </div>
           </Link>

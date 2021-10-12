@@ -1,113 +1,94 @@
+import PropTypes from 'prop-types';
 import React from 'react';
-import SwiperCore, { Navigation, Pagination, A11y } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-import 'swiper/css';
-import 'swiper/css/a11y';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
+import BellLogo from 'icons/bell.inline.svg';
 import CapitalOneLogo from 'icons/capitalone.inline.svg';
-import Chevron from 'icons/chevron.inline.svg';
-import DataDogLogo from 'icons/datadog.inline.svg';
+import DatadogLogo from 'icons/datadog.inline.svg';
 import AdobeLogo from 'icons/logo-adobe.inline.svg';
+import AlibabaCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
+import AWSLogo from 'icons/logo-aws.inline.svg';
+import CengnLogo from 'icons/logo-cengn.inline.svg';
+import DigitalOceanLogo from 'icons/logo-digital-ocean.inline.svg';
+import GitlabLogo from 'icons/logo-gitlab.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
+import MasmovilLogo from 'icons/logo-masmovil.inline.svg';
+import TripLogo from 'icons/logo-trip.inline.svg';
+import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
+import SkyLogo from 'icons/sky.inline.svg';
 
-SwiperCore.use([Navigation, Pagination, A11y]);
+const icons = {
+  google: GoogleLogo,
+  adobe: AdobeLogo,
+  aws: AWSLogo,
+  capitalOne: CapitalOneLogo,
+  alibabaCloud: AlibabaCloudLogo,
+  cengn: CengnLogo,
+  digitalOcean: DigitalOceanLogo,
+  gitlab: GitlabLogo,
+  masmovil: MasmovilLogo,
+  trip: TripLogo,
+  wildLife: WildLifeLogo,
+  bell: BellLogo,
+  sky: SkyLogo,
+  datadog: DatadogLogo,
+};
 
-const title = 'User Community';
-const items = [
-  {
-    icon: GoogleLogo,
-    text: 'Google chooses Cilium for Google Kubernetes Engine (GKE) networking',
-    linkText: 'Blog',
-    linkUrl: '/',
-  },
-  {
-    icon: AdobeLogo,
-    text: 'What Makes a Good Multi-tenant Kubernetes Solution',
-    linkText: 'Watch video',
-    linkUrl: '/',
-  },
-  {
-    icon: CapitalOneLogo,
-    text: 'Building a Secure and Maintainable PaaS',
-    linkText: 'Watch video',
-    linkUrl: '/',
-  },
-  {
-    icon: DataDogLogo,
-    text: 'How Datadog uses Cilium',
-    linkText: 'Watch video',
-    linkUrl: '/',
-  },
-];
-
-const UserCommunity = () => (
-  <section className="mt-20 lg:mt-28">
+const UserCommunity = ({ title, items }) => (
+  <section className="mt-10 md:mt-20 lg:mt-28">
     <Container>
-      <Heading tag="h2">{title}</Heading>
-      <div className="relative">
-        <button
-          className="absolute -translate-x-1/2  hidden 2xl:flex 2xl:-left-20 top-[calc(50%-3rem)]"
-          id="button-previous"
-          type="button"
-          aria-label="Previous slide"
-        >
-          <Chevron className="rotate-180" />
-        </button>
-        <button
-          className="absolute -translate-x-1/2 hidden 2xl:flex 2xl:-right-24 top-[calc(50%-3rem)]"
-          id="button-next"
-          type="button"
-          aria-label="Next slide"
-        >
-          <Chevron />
-        </button>
-        <Swiper
-          className="mt-10 lg:mt-14 !pb-16 swiper"
-          modules={[Navigation, Pagination, A11y]}
-          navigation={{
-            prevEl: '#button-previous',
-            nextEl: '#button-next',
-          }}
-          pagination={{ clickable: true }}
-          slidesPerView={1}
-          slidesPerGroup={1}
-          spaceBetween={32}
-          breakpoints={{
-            640: {
-              slidesPerView: 2,
-              slidesPerGroup: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-              slidesPerGroup: 3,
-            },
-            1280: {
-              slidesPerView: 4,
-              slidesPerGroup: 4,
-            },
-          }}
-          loop
-          watchSlidesProgress
-        >
-          {items.map(({ icon: Icon, text, linkText, linkUrl }, index) => (
-            <SwiperSlide key={index}>
-              <div className="flex flex-col h-full p-8 border rounded-lg bg-gray-4 border-gray-3">
-                <Icon />
-                <p className="my-5">{text}</p>
-                <Link className="mt-auto" type="text" theme="primary" to={linkUrl}>
-                  {linkText}
-                </Link>
+      <Heading tag="h3" theme="gray">
+        {title}
+      </Heading>
+      <div className="grid gap-4 mt-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-4 xl:gap-8 lg:mt-8">
+        {items.map(({ iconName, text, links }, index) => {
+          const Icon = icons[iconName];
+          return (
+            <div
+              className="flex flex-col h-full p-6 border rounded-lg xl:p-8 bg-gray-4 border-gray-3"
+              key={index}
+            >
+              <Icon className="h-12" />
+              <p className="mt-5 mb-4">{text}</p>
+              <div className="pt-4 mt-auto space-x-6 leading-none border-t border-gray-3">
+                {links.map(({ linkUrl, linkText, linkTarget }, index) => (
+                  <Link
+                    className="relative first:before:hidden before:w-1 before:h-1 before:absolute before:rounded-full before:bg-gray-5 before:top-1/2 before:-translate-y-1/2 before:-left-3.5"
+                    key={index}
+                    type="text"
+                    theme="primary"
+                    to={linkUrl}
+                    target={linkTarget || ''}
+                  >
+                    {linkText}
+                  </Link>
+                ))}
               </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+            </div>
+          );
+        })}
       </div>
     </Container>
   </section>
 );
+
+UserCommunity.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      iconName: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      links: PropTypes.arrayOf(
+        PropTypes.shape({
+          linkTarget: PropTypes.string,
+          linkUrl: PropTypes.string.isRequired,
+          linkText: PropTypes.string.isRequired,
+        })
+      ),
+    })
+  ).isRequired,
+};
 
 export default UserCommunity;

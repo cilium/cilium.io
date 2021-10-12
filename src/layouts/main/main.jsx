@@ -19,7 +19,11 @@ MainLayout.propTypes = {
   pageMetadata: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
-  }).isRequired,
+  }),
+};
+
+MainLayout.defaultProps = {
+  pageMetadata: {},
 };
 
 export default MainLayout;

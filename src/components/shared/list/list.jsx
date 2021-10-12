@@ -12,7 +12,10 @@ const List = ({ className, title, items, buttonUrl, buttonText }) => (
     </Heading>
     <div className="mt-2.5">
       {items.map(({ linkUrl, linkTarget, linkText }, index) => (
-        <div className="py-4 border-b lg:py-6 last:pb-0 border-gray-3 last:border-none" key={index}>
+        <div
+          className="py-2.5 border-b md:py-4 lg:py-6 last:pb-0 border-gray-3 last:border-none"
+          key={index}
+        >
           <Link type="text" theme="black-primary" target={linkTarget || ''} to={linkUrl}>
             <span className="text-lg lg:text-xl lg:leading-normal pt-1.5 font-medium">
               {linkText}
@@ -22,7 +25,7 @@ const List = ({ className, title, items, buttonUrl, buttonText }) => (
       ))}
     </div>
     {buttonUrl && buttonText && (
-      <Button className="mt-10" to={buttonUrl}>
+      <Button className="mt-6 md:mt-8 lg:mt-10" to={buttonUrl}>
         {buttonText}
       </Button>
     )}
