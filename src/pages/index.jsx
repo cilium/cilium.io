@@ -14,7 +14,6 @@ import Logos from 'components/shared/logos';
 import MainLayout from 'layouts/main';
 
 const userCommunity1 = {
-  title: 'User Community',
   items: [
     {
       iconName: 'google',
@@ -70,7 +69,6 @@ const userCommunity1 = {
 };
 
 const userCommunity2 = {
-  title: 'User Community',
   items: [
     {
       iconName: 'wildLife',

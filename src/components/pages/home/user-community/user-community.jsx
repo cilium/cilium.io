@@ -39,9 +39,11 @@ const icons = {
 const UserCommunity = ({ title, items }) => (
   <section className="mt-10 md:mt-20 lg:mt-28">
     <Container>
-      <Heading tag="h3" theme="gray">
-        {title}
-      </Heading>
+      {title && (
+        <Heading tag="h3" theme="gray">
+          {title}
+        </Heading>
+      )}
       <div className="grid gap-4 mt-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-4 xl:gap-8 lg:mt-8">
         {items.map(({ iconName, text, links }, index) => {
           const Icon = icons[iconName];
@@ -75,7 +77,7 @@ const UserCommunity = ({ title, items }) => (
 );
 
 UserCommunity.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       iconName: PropTypes.string.isRequired,
@@ -89,6 +91,10 @@ UserCommunity.propTypes = {
       ),
     })
   ).isRequired,
+};
+
+UserCommunity.defaultProps = {
+  title: null,
 };
 
 export default UserCommunity;
