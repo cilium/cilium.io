@@ -35,10 +35,10 @@ const Platforms = () => (
   <section className="mt-10 md:mt-20 lg:mt-28">
     <Container>
       <Heading tag="h2">{title}</Heading>
-      <div className="flex flex-wrap items-center justify-center grid-cols-2 mt-6 xs:grid xl:justify-between justify-items-center gap-y-5 gap-x-6 sm:flex md:mt-8 md:gap-x-14 lg:gap-x-20 md:gap-y-6 lg:mt-11">
+      <div className="grid flex-wrap items-center justify-center grid-cols-2 mt-6 xl:justify-between justify-items-center gap-y-5 gap-x-6 sm:flex md:mt-8 sm:gap-x-14 lg:gap-x-20 md:gap-y-6 lg:mt-11">
         {logos.map((logo, index) => {
           const Logo = logo;
-          return <Logo className="w-auto h-10" key={index} />;
+          return <Logo className="w-auto h-8 xs:h-10" key={index} />;
         })}
       </div>
     </Container>
