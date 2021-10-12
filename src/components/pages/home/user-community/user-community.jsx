@@ -42,7 +42,7 @@ const UserCommunity = ({ title, items }) => (
       <Heading tag="h3" theme="gray">
         {title}
       </Heading>
-      <div className="grid gap-4 mt-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 xl:gap-8 lg:mt-8">
+      <div className="grid gap-4 mt-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-4 xl:gap-8 lg:mt-8">
         {items.map(({ iconName, text, links }, index) => {
           const Icon = icons[iconName];
           return (
