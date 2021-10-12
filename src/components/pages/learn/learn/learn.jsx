@@ -12,7 +12,8 @@ const title = 'Learn about Cilium & eBPF';
 const items = [
   {
     icon: IntroductionIcon,
-    name: '10min Introduction to Cilium by Thomas Graf, Cilium Co-Creator',
+    name: '10min Introduction to Cilium',
+    text: 'by Thomas Graf, Cilium Co-Creator',
     links: [
       {
         linkUrl: 'https://www.youtube.com/watch?v=80OYrzS1dCA&t=405s',
@@ -23,7 +24,8 @@ const items = [
   },
   {
     icon: ConceptsIcon,
-    name: 'Weekly Virtual Cilium Introduction & AMA with Thomas Graf, Co-Creator Cilium',
+    name: 'Weekly Virtual Cilium Introduction & AMA',
+    text: 'with Thomas Graf, Cilium Co-Creator',
     links: [
       {
         isCalendlyPopUp: true,
@@ -36,6 +38,7 @@ const items = [
   {
     icon: NetworkingIcon,
     name: 'The Future of eBPF based Networking and Security',
+    text: 'eBPF Summit 2020, Thomas Graf, Cilium Co-Creator, CTO & Co-Founder Isovalent',
     links: [
       {
         linkUrl: 'https://www.youtube.com/watch?v=vNuEx0wB_-4',
