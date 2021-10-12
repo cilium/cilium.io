@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Highlights from 'components/pages/home/highlights';
+import UserCommunity from 'components/pages/home/user-community';
 import Architecture from 'components/pages/learn/architecture';
 import EnterpriseDistributions from 'components/pages/learn/enterprise-distributions';
 import InstallDeploy from 'components/pages/learn/install-deploy';
@@ -22,6 +23,112 @@ const hero = {
   illustration,
 };
 
+const userCommunity = {
+  title: 'User stories',
+  items: [
+    {
+      iconName: 'aws',
+      text: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
+      links: [
+        {
+          linkText: 'Read blog',
+          linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
+          linkTarget: '_blank',
+        },
+      ],
+    },
+    {
+      iconName: 'google',
+      text: 'Google chooses Cilium for Google Kubernetes Engine (GKE) networking',
+      links: [
+        {
+          linkText: 'Read blog',
+          linkUrl:
+            'https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebfp-and-cilium-to-google-kubernetes-engine',
+          linkTarget: '_blank',
+        },
+      ],
+    },
+    {
+      iconName: 'bell',
+      text: 'Why eBPF is changing the Telco networking space?',
+      links: [
+        {
+          linkText: 'Watch video',
+          linkUrl: 'https://www.youtube.com/watch?v=fNtG0iHYne4',
+          linkTarget: '_blank',
+        },
+      ],
+    },
+    {
+      iconName: 'sky',
+      text: 'eBPF & Cilium at Sky',
+      links: [
+        {
+          linkText: 'Watch video',
+          linkUrl: 'https://www.youtube.com/watch?v=u-4naOMfs_w',
+          linkTarget: '_blank',
+        },
+      ],
+    },
+    {
+      iconName: 'adobe',
+      text: 'What Makes a Good Multi-tenant Kubernetes Solution',
+      links: [
+        {
+          linkText: 'Video 1',
+          linkUrl: 'https://www.youtube.com/watch?v=7UQ2CU6UEGY&ab_channel=eBPFSummit',
+          linkTarget: '_blank',
+        },
+        {
+          linkText: 'Video 2',
+          linkUrl: 'https://www.youtube.com/watch?v=39FLsSc2P-Y&feature=youtu.be&t=116',
+          linkTarget: '_blank',
+        },
+      ],
+    },
+    {
+      iconName: 'capitalOne',
+      text: 'Building a Secure and Maintainable PaaS',
+      links: [
+        {
+          linkText: 'Watch video',
+          linkUrl: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w&ab_channel=eBPFSummit',
+          linkTarget: '_blank',
+        },
+      ],
+    },
+    {
+      iconName: 'datadog',
+      text: 'How Datadog uses Cilium',
+      links: [
+        {
+          linkText: 'Watch video',
+          linkUrl: 'https://www.youtube.com/watch?v=6mTVuZUHLBg&ab_channel=eBPFSummit',
+          linkTarget: '_blank',
+        },
+      ],
+    },
+    {
+      iconName: 'gitlab',
+      text: 'Kubernetes Network Policies in Action with Cilium',
+      links: [
+        {
+          linkText: 'Video',
+          linkUrl: 'https://www.youtube.com/watch?v=kwQ0ooO3UM8&ab_channel=eBPFSummit',
+          linkTarget: '_blank',
+        },
+        {
+          linkText: 'Docs',
+          linkUrl:
+            'https://docs.gitlab.com/ee/user/application_security/threat_monitoring/#container-network-policy',
+          linkTarget: '_blank',
+        },
+      ],
+    },
+  ],
+};
+
 const LearnPage = () => (
   <MainLayout pageMetadata={SeoMetadata.learn}>
     <Hero className="pt-5 md:pt-16 lg:pb-5" {...hero} />
@@ -31,6 +138,7 @@ const LearnPage = () => (
     <Logos className="mt-10 md:mt-20 lg:mt-28" />
     <Learn />
     <TryCilium />
+    <UserCommunity {...userCommunity} />
     <EnterpriseDistributions />
     <RelatedProjects />
     <InstallDeploy />

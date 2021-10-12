@@ -3,12 +3,10 @@ import React from 'react';
 import CardItem from 'components/shared/card-item';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import List from 'components/shared/list';
 
 import ConceptsIcon from './images/concepts.inline.svg';
 import IntroductionIcon from './images/introduction.inline.svg';
 import NetworkingIcon from './images/networking.inline.svg';
-import UserStories from './user-stories';
 
 const title = 'Learn about Cilium & eBPF';
 const items = [
@@ -52,27 +50,6 @@ const items = [
   },
 ];
 
-const featuredBlogs = {
-  title: 'Featured Blogs',
-  items: [
-    {
-      linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
-      linkTarget: '_blank',
-      linkText: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
-    },
-    {
-      linkUrl: 'https://cilium.io/blog/2020/11/10/ebpf-future-of-networking/',
-      linkText: 'eBPF - The Future of Networking & Security',
-    },
-    {
-      linkUrl:
-        'https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebpf-and-cilium-to-google-kubernetes-engine',
-      linkTarget: '_blank',
-      linkText: 'GKE Dataplane v2',
-    },
-  ],
-};
-
 const Learn = () => (
   <section className="mt-10 md:mt-20 lg:mt-28">
     <Container>
@@ -81,10 +58,6 @@ const Learn = () => (
         {items.map((item, index) => (
           <CardItem {...item} key={index} />
         ))}
-      </div>
-      <div className="grid grid-cols-1 mt-9 md:mt-14 lg:mt-20 lg:grid-cols-12 gap-x-8 gap-y-10 md:gap-y-16 lg:gap-y-20">
-        <List {...featuredBlogs} className="lg:col-span-10" />
-        <UserStories className="col-span-full" />
       </div>
     </Container>
   </section>

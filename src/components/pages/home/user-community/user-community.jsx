@@ -6,6 +6,7 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import BellLogo from 'icons/bell.inline.svg';
 import CapitalOneLogo from 'icons/capitalone.inline.svg';
+import DatadogLogo from 'icons/datadog.inline.svg';
 import AdobeLogo from 'icons/logo-adobe.inline.svg';
 import AlibabaCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
 import AWSLogo from 'icons/logo-aws.inline.svg';
@@ -16,6 +17,7 @@ import GoogleLogo from 'icons/logo-google.inline.svg';
 import MasmovilLogo from 'icons/logo-masmovil.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
+import SkyLogo from 'icons/sky.inline.svg';
 
 const icons = {
   google: GoogleLogo,
@@ -30,6 +32,8 @@ const icons = {
   trip: TripLogo,
   wildLife: WildLifeLogo,
   bell: BellLogo,
+  sky: SkyLogo,
+  datadog: DatadogLogo,
 };
 
 const UserCommunity = ({ title, items }) => (
