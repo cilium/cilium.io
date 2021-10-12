@@ -60,7 +60,7 @@ const Hero = () => (
       </div>
       <div className="relative flex justify-center col-span-full lg:col-span-6 2xl:col-span-5 2xl:-ml-8">
         <img
-          className="w-full mt-4 lg:-right-10 xl:right-auto xl:left-0 lg:max-w-max lg:absolute top-0 xl:-top-16 md:mt-10 lg:mt-0 lg:w-[580px] xl:w-max"
+          className="w-full h-full mt-4 lg:h-auto md:mt-10 lg:-right-10 lg:max-w-max lg:absolute top-0 xl:-top-16 lg:mt-0 lg:w-[580px] xl:w-max xl:right-auto xl:left-0"
           src={illustration}
           alt=""
         />

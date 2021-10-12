@@ -18,7 +18,7 @@ const Hero = ({ className, title, description, illustration }) => (
       </div>
       <div className="relative flex justify-center">
         <img
-          className="flex-1 w-full lg:-right-10 left-auto md:max-w-[720px] lg:w-[580px] lg:absolute lg:top-1/2 lg:translate-y-[calc(-50%+1rem)] lg:my-0 xl:w-max 2xl:left-0"
+          className="flex-1 w-full h-full lg:h-auto lg:-right-10 left-auto md:max-w-[720px] lg:w-[580px] lg:absolute lg:top-1/2 lg:translate-y-[calc(-50%+1rem)] lg:my-0 xl:w-max 2xl:left-0"
           src={illustration}
           alt=""
         />
