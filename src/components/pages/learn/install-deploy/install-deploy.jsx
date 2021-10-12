@@ -9,7 +9,7 @@ import Podcasts from '../learn/podcasts';
 const title = 'Digging Deeper';
 
 const featuredBlogs = {
-  title: 'Technical Resources',
+  title: 'Understanding Cilium Performance',
   items: [
     {
       linkUrl: 'https://cilium.io/blog/2021/05/11/cni-benchmark',
