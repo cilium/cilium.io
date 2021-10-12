@@ -32,7 +32,7 @@ const Hero = () => (
         />
         <div className="flex flex-col items-start mt-4 xl:flex-row xl:items-center md:mt-5 ">
           <Button to="/learn">Discover Cilium</Button>
-          <div className="flex flex-col mt-6 space-y-4 xs:space-y-0 xs:space-x-6 xs:flex-row xl:ml-11">
+          <div className="flex flex-col mt-6 space-y-4 xl:mt-0 xs:space-y-0 xs:space-x-6 xs:flex-row xl:ml-11">
             <Link
               className="flex items-center space-x-3"
               to="https://cilium.herokuapp.com/"
