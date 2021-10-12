@@ -87,8 +87,8 @@ const Header = () => (
                     <span className="sr-only">Cilium</span>
                     <Logo />
                   </div>
-                  <div className="-mr-2">
-                    <Popover.Button className="inline-flex items-center justify-center text-black bg-white rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
+                  <div className="-mr-3">
+                    <Popover.Button className="inline-flex p-1.5 items-center justify-center text-black bg-white rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
                       <span className="sr-only">Close menu</span>
                       <XIcon className="w-7 h-7" aria-hidden="true" />
                     </Popover.Button>
