@@ -12,11 +12,11 @@ const Item = ({ icon: Icon, title, description }) => (
       <>
         <Popover.Button
           className={classNames(
-            'flex items-center p-5 pl-6 border rounded-lg border-gray-3 w-full h-full duration-200 transition',
+            'flex items-center p-4 xl:p-5 xl:pl-6 border rounded-lg border-gray-3 w-full h-full duration-200 transition',
             open && 'rounded-b-none shadow-primary border-transparent'
           )}
         >
-          <Icon className="flex-shrink-0 w-16 h-auto lg:w-max" />
+          <Icon className="flex-shrink-0 w-16 h-auto xl:w-max" />
           <Heading className="mx-4 text-left" size="xxs" tag="h3">
             {title}
           </Heading>

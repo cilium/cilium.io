@@ -82,13 +82,13 @@ const list = [
 
 const Highlights = ({ className }) => (
   <section className={className}>
-    <Container className="grid gap-4 md:gap-6 lg:gap-8 md:grid-cols-2 xl:grid-cols-3 md:auto-rows-fr">
+    <Container className="grid gap-4 md:gap-6 lg:gap-8 lg:grid-cols-3 md:auto-rows-fr">
       {list.map(({ title, items }, index) => (
         <div key={index}>
           <Heading tag="h2" size="sm">
             {title}
           </Heading>
-          <div className="grid grid-cols-1 gap-4 mt-6 lg:mt-9 md:gap-6 lg:gap-8 auto-rows-fr">
+          <div className="grid grid-cols-1 gap-4 mt-6 lg:mt-9 md:gap-6 lg:gap-8 lg:auto-rows-[130px] xl:auto-rows-fr">
             {items.map((item, index) => (
               <Item {...item} key={index} />
             ))}
