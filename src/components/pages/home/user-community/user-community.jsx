@@ -42,12 +42,12 @@ const UserCommunity = ({ title, items }) => (
       <Heading tag="h3" theme="gray">
         {title}
       </Heading>
-      <div className="grid gap-4 mt-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-6 lg:gap-8 lg:mt-8">
+      <div className="grid gap-4 mt-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 xl:gap-8 lg:mt-8">
         {items.map(({ iconName, text, links }, index) => {
           const Icon = icons[iconName];
           return (
             <div
-              className="flex flex-col h-full p-6 border rounded-lg md:p-8 bg-gray-4 border-gray-3"
+              className="flex flex-col h-full p-6 border rounded-lg xl:p-8 bg-gray-4 border-gray-3"
               key={index}
             >
               <Icon className="h-12" />
