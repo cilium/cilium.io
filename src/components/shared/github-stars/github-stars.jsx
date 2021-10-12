@@ -5,7 +5,7 @@ import GithubLogo from 'icons/github.inline.svg';
 
 import Link from '../link';
 
-const FALLBACK_COUNT = 9000;
+const FALLBACK_COUNT = 9300;
 
 const fetchGithubStartsCount = async (cb) => {
   try {
@@ -30,7 +30,7 @@ const GithubStars = ({ className }) => {
         type="text"
         theme="black-primary"
         className="flex items-center h-8 text-sm font-bold border rounded border-gray-3"
-        to="https://github.com/loadimpact/k6"
+        to="https://github.com/cilium/cilium"
         target="_blank"
         rel="noopener noreferrer"
       >
