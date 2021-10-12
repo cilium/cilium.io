@@ -25,7 +25,7 @@ const Discover = () => (
             {buttonText}
           </Button>
         </div>
-        <img className="h-auto w-72 lg:w-max" src={illustration} alt="" />
+        <img className="h-auto w-52 md:w-64 lg:w-max" src={illustration} alt="" />
       </div>
     </Container>
   </section>
