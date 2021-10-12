@@ -16,13 +16,11 @@ const CardItem = ({ icon: Icon, name, links }) => (
         {links.map(({ linkText, linkUrl, linkTarget, isCalendlyPopUp }, index) => (
           <Fragment key={index}>
             {isCalendlyPopUp ? (
-              <div className="self-start text-sm tracking-wider transition-colors duration-200 text-primary-1 hover:text-gray-1">
-                <PopupButton
-                  styles={{ textTransform: 'uppercase', fontWeight: 700 }}
-                  text={linkText}
-                  url={linkUrl}
-                />
-              </div>
+              <PopupButton
+                className="self-start text-sm font-bold tracking-wider uppercase transition-colors duration-200 text-primary-1 hover:text-gray-1"
+                text={linkText}
+                url={linkUrl}
+              />
             ) : (
               <Link
                 className="self-start relative first:before:hidden before:w-1 before:h-1 before:absolute before:rounded-full before:bg-gray-5 before:top-1/2 before:-translate-y-1/2 before:-left-3.5"

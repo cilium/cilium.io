@@ -64,13 +64,12 @@ const TryCilium = () => (
                 >
                   {has2Buttons
                     ? buttons.map(({ buttonUrl, buttonText }, index) => (
-                        <Button key={index}>
-                          <PopupButton
-                            url={buttonUrl}
-                            styles={{ fontWeight: 700 }}
-                            text={buttonText}
-                          />
-                        </Button>
+                        <PopupButton
+                          key={index}
+                          url={buttonUrl}
+                          className="text-base cursor-pointer lg:text-lg inline-flex font-bold text-white bg-primary-2 justify-center !leading-none whitespace-nowrap rounded outline-none transition-colors duration-200 hover:bg-hover-1 disabled:opacity-25 disabled:hover:bg-primary-1 disabled:cursor-auto py-2.5 px-3.5 md:py-3 md:px-5 lg:py-4 lg:px-6"
+                          text={buttonText}
+                        />
                       ))
                     : buttons.map(({ buttonText, buttonUrl, buttonTarget }, index) => (
                         <Button key={index} to={buttonUrl} target={buttonTarget || ''}>
