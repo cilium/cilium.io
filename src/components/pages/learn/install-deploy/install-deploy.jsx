@@ -9,11 +9,11 @@ import Podcasts from '../learn/podcasts';
 const title = 'Digging Deeper';
 
 const featuredBlogs = {
-  title: 'Understanding Cilium Performance',
+  title: 'Technical Resources',
   items: [
     {
       linkUrl: 'https://cilium.io/blog/2021/05/11/cni-benchmark',
-      linkText: 'CNI Benchmark',
+      linkText: 'CNI Benchmark: Understanding Cilium Performance',
     },
     {
       linkUrl: 'https://isovalent.com/blog/post/its-dns',
