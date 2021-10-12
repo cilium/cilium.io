@@ -12,19 +12,6 @@ import InstallFestSvg from './images/installfest.inline.svg';
 const title = 'Get Hands-On With Cilium';
 const items = [
   {
-    icon: GuideSvg,
-    name: 'Do it yourself Tutorials',
-    text: 'Check out the Cilium documentation to quickly get started on a Kubernetes cluster of your choice.',
-    buttons: [
-      {
-        buttonUrl: 'https://docs.cilium.io/en/v1.10/',
-        buttonText: 'Learn more',
-        buttonTarget: '_blank',
-      },
-    ],
-  },
-
-  {
     icon: InstallFestSvg,
     name: 'Weekly Community InstallFest',
     text: 'Join us at our weekly InstallFest and learn how to setup and get started with Cilium.',
@@ -36,6 +23,18 @@ const items = [
       {
         buttonUrl: 'https://calendly.com/cilium-events/cilium-installfest-na',
         buttonText: 'Join Americas',
+      },
+    ],
+  },
+  {
+    icon: GuideSvg,
+    name: 'Do it yourself Tutorials',
+    text: 'Check out the Cilium documentation to quickly get started on a Kubernetes cluster of your choice.',
+    buttons: [
+      {
+        buttonUrl: 'https://docs.cilium.io/en/v1.10/',
+        buttonText: 'Learn more',
+        buttonTarget: '_blank',
       },
     ],
   },
