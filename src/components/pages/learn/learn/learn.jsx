@@ -31,7 +31,7 @@ const items = [
         isCalendlyPopUp: true,
         linkTarget: '_blank',
         linkUrl: 'https://calendly.com/cilium-events/cilium-introduction',
-        linkText: 'Join',
+        linkText: 'Book your Seat',
       },
     ],
   },
