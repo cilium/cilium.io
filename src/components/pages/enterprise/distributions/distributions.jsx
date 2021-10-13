@@ -37,7 +37,7 @@ const Distributions = () => (
             className="p-6 bg-white border rounded-lg border-gray-3 md:p-11 md:pb-10 lg:px-11 lg:pt-7"
             key={index}
           >
-            <IsovalentLogo className="w-auto h-8 md:h-auto" />
+            <IsovalentLogo className="h-8 w-8 md:w-[72px] md:h-[72px]" />
             <p className="text-base border-t pt-7 mt-7 md:text-lg border-gray-3">{description}</p>
 
             <div className="grid grid-cols-1 gap-6 mt-8 lg:gap-8 md:mt-10 md:grid-cols-3">
