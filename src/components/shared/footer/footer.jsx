@@ -6,7 +6,7 @@ import Logo from 'images/logo.inline.svg';
 
 const navigation = [
   [
-    { name: 'Blog', href: '/blog' },
+    { name: 'Blog', href: 'https://cilium.io/blog' },
     { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
   ],
   [

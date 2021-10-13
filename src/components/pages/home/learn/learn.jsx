@@ -32,7 +32,7 @@ const featuredBlogs = {
       linkText: 'Introducing the Cilium Certified OpenShift Plug-in',
     },
   ],
-  buttonUrl: '/blog',
+  buttonUrl: 'https://cilium.io/blog',
   buttonText: 'Read more',
 };
 const Learn = () => (
