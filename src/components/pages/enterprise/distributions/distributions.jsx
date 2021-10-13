@@ -37,7 +37,7 @@ const Distributions = () => (
             className="p-6 bg-white border rounded-lg border-gray-3 md:p-11 md:pb-10 lg:px-11 lg:pt-7"
             key={index}
           >
-            <IsovalentLogo className="h-8 w-8 md:w-[72px] md:h-[72px]" />
+            <IsovalentLogo className="w-auto h-8 md:h-auto" />
             <p className="text-base border-t pt-7 mt-7 md:text-lg border-gray-3">{description}</p>
 
             <div className="grid grid-cols-1 gap-6 mt-8 lg:gap-8 md:mt-10 md:grid-cols-3">
@@ -48,7 +48,7 @@ const Distributions = () => (
                     className="flex space-x-3 md:flex-col md:space-x-0 md:space-y-4 xl:space-y-0 xl:space-x-4 xl:flex-row"
                     key={index}
                   >
-                    <Icon className="flex-shrink-0 w-14 h-14 xs:w-max xs:h-auto" />
+                    <Icon className="flex-shrink-0 w-14 h-14 xs:w-[72px] xs:h-[72px]" />
                     <span
                       className="text-sm font-bold md:text-base"
                       dangerouslySetInnerHTML={{ __html: name }}
