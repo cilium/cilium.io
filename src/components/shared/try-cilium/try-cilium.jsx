@@ -66,7 +66,7 @@ const TryCilium = () => (
                         <PopupButton
                           key={index}
                           url={buttonUrl}
-                          className="text-base cursor-pointer lg:text-lg inline-flex font-bold text-white bg-primary-2 justify-center !leading-none whitespace-nowrap rounded outline-none transition-colors duration-200 hover:bg-hover-1 disabled:opacity-25 disabled:hover:bg-primary-1 disabled:cursor-auto py-2.5 px-3.5 md:py-3 md:px-5 lg:py-4 lg:px-6"
+                          className="text-base cursor-pointer lg:text-lg inline-flex font-bold text-white bg-primary-2 justify-center !leading-none whitespace-nowrap rounded transition-colors duration-200 hover:bg-hover-1 disabled:opacity-25 disabled:hover:bg-primary-1 disabled:cursor-auto py-2.5 px-3.5 md:py-3 md:px-5 lg:py-4 lg:px-6 focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary-2 outline-none"
                           text={buttonText}
                         />
                       ))
