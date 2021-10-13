@@ -8,8 +8,8 @@ import illustration from './images/illustration.svg';
 
 const title = 'Discover Cilium';
 const description =
-  'Join us at our weekly InstallFest, learn and discuss how to setup and get started with Cilium.';
-const buttonText = 'Discover Now';
+  'Learn more about Cilium. Particpate in weekly Virtual InstallFests. Walk through guided hands-on tutorials. And much more.';
+const buttonText = 'Discover Cilium';
 const buttonUrl = '/learn';
 
 const Discover = () => (

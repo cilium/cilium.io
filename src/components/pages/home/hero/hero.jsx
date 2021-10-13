@@ -53,7 +53,7 @@ const Hero = () => (
               theme="primary"
             >
               <YoutubeIcon className="w-auto h-4 xs:h-6" />
-              <span>Watch eBPF & Cilium</span>
+              <span>eBPF & Cilium Stream</span>
             </Link>
           </div>
         </div>

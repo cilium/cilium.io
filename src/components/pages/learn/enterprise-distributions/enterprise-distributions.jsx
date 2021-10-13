@@ -11,8 +11,8 @@ const card = {
   title: 'Isovalent',
   items: [
     '24/7 Enterprise Support with SLA',
-    'Hardened, Enterprisegrade, Extended EOL',
-    'Additional Enterprise Functionality',
+    'Hardened, Enterprise-Grade, Extended EOL',
+    'Additional Enterprise Functionality & Features',
   ],
   linkUrl: '/enterprise',
   linkText: 'Learn more',

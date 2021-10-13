@@ -13,7 +13,7 @@ const items = [
   {
     icon: IntroductionIcon,
     name: '10min Introduction to Cilium',
-    text: 'by Thomas Graf, Cilium Co-Creator',
+    text: 'with Liz Rice and Thomas Graf',
     links: [
       {
         linkUrl: 'https://www.youtube.com/watch?v=80OYrzS1dCA&t=405s',
@@ -24,7 +24,7 @@ const items = [
   },
   {
     icon: ConceptsIcon,
-    name: 'Weekly Virtual Cilium Introduction & AMA',
+    name: 'Weekly Interactive Cilium Introduction and Live Q&A',
     text: 'with Thomas Graf, Cilium Co-Creator',
     links: [
       {

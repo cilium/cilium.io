@@ -14,14 +14,14 @@ const icons = [SupportIcon, GradeIcon, ClockIcon];
 const list = [
   {
     description:
-      'Isovalent Cilium Enterprise. Enterprise Distribution maintained by the creators of Cilium.',
+      'Isovalent Cilium Enterprise. Enterprise Distribution maintained by the creators of Cilium & eBPF.',
     linkUrl: 'https://isovalent.com/',
     linkTarget: '_blank',
     linkText: 'Learn more',
     items: [
       { name: '24/7 Enterprise <br> Support with SLA' },
       { name: 'Hardened, Enterprise <br> grade, Extended EOL' },
-      { name: 'Additional SecOps, Governance, Analytics & Observability functionality' },
+      { name: 'Additional SecOps, Governance, Analytics & Observability Functionality' },
     ],
   },
 ];

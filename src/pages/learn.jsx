@@ -131,7 +131,6 @@ const userCommunity = {
 const LearnPage = () => (
   <MainLayout pageMetadata={SeoMetadata.learn}>
     <Hero className="pt-5 md:pt-16 lg:pb-5" {...hero} />
-    <UseCases />
     <Highlights className="mt-10 md:mt-20" />
     <Architecture />
     <Learn />
@@ -140,7 +139,7 @@ const LearnPage = () => (
     <EnterpriseDistributions />
     <RelatedProjects />
     <InstallDeploy />
-    <Community />
+    <Community withBanner />
   </MainLayout>
 );
 
