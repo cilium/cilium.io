@@ -1,10 +1,10 @@
 export default {
   enterprise: {
     title: 'Cilium - Enterprise Distributions & Training',
-    description: '',
+    // description: '',
   },
   learn: {
     title: 'Cilium - Getting Started',
-    description: '',
+    // description: '',
   },
 };

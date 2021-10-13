@@ -1,20 +1,16 @@
 import React from 'react';
 
-import Banner from 'components/pages/home/banner';
 import Discover from 'components/pages/home/discover';
 import Hero from 'components/pages/home/hero';
 import Highlights from 'components/pages/home/highlights';
 import Learn from 'components/pages/home/learn';
 import FeaturedTalks from 'components/pages/home/learn/featured-talks';
-import Platforms from 'components/pages/home/platforms';
 import TwitterCards from 'components/pages/home/twitter-cards';
 import UserCommunity from 'components/pages/home/user-community';
 import Community from 'components/shared/community';
-import Logos from 'components/shared/logos';
 import MainLayout from 'layouts/main';
 
 const userCommunity1 = {
-  title: 'User Community',
   items: [
     {
       iconName: 'google',
@@ -70,7 +66,6 @@ const userCommunity1 = {
 };
 
 const userCommunity2 = {
-  title: 'User Community',
   items: [
     {
       iconName: 'wildLife',
@@ -179,15 +174,12 @@ const IndexPage = () => (
     <Hero />
     <UserCommunity {...userCommunity1} />
     <Highlights className="mt-10 md:mt-20 lg:mt-28" />
-    <Logos className="mt-10 md:mt-20 lg:mt-28" />
     <Discover />
-    <Banner />
-    <Platforms />
+    <UserCommunity {...userCommunity2} />
     <FeaturedTalks />
     <Learn />
-    <UserCommunity {...userCommunity2} />
     <TwitterCards />
-    <Community />
+    <Community withBanner />
   </MainLayout>
 );
 

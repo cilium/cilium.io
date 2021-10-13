@@ -10,7 +10,6 @@ import RelatedProjects from 'components/pages/learn/related-projects';
 import UseCases from 'components/pages/learn/use-cases';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
-import Logos from 'components/shared/logos';
 import TryCilium from 'components/shared/try-cilium';
 import illustration from 'images/hero-illustration.svg';
 import MainLayout from 'layouts/main';
@@ -135,7 +134,6 @@ const LearnPage = () => (
     <UseCases />
     <Highlights className="mt-10 md:mt-20" />
     <Architecture />
-    <Logos className="mt-10 md:mt-20 lg:mt-28" />
     <Learn />
     <TryCilium />
     <UserCommunity {...userCommunity} />

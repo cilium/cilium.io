@@ -30,9 +30,9 @@ const Hero = () => (
           className="mt-4 md:mt-5 space-y-5 md:text-lg with-link-primary lg:max-w-[490px] xl:max-w-[592px]"
           dangerouslySetInnerHTML={{ __html: description }}
         />
-        <div className="flex flex-col items-start mt-4 sm:items-center sm:flex-row xl:items-center md:mt-5 xl:flex-row ">
+        <div className="flex flex-col items-start mt-4 xl:flex-row xl:items-center md:mt-5 ">
           <Button to="/learn">Discover Cilium</Button>
-          <div className="flex mt-6 space-x-6 sm:ml-6 sm:mt-0 xl:ml-11">
+          <div className="flex flex-col mt-6 space-y-4 xl:mt-0 xs:space-y-0 xs:space-x-6 xs:flex-row xl:ml-11">
             <Link
               className="flex items-center space-x-3"
               to="https://cilium.herokuapp.com/"
@@ -52,8 +52,8 @@ const Hero = () => (
               type="text"
               theme="primary"
             >
-              <YoutubeIcon className="w-auto h-6" />
-              <span>Join Echo</span>
+              <YoutubeIcon className="w-auto h-4 xs:h-6" />
+              <span>Watch eBPF & Cilium</span>
             </Link>
           </div>
         </div>

@@ -29,3 +29,9 @@
     @apply bg-black;
   }
 }
+
+.calendly-overlay {
+  .calendly-popup {
+    @apply xl:max-h-[750px] !important;
+  }
+}

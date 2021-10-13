@@ -10,9 +10,24 @@ import Link from 'components/shared/link';
 const title = 'Featured talks';
 
 const videoUrls = [
-  { thumbnail: 'card1', url: 'https://youtu.be/vNuEx0wB_-4' },
-  { thumbnail: 'card2', url: 'https://youtu.be/u-4naOMfs_w' },
-  { thumbnail: 'card3', url: 'https://youtu.be/80OYrzS1dCA?t=437' },
+  {
+    thumbnail: 'card1',
+    url: 'https://youtu.be/vNuEx0wB_-4',
+    title: 'The State & Future of eBPF',
+    text: 'Thomas Graf, Isovalent',
+  },
+  {
+    thumbnail: 'card2',
+    url: 'https://youtu.be/u-4naOMfs_w',
+    title: 'eBPF & Cilium at Sky',
+    text: 'Sebastian Duff, Anthony Comtois, Joseph Samuel',
+  },
+  {
+    thumbnail: 'card3',
+    url: 'https://youtu.be/80OYrzS1dCA?t=437',
+    title: 'eCHO Liz Rice &  Thomas Graf',
+    text: 'Introduction to Cilium',
+  },
 ];
 
 const FeaturedTalks = () => {
@@ -40,18 +55,24 @@ const FeaturedTalks = () => {
     <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{title}</Heading>
-        <div className="grid grid-cols-1 gap-4 mt-6 md:mt-10 md:gap-6 lg:gap-8 lg:mt-14 sm:grid-cols-3">
-          {videoUrls.map(({ thumbnail, url }, index) => {
+        <div className="grid grid-cols-1 gap-4 mt-6 md:mt-10 md:gap-6 lg:gap-8 lg:mt-14 md:grid-cols-3">
+          {videoUrls.map(({ thumbnail, url, title, text }, index) => {
             const card = placeholders[thumbnail];
             return (
-              <Link key={index} to={url} target="_blank" rel="noopener noreferrer">
-                <GatsbyImage
-                  className="w-full h-auto"
-                  imgClassName="rounded-lg"
-                  image={getImage(card)}
-                  alt=""
-                />
-              </Link>
+              <div key={index}>
+                <Link className="" to={url} target="_blank" rel="noopener noreferrer">
+                  <GatsbyImage
+                    className="w-full h-auto border rounded-lg border-gray-3"
+                    imgClassName="rounded-lg"
+                    image={getImage(card)}
+                    alt={title}
+                  />
+                </Link>
+                <Heading className="mt-4 md:mt-6" tag="h3" size="xs">
+                  {title}
+                </Heading>
+                <p className="md:mt-1.5 lg:text-lg">{text}</p>
+              </div>
             );
           })}
         </div>
