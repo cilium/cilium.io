@@ -32,7 +32,7 @@ const items = [
     text: 'Check out the Cilium documentation to quickly get started on a Kubernetes cluster of your choice.',
     buttons: [
       {
-        buttonUrl: 'https://docs.cilium.io/en/v1.10/',
+        buttonUrl: 'https://docs.cilium.io/en/stable/',
         buttonText: 'Learn more',
         buttonTarget: '_blank',
       },

@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Learn', href: '/learn' },
   { name: 'Blog', href: '/blog' },
   { name: 'Slack', target: '_blank', href: 'https://cilium.herokuapp.com/' },
-  { name: 'Documentation', href: 'https://docs.cilium.io/' },
+  { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
 ];
 
 const Header = () => (
