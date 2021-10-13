@@ -12,7 +12,7 @@ const CardItem = ({ icon: Icon, name, text, links }) => (
         className="font-bold leading-normal md:text-lg md:leading-normal"
         dangerouslySetInnerHTML={{ __html: name }}
       />
-      <p className="mt-1 mb-4">{text}</p>
+      <div className="mt-1 mb-4 prose" dangerouslySetInnerHTML={{ __html: text }} />
       <div className="mt-auto space-x-6">
         {links.map(({ linkText, linkUrl, linkTarget, isCalendlyPopUp }, index) => (
           <Fragment key={index}>

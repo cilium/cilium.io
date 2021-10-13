@@ -47,10 +47,37 @@ module.exports = {
         primary: '0px 5px 20px rgba(0, 0, 0, 0.09)',
         secondary: '0px 10px 20px rgba(0, 0, 0, 0.09)',
       },
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.black'),
+            p: {
+              marginBottom: '6px',
+            },
+            ul: {
+              margin: '0',
+              li: {
+                marginTop: '0',
+                marginBottom: '4px',
+                '&:before': {
+                  backgroundColor: theme('colors.black'),
+                },
+              },
+            },
+            ol: {
+              li: {
+                '&:before': {
+                  color: theme('colors.black'),
+                },
+              },
+            },
+          },
+        },
+      }),
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };

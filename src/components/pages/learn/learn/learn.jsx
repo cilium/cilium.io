@@ -13,7 +13,7 @@ const items = [
   {
     icon: IntroductionIcon,
     name: '10min Introduction to Cilium',
-    text: 'with Liz Rice and Thomas Graf',
+    text: `<p>Liz Rice and Thomas Graf:</p><ul><li>What is Cilium?</li><li>Why did we create Cilium?</li><li>What problems does Cilium solve for you?</li></ul>`,
     links: [
       {
         linkUrl: 'https://www.youtube.com/watch?v=80OYrzS1dCA&t=405s',
