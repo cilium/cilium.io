@@ -6,7 +6,7 @@ import Link from '../link';
 
 const CardItem = ({ icon: Icon, name, text, links }) => (
   <div className="flex flex-col p-6 border rounded-lg lg:p-8 sm:space-x-5 sm:flex-row lg:flex-col border-gray-3 lg:space-x-0">
-    <Icon className="flex-shrink-0 h-14 w-auto self-start xs:h-[72px]" />
+    <Icon className="flex-shrink-0 h-14 self-start sm:w-[72px] lg:w-auto lg:h-[72px]" />
     <div className="flex flex-col h-full mt-4 sm:mt-0 lg:mt-4">
       <h3
         className="font-bold leading-normal md:text-lg md:leading-normal"
