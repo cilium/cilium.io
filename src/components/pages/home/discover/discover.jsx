@@ -8,7 +8,7 @@ import illustration from './images/illustration.svg';
 
 const title = 'Discover Cilium';
 const description =
-  'Join us at our weekly InstallFest Meetup, learn and discuss how to setup and get started with Cilium.';
+  'Join us at our weekly InstallFest, learn and discuss how to setup and get started with Cilium.';
 const buttonText = 'Discover Now';
 const buttonUrl = '/learn';
 
