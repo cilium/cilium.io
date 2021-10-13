@@ -14,19 +14,19 @@ const videoUrls = [
     thumbnail: 'card1',
     url: 'https://youtu.be/vNuEx0wB_-4',
     title: 'The State & Future of eBPF',
-    text: 'Thomas Graf, Isovalent',
+    text: 'eBPF Summit 2021, Thomas Graf, Co-Founder & CTO, Isovalent, Chair GB eBPF Foundation',
   },
   {
     thumbnail: 'card2',
     url: 'https://youtu.be/u-4naOMfs_w',
     title: 'eBPF & Cilium at Sky',
-    text: 'Sebastian Duff, Anthony Comtois, Joseph Samuel',
+    text: 'Sebastian Duff, Anthony Comtois, Joseph Samuel, Sky',
   },
   {
     thumbnail: 'card3',
     url: 'https://youtu.be/80OYrzS1dCA?t=437',
-    title: 'eCHO Liz Rice &  Thomas Graf',
-    text: 'Introduction to Cilium',
+    title: 'Introduction to Cilium with Liz Rice &  Thomas Graf',
+    text: 'eCHO Stream, Liz Rice, Chief Open Source Officer, Isovalent, Thomas Graf, Co-Creator Cilium',
   },
 ];
 
