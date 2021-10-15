@@ -81,12 +81,4 @@ const FeaturedTalks = () => {
   );
 };
 
-FeaturedTalks.propTypes = {
-  className: PropTypes.string,
-};
-
-FeaturedTalks.defaultProps = {
-  className: null,
-};
-
 export default FeaturedTalks;

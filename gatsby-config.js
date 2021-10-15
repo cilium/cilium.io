@@ -24,6 +24,35 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog-posts`,
+        path: `${__dirname}/src/blog-posts`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          'gatsby-remark-copy-linked-files',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 800,
+              quality: 90,
+              withWebp: true,
+              backgroundColor: 'white',
+              disableBgImageOnAlpha: true,
+              wrapperStyle: {
+                marginBottom: 20,
+              },
+            },
+          },
+        ],
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-sharp',
