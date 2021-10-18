@@ -1,4 +1,3 @@
-import { format } from 'date-fns';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -14,27 +13,24 @@ const PopularPosts = ({ className, items }) => (
       {blockTitle}
     </Heading>
     <div className="flex flex-col flex-1 mt-8 space-y-8">
-      {items.map(({ frontmatter: { date, title, cover, slug } }, index) => {
-        const publishDate = format(new Date(date), 'MMM dd, yyyy');
-        return (
-          <Link
-            className="flex flex-1 p-8 border rounded-lg border-gray-3 space-x-7"
-            key={index}
-            to={slug}
-          >
-            <GatsbyImage
-              className="flex-shrink-0 max-w-[198px]"
-              imgClassName="rounded"
-              image={getImage(cover)}
-              alt="Cover"
-            />
-            <div>
-              <span className="text-sm font-normal leading-none text-gray-1">{publishDate}</span>
-              <h3 className="mt-3 font-bold line-clamp-3 md:text-lg md:leading-normal">{title}</h3>
-            </div>
-          </Link>
-        );
-      })}
+      {items.map(({ frontmatter: { date, title, cover, path } }, index) => (
+        <Link
+          className="flex flex-1 p-8 border rounded-lg border-gray-3 space-x-7"
+          key={index}
+          to={path}
+        >
+          <GatsbyImage
+            className="flex-shrink-0 max-w-[198px]"
+            imgClassName="rounded"
+            image={getImage(cover)}
+            alt="Cover"
+          />
+          <div>
+            <span className="text-sm font-normal leading-none text-gray-1">{date}</span>
+            <h3 className="mt-3 font-bold line-clamp-3 md:text-lg md:leading-normal">{title}</h3>
+          </div>
+        </Link>
+      ))}
     </div>
   </div>
 );

@@ -19,7 +19,7 @@
       }
     ],
     "block-no-empty": null,
-    "unit-whitelist": ["em", "rem", "s"],
+    "unit-allowed-list": ["%", "px"],
     "scss/at-rule-no-unknown": [
       true,
       {

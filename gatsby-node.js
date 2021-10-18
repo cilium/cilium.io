@@ -1,24 +1,12 @@
 const Path = require('path');
 
-const BLOG_POSTS_PER_PAGE = 10;
-const slugify = (path) =>
-  path
-    .toLowerCase()
-    .replace(/[\s-:]{1,}/g, '-')
-    .replace(/blog__/g, '') // special treatment of blog post directory pattern
-    .replace(/[?!;&%@~()[\],]/g, '')
-    .replace(/(\.[^/.]+)?$/, '');
+const { slugify } = require('./src/utils/slugify');
 
-const stripDirectoryPath = (str) =>
-  str.replace(/.*\/(\d{4}-\d{2}-\d{2}.*)/, '$1').replace(/\/index\.md/, '');
-
-const getDateAndSlugFromPath = (path) => {
-  const [date, rowSlug] = stripDirectoryPath(path).split('--');
-  return { date, slug: slugify(rowSlug) };
-};
+const BLOG_POSTS_PER_PAGE = 9;
 
 const slugifyCategory = (category) => (category === '*' ? 'blog/' : `blog/${slugify(category)}/`);
 
+// Create Blog Posts
 async function createBlogPosts({ graphql, actions }) {
   const { data } = await graphql(`
     query {
@@ -29,21 +17,18 @@ async function createBlogPosts({ graphql, actions }) {
               id
               frontmatter {
                 title
-                summary
+                path
               }
             }
           }
-          relativePath
-          relativeDirectory
         }
       }
     }
   `);
 
   data.allFile.nodes.forEach((file) => {
-    const { children, relativeDirectory } = file;
+    const { children } = file;
     const postData = { ...children[0] };
-    const { date, slug } = getDateAndSlugFromPath(relativeDirectory);
     // pure debugging condition
     if (typeof postData.frontmatter === 'undefined') {
       // eslint-disable-next-line no-console
@@ -51,11 +36,10 @@ async function createBlogPosts({ graphql, actions }) {
       return;
     }
 
-    postData.frontmatter.slug = slug;
-    postData.frontmatter.date = date;
+    const { path } = postData.frontmatter;
 
     actions.createPage({
-      path: `blog/${slug}`,
+      path,
       component: Path.resolve('./src/templates/blog-post.jsx'),
       context: { postData },
     });
@@ -70,7 +54,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
     '*',
     'Announcements',
     'Community',
-    'Deep Drive',
+    'Deep Dive',
     'eBPF',
     'Guide',
     'How-To',
@@ -87,16 +71,14 @@ async function createBlogPages({ graphql, actions, reporter }) {
   } = await graphql(`
     {
       featuredPostEdges: allMdx(
-        filter: {
-          fileAbsolutePath: { regex: "/blog-posts/" }
-          fields: { isFeatured: { eq: true } }
-        }
+        filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isFeatured: { eq: true } } }
       ) {
         nodes {
           frontmatter {
-            category
-            summary
+            path
+            date(locale: "en", formatString: "MMM DD, yyyy")
             title
+            summary
             cover {
               childImageSharp {
                 gatsbyImageData(width: 512, height: 360)
@@ -107,12 +89,14 @@ async function createBlogPages({ graphql, actions, reporter }) {
         }
       }
       allPopularPosts: allMdx(
-        filter: { fields: { isPopular: { eq: true } } }
-        limit: 5
+        filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isPopular: { eq: true } } }
+        limit: 4
         sort: { order: DESC, fields: fileAbsolutePath }
       ) {
         nodes {
           frontmatter {
+            path
+            date(locale: "en", formatString: "MMM DD, yyyy")
             title
             cover {
               childImageSharp {
@@ -140,7 +124,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
           query CategoryPostsQuery($tag: String!) {
             allMdx(
               filter: {
-                fileAbsolutePath: { regex: "/blog-posts/" }
+                fileAbsolutePath: { regex: "/posts/" }
                 fields: { isFeatured: { eq: false }, category: { glob: $tag } }
               }
               limit: 1000
@@ -161,27 +145,12 @@ async function createBlogPages({ graphql, actions, reporter }) {
         const pathBase = slugifyCategory(category);
         // determine if there is featured post
         const featuredPostData = featuredPost?.length ? featuredPost[0] : false;
-        // inject date and slug manually
-        if (featuredPostData) {
-          const { date, slug } = getDateAndSlugFromPath(featuredPostData.fileAbsolutePath);
-          featuredPostData.frontmatter.date = date;
-          featuredPostData.frontmatter.slug = `/blog/${slug}`;
-        }
+
         // determine if there is popular posts
         const popularPostsData = popularPosts?.length ? popularPosts : false;
-        if (popularPostsData) {
-          popularPosts.forEach(({ frontmatter, fileAbsolutePath }) => {
-            // inject date and slug manually
-            const { date, slug } = getDateAndSlugFromPath(fileAbsolutePath);
-            frontmatter.date = date;
-            frontmatter.slug = `/blog/${slug}`;
-            return frontmatter;
-          });
-        }
 
         Array.from({ length: numPages }).forEach((_, i) => {
           const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
-
           createPage({
             path,
             component: Path.resolve('./src/templates/blog.jsx'),
@@ -218,7 +187,7 @@ exports.onCreateNode = ({ node, actions }) => {
     createNodeField({
       node,
       name: 'category',
-      value: node.frontmatter.category || 'none',
+      value: node.frontmatter.categories[0] || 'none',
     });
     createNodeField({
       node,
