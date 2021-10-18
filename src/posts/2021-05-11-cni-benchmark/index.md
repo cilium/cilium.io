@@ -9,7 +9,7 @@ explore the performance characteristics of Cilium based on extensive benchmarks
 that we have run in the past few weeks. Upon popular request, we are also
 including measurements for Calico to allow for a direct comparison."
 cover: cover.png
-socialPreview: ogimage.png
+socialImage: ogimage.png
 isPopular: true
 categories:
   - Deep Dive

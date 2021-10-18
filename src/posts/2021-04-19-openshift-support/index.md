@@ -4,7 +4,7 @@ date: '2021-04-09T17:00:00.000Z'
 title: 'Introducing the Cilium Certified OpenShift Plug-in'
 summary: 'We are pleased to introduce the availability of Cilium in the Red Hat Ecosystem Catalog as well as the certification of Cilium as a Certified OpenShift CNI Plug-in.'
 cover: cover.png
-socialPreview: ogimage.png
+socialImage: ogimage.png
 isPopular: true
 categories:
   - Announcements

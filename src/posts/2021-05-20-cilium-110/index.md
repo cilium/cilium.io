@@ -12,7 +12,7 @@ datacenter environments or in the cloud. Thus, a major focus of this release
 was ensuring a seamless integration between the Kubernetes network and
 enterprise on-prem infrastructure."
 cover: intro.png
-socialPreview: ogimage.png
+socialImage: ogimage.png
 isPopular: true
 categories:
   - Releases
