@@ -116,7 +116,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
             title
             cover {
               childImageSharp {
-                gatsbyImageData(width: 198, quality: 100)
+                gatsbyImageData(width: 512)
               }
             }
           }

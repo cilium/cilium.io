@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
-// import { graphql } from 'gatsby';
 import { graphql } from 'gatsby';
 import React from 'react';
 
 import FeaturedPosts from 'components/pages/blog/featured-posts';
+import Community from 'components/shared/community';
 import FeaturedTalks from 'components/shared/featured-talks';
 
 import MainLayout from '../layouts/main';
@@ -19,6 +19,7 @@ const BlogPage = (props) => {
     <MainLayout>
       <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
       <FeaturedTalks />
+      <Community />
     </MainLayout>
   );
 };

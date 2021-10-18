@@ -23,7 +23,7 @@ const PopularPosts = ({ className, items }) => (
             to={slug}
           >
             <GatsbyImage
-              className="flex-shrink-0"
+              className="flex-shrink-0 max-w-[198px]"
               imgClassName="rounded"
               image={getImage(cover)}
               alt="Cover"
