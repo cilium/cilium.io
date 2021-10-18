@@ -81,30 +81,46 @@ async function createBlogPages({ graphql, actions, reporter }) {
 
   const {
     data: {
-      allMdx: { edges: featuredPost },
+      featuredPostEdges: { nodes: featuredPost },
+      allPopularPosts: { nodes: popularPosts },
     },
   } = await graphql(`
     {
-      allMdx(
+      featuredPostEdges: allMdx(
         filter: {
           fileAbsolutePath: { regex: "/blog-posts/" }
           fields: { isFeatured: { eq: true } }
         }
       ) {
-        edges {
-          node {
-            frontmatter {
-              category
-              summary
-              title
-              cover {
-                childImageSharp {
-                  gatsbyImageData(width: 514)
-                }
+        nodes {
+          frontmatter {
+            category
+            summary
+            title
+            cover {
+              childImageSharp {
+                gatsbyImageData(width: 512, height: 360)
               }
             }
-            fileAbsolutePath
           }
+          fileAbsolutePath
+        }
+      }
+      allPopularPosts: allMdx(
+        filter: { fields: { isPopular: { eq: true } } }
+        limit: 5
+        sort: { order: DESC, fields: fileAbsolutePath }
+      ) {
+        nodes {
+          frontmatter {
+            title
+            cover {
+              childImageSharp {
+                gatsbyImageData(width: 198)
+              }
+            }
+          }
+          fileAbsolutePath
         }
       }
     }
@@ -144,14 +160,25 @@ async function createBlogPages({ graphql, actions, reporter }) {
         const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
         const pathBase = slugifyCategory(category);
         // determine if there is featured post
-        const featuredPostData = featuredPost?.length ? featuredPost[0].node : false;
+        const featuredPostData = featuredPost?.length ? featuredPost[0] : false;
         // inject date and slug manually
         if (featuredPostData) {
           const { date, slug } = getDateAndSlugFromPath(featuredPostData.fileAbsolutePath);
           featuredPostData.frontmatter.date = date;
           featuredPostData.frontmatter.slug = slug;
         }
-        // console.log(pathBase)
+        // determine if there is popular posts
+        const popularPostsData = popularPosts?.length ? popularPosts : false;
+        if (popularPostsData) {
+          popularPosts.forEach(({ frontmatter, fileAbsolutePath }) => {
+            // inject date and slug manually
+            const { date, slug } = getDateAndSlugFromPath(fileAbsolutePath);
+            frontmatter.date = date;
+            frontmatter.slug = slug;
+            return frontmatter;
+          });
+        }
+
         Array.from({ length: numPages }).forEach((_, i) => {
           const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
 
@@ -165,6 +192,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
               currentPage: i + 1,
               queryFilter: category,
               featured: featuredPostData,
+              popularPosts: popularPostsData,
               robots: `${category === '*' ? '' : 'NO'}INDEX, FOLLOW`,
               // remove extra slash if category is a wildcard to preserve proper urls
               canonicalUrl: `blog/${category === '*' ? '' : '/'}${path}`,
@@ -200,7 +228,7 @@ exports.onCreateNode = ({ node, actions }) => {
     createNodeField({
       node,
       name: 'isPopular',
-      value: node.frontmatter.isFeatured || false,
+      value: node.frontmatter.isPopular || false,
     });
   }
 };

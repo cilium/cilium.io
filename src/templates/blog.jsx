@@ -13,12 +13,11 @@ const BlogPage = (props) => {
     data: {
       allMdx: { nodes: posts },
     },
-    pageContext: { featured },
+    pageContext: { featured, popularPosts },
   } = props;
-  // console.log(featured);
   return (
     <MainLayout>
-      <FeaturedPosts featuredStory={featured.frontmatter} />
+      <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
       <FeaturedTalks />
     </MainLayout>
   );

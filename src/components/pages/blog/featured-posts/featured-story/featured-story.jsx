@@ -7,6 +7,7 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 
 const blockTitle = 'Featured story';
+
 const FeaturedStory = ({ className, title, date, cover, summary, slug }) => {
   const publishDate = format(new Date(date), 'MMMM dd, yyyy');
 
@@ -20,10 +21,12 @@ const FeaturedStory = ({ className, title, date, cover, summary, slug }) => {
           <GatsbyImage imgClassName="rounded-lg" image={getImage(cover)} alt="" />
         </Link>
         <span className="mt-8 font-medium leading-none text-gray-1">{publishDate}</span>
-        <Heading className="mt-4" tag="h3" size="sm">
-          {title}
-        </Heading>
-        <p className="mt-3">{summary}</p>
+        <Link to={slug}>
+          <Heading className="mt-4" tag="h3" size="sm">
+            {title}
+          </Heading>
+        </Link>
+        <p className="mt-3 md:text-lg md:leading-relaxed">{summary}</p>
       </div>
     </div>
   );
