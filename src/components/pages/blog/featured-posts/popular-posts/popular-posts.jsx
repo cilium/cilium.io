@@ -22,7 +22,12 @@ const PopularPosts = ({ className, items }) => (
             key={index}
             to={slug}
           >
-            <GatsbyImage className="flex-shrink-0" image={getImage(cover)} alt="Cover" />
+            <GatsbyImage
+              className="flex-shrink-0"
+              imgClassName="rounded"
+              image={getImage(cover)}
+              alt="Cover"
+            />
             <div>
               <span className="text-sm font-normal leading-none text-gray-1">{publishDate}</span>
               <h3 className="mt-3 font-bold line-clamp-3 md:text-lg md:leading-normal">{title}</h3>
@@ -43,7 +48,7 @@ PopularPosts.propTypes = {
         title: PropTypes.string.isRequired,
         cover: PropTypes.shape({
           childImageSharp: PropTypes.shape({
-            gatsbyImageData: PropTypes.shape(),
+            gatsbyImageData: PropTypes.shape(PropTypes.any),
           }),
         }).isRequired,
         slug: PropTypes.string.isRequired,

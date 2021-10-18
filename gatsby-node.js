@@ -116,7 +116,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
             title
             cover {
               childImageSharp {
-                gatsbyImageData(width: 198)
+                gatsbyImageData(width: 198, quality: 100)
               }
             }
           }
@@ -165,7 +165,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
         if (featuredPostData) {
           const { date, slug } = getDateAndSlugFromPath(featuredPostData.fileAbsolutePath);
           featuredPostData.frontmatter.date = date;
-          featuredPostData.frontmatter.slug = slug;
+          featuredPostData.frontmatter.slug = `/blog/${slug}`;
         }
         // determine if there is popular posts
         const popularPostsData = popularPosts?.length ? popularPosts : false;
@@ -174,7 +174,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
             // inject date and slug manually
             const { date, slug } = getDateAndSlugFromPath(fileAbsolutePath);
             frontmatter.date = date;
-            frontmatter.slug = slug;
+            frontmatter.slug = `/blog/${slug}`;
             return frontmatter;
           });
         }
