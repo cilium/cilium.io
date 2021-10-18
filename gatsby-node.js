@@ -125,7 +125,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
             allMdx(
               filter: {
                 fileAbsolutePath: { regex: "/posts/" }
-                fields: { isFeatured: { eq: false }, category: { glob: $tag } }
+                fields: { isFeatured: { eq: false }, categories: { glob: $tag } }
               }
               limit: 1000
             ) {
@@ -186,8 +186,8 @@ exports.onCreateNode = ({ node, actions }) => {
   if (node.frontmatter) {
     createNodeField({
       node,
-      name: 'category',
-      value: node.frontmatter.categories[0] || 'none',
+      name: 'categories',
+      value: node.frontmatter.categories || 'none',
     });
     createNodeField({
       node,

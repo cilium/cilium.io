@@ -1,27 +1,13 @@
 ---
-path: "/blog/2021/04/19/openshift-certification"
-date: "2021-04-09T17:00:00.000Z"
-title: "Introducing the Cilium Certified OpenShift Plug-in"
-summary: "We are pleased to introduce the availability of Cilium in the
-[Red Hat Ecosystem Catalog](https://catalog.redhat.com/software/operators/detail/60423ec2c00b1279ffe35a68)
-as well as the certification of Cilium as a
-[Certified OpenShift CNI Plug-in](https://access.redhat.com/articles/5436171).
-The Container Network Interface (CNI) badge is a specialization within Red Hat
-OpenShift certification available to networking products that integrate with
-OpenShift using a CNI plug-in.
-Users running OpenShift can feel confident that running Cilium will not negatively impact their Red Hat support experience.
-
-The OpenShift certified version of Cilium is based on
-[Red Hat Universal Base Images](https://developers.redhat.com/products/rhel/ubi)
-and passes the
-[Operator certification](https://redhat-connect.gitbook.io/partner-guide-for-red-hat-openshift-and-container/)
-requirements as well as the
-[Kubernetes e2e tests](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/e2e-tests.md)."
+path: '/blog/2021/04/19/openshift-certification'
+date: '2021-04-09T17:00:00.000Z'
+title: 'Introducing the Cilium Certified OpenShift Plug-in'
+summary: 'We are pleased to introduce the availability of Cilium in the Red Hat Ecosystem Catalog as well as the certification of Cilium as a Certified OpenShift CNI Plug-in.'
 cover: cover.png
 socialPreview: ogimage.png
 isPopular: true
 categories:
-  - Announcement
+  - Announcements
 tags:
   - bpf
   - ebpf

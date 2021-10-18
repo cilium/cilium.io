@@ -33,7 +33,7 @@ export const blogPostsQuery = graphql`
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/posts/" }
-        fields: { category: { glob: $queryFilter }, isFeatured: { eq: false } }
+        fields: { categories: { glob: $queryFilter }, isFeatured: { eq: false } }
       }
       sort: { order: DESC, fields: fileAbsolutePath }
       limit: $limit
