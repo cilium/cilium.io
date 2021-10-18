@@ -12,7 +12,7 @@ const FeaturedStory = ({ className, title, date, cover, summary, path }) => (
     <Heading tag="h2" size="xxs" theme="gray">
       {blockTitle}
     </Heading>
-    <div className="flex flex-col p-10 mt-8 border border-gray-3 rounded-large">
+    <div className="flex flex-col flex-1 p-10 mt-8 border border-gray-3 rounded-large">
       <Link to={path}>
         <GatsbyImage imgClassName="rounded-lg" image={getImage(cover)} alt="" />
       </Link>
