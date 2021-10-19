@@ -1,9 +1,9 @@
 import React from 'react';
 
-import CardItem from 'components/shared/card-item';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
+import CardItem from './card-item';
 import ConceptsIcon from './images/concepts.inline.svg';
 import IntroductionIcon from './images/introduction.inline.svg';
 import NetworkingIcon from './images/networking.inline.svg';
