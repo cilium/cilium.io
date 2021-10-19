@@ -12,17 +12,26 @@ const FeaturedStory = ({ className, title, date, cover, summary, path }) => (
     <Heading tag="h2" size="xxs" theme="gray">
       {blockTitle}
     </Heading>
-    <div className="flex flex-col flex-1 p-10 mt-8 border border-gray-3 rounded-large">
-      <Link to={path}>
-        <GatsbyImage imgClassName="rounded-lg" image={getImage(cover)} alt="" />
+    <div className="flex flex-col flex-1 p-6 mt-6 border md:mt-8 md:p-8 lg:p-10 md:flex-row xl:flex-col border-gray-3 rounded-large">
+      <Link className="flex-1" to={path}>
+        <GatsbyImage
+          className="md:max-w-[500px] xl:max-w-auto xl:min-h-[360px]"
+          imgClassName="rounded-lg"
+          image={getImage(cover)}
+          alt=""
+        />
       </Link>
-      <span className="mt-8 font-medium leading-none text-gray-1">{date}</span>
-      <Link to={path}>
-        <Heading className="mt-4" tag="h3" size="sm">
-          {title}
-        </Heading>
-      </Link>
-      <p className="mt-3 md:text-lg md:leading-relaxed">{summary}</p>
+      <div className="flex flex-col flex-1 mt-6 md:mt-0 md:ml-8 xl:ml-0 xl:mt-8 ">
+        <span className="font-medium leading-none text-gray-1">{date}</span>
+        <Link to={path}>
+          <Heading className="mt-4 line-clamp-3 xl:line-clamp-none" tag="h3" size="sm">
+            {title}
+          </Heading>
+        </Link>
+        <p className="mt-3 md:text-lg md:leading-relaxed line-clamp-3 lg:line-clamp-5 xl:line-clamp-none">
+          {summary}
+        </p>
+      </div>
     </div>
   </div>
 );

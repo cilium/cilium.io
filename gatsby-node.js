@@ -21,6 +21,7 @@ async function createBlogPosts({ graphql, actions }) {
               }
             }
           }
+          relativeDirectory
         }
       }
     }
@@ -81,7 +82,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
             summary
             cover {
               childImageSharp {
-                gatsbyImageData(width: 512, height: 360)
+                gatsbyImageData(width: 685)
               }
             }
           }

@@ -64,30 +64,34 @@ const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
     <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{blockTitle}</Heading>
-        <div className="flex space-x-10 mt-14">
-          {categories.map((category) => {
-            const isActiveElement = currentCategory === category;
-            return (
-              <button
-                className={classNames(
-                  'py-2.5 font-medium',
-                  isActiveElement ? 'px-10 text-white bg-primary-1 rounded' : 'px-0'
-                )}
-                type="button"
-                key={category}
-                onClick={(event) => handleCategoryClick(event, category)}
-              >
-                {category}
-              </button>
-            );
-          })}
+        <div className="overflow-x-auto">
+          <div className="flex mt-6 space-x-4 md:space-x-6 lg:space-x-10 md:mt-10 lg:mt-14">
+            {categories.map((category) => {
+              const isActiveElement = currentCategory === category;
+              return (
+                <button
+                  className={classNames(
+                    'py-2 lg:py-2.5 font-medium whitespace-nowrap',
+                    isActiveElement
+                      ? 'px-4 md:px-6 lg:px-10 text-white bg-primary-1 rounded'
+                      : 'px-0'
+                  )}
+                  type="button"
+                  key={category}
+                  onClick={(event) => handleCategoryClick(event, category)}
+                >
+                  {category}
+                </button>
+              );
+            })}
+          </div>
         </div>
-        <div className="grid grid-cols-3 gap-8 mt-11">
+        <div className="grid gap-6 mt-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:mt-11">
           {posts.map(
             ({ frontmatter: { path, cover, date, title, summary, categories } }, index) => (
-              <div className="flex flex-col p-8 border rounded-lg border-gray-3" key={index}>
+              <div className="flex flex-col p-6 border rounded-lg md:p-8 border-gray-3" key={index}>
                 <Link to={path}>
-                  <GatsbyImage className="min-h-[168px]" image={getImage(cover)} alt={title} />
+                  <GatsbyImage className="md:min-h-[168px]" image={getImage(cover)} alt={title} />
                 </Link>
                 <div className="flex flex-col flex-grow mt-7">
                   <span className="text-sm font-medium leading-none text-gray-1">{date}</span>

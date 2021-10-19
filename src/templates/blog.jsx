@@ -54,7 +54,7 @@ export const blogPostsQuery = graphql`
           summary
           cover {
             childImageSharp {
-              gatsbyImageData(width: 320)
+              gatsbyImageData(width: 550)
             }
           }
         }

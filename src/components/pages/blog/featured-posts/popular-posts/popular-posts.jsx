@@ -12,15 +12,15 @@ const PopularPosts = ({ className, items }) => (
     <Heading tag="h2" theme="gray" size="xxs">
       {blockTitle}
     </Heading>
-    <div className="flex flex-col flex-1 mt-8 space-y-8">
+    <div className="grid flex-col flex-1 gap-6 mt-6 md:mt-8 sm:grid-cols-2 md:gap-8 xl:gap-0 xl:flex xl:space-y-8">
       {items.map(({ frontmatter: { date, title, cover, path } }, index) => (
         <Link
-          className="flex flex-1 p-8 border rounded-lg border-gray-3 space-x-7"
+          className="flex flex-col flex-1 p-6 space-y-4 border rounded-lg md:space-y-4 md:p-8 lg:flex-row border-gray-3 lg:space-y-0 lg:space-x-7"
           key={index}
           to={path}
         >
           <GatsbyImage
-            className="flex-shrink-0 max-w-[198px]"
+            className="flex-shrink-0 lg:max-w-[198px] md:min-h-[170px] lg:min-h-0"
             imgClassName="rounded"
             image={getImage(cover)}
             alt="Cover"

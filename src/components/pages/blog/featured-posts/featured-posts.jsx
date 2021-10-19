@@ -7,10 +7,10 @@ import FeaturedStory from './featured-story';
 import PopularPosts from './popular-posts';
 
 const FeaturedPosts = ({ featuredStory, popularPosts }) => (
-  <section className="mt-16">
+  <section className="mt-6 md:mt-10 lg:mt-16">
     <Container className="grid grid-cols-12 gap-8">
-      <FeaturedStory className="flex flex-col col-span-6" {...featuredStory} />
-      <PopularPosts className="flex flex-col col-span-6" items={popularPosts} />
+      <FeaturedStory className="flex flex-col col-span-full xl:col-span-6" {...featuredStory} />
+      <PopularPosts className="flex flex-col col-span-full xl:col-span-6" items={popularPosts} />
     </Container>
   </section>
 );
