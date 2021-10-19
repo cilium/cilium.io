@@ -1,31 +1,65 @@
 import React from 'react';
 
-import Button from 'components/shared/button/button';
+import CardItem from 'components/shared/card-item';
 import Container from 'components/shared/container/container';
 import Heading from 'components/shared/heading';
-
-import illustration from './images/illustration.svg';
+import GuideSvg from 'icons/guide.inline.svg';
+import InstallFestSvg from 'icons/installfest.inline.svg';
+import IntroSvg from 'icons/intro.inline.svg';
 
 const title = 'Discover Cilium';
-const description =
-  'Learn more about Cilium. Particpate in weekly Virtual InstallFests. Walk through guided hands-on tutorials. And much more.';
-const buttonText = 'Discover Cilium';
-const buttonUrl = '/learn';
+const items = [
+  {
+    icon: IntroSvg,
+    name: 'Weekly Interactive Cilium Introduction and Live Q&A',
+    text: 'with Thomas Graf, Cilium Co-Creator',
+    buttons: [
+      {
+        buttonUrl: 'https://calendly.com/cilium-events/cilium-introduction',
+        buttonText: 'Book your seat',
+        isPopup: true,
+      },
+    ],
+  },
+  {
+    icon: InstallFestSvg,
+    name: 'Weekly Community InstallFest',
+    text: 'Join us at our weekly InstallFest and learn how to setup and get started with Cilium.',
+    buttons: [
+      {
+        buttonUrl: 'https://calendly.com/cilium-events/cilim-installfest-emea',
+        buttonText: 'Join Europe',
+        isPopup: true,
+      },
+      {
+        buttonUrl: 'https://calendly.com/cilium-events/cilium-installfest-na',
+        buttonText: 'Join Americas',
+        isPopup: true,
+      },
+    ],
+  },
+  {
+    icon: GuideSvg,
+    name: 'Do it yourself Tutorials',
+    text: 'Check out the Cilium documentation to quickly get started on a Kubernetes cluster of your choice.',
+    buttons: [
+      {
+        buttonUrl: 'https://docs.cilium.io/en/stable/',
+        buttonText: 'Learn more',
+        buttonTarget: '_blank',
+      },
+    ],
+  },
+];
 
 const Discover = () => (
-  <section className="mt-10 md:mt-20 lg:mt-28 xl:mt-32">
+  <section className="mt-12 md:mt-20 lg:mt-28">
     <Container>
-      <div className="flex flex-col sm:flex-row max-w-[1006px] justify-between items-center space-y-8 sm:space-y-0 sm:space-x-10 sm:mr-8">
-        <div>
-          <Heading tag="h2" size="sm">
-            {title}
-          </Heading>
-          <p className="mt-2.5 md:text-lg max-w-xl">{description}</p>
-          <Button className="mt-6" to={buttonUrl}>
-            {buttonText}
-          </Button>
-        </div>
-        <img className="h-auto w-52 md:w-64 lg:w-max" src={illustration} alt="" />
+      <Heading tag="h2">{title}</Heading>
+      <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 xl:gap-8 md:mt-10 md:grid-cols-3 lg:mt-14">
+        {items.map((item, index) => (
+          <CardItem size="sm" {...item} key={index} />
+        ))}
       </div>
     </Container>
   </section>
