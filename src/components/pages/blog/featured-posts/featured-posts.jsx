@@ -26,7 +26,7 @@ FeaturedPosts.propTypes = {
         gatsbyImageData: PropTypes.shape(),
       }),
     }).isRequired,
-    slug: PropTypes.string.isRequired,
+    path: PropTypes.string.isRequired,
   }).isRequired,
   popularPosts: PropTypes.arrayOf(
     PropTypes.shape({
@@ -38,7 +38,7 @@ FeaturedPosts.propTypes = {
             gatsbyImageData: PropTypes.shape(),
           }),
         }).isRequired,
-        slug: PropTypes.string.isRequired,
+        path: PropTypes.string.isRequired,
       }),
     })
   ).isRequired,

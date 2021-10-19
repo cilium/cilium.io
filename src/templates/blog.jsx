@@ -14,13 +14,19 @@ const BlogPage = (props) => {
     data: {
       allMdx: { nodes: posts },
     },
-    pageContext: { featured, popularPosts, queryFilter },
+    pageContext: { featured, popularPosts, queryFilter, currentPage, numPages },
   } = props;
+
   return (
     <MainLayout>
       <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
       <FeaturedTalks />
-      <PostsBoard posts={posts} queryFilter={queryFilter} />
+      <PostsBoard
+        posts={posts}
+        queryFilter={queryFilter}
+        currentPage={currentPage}
+        numPages={numPages}
+      />
       <Community />
     </MainLayout>
   );
@@ -35,7 +41,7 @@ export const blogPostsQuery = graphql`
         fileAbsolutePath: { regex: "/posts/" }
         fields: { categories: { glob: $queryFilter }, isFeatured: { eq: false } }
       }
-      sort: { order: DESC, fields: fileAbsolutePath }
+      sort: { order: DESC, fields: frontmatter___date }
       limit: $limit
       skip: $skip
     ) {

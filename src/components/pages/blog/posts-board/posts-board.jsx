@@ -7,28 +7,35 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
+import ArrowIcon from 'icons/arrow.inline.svg';
 
 const blockTitle = 'All posts';
 
-const PostsBoard = ({ posts, queryFilter }) => {
-  const categories = [
-    'All',
-    'Announcements',
-    'Community',
-    'Deep Dive',
-    'eBPF',
-    'Guide',
-    'How-To',
-    'Network Policies',
-    'Releases',
-    'User Blog',
-  ];
+const categories = [
+  'All',
+  'Announcements',
+  'Community',
+  'Deep Dive',
+  'eBPF',
+  'Guide',
+  'How-To',
+  'Network Policies',
+  'Releases',
+  'User Blog',
+];
+// helper function that performs filter-to-slug transformation
+const filterToSlug = (filter) =>
+  filter === 'All' ? '/blog/' : `/blog/${filter.toLowerCase().replace(/\s/g, '-')}/`;
 
+const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
   // adapt queryFilter in case of wild card (all posts)
   const currentCategory = queryFilter === '*' ? 'All' : queryFilter;
-  // helper function that performs filter-to-slug transformation
-  const filterToSlug = (filter) =>
-    filter === 'All' ? '/blog' : `/blog/${filter.toLowerCase().replace(/\s/g, '-')}`;
+
+  const currentPath = filterToSlug(currentCategory);
+  const isFirst = currentPage === 1;
+  const isLast = currentPage === numPages;
+  const prevPage = currentPage - 1 === 1 ? currentPath : currentPath + (currentPage - 1).toString();
+  const nextPage = currentPath + (currentPage + 1).toString();
 
   const handleCategoryClick = (event, category) => {
     event.preventDefault();
@@ -36,6 +43,21 @@ const PostsBoard = ({ posts, queryFilter }) => {
     navigate(href, {
       state: { preventScroll: true },
     });
+  };
+
+  const handlePaginationClick = (event, page) => {
+    event.preventDefault();
+    if (page === prevPage) {
+      const href = prevPage;
+      navigate(href, {
+        state: { preventScroll: true },
+      });
+    } else {
+      const href = nextPage;
+      navigate(href, {
+        state: { preventScroll: true },
+      });
+    }
   };
 
   return (
@@ -52,6 +74,7 @@ const PostsBoard = ({ posts, queryFilter }) => {
                   isActiveElement ? 'px-10 text-white bg-primary-1 rounded' : 'px-0'
                 )}
                 type="button"
+                key={category}
                 onClick={(event) => handleCategoryClick(event, category)}
               >
                 {category}
@@ -64,17 +87,18 @@ const PostsBoard = ({ posts, queryFilter }) => {
             ({ frontmatter: { path, cover, date, title, summary, categories } }, index) => (
               <div className="flex flex-col p-8 border rounded-lg border-gray-3" key={index}>
                 <Link to={path}>
-                  <GatsbyImage image={getImage(cover)} alt={title} />
+                  <GatsbyImage className="min-h-[168px]" image={getImage(cover)} alt={title} />
                 </Link>
                 <div className="flex flex-col flex-grow mt-7">
                   <span className="text-sm font-medium leading-none text-gray-1">{date}</span>
                   <h3 className="mt-3 font-bold leading-normal line-clamp-3 md:text-lg">{title}</h3>
                   <p className="mt-2 mb-4 line-clamp-3">{summary}</p>
                   <div className="mt-auto space-x-2">
-                    {categories.map((category) => (
+                    {categories?.map((category) => (
                       <button
                         className="text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none"
                         type="button"
+                        key={category}
                         onClick={(event) => handleCategoryClick(event, category)}
                       >
                         {category}
@@ -86,12 +110,52 @@ const PostsBoard = ({ posts, queryFilter }) => {
             )
           )}
         </div>
+        <div className="flex pt-8 mt-10 border-t border-gray-3">
+          {!isFirst && (
+            <button
+              className="flex mr-auto text-sm space-x-2.5 text-primary-1 tracking-wider items-center uppercase leading-none font-bold transition-colors duration-200 hover:text-gray-1"
+              type="button"
+              onClick={(event) => handlePaginationClick(event, prevPage)}
+            >
+              <ArrowIcon className="rotate-180" />
+              <span>Previous</span>
+            </button>
+          )}
+          {!isLast && (
+            <button
+              className="flex text-sm ml-auto space-x-2.5  text-primary-1 tracking-wider items-center uppercase leading-none font-bold transition-colors duration-200 hover:text-gray-1"
+              type="button"
+              onClick={(event) => handlePaginationClick(event, nextPage)}
+            >
+              <span>Next</span>
+              <ArrowIcon />
+            </button>
+          )}
+        </div>
       </Container>
     </section>
   );
 };
-PostsBoard.propTypes = {};
-
-PostsBoard.defaultProps = {};
+PostsBoard.propTypes = {
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      frontmatter: PropTypes.shape({
+        path: PropTypes.string.isRequired,
+        cover: PropTypes.shape({
+          childImageSharp: PropTypes.shape({
+            gatsbyImageData: PropTypes.shape(),
+          }),
+        }).isRequired,
+        date: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        summary: PropTypes.string,
+        categories: PropTypes.arrayOf(PropTypes.string),
+      }),
+    })
+  ).isRequired,
+  queryFilter: PropTypes.string.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  numPages: PropTypes.number.isRequired,
+};
 
 export default PostsBoard;

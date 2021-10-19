@@ -165,8 +165,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
               robots: `${category === '*' ? '' : 'NO'}INDEX, FOLLOW`,
               // remove extra slash if category is a wildcard to preserve proper urls
               canonicalUrl: `blog/${category === '*' ? '' : '/'}${path}`,
-              // remove extra slash if category is a wildcard to preserve proper urls
-              slug: category === '*' ? path.slice(1) : path,
+              slug: `/${path}`,
             },
           });
         });
@@ -187,7 +186,7 @@ exports.onCreateNode = ({ node, actions }) => {
     createNodeField({
       node,
       name: 'categories',
-      value: node.frontmatter.categories || 'none',
+      value: node.frontmatter.categories || Array.of('*'),
     });
     createNodeField({
       node,
