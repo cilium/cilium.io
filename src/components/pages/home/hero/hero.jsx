@@ -8,6 +8,8 @@ import SlackIcon from 'icons/slack.inline.svg';
 import YoutubeIcon from 'icons/youtube.inline.svg';
 import illustration from 'images/hero-illustration.svg';
 
+import CNCFLogo from './images/cncf.inline.svg';
+
 const title =
   'eBPF-based <span>Networking</span>, <span>Observability</span>, and <span>Security</span>';
 const description =
@@ -17,8 +19,9 @@ const Hero = () => (
   <section className="pt-5 md:pt-16 lg:pt-32">
     <Container className="grid grid-cols-12 md:gap-x-8">
       <div className="col-span-full lg:-mr-8 lg:col-span-6 2xl:col-span-7 2xl:mr-0">
+        <CNCFLogo />
         <Heading
-          className="max-w-2xl highlight-words"
+          className="max-w-2xl mt-4 highlight-words"
           tag="h1"
           size="lg"
           fontWeight="normal"
@@ -31,7 +34,7 @@ const Hero = () => (
           dangerouslySetInnerHTML={{ __html: description }}
         />
         <div className="flex flex-col items-start mt-4 xl:flex-row xl:items-center md:mt-5 ">
-          <Button to="/learn">Discover Cilium</Button>
+          <Button to="/learn">What is Cilium?</Button>
           <div className="flex flex-col mt-6 space-y-4 xl:mt-0 xs:space-y-0 xs:space-x-6 xs:flex-row xl:ml-11">
             <Link
               className="flex items-center space-x-3"
