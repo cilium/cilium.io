@@ -17,8 +17,8 @@
     "lint:js:fix": "eslint --fix --ext .js,.jsx --ignore-path .gitignore .",
     "lint:styles": "stylelint --ignore-path .gitignore '{**/*,*}.{css,sass,scss,md,html}'",
     "lint:styles:fix": "stylelint --fix --ignore-path .gitignore '{**/*,*}.{css,sass,scss,md,html}'",
-    "lint:md": "markdownlint --ignore-path .gitignore .",
-    "lint:md:fix": "markdownlint --fix --ignore-path .gitignore .",
+    "lint:md": "markdownlint .",
+    "lint:md:fix": "markdownlint --fix .",
     "prepare": "husky install"
   },
   "dependencies": {

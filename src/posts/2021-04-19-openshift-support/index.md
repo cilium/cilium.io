@@ -1,13 +1,13 @@
 ---
-path: '/blog/2021/04/19/openshift-certification'
-date: '2021-04-09T17:00:00.000Z'
-title: 'Introducing the Cilium Certified OpenShift Plug-in'
-summary: 'We are pleased to introduce the availability of Cilium in the Red Hat Ecosystem Catalog as well as the certification of Cilium as a Certified OpenShift CNI Plug-in.'
-cover: cover.png
-socialImage: ogimage.png
+path: "/blog/2021/04/19/openshift-certification"
+date: "2021-04-09T17:00:00.000Z"
+title: "Introducing the Cilium Certified OpenShift Plug-in"
+summary: "We are pleased to introduce the availability of Cilium in the Red Hat Ecosystem Catalog
+as well as the certification of Cilium as a Certified OpenShift CNI Plug-in."
+cover: ogimage.png
 isPopular: true
 categories:
-  - Announcements
+  - Announcement
 tags:
   - bpf
   - ebpf
@@ -39,7 +39,8 @@ requirements as well as the
 {{/preview}}
 
 ![](cover.png)
-<a href="https://cilium.io/" class="ogpreview"><img src="ogimage.png" /></a>
+
+<!-- <a href="https://cilium.io/" class="ogpreview"><img src="ogimage.png" /></a> -->
 
 # Certified Red Hat OpenShift CNI Plug-in
 
