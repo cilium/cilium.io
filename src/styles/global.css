@@ -14,6 +14,10 @@
 }
 
 @layer components {
+  :not(pre) > code[class*='language-text'] {
+    @apply border border-gray-3 !px-2 md:!px-2.5 !bg-gray-4 !rounded font-normal;
+  }
+
   .content-style {
     p {
       @apply mb-0;
@@ -27,6 +31,10 @@
       }
     }
   }
+}
+
+.gatsby-highlight {
+  @apply my-6;
 }
 
 .swiper {

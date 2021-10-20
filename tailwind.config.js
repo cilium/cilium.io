@@ -98,6 +98,14 @@ module.exports = {
                 color: theme('colors.gray.1'),
               },
             },
+            code: {
+              '&::before': {
+                content: '""',
+              },
+              '&::after': {
+                content: '""',
+              },
+            },
           },
         },
         lg: {
@@ -105,6 +113,14 @@ module.exports = {
             h1: {
               fontSize: theme('fontSize.4xl[0]'),
               lineHeight: theme('lineHeight.tight'),
+            },
+            code: {
+              '&::before': {
+                content: '""',
+              },
+              '&::after': {
+                content: '""',
+              },
             },
           },
         },
