@@ -19,6 +19,26 @@ async function createBlogPosts({ graphql, actions }) {
                 date(formatString: "MMM DD, yyyy")
                 title
                 path
+                cover {
+                  childImageSharp {
+                    gatsbyImageData(
+                      width: 1200
+                      height: 630
+                      formats: [JPG]
+                      transformOptions: { fit: COVER }
+                    )
+                  }
+                }
+                socialImage {
+                  childImageSharp {
+                    gatsbyImageData(
+                      width: 1200
+                      height: 630
+                      formats: [JPG]
+                      transformOptions: { fit: COVER }
+                    )
+                  }
+                }
               }
               body
             }

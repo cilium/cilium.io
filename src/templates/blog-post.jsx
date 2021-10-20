@@ -11,10 +11,18 @@ const BlogPostPage = (props) => {
   const {
     pageContext: { postData, popularPosts },
   } = props;
-  const { body: html, frontmatter } = postData;
+  const {
+    body: html,
+    frontmatter: { title, date, cover, socialImage },
+  } = postData;
+
+  const seoMetadata = {
+    title,
+    image: socialImage && cover,
+  };
   return (
-    <MainLayout>
-      <Content html={html} date={frontmatter.date} title={frontmatter.title} />
+    <MainLayout pageMetadata={seoMetadata}>
+      <Content html={html} date={date} title={title} />
       <PopularPosts items={popularPosts} />
       <Community />
     </MainLayout>
