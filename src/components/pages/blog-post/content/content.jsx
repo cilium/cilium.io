@@ -15,7 +15,7 @@ const Content = ({ date, title, html, path, tags }) => {
   const postUrl = `${process.env.GATSBY_DEFAULT_SITE_URL}${path}`;
   return (
     <article className="relative mt-6 md:mt-10 lg:mt-16">
-      <Container className="grid md:grid-cols-12 lg:gap-8">
+      <Container className="grid grid-cols-1 md:grid-cols-12 lg:gap-8">
         <SocialShare className="order-1 md:order-none md:col-span-1" postUrl={postUrl} />
         <div className="md:col-span-10">
           <span className="font-semibold leading-none md:text-lg text-gray-1">{date}</span>
@@ -25,7 +25,7 @@ const Content = ({ date, title, html, path, tags }) => {
           <MDXProvider components={{ wrapper: Wrapper }}>
             <MDXRenderer>{html}</MDXRenderer>
           </MDXProvider>
-          <div className="mt-8 space-x-2">
+          <div className="flex flex-wrap mt-8 gap-x-2 gap-y-2">
             {tags.map((tag) => (
               <Link
                 className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase px-2.5 py-1.5 text-primary-1"
