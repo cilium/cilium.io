@@ -16,16 +16,39 @@ async function createBlogPosts({ graphql, actions }) {
             ... on Mdx {
               id
               frontmatter {
+                date(formatString: "MMM DD, yyyy")
                 title
                 path
               }
+              body
             }
           }
           relativeDirectory
         }
       }
+      allPopularPosts: allMdx(
+        filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isPopular: { eq: true } } }
+        limit: 4
+        sort: { order: DESC, fields: fileAbsolutePath }
+      ) {
+        nodes {
+          frontmatter {
+            path
+            date(locale: "en", formatString: "MMM DD, yyyy")
+            title
+            cover {
+              childImageSharp {
+                gatsbyImageData(width: 512)
+              }
+            }
+          }
+          fileAbsolutePath
+        }
+      }
     }
   `);
+
+  const popularPosts = data.allPopularPosts.nodes;
 
   data.allFile.nodes.forEach((file) => {
     const { children } = file;
@@ -36,13 +59,15 @@ async function createBlogPosts({ graphql, actions }) {
       console.log('\nmarkup is broken! check index.md file at\n\n', file.relativeDirectory);
       return;
     }
+    // determine if there is popular posts
+    const popularPostsData = popularPosts?.length ? popularPosts : false;
 
     const { path } = postData.frontmatter;
 
     actions.createPage({
       path,
       component: Path.resolve('./src/templates/blog-post.jsx'),
-      context: { postData },
+      context: { postData, popularPosts: popularPostsData },
     });
   });
 }
@@ -112,8 +137,9 @@ async function createBlogPages({ graphql, actions, reporter }) {
   `);
 
   if (featuredPost?.length > 1) {
+    const featuredPosts = featuredPost.map((post) => post.fileAbsolutePath);
     reporter.panicOnBuild(
-      'There must be the only one featured post. Please, check "featured" fields in your posts.',
+      `There must be the only one featured post. Please, check "isFeatured" fields in your posts. ${featuredPosts}`,
       new Error('Too much featured posts')
     );
   }
@@ -198,6 +224,11 @@ exports.onCreateNode = ({ node, actions }) => {
       node,
       name: 'isPopular',
       value: node.frontmatter.isPopular || false,
+    });
+    createNodeField({
+      node,
+      name: 'draft',
+      value: node.frontmatter.draft || 'false',
     });
   }
 };

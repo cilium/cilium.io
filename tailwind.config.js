@@ -54,14 +54,28 @@ module.exports = {
         DEFAULT: {
           css: {
             color: theme('colors.black'),
-            p: {
-              marginBottom: '6px',
+            h1: {
+              color: theme('colors.black'),
+              fontSize: theme('fontSize.3xl[0]'),
+              lineHeight: theme('lineHeight.tight'),
+            },
+            h2: {
+              color: theme('colors.black'),
+            },
+            h3: {
+              color: theme('colors.black'),
+            },
+            h4: {
+              color: theme('colors.black'),
+            },
+            h5: {
+              color: theme('colors.black'),
+            },
+            h6: {
+              color: theme('colors.black'),
             },
             ul: {
-              margin: '0',
               li: {
-                marginTop: '0',
-                marginBottom: '4px',
                 '&:before': {
                   backgroundColor: theme('colors.black'),
                 },
@@ -73,6 +87,24 @@ module.exports = {
                   color: theme('colors.black'),
                 },
               },
+            },
+            a: {
+              color: theme('colors.primary.1'),
+              textDecoration: 'none',
+              transitionDuration: theme('transitionDuration.200'),
+              transitionProperty: theme('transitionProperty.colors'),
+              transitionTimingFunction: theme('transitionTimingFunction.DEFAULT'),
+              '&:hover': {
+                color: theme('colors.gray.1'),
+              },
+            },
+          },
+        },
+        lg: {
+          css: {
+            h1: {
+              fontSize: theme('fontSize.4xl[0]'),
+              lineHeight: theme('lineHeight.tight'),
             },
           },
         },

@@ -1,4 +1,5 @@
 @tailwind base;
+@tailwind components;
 
 @layer base {
   body {
@@ -8,6 +9,22 @@
   .highlight-words {
     span {
       @apply font-bold;
+    }
+  }
+}
+
+@layer components {
+  .content-style {
+    p {
+      @apply mb-0;
+    }
+
+    ul {
+      @apply m-0;
+
+      & > li {
+        @apply my-1;
+      }
     }
   }
 }
