@@ -6,6 +6,7 @@ import FeaturedPosts from 'components/pages/blog/featured-posts';
 import PostsBoard from 'components/pages/blog/posts-board';
 import Community from 'components/shared/community';
 import FeaturedTalks from 'components/shared/featured-talks';
+import SeoMetadata from 'utils/seo-metadata';
 
 import MainLayout from '../layouts/main';
 
@@ -18,7 +19,7 @@ const BlogPage = (props) => {
   } = props;
 
   return (
-    <MainLayout>
+    <MainLayout pageMetadata={SeoMetadata.blog}>
       <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
       <FeaturedTalks />
       <PostsBoard

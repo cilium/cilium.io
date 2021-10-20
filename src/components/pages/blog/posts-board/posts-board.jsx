@@ -114,28 +114,30 @@ const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
             )
           )}
         </div>
-        <div className="flex pt-8 mt-10 border-t border-gray-3">
-          {!isFirst && (
-            <button
-              className="flex mr-auto text-sm space-x-2.5 text-primary-1 tracking-wider items-center uppercase leading-none font-bold transition-colors duration-200 hover:text-gray-1"
-              type="button"
-              onClick={(event) => handlePaginationClick(event, prevPage)}
-            >
-              <ArrowIcon className="rotate-180" />
-              <span>Previous</span>
-            </button>
-          )}
-          {!isLast && (
-            <button
-              className="flex text-sm ml-auto space-x-2.5  text-primary-1 tracking-wider items-center uppercase leading-none font-bold transition-colors duration-200 hover:text-gray-1"
-              type="button"
-              onClick={(event) => handlePaginationClick(event, nextPage)}
-            >
-              <span>Next</span>
-              <ArrowIcon />
-            </button>
-          )}
-        </div>
+        {numPages > 1 && (
+          <div className="flex pt-8 mt-10 border-t border-gray-3">
+            {!isFirst && (
+              <button
+                className="flex mr-auto text-sm space-x-2.5 text-primary-1 tracking-wider items-center uppercase leading-none font-bold transition-colors duration-200 hover:text-gray-1"
+                type="button"
+                onClick={(event) => handlePaginationClick(event, prevPage)}
+              >
+                <ArrowIcon className="rotate-180" />
+                <span>Previous</span>
+              </button>
+            )}
+            {!isLast && (
+              <button
+                className="flex text-sm ml-auto space-x-2.5  text-primary-1 tracking-wider items-center uppercase leading-none font-bold transition-colors duration-200 hover:text-gray-1"
+                type="button"
+                onClick={(event) => handlePaginationClick(event, nextPage)}
+              >
+                <span>Next</span>
+                <ArrowIcon />
+              </button>
+            )}
+          </div>
+        )}
       </Container>
     </section>
   );

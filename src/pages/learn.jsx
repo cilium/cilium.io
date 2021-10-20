@@ -7,7 +7,6 @@ import EnterpriseDistributions from 'components/pages/learn/enterprise-distribut
 import InstallDeploy from 'components/pages/learn/install-deploy';
 import Learn from 'components/pages/learn/learn';
 import RelatedProjects from 'components/pages/learn/related-projects';
-import UseCases from 'components/pages/learn/use-cases';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
 import TryCilium from 'components/shared/try-cilium';

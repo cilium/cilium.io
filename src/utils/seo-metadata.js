@@ -9,4 +9,8 @@ export default {
     description:
       'Cilium is an open source project to provide networking, security, and observability for cloud native environments such as Kubernetes clusters and other container orchestration platforms.',
   },
+  blog: {
+    title: 'Blog — Cilium',
+    description: 'The latest articles covering eBPF-based Networking, Observability, and Security',
+  },
 };
