@@ -5,12 +5,13 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import Link from 'components/shared/link';
 
 import SocialShare from './social-share';
 
 const Wrapper = ({ children }) => <div className="prose md:prose-lg !max-w-none">{children}</div>;
 
-const Content = ({ date, title, html, path }) => {
+const Content = ({ date, title, html, path, tags }) => {
   const postUrl = `${process.env.GATSBY_DEFAULT_SITE_URL}${path}`;
   return (
     <article className="relative mt-6 md:mt-10 lg:mt-16">
@@ -24,6 +25,16 @@ const Content = ({ date, title, html, path }) => {
           <MDXProvider components={{ wrapper: Wrapper }}>
             <MDXRenderer>{html}</MDXRenderer>
           </MDXProvider>
+          <div className="mt-8 space-x-2">
+            {tags.map((tag) => (
+              <Link
+                className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase px-2.5 py-1.5 text-primary-1"
+                to="/"
+              >
+                {tag}
+              </Link>
+            ))}
+          </div>
         </div>
       </Container>
     </article>

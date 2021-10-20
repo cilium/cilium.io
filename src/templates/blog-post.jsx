@@ -14,7 +14,7 @@ const BlogPostPage = (props) => {
   } = props;
   const {
     body: html,
-    frontmatter: { path, title, date, cover, socialImage },
+    frontmatter: { path, title, date, tags, cover, socialImage },
   } = postData;
 
   const seoMetadata = {
@@ -23,7 +23,7 @@ const BlogPostPage = (props) => {
   };
   return (
     <MainLayout pageMetadata={seoMetadata}>
-      <Content path={path} html={html} date={date} title={title} />
+      <Content path={path} html={html} date={date} title={title} tags={tags} />
       <PopularPosts items={popularPosts} />
       <Community />
     </MainLayout>

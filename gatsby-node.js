@@ -19,6 +19,7 @@ async function createBlogPosts({ graphql, actions }) {
                 date(formatString: "MMM DD, yyyy")
                 title
                 path
+                tags
                 cover {
                   childImageSharp {
                     gatsbyImageData(
