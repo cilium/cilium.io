@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import 'prismjs/themes/prism.css';
 
 import Content from 'components/pages/blog-post/content';
 import PopularPosts from 'components/pages/blog-post/popular-posts';
