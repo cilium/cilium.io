@@ -3,6 +3,7 @@ import React from 'react';
 
 import Content from 'components/pages/blog-post/content';
 import PopularPosts from 'components/pages/blog-post/popular-posts';
+import Community from 'components/shared/community';
 
 import MainLayout from '../layouts/main';
 
@@ -15,6 +16,7 @@ const BlogPostPage = (props) => {
     <MainLayout>
       <Content html={html} date={frontmatter.date} title={frontmatter.title} />
       <PopularPosts items={popularPosts} />
+      <Community />
     </MainLayout>
   );
 };
