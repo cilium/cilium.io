@@ -45,9 +45,6 @@ module.exports = {
               withWebp: true,
               backgroundColor: 'white',
               disableBgImageOnAlpha: true,
-              wrapperStyle: {
-                marginBottom: 20,
-              },
             },
           },
           {
