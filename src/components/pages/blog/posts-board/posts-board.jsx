@@ -9,6 +9,8 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
 
+import CiliumLogo from './images/cilium-logo.inline.svg';
+
 const blockTitle = 'All posts';
 
 const categories = [
@@ -98,12 +100,14 @@ const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
                 <Link to={path}>
                   {cover ? (
                     <GatsbyImage
-                      className="md:min-h-[168px] max-h-[168px] rounded"
+                      className="md:min-h-[168px] max-h-[168px] rounded-lg"
                       image={getImage(cover)}
                       alt={title}
                     />
                   ) : (
-                    <div className="md:h-[168px] bg-gray-4 rounded" />
+                    <div className="md:h-[168px] flex justify-center items-center bg-gray-4 rounded-lg">
+                      <CiliumLogo />
+                    </div>
                   )}
                 </Link>
 
