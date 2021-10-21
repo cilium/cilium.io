@@ -25,17 +25,19 @@ const Content = ({ date, title, html, path, tags }) => {
           <MDXProvider components={{ wrapper: Wrapper }}>
             <MDXRenderer>{html}</MDXRenderer>
           </MDXProvider>
-          <div className="flex flex-wrap mt-8 gap-x-2 gap-y-2">
-            {tags.map((tag) => (
-              <Link
-                className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase p-2.5 text-primary-1"
-                key={tag}
-                to="/"
-              >
-                {tag}
-              </Link>
-            ))}
-          </div>
+          {tags?.length && (
+            <div className="flex flex-wrap mt-8 gap-x-2 gap-y-2">
+              {tags.map((tag) => (
+                <Link
+                  className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase p-2.5 text-primary-1"
+                  key={tag}
+                  to="/"
+                >
+                  {tag}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </Container>
     </article>
@@ -46,6 +48,11 @@ Content.propTypes = {
   title: PropTypes.string.isRequired,
   html: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string),
+};
+
+Content.defaultProps = {
+  tags: null,
 };
 
 export default Content;
