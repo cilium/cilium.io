@@ -107,7 +107,7 @@ const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
                     </h3>
                   </Link>
                   <p className="mt-2 mb-4 line-clamp-3">{summary}</p>
-                  <div className="mt-auto space-x-2">
+                  <div className="flex flex-wrap mt-auto gap-x-2 gap-y-2">
                     {categories?.map((category) => (
                       <button
                         className="text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none"
