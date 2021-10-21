@@ -14,12 +14,13 @@ const BlogPostPage = (props) => {
   } = props;
   const {
     body: html,
-    frontmatter: { path, title, date, tags, cover, socialImage },
+    frontmatter: { path, title, date, tags, ogImage, ogSummary },
   } = postData;
 
   const seoMetadata = {
     title,
-    image: socialImage && cover,
+    description: ogSummary,
+    image: ogImage || null,
   };
   return (
     <MainLayout pageMetadata={seoMetadata}>
