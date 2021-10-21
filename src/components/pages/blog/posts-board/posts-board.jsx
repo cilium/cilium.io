@@ -58,7 +58,7 @@ const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
     <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{blockTitle}</Heading>
-        <div className="flex px-4 mt-6 -mx-4 space-x-4 overflow-x-auto md:px-6 lg:px-10 xl:px-0 md:-mx-6 lg:-mx-10 xl:mx-0 no-scrollbar md:space-x-6 lg:space-x-10 md:mt-10 lg:mt-14">
+        <div className="flex px-4 mt-6 -mx-4 overflow-x-auto gap-x-4 xl:flex-wrap xl:overflow-visible md:px-6 lg:px-10 xl:px-0 md:-mx-6 lg:-mx-10 xl:mx-0 no-scrollbar md:gap-x-6 lg:gap-x-10 md:mt-10 lg:mt-14">
           {categories.map((category) => {
             const isActiveElement = currentCategory === category;
             return (
