@@ -91,26 +91,19 @@ async function createBlogPosts({ graphql, actions }) {
 async function createBlogPages({ graphql, actions, reporter }) {
   const { createPage } = actions;
 
-  const categories = [
-    '*',
-    'Announcements',
-    'Community',
-    'Deep Dive',
-    'eBPF',
-    'Guide',
-    'How-To',
-    'Network Policies',
-    'Releases',
-    'User Blog',
-  ];
-
   const {
     data: {
       featuredPostEdges: { nodes: featuredPost },
       allPopularPosts: { nodes: popularPosts },
+      allCategories: { group: allCategories },
     },
   } = await graphql(`
     {
+      allCategories: allMdx {
+        group(field: frontmatter___categories) {
+          fieldValue
+        }
+      }
       featuredPostEdges: allMdx(
         filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isFeatured: { eq: true } } }
       ) {
@@ -162,6 +155,10 @@ async function createBlogPages({ graphql, actions, reporter }) {
     );
   }
 
+  const getCategories = allCategories.map((category) => category.fieldValue);
+  const categoryAll = ['*'];
+  const categories = categoryAll.concat(getCategories);
+
   await Promise.all(
     categories.map(async (category) =>
       graphql(
@@ -207,6 +204,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
               queryFilter: category,
               featured: featuredPostData,
               popularPosts: popularPostsData,
+              categories,
               robots: `${category === '*' ? '' : 'NO'}INDEX, FOLLOW`,
               // remove extra slash if category is a wildcard to preserve proper urls
               canonicalUrl: `blog/${category === '*' ? '' : '/'}${path}`,

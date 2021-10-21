@@ -15,7 +15,7 @@ const BlogPage = (props) => {
     data: {
       allMdx: { nodes: posts },
     },
-    pageContext: { featured, popularPosts, queryFilter, currentPage, numPages },
+    pageContext: { featured, popularPosts, categories, queryFilter, currentPage, numPages },
   } = props;
 
   return (
@@ -23,6 +23,7 @@ const BlogPage = (props) => {
       <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
       <FeaturedTalks />
       <PostsBoard
+        categories={categories}
         posts={posts}
         queryFilter={queryFilter}
         currentPage={currentPage}

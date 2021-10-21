@@ -13,23 +13,11 @@ import CiliumLogo from './images/cilium-logo.inline.svg';
 
 const blockTitle = 'All posts';
 
-const categories = [
-  'All',
-  'Announcements',
-  'Community',
-  'Deep Dive',
-  'eBPF',
-  'Guide',
-  'How-To',
-  'Network Policies',
-  'Releases',
-  'User Blog',
-];
 // helper function that performs filter-to-slug transformation
 const filterToSlug = (filter) =>
-  filter === 'All' ? '/blog/' : `/blog/${filter.toLowerCase().replace(/\s/g, '-')}/`;
+  filter === '*' ? '/blog/' : `/blog/${filter.toLowerCase().replace(/\s/g, '-')}/`;
 
-const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
+const PostsBoard = ({ categories, posts, queryFilter, currentPage, numPages }) => {
   // adapt queryFilter in case of wild card (all posts)
   const currentCategory = queryFilter === '*' ? 'All' : queryFilter;
 
@@ -71,7 +59,7 @@ const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
                 key={category}
                 onClick={(event) => handleCategoryClick(event, category)}
               >
-                {category}
+                {category === '*' ? 'All' : category}
               </button>
             );
           })}
@@ -88,7 +76,8 @@ const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
                 <Link to={path}>
                   {cover ? (
                     <GatsbyImage
-                      className="min-h-[168px] max-h-[168px] rounded-lg"
+                      className="min-h-[168px] max-h-[168px]"
+                      imgClassName="rounded-lg"
                       image={getImage(cover)}
                       alt={title}
                     />
@@ -153,6 +142,7 @@ const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
   );
 };
 PostsBoard.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       frontmatter: PropTypes.shape({
