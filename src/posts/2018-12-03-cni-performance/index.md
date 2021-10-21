@@ -10,7 +10,7 @@ tags:
   - performance
   - benchmark
 ogImage: ogimage.png
-ogSummary: `This blog post documents the investigation we have done so far of what looked like a performance regression of HTTP/FTP traffic over pure TCP.`
+ogSummary: 'This blog post documents the investigation we have done so far of what looked like a performance regression of HTTP/FTP traffic over pure TCP.'
 ---
 
 ![Title](ogimage.png)

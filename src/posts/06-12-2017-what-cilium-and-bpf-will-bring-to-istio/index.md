@@ -10,7 +10,7 @@ tags:
   - cilium
   - envoy
   - proxy
-ogSummary: `There is a lot of excitement around Istio this week at KubeCon. We are getting pinged multiple times a day now with questions on how exactly Cilium and Istio relate to each other. Istio abstracts away a lot of networking specific complexity and provides visibility and control to application teams. We couldn't agree more with the moving networking to Layer 7 and provide the necessary instruments for efficient operation at the layer where it makes sense:the application protocol. This blog post serves to answer a simple question:How is Istio related to Cilium? Can I use both together? Will one benefit from the other?`
+ogSummary: "There is a lot of excitement around Istio this week at KubeCon. We are getting pinged multiple times a day now with questions on how exactly Cilium and Istio relate to each other. Istio abstracts away a lot of networking specific complexity and provides visibility and control to application teams. We couldn't agree more with the moving networking to Layer 7 and provide the necessary instruments for efficient operation at the layer where it makes sense:the application protocol. This blog post serves to answer a simple question:How is Istio related to Cilium? Can I use both together? Will one benefit from the other?"
 ---
 
 There is a lot of excitement around Istio this week at KubeCon. We are getting pinged multiple times a day with questions on how exactly Cilium and Istio relate to each other. This blog post serves to answer a couple of simple questions: How is Istio related to Cilium? Can I use both together? Will one benefit from the other?

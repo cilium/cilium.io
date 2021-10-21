@@ -13,12 +13,9 @@ tags:
   - GKE
   - Google
 ogImage: ogimage.png
-ogSummary: `Today is an exciting day for the Cilium community:
-Isovalent, the company behind Cilium, is
-announcing its $29M Series A financing round backed by Andreessen
-Horowitz, Google, and Cisco. This is a perfect occasion to take a deeper look
+ogSummary: "Today is an exciting day for the Cilium community: Isovalent, the company behind Cilium, is announcing its $29M Series A financing round backed by Andreessen Horowitz, Google, and Cisco. This is a perfect occasion to take a deeper look
 into where eBPF-based networking is coming from and to understand what the
-excitement is all about.`
+excitement is all about."
 ---
 
 ![](intro.png)

@@ -9,7 +9,7 @@ tags:
   - grpc
   - cilium
   - bpf
-ogSummary: `The Cilium community has been hard at work over the past weeks to get us closer to what we consider is required for a 1.0 release. We have made a ton of progress and are happy to announce the release of 1.0.0-rc2 at this point.`
+ogSummary: 'The Cilium community has been hard at work over the past weeks to get us closer to what we consider is required for a 1.0 release. We have made a ton of progress and are happy to announce the release of 1.0.0-rc2 at this point.'
 ---
 
 The Cilium community has been hard at work over the past weeks to get us closer to what we consider is required for a 1.0 release. We have made a ton of progress and are happy to announce the release of 1.0.0-rc2 at this point.

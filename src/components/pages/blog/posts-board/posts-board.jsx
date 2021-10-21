@@ -88,14 +88,32 @@ const PostsBoard = ({ posts, queryFilter, currentPage, numPages }) => {
         </div>
         <div className="grid gap-6 mt-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:mt-11">
           {posts.map(
-            ({ frontmatter: { path, cover, date, title, summary, categories } }, index) => (
+            (
+              {
+                frontmatter: { path, ogImage: cover, date, title, ogSummary: summary, categories },
+              },
+              index
+            ) => (
               <div className="flex flex-col p-6 border rounded-lg md:p-8 border-gray-3" key={index}>
                 <Link to={path}>
-                  <GatsbyImage className="md:min-h-[168px]" image={getImage(cover)} alt={title} />
+                  {cover ? (
+                    <GatsbyImage
+                      className="md:min-h-[168px] max-h-[168px] rounded"
+                      image={getImage(cover)}
+                      alt={title}
+                    />
+                  ) : (
+                    <div className="md:h-[168px] bg-gray-4 rounded" />
+                  )}
                 </Link>
+
                 <div className="flex flex-col flex-grow mt-7">
                   <span className="text-sm font-medium leading-none text-gray-1">{date}</span>
-                  <h3 className="mt-3 font-bold leading-normal line-clamp-3 md:text-lg">{title}</h3>
+                  <Link to={path}>
+                    <h3 className="mt-3 font-bold leading-normal line-clamp-3 md:text-lg">
+                      {title}
+                    </h3>
+                  </Link>
                   <p className="mt-2 mb-4 line-clamp-3">{summary}</p>
                   <div className="mt-auto space-x-2">
                     {categories?.map((category) => (
@@ -147,14 +165,14 @@ PostsBoard.propTypes = {
     PropTypes.shape({
       frontmatter: PropTypes.shape({
         path: PropTypes.string.isRequired,
-        cover: PropTypes.shape({
+        ogImage: PropTypes.shape({
           childImageSharp: PropTypes.shape({
             gatsbyImageData: PropTypes.shape(),
           }),
-        }).isRequired,
+        }),
         date: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
-        summary: PropTypes.string,
+        ogSummary: PropTypes.string,
         categories: PropTypes.arrayOf(PropTypes.string),
       }),
     })

@@ -52,8 +52,8 @@ export const blogPostsQuery = graphql`
           date(locale: "en", formatString: "MMM DD, yyyy")
           categories
           title
-          summary
-          cover {
+          ogSummary
+          ogImage {
             childImageSharp {
               gatsbyImageData(width: 550)
             }

@@ -4,7 +4,7 @@ import React from 'react';
 
 import Link from 'components/shared/link';
 
-const PopularPostCard = ({ frontmatter: { date, title, cover, path } }) => (
+const PopularPostCard = ({ frontmatter: { date, title, ogImage: cover, path } }) => (
   <Link
     className="flex flex-col flex-1 p-6 space-y-4 border rounded-lg md:space-y-4 md:p-8 lg:flex-row border-gray-3 lg:space-y-0 lg:space-x-7"
     to={path}
@@ -26,11 +26,11 @@ PopularPostCard.propTypes = {
   frontmatter: PropTypes.shape({
     date: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    cover: PropTypes.shape({
+    ogImage: PropTypes.shape({
       childImageSharp: PropTypes.shape({
         gatsbyImageData: PropTypes.shape(PropTypes.any),
       }),
-    }).isRequired,
+    }),
     path: PropTypes.string.isRequired,
   }).isRequired,
 };

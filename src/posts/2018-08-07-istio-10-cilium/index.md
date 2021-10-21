@@ -12,8 +12,8 @@ tags:
   - envoy
   - ebpf
   - security
-ogSummary: `Istio 1.0 was released last week. From the Cilium community, we would like to congratulate all Istio contributors for this massive effort. We have been
-fortunate to participate in the community by contributing to Istio and by helping several users moving towards production with Istio and Cilium.`
+ogSummary: "Istio 1.0 was released last week. From the Cilium community, we would like to congratulate all Istio contributors for this massive effort. We have been
+fortunate to participate in the community by contributing to Istio and by helping several users moving towards production with Istio and Cilium."
 ---
 
 Istio 1.0 was [released](https://istio.io/blog/2018/announcing-1.0/) last week.

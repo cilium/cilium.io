@@ -20,17 +20,8 @@ async function createBlogPosts({ graphql, actions }) {
                 title
                 path
                 tags
-                cover {
-                  childImageSharp {
-                    gatsbyImageData(
-                      width: 1200
-                      height: 630
-                      formats: [JPG]
-                      transformOptions: { fit: COVER }
-                    )
-                  }
-                }
-                socialImage {
+                ogSummary
+                ogImage {
                   childImageSharp {
                     gatsbyImageData(
                       width: 1200
@@ -48,7 +39,10 @@ async function createBlogPosts({ graphql, actions }) {
         }
       }
       allPopularPosts: allMdx(
-        filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isPopular: { eq: true } } }
+        filter: {
+          fileAbsolutePath: { regex: "/posts/" }
+          fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
+        }
         limit: 4
         sort: { order: DESC, fields: fileAbsolutePath }
       ) {
@@ -57,7 +51,7 @@ async function createBlogPosts({ graphql, actions }) {
             path
             date(locale: "en", formatString: "MMM DD, yyyy")
             title
-            cover {
+            ogImage {
               childImageSharp {
                 gatsbyImageData(width: 512)
               }
@@ -125,8 +119,8 @@ async function createBlogPages({ graphql, actions, reporter }) {
             path
             date(locale: "en", formatString: "MMM DD, yyyy")
             title
-            summary
-            cover {
+            ogSummary
+            ogImage {
               childImageSharp {
                 gatsbyImageData(width: 685)
               }
@@ -136,7 +130,10 @@ async function createBlogPages({ graphql, actions, reporter }) {
         }
       }
       allPopularPosts: allMdx(
-        filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isPopular: { eq: true } } }
+        filter: {
+          fileAbsolutePath: { regex: "/posts/" }
+          fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
+        }
         limit: 4
         sort: { order: DESC, fields: fileAbsolutePath }
       ) {
@@ -145,7 +142,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
             path
             date(locale: "en", formatString: "MMM DD, yyyy")
             title
-            cover {
+            ogImage {
               childImageSharp {
                 gatsbyImageData(width: 512)
               }
@@ -248,8 +245,8 @@ exports.onCreateNode = ({ node, actions }) => {
     });
     createNodeField({
       node,
-      name: 'draft',
-      value: node.frontmatter.draft || 'false',
+      name: 'isDraft',
+      value: node.frontmatter.draft || false,
     });
   }
 };

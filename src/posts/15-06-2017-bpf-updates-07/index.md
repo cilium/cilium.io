@@ -8,7 +8,7 @@ tags:
   - bpf
   - bpf-updates
   - ebpf
-ogSummary: `Linux 4.12-rc5 was recently released. No BPF changes where included, but a usual [GIT] Networking pull request was made afterwards. You can see the changes in 15th June.`
+ogSummary: 'Linux 4.12-rc5 was recently released. No BPF changes where included, but a usual [GIT] Networking pull request was made afterwards. You can see the changes in 15th June.'
 ---
 
 This is issue 07 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.

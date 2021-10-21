@@ -7,7 +7,7 @@ categories:
   - Announcements
 tags:
   - release
-ogDescription: 'We are excited to announce Cilium 1.0.0-rc9 with many,
+ogSummary: 'We are excited to announce Cilium 1.0.0-rc9 with many,
 many bugfixes and the delivery of the final feature we were waiting on prior for
 1.0: Egress policy enforcement support. It is therefore only logical that we
 announce full feature freeze with rc9. This means that we will only merge

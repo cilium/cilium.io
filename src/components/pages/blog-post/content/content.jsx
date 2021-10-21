@@ -28,7 +28,8 @@ const Content = ({ date, title, html, path, tags }) => {
           <div className="flex flex-wrap mt-8 gap-x-2 gap-y-2">
             {tags.map((tag) => (
               <Link
-                className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase px-2.5 py-1.5 text-primary-1"
+                className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase p-2.5 text-primary-1"
+                key={tag}
                 to="/"
               >
                 {tag}

@@ -8,7 +8,7 @@ categories:
   - Announcements
 tags:
   - release
-ogSummary: `We are excited to have released Cilium 1.0.0-rc4. The release contains a lot of bugfixes as usual plus a lot of CI work to ensure quality long term but there are also some enhancements highlights and tooling worth mentioning.`
+ogSummary: 'We are excited to have released Cilium 1.0.0-rc4. The release contains a lot of bugfixes as usual plus a lot of CI work to ensure quality long term but there are also some enhancements highlights and tooling worth mentioning.'
 ---
 
 We are excited to have released Cilium 1.0.0-rc4. The release contains a lot of

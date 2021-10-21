@@ -17,7 +17,7 @@ tags:
   - nodeport
   - AWS ENI
 ogImage: ogimage.png
-ogSummary: `We are excited to announce the Cilium 1.6 release. A total of 1408 commits have been contributed by the community with many developers contributing for the first time. Cilium 1.6 introduces several exciting new features`
+ogSummary: 'We are excited to announce the Cilium 1.6 release. A total of 1408 commits have been contributed by the community with many developers contributing for the first time. Cilium 1.6 introduces several exciting new features'
 ---
 
 ![Introduction graph](ogimage.png)

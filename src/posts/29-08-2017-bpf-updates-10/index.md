@@ -8,7 +8,7 @@ tags:
   - bpf-updates
   - ebpf
   - bpf
-ogSummary: `This is issue 10 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.`
+ogSummary: 'This is issue 10 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.'
 ---
 
 This is issue 10 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.

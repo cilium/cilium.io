@@ -8,7 +8,7 @@ tags:
   - bpf-updates
   - bpf
   - ebpf
-ogSummary: `Linux 4.12-rc2 was released last week. One usual [GIT] Networking pull request made it in which includes two BPF fixes. See 18th May for the details.`
+ogSummary: 'Linux 4.12-rc2 was released last week. One usual [GIT] Networking pull request made it in which includes two BPF fixes. See 18th May for the details.'
 ---
 
 This is issue 04 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.

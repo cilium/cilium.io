@@ -10,7 +10,7 @@ tags:
   - http
   - policy
   - demo
-ogSummary: 'In celebration of today's date, May 4th, we are posting our Star Wars demo of Cilium that we showed at CNCF/KubeCon in Berlin or DockerCon in Austin. You can either watch the video linked below which starts directly at the time the demo begins or you can jump to the transcript of the demo embedded in the blog post. May the fourth be with you.'
+ogSummary: "In celebration of today's date, May 4th, we are posting our Star Wars demo of Cilium that we showed at CNCF/KubeCon in Berlin or DockerCon in Austin. You can either watch the video linked below which starts directly at the time the demo begins or you can jump to the transcript of the demo embedded in the blog post. May the fourth be with you."
 ---
 
 In celebration of today's date, May 4th, we are posting our Star Wars demo of Cilium that we showed at CNCF/KubeCon in Berlin or DockerCon in Austin. You can either watch the video linked below which starts directly at the time the demo begins or you can jump to the transcript of the demo embedded in the blog post. May the fourth be with you.
@@ -171,7 +171,7 @@ The empire loads this policy into Cilium:
 
     $ cilium policy import sw_policy_http.real.json
 
----
+```
 
 Unsuspecting about the efforts of the empire, the rebels execute their attack. Their ships can still probe the deathstar via radar:
 
@@ -243,4 +243,4 @@ We all know what is going to happen now...
             temp/main.go:5 +0x85
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">  <script>hljs.initHighlightingOnLoad();</script>
-````
+```

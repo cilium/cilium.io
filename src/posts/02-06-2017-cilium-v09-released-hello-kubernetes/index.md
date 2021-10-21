@@ -6,7 +6,7 @@ categories:
   - Announcements
 tags:
   - release
-ogSummary: `The team is excited to announce the v0.9 release of Cilium.We've received a lot of great feedback since we released Cilium v0.8 at the end of March with support for L7 HTTP-aware network security. By far the biggest requests have been:1) Making it easier to deploy and use Cilium in Kubernetes environments 2) Testing and hardening Cilium to enable production deployments.`
+ogSummary: "The team is excited to announce the v0.9 release of Cilium.We've received a lot of great feedback since we released Cilium v0.8 at the end of March with support for L7 HTTP-aware network security. By far the biggest requests have been:1) Making it easier to deploy and use Cilium in Kubernetes environments 2) Testing and hardening Cilium to enable production deployments."
 ---
 
 The team is excited to announce the [v0.9 release](https://github.com/cilium/cilium/releases/tag/v0.9.0) of Cilium.

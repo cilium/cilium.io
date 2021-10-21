@@ -8,7 +8,7 @@ tags:
   - Kubernetes
   - http
   - cilium
-ogSummary: `This blog post focuses on Layer 7 (HTTP) policy rules and how to apply them for both outgoing and incoming connections in the context of a Kubernetes cluster using a ThirdPartyResource. This is a first step in integrating L7 policies into the Kubernetes world, next steps will involve integration with Istio and the Envoy proxy. We will talk about our plans and the details how Cilium empowers both of them in one of the next blog posts.`
+ogSummary: 'This blog post focuses on Layer 7 (HTTP) policy rules and how to apply them for both outgoing and incoming connections in the context of a Kubernetes cluster using a ThirdPartyResource. This is a first step in integrating L7 policies into the Kubernetes world, next steps will involve integration with Istio and the Envoy proxy. We will talk about our plans and the details how Cilium empowers both of them in one of the next blog posts.'
 ---
 
 This blog post focuses on Layer 7 (HTTP) policy rules and how to apply them for both outgoing and incoming connections in the context of a Kubernetes cluster using a [ThirdPartyResource](https://kubernetes.io/docs/tasks/access-kubernetes-api/extend-api-third-party-resource/). This is a first step in integrating L7 policies into the Kubernetes world, next steps will involve integration with [Istio](https://istio.io/) and the [Envoy proxy](https://github.com/lyft/envoy). We will talk about our plans and the details how Cilium empowers both of them in one of the next blog posts.

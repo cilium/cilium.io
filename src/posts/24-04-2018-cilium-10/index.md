@@ -9,10 +9,7 @@ tags:
   - announcement
   - releases
 ogImage: k8s_ship.png
-ogSummary: `The last couple of months have been tremendously exciting for everyone working on Cilium and BPF. We have witnessed a fast growing community of
-Cilium users as well as the rapid increase of BPF usage and development with
-companies such as Google joining the existing already strong BPF community of
-engineers from Facebook, Netflix, Red Hat and many more.`
+ogSummary: 'The last couple of months have been tremendously exciting for everyone working on Cilium and BPF. We have witnessed a fast growing community of Cilium users as well as the rapid increase of BPF usage and development with companies such as Google joining the existing already strong BPF community of engineers from Facebook, Netflix, Red Hat and many more.'
 ---
 
 ![Kubernetes BPF ship](k8s_ship.png)

@@ -15,11 +15,10 @@ tags:
   - session affinity
   - scalability
 ogImage: ogimage.png
-ogSummary: `
-We are excited to announce the Cilium 1.8 release. A total of 2162 commits have
+ogSummary: "We are excited to announce the Cilium 1.8 release. A total of 2162 commits have
 been contributed by a community of 182 developers, many of whom made their first
 contributions this cycle. Cilium 1.8 brings with it a trove of exciting new
-features`
+features"
 ---
 
 ![](ogimage.png)
@@ -275,10 +274,7 @@ to their API endpoints. Running Hubble Relay as a deployment provides
 flexibility in terms of scheduling and resource allocation. Furthermore, as it
 is decoupled from Cilium, specific network policies can be applied.
 
-A new
-<a href=https://docs.cilium.io/en/v1.8/gettingstarted/hubble/>networking and security observability with Hubble</a>
-getting started guide has been added to our documentation. It provides a
-walkthrough of setting up a local multi-node Kubernetes cluster on Docker using
+A new <a href="https://docs.cilium.io/en/v1.8/gettingstarted/hubble">networking and security observability with Hubble</a> getting started guide has been added to our documentation. It provides a walkthrough of setting up a local multi-node Kubernetes cluster on Docker using
 <a href="https://kind.sigs.k8s.io/">kind</a> in order to demonstrate some of
 Hubble’s capabilities, including using Hubble Relay.
 
@@ -407,7 +403,7 @@ Policy verdict log: flow 0xabf3bda6 local EP ID 343, remote ID 2986, dst port 80
 
 Now that we inject a policy to match on the traffic, we can see that the action
 is now to `allow` the traffic. For more details see the new
-<a href=https://docs.cilium.io/en/v1.8/gettingstarted/policy-creation/>Policy
+<a href="https://docs.cilium.io/en/v1.8/gettingstarted/policy-creation">Policy
 Creation Getting Started Guide</a>.
 
 <a name="performance"></a>

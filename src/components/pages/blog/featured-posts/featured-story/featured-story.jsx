@@ -7,7 +7,7 @@ import Link from 'components/shared/link';
 
 const blockTitle = 'Featured story';
 
-const FeaturedStory = ({ className, title, date, cover, summary, path }) => (
+const FeaturedStory = ({ className, title, date, ogImage: cover, ogSummary: summary, path }) => (
   <div className={className}>
     <Heading tag="h2" size="xxs" theme="gray">
       {blockTitle}
@@ -39,9 +39,9 @@ const FeaturedStory = ({ className, title, date, cover, summary, path }) => (
 FeaturedStory.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string.isRequired,
-  summary: PropTypes.string.isRequired,
+  ogSummary: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
-  cover: PropTypes.shape({
+  ogImage: PropTypes.shape({
     childImageSharp: PropTypes.shape({
       gatsbyImageData: PropTypes.shape(),
     }),

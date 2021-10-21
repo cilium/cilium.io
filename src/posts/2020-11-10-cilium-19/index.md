@@ -17,10 +17,9 @@ tags:
   - Maglev
   - bandwidth management
 ogImage: ogimage.png
-ogSummary: `
-We are excited to announce the Cilium 1.9 release. A total of 2816 commits have
+ogSummary: "We are excited to announce the Cilium 1.9 release. A total of 2816 commits have
 been contributed by a community of 251 developers, many of whom made their first
-contributions this cycle. Cilium 1.9 brings with it several brand new features`
+contributions this cycle. Cilium 1.9 brings with it several brand new features"
 ---
 
 ![](intro.png)
@@ -494,7 +493,7 @@ in case of tunnelling or use of L7 proxies.
 <center>
 <div
   style=" height: 500px; background: url('/2020-10-cilium-19-edt.png') #fff no-repeat center; background-size: contain;">
-</div></center><br>
+</div></center><br/>
 
 Evaluating the application latency under rate-limiting with HTB (Hierarchical Token Bucket) compared
 to eBPF with FQ [shows](https://netdevconf.info/0x14/session.html?talk-replacing-HTB-with-EDT-and-BPF)
@@ -583,10 +582,10 @@ inaccurately providing it too early when it would be pushed up to the host stack
 routing. This is now possible because the packet's socket association can be kept
 intact when it is passed down into the NIC driver.
 
-<center><br>
+<center><br/>
 <div
   style=" max-width: 1225px; height: 450px; background: url('/2020-10-cilium-19-tcp-combined.png') #fff no-repeat center; background-size: contain;">
-</div></center><br>
+</div></center><br/>
 
 As can be seen from initial results, the single stream TCP throughput for a Pod to
 remote Pod session under direct routing doubles in throughput for the nodes under test

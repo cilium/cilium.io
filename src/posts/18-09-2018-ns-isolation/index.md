@@ -9,7 +9,7 @@ tags:
   - network policies
   - kube-dns policy
 ogImage: overview.png
-ogSummary: `Kubernetes clusters are used by multiple tenants to run their containerized workloads. Often, the tenant workloads are mapped to namespaces and strict access control is required for inter-namespace communications. The access control could be needed for separation of concerns such as monitoring namespace vs application namespace; for compliance such as PCI vs non-PCI workloads; or to meet requirements of serving different end customers such as workloads serving Pepsi vs Coke. In this post, we will look at namespace based segmentation of traffic along with examples of allowing specific inter-namespace communications.`
+ogSummary: 'Kubernetes clusters are used by multiple tenants to run their containerized workloads. Often, the tenant workloads are mapped to namespaces and strict access control is required for inter-namespace communications. The access control could be needed for separation of concerns such as monitoring namespace vs application namespace; for compliance such as PCI vs non-PCI workloads; or to meet requirements of serving different end customers such as workloads serving Pepsi vs Coke. In this post, we will look at namespace based segmentation of traffic along with examples of allowing specific inter-namespace communications.'
 ---
 
 ![](overview.png)

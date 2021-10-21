@@ -8,7 +8,7 @@ tags:
   - bpf-updates
   - bpf
   - ebpf
-ogSummary: `Linux 4.12 was released and net-next is closed. The Kernel Newbies release notes is still under construction but worth checking out for the BPF commits in 4.12.`
+ogSummary: 'Linux 4.12 was released and net-next is closed. The Kernel Newbies release notes is still under construction but worth checking out for the BPF commits in 4.12.'
 ---
 
 This is issue 08 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.

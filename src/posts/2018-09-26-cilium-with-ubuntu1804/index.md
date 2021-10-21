@@ -7,7 +7,7 @@ categories:
 tags:
   - How-To
 ogImage: ogimage.png
-ogSummary: `Cilium provides API-aware network security for cloud-native applications. Here's a How-To guide to get you going easily with Kubernetes and Cilium on Ubuntu 18.04 LTS.`
+ogSummary: "Cilium provides API-aware network security for cloud-native applications. Here's a How-To guide to get you going easily with Kubernetes and Cilium on Ubuntu 18.04 LTS."
 ---
 
 Several users are looking to run Kubernetes with Cilium on Ubuntu 18.04 LTS. The Bionic Beaver (codename for Ubuntu 18.04) is an easy choice for deploying Kubernetes with Cilium as it ships with the default Linux kernel version 4.15.
@@ -54,7 +54,7 @@ For AWS deployments, you can choose a community AMI for your location: <https://
 | ICMP      | ICMP check within SG     |
 
 </center>
-</br>
+<br/>
 Be sure to note that some steps are not persistent across host restarts and need to be added to a start-up script for a permanent configuration.
 
 ## Set-Up
@@ -244,7 +244,7 @@ kubectl exec tiefighter -- curl -s -XPOST  deathstar.default.svc.cluster.local/v
 
 The policy will deny `xwing` access completely by its identity label and allow `tiefighter` to only make a specific HTTP call.
 
-<img src="cilium_sw_http_l3_l4_l7.png" align="center" width=200px />
+<img src="cilium_sw_http_l3_l4_l7.png" align="center" width="200px" />
 <br />
 
 ```

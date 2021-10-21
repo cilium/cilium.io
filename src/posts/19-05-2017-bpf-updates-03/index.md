@@ -8,7 +8,7 @@ tags:
   - bpf
   - bpf-updates
   - ebpf
-ogSummary: `The Linux kernel merge window closed up last week and v4.12-rc1 was released. One usual [GIT] Networking pull request was sent before the rc and one the day after. The are some BPF related fixes, see dates for all the highlights`
+ogSummary: 'The Linux kernel merge window closed up last week and v4.12-rc1 was released. One usual [GIT] Networking pull request was sent before the rc and one the day after. The are some BPF related fixes, see dates for all the highlights'
 ---
 
 This is issue 03 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.

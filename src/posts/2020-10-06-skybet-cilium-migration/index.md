@@ -13,12 +13,11 @@ tags:
   - CNI
   - Migration
 ogImage: ogimage.png
-ogSummary: `
-This is a guest blog by Josh Van Leeuwen and covers how Josh implemented a CNI
+ogSummary: "This is a guest blog by Josh Van Leeuwen and covers how Josh implemented a CNI
 live migration for a customer, Sky Betting and Gaming,
 to live migrate a cluster running the Canal CNI plugin (Flannel+Calico) to
 Cilium. Josh is working as a Customer Reliability Engineer for Jetstack. Read
-on to hear what Josh has to say...`
+on to hear what Josh has to say..."
 ---
 
 ![](ogimage.png)
@@ -106,7 +105,7 @@ demonstrated below where Pods on Node 1 will be unable to communicate to Pods on
 Node 2, and visa versa.
 
 <figure class="pure-img center">
-  <img src="1-canal-2-cilium.png" alt="Diffident CNIs Installed" style="max-height: 20em;">
+  <img src="1-canal-2-cilium.png" alt="Diffident CNIs Installed" style="max-height: 20em;" />
   <figcaption><p>Separate CNIs installed</p></figcaption>
 </figure>
 
@@ -122,27 +121,27 @@ one and then remove the old CNI during the migration. The overview of the migrat
 is as follows.
 
 <figure class="pure-img center">
-  <img src="1-canal-2-canal.png" alt="Single CNI installed" style="max-height: 20em;">
+  <img src="1-canal-2-canal.png" alt="Single CNI installed" style="max-height: 20em;" />
   <figcaption><p>Step 0: Single CNI installed on the cluster.</p></figcaption>
 </figure>
 
 <figure class="pure-img center">
-  <img src="1-canal-cilium-2-canal.png" alt="Rollout out second CNI" style="max-height: 20em;">
+  <img src="1-canal-cilium-2-canal.png" alt="Rollout out second CNI" style="max-height: 20em;" />
   <figcaption><p>Step 1: Rollout the second CNI alongside the current. All pods communicate over the current.</p></figcaption>
 </figure>
 
 <figure class="pure-img center">
-  <img src="1-canal-cilium-2-canal-cilium.png" alt="Both CNIs installed everywhere" style="max-height: 20em;">
+  <img src="1-canal-cilium-2-canal-cilium.png" alt="Both CNIs installed everywhere" style="max-height: 20em;" />
   <figcaption><p>Step 2: Both CNIs installed on all nodes, and Pods can communicate on either CNI.</p></figcaption>
 </figure>
 
 <figure class="pure-img center">
-  <img src="1-cilium-2-canal-cilium.png" alt="Peel away first CNI" style="max-height: 20em;">
+  <img src="1-cilium-2-canal-cilium.png" alt="Peel away first CNI" style="max-height: 20em;" />
   <figcaption><p>Step 3: Peel away the first CNI. Pods can communicate on the new CNI if the first is unavailable at the source or destination Pod.</p></figcaption>
 </figure>
 
 <figure class="pure-img center">
-  <img src="1-cilium-2-cilium.png" alt="Migration complete" style="max-height: 20em;">
+  <img src="1-cilium-2-cilium.png" alt="Migration complete" style="max-height: 20em;" />
   <figcaption><p>Step 4: First CNI is completely removed. All commination done over the new CNI.</p></figcaption>
 </figure>
 

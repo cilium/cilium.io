@@ -43,8 +43,6 @@ module.exports = {
               maxWidth: 1008,
               quality: 90,
               withWebp: true,
-              showCaptions: true,
-              markdownCaptions: true,
               backgroundColor: 'white',
               disableBgImageOnAlpha: true,
             },

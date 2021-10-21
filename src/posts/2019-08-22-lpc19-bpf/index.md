@@ -10,9 +10,9 @@ tags:
   - eBPF
   - BPF
 ogImage: ogimage.png
-ogSummary: `The Linux Plumbers Conference 2019 is
+ogSummary: "The Linux Plumbers Conference 2019 is
 coming up September 9-11 in Lisbon, Portugal. There are several tracks
-featuring eBPF related topics`
+featuring eBPF related topics"
 ---
 
 ![LPC](ogimage)

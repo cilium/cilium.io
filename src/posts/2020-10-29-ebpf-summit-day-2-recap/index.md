@@ -11,9 +11,7 @@ tags:
   - Conference
   - Summit
 ogImage: ogimage.png
-ogSummary: `After an exciting start with the first day of
-the eBPF Summit, the second and also final day of
-the summit this year was kicked off with another warm welcome from Thomas Graf, during which he reminded attendees:"Bees are nice. Be a bee."`
+ogSummary: 'After an exciting start with the first day of the eBPF Summit, the second and also final day of the summit this year was kicked off with another warm welcome from Thomas Graf, during which he reminded attendees:"Bees are nice. Be a bee."'
 ---
 
 # eBPF Summit Day Two

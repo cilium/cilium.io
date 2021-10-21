@@ -17,11 +17,10 @@ tags:
   - dsr
   - endpointslices
 ogImage: ogimage.png
-ogSummary: `
-We are excited to announce the Cilium 1.7 release. A total of 1551 commits have
+ogSummary: "We are excited to announce the Cilium 1.7 release. A total of 1551 commits have
 been contributed by a community of 141 developers, many of whom made their
 first contributions this cycle. Cilium 1.7 brings with it a trove of exciting
-new features`
+new features"
 ---
 
 ![Introduction](ogimage.png)

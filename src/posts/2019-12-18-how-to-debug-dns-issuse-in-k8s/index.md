@@ -14,14 +14,13 @@ tags:
   - eBPF
   - BPF
 ogImage: ogimage.png
-ogSummary: `
-DNS is a common cause for outages and incidents in Kubernetes clusters. For
+ogSummary: "DNS is a common cause for outages and incidents in Kubernetes clusters. For
 real-world stories, swing by Kubernetes Failure Stories. How
 do you debug and troubleshoot DNS issues? How do you know a problem is related
 to DNS? This guide provides a step by step tutorial on how to systematically
 troubleshoot DNS issues in Kubernetes clusters. We will be using [Hubble] to
 identify and inspect DNS issues as well as set up monitoring so we can locate
-DNS issues early on to react even before incidents occur.`
+DNS issues early on to react even before incidents occur."
 ---
 
 ![Kubernetes DNS resolution](ogimage.png)

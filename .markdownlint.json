@@ -1,4 +1,10 @@
 {
   "line-length": false,
-  "ol-prefix": false
+  "ol-prefix": false,
+  "single-title": false,
+  "no-inline-html": false,
+  "no-alt-text": false,
+  "no-emphasis-as-header": false,
+  "fenced-code-language": false,
+  "no-blanks-blockquote": false
 }

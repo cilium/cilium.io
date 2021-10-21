@@ -2,7 +2,7 @@
 path: '/blog/2017/3/29/learn-more-about-cilium-at-kubecon-in-berlin'
 date: '2017-03-29T07:24:17.000Z'
 title: 'Learn More About Cilium at KubeCon in Berlin!'
-ogSummary: `This week the Cilium team is excited to be in the beautiful city of Berlin at KubeCon / CloudNativeCon EU!`
+ogSummary: 'This week the Cilium team is excited to be in the beautiful city of Berlin at KubeCon / CloudNativeCon EU!'
 ---
 
 This week the Cilium team is excited to be in the beautiful city of Berlin at KubeCon / CloudNativeCon EU!

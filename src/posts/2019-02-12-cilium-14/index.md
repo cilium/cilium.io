@@ -16,14 +16,14 @@ tags:
   - dns
   - Kubernetes
 ogImage: ogimage.png
-ogSummary: ` We are excited to announce the Cilium 1.4 release. The release introduces
+ogSummary: "We are excited to announce the Cilium 1.4 release. The release introduces
 several new features as well as optimization and scalability work. The
 highlights include the addition of global services to provide Kubernetes
 service routing across multiple clusters, DNS request/response aware
 authorization and visibility, transparent encryption (beta), IPVLAN support for
 better performance and latency (beta), integration with Flannel, GKE on COS
 support, AWS metadata based policy enforcement (alpha) as well as significant
-efforts into optimizing memory and CPU usage.`
+efforts into optimizing memory and CPU usage."
 ---
 
 ![Release Overview](ogimage.png)

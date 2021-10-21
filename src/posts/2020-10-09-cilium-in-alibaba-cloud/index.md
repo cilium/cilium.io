@@ -12,18 +12,14 @@ tags:
   - BPF
   - Alibaba Cloud
 ogImage: ogimage.png
-ogSummary: `
-A couple of weeks ago, the Alibaba team presented details on the new datapath
-for the Alibaba Cloud during the SIG Cloud-Provider-Alibaba meeting and also
-published a blog post
-with the technical architecture. Guess what, it is all Cilium & eBPF based.
+ogSummary: "A couple of weeks ago, the Alibaba team presented details on the new datapath
+for the Alibaba Cloud during the SIG Cloud-Provider-Alibaba meeting and also published a blog post with the technical architecture. Guess what, it is all Cilium & eBPF based.
 Alibaba Cloud is not the first cloud provider to directly embed Cilium.
-Recently, Google announced
-the availability of Dataplane V2 based on Cilium & eBPF for GKE and Anthos.
+Recently, Google announced the availability of Dataplane V2 based on Cilium & eBPF for GKE and Anthos.
 What is unique to Alibaba's setup is the use of IPVLAN as we will learn
 below. In this blog post, we will dive into the details of the Terway CNI, the
 CNI plugin of Alibaba Cloud, and review some of the statements made in the blog
-post.`
+post."
 ---
 
 ![](ogimage.png)

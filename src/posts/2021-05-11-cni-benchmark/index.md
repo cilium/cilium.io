@@ -15,13 +15,12 @@ tags:
   - performance
   - latency
 ogImage: ogimage.png
-ogSummary: `
-As more crucial workloads are being migrated to Kubernetes, network performance
+ogSummary: "As more crucial workloads are being migrated to Kubernetes, network performance
 benchmarks are becoming an important selection criteria when deciding what
 network layer to leverage in a Kubernetes cluster. In this blog post, we'll
 explore the performance characteristics of Cilium based on extensive benchmarks
 that we have run in the past few weeks. Upon popular request, we are also
-including measurements for Calico to allow for a direct comparison.`
+including measurements for Calico to allow for a direct comparison."
 ---
 
 ![](cover.png)

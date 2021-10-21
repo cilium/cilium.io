@@ -8,7 +8,7 @@ categories:
   - Announcements
 tags:
   - release
-ogSummary: `We have released Cilium v0.12 a couple of weeks back. One of the exciting feature additions is the introduction of Kafka protocol visibility and policy enforcement in form of a tech preview.`
+ogSummary: 'We have released Cilium v0.12 a couple of weeks back. One of the exciting feature additions is the introduction of Kafka protocol visibility and policy enforcement in form of a tech preview.'
 ---
 
 We have released Cilium v0.12 a couple of weeks back. One of the exciting feature additions is the introduction of Kafka protocol visibility and policy enforcement in form of a tech preview.

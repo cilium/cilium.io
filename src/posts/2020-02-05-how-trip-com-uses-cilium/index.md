@@ -12,13 +12,10 @@ tags:
   - cloud native
   - eBPF
 ogImage: ogimage.png
-ogSummary: `
-This post provides the background on how [Trip.com] uses Cilium and what lead
+ogSummary: "This post provides the background on how [Trip.com] uses Cilium and what lead
 the team to standardize on Cilium as their networking and network security
 platform for the years to come. It is a summary with some commentary of the
-original trip.com blog
-post by ArthurChiao from Trip.com/Ctrip which provides extensive details into the
-decision-making process and experiences while running Cilium in production.`
+original trip.com blog post by ArthurChiao from Trip.com/Ctrip which provides extensive details into the decision-making process and experiences while running Cilium in production."
 ---
 
 ![Network evolution](ogimage.png)

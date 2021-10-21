@@ -14,7 +14,7 @@ tags:
   - eBPF
   - BPF
 ogImage: ogimage.png
-ogSummary: ` This is a deep dive into ClusterMesh, Cilium's multi-cluster implementation.`
+ogSummary: " This is a deep dive into ClusterMesh, Cilium's multi-cluster implementation."
 ---
 
 This is a deep dive into ClusterMesh, Cilium's multi-cluster implementation. In

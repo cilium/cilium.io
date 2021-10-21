@@ -11,11 +11,9 @@ tags:
   - Conference
   - Summit
 ogImage: ogimage.png
-ogSummary: `
-The first day of the eBPF Summit is a wrap and it certainly was an amazing
+ogSummary: "The first day of the eBPF Summit is a wrap and it certainly was an amazing
 day full of information about eBPF, the technology that is changing the shape
-of Linux networking, observability, and performance.
-`
+of Linux networking, observability, and performance."
 ---
 
 # eBPF Summit Day One

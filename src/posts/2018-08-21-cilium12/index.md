@@ -13,17 +13,13 @@ tags:
   - ebpf
   - security
 ogImage: k8s_ship.png
-ogSummary: `We are excited to announce the Cilium 1.2 release. The release introduces several new features addressing the top asks from Cilium users and community members. One of the most exciting features is the introduction of security
-policies based on DNS names to secure access to external services outside of
-the cluster. Another top ask was to introduce the ability to connect and secure
-multiple Kubernetes clusters. We are introducing ClusterMesh as an alpha level
-feature to address this ask. It allows to connect and secure pods running in
+ogSummary: "We are excited to announce the Cilium 1.2 release. The release introduces several new features addressing the top asks from Cilium users and community members. One of the most exciting features is the introduction of security policies based on DNS names to secure access to external services outside of the cluster. Another top ask was to introduce the ability to connect and secure multiple Kubernetes clusters. We are introducing ClusterMesh as an alpha level feature to address this ask. It allows to connect and secure pods running in
 different Kubernetes clusters. Equally important is the Kube-router integration
 with Cilium. The effort led by the team from DigitalOcean enables to combine
 BGP networking provided by kube-router with BPF based security and
 load-balancing from Cilium. As usual, a big shout out to the entire community
 of Cilium developers. The total number of contributors has grown to 85 and 579
-commits have been contributed in the time period between 1.1 and 1.2.`
+commits have been contributed in the time period between 1.1 and 1.2."
 ---
 
 ![Cilium Kubernetes](k8s_ship.png)

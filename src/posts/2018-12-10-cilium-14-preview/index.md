@@ -13,8 +13,8 @@ tags:
   - multi-cluster
   - dns
 ogImage: ogimage.png
-ogSummary: `As we all enjoy a wonderful week at KubeCon 2018 US, we want to provide a preview into the upcoming Cilium 1.4 release. We are days away from 1.4.0-rc1
-which will allow for community testing of a lot new exciting functionality.`
+ogSummary: "As we all enjoy a wonderful week at KubeCon 2018 US, we want to provide a preview into the upcoming Cilium 1.4 release. We are days away from 1.4.0-rc1
+which will allow for community testing of a lot new exciting functionality."
 ---
 
 As we all enjoy a wonderful week at KubeCon 2018 US, we want to provide a

@@ -2,7 +2,7 @@
 path: '/blog/2017/11/20/bpf-updates-13'
 date: '2017-11-20T16:32:45.000Z'
 title: 'BPF Updates 13'
-ogSummary: `The v4.15 merge window is open and LWN.net already has a summary on part 1 out. Which contains a BPF section listing some of the new things`
+ogSummary: 'The v4.15 merge window is open and LWN.net already has a summary on part 1 out. Which contains a BPF section listing some of the new things'
 ---
 
 This is issue 13 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.

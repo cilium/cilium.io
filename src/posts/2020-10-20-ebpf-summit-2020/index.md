@@ -11,15 +11,14 @@ tags:
   - Conference
   - Summit
 ogImage: ogimage.png
-ogSummary: `
-The first ever eBPF Summit is just over one week out and we are already well
+ogSummary: "The first ever eBPF Summit is just over one week out and we are already well
 past 1'000 registrations. We have been blown away by the number of talk and
 keynote proposals. This also meant that we had to turn down many fantastic
 talks and we hope that our selection provides an interesting and diverse set of
 talks. Some of the content that did not make the schedule will be posted as
 blog posts on ebpf.io over the coming weeks. In this post, we'll give a quick
 preview of what to be excited about and how to plan to attend the event.
-`
+"
 ---
 
 The first ever eBPF Summit is just over one week out and we are already well

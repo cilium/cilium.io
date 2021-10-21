@@ -10,7 +10,7 @@ tags:
   - survey
   - cilium
 ogImage: ogimage.png
-ogSummary: `Back in March we have asked our users to provide feedback via our first ever user survey. Many of you have responded and the results are in!`
+ogSummary: 'Back in March we have asked our users to provide feedback via our first ever user survey. Many of you have responded and the results are in!'
 ---
 
 Back in March we have asked our users to provide feedback via our first ever

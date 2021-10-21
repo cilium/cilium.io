@@ -19,13 +19,13 @@ FeaturedPosts.propTypes = {
   featuredStory: PropTypes.shape({
     className: PropTypes.string,
     title: PropTypes.string.isRequired,
-    summary: PropTypes.string.isRequired,
+    ogSummary: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-    cover: PropTypes.shape({
+    ogImage: PropTypes.shape({
       childImageSharp: PropTypes.shape({
         gatsbyImageData: PropTypes.shape(),
       }),
-    }).isRequired,
+    }),
     path: PropTypes.string.isRequired,
   }).isRequired,
   popularPosts: PropTypes.arrayOf(
@@ -33,11 +33,11 @@ FeaturedPosts.propTypes = {
       frontmatter: PropTypes.shape({
         date: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
-        cover: PropTypes.shape({
+        ogImage: PropTypes.shape({
           childImageSharp: PropTypes.shape({
             gatsbyImageData: PropTypes.shape(),
           }),
-        }).isRequired,
+        }),
         path: PropTypes.string.isRequired,
       }),
     })

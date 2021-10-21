@@ -12,9 +12,9 @@ tags:
   - iptables
   - security
 ogImage: ogimage.png
-ogSummary: `We have covered Facebook's BPF-based load balancer with DDoS protection in a previous blog post. This post provides further details on Facebook's BPF use by covering Anant
+ogSummary: "We have covered Facebook's BPF-based load balancer with DDoS protection in a previous blog post. This post provides further details on Facebook's BPF use by covering Anant
 Deepak's talk at the BPF/networking microconference on Facebook's BPF-based
-edge firewall running in production.`
+edge firewall running in production."
 ---
 
 ![Facebook Infrastructure Logo](ogimage.png)

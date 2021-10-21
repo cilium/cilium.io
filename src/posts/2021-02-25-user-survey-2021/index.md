@@ -11,12 +11,11 @@ tags:
   - Survey
   - Community
 ogImage: ogimage.png
-ogSummary: `
-Welcome to the Cilium User Survey 2021! We are looking to improve Cilium
+ogSummary: "Welcome to the Cilium User Survey 2021! We are looking to improve Cilium
 further and are interested in feedback and guidance from our users. Cilium
 has been a community-driven project from the beginning and the majority of our
 roadmap has and will continue to be defined by our users. Tell us what you
-want. Tell us what you are struggling with. Tell us what we can do better.`
+want. Tell us what you are struggling with. Tell us what we can do better."
 ---
 
 ![](teaser.png)

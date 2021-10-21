@@ -7,7 +7,7 @@ categories:
 tags:
   - bpf-updates
   - bpf
-ogSummary: `Linux 4.13 was released last week and net-next closed around the same time. The last `[GIT] Networking` pull request includes a couple of BPF fixes and so do the two after the merge window opened up as well. See the dates for all the details`
+ogSummary: 'Linux 4.13 was released last week and net-next closed around the same time. The last `[GIT] Networking` pull request includes a couple of BPF fixes and so do the two after the merge window opened up as well. See the dates for all the details'
 ---
 
 This is issue 11 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.

@@ -3,7 +3,7 @@ path: '/blog/2018/07/10/cilium-security-elasticsearch'
 date: '2018-07-10T10:30:43.000Z'
 title: 'Open Source Elasticsearch Security: Using Cilium for Elasticsearch Access Control with No App/Container Changes'
 ogImage: esblog_preview.png
-ogSummary: `Elasticsearch is a dominanting open source platform for storing and analyzing all different types of data ranging from application logs, to user payment transactions and network audit logs.`
+ogSummary: 'Elasticsearch is a dominanting open source platform for storing and analyzing all different types of data ranging from application logs, to user payment transactions and network audit logs.'
 ---
 
 ![](esblog_preview.png)

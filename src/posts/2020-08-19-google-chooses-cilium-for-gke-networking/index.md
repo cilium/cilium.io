@@ -14,10 +14,9 @@ tags:
   - Anthos
   - Google
 ogImage: ogimage.png
-ogSummary: `
-Today marks an exciting day for the Cilium community and all Cilium
+ogSummary: "Today marks an exciting day for the Cilium community and all Cilium
 contributors, Google just announced that Cilium has been selected and made
-available as the new datapath for GKE and Anthos.In this post, we will take a look behind the scenes that lead up to this.`
+available as the new datapath for GKE and Anthos.In this post, we will take a look behind the scenes that lead up to this."
 ---
 
 ![](ogimage.png)
