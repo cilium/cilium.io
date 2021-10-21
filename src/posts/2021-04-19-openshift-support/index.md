@@ -1,10 +1,7 @@
 ---
-path: "/blog/2021/04/19/openshift-certification"
-date: "2021-04-09T17:00:00.000Z"
-title: "Introducing the Cilium Certified OpenShift Plug-in"
-summary: "We are pleased to introduce the availability of Cilium in the Red Hat Ecosystem Catalog
-as well as the certification of Cilium as a Certified OpenShift CNI Plug-in."
-cover: ogimage.png
+path: '/blog/2021/04/19/openshift-certification'
+date: '2021-04-09T17:00:00.000Z'
+title: 'Introducing the Cilium Certified OpenShift Plug-in'
 isPopular: true
 categories:
   - Announcement
@@ -39,7 +36,6 @@ requirements as well as the
 {{/preview}}
 
 ![](cover.png)
-
 <a href="https://cilium.io/" class="ogpreview"><img src="ogimage.png" /></a>
 
 # Certified Red Hat OpenShift CNI Plug-in
@@ -60,7 +56,7 @@ and passes the
 requirements as well as the
 [Kubernetes e2e tests](https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/e2e-tests.md).
 
-<a href="https://catalog.redhat.com/software/operators/detail/60423ec2c00b1279ffe35a68"><img src="catalog.png" /></a>
+<a href="https://catalog.redhat.com/software/operators/detail/60423ec2c00b1279ffe35a68"><img src="catalog.png"  /></a>
 
 # What is Cilium?
 

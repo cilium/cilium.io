@@ -1,15 +1,10 @@
 ---
-path: "/blog/2021/04/06/bpf-plumbers-2021"
-date: "2021-04-06T17:00:00.000Z"
-title: "Announcement: Networking and BPF Track at the 2021 Linux Plumbers Conference (LPC)"
-summary: "The organizers of the Networking and BPF track at the 2021 edition of the Linux
-Plumbers Conference (LPC) are pleased to announce the Call for Proposals (CFP).
-The conference is planned to be held virtually on the wider Internet, on
-September 20th - 24th, 2021."
-cover: cover.png
+path: '/blog/2021/04/06/bpf-plumbers-2021'
+date: '2021-04-06T17:00:00.000Z'
+title: 'Announcement: Networking and BPF Track at the 2021 Linux Plumbers Conference (LPC)'
 isPopular: true
 categories:
-  - Announcements
+  - Announcement
 tags:
   - bpf
   - ebpf
