@@ -14,6 +14,16 @@
 }
 
 @layer components {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
   :not(pre) > code[class*='language-text'] {
     @apply border border-gray-3 !px-2 md:!px-2.5 !bg-gray-4 !rounded font-normal;
   }
