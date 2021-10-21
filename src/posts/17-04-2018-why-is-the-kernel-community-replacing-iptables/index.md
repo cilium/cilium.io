@@ -11,7 +11,7 @@ tags:
   - kernel
   - ebpf
   - superpowers
-ogImage: "The Linux kernel community recently announced bpfilter, which will replace the long-standing in-kernel implementation of iptables with high-performance
+ogSummary: "The Linux kernel community recently announced bpfilter, which will replace the long-standing in-kernel implementation of iptables with high-performance
 network filtering powered by Linux BPF, all while guaranteeing a non-disruptive
 transition for Linux users."
 ---

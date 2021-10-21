@@ -15,7 +15,7 @@ const FeaturedStory = ({ className, title, date, ogImage: cover, ogSummary: summ
     <div className="flex flex-col flex-1 p-6 mt-6 border md:mt-8 md:p-8 lg:p-10 md:flex-row xl:flex-col border-gray-3 rounded-large">
       <Link className="flex-1" to={path}>
         <GatsbyImage
-          className="md:max-w-[500px] xl:max-w-auto xl:min-h-[360px]"
+          className="xl:w-full xl:min-h-[360px]"
           imgClassName="rounded-lg"
           image={getImage(cover)}
           alt=""

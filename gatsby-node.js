@@ -122,7 +122,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
             ogSummary
             ogImage {
               childImageSharp {
-                gatsbyImageData(width: 685)
+                gatsbyImageData(width: 685, transformOptions: { fit: CONTAIN })
               }
             }
           }
