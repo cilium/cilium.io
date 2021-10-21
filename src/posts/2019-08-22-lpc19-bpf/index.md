@@ -15,7 +15,7 @@ coming up September 9-11 in Lisbon, Portugal. There are several tracks
 featuring eBPF related topics"
 ---
 
-![LPC](ogimage)
+![LPC](ogimage.png)
 
 The [Linux Plumbers Conference 2019](https://linuxplumbersconf.org/event/4) is
 coming up September 9-11 in Lisbon, Portugal. There are several tracks

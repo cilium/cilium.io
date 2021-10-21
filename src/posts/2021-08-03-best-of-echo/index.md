@@ -3,7 +3,6 @@ path: '/blog/2021/08/03/best-of-echo'
 date: '2021-08-03T17:00:00.000Z'
 title: 'eBPF and Cilium Office Hours - Highlights from Season 1'
 isPopular: true
-isFeatured: true
 categories:
   - Community
 tags:

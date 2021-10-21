@@ -19,7 +19,7 @@ const Content = ({ date, title, html, path, tags }) => {
         <SocialShare className="order-1 md:order-none md:col-span-1" postUrl={postUrl} />
         <div className="md:col-span-10">
           <span className="font-semibold leading-none md:text-lg text-gray-1">{date}</span>
-          <Heading className="mt-4" size="lg" tag="h1">
+          <Heading className="mt-4 mb-16" size="lg" tag="h1">
             {title}
           </Heading>
           <MDXProvider components={{ wrapper: Wrapper }}>
