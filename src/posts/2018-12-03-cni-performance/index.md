@@ -9,27 +9,9 @@ tags:
   - ebpf
   - performance
   - benchmark
+ogImage: ogimage.png
+ogSummary: `This blog post documents the investigation we have done so far of what looked like a performance regression of HTTP/FTP traffic over pure TCP.`
 ---
-
-{{preview}}
-
-![Title](ogimage.png)
-
-First of all, huge shout-out to [Alexis
-Ducastel](https://twitter.com/infrabuilder) for putting together a great CNI
-benchmark comparison. To be honest, there was definitely a moment of panic when
-we saw the article pop up. Did we just miss a major performance regression?
-
-This blog post documents the investigation we have done so far of what looked
-like a performance regression of HTTP/FTP traffic over pure TCP.
-
-Alexis was super quick to share the
-[scripts](https://github.com/InfraBuilder/k8s-cni-benchmark) that he used to
-collect the benchmarks numbers. This not only allowed for a quick verification
-but also allows us to integrate this into our CI tests and run it alongside of
-the existing benchmarks for better coverage.
-
-{{/preview}}
 
 ![Title](ogimage.png)
 

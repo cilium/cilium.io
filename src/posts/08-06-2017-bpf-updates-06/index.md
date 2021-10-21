@@ -8,21 +8,8 @@ tags:
   - bpf-updates
   - bpf
   - ebpf
+ogSummary: `Linux 4.12-rc4 was released this week. No new BPF changes were in this release, but several patches were applied on netdev.` 
 ---
-
-{{preview}}
-
-Linux 4.12-rc4 was released this week. No new BPF changes were in this release, but several patches were applied on netdev. The highlights are
-
-- The BPF id patches which were ready last week but had to be re-spin because of merge conflicts.
-- All perf events now have BPF support.
-
-Other interesting topics
-
-- VF XDP support for the qede driver.
-- Better alignment tracking and improvements to the verifier.
-
-{{/preview}}
 
 This is issue 06 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

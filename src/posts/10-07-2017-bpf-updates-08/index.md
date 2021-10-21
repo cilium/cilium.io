@@ -8,28 +8,8 @@ tags:
   - bpf-updates
   - bpf
   - ebpf
+ogSummary: `Linux 4.12 was released and net-next is closed. The Kernel Newbies release notes is still under construction but worth checking out for the BPF commits in 4.12.`
 ---
-
-{{preview}}
-
-Linux 4.12 was released and net-next is closed. The Kernel Newbies release notes is still under construction but worth checking out for the BPF commits in [4.12](https://kernelnewbies.org/Linux_4.12).
-
-Most of the new patches from the lists should show up in the next release candidate for 4.13\. Some highlights from the recent activity are
-
-- i40e gets XDP support for drop, pass and tx actions.
-- Iterations of the alignment tracking work. The main changes; dropped RFC tag and added more tests.
-- NFP flag for XDP offload mode to offer more flexibility for programs that can be offloaded.
-- The new `BPF_PROG_TYPE_SOCKET_OPS` series got [merged](https://www.spinics.net/lists/netdev/msg443208.html).
-
-More interesting topics
-
-- iproute gets support for `IFLA_XDP_PROG_ID`. Also `cls_bpf` and `act_bpf` start using the BPF program id.
-- BPF program id available for i40e via `XDP_QUERY_PROG`.
-- A new function helper `bpf_skb_adjust_room` for adjusting net headroom.
-
-One issue reoccurring is the header asm issue. While BPF can mix and match headers from kernel and userspace, the asm headers seem to be causing pain. Will one more hack be added on top of BPF, or will we see a clean / nice solution emerge from the [disccusions](https://www.mail-archive.com/netdev@vger.kernel.org/msg174021.html)?
-
-{{/preview}}
 
 This is issue 08 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

@@ -6,13 +6,8 @@ categories:
   - Deep Dive
 tags:
   - ci/cd
+ogSummary: 'A while ago we started thinking about how to build a continous integration (CI) testing infrastructure that would help us maintain the reliability and stability of Cilium as we add more features and integrate with orchestration systems like Kubernetes and Docker. This post describes our process for building a CI environment capable of testing a container networking & security infrastructure.'
 ---
-
-{{preview}}
-
-A while ago we started thinking about how to build a continous integration (CI) testing infrastructure that would help us maintain the reliability and stability of Cilium as we add more features and integrate with orchestration systems like Kubernetes and Docker. This post describes our process for building a CI environment capable of testing a container networking & security infrastructure.
-
-{{/preview}}
 
 A while ago we started thinking about how to build a continous integration (CI) testing infrastructure that would help us maintain the reliability and stability of Cilium as we add more features and integrate with orchestration systems like Kubernetes and Docker. This post describes our process for building a CI environment capable of testing a container networking & security infrastructure. It's also a thank you to packet.net for supporting Cilium along with many other open source projects. For more, read on...
 

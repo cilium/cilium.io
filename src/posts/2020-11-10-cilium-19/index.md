@@ -16,68 +16,14 @@ tags:
   - scalability
   - Maglev
   - bandwidth management
----
-
-{{preview}}
-
-![](ogimage.png)
-
+ogImage: ogimage.png
+ogSummary: `
 We are excited to announce the Cilium 1.9 release. A total of 2816 commits have
 been contributed by a community of 251 developers, many of whom made their first
-contributions this cycle. Cilium 1.9 brings with it several brand new features:
-
-- **Maglev Load Balancing**: Maglev provides load balancing with consistent
-  hashing for high-availability scenarios by dynamically adapting to
-  environments where nodes come and go. Connections are consistently balanced
-  to backends even if the packets arrive at different load balancing nodes.
-  ([More details](blog/2020/11/10/cilium-19#maglev))
-- **Deny Network Policies**: Users can now define network policies that
-  explicitly reject traffic from specific sources or to specific destinations.
-  These policies may be configured via CiliumNetworkPolicy or
-  CiliumClusterwideNetworkPolicy, allowing multi-tenant environments to have
-  baseline restrictions on connectivity and also delegate allow policies to
-  application teams. ([More details](blog/2020/11/10/cilium-19#deny-policy))
-- **VM/Metal Support**: Cilium can now be deployed on any
-  VM or baremetal node to connect that node to the Cilium cluster and
-  represent external workloads running on such nodes as if the workload was
-  running as a Pod inside the Kubernetes cluster. These nodes also gain access to
-  Kubernetes services, and the visibility and policy enforcement scope of Cilium
-  is extended to cover the VMs and baremetal nodes.
-  ([More details](blog/2020/11/10/cilium-19#vmsupport))
-- **Bandwidth Manager**: A new bandwidth manager automatically optimizes TCP
-  Congestion Control and other network settings for improved latency and
-  throughput. Fair queueing is automatically enabled and rate
-  limiting can be configured including support for the
-  `kubernetes.io/egress-bandwidth` annotation.
-  ([More details](blog/2020/11/10/cilium-19#bwmanager))
-- **OpenShift Support**: A new guide describes the installation of Cilium on
-  OpenShift. Red Hat Universal Base Image (UBI) based builds and an operator
-  to simplify installation will become available in the next weeks.
-  ([More details](blog/2020/11/10/cilium-19#openshift))
-- **Hubble mTLS Automation**: Hubble is now capable of automatically generating
-  and distributing TLS certificates between Hubble agents to secure the
-  communication between all Hubble components.
-  ([More details](blog/2020/11/10/cilium-19#hubble))
-- **eBPF-Based Node-Local DNS and KIAM**:
-  The new eBPF-based Local Redirect Policies allow to build node-local
-  DNS resolvers, KIAM, and other node-local services entirely with eBPF instead
-  of relying on iptables. ([More details](blog/2020/11/10/cilium-19#lrp))
-- **Datapath Optimizations (iptables bypass)**: We have added two new eBPF
-  helpers to the Linux kernel that allow implementing the direct routing
-  datapath entirely in eBPF and bypassing netfilter/iptables entirely. This leads
-  to significant improvements in throughput and latency, in particular for
-  single stream TCP sessions. Cilium automatically enables these optimizations
-  on kernel 5.10 or later. ([More details](blog/2020/11/10/cilium-19#veth))
-- **Lots of other improvements**: This release brings lots of additional
-  improvements such as [High Availability for Cilium Operator](blog/2020/11/10/cilium-19#operator-ha) to
-  improve fault tolerance, [Hubble UI improvements](blog/2020/11/10/cilium-19#ui), [Transparent Proxy
-  Support](blog/2020/11/10/cilium-19#tproxy) in eBPF, and a new [Performance Testing
-  Framework](blog/2020/11/10/cilium-19#perftest).
-
-{{/preview}}
+contributions this cycle. Cilium 1.9 brings with it several brand new features`
+---
 
 ![](intro.png)
-<a href="https://cilium.io/" class="ogpreview"><img src="ogimage.png" /></a>
 
 We are excited to announce the Cilium 1.9 release. A total of 2816 commits have
 been contributed by a community of 251 developers, many of whom made their first

@@ -10,9 +10,13 @@ tags:
   - BPF
   - Conference
   - Summit
+ogImage: ogimage.png
+ogSummary: `
+The first day of the eBPF Summit is a wrap and it certainly was an amazing
+day full of information about eBPF, the technology that is changing the shape
+of Linux networking, observability, and performance.
+`
 ---
-
-<a href="https://ebpf.io/summit-2020"><img src="ogimage.png" /></a>
 
 # eBPF Summit Day One
 

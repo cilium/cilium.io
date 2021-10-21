@@ -14,62 +14,13 @@ tags:
   - policy
   - session affinity
   - scalability
----
-
-{{preview}}
-
-![](ogimage.png)
-
+ogImage: ogimage.png
+ogSummary: `
 We are excited to announce the Cilium 1.8 release. A total of 2162 commits have
 been contributed by a community of 182 developers, many of whom made their first
 contributions this cycle. Cilium 1.8 brings with it a trove of exciting new
-features:
-
-- **XDP Load Balancing Support:** eXpress Data Path (XDP) is the fast-lane for
-  networking in the Linux kernel, built on eBPF. We've extended our existing
-  eBPF kube-proxy replacement to accelerate service forwarding by 5x in our
-  tests while dramatically reducing CPU consumption at the same time.
-  ([More details](blog/2020/06/22/cilium-18#kubeproxy-removal))
-- **Cluster-wide Flow API**: Hubble Relay builds on the solid core of Hubble
-  and Cilium to provide deep observability across the entire cluster via a
-  centralized API with minimal overhead.
-  ([More details](blog/2020/06/22/cilium-18#hubblerelay))
-- **Better policy visibility and control:** ClusterwideNetworkPolicy now
-  supports matching hosts in the cluster to implement
-  [Host network security protection](blog/2020/06/22/cilium-18#hostfw), and all policy types gain
-  named ports support. New community
-  contributors have built eBPF notifications for [Policy
-  Verdicts](blog/2020/06/22/cilium-18#policyverdicts) and a [Policy Audit mode](blog/2020/06/22/cilium-18#auditmode) to
-  incrementally deploy network policies in your cluster.
-  ([More details](blog/2020/06/22/cilium-18#policy))
-- **Performance optimizations across the board:** We've improved the
-  performance and resource usage in almost every dimension in this release,
-  from [improving CRD scalability](blog/2020/06/22/cilium-18#crdscale) and optimizing the Cilium agent's
-  [memory footprint](blog/2020/06/22/cilium-18#memory) to various performance enhancements in our eBPF
-  data path and size reduction of the Cilium [container image](blog/2020/06/22/cilium-18#container-size).
-  Hubble has been optimized to minimize resource usage by
-  [embedding the core functionality](blog/2020/06/22/cilium-18#hubble-embedded) into the Cilium agent.
-  ([More details](blog/2020/06/22/cilium-18#performance))
-- **Making more functionality iptables-free:** We've worked hard on improving
-  Cilium's service implementations to further reduce the dependence on external
-  tools based on iptables. Several features are now implemented natively in
-  eBPF, ranging from [Session Affinity](blog/2020/06/22/cilium-18#affinity) and [HostPort](blog/2020/06/22/cilium-18#hostport) to
-  [IP masquerade agent](blog/2020/06/22/cilium-18#masq) and [IP fragmentation support](blog/2020/06/22/cilium-18#ipfrag).
-  ([More details](blog/2020/06/22/cilium-18#iptables-free))
-- **Many more features:** [Native Azure IPAM](blog/2020/06/22/cilium-18#azureipam) provides better
-  integration for Azure Cloud via a new IPAM plugin, datapath load balancing
-  support was extended to support environments with
-  [multiple native devices](blog/2020/06/22/cilium-18#multi-dev), and initial support for
-  [ARM64](blog/2020/06/22/cilium-18#arm64) has been added with docker image snapshots.
-  ([More details](blog/2020/06/22/cilium-18#much-more))
-- **Upstream community contributions:** For a deep dive on the work we're doing
-  with the Linux kernel and LLVM development communities, including nitty-gritty
-  details on [socket load balancing improvements](blog/2020/06/22/cilium-18#socketlb), [eBPF instruction
-  set improvements](blog/2020/06/22/cilium-18#alu32) and [transparent proxying in eBPF](blog/2020/06/22/cilium-18#tproxy), see
-  our community contributions writeup.
-  ([More details](blog/2020/06/22/cilium-18#kernel))
-
-{{/preview}}
+features`
+---
 
 ![](ogimage.png)
 

@@ -13,25 +13,12 @@ tags:
   - GKE
   - Anthos
   - Google
----
-
-{{preview}}
-
-![](ogimage.png)
-
+ogImage: ogimage.png
+ogSummary: `
 Today marks an exciting day for the Cilium community and all Cilium
 contributors, Google just announced that Cilium has been selected and made
-available as the new datapath for GKE and Anthos:
-
-> Today, we’re introducing GKE Dataplane V2, an opinionated dataplane that
-> harnesses the power of eBPF and Cilium, an open source project that makes the
-> Linux kernel Kubernetes-aware using eBPF.
-
-You can read all the details in the official
-[announcement](https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebpf-and-cilium-to-google-kubernetes-engine).
-In this post, we will take a look behind the scenes that lead up to this.
-
-{{/preview}}
+available as the new datapath for GKE and Anthos.In this post, we will take a look behind the scenes that lead up to this.`
+---
 
 ![](ogimage.png)
 

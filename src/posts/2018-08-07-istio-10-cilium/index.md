@@ -12,35 +12,9 @@ tags:
   - envoy
   - ebpf
   - security
+ogSummary: `Istio 1.0 was released last week. From the Cilium community, we would like to congratulate all Istio contributors for this massive effort. We have been
+fortunate to participate in the community by contributing to Istio and by helping several users moving towards production with Istio and Cilium.`
 ---
-
-{{preview}}
-
-Istio 1.0 was released last week. From the Cilium community, we would like to
-congratulate all Istio contributors for this massive effort. We have been
-fortunate to participate in the community by contributing to Istio and by
-helping several users moving towards production with Istio and Cilium.
-
-If you are interested in learning about an Istio + Cilium user story before
-diving into the technical details, consider reading the following Istio blog
-post by the HP FitStation team, one of the largest Cilium + Istio users:
-**[Istio a Game Changer for HP's FitStation Platform](https://istio.io/blog/2018/hp/)**.
-
-This blog will go into some of the details on how BPF and Cilium enhance Istio:
-
-- **Increase Istio Security:**
-  - Least privilege security for multi-container pods using socket-aware BPF
-    programs
-  - Protect from compromised sidecar proxies and protocols that bypass the
-    sidecar
-  - Use of BPF to force all application traffic through the sidecar proxy
-- **Enable Istio for external services:**
-  - Using socket-aware BPF programs and kTLS to provide visibility and control
-    into TLS encrypted connections
-- **Performance:**
-  - Efficient networking and socket redirection to accelerate Istio
-
-{{/preview}}
 
 Istio 1.0 was [released](https://istio.io/blog/2018/announcing-1.0/) last week.
 From the Cilium community, we would like to congratulate all Istio contributors

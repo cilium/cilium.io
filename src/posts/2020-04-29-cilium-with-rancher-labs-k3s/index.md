@@ -10,39 +10,16 @@ tags:
   - Cilium
   - eBPF
   - k3s
----
-
-{{preview}}
-
-![Introduction](ogimage.jpg)
-
-Like many of you, we have been feeling the pains of working remotely from home.
-We are living in a difficult time where many of us have limited access to
-resources. Still, the need to design, build and maintain moves on!
-For many of us, it is what keeps us mentally strong on a daily basis right now.
-This means we still need to test and optimize our applications. But how can we
-reliably test a complex application and ensure the network policies are properly
-enforced across the entire communication path?
-
-Thanks to our friends at [Rancher Labs](https://rancher.io) and their amazing
-solution for kubernetes on edge and IoT devices [K3s](https://k3s.io) it is
-not only possible, but easy to do. With Cilium and K3s you can build a
-multi-node Kubernetes cluster with only 8GB of memory and a modern CPU in just
-minutes. A multi-node cluster can help test complex application
-architectures and is especially useful when diagnosing or troubleshooting
-network policies. Whether you just want to take Cilium for a test drive or you
-want to start designing tight network controls into your application, this
-post is for you!
-
+ogImage: ogimage.png
+ogSummary: `
 In this guide, we will walk through the steps required to build a multi-node
 Kubernetes cluster on your local workstation or laptop using K3s and Cilium.
 Then we'll show how you can use Hubble to inspect traffic in the cluster
 and visualize data exposed by the superpowers of eBPF and Cilium. We
 will also show you how to restrict the flow of traffic between applications.
 Finally, we will see how Cilium and Hubble can provide detailed information
-to help you solve problems related to compliance and regulations.
-
-{{/preview}}
+to help you solve problems related to compliance and regulations.`
+---
 
 ![Introduction](ogimage.jpg)
 

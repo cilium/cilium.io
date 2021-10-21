@@ -8,15 +8,8 @@ tags:
   - bpf-updates
   - bpf
   - ebpf
+ogSummary: `Linux 4.12-rc2 was released last week. One usual [GIT] Networking pull request made it in which includes two BPF fixes. See 18th May for the details.`
 ---
-
-{{preview}}
-
-Linux 4.12-rc2 was released last week. One usual [GIT] Networking pull request made it in which includes two BPF fixes. See [18th May](http://www.mail-archive.com/linux-kernel@vger.kernel.org/msg1399669.html) for the details.
-
-In [last week's issue](https://www.cilium.io/blog/2017/5/17/bpf-updates-03) ARM 32-bit was mentioned. As you can see from the patches section an eBPF JIT RFC just got posted recently. Checkout the discussion on the [linux-arm-kernel](https://www.spinics.net/lists/kernel/msg2514912.html) list.
-
-{{/preview}}
 
 This is issue 04 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

@@ -11,21 +11,14 @@ tags:
   - plumbers
   - cfp
   - networking
----
-
-{{preview}}
-
-<a href="/blog/2021/02/10/network-policy-editor"><img src="ogimage.png" /></a>
-
-The organizers of the Networking and BPF track at the 2021 edition of the Linux
+ogImage: ogimage.png
+ogSummary: `The organizers of the Networking and BPF track at the 2021 edition of the Linux
 Plumbers Conference (LPC) are pleased to announce the Call for Proposals (CFP).
 The conference is planned to be held virtually on the wider Internet, on
-September 20th - 24th, 2021.
-
-{{/preview}}
+September 20th - 24th, 2021.`
+---
 
 ![](cover.png)
-<a href="https://cilium.io/" class="ogpreview"><img src="ogimage.png" /></a>
 
 The organizers of the Networking and BPF track at the 2021 edition of the Linux
 Plumbers Conference (LPC) are pleased to announce the Call for Proposals (CFP).

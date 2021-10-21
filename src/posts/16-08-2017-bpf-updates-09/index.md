@@ -6,21 +6,8 @@ categories:
   - eBPF
 tags:
   - bpf-updates
+ogSummary: `This is issue 09 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.`
 ---
-
-{{preview}}
-
-This is issue 09 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
-
-The highlights since the previous issue
-
-- New comparison instructions for reducing register pressure, stack usage and potentially smaller programs.
-- RFC patchset for BPF socket redirect with a awesome new helper function `bpf_sk_redirect_map`.
-- Verifier fixes, more tests and alignment tracking work got [merged](https://www.spinics.net/lists/netdev/msg448342.html).
-- The XDP redirect series got [merged](https://www.mail-archive.com/netdev@vger.kernel.org/msg177988.html).
-- XDP support for tap got [merged](https://www.spinics.net/lists/kernel/msg2579871.html)
-
-{{/preview}}
 
 This is issue 09 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

@@ -8,16 +8,10 @@ categories:
 tags:
   - announcement
   - releases
----
-
-{{preview}}
-
-We are excited to announce Cilium 1.1. 33 contributors have contributed 965
-commits to this release. Below is a list of highlighted features and
+ogSummary: `We are excited to announce Cilium 1.1. 33 contributors have contributed 965 commits to this release. Below is a list of highlighted features and
 architectural improvements that have made the 1.1 release in addition to the
-countless bugfixes.
-
-{{/preview}}
+countless bugfixes.`
+---
 
 We are excited to announce Cilium 1.1. 33 contributors have contributed 964
 commits to this release. Below is a list of highlighted features and

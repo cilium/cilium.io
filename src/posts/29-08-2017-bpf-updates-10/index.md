@@ -8,23 +8,8 @@ tags:
   - bpf-updates
   - ebpf
   - bpf
+ogSummary: `This is issue 10 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.`
 ---
-
-{{preview}}
-
-The highlights since last time are
-
-- A new iteration of the Landlock unprivileged sandbox series.
-- A new iteration of the socket redirect series.
-- ARM eBPF JIT got finally [merged](https://www.spinics.net/lists/netdev/msg451025.html).
-- Bug fixes and tests.
-
-Now that there is 32bit eBPF JIT support for ARM, will more embedded devices start running eBPF?  
-[Marvell routers](https://www.mail-archive.com/netdev@vger.kernel.org/msg169582.html),  
-wifi devices soon? :) Also worth checking out the Landlock documentation, which  
-is really nice, both rendered and the code comments.
-
-{{/preview}}
 
 This is issue 10 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

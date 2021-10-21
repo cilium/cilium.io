@@ -13,30 +13,9 @@ tags:
   - Kubernetes
   - eBPF
   - BPF
+ogImage: ogimage.png
+ogSummary: ` This is a deep dive into ClusterMesh, Cilium's multi-cluster implementation.`
 ---
-
-{{preview}}
-
-This is a deep dive into ClusterMesh, Cilium's multi-cluster implementation. In
-a nutshell, ClusterMesh provides:
-
-- Pod IP routing across multiple Kubernetes clusters at native
-  performance via tunneling or direct-routing without requiring any gateways
-  or proxies.
-
-- Transparent service discovery with standard Kubernetes services and
-  coredns/kube-dns.
-
-- Network policy enforcement spanning multiple clusters. Policies can be
-  specified as Kubernetes NetworkPolicy resource or the extended
-  CiliumNetworkPolicy CRD.
-
-- Transparent encryption for all communication between nodes in the
-  local cluster as well as across cluster boundaries.
-
-![Introduction](ogimage.png)
-
-{{/preview}}
 
 This is a deep dive into ClusterMesh, Cilium's multi-cluster implementation. In
 a nutshell, ClusterMesh provides:

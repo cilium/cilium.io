@@ -18,12 +18,8 @@ tags:
   - Load Balancing
   - WireGuard
   - BGP
----
-
-{{preview}}
-
-<img class="ogpreview" src="ogimage.png" />
-
+ogImage: ogimage.png
+ogSummary: `
 The Cilium core team are excited to announce the Cilium 1.10 release. A total
 of 2042 new commits have been contributed by a growing community of 280
 developers. Contributions have come from a wide list of different companies
@@ -32,9 +28,8 @@ others. We heard from users who are increasingly interested in better
 integration with the broader network, whether you're running Cilium in your own
 datacenter environments or in the cloud. Thus, a major focus of this release
 was ensuring a seamless integration between the Kubernetes network and
-enterprise on-prem infrastructure.
-
-{{/preview}}
+enterprise on-prem infrastructure.`
+---
 
 ![](intro.png)
 

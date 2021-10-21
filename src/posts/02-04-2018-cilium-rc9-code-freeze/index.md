@@ -7,27 +7,17 @@ categories:
   - Announcements
 tags:
   - release
----
-
-{{preview}}
-
-We are excited to announce [Cilium
-1.0.0-rc9](https://github.com/cilium/cilium/releases/tag/v1.0.0-rc9) with many,
+ogDescription: 'We are excited to announce Cilium 1.0.0-rc9 with many,
 many bugfixes and the delivery of the final feature we were waiting on prior for
 1.0: Egress policy enforcement support. It is therefore only logical that we
 announce full feature freeze with rc9. This means that we will only merge
 critical bugfixes and release 1.0 as soon as we have resolved all release
 blockers. More on this below. We are thrilled to have come this far and
 appreciate all of the efforts by the wide range of contributors that have
-helped to get us here.
-
-As usual, the full release notes are attached at the end of the blog but can be
-found on the [1.0.0-rc9 release
-page](https://github.com/cilium/cilium/releases/tag/v1.0.0-rc9). The vast
+helped to get us here. As usual, the full release notes are attached at the end of the blog but can be found on the 1.0.0-rc9 release page. The vast
 majority of the work in this release has been around bugfixes and testing. Here
-is a list of some highlights:
-
-{{/preview}}
+is a list of some highlights:'
+---
 
 We are excited to announce [Cilium
 1.0.0-rc9](https://github.com/cilium/cilium/releases/tag/v1.0.0-rc9) with many,

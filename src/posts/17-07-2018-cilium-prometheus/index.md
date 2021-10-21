@@ -7,14 +7,9 @@ categories:
 tags:
   - howto
   - releases
+ogSummary: 'In Kubernetes deployments, Prometheus is a popular monitoring system and time-series database for storing health and performance metrics of all the components. Equally popular is Grafana for plotting the metrics. In this post, we will provide steps to setup Prometheus and Grafana for
+understanding important Cilium metrics related to the security and health of service interactions in a Kubernetes cluster.'
 ---
-
-{{preview}}
-
-In Kubernetes deployments, Prometheus is a popular monitoring system and time-series database for storing health and performance metrics of all the components. Equally popular is Grafana for plotting the metrics. In this post, we will provide steps to setup Prometheus and Grafana for
-understanding important Cilium metrics related to the security and health of service interactions in a Kubernetes cluster.
-
-{{/preview}}
 
 Cilium provides complete L3/L4 and L7 (API-aware) security for Kubernetes services. Cilium is deployed as a CNI and has deep visibility into the health and performance of both the networking and security enforcement. Cilium exposes several metrics in the popular Prometheus format along with
 a simple Grafana dashboard template for analyzing the metrics. In this post, we will setup the Prometheus and Grafana services and look at the key Cilium metrics.

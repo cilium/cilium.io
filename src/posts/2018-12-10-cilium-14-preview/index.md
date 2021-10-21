@@ -12,28 +12,10 @@ tags:
   - encryption
   - multi-cluster
   - dns
+ogImage: ogimage.png
+ogSummary: `As we all enjoy a wonderful week at KubeCon 2018 US, we want to provide a preview into the upcoming Cilium 1.4 release. We are days away from 1.4.0-rc1
+which will allow for community testing of a lot new exciting functionality.`
 ---
-
-{{preview}}
-
-![Multi Cluster Services](ogimage.png)
-
-As we all enjoy a wonderful week at KubeCon 2018 US, we want to provide a
-preview into the upcoming Cilium 1.4 release. We are days away from 1.4.0-rc1
-which will allow for community testing of a lot new exciting functionality.
-Some of the highlights:
-
-- Multi-Cluster service routing using standard Kubernetes services.
-- DNS Authorization with DNS request/response aware security policy enforcement
-  to restrict the DNS names a pod can lookup as well as limit the egress
-  connectivity to the IPs returned in the DNS response of that particular pod.
-- Transparent encryption and authentication for all service to service
-  communication using X.509 certificates.
-
-As always, we love hearing from you, so stop by our KubeCon booth and chat with
-us and other Cilium users.
-
-{{/preview}}
 
 As we all enjoy a wonderful week at KubeCon 2018 US, we want to provide a
 preview into the upcoming Cilium 1.4 release. We are days away from 1.4.0-rc1

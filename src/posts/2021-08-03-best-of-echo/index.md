@@ -9,19 +9,14 @@ tags:
   - eBPF
   - BPF
   - Cilium
----
-
-{{preview}}
-
-<img class="ogpreview" src="ogimage.png" />
-
+ogImage: ogimage.png
+ogSummary: `
 Over the past four months, the weekly eCHO Livestream on YouTube has covered a wide
 range of eBPF- and Cilium-related topics, and welcomed guests from many
 different projects and initiatives. In place of this week's live episode (while we
 take a well-deserved summer break!) here's a look back at some of our favourite
-moments.
-
-{{/preview}}
+moments.`
+---
 
 [eBPF and Cilium Office
 Hours](https://www.youtube.com/playlist?list=PLDg_GiBbAx-mY3VFLPbLHcxo6wUjejAOC)

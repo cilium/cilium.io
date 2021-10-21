@@ -16,59 +16,13 @@ tags:
   - visibility
   - dsr
   - endpointslices
----
-
-{{preview}}
-
-![Introduction](ogimage.png)
-
+ogImage: ogimage.png
+ogSummary: `
 We are excited to announce the Cilium 1.7 release. A total of 1551 commits have
 been contributed by a community of 141 developers, many of whom made their
 first contributions this cycle. Cilium 1.7 brings with it a trove of exciting
-new features:
-
-- **Hubble:** We've heard lots of positive feedback on Hubble since the
-  [announcement](blog/2019/11/19/announcing-hubble). To make
-  cluster connectivity easier to visualize and debug, we've released a new
-  Hubble UI as open source so you can tweak and extend it too! We've also been
-  working on various improvements to the core Hubble implementation, including
-  better correlation between network flow data and Kubernetes resources.
-  ([More details](blog/2020/02/18/cilium-17#hubble))
-- **Cilium Cluster-wide Network Policies:** The 1.7 release brings the
-  much-anticipated Cluster-wide CNP feature. This allows users to apply
-  baseline network policies which apply to pods across the cluster, regardless
-  of the namespace that the pod resides in.
-  ([More details](blog/2020/02/18/cilium-17#ccnp))
-- **Kube-proxy replacement with Direct Server Return:** As presented at
-  [Kubecon US 2019] and [FOSDEM 2020], this release rounds out the full service
-  feature set for replacing kube-proxy and additionally adds support for Direct Server
-  Return (DSR). This further improves the latency and performance of the kube-proxy
-  replacement in Cilium. Moreover, our kube-proxy replacement comes out of
-  beta and is automatically enabled in environments with newer kernels.
-  ([More details](blog/2020/02/18/cilium-17#kubeproxy-removal))
-- **Extending L7 policies with TLS introspection:** We've added support to
-  Cilium to configure Envoy TLS certificates via Kubernetes resources or local
-  files. This allows Cilium to transparently observe HTTP calls and enforce
-  API-aware policies on TLS-encrypted sessions.
-  ([More details](blog/2020/02/18/cilium-17#tls-visibility))
-- **L7 visibility annotations for pods:** Previously, to gain L7 visibility
-  into traffic in the cluster, users would need to write network policies that
-  put pods into a default deny posture. Visibility annotations now allow users
-  to gain L7 visibility into network traffic first, then subsequently craft
-  full network policies using these insights.
-  ([More details](blog/2020/02/18/cilium-17#visibility-annotations))
-- **Pure Go eBPF library:** This is the first Cilium release to begin using the
-  pure Go eBPF library co-written between the Cilium community and CloudFlare.
-  This streamlined library already allowed Cilium to jettison CGo, improving
-  performance and reducing binary sizes.
-  ([More details](blog/2020/02/18/cilium-17#pure-go-ebpf-library))
-- **Improvements to scalability** through [Kubernetes EndpointSlice support](blog/2020/02/18/cilium-17#endpoint-slice) and
-  [Cilium agent improvements](blog/2020/02/18/cilium-17#scalability), development on [upstream Linux](blog/2020/02/18/cilium-17#upstream-linux),
-  running our [testing environment on managed Kubernetes](blog/2020/02/18/cilium-17#managed-ci),
-  [distributing Cilium via Helm repositories](blog/2020/02/18/cilium-17#helm)... **and much more!**
-  For more highlights, see the [1.7 Release Highlights](blog/2020/02/18/cilium-17#17Highlights).
-
-{{/preview}}
+new features`
+---
 
 ![Introduction](ogimage.png)
 

@@ -2,17 +2,9 @@
 path: '/blog/2018/07/10/cilium-security-elasticsearch'
 date: '2018-07-10T10:30:43.000Z'
 title: 'Open Source Elasticsearch Security: Using Cilium for Elasticsearch Access Control with No App/Container Changes'
+ogImage: esblog_preview.png
+ogSummary: `Elasticsearch is a dominanting open source platform for storing and analyzing all different types of data ranging from application logs, to user payment transactions and network audit logs.`
 ---
-
-{{preview}}
-
-Elasticsearch is a dominanting open source platform for storing and analyzing all different types of data ranging from [application logs](https://www.elastic.co/solutions/logging), to user [payment transactions](https://www.paypal-engineering.com/2016/08/10/powering-transactions-search-with-elastic-learnings-from-the-field/) and network [audit logs](https://www.elastic.co/blog/using-machine-learning-and-elasticsearch-for-security-analytics-deep-dive).
-
-A single Elasticsearch cluster is often used to store many different types of data for a variety of uses. While such multi-tenancy maximizes efficiency both compute/storage resources and ops-team resources, it also requires key elements around security. For example, if an application that is sending troubleshooting logs to an Elasticsearch cluster is compromised, the attacker should not also be able to read user transaction data or delete network access logs, simply because that data also happens to be stored in the same cluster.
-
-In this post, we will look at how Cilium helps you lock down access to data in your Elasticsearch cluster without requiring any changes to the application code or containers. Cilium is an open source API-aware network security technology for container orchestration frameworks like Kubernetes.
-
-{{/preview}}
 
 ![](esblog_preview.png)
 

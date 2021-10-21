@@ -9,22 +9,8 @@ tags:
   - grpc
   - cilium
   - bpf
+ogSummary: `The Cilium community has been hard at work over the past weeks to get us closer to what we consider is required for a 1.0 release. We have made a ton of progress and are happy to announce the release of 1.0.0-rc2 at this point.`
 ---
-
-{{preview}}
-
-The Cilium community has been hard at work over the past weeks to get us closer to what we consider is required for a 1.0 release. We have made a ton of progress and are happy to announce the release of 1.0.0-rc2 at this point.
-
-## New functionality that was MERGED RECENTLY:
-
-- Security policy enforcement at application protocol level for [Kafka](http://docs.cilium.io/en/v1.0.0-rc2/gettingstarted/kafka/), and [gRPC](/grpc).
-- Lots of tooling around operating Cilium based clusters (cluster wide connectivity monitor, bug reporting tools, Prometheus metrics, security incident process, ...)
-
-- Integration of the [Envoy](https://github.com/envoyproxy/envoy) proxy into the Cilium datapath.
-
-- Lots and lots of documentation and guides.
-
-{{/preview}}
 
 The Cilium community has been hard at work over the past weeks to get us closer to what we consider is required for a 1.0 release. We have made a ton of progress and are happy to announce the release of 1.0.0-rc2 at this point.
 

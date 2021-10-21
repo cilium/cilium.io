@@ -14,33 +14,10 @@ tags:
   - ebpf
   - security
   - Kubernetes
+ogImage: ogimage.png
+ogSummary: `We are excited to announce the Cilium 1.3 release. The release introduces several new features. The major highlight of the release is the addition of Go extensions for Envoy as well as Cassandra and Memcached protocol parsers with
+policy enforcement capability, both implemented as Envoy Go extension.`
 ---
-
-{{preview}}
-
-We are excited to announce the Cilium 1.3 release. The release introduces
-several new features. The major highlight of the release is the addition of Go
-extensions for [Envoy] as well as Cassandra and Memcached protocol parsers with
-policy enforcement capability, both implemented as Envoy Go extension.
-
-As usual, a big shout out to the entire community of Cilium developers who have
-contributed 785 commits in the time period between 1.2 and 1.3.
-
-## What are Envoy Go extensions?
-
-We have been relying on [Envoy] for all processing of HTTP and gRPC as well as
-HTTP derivates such as Elasticsearch since version 1.0. As the community
-discussed how to extend the scope of supported L7 protocols, it became clear
-that Envoy is the right platform to drive future protocol additions. The focus
-quickly shifted to finding ways to simplify the extendability of Envoy and
-allow reuse of existing open source projects such as the CNCF project [Vitess].
-The idea of Go extensions for Envoy was born.
-
-With Cilium 1.3, we introduce Go extensions for Envoy as a Beta feature.
-
-![Envoy Golang Extension Architecture](ogimage.png)
-
-{{/preview}}
 
 ![Cilium Kubernetes](gopher_intro.png)
 

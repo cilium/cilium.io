@@ -7,23 +7,8 @@ categories:
 tags:
   - bpf-updates
   - bpf
+ogSummary: `Linux 4.13 was released last week and net-next closed around the same time. The last `[GIT] Networking` pull request includes a couple of BPF fixes and so do the two after the merge window opened up as well. See the dates for all the details`
 ---
-
-{{preview}}
-
-The highlights since last time are
-
-- New helper functions `bpf_perf_read_counter_time` and `bpf_perf_prog_read_time`.
-- Initial BPF assembly support in LLVM.
-- LRU map lookup improvements.
-
-Linux 4.13 was released last week and net-next closed around the same time. The last `[GIT] Networking` pull request includes a couple of BPF fixes and so do the two after the merge window opened up as well. See the dates for all the details
-
-- [01 Septemper 2017](https://www.spinics.net/lists/netdev/msg453325.html).
-- [05 Septemper 2017](https://www.spinics.net/lists/netdev/msg453873.html).
-- [09 Septemper 2017](https://marc.info/?l=linux-netdev&m=150493364601151&w=2).
-
-{{/preview}}
 
 This is issue 11 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

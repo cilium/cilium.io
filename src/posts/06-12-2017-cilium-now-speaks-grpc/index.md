@@ -6,6 +6,8 @@ tags:
   - grpc
   - cilium
   - microservices
+ogImage: cilium_grpc.png
+ogSummary: `The Cilium team is happy to announce tech preview support for gRPC-aware filtering!`
 ---
 
 ![](cilium_grpc.png)

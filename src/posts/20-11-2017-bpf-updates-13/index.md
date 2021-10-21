@@ -2,32 +2,8 @@
 path: '/blog/2017/11/20/bpf-updates-13'
 date: '2017-11-20T16:32:45.000Z'
 title: 'BPF Updates 13'
+ogSummary: `The v4.15 merge window is open and LWN.net already has a summary on part 1 out. Which contains a BPF section listing some of the new things`
 ---
-
-{{preview}}
-
-The v4.15 merge window is open and LWN.net already has a summary on [part 1](https://lwn.net/SubscriberLink/739341/f18f047b49653547/) out. Which contains a BPF section listing some of the new things:
-
-> BPF
->
-> The user-space bpftool utility can be used to examine and manipulate BPF programs and maps; see this man page for more information.
->
-> Hooks have been added to allow security modules to control access to BPF objects; see this changelog for more information.
->
-> A new BPF-based device controller has been added; it uses the version-2 control-group interface. Documentation for this feature is entirely absent, but one can look at the sample program added in this commit that uses it.
-
-The highlights since last time
-
-- New helper function `bpf_getsockops` to retrieve socket options. supports `TCP_CONGESTION` for now. The new `BPF_SOCK_OPS_BASE_RTT` feature significantly improves TCP-NV.
-- It is now possible to attach multiple programs to tracepoint / kprobes / uprobes. The programs will run in sequence. With the change for trace points one application does not exclude others from attaching to the same call.
-
-More interesting topics
-
-- New helper function `bpf_override_function` under discussion to allow for error injection via kprobes.
-- BPF runtime finally gets a [FAQ section](https://git.kernel.org/pub/scm/linux/kernel/git/davem/net-next.git/tree/Documentation/bpf/bpf_design_QA.txt) in the kernel's documentation directory.
-- bpftool gets support for dumping JSON.
-
-{{/preview}}
 
 This is issue 13 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

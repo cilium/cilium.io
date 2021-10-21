@@ -9,21 +9,11 @@ tags:
   - Conference
   - eBPF
   - BPF
----
-
-{{preview}}
-
-![LPC](ogimage)
-
-The [Linux Plumbers Conference 2019](https://linuxplumbersconf.org/event/4) is
+ogImage: ogimage.png
+ogSummary: `The Linux Plumbers Conference 2019 is
 coming up September 9-11 in Lisbon, Portugal. There are several tracks
-featuring eBPF related topics:
-
-- [BPF Microconference](https://linuxplumbersconf.org/event/4/sessions/62/#20190911)
-- [Linux Networking Summit](https://linuxplumbersconf.org/event/4/sessions/41/#all)
-- [Tracing Microconference](https://linuxplumbersconf.org/event/4/sessions/49/#20190911)
-
-{{/preview}}
+featuring eBPF related topics`
+---
 
 ![LPC](ogimage)
 

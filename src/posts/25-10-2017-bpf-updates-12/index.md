@@ -6,18 +6,8 @@ categories:
   - eBPF
 tags:
   - bpf-updates
+ogSummary: `This is issue 12 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.`
 ---
-
-{{preview}}
-
-The highlights since the last time
-
-- Generic metadata transfer from XDP into skb via new helper function `bpf_xdp_adjust_meta`.
-- `bpf_perf_event_read_value` helper function series got merged.
-- Multiple programs can now be attached to a cgroup.
-- A new map type cpumap for XDP got merged.
-
-{{/preview}}
 
 This is issue 12 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

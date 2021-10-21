@@ -2,6 +2,7 @@
 path: '/blog/2021/05/11/cni-benchmark'
 date: '2021-05-11T17:00:00.000Z'
 title: 'CNI Benchmark: Understanding Cilium Network Performance'
+ogimage: ogimage.png
 isPopular: true
 categories:
   - Deep Dive
@@ -13,20 +14,15 @@ tags:
   - benchmark
   - performance
   - latency
----
-
-{{preview}}
-
-<img class="ogpreview" src="ogimage.png" />
-
+ogImage: ogimage.png
+ogSummary: `
 As more crucial workloads are being migrated to Kubernetes, network performance
 benchmarks are becoming an important selection criteria when deciding what
 network layer to leverage in a Kubernetes cluster. In this blog post, we'll
 explore the performance characteristics of Cilium based on extensive benchmarks
 that we have run in the past few weeks. Upon popular request, we are also
-including measurements for Calico to allow for a direct comparison.
-
-{{/preview}}
+including measurements for Calico to allow for a direct comparison.`
+---
 
 ![](cover.png)
 

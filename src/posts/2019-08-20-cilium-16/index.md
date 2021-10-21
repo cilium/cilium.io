@@ -16,52 +16,9 @@ tags:
   - multi-cluster
   - nodeport
   - AWS ENI
+ogImage: ogimage.png
+ogSummary: `We are excited to announce the Cilium 1.6 release. A total of 1408 commits have been contributed by the community with many developers contributing for the first time. Cilium 1.6 introduces several exciting new features`
 ---
-
-{{preview}}
-
-![Introduction graph](ogimage.png)
-
-We are excited to announce the Cilium 1.6 release. A total of 1408 commits have
-been contributed by the community with many developers contributing for the
-first time. Cilium 1.6 introduces several exciting new features:
-
-- **KVStore free operation:** The addition of a new CRD-based
-  backend for security identities now allows to operate Cilium entirely
-  without a KVstore in the context of Kubernetes. ([More details](#kvstorefree))
-- **100% Kube-proxy replacement:** Operating a
-  Kubernetes cluster without requiring to run kube-proxy has been a desire of
-  many users. This release includes the final two features required to run a
-  Kubernetes cluster without kube-proxy with Cilium fully replacing
-  kube-proxy. ([More details](#kubeproxy-removal))
-- **Socket-based load-balancing:** Socket-based load-balancing combines
-  the advantage of client-side and network-based load-balancing by providing
-  fully transparent load-balancing using Kubernetes services with the
-  translation from service IP to endpoint IP done once during connection
-  establishment instead of translating each network packet for the lifetime of
-  a connection. ([More details](#hostservices))
-- **Policy scalability improvements:** The entire policy system has been
-  improved to decouple handling of policy and identity definitions and moving
-  to an entirely incremental model. This ensures that environments with high
-  pod scheduling churn, e.g. several 100K pods across multiple clusters, can
-  cope well in combination with constant policy definition changes. ([More
-  details](#policyscale))
-- **Generic CNI chaining:** The 1.6 release introduces a new
-  CNI chaining framework allowing to run Cilium on top of the majority of
-  other CNI plugins such as Weave, Calico, Flannel, AWS VPC CNI or the Lyft
-  CNI plugin. This enables using advanced features such as eBPF-based security
-  policy enforcement, visibility, multi-cluster, encryption, and
-  load-balancing while continuing to run whatever CNI plugin is already
-  in-use. ([More details](#chaining))
-- **Native AWS ENI mode:** A new datapath and IPAM mode allows to combine the
-  efficiency of native AWS ENI routing with Cilium policy enforcement,
-  encryption and multi-cluster. A new operator-based design, works around many
-  problems known to large scale AWS ENI users with per node agents. ([More
-  details](#eni))
-- **... and much more:** For the full list of changes, see the [1.6 Release
-  Notes](#16Highlights).
-
-{{/preview}}
 
 ![Introduction graph](ogimage.png)
 

@@ -8,21 +8,8 @@ tags:
   - bpf
   - bpf-updates
   - ebpf
+ogSummary: `The Linux kernel merge window closed up last week and v4.12-rc1 was released. One usual [GIT] Networking pull request was sent before the rc and one the day after. The are some BPF related fixes, see dates for all the highlights`
 ---
-
-{{preview}}
-
-The Linux kernel merge window closed up last week and v4.12-rc1 was released. One usual [GIT] Networking pull request was sent before the rc and one the day after. The are some BPF related fixes, see dates for all the highlights
-
-- [9th May](https://www.spinics.net/lists/netdev/msg434497.html)
-- [15th May](https://www.spinics.net/lists/netdev/msg435111.html)
-
-More interesting topics
-
-- [BPF relocations](https://www.mail-archive.com/netdev@vger.kernel.org/msg167958.html)
-- [ARM 32-bit JIT](https://www.spinics.net/lists/netdev/msg434852.html)
-
-{{/preview}}
 
 This is issue 03 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

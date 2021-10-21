@@ -7,60 +7,10 @@ categories:
 tags:
   - eBPF
   - copyright
+ogSummary: `As with everything we do, we are fully transparent. As it becomes obvious that a simple resolution in this matter is not possible, we follow open source best practices and choose a public forum for the sake of transparency.
+It was brought to our attention that some of the new eBPF
+code committed to the Calico repository is violating the license of source code in the Cilium repository.`
 ---
-
-{{preview}}
-
-As with everything we do, we are fully transparent. As it becomes obvious that
-a simple resolution in this matter is not possible, we follow open source best
-practices and choose a public forum for the sake of transparency.
-
-It was brought to our attention that some of the [new eBPF
-code](https://github.com/projectcalico/felix/tree/master/bpf) committed to the
-[Calico repository](https://github.com/projectcalico/felix) is violating the
-license of source code in the Cilium repository.
-
-The original report called out suspiciously similar code in both repositories.
-This by itself is of course not a problem if the open source licenses involved
-are respected. This includes, among other things, attribution and restrictions
-regarding the rights to re-license.
-
-Upon closer inspection, it was identified that source code has been copied from
-the [Cilium
-repository](https://github.com/cilium/cilium/blob/master/bpf/bpf_xdp.c),
-modified to create derivative work, and then committed ([commit](https://github.com/projectcalico/felix/commit/336d34c307f477b73692656058b890d1c01e73f4#diff-0f8b4a32fcc0262e15d01210383db0df))
-to the Calico repository with the license changed in a non-compatible manner.
-As part of this, the attribution required by the license was also omitted. The
-details of this can be found further down in this post.
-
-Like the majority of the Linux kernel source code, the datapath portion of
-Cilium that runs as part of the Linux kernel is released under the [GPL 2.0]
-license. The GPL license does not permit a license change to the [Apache
-License] without consent of the original authors.
-
-This prompted us to contact the authors of the derivative work. As a result,
-[an initial attempt](https://github.com/projectcalico/felix/pull/2048) was made
-to rewrite some sections of the code. After inspection, we concluded that the
-work is still a derivative of our original source code.
-
-However, in order to resolve the situation as simply as possible, we offered to
-dual-license the respective code under the Apache license with the condition
-that attribution to the original authors is added. This resulted in the
-[following pull request](https://github.com/projectcalico/felix/pull/2049)
-being proposed to the Calico repository to add the attribution. The pull
-request is currently waiting to be merged.
-
-From our perspective, this would resolve all of our concerns. We obviously also
-accept any other resolution as long as it conforms to the respective open
-source licenses.
-
-We are waiting for a reaction by the maintainers of the Calico project.
-
-_Update 2019-06-25:_ Some of the eBPF related code has now been removed from
-the Calico repository via [this
-PR](https://github.com/projectcalico/felix/pull/2056).
-
-{{/preview}}
 
 # TL;DR
 

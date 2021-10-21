@@ -11,19 +11,12 @@ tags:
   - Observability
   - eBPF
   - BPF
----
-
-{{preview}}
-
-Hubble is a fully distributed networking and security observability platform
-for cloud native workloads. Hubble is open source software and built on top of
-[Cilium] and [eBPF] to enable deep visibility into the communication and
+ogImage: ogimage.png
+ogSummary: `Hubble is a fully distributed networking and security observability platform for cloud native workloads. Hubble is open source software and built on top of
+Cilium and eBPF to enable deep visibility into the communication and
 behavior of services as well as the networking infrastructure in a completely
-transparent manner.
-
-![Hubble Architecture](ogimage.png)
-
-{{/preview}}
+transparent manner.`
+---
 
 Hubble is a fully distributed networking and security observability platform
 for cloud native workloads. Hubble is open source software and built on top of

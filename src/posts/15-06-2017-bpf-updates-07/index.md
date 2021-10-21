@@ -8,20 +8,8 @@ tags:
   - bpf
   - bpf-updates
   - ebpf
+ogSummary: `Linux 4.12-rc5 was recently released. No BPF changes where included, but a usual [GIT] Networking pull request was made afterwards. You can see the changes in 15th June.`
 ---
-
-{{preview}}
-
-Linux 4.12-rc5 was recently released. No BPF changes where included, but a usual [GIT] Networking pull request was made afterwards. You can see the changes in [15th June](https://patchwork.ozlabs.org/patch/776103/).
-
-There were also several other patches to netdev and related lists. Most of them are fixes. The highlights are
-
-- New program type `BPF_PROG_TYPE_SOCKET_OPS` is in the works.
-- Reporting XDP program ids via netlink.
-- Improvements to the bpf tests.
-- MIPS eBPF JIT got [applied](https://www.spinics.net/lists/netdev/msg440291.html).
-
-{{/preview}}
 
 This is issue 07 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

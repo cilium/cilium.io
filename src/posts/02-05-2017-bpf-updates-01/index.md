@@ -7,13 +7,8 @@ categories:
 tags:
   - bpf
   - bpf-updates
+ogSummary: 'This is the start of a regular newsletter around BPF written by Alexander Alemayhu. It will summarize ongoing development, presentations, videos and other information related to BPF and XDP. It will be released roughly once a week.'
 ---
-
-{{preview}}
-
-This is the start of a regular newsletter around BPF written by Alexander Alemayhu. It will summarize ongoing development, presentations, videos and other information related to BPF and XDP. It will be released roughly once a week.
-
-{{/preview}}
 
 This is the start of a regular newsletter around BPF written by Alexander Alemayhu. It will summarize ongoing development, presentations, videos and other information related to BPF and XDP. It will be released roughly once a week.
 

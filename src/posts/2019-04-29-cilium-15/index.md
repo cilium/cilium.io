@@ -14,29 +14,16 @@ tags:
   - Kubernetes
   - eBPF
   - BPF
----
-
-{{preview}}
-
+ogImage: ogimage.png
+ogSummary: `
 We are excited to announce the Cilium 1.5 release. Cilium 1.5 is the first
 release where we primarily focused on scalability with respect to number of
 nodes, pods and services. Our goal was to scale to 5k nodes, 20k pods and 10k
 services. We went well past that goal with the 1.5 release and are now
 officially supporting 5k nodes, 100k pods and 20k services. Along the way, we
 learned a lot, some expected, some unexpected, this blog post will dive into
-what we learned and how we improved.
-
-![Header](ogimage.png)
-
-Besides scalability, several significant features made its way into the release
-including: BPF templating, rolling updates for transparent encryption keys,
-transparent encryption for direct-routing, a new improved BPF based service
-load-balancer with improved fairness, BPF based masquerading/SNAT support,
-Istio 1.1.3 integration, policy calculation optimizations as well as several
-new Prometheus metrics to assist in operations and monitoring. For the
-full list of changes, see the [1.5 Release Notes](#15Highlights).
-
-{{/preview}}
+what we learned and how we improved.`
+---
 
 We are excited to announce the Cilium 1.5 release. Cilium 1.5 is the first
 release where we primarily focused on scalability with respect to number of

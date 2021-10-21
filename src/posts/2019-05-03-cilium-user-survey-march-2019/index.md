@@ -9,22 +9,9 @@ tags:
   - eBPF
   - survey
   - cilium
+ogImage: ogimage.png
+ogSummary: `Back in March we have asked our users to provide feedback via our first ever user survey. Many of you have responded and the results are in!`
 ---
-
-{{preview}}
-
-Back in March we have asked our users to provide feedback via our first ever
-[user survey](https://forms.gle/c1kphSwp9v82yEgTA). Many of you have responded
-and the results are in!
-
-![next features](ogimage.png)
-
-The survey was announced on our Slack channel and on Twitter. Participation was
-anonymous and did not require to leave behind contact information. Most
-questions had a set of predefined answers plus a field to add additional
-answers. All questions were optional.
-
-{{/preview}}
 
 Back in March we have asked our users to provide feedback via our first ever
 [user survey](https://forms.gle/c1kphSwp9v82yEgTA). Many of you have responded

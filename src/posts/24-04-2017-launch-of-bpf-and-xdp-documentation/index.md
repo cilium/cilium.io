@@ -10,13 +10,8 @@ tags:
   - xdp
   - documentation
   - guide
+ogSummary: `We are excited to announce the "**BPF & XDP Reference Guide**" as part of the Cilium project documentation. We have received various requests on further technical information about BPF and XDP with the desire to learn more about the technology that is driving the Cilium project.`
 ---
-
-{{preview}}
-
-We are excited to announce the "**BPF & XDP Reference Guide**" as part of the Cilium project documentation. We have received various requests on further technical information about BPF and XDP with the desire to learn more about the technology that is driving the Cilium project.
-
-{{/preview}}
 
 We are excited to announce the "**BPF & XDP Reference Guide**" as part of the Cilium project documentation. We have received various requests on further technical information about BPF and XDP with the desire to learn more about the technology that is driving the Cilium project.
 

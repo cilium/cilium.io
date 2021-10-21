@@ -10,15 +10,8 @@ tags:
   - http
   - policy
   - demo
+ogSummary: 'In celebration of today's date, May 4th, we are posting our Star Wars demo of Cilium that we showed at CNCF/KubeCon in Berlin or DockerCon in Austin. You can either watch the video linked below which starts directly at the time the demo begins or you can jump to the transcript of the demo embedded in the blog post. May the fourth be with you.'
 ---
-
-{{preview}}
-
-In celebration of today's date, May 4th, we are posting our Star Wars demo of Cilium that we showed at CNCF/KubeCon in Berlin or DockerCon in Austin. You can either watch the video linked below which starts directly at the time the demo begins or you can jump to the transcript of the demo embedded in the blog post. May the fourth be with you.
-
-<iframe src="//www.youtube.com/embed/ilKlmTDdFgk?list=PLkA60AVN3hh_nihZ1mh6cO3n-uMdF7UlV&amp;t=350&amp;wmode=opaque&amp;enablejsapi=1" height="480" width="854" scrolling="no" frameborder="0" allowfullscreen=""></iframe>
-
-{{/preview}}
 
 In celebration of today's date, May 4th, we are posting our Star Wars demo of Cilium that we showed at CNCF/KubeCon in Berlin or DockerCon in Austin. You can either watch the video linked below which starts directly at the time the demo begins or you can jump to the transcript of the demo embedded in the blog post. May the fourth be with you.
 

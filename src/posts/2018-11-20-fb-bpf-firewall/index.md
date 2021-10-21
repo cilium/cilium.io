@@ -11,31 +11,11 @@ tags:
   - facebook
   - iptables
   - security
+ogImage: ogimage.png
+ogSummary: `We have covered Facebook's BPF-based load balancer with DDoS protection in a previous blog post. This post provides further details on Facebook's BPF use by covering Anant
+Deepak's talk at the BPF/networking microconference on Facebook's BPF-based
+edge firewall running in production.`
 ---
-
-{{preview}}
-
-![Facebook Infrastructure Logo](ogimage.png)
-
-We have covered Facebook's BPF-based load balancer with DDoS protection in
-a previous blog post: [Why is the kernel community replacing iptables with BPF?](/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables).
-This post provides further details on Facebook's BPF use by covering Anant
-Deepak's talk at the [BPF/networking microconference] on Facebook's BPF-based
-edge firewall running in production.
-
-The same conference also featured many other BPF related talks which we will
-cover in follow-up blog posts. In particular interesting will be Nikita V.
-Shirokov's (Facebook) talk [XDP: 1.5 years in production. Evolution and
-lessons
-learned](http://vger.kernel.org/lpc_net2018_talks/LPC_XDP_Shirokov_v2.pdf)
-where Nikita shows the impressive difference between IPVS and BPF under heavy
-load as well as Vlad Dumitrescu from Google talking about [Scaling Linux
-Traffic Shaping with
-BPF](http://vger.kernel.org/lpc_bpf2018_talks/lpc-bpf-2018-shaping.pdf) where
-Vlad and others share their experience deploying BPF to production solving
-scalable traffic shaping.
-
-{{/preview}}
 
 ![Facebook Infrastructure Logo](ogimage.png)
 

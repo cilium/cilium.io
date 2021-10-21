@@ -8,27 +8,12 @@ categories:
 tags:
   - announcement
   - releases
----
-
-{{preview}}
-
-The last couple of months have been tremendously exciting for everyone working
-on Cilium and BPF. We have witnessed a fast growing community of
+ogImage: k8s_ship.png
+ogSummary: `The last couple of months have been tremendously exciting for everyone working on Cilium and BPF. We have witnessed a fast growing community of
 Cilium users as well as the rapid increase of BPF usage and development with
-companies such as [Google] joining the existing already strong BPF community of
-engineers from [Facebook], [Netflix], [Red Hat] and many more. Possibly the strongest
-signal of the success of BPF has been the decision of the Linux kernel
-community to [replace the in-kernel implementation of iptables with BPF](/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables).
-
-All of this has allowed us to advance BPF quickly and mature the Cilium project
-very effectively. Our warmest
-shoutouts go to everyone who has joined us on this incredible
-journey since we initially announced Cilium at [DockerCon
-2017](https://www.youtube.com/watch?v=ilKlmTDdFgk). Your support in the form of
-contributing code, providing feedback and spreading the word has been
-incredible.
-
-{{/preview}}
+companies such as Google joining the existing already strong BPF community of
+engineers from Facebook, Netflix, Red Hat and many more.`
+---
 
 ![Kubernetes BPF ship](k8s_ship.png)
 

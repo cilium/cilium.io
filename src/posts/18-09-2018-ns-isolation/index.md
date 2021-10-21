@@ -8,15 +8,12 @@ tags:
   - Kubernetes
   - network policies
   - kube-dns policy
+ogImage: overview.png
+ogSummary: `Kubernetes clusters are used by multiple tenants to run their containerized workloads. Often, the tenant workloads are mapped to namespaces and strict access control is required for inter-namespace communications. The access control could be needed for separation of concerns such as monitoring namespace vs application namespace; for compliance such as PCI vs non-PCI workloads; or to meet requirements of serving different end customers such as workloads serving Pepsi vs Coke. In this post, we will look at namespace based segmentation of traffic along with examples of allowing specific inter-namespace communications.`
 ---
 
-{{preview}}
-
-Kubernetes clusters are used by multiple tenants to run their containerized workloads. Often, the tenant workloads are mapped to namespaces and strict access control is required for inter-namespace communications. The access control could be needed for separation of concerns such as monitoring namespace vs application namespace; for compliance such as PCI vs non-PCI workloads; or to meet requirements of serving different end customers such as workloads serving Pepsi vs Coke. In this post, we will look at namespace based segmentation of traffic along with examples of allowing specific inter-namespace communications.
-
-{{/preview}}
-
 ![](overview.png)
+
 Kubernetes provides [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) for controlling traffic going in and out of the pods. Cilium implements the Kubernetes Network Policies for L3/L4 level and extends with L7 policies for granular API-level security for common protocols such as HTTP, Kafka, gRPC, etc. As per the Kubernetes Network Policy model, Cilium policies follow the whitelist model. When a policy is enabled for a pod, all ingress and egress traffic are denied by default unless the policy specification allows specific traffic. As a result, inter-namespace communication will be denied by default and we need policy specifications to whitelist traffic within namespace and legitimate traffic in and out of a namespace.
 
 ## Setup to test the policies

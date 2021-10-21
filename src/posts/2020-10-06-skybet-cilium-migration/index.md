@@ -12,22 +12,14 @@ tags:
   - BPF
   - CNI
   - Migration
----
-
-{{preview}}
-
-![](ogimage.png)
-
+ogImage: ogimage.png
+ogSummary: `
 This is a guest blog by Josh Van Leeuwen and covers how Josh implemented a CNI
-live migration for a customer, [Sky Betting and Gaming](https://m.skybet.com),
+live migration for a customer, Sky Betting and Gaming,
 to live migrate a cluster running the Canal CNI plugin (Flannel+Calico) to
 Cilium. Josh is working as a Customer Reliability Engineer for Jetstack. Read
-on to hear what Josh has to say...
-
-In this post we'll discuss why one might want to change CNIs, what I have learnt
-developing a solution for live migration, and how it all works.
-
-{{/preview}}
+on to hear what Josh has to say...`
+---
 
 ![](ogimage.png)
 

@@ -12,38 +12,16 @@ tags:
   - BPF
   - GKE
   - Google
+ogImage: ogimage.png
+ogSummary: `Today is an exciting day for the Cilium community:
+Isovalent, the company behind Cilium, is
+announcing its $29M Series A financing round backed by Andreessen
+Horowitz, Google, and Cisco. This is a perfect occasion to take a deeper look
+into where eBPF-based networking is coming from and to understand what the
+excitement is all about.`
 ---
 
-{{preview}}
-
-![](ogimage.png)
-
-Today is an exciting day for the Cilium community:
-[Isovalent](https://www.isovalent.com), the company behind Cilium, is
-announcing its [$29M Series A financing round](https://techcrunch.com/2020/11/10/with-29m-in-funding-isovalent-launches-its-cloud-native-networking-and-security-platform-based-on-ebpf-and-cilium/) backed by [Andreessen
-Horowitz](https://a16z.com/2020/11/10/investing-in-isovalent/), Google, and Cisco. This is a perfect occasion to take a deeper look
-into where eBPF-based networking is coming from and to understand what the
-excitement is all about.
-
-Two weeks ago, we hosted the first ever [eBPF Summit
-2020](https://ebpf.io/summit-2020/). Besides exciting keynotes, several users
-of Cilium spoke about their use cases including
-[Adobe](https://www.youtube.com/watch?v=7UQ2CU6UEGY&t=5s), [Capital
-One](https://www.youtube.com/watch?v=hwOpCKBaJ-w&t=28s&ab_channel=eBPFSummit),
-[Datadog](https://www.youtube.com/watch?v=6mTVuZUHLBg&t=5s),
-[GitLab](https://youtu.be/kwQ0ooO3UM8?t=5),
-[Google](https://www.youtube.com/watch?v=oLS25ztnlMk), and [Wildlife
-Studios](https://youtu.be/_1t3bXzptP0?t=10). Earlier last month, [Alibaba
-Cloud](/blog/2020/10/09/cilium-in-alibaba-cloud) covered how they are using
-Cilium for eBPF-based high-performance cloud-native networking. This was just a
-couple of weeks after Google had
-[announced](https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebpf-and-cilium-to-google-kubernetes-engine)
-the availability of a Cilium-based networking dataplane for GKE and Anthos.
-
-{{/preview}}
-
 ![](intro.png)
-<a href="https://cilium.io/" class="ogpreview"><img src="ogimage.png" /></a>
 
 Today is an exciting day for the Cilium community:
 [Isovalent](https://www.isovalent.com), the company behind Cilium, is

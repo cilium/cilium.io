@@ -13,21 +13,16 @@ tags:
   - Multi Cluster
   - Benchmark
   - Clustermesh
----
-
-{{preview}}
-
+ogImage: ogimage.png
+ogSummary: `
 Wildlife Studios is a Brazil-based global gaming company, one of the twenty
 largest mobile gaming companies in the world, with more than 700 employees
 and offices in Brazil, Argentina, Ireland, and the United States. Their games
 are distributed in over 150 countries, and have been downloaded over
 two billion times. Their online gaming infrastructure relies on several
 services deployed all over the globe, which are shipped from around 30,000
-Kubernetes pods running on 2,500 nodes.
-
-![](ogimage.png)
-
-{{/preview}}
+Kubernetes pods running on 2,500 nodes.`
+---
 
 ![](ogimage.png)
 

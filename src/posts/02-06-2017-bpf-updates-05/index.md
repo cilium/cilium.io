@@ -8,17 +8,8 @@ tags:
   - bpf
   - bpf-updates
   - ebpf
+ogSummary: 'Linux 4.12-rc3 was released last week. One usual [GIT] Networking pull request with some BPF fixes made it in. You can read all the highlights in 26th May. Also the release email briefly mentions BPF. Anyway, rc3 has a little bit of everything. The biggest single change is actually just a documentation update (the intel pstate docs were converted to rst format), so the diffstat actually looks a bit odd with a wuarter just being documentation. There's also some tooling updates (perf and some bpf selftest).More interesting highlights'
 ---
-
-{{preview}}
-
-Linux 4.12-rc3 was released last week. One usual [GIT] Networking pull request with some BPF fixes made it in. You can read all the highlights in [26th May](http://www.mail-archive.com/linux-kernel@vger.kernel.org/msg1406659.html). Also the [release email](http://www.mail-archive.com/linux-kernel@vger.kernel.org/msg1407286.html) briefly mentions BPF
-
-> Anyway, rc3 has a little bit of everything. The biggest single change is actually just a documentation update (the intel pstate docs were converted to rst format), so the diffstat actually looks a bit odd with a wuarter just being documentation. There's also some tooling updates (perf and some bpf selftest).
-
-More interesting highlights
-
-{{/preview}}
 
 This is issue 05 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

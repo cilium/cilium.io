@@ -10,29 +10,16 @@ tags:
   - Cilium
   - Survey
   - Community
----
-
-{{preview}}
-
-![](ogimage.png)
-
+ogImage: ogimage.png
+ogSummary: `
 Welcome to the Cilium User Survey 2021! We are looking to improve Cilium
 further and are interested in feedback and guidance from our users. Cilium
 has been a community-driven project from the beginning and the majority of our
 roadmap has and will continue to be defined by our users. Tell us what you
-want. Tell us what you are struggling with. Tell us what we can do better.
-
-As usual, the survey is completely anonymous unless you specifically wish to
-identify yourself so we can reach out to you and clarify on specific feature
-requests. We will of course publish the results publicly as well.
-
-Thank you so much for spending some of your valuable time in helping us improve
-as a community and project.
-
-{{/preview}}
+want. Tell us what you are struggling with. Tell us what we can do better.`
+---
 
 ![](teaser.png)
-<a href="https://cilium.io/" class="ogpreview"><img src="ogimage.png" /></a>
 
 Welcome to the Cilium User Survey 2021! We are looking to improve Cilium
 further and are interested in feedback and guidance from our users. Cilium

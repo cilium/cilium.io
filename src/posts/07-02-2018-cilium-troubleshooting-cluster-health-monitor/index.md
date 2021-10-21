@@ -6,17 +6,8 @@ categories:
   - Deep Dive
 tags:
   - troubleshooting
+ogSummary: As we approach the upcoming 1.0 release, the Cilium community has been putting a lot of effort towards monitoring and troubleshooting. This has led to the development of several new tools in the project which we'll explore in this blog series. In this first part, we will cover **cilium-health**, a tool for troubleshooting intra-cluster connectivity issues.`
 ---
-
-{{preview}}
-
-As we approach the upcoming 1.0 release, the Cilium community has been putting a lot of effort towards monitoring and troubleshooting. This has led to the development of several new tools in the project which we'll explore in this blog series. In this first part, we will cover **cilium-health**, a tool for troubleshooting intra-cluster connectivity issues.
-
-## What’s cilium-health ?
-
-**cilium-health** is a new tool available in Cilium which provides visibility into the overall health of the cluster’s networking connectivity.
-
-{{/preview}}
 
 As we approach the upcoming 1.0 release, the Cilium community has been putting a lot of effort towards monitoring and troubleshooting. This has led to the development of several new tools in the project which we'll explore in this blog series. In this first part, we will cover **cilium-health**, a tool for troubleshooting intra-cluster connectivity issues.
 

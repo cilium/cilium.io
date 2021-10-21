@@ -11,28 +11,10 @@ tags:
   - kernel
   - ebpf
   - superpowers
----
-
-{{preview}}
-
-The Linux kernel community recently announced [bpfilter], which will replace
-the long-standing in-kernel implementation of iptables with high-performance
+ogImage: `The Linux kernel community recently announced bpfilter, which will replace the long-standing in-kernel implementation of iptables with high-performance
 network filtering powered by Linux BPF, all while guaranteeing a non-disruptive
-transition for Linux users.
-
-From humble roots as the packet filtering capability underlying popular tools
-like tcpdump and Wireshark, BPF has grown into a rich framework to extend the
-capabilities of Linux in a highly flexible manner without sacrificing key
-properties like performance and safety. This powerful combination has led
-forward-leaning users of Linux kernel technology like [Google], [Facebook], and
-[Netflix] to choose BPF for use cases ranging from network security and
-load-balancing to performance monitoring and troubleshooting. Brendan Gregg at
-Netflix first called BPF [Superpowers] for Linux. This post will cover how
-these “superpowers” render long-standing kernel sub-systems like iptables
-redundant while simultaneously enabling new in-kernel use cases that few would
-have previously imagined were possible.
-
-{{/preview}}
+transition for Linux users.`
+---
 
 Author Note: this is a post by long-time Linux kernel networking developer and
 creator of the Cilium project, Thomas Graf
