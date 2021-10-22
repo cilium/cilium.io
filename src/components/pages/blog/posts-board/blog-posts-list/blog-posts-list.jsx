@@ -80,7 +80,6 @@ BlogPostsList.propTypes = {
       }),
     })
   ).isRequired,
-  handleClick: PropTypes.func.isRequired,
 };
 
 export default BlogPostsList;

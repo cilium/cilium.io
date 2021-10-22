@@ -12,7 +12,7 @@ const handleCategoryClick = (event, category, type) => {
     state: { preventScroll: true },
   });
 };
-const Categories = ({ categories, currentCategory, type }) => (
+const Categories = ({ categories, currentCategory }) => (
   <div className="flex px-4 mt-6 -mx-4 overflow-x-auto gap-x-3.5 xl:flex-wrap xl:overflow-visible md:px-6 lg:px-10 xl:px-0 md:-mx-6 lg:-mx-10 xl:mx-0 no-scrollbar lg:gap-x-5 md:mt-10 lg:mt-14">
     {categories.map((category) => {
       const isActiveElement = currentCategory === category;
@@ -26,7 +26,7 @@ const Categories = ({ categories, currentCategory, type }) => (
           )}
           type="button"
           key={category}
-          onClick={(event) => handleCategoryClick(event, category, type)}
+          onClick={(event) => handleCategoryClick(event, category, 'categories')}
         >
           {isCategoryAll ? 'All' : category}
         </button>
@@ -38,8 +38,6 @@ const Categories = ({ categories, currentCategory, type }) => (
 Categories.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   currentCategory: PropTypes.string.isRequired,
-  handleClick: PropTypes.func.isRequired,
-  type: PropTypes.string.isRequired,
 };
 
 export default Categories;
