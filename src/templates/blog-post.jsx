@@ -24,7 +24,7 @@ const BlogPostPage = (props) => {
   };
   return (
     <MainLayout pageMetadata={seoMetadata}>
-      <Content path={path} html={html} date={date} title={title} tags={tags} />
+      <Content path={path} html={html} date={date} title={title} tags={tags} summary={ogSummary} />
       <PopularPosts items={popularPosts} />
       <Community />
     </MainLayout>

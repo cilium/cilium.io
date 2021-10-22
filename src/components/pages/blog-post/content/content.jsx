@@ -11,12 +11,18 @@ import SocialShare from './social-share';
 
 const Wrapper = ({ children }) => <div className="prose md:prose-lg !max-w-none">{children}</div>;
 
-const Content = ({ date, title, html, path, tags }) => {
+const Content = ({ date, title, summary, html, path, tags }) => {
   const postUrl = `${process.env.GATSBY_DEFAULT_SITE_URL}${path}`;
   return (
     <article className="relative mt-6 md:mt-10 lg:mt-16">
       <Container className="grid grid-cols-1 md:grid-cols-12 lg:gap-8">
-        <SocialShare className="order-1 md:order-none md:col-span-1" postUrl={postUrl} />
+        <SocialShare
+          className="order-1 md:order-none md:col-span-1"
+          postUrl={postUrl}
+          title={title}
+          summary={summary}
+          tags={tags}
+        />
         <div className="md:col-span-10">
           <span className="font-semibold leading-none md:text-lg text-gray-1">{date}</span>
           <Heading className="mt-4 mb-16" size="lg" tag="h1">
