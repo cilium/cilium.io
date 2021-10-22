@@ -3,17 +3,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import ArrowIcon from 'icons/arrow.inline.svg';
-// helper function that performs filter-to-slug transformation
-const filterToSlug = (filter) =>
-  filter === '*' ? '/blog/' : `/blog/${filter.toLowerCase().replace(/\s/g, '-')}/`;
+import blogFilterToSlug from 'utils/blog-filter-to-slug';
+
 const handlePaginationClick = (event, page) => {
   event.preventDefault();
   navigate(page, {
     state: { preventScroll: true },
   });
 };
-const Pagination = ({ currentPage, numPages, queryFilter }) => {
-  const currentPath = filterToSlug(queryFilter);
+const Pagination = ({ currentPage, numPages, queryFilter, type }) => {
+  const currentPath = blogFilterToSlug(queryFilter, type);
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
   const prevPage = currentPage - 1 === 1 ? currentPath : currentPath + (currentPage - 1).toString();
@@ -50,6 +49,7 @@ Pagination.propTypes = {
   queryFilter: PropTypes.string.isRequired,
   currentPage: PropTypes.number.isRequired,
   numPages: PropTypes.number.isRequired,
+  type: PropTypes.number.isRequired,
 };
 
 export default Pagination;

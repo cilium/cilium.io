@@ -3,12 +3,18 @@ const Path = require('path');
 const { slugify } = require('./src/utils/slugify');
 
 const BLOG_POSTS_PER_PAGE = 9;
-
-const slugifyCategory = (category) => (category === '*' ? 'blog/' : `blog/${slugify(category)}/`);
+const CATEGORIES_TYPE = 'categories';
+const TAGS_TYPE = 'tags';
+const slugifyBlogUrls = (item, type) => (item === '*' ? 'blog/' : `blog/${type}/${slugify(item)}/`);
 
 // Create Blog Posts
 async function createBlogPosts({ graphql, actions }) {
-  const { data } = await graphql(`
+  const {
+    data: {
+      allFile: { nodes: blogPosts },
+      allPopularPosts: { nodes: popularPosts },
+    },
+  } = await graphql(`
     query {
       allFile(filter: { ext: { in: [".md", ".mdx"] } }) {
         nodes {
@@ -63,9 +69,7 @@ async function createBlogPosts({ graphql, actions }) {
     }
   `);
 
-  const popularPosts = data.allPopularPosts.nodes;
-
-  data.allFile.nodes.forEach((file) => {
+  blogPosts.forEach((file) => {
     const { children } = file;
     const postData = { ...children[0] };
     // pure debugging condition
@@ -96,6 +100,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
       featuredPostEdges: { nodes: featuredPost },
       allPopularPosts: { nodes: popularPosts },
       allCategories: { group: allCategories },
+      tagsGroups: { group: allTags },
     },
   } = await graphql(`
     {
@@ -144,6 +149,11 @@ async function createBlogPages({ graphql, actions, reporter }) {
           fileAbsolutePath
         }
       }
+      tagsGroups: allMdx {
+        group(field: frontmatter___tags) {
+          fieldValue
+        }
+      }
     }
   `);
 
@@ -159,6 +169,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
   const categoryAll = ['*'];
   const categories = categoryAll.concat(getCategories);
 
+  // Create category pages
   await Promise.all(
     categories.map(async (category) =>
       graphql(
@@ -184,7 +195,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
         if (result.errors) throw result.errors;
         const posts = result.data.allMdx.edges;
         const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
-        const pathBase = slugifyCategory(category);
+        const pathBase = slugifyBlogUrls(category, CATEGORIES_TYPE);
         // determine if there is featured post
         const featuredPostData = featuredPost?.length ? featuredPost[0] : false;
 
@@ -202,12 +213,74 @@ async function createBlogPages({ graphql, actions, reporter }) {
               numPages,
               currentPage: i + 1,
               queryFilter: category,
+              type: CATEGORIES_TYPE,
               featured: featuredPostData,
               popularPosts: popularPostsData,
               categories,
               robots: `${category === '*' ? '' : 'NO'}INDEX, FOLLOW`,
               // remove extra slash if category is a wildcard to preserve proper urls
               canonicalUrl: `blog/${category === '*' ? '' : '/'}${path}`,
+              slug: `/${path}`,
+            },
+          });
+        });
+      })
+    )
+  );
+
+  const tags = allTags.map((tag) => tag.fieldValue);
+  // Create tag pages
+  await Promise.all(
+    tags.map(async (tag) =>
+      graphql(
+        `
+          query TagPostsQuery($tag: String!) {
+            allMdx(
+              filter: {
+                fileAbsolutePath: { regex: "/posts/" }
+                fields: { isFeatured: { eq: false } }
+                frontmatter: { tags: { glob: $tag } }
+              }
+              limit: 1000
+            ) {
+              edges {
+                node {
+                  id
+                }
+              }
+            }
+          }
+        `,
+        { tag }
+      ).then((result) => {
+        if (result.errors) throw result.errors;
+        const posts = result.data.allMdx.edges;
+        const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
+        const pathBase = slugifyBlogUrls(tag, TAGS_TYPE);
+        // determine if there is featured post
+        const featuredPostData = featuredPost?.length ? featuredPost[0] : false;
+
+        // determine if there is popular posts
+        const popularPostsData = popularPosts?.length ? popularPosts : false;
+
+        Array.from({ length: numPages }).forEach((_, i) => {
+          const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
+          createPage({
+            path,
+            component: Path.resolve('./src/templates/blog.jsx'),
+            context: {
+              limit: BLOG_POSTS_PER_PAGE,
+              skip: i * BLOG_POSTS_PER_PAGE,
+              numPages,
+              currentPage: i + 1,
+              queryFilter: tag,
+              type: TAGS_TYPE,
+              featured: featuredPostData,
+              popularPosts: popularPostsData,
+              categories,
+              robots: `${tag === '*' ? '' : 'NO'}INDEX, FOLLOW`,
+              // remove extra slash if category is a wildcard to preserve proper urls
+              canonicalUrl: `blog/${path}`,
               slug: `/${path}`,
             },
           });

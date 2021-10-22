@@ -6,6 +6,7 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
+import blogFilterToSlug from 'utils/blog-filter-to-slug';
 
 import SocialShare from './social-share';
 
@@ -33,15 +34,18 @@ const Content = ({ date, title, summary, html, path, tags }) => {
           </MDXProvider>
           {tags?.length && (
             <div className="flex flex-wrap mt-8 gap-x-2 gap-y-2">
-              {tags.map((tag) => (
-                <Link
-                  className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase p-2.5 text-primary-1"
-                  key={tag}
-                  to="/"
-                >
-                  {tag}
-                </Link>
-              ))}
+              {tags.map((tag) => {
+                const tagUrl = blogFilterToSlug(tag, 'tags');
+                return (
+                  <Link
+                    className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase p-2.5 text-primary-1"
+                    key={tag}
+                    to={tagUrl}
+                  >
+                    {tag}
+                  </Link>
+                );
+              })}
             </div>
           )}
         </div>
@@ -52,6 +56,7 @@ const Content = ({ date, title, summary, html, path, tags }) => {
 Content.propTypes = {
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  summary: PropTypes.string,
   html: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string),
@@ -59,6 +64,7 @@ Content.propTypes = {
 
 Content.defaultProps = {
   tags: null,
+  summary: null,
 };
 
 export default Content;

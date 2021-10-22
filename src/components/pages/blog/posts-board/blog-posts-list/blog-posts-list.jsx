@@ -1,12 +1,21 @@
+import { navigate } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import Link from 'components/shared/link';
+import blogFilterToSlug from 'utils/blog-filter-to-slug';
 
 import CiliumLogo from './images/cilium-logo.inline.svg';
 
-const BlogPostsList = ({ posts, handleClick }) => (
+const handleCategoryClick = (event, category, type) => {
+  event.preventDefault();
+  const href = blogFilterToSlug(category, type);
+  navigate(href, {
+    state: { preventScroll: true },
+  });
+};
+const BlogPostsList = ({ posts }) => (
   <div className="grid gap-6 mt-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:mt-11">
     {posts.map(
       (
@@ -41,7 +50,7 @@ const BlogPostsList = ({ posts, handleClick }) => (
                   className="text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none"
                   type="button"
                   key={category}
-                  onClick={(event) => handleClick(event, category)}
+                  onClick={(event) => handleCategoryClick(event, category, 'categories')}
                 >
                   {category}
                 </button>

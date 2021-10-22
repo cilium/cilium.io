@@ -13,11 +13,12 @@ import MainLayout from '../layouts/main';
 const BlogPage = (props) => {
   const {
     data: {
-      allMdx: { nodes: posts },
+      filteredPostsByCategory: { nodes: filteredPostsByCategory },
+      filteredPostsByTag: { nodes: filteredPostsByTag },
     },
-    pageContext: { featured, popularPosts, categories, queryFilter, currentPage, numPages },
+    pageContext: { featured, popularPosts, categories, type, queryFilter, currentPage, numPages },
   } = props;
-
+  const posts = type === 'categories' ? filteredPostsByCategory : filteredPostsByTag;
   return (
     <MainLayout pageMetadata={SeoMetadata.blog}>
       <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
@@ -25,6 +26,7 @@ const BlogPage = (props) => {
       <PostsBoard
         categories={categories}
         posts={posts}
+        type={type}
         queryFilter={queryFilter}
         currentPage={currentPage}
         numPages={numPages}
@@ -38,10 +40,35 @@ export default BlogPage;
 
 export const blogPostsQuery = graphql`
   query blogPostsQuery($skip: Int!, $limit: Int!, $queryFilter: String!) {
-    allMdx(
+    filteredPostsByCategory: allMdx(
       filter: {
         fileAbsolutePath: { regex: "/posts/" }
         fields: { categories: { glob: $queryFilter }, isFeatured: { eq: false } }
+      }
+      sort: { order: DESC, fields: frontmatter___date }
+      limit: $limit
+      skip: $skip
+    ) {
+      nodes {
+        frontmatter {
+          path
+          date(locale: "en", formatString: "MMM DD, yyyy")
+          categories
+          title
+          ogSummary
+          ogImage {
+            childImageSharp {
+              gatsbyImageData(width: 550)
+            }
+          }
+        }
+      }
+    }
+    filteredPostsByTag: allMdx(
+      filter: {
+        fileAbsolutePath: { regex: "/posts/" }
+        fields: { isFeatured: { eq: false } }
+        frontmatter: { tags: { glob: $queryFilter } }
       }
       sort: { order: DESC, fields: frontmatter___date }
       limit: $limit
