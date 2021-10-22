@@ -48,6 +48,10 @@ const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) 
       {facebook && <meta property="fb:app_id" content={facebook.appId} />}
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={currentTitle} />
+      <meta name="twitter:image" content={currentImagePath} />
+      <meta name="twitter:url" content={currentUrl} />
+      <meta name="twitter:description" content={currentDescription} />
     </Helmet>
   );
 };
