@@ -1,146 +1,42 @@
-import classNames from 'classnames';
 import { navigate } from 'gatsby';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import Link from 'components/shared/link';
-import ArrowIcon from 'icons/arrow.inline.svg';
 
-import CiliumLogo from './images/cilium-logo.inline.svg';
+import BlogPostsList from './blog-posts-list';
+import Categories from './categories';
+import Pagination from './pagination';
 
 const blockTitle = 'All posts';
 
 // helper function that performs filter-to-slug transformation
 const filterToSlug = (filter) =>
-  filter === 'All' ? '/blog/' : `/blog/${filter.toLowerCase().replace(/\s/g, '-')}/`;
+  filter === '*' ? '/blog/' : `/blog/${filter.toLowerCase().replace(/\s/g, '-')}/`;
 
-const PostsBoard = ({ categories, posts, queryFilter, currentPage, numPages }) => {
-  // adapt queryFilter in case of wild card (all posts)
-  const currentCategory = queryFilter === '*' ? 'All' : queryFilter;
-
-  const currentPath = filterToSlug(currentCategory);
-  const isFirst = currentPage === 1;
-  const isLast = currentPage === numPages;
-  const prevPage = currentPage - 1 === 1 ? currentPath : currentPath + (currentPage - 1).toString();
-  const nextPage = currentPath + (currentPage + 1).toString();
-
-  const handleCategoryClick = (event, category) => {
-    event.preventDefault();
-    const href = filterToSlug(category);
-    navigate(href, {
-      state: { preventScroll: true },
-    });
-  };
-
-  const handlePaginationClick = (event, page) => {
-    event.preventDefault();
-    navigate(page, {
-      state: { preventScroll: true },
-    });
-  };
-
-  return (
-    <section className="mt-10 md:mt-20 lg:mt-28">
-      <Container>
-        <Heading tag="h2">{blockTitle}</Heading>
-        <div className="flex px-4 mt-6 -mx-4 overflow-x-auto gap-x-4 xl:flex-wrap xl:overflow-visible md:px-6 lg:px-10 xl:px-0 md:-mx-6 lg:-mx-10 xl:mx-0 no-scrollbar md:gap-x-6 lg:gap-x-10 md:mt-10 lg:mt-14">
-          {categories.map((category) => {
-            const isActiveElement = currentCategory === category;
-            return (
-              <button
-                className={classNames(
-                  'py-2 lg:py-2.5 font-medium whitespace-nowrap',
-                  isActiveElement ? 'px-4 md:px-6 lg:px-10 text-white bg-primary-1 rounded' : 'px-0'
-                )}
-                type="button"
-                key={category}
-                onClick={(event) => handleCategoryClick(event, category)}
-              >
-                {category === '*' ? 'All' : category}
-              </button>
-            );
-          })}
-        </div>
-        <div className="grid gap-6 mt-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:mt-11">
-          {posts.map(
-            (
-              {
-                frontmatter: { path, ogImage: cover, date, title, ogSummary: summary, categories },
-              },
-              index
-            ) => (
-              <div className="flex flex-col p-6 border rounded-lg md:p-8 border-gray-3" key={index}>
-                <Link to={path}>
-                  {cover ? (
-                    <GatsbyImage
-                      className="min-h-[168px] max-h-[168px]"
-                      imgClassName="rounded-lg"
-                      image={getImage(cover)}
-                      alt={title}
-                    />
-                  ) : (
-                    <div className="h-[168px] flex justify-center items-center bg-gray-4 rounded-lg">
-                      <CiliumLogo />
-                    </div>
-                  )}
-                </Link>
-
-                <div className="flex flex-col flex-grow mt-7">
-                  <span className="text-sm font-medium leading-none text-gray-1">{date}</span>
-                  <Link to={path}>
-                    <h3 className="mt-3 font-bold leading-normal line-clamp-3 md:text-lg">
-                      {title}
-                    </h3>
-                  </Link>
-                  <p className="mt-2 mb-4 line-clamp-3">{summary}</p>
-                  <div className="flex flex-wrap mt-auto gap-x-2 gap-y-2">
-                    {categories?.map((category) => (
-                      <button
-                        className="text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none"
-                        type="button"
-                        key={category}
-                        onClick={(event) => handleCategoryClick(event, category)}
-                      >
-                        {category}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            )
-          )}
-        </div>
-        {numPages > 1 && (
-          <div className="flex pt-8 mt-10 border-t border-gray-3">
-            {!isFirst && (
-              <button
-                className="flex mr-auto text-sm space-x-2.5 text-primary-1 tracking-wider items-center uppercase leading-none font-bold transition-colors duration-200 hover:text-gray-1"
-                type="button"
-                onClick={(event) => handlePaginationClick(event, prevPage)}
-              >
-                <ArrowIcon className="rotate-180" />
-                <span>Previous</span>
-              </button>
-            )}
-            {!isLast && (
-              <button
-                className="flex text-sm ml-auto space-x-2.5  text-primary-1 tracking-wider items-center uppercase leading-none font-bold transition-colors duration-200 hover:text-gray-1"
-                type="button"
-                onClick={(event) => handlePaginationClick(event, nextPage)}
-              >
-                <span>Next</span>
-                <ArrowIcon />
-              </button>
-            )}
-          </div>
-        )}
-      </Container>
-    </section>
-  );
+const handleCategoryClick = (event, category) => {
+  event.preventDefault();
+  const href = filterToSlug(category);
+  navigate(href, {
+    state: { preventScroll: true },
+  });
 };
+
+const PostsBoard = ({ categories, posts, queryFilter, currentPage, numPages }) => (
+  <section className="mt-10 md:mt-20 lg:mt-28">
+    <Container>
+      <Heading tag="h2">{blockTitle}</Heading>
+      <Categories
+        handleClick={handleCategoryClick}
+        categories={categories}
+        currentCategory={queryFilter}
+      />
+      <BlogPostsList posts={posts} handleClick={handleCategoryClick} />
+      <Pagination currentPage={currentPage} numPages={numPages} queryFilter={queryFilter} />
+    </Container>
+  </section>
+);
 PostsBoard.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   posts: PropTypes.arrayOf(

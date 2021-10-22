@@ -4,7 +4,7 @@ date: '2021-04-06T10:00:00.000Z'
 title: 'From "War Games" to Network Policies'
 isPopular: true
 categories:
-  - Network Policy
+  - Network Policies
 tags:
   - Kubernetes
   - Cilium
