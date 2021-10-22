@@ -17,10 +17,12 @@ const BlogPage = (props) => {
       filteredPostsByTag: { nodes: filteredPostsByTag },
     },
     pageContext: { featured, popularPosts, categories, type, queryFilter, currentPage, numPages },
+    location: { pathname },
   } = props;
   const posts = type === 'categories' ? filteredPostsByCategory : filteredPostsByTag;
+  const shouldShowBanner = pathname.startsWith('/blog');
   return (
-    <MainLayout pageMetadata={SeoMetadata.blog}>
+    <MainLayout showBanner={shouldShowBanner} pageMetadata={SeoMetadata.blog}>
       <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
       <FeaturedTalks />
       <PostsBoard

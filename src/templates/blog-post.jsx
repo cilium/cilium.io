@@ -11,11 +11,13 @@ import MainLayout from '../layouts/main';
 const BlogPostPage = (props) => {
   const {
     pageContext: { postData, popularPosts },
+    location: { pathname },
   } = props;
   const {
     body: html,
     frontmatter: { path, title, date, tags, ogImage, ogSummary },
   } = postData;
+  const shouldShowBanner = pathname.startsWith('/blog');
 
   const seoMetadata = {
     title,
@@ -23,7 +25,7 @@ const BlogPostPage = (props) => {
     image: ogImage || null,
   };
   return (
-    <MainLayout pageMetadata={seoMetadata}>
+    <MainLayout showBanner={shouldShowBanner} pageMetadata={seoMetadata}>
       <Content path={path} html={html} date={date} title={title} tags={tags} summary={ogSummary} />
       <PopularPosts items={popularPosts} />
       <Community />
