@@ -15,7 +15,7 @@ const blockTitle = 'All posts';
 
 // helper function that performs filter-to-slug transformation
 const filterToSlug = (filter) =>
-  filter === '*' ? '/blog/' : `/blog/${filter.toLowerCase().replace(/\s/g, '-')}/`;
+  filter === 'All' ? '/blog/' : `/blog/${filter.toLowerCase().replace(/\s/g, '-')}/`;
 
 const PostsBoard = ({ categories, posts, queryFilter, currentPage, numPages }) => {
   // adapt queryFilter in case of wild card (all posts)
