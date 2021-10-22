@@ -14,12 +14,12 @@ const SocialShare = ({ className, postUrl, title, summary, tags }) => (
     )}
   >
     <TwitterShareButton url={postUrl} title={title} via="ciliumproject" hashtags={tags}>
-      <div className="flex items-center justify-center w-12 h-12 border rounded-full lg:w-14 lg:h-14 border-gray-3">
+      <div className="flex items-center justify-center w-12 h-12 transition-colors duration-200 border rounded-full lg:w-14 lg:h-14 border-gray-3 hover:bg-gray-4">
         <TwitterIcon />
       </div>
     </TwitterShareButton>
     <LinkedinShareButton url={postUrl} title={title} summary={summary}>
-      <div className="flex items-center justify-center w-12 h-12 border rounded-full lg:w-14 lg:h-14 border-gray-3">
+      <div className="flex items-center justify-center w-12 h-12 transition-colors duration-200 border rounded-full lg:w-14 lg:h-14 border-gray-3 hover:bg-gray-4">
         <LinkedinIcon />
       </div>
     </LinkedinShareButton>
