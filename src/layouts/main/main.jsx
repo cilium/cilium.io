@@ -9,8 +9,10 @@ import SEO from 'components/shared/seo';
 const MainLayout = ({ showBanner, pageMetadata, children }) => (
   <>
     <SEO data={pageMetadata} />
-    {showBanner && <Banner />}
-    <Header />
+    <div className="relative">
+      {showBanner && <Banner />}
+      <Header />
+    </div>
     <main>{children}</main>
     <Footer />
   </>
@@ -18,6 +20,7 @@ const MainLayout = ({ showBanner, pageMetadata, children }) => (
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
+  showBanner: PropTypes.bool,
   pageMetadata: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
@@ -26,6 +29,7 @@ MainLayout.propTypes = {
 
 MainLayout.defaultProps = {
   pageMetadata: {},
+  showBanner: false,
 };
 
 export default MainLayout;

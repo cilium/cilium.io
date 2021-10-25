@@ -8,7 +8,7 @@ const commonClassNames =
   'inline-flex font-bold  justify-center !leading-none whitespace-nowrap rounded transition-colors duration-200 disabled:opacity-25 disabled:cursor-auto focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary-2 outline-none';
 const themeClassNames = {
   primary: 'text-white bg-primary-2 hover:bg-hover-1 disabled:hover:bg-primary-2',
-  outline: 'border-2 border-black hover:text-primary-1',
+  outline: 'border-2 border-black hover:text-gray-1 hover:border-gray-1',
 };
 const sizeClassNames = {
   sm: 'text-base py-2.5 px-3.5',

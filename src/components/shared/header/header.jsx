@@ -18,7 +18,7 @@ const navigation = [
 ];
 
 const Header = () => (
-  <div className="relative py-5">
+  <div className="py-5">
     <Popover>
       {({ open }) => (
         <>
