@@ -49,7 +49,7 @@ Pagination.propTypes = {
   queryFilter: PropTypes.string.isRequired,
   currentPage: PropTypes.number.isRequired,
   numPages: PropTypes.number.isRequired,
-  type: PropTypes.number.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default Pagination;
