@@ -6,7 +6,6 @@ import FeaturedPosts from 'components/pages/blog/featured-posts';
 import PostsBoard from 'components/pages/blog/posts-board';
 import Community from 'components/shared/community';
 import FeaturedTalks from 'components/shared/featured-talks';
-import SeoMetadata from 'utils/seo-metadata';
 
 import MainLayout from '../layouts/main';
 
@@ -16,13 +15,33 @@ const BlogPage = (props) => {
       filteredPostsByCategory: { nodes: filteredPostsByCategory },
       filteredPostsByTag: { nodes: filteredPostsByTag },
     },
-    pageContext: { featured, popularPosts, categories, type, queryFilter, currentPage, numPages },
+    pageContext: {
+      featured,
+      popularPosts,
+      categories,
+      type,
+      queryFilter,
+      currentPage,
+      numPages,
+      canonicalUrl,
+      slug,
+    },
     location: { pathname },
   } = props;
   const posts = type === 'categories' ? filteredPostsByCategory : filteredPostsByTag;
   const shouldShowBanner = pathname.startsWith('/blog');
+
+  const seoMetadata = {
+    title: 'Blog — Cilium',
+    description: 'The latest articles covering eBPF-based Networking, Observability, and Security',
+    slug,
+  };
   return (
-    <MainLayout showBanner={shouldShowBanner} pageMetadata={SeoMetadata.blog}>
+    <MainLayout
+      showBanner={shouldShowBanner}
+      canonicalUrl={canonicalUrl}
+      pageMetadata={seoMetadata}
+    >
       <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
       <FeaturedTalks />
       <PostsBoard
@@ -41,11 +60,15 @@ const BlogPage = (props) => {
 export default BlogPage;
 
 export const blogPostsQuery = graphql`
-  query blogPostsQuery($skip: Int!, $limit: Int!, $queryFilter: String!) {
+  query blogPostsQuery($skip: Int!, $limit: Int!, $queryFilter: String!, $draftFilter: [Boolean]!) {
     filteredPostsByCategory: allMdx(
       filter: {
         fileAbsolutePath: { regex: "/posts/" }
-        fields: { categories: { glob: $queryFilter }, isFeatured: { eq: false } }
+        fields: {
+          categories: { glob: $queryFilter }
+          isFeatured: { eq: false }
+          draft: { in: $draftFilter }
+        }
       }
       sort: { order: DESC, fields: frontmatter___date }
       limit: $limit
@@ -69,7 +92,7 @@ export const blogPostsQuery = graphql`
     filteredPostsByTag: allMdx(
       filter: {
         fileAbsolutePath: { regex: "/posts/" }
-        fields: { isFeatured: { eq: false } }
+        fields: { isFeatured: { eq: false }, draft: { in: $draftFilter } }
         frontmatter: { tags: { glob: $queryFilter } }
       }
       sort: { order: DESC, fields: frontmatter___date }

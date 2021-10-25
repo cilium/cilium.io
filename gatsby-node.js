@@ -21,6 +21,9 @@ async function createBlogPosts({ graphql, actions }) {
           children {
             ... on Mdx {
               id
+              fields {
+                draft
+              }
               frontmatter {
                 date(formatString: "MMM DD, yyyy")
                 title
@@ -78,6 +81,12 @@ async function createBlogPosts({ graphql, actions }) {
       console.log('\nmarkup is broken! check index.md file at\n\n', file.relativeDirectory);
       return;
     }
+
+    // skip page creation if post has `draft` flag
+    if (process.env.NODE_ENV === 'production' && postData.fields.draft) {
+      return;
+    }
+
     // determine if there is popular posts
     const popularPostsData = popularPosts?.length ? popularPosts : false;
 
@@ -217,10 +226,11 @@ async function createBlogPages({ graphql, actions, reporter }) {
               featured: featuredPostData,
               popularPosts: popularPostsData,
               categories,
-              robots: `${category === '*' ? '' : 'NO'}INDEX, FOLLOW`,
-              // remove extra slash if category is a wildcard to preserve proper urls
-              canonicalUrl: `blog/${category === '*' ? '' : '/'}${path}`,
-              slug: `/${path}`,
+              // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
+              draftFilter:
+                process.env.NODE_ENV === 'production' ? Array.of(false) : Array.of(true, false),
+              canonicalUrl: `${process.env.GATSBY_DEFAULT_SITE_URL}/${path}`,
+              slug: path,
             },
           });
         });
@@ -278,10 +288,11 @@ async function createBlogPages({ graphql, actions, reporter }) {
               featured: featuredPostData,
               popularPosts: popularPostsData,
               categories,
-              robots: `${tag === '*' ? '' : 'NO'}INDEX, FOLLOW`,
-              // remove extra slash if category is a wildcard to preserve proper urls
-              canonicalUrl: `blog/${path}`,
-              slug: `/${path}`,
+              // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
+              draftFilter:
+                process.env.NODE_ENV === 'production' ? Array.of(false) : Array.of(true, false),
+              canonicalUrl: `${process.env.GATSBY_DEFAULT_SITE_URL}/${path}`,
+              slug: path,
             },
           });
         });
@@ -316,7 +327,7 @@ exports.onCreateNode = ({ node, actions }) => {
     });
     createNodeField({
       node,
-      name: 'isDraft',
+      name: 'draft',
       value: node.frontmatter.draft || false,
     });
   }
