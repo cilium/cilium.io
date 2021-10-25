@@ -159,8 +159,8 @@ module.exports = {
                 ...node.frontmatter,
                 description: node.excerpt,
                 date: node.frontmatter.date,
-                url: `${site.siteMetadata.siteUrl}/${node.frontmatter.path}`,
-                guid: `${site.siteMetadata.siteUrl}/${node.frontmatter.path}`,
+                url: site.siteMetadata.siteUrl + node.frontmatter.path,
+                guid: site.siteMetadata.siteUrl + node.frontmatter.path,
                 custom_elements: [{ 'content:encoded': node.html }],
               })),
             query: `
