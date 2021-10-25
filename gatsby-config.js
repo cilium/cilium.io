@@ -137,6 +137,58 @@ module.exports = {
         id: 'GTM-M533ZSF',
       },
     },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) =>
+              allMdx.nodes.map((node) => ({
+                ...node.frontmatter,
+                description: node.excerpt,
+                date: node.frontmatter.date,
+                url: `${site.siteMetadata.siteUrl}/${node.frontmatter.path}`,
+                guid: `${site.siteMetadata.siteUrl}/${node.frontmatter.path}`,
+                custom_elements: [{ 'content:encoded': node.html }],
+              })),
+            query: `
+              {
+                allMdx(
+                  filter: {fileAbsolutePath: { regex: "/posts/" }, fields: {draft: {eq: false}} }
+                  limit: 20
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    html
+                    excerpt
+                    frontmatter {
+                      title
+                      date
+                      path
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/blog/rss.xml',
+            title:
+              'Cilium - The latest articles covering eBPF-based Networking, Observability, and Security',
+          },
+        ],
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
