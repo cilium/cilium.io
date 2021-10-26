@@ -5,9 +5,9 @@ import React from 'react';
 
 import blogFilterToSlug from 'utils/blog-filter-to-slug';
 
-const handleCategoryClick = (event, category, type) => {
+const handleCategoryClick = (event, category) => {
   event.preventDefault();
-  const href = blogFilterToSlug(category, type);
+  const href = blogFilterToSlug(category);
   navigate(href, {
     state: { preventScroll: true },
   });
@@ -26,7 +26,7 @@ const Categories = ({ categories, currentCategory }) => (
           )}
           type="button"
           key={category}
-          onClick={(event) => handleCategoryClick(event, category, 'categories')}
+          onClick={(event) => handleCategoryClick(event, category)}
         >
           {isCategoryAll ? 'All' : category}
         </button>

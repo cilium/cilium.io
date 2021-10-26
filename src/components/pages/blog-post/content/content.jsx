@@ -5,8 +5,6 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import Link from 'components/shared/link';
-import blogFilterToSlug from 'utils/blog-filter-to-slug';
 
 import SocialShare from './social-share';
 
@@ -34,18 +32,14 @@ const Content = ({ date, title, summary, html, path, tags }) => {
           </MDXProvider>
           {tags?.length && (
             <div className="flex flex-wrap mt-8 gap-x-2 gap-y-2">
-              {tags.map((tag) => {
-                const tagUrl = blogFilterToSlug(tag, 'tags');
-                return (
-                  <Link
-                    className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase p-2.5 text-primary-1"
-                    key={tag}
-                    to={tagUrl}
-                  >
-                    {tag}
-                  </Link>
-                );
-              })}
+              {tags.map((tag) => (
+                <span
+                  className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase p-2.5 text-primary-1"
+                  key={tag}
+                >
+                  #{tag}
+                </span>
+              ))}
             </div>
           )}
         </div>

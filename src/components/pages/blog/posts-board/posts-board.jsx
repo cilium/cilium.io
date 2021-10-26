@@ -10,18 +10,13 @@ import Pagination from './pagination';
 
 const blockTitle = 'All posts';
 
-const PostsBoard = ({ categories, posts, type, queryFilter, currentPage, numPages }) => (
+const PostsBoard = ({ categories, posts, queryFilter, currentPage, numPages }) => (
   <section className="mt-10 md:mt-20 lg:mt-28">
     <Container>
       <Heading tag="h2">{blockTitle}</Heading>
-      <Categories categories={categories} currentCategory={queryFilter} type={type} />
+      <Categories categories={categories} currentCategory={queryFilter} />
       <BlogPostsList posts={posts} />
-      <Pagination
-        currentPage={currentPage}
-        numPages={numPages}
-        queryFilter={queryFilter}
-        type={type}
-      />
+      <Pagination currentPage={currentPage} numPages={numPages} queryFilter={queryFilter} />
     </Container>
   </section>
 );
@@ -43,7 +38,6 @@ PostsBoard.propTypes = {
       }),
     })
   ).isRequired,
-  type: PropTypes.string.isRequired,
   queryFilter: PropTypes.string.isRequired,
   currentPage: PropTypes.number.isRequired,
   numPages: PropTypes.number.isRequired,

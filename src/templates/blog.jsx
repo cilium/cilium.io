@@ -12,14 +12,12 @@ import MainLayout from '../layouts/main';
 const BlogPage = (props) => {
   const {
     data: {
-      filteredPostsByCategory: { nodes: filteredPostsByCategory },
-      filteredPostsByTag: { nodes: filteredPostsByTag },
+      allMdx: { nodes: posts },
     },
     pageContext: {
       featured,
       popularPosts,
       categories,
-      type,
       queryFilter,
       currentPage,
       numPages,
@@ -28,7 +26,6 @@ const BlogPage = (props) => {
     },
     location: { pathname },
   } = props;
-  const posts = type === 'categories' ? filteredPostsByCategory : filteredPostsByTag;
   const shouldShowBanner = pathname.startsWith('/blog');
 
   const seoMetadata = {
@@ -47,7 +44,6 @@ const BlogPage = (props) => {
       <PostsBoard
         categories={categories}
         posts={posts}
-        type={type}
         queryFilter={queryFilter}
         currentPage={currentPage}
         numPages={numPages}
@@ -61,7 +57,7 @@ export default BlogPage;
 
 export const blogPostsQuery = graphql`
   query blogPostsQuery($skip: Int!, $limit: Int!, $queryFilter: String!, $draftFilter: [Boolean]!) {
-    filteredPostsByCategory: allMdx(
+    allMdx(
       filter: {
         fileAbsolutePath: { regex: "/posts/" }
         fields: {
@@ -69,31 +65,6 @@ export const blogPostsQuery = graphql`
           isFeatured: { eq: false }
           draft: { in: $draftFilter }
         }
-      }
-      sort: { order: DESC, fields: frontmatter___date }
-      limit: $limit
-      skip: $skip
-    ) {
-      nodes {
-        frontmatter {
-          path
-          date(locale: "en", formatString: "MMM DD, yyyy")
-          categories
-          title
-          ogSummary
-          ogImage {
-            childImageSharp {
-              gatsbyImageData(width: 550)
-            }
-          }
-        }
-      }
-    }
-    filteredPostsByTag: allMdx(
-      filter: {
-        fileAbsolutePath: { regex: "/posts/" }
-        fields: { isFeatured: { eq: false }, draft: { in: $draftFilter } }
-        frontmatter: { tags: { glob: $queryFilter } }
       }
       sort: { order: DESC, fields: frontmatter___date }
       limit: $limit
