@@ -3,8 +3,7 @@ path: '/blog/2019/02/12/cilium-14'
 date: '2019-02-12T09:00:00.000Z'
 title: 'Cilium 1.4: Multi-Cluster Service Routing, DNS Authorization, IPVLAN support, Transparent Encryption, Flannel Integration, Benchmarking other CNIs, ...'
 categories:
-  - Releases
-  - Announcements
+  - Technology
 tags:
   - announcement
   - bpf

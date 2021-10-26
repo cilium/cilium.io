@@ -3,7 +3,7 @@ path: '/blog/2021/01/29/how-to-build-k8s-networking-with-f5-and-cilium'
 date: '2021-01-19T17:00:00.000Z'
 title: 'Kubernetes Networking & Load-Balancing with Cilium and F5'
 categories:
-  - User Story
+  - Community
 tags:
   - Kubernetes
   - Cilium

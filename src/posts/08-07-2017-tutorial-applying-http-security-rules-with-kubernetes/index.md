@@ -3,7 +3,7 @@ path: '/blog/2017/7/7/57h5usdogcy8a0daqrgfu7ikxpgzmw'
 date: '2017-07-07T20:44:07.000Z'
 title: 'Tutorial: Applying HTTP security rules with Kubernetes'
 categories:
-  - Deep Dive
+  - How-To
 tags:
   - Kubernetes
   - http

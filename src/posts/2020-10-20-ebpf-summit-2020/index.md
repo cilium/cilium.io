@@ -4,7 +4,7 @@ date: '2020-10-20T09:00:00.000Z'
 isPopular: false
 title: 'eBPF Summit Oct 28-29, 2020'
 categories:
-  - Announcements
+  - Technology
 tags:
   - eBPF
   - BPF

@@ -3,7 +3,7 @@ path: '/blog/2018/2/6/cilium-troubleshooting-cluster-health-monitor'
 date: '2018-02-07T17:20:00.000Z'
 title: 'Connectivity Troubleshooting with cilium-health'
 categories:
-  - Deep Dive
+  - How-To
 tags:
   - troubleshooting
 ogSummary: As we approach the upcoming 1.0 release, the Cilium community has been putting a lot of effort towards monitoring and troubleshooting. This has led to the development of several new tools in the project which we'll explore in this blog series. In this first part, we will cover **cilium-health**, a tool for troubleshooting intra-cluster connectivity issues.`

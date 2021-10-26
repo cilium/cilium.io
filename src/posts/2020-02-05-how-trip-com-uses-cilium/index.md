@@ -3,7 +3,7 @@ path: '/blog/2020/02/05/how-trip-com-uses-cilium'
 date: '2020-02-05T09:00:00.000Z'
 title: 'User Story - How Trip.com uses Cilium'
 categories:
-  - User Blog
+  - Community
 tags:
   - user story
   - kubernetes

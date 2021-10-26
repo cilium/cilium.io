@@ -3,7 +3,7 @@ path: '/blog/2018/12/03/cni-performance'
 date: '2018-12-03T09:00:00.000Z'
 title: 'Analyzing the CNI performance benchmark'
 categories:
-  - Deep Dive
+  - How-To
 tags:
   - bpf
   - ebpf

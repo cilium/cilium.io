@@ -3,7 +3,7 @@ path: '/blog/2019/05/03/cilium-user-survey-march-2019'
 date: '2019-05-03T09:00:00.000Z'
 title: 'Cilium User Survey March 2019 - The Results'
 categories:
-  - User Surveys
+  - Community
 tags:
   - Kubernetes
   - eBPF

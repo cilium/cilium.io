@@ -3,8 +3,7 @@ path: '/blog/2018/04/24/cilium-10'
 date: '2018-04-24T09:01:01.000Z'
 title: 'Cilium 1.0: Bringing the BPF Revolution to Kubernetes Networking and Security'
 categories:
-  - Releases
-  - Announcements
+  - Technology
 tags:
   - announcement
   - releases

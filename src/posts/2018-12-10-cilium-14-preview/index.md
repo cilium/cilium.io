@@ -3,7 +3,7 @@ path: '/blog/2018/12/10/cilium-14-preview'
 date: '2018-12-10T09:00:00.000Z'
 title: 'Cilium 1.4 Preview: Multi-Cluster Service Routing, DNS Authorization, and Transparent Encryption'
 categories:
-  - Deep Dive
+  - How-To
 tags:
   - bpf
   - ebpf

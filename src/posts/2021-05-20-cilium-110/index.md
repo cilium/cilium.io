@@ -4,8 +4,7 @@ date: '2021-05-20T17:00:00.000Z'
 title: 'Cilium 1.10: WireGuard, BGP Support, Egress IP Gateway, New Cilium CLI, XDP Load Balancer, Alibaba Cloud Integration and more'
 isPopular: true
 categories:
-  - Releases
-  - Announcements
+- Technology
 tags:
   - Kubernetes
   - kube-proxy

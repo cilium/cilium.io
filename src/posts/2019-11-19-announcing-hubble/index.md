@@ -3,7 +3,7 @@ path: '/blog/2019/11/19/announcing-hubble'
 date: '2019-11-19T09:00:00.000Z'
 title: 'Announcing Hubble - Network, Service & Security Observability for Kubernetes'
 categories:
-  - Announcements
+  - Technology
 tags:
   - Hubble
   - Kubernetes

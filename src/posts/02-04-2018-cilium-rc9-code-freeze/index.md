@@ -3,8 +3,7 @@ path: '/blog/2018/04/02/cilium-1.0.0-rc9-code-freeze'
 date: '2018-04-02T19:30:43.000Z'
 title: 'Cilium 1.0.0-rc9 - Feature Freeze for 1.0!'
 categories:
-  - Releases
-  - Announcements
+  - Technology
 tags:
   - release
 ogSummary: 'We are excited to announce Cilium 1.0.0-rc9 with many,

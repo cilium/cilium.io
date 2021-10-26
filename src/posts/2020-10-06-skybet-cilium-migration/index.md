@@ -4,7 +4,7 @@ date: '2020-10-06T09:00:00.000Z'
 isPopular: true
 title: 'How to perform a CNI Live Migration from Flannel+Calico to Cilium'
 categories:
-  - User Blog
+  - Community
 tags:
   - Kubernetes
   - Cilium

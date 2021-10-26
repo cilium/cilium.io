@@ -4,7 +4,7 @@ date: '2020-07-27T17:00:00.000Z'
 isPopular: true
 title: 'Multitenancy and Network Security in Kubernetes with Cilium'
 categories:
-  - Guide
+  - How-To
 tags:
   - Kubernetes
   - Security

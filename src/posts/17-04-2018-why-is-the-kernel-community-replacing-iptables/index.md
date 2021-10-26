@@ -4,7 +4,7 @@ date: '2018-04-17T09:01:01.000Z'
 title: 'Why is the kernel community replacing iptables with BPF?'
 draft: false
 categories:
-  - Deep Dive
+  - How-To
 tags:
   - iptables
   - bpf

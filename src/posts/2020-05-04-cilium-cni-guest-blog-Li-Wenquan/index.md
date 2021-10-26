@@ -3,7 +3,7 @@ path: '/blog/2020/05/04/guest-blog-kubernetes-cilium'
 date: '2020-05-04T09:00:00.000Z'
 title: '最Cool Kubernetes网络方案Cilium入门'
 categories:
-  - User Blog
+  - Community
 tags:
   - hubble
   - kubernetes

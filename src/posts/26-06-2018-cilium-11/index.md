@@ -3,8 +3,7 @@ path: '/blog/2018/06/26/cilium-11'
 date: '2018-06-26T09:01:01.000Z'
 title: 'Cilium 1.1: Istio sidecar mode, cri-o/containerd support, improved efficiency & scale, init policies'
 categories:
-  - Releases
-  - Announcements
+- Technology
 tags:
   - announcement
   - releases

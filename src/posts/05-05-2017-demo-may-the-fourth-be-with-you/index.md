@@ -3,8 +3,7 @@ path: '/blog/2017/5/4/demo-may-the-force-be-with-you'
 date: '2017-05-05T00:08:35.000Z'
 title: 'Demo: May the Fourth be with you'
 categories:
-  - Deep Dive
-  - Demo
+  - How-To
 tags:
   - star wars
   - http

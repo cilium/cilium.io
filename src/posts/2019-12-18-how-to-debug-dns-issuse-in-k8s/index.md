@@ -3,7 +3,7 @@ path: '/blog/2019/12/18/how-to-debug-dns-issues-in-k8s'
 date: '2019-12-18T09:00:00.000Z'
 title: 'Debugging and Monitoring DNS issues in Kubernetes'
 categories:
-  - Guide
+  - How-To
 tags:
   - Hubble
   - Kubernetes

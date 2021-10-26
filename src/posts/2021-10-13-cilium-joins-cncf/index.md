@@ -8,7 +8,7 @@ ogImage: cilium-cncf-card.png
 ogSummary: "CNCF TOC chair Liz Rice explains why she's excited about the future of
 Cilium as an Incubation project in the CNCF." 
 categories:
-  - Announcements
+  - Technology
   - Community
 tags:
   - eBPF

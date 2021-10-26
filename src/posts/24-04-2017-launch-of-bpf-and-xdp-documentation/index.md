@@ -3,7 +3,7 @@ path: '/blog/2017/4/24/launch-of-bpf-xdp-documentation'
 date: '2017-04-24T13:45:24.000Z'
 title: 'Launch of BPF & XDP Documentation'
 categories:
-  - Announcements
+  - Technology
 tags:
   - cilium
   - bpf

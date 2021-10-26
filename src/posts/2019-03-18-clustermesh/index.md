@@ -3,7 +3,7 @@ path: '/blog/2019/03/12/clustermesh'
 date: '2019-03-18T09:00:00.000Z'
 title: 'Deep Dive into Cilium Multi-cluster'
 categories:
-  - Deep Dive
+  - How-To
 tags:
   - bpf
   - ebpf

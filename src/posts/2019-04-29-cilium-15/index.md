@@ -3,8 +3,7 @@ path: '/blog/2019/04/24/cilium-15'
 date: '2019-04-29T09:00:00.000Z'
 title: 'Cilium 1.5: Scaling to 5k nodes and 100k pods, BPF-based SNAT, and Rolling Key Updates for Transparent Encryption'
 categories:
-  - Releases
-  - Announcements
+  - Technology
 tags:
   - bpf
   - ebpf

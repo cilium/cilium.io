@@ -3,7 +3,7 @@ path: '/blog/2018/04/24/cilium-security-for-age-of-microservices'
 date: '2018-04-24T12:30:43.000Z'
 title: 'Cilium - Rethinking Linux Networking and Security for the Age of Microservices'
 categories:
-  - Deep Dive
+  - How-To
 ogImage: k8s_ship.png
 ogSummary: "To celebrate the Cilium project hitting 1.0, we wanted to take a moment to share the broader story behind how BPF and Cilium are driving the biggest change in the past two decades of Linux networking and security, and invite you to join in on the fun. We're just getting started!"
 ---

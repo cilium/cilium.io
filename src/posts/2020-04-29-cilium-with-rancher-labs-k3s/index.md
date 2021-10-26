@@ -3,7 +3,7 @@ path: '/blog/2020/04/29/cilium-with-rancher-labs-k3s'
 date: '2020-04-29T01:00:00.000Z'
 title: 'Building a Multi-node Environment with Cilium and K3s in Twenty Minutes or Less'
 categories:
-  - Guide
+  - How-To
 tags:
   - Kubernetes
   - Hubble

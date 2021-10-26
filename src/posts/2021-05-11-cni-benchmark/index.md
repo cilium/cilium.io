@@ -5,7 +5,7 @@ title: 'CNI Benchmark: Understanding Cilium Network Performance'
 ogimage: ogimage.png
 isPopular: true
 categories:
-  - Deep Dive
+  - How-To
 tags:
   - bpf
   - ebpf

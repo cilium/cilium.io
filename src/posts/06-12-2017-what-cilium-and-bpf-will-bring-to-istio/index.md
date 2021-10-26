@@ -3,7 +3,7 @@ path: '/blog/istio'
 date: '2017-12-05T21:39:07.000Z'
 title: 'What Cilium and BPF will bring to Istio'
 categories:
-  - Deep Dive
+  - How-To
 tags:
   - istio
   - bpf

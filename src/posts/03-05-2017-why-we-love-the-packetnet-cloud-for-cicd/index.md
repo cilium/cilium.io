@@ -3,7 +3,7 @@ path: '/blog/2017/5/2/cicd-and-why-we-love-the-packetnet-cloud'
 date: '2017-05-03T16:17:00.000Z'
 title: 'Why we love the packet.net cloud for CI/CD'
 categories:
-  - Deep Dive
+  - How-To
 tags:
   - ci/cd
 ogSummary: 'A while ago we started thinking about how to build a continous integration (CI) testing infrastructure that would help us maintain the reliability and stability of Cilium as we add more features and integrate with orchestration systems like Kubernetes and Docker. This post describes our process for building a CI environment capable of testing a container networking & security infrastructure.'

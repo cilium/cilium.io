@@ -4,7 +4,7 @@ date: '2020-10-09T09:00:00.000Z'
 isPopular: true
 title: 'How Alibaba Cloud uses Cilium for High-Performance Cloud-Native Networking'
 categories:
-  - Announcements
+  - Technology
 tags:
   - Kubernetes
   - Cilium

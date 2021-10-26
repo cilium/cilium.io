@@ -4,7 +4,7 @@ date: '2021-04-06T17:00:00.000Z'
 title: 'Announcement: Networking and BPF Track at the 2021 Linux Plumbers Conference (LPC)'
 isPopular: true
 categories:
-  - Announcements
+  - Technology
 tags:
   - bpf
   - ebpf

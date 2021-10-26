@@ -3,8 +3,7 @@ path: '/blog/2020/02/18/cilium-17'
 date: '2020-02-19T01:00:00.000Z'
 title: 'Cilium 1.7: Hubble UI, Cluster-wide Network Policies, eBPF-based Direct Server Return, TLS visibility, New eBPF Go Library, ...'
 categories:
-  - Releases
-  - Announcements
+- Technology
 tags:
   - Kubernetes
   - kube-proxy
