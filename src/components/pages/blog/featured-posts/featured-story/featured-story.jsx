@@ -13,7 +13,7 @@ const FeaturedStory = ({ className, title, date, ogImage: cover, ogSummary: summ
       {blockTitle}
     </Heading>
     <div className="flex flex-col flex-1 p-6 mt-6 border md:mt-8 md:p-8 lg:p-10 md:flex-row xl:flex-col border-gray-3 rounded-large">
-      <Link className="flex items-center flex-1 xl:flex-none" to={path}>
+      <Link className="flex items-center flex-1 max-h-[360px] xl:flex-none" to={path}>
         <GatsbyImage imgClassName="rounded-lg" image={getImage(cover)} alt="" />
       </Link>
       <div className="flex flex-col flex-1 mt-6 md:mt-0 md:ml-8 xl:ml-0 xl:mt-8 ">
