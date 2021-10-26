@@ -4,7 +4,7 @@ date: '2018-10-31T19:44:07.000Z'
 draft: true
 title: 'Open Source DNS-aware Kubernetes Network Policies Using Cilium'
 categories:
-  - Network Policies
+  - Technology
 tags:
   - Kubernetes
   - network policies

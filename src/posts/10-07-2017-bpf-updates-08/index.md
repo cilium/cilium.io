@@ -3,7 +3,7 @@ path: '/blog/2017/7/10/bpf-updates-08'
 date: '2017-07-10T09:11:13.000Z'
 title: 'BPF updates 08'
 categories:
-  - eBPF
+  - Technology
 tags:
   - bpf-updates
   - bpf

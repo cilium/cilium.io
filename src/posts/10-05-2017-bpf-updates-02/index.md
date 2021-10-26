@@ -3,7 +3,7 @@ path: '/blog/2017/5/10/bpf-updates-02'
 date: '2017-05-10T16:46:43.000Z'
 title: 'BPF updates 02'
 categories:
-  - eBPF
+  - Technology
 tags:
   - bpf
   - kernel

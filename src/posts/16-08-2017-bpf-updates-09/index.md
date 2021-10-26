@@ -3,7 +3,7 @@ path: '/blog/2017/8/15/bpf-updates-09'
 date: '2017-08-16T13:43:16.000Z'
 title: 'BPF updates 09'
 categories:
-  - eBPF
+  - Technology
 tags:
   - bpf-updates
 ogSummary: 'This is issue 09 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.'

@@ -3,7 +3,7 @@ path: '/blog/2019/06/24/bpf-code-copyright'
 date: '2019-06-24T09:00:00.000Z'
 title: 'License change and lack of attribution of Cilium eBPF code in Calico project'
 categories:
-  - Random
+  - Community
 tags:
   - eBPF
   - copyright

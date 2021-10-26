@@ -3,7 +3,7 @@ path: '/blog/2017/5/2/bpf-updates-01-2017-05-02'
 date: '2017-05-02T17:20:46.000Z'
 title: 'BPF Updates 01'
 categories:
-  - eBPF
+  - Technology
 tags:
   - bpf
   - bpf-updates

@@ -3,7 +3,7 @@ path: '/blog/2018/09/19/kubernetes-network-policies'
 date: '2018-09-20T19:44:07.000Z'
 title: 'Kubernetes Network Policies Using Cilium - Controlling Ingress/Egress from Namespaces'
 categories:
-  - Network Policies
+  - Technology
 tags:
   - Kubernetes
   - network policies
