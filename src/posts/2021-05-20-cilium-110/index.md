@@ -656,7 +656,6 @@ PCAP files for inspection via Wireshark, tcpdump or other familiar tools.
 <center>
 <div
   style=" max-width: 950px; height: 550px; margin-bottom: 30px; margin-left: -60px; background-size: cover;">
-<br />
 
 [![hubble-record](hubble-record.gif)](https://asciinema.org/a/TIpQRjdAlsQOsbsFtxwLJiVec)
 
