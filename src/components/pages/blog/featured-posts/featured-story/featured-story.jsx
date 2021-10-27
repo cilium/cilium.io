@@ -5,27 +5,23 @@ import React from 'react';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 
-const blockTitle = 'Featured story';
-
 const FeaturedStory = ({ className, title, date, ogImage: cover, ogSummary: summary, path }) => (
   <div className={className}>
-    <Heading tag="h2" size="xxs" theme="gray">
-      {blockTitle}
-    </Heading>
-    <div className="flex flex-col flex-1 p-6 mt-6 border md:mt-8 md:p-8 lg:p-10 md:flex-row xl:flex-col border-gray-3 rounded-large">
-      <Link className="flex items-center flex-1 max-h-[360px] xl:flex-none" to={path}>
-        <GatsbyImage imgClassName="rounded-lg" image={getImage(cover)} alt="" />
+    <div className="flex flex-col items-center flex-1 space-y-6 lg:items-start md:space-y-0 md:flex-row md:space-x-10 xl:space-x-14">
+      <Link
+        className="flex items-center flex-1 md:max-w-[464px] drop-shadow-primary rounded-2xl xl:flex-none"
+        to={path}
+      >
+        <GatsbyImage imgClassName="rounded-2xl" image={getImage(cover)} alt="" />
       </Link>
-      <div className="flex flex-col flex-1 mt-6 md:mt-0 md:ml-8 xl:ml-0 xl:mt-8 ">
+      <div className="flex flex-col flex-1">
         <span className="font-medium leading-none text-gray-1">{date}</span>
         <Link to={path}>
-          <Heading className="mt-4 line-clamp-3 xl:line-clamp-none" tag="h3" size="sm">
+          <Heading className="mt-4 line-clamp-2" tag="h3" size="lg">
             {title}
           </Heading>
         </Link>
-        <p className="mt-3 md:text-lg md:leading-relaxed line-clamp-3 lg:line-clamp-5 xl:line-clamp-none">
-          {summary}
-        </p>
+        <p className="mt-3 md:text-lg md:leading-relaxed line-clamp-3">{summary}</p>
       </div>
     </div>
   </div>

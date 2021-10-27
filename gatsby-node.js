@@ -127,7 +127,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
             ogSummary
             ogImage {
               childImageSharp {
-                gatsbyImageData(width: 685, transformOptions: { fit: CONTAIN })
+                gatsbyImageData(width: 735)
               }
             }
           }
@@ -139,17 +139,19 @@ async function createBlogPages({ graphql, actions, reporter }) {
           fileAbsolutePath: { regex: "/posts/" }
           fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
         }
-        limit: 4
+        limit: 3
         sort: { order: DESC, fields: fileAbsolutePath }
       ) {
         nodes {
           frontmatter {
             path
             date(locale: "en", formatString: "MMM DD, yyyy")
+            categories
             title
+            ogSummary
             ogImage {
               childImageSharp {
-                gatsbyImageData(width: 512)
+                gatsbyImageData(width: 550)
               }
             }
           }

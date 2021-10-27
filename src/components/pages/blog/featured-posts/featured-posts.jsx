@@ -8,9 +8,9 @@ import PopularPosts from './popular-posts';
 
 const FeaturedPosts = ({ featuredStory, popularPosts }) => (
   <section className="mt-6 md:mt-10 lg:mt-16">
-    <Container className="grid grid-cols-12 gap-y-8 md:gap-x-8">
-      <FeaturedStory className="flex flex-col col-span-full xl:col-span-6" {...featuredStory} />
-      <PopularPosts className="flex flex-col col-span-full xl:col-span-6" items={popularPosts} />
+    <Container className="grid grid-cols-12 gap-y-10 md:gap-y-16 md:gap-x-8">
+      <FeaturedStory className="flex flex-col col-span-full" {...featuredStory} />
+      <PopularPosts className="flex flex-col col-span-full" items={popularPosts} />
     </Container>
   </section>
 );

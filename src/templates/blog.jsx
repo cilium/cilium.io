@@ -40,7 +40,6 @@ const BlogPage = (props) => {
       pageMetadata={seoMetadata}
     >
       <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
-      <FeaturedTalks />
       <PostsBoard
         categories={categories}
         posts={posts}
