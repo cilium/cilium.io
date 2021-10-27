@@ -553,7 +553,7 @@ Cilium's XDP L4LB, an outline can be found below:
 
 <center>
 <div
-  style=" max-width: 1520px; height: 640px; margin-bottom: 10px; margin-left: -60px; background: url('/2021-05-cilium-110-xdp-lb.png') #fff no-repeat center; background-size: cover;">
+  style=" max-width: 1520px; height: 640px; margin-bottom: 10px; margin-left: -60px; background: url('/2021-05-cilium-110-xdp-lb.png') #fff no-repeat center; background-size: contain;">
 </div></center>
 
 **Cilium's XDP L4LB** consists of 2 main components:
@@ -601,7 +601,7 @@ encapsulation mechanisms.
 
 <center>
 <div
-  style=" max-width: 1520px; height: 350px; margin-bottom: 40px; margin-left: -50px; background: url('/2021-05-cilium-110-xdp-lb-dsr.png') #fff no-repeat center; background-size: cover;">
+  style=" max-width: 1520px; height: 350px; margin-bottom: 40px; margin-left: -50px; background: url('/2021-05-cilium-110-xdp-lb-dsr.png') #fff no-repeat center; background-size: contain;">
 </div></center>
 
 Not all NICs on the backend nodes might be able to parse the IPIP/IP6IP6
@@ -655,7 +655,7 @@ PCAP files for inspection via Wireshark, tcpdump or other familiar tools.
 
 <center>
 <div
-  style=" max-width: 950px; height: 550px; margin-bottom: 30px; margin-left: -60px; background-size: cover;">
+  style=" max-width: 950px; height: 550px; margin-bottom: 30px; margin-left: -60px; background-size: contain;">
 
 [![hubble-record](hubble-record.gif)](https://asciinema.org/a/TIpQRjdAlsQOsbsFtxwLJiVec)
 
