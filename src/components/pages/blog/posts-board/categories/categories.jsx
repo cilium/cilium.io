@@ -20,8 +20,8 @@ const Categories = ({ categories, currentCategory }) => (
       return (
         <button
           className={classNames(
-            'py-2 lg:py-2.5 font-medium whitespace-nowrap',
-            isActiveElement ? ' text-white bg-primary-1 rounded' : '',
+            'py-2 font-medium whitespace-nowrap rounded border-2 border-transparent leading-none transition-colors duration-200 hover:border-primary-1 hover:text-primary-1',
+            isActiveElement ? ' text-white bg-primary-1 border-primary-1 hover:text-white' : '',
             isCategoryAll ? 'px-4 md:px-6 lg:px-10' : 'px-3'
           )}
           type="button"

@@ -46,9 +46,7 @@ module.exports = {
       boxShadow: {
         primary: '0px 5px 20px rgba(0, 0, 0, 0.09)',
         secondary: '0px 10px 20px rgba(0, 0, 0, 0.09)',
-      },
-      dropShadow: {
-        primary: '0px 5px 30px rgba(0, 0, 0, 0.2)',
+        tertiary: '0px 5px 20px rgba(0, 0, 0, 0.1)',
       },
       borderRadius: {
         large: '20px',
