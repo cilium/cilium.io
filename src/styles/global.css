@@ -44,7 +44,7 @@
 }
 
 .gatsby-highlight {
-  @apply my-6 px-3.5 py-2 bg-gray-4 rounded-lg;
+  @apply my-6 px-3.5 py-2 bg-gray-4 rounded-lg border border-gray-3;
 
   pre {
     @apply !bg-gray-4;
