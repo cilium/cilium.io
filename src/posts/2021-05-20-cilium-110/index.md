@@ -480,7 +480,7 @@ there. Moving the aggregation to the physical device significantly boosted the p
 
 <center>
 <div
-  style=" max-width: 1520px; height: 300px; margin-top: 10px; margin-bottom: 40px; margin-left: -50px; background: url('/2021-05-cilium-110-perf1.png') #fff no-repeat center; background-size: contain;">
+  style=" max-width: 1520px; height: 300px; margin-top: 10px; margin-bottom: 40px; background: url('/2021-05-cilium-110-perf1.png') #fff no-repeat center; background-size: contain;">
 </div></center>
 
 ## Case 2: Host to Service/Pod under tunneling
@@ -499,7 +499,7 @@ are local on the node. A typical use case is NodePort under `externalTrafficPoli
 
 <center>
 <div
-  style=" max-width: 1520px; height: 300px; margin-top: 10px; margin-bottom: 40px; margin-left: -50px; background: url('/2021-05-cilium-110-perf2.png') #fff no-repeat center; background-size: contain;">
+  style=" max-width: 1520px; height: 300px; margin-top: 10px; margin-bottom: 40px; background: url('/2021-05-cilium-110-perf2.png') #fff no-repeat center; background-size: contain;">
 </div></center>
 
 ## Case 3: Pod to Pod under direct routing
@@ -518,7 +518,7 @@ rate.
 
 <center>
 <div
-  style=" max-width: 1520px; height: 330px; margin-top: 10px; margin-bottom: 40px; margin-left: -50px; background: url('/2021-05-cilium-110-perf3.png') #fff no-repeat center; background-size: contain;">
+  style=" max-width: 1520px; height: 330px; margin-top: 10px; margin-bottom: 40px; background: url('/2021-05-cilium-110-perf3.png') #fff no-repeat center; background-size: contain;">
 </div></center>
 
 <a name="standalonelb"></a>
@@ -553,7 +553,7 @@ Cilium's XDP L4LB, an outline can be found below:
 
 <center>
 <div
-  style=" max-width: 1520px; height: 640px; margin-bottom: 10px; margin-left: -60px; background: url('/2021-05-cilium-110-xdp-lb.png') #fff no-repeat center; background-size: contain;">
+  style=" max-width: 1520px; height: 640px; margin-bottom: 10px; background: url('/2021-05-cilium-110-xdp-lb.png') #fff no-repeat center; background-size: contain;">
 </div></center>
 
 **Cilium's XDP L4LB** consists of 2 main components:
@@ -601,7 +601,7 @@ encapsulation mechanisms.
 
 <center>
 <div
-  style=" max-width: 1520px; height: 350px; margin-bottom: 40px; margin-left: -50px; background: url('/2021-05-cilium-110-xdp-lb-dsr.png') #fff no-repeat center; background-size: contain;">
+  style=" max-width: 1520px; height: 350px; margin-bottom: 40px; background: url('/2021-05-cilium-110-xdp-lb-dsr.png') #fff no-repeat center; background-size: contain;">
 </div></center>
 
 Not all NICs on the backend nodes might be able to parse the IPIP/IP6IP6
