@@ -10,7 +10,7 @@ const SocialShare = ({ className, postUrl, title, summary, tags }) => (
   <div
     className={classNames(
       className,
-      'md:sticky flex md:flex-col self-start mt-10 space-x-4 md:space-x-0 md:mt-[calc(100vh/3)] md:space-y-4 top-40'
+      'flex md:flex-col self-start mt-10 space-x-4 md:space-x-0 md:mt-[calc(100vh/3)] md:space-y-4'
     )}
   >
     <TwitterShareButton url={postUrl} title={title} via="ciliumproject" hashtags={tags}>
