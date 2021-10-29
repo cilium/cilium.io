@@ -24,24 +24,12 @@ const Content = ({ date, title, summary, html, path, tags }) => {
         />
         <div className="md:col-span-10">
           <span className="font-semibold leading-none md:text-lg text-gray-1">{date}</span>
-          <Heading className="mt-4 mb-16" size="lg" tag="h1">
+          <Heading className="mt-4 mb-10 lg:mb-16" size="lg" tag="h1">
             {title}
           </Heading>
           <MDXProvider components={{ wrapper: Wrapper }}>
             <MDXRenderer>{html}</MDXRenderer>
           </MDXProvider>
-          {tags?.length && (
-            <div className="flex flex-wrap mt-8 gap-x-2 gap-y-2">
-              {tags.map((tag) => (
-                <span
-                  className="text-xs font-bold leading-none tracking-wider bg-additional-4 bg-opacity-70 rounded uppercase p-2.5 text-primary-1"
-                  key={tag}
-                >
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          )}
         </div>
       </Container>
     </article>
