@@ -99,6 +99,9 @@ module.exports = {
                 color: theme('colors.gray.1'),
               },
             },
+            p: {
+              lineHeight: theme('lineHeight.relaxed'),
+            },
             code: {
               '&::before': {
                 content: '""',
@@ -114,6 +117,9 @@ module.exports = {
             h1: {
               fontSize: theme('fontSize.4xl[0]'),
               lineHeight: theme('lineHeight.tight'),
+            },
+            p: {
+              lineHeight: theme('lineHeight.relaxed'),
             },
             code: {
               '&::before': {
