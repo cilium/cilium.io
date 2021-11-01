@@ -23,16 +23,7 @@ PopularPosts.propTypes = {
   className: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      frontmatter: PropTypes.shape({
-        date: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        ogImage: PropTypes.shape({
-          childImageSharp: PropTypes.shape({
-            gatsbyImageData: PropTypes.shape(PropTypes.any),
-          }),
-        }),
-        path: PropTypes.string.isRequired,
-      }),
+      frontmatter: PropTypes.shape(),
     })
   ).isRequired,
 };

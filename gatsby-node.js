@@ -68,12 +68,9 @@ async function createBlogPosts({ graphql, actions }) {
                 ogSummary
                 ogImage {
                   childImageSharp {
-                    gatsbyImageData(
-                      width: 1200
-                      height: 630
-                      formats: [JPG]
-                      transformOptions: { fit: COVER }
-                    )
+                    resize(jpegQuality: 90, toFormat: JPG, width: 1200, height: 630) {
+                      src
+                    }
                   }
                 }
               }
