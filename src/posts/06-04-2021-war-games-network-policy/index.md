@@ -18,6 +18,8 @@ ogImage: ogimage.png
 ogSummary: 'We’ve just launched a new community resource:networkpolicy.io, to help people learn how to apply Kubernetes network policies to protect their business-critical workloads. But why do we need network policies at all? Let’s consider why traditional network security approaches aren’t sufficient in the cloud native world, and see what advantages we can gain through network policies.'
 ---
 
+import authors from 'utils/author-data';
+
 We’ve just launched a new community resource: <a href="https://networkpolicy.io" target="_blank">networkpolicy.io</a>, to help people learn how to apply Kubernetes network policies to protect their business-critical workloads. But why do we need network policies at all? Let’s consider why traditional network security approaches aren’t sufficient in the cloud native world, and see what advantages we can gain through network policies.
 
 ![](networkpolicy.png)
@@ -64,13 +66,4 @@ You might also be interested in the <a href="https://github.com/networkpolicy/tu
 
 [^1]: Kubernetes defines the NetworkPolicy object but it doesn’t enforce it within Kubernetes. You’ll need a networking plugin - for example Cilium - that does the work. If you use a networking plugin that doesn’t implement network policy, your policies will just be ignored.
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: <a href="https://twitter.com/lizrice">Liz Rice</a>. 
-    </span>
-    <span class="blog-author-bio">
-      Liz is Chief Open Source Officer at <a href="https://isovalent.com" target="_blank">Isovalent</a>, the company behind Cilium. She is also chair of the CNCF's Technical Oversight Committee, and the author of Container Security published by O'Reilly.
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.lizRice} />

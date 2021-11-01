@@ -22,6 +22,8 @@ CNI plugin of Alibaba Cloud, and review some of the statements made in the blog
 post."
 ---
 
+import authors from 'utils/author-data';
+
 ![](ogimage.png)
 
 A couple of weeks ago, the Alibaba team presented details on the new datapath
@@ -171,16 +173,4 @@ the community. If you want to learn more:
 - [How Does Alibaba Cloud Build High-Performance Cloud-Native Pod Networks in Production Environments?](https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590)
 - [What is eBPF?](https://ebpf.io/what-is-ebpf)
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: Thomas Graf
-    </span>
-    <span class="blog-author-bio">
-    Thomas Graf is a Co-Founder of Cilium and the CTO & Co-Founder of
-    Isovalent, the company behind Cilium. Previously, Thomas worked at Red Hat
-    and Cisco as Linux kernel developer on the Linux kernel and various other
-    open-source projects.
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.thomasGraf} />

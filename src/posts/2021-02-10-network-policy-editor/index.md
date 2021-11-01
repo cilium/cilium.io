@@ -20,6 +20,8 @@ ogImage: ogimage.png
 ogSummary: 'Implementing Network Policy is a critical part of building a secure Kubernetes-based platform, but the learning curve from simple examples to more complex real-world policies is steep. Not only can it be painful to get the YAML syntax and formatting just right, but more importantly, there are many subtleties in the behavior of the network policy specification (e.g. default allow/deny, namespacing, wildcarding, rules combination, etc.). Even an experienced Kubernetes YAML-wrangler can still easily tie their brain in knots working through an advanced network policy use case.'
 ---
 
+import authors from 'utils/author-data';
+
 Implementing Network Policy is a critical part of building a secure Kubernetes-based platform, but the learning curve from simple examples to more complex real-world policies is steep. Not only can it be painful to get the YAML syntax and formatting just right, but more importantly, there are many subtleties in the behavior of the network policy specification (e.g. default allow/deny, namespacing, wildcarding, rules combination, etc.). Even an experienced Kubernetes YAML-wrangler can still easily tie their brain in knots working through an advanced network policy use case.
 
 Over the past years, we have learned a lot about the common challenges while working with many of you in the Cilium community implementing Kubernetes Network Policy. Today, we are excited to announce a new free tool for the community to assist you in your journey with Kubernetes NetworkPolicy: <a href="https://editor.cilium.io" target="_blank">editor.cilium.io</a>:
@@ -217,13 +219,4 @@ Tweet us at <a href="https://twitter.com/@ciliumproject" target="_blank">@cilium
 
 We’d love to hear your feedback and questions on both the editor and Network Policy in the **#networkpolicy** channel of <a href="https://cilium.io/slack" target="_blank">Cilium Slack</a>. See you there!
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: <a href="https://twitter.com/genbit">Sergey Generalov</a>. 
-    </span>
-    <span class="blog-author-bio">
-      Sergey is a member of the technical staff at Isovalent and focuses on helping Cilium users solve challenges related to network policies, monitoring, and connectivity troubleshooting by building tools like Network Policy Editor, Hubble UI and more.
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.sergeyGeneralov} />

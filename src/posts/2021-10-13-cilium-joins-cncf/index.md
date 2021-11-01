@@ -17,6 +17,8 @@ tags:
   - CNCF
 ---
 
+import authors from 'utils/author-data.js';
+
 ![Cilium joins the CNCF](cilium-cncf-card.png)
 
 I'm beyond thrilled that Cilium has joined the CNCF as an Incubation project!
@@ -115,13 +117,4 @@ it.
 Whether you're using or contributing to Cilium, we look forward to welcoming you
 in our community!
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: <a href="https://twitter.com/lizrice">Liz Rice</a>
-    </span>
-    <span class="blog-author-bio">
-      Liz is Chief Open Source Officer at <a href="https://isovalent.com" target="_blank">Isovalent</a>, the company behind Cilium. She is also chair of the CNCF's Technical Oversight Committee, and the author of Container Security published by O'Reilly.
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.lizRice} />

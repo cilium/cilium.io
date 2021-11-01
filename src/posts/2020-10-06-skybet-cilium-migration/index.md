@@ -20,6 +20,8 @@ Cilium. Josh is working as a Customer Reliability Engineer for Jetstack. Read
 on to hear what Josh has to say..."
 ---
 
+import authors from 'utils/author-data';
+
 ![](ogimage.png)
 
 This is a guest blog by Josh Van Leeuwen and covers how Josh implemented a CNI
@@ -586,19 +588,4 @@ installation from Canal to Cilium, live.
 - [Cilium GitHub](https://github.com/cilium/cilium)
 - [What is eBPF?](https://ebpf.io/)
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: Josh Van Leeuwen
-    </span>
-    <span class="blog-author-bio">
-    Josh interned at Jetstack during the summer of 2017 before continuing to
-    work part time during his final year of study at the University of Bristol.
-    During this year, Josh developed a Kubernetes custom controller that
-    automates the delegation of RBAC permissions based on time and event
-    triggers. This work was later awarded the best Software Development Tool
-    Final Year Project. Josh now works full time at Jetstack where if he’s not
-    writing more Go, he’s making good food.
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.joshVanLeeuwen} />

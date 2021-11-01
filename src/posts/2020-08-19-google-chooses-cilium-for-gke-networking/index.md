@@ -19,6 +19,8 @@ contributors, Google just announced that Cilium has been selected and made
 available as the new datapath for GKE and Anthos.In this post, we will take a look behind the scenes that lead up to this."
 ---
 
+import authors from 'utils/author-data';
+
 ![](ogimage.png)
 
 Today marks an exciting day for the Cilium community and all Cilium
@@ -203,16 +205,4 @@ If you want to learn more about Cilium and eBPF, check out:
 - [What is eBPF?](https://ebpf.io/)
 - [GKE Dataplane V2 announcement](https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebfp-and-cilium-to-google-kubernetes-engine)
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: Thomas Graf
-    </span>
-    <span class="blog-author-bio">
-    Thomas Graf is a Co-Founder of Cilium and the CTO & Co-Founder of
-    Isovalent, the company behind Cilium. Previously, Thomas worked at Red Hat
-    and Cisco as Linux kernel developer on the Linux kernel and various other
-    open-source projects.
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.thomasGraf} />

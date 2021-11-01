@@ -18,6 +18,8 @@ into where eBPF-based networking is coming from and to understand what the
 excitement is all about."
 ---
 
+import authors from 'utils/author-data';
+
 ![](intro.png)
 
 Today is an exciting day for the Cilium community:
@@ -339,16 +341,4 @@ customers.
 - [Learn more about eBPF](https://ebpf.io/)
 - [Learn more about Isovalent](https://www.isovalent.com/)
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: Thomas Graf
-    </span>
-    <span class="blog-author-bio">
-    Thomas Graf is a Co-Founder of Cilium and the CTO & Co-Founder of
-    Isovalent, the company behind Cilium. Previously, Thomas worked at Red Hat
-    and Cisco as Linux kernel developer on the Linux kernel and various other
-    open-source projects.
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.thomasGraf} />

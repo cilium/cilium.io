@@ -23,6 +23,8 @@ services deployed all over the globe, which are shipped from around 30,000
 Kubernetes pods running on 2,500 nodes."
 ---
 
+import authors from 'utils/author-data';
+
 ![](ogimage.png)
 
 Wildlife Studios is a Brazil-based global gaming company, one of the twenty
@@ -251,17 +253,4 @@ After testing this in a few clusters, we're very excited to rollout the tool for
 environments in order to obtain detailed insights about our network with minimum overhead thanks
 to the use of the Linux kernel technology [eBPF](https://ebpf.io/).
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: Luan Guimarães
-    </span>
-    <span class="blog-author-bio">
-    Hi, my name is Luan, I'm a Brazilian rock climber, amateur musician, and
-    programmer and am enthusiastic about free software communities and other
-    open knowledge initiatives. I’ve been working as a Site Reliability
-    Engineer at Wildlife Studios, using and building infrastructure tools on
-    top of Kubernetes in order to support millions of users around the world.
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.luanGuimaraes} />

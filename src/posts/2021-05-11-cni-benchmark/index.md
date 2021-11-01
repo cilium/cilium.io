@@ -23,6 +23,8 @@ that we have run in the past few weeks. Upon popular request, we are also
 including measurements for Calico to allow for a direct comparison."
 ---
 
+import authors from 'utils/author-data';
+
 ![](cover.png)
 
 # Understanding Cilium Network Performance
@@ -596,14 +598,4 @@ of all aspects of Cilium.
   Cilium?](https://docs.cilium.io/en/latest/intro/) documentation.
 - To learn more about eBPF check out the [eBPF.io](https://ebpf.io) website.
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: Thomas Graf
-    </span>
-    <span class="blog-author-bio">
-    Thomas Graf is a Co-Founder of Cilium and the CTO & Co-Founder of <a href="https://isovalent.com">Isovalent</a>, the company behind Cilium. Before that, Thomas spent 15 years as
-    a kernel developer working on the <a href="https://kernel.org">Linux kernel</a> in networking, security and eventually eBPF.
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.thomasGraf}/>

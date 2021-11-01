@@ -17,32 +17,10 @@ ogImage: ogimage.png
 ogSummary: '现代数据中心的应用系统已经逐渐转向基于微服务架构的开发体系，一个微服务架构的应用系统是由多个小的独立的服务组成，它们之间通过轻量通信协议如 HTTP、gRPC、Kafka 等进行通信。微服务架构下的服务天然具有动态变化的特点，结合容器化部署，时常会引起大规模的容器实例启动或重启。要确保这种向高度动态化的微服务应用之间的安全可达，既是挑战，也是机遇。'
 ---
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Guest Blog Post
-    </span>
-    <span class="blog-author-bio">
-      This is a guest blog by a Cilium user based on the <a
-      href="https://davidlovezoe.club/wordpress/archives/851">the original blog
-      post</a>. If you would like to publish a blog post as well, contact us on
-      Slack.
-    </span>
-  </div>
-  <div class="blog-author">
-    <span class="blog-author-header">
-      About the author: Li Wenquan
-    </span>
-    <span class="blog-author-bio">
-    Hello everyone, I am Li Wenquan from China. You can call me David. I
-    started my Docker journey from 2014 and now work as a project manager of
-    enterprise container platform, which is built on Kubernetes and Mesos. I
-    got to know Cilium project from Kubecon, it is so interesting and
-    promising. I've learned a lot from it, such as BPF, XDP and how to replace
-    kube-proxy in a elegant way and I'd love to contribute to it.
-    </span>
-  </div>
-</div>
+import authors from 'utils/author-data';
+
+<BlogAuthor theme="secondary" header="Guest Blog Post:" bio={`This is a guest blog by a Cilium user based on the <a href="https://davidlovezoe.club/wordpress/archives/851">the original blog post</a>. If you would like to publish a blog post as well, contact us on Slack.`} />
+<BlogAuthor {...authors.liWenquan} />
 
 ![](ogimage.png)
 

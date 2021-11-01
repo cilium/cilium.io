@@ -17,6 +17,8 @@ ogImage: ogimage.png
 ogSummary: "This is a guest blog by Howard Hao. Howard is working as a Kubernetes infrastructure SRE for Ect888.com. In this guest post, Howard will share how Ect888 uses Cilium & F5 to build a scalable load-balancing infrastructure with BGP for Ect888's production environment."
 ---
 
+import authors from 'utils/author-data';
+
 ![](intro.png)
 
 # Kubernetes Networking with Cilium and F5
@@ -291,16 +293,4 @@ network, this article may give you some inspiration.
 Finally, thanks for the great work of the Cilium teams, who build this
 efficient and flexible open source software.
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: Howard Hao
-    </span>
-    <span class="blog-author-bio">
-    Hi, I have been working as a Site Reliability Engineer for five years at
-    Ect888.com since graduating from Shanghai Jiao Tong University. Our team
-    consists of 7 members and has been focusing on the construction of
-    container orchestration platform like Kubernetes for one and a half years. 
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.howardHao} />

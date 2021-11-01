@@ -21,6 +21,8 @@ preview of what to be excited about and how to plan to attend the event.
 "
 ---
 
+import authors from 'utils/author-data';
+
 The first ever eBPF Summit is just over one week out and we are already well
 past 1'000 registrations. We have been blown away by the number of talk and
 keynote proposals. This also meant that we had to turn down many fantastic
@@ -142,16 +144,4 @@ eBPF's success.
 - [Conference website & Registartion](https://ebpf.io/summit-2020/)
 - [What is eBPF?](https://ebpf.io/what-is-ebpf)
 
-<div class="blog-authors">
-  <div class="blog-author">
-    <span class="blog-author-header">
-      Author: Thomas Graf
-    </span>
-    <span class="blog-author-bio">
-    Thomas Graf is a Co-Creator of Cilium and the CTO & Co-Founder of
-    Isovalent, the company behind Cilium. Previously, Thomas worked at Red Hat
-    and Cisco as Linux kernel developer on the Linux kernel and various other
-    open-source projects.
-    </span>
-  </div>
-</div>
+<BlogAuthor {...authors.thomasGraf} />

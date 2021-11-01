@@ -3,13 +3,14 @@ import { MDXRenderer } from 'gatsby-plugin-mdx';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import BlogAuthor from 'components/shared/blog-author';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
 import SocialShare from './social-share';
 
 const Wrapper = ({ children }) => <div className="prose md:prose-lg !max-w-none">{children}</div>;
-
+const components = { wrapper: Wrapper, BlogAuthor };
 const Content = ({ date, title, summary, html, path, tags }) => {
   const postUrl = `${process.env.GATSBY_DEFAULT_SITE_URL}${path}`;
   return (
@@ -27,7 +28,7 @@ const Content = ({ date, title, summary, html, path, tags }) => {
           <Heading className="mt-4 mb-10 lg:mb-16" size="lg" tag="h1">
             {title}
           </Heading>
-          <MDXProvider components={{ wrapper: Wrapper }}>
+          <MDXProvider components={components}>
             <MDXRenderer>{html}</MDXRenderer>
           </MDXProvider>
         </div>
