@@ -4,7 +4,6 @@ import React from 'react';
 
 import FeaturedPosts from 'components/pages/blog/featured-posts';
 import PostsBoard from 'components/pages/blog/posts-board';
-import Community from 'components/shared/community';
 
 import MainLayout from '../layouts/main';
 
@@ -46,7 +45,6 @@ const BlogPage = (props) => {
         currentPage={currentPage}
         numPages={numPages}
       />
-      <Community />
     </MainLayout>
   );
 };
