@@ -5,7 +5,6 @@ import React from 'react';
 import FeaturedPosts from 'components/pages/blog/featured-posts';
 import PostsBoard from 'components/pages/blog/posts-board';
 import Community from 'components/shared/community';
-import FeaturedTalks from 'components/shared/featured-talks';
 
 import MainLayout from '../layouts/main';
 
@@ -18,7 +17,7 @@ const BlogPage = (props) => {
       featured,
       popularPosts,
       categories,
-      queryFilter,
+      currentCategory,
       currentPage,
       numPages,
       canonicalUrl,
@@ -43,7 +42,7 @@ const BlogPage = (props) => {
       <PostsBoard
         categories={categories}
         posts={posts}
-        queryFilter={queryFilter}
+        currentCategory={currentCategory}
         currentPage={currentPage}
         numPages={numPages}
       />
@@ -55,12 +54,17 @@ const BlogPage = (props) => {
 export default BlogPage;
 
 export const blogPostsQuery = graphql`
-  query blogPostsQuery($skip: Int!, $limit: Int!, $queryFilter: String!, $draftFilter: [Boolean]!) {
+  query blogPostsQuery(
+    $skip: Int!
+    $limit: Int!
+    $currentCategory: String!
+    $draftFilter: [Boolean]!
+  ) {
     allMdx(
       filter: {
         fileAbsolutePath: { regex: "/posts/" }
         fields: {
-          categories: { glob: $queryFilter }
+          categories: { glob: $currentCategory }
           isFeatured: { eq: false }
           draft: { in: $draftFilter }
         }

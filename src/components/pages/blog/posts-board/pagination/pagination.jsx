@@ -11,8 +11,8 @@ const handlePaginationClick = (event, page) => {
     state: { preventScroll: true },
   });
 };
-const Pagination = ({ currentPage, numPages, queryFilter }) => {
-  const currentPath = blogFilterToSlug(queryFilter);
+const Pagination = ({ currentPage, numPages, currentCategory }) => {
+  const currentPath = blogFilterToSlug(currentCategory);
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
   const prevPage = currentPage - 1 === 1 ? currentPath : currentPath + (currentPage - 1).toString();
@@ -46,7 +46,7 @@ const Pagination = ({ currentPage, numPages, queryFilter }) => {
 };
 
 Pagination.propTypes = {
-  queryFilter: PropTypes.string.isRequired,
+  currentCategory: PropTypes.string.isRequired,
   currentPage: PropTypes.number.isRequired,
   numPages: PropTypes.number.isRequired,
 };

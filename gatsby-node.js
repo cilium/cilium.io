@@ -6,12 +6,49 @@ const BLOG_POSTS_PER_PAGE = 9;
 
 const slugifyCategory = (item) => (item === '*' ? 'blog/' : `blog/categories/${slugify(item)}/`);
 
+async function getPopularPostsData(graphql) {
+  const {
+    data: {
+      allPopularPosts: { nodes: popularPosts },
+    },
+  } = await graphql(`
+    query {
+      allPopularPosts: allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/posts/" }
+          fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
+        }
+        limit: 4
+        sort: { order: DESC, fields: fileAbsolutePath }
+      ) {
+        nodes {
+          frontmatter {
+            path
+            date(locale: "en", formatString: "MMM DD, yyyy")
+            categories
+            title
+            ogSummary
+            ogImage {
+              childImageSharp {
+                gatsbyImageData(width: 550)
+              }
+            }
+          }
+          fileAbsolutePath
+        }
+      }
+    }
+  `);
+  return popularPosts;
+}
+
 // Create Blog Posts
 async function createBlogPosts({ graphql, actions }) {
+  const allPopularPosts = await getPopularPostsData(graphql);
+  const popularPosts = allPopularPosts.slice(3);
   const {
     data: {
       allFile: { nodes: blogPosts },
-      allPopularPosts: { nodes: popularPosts },
     },
   } = await graphql(`
     query {
@@ -46,28 +83,6 @@ async function createBlogPosts({ graphql, actions }) {
           relativeDirectory
         }
       }
-      allPopularPosts: allMdx(
-        filter: {
-          fileAbsolutePath: { regex: "/posts/" }
-          fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
-        }
-        limit: 4
-        sort: { order: DESC, fields: fileAbsolutePath }
-      ) {
-        nodes {
-          frontmatter {
-            path
-            date(locale: "en", formatString: "MMM DD, yyyy")
-            title
-            ogImage {
-              childImageSharp {
-                gatsbyImageData(width: 512)
-              }
-            }
-          }
-          fileAbsolutePath
-        }
-      }
     }
   `);
 
@@ -86,27 +101,24 @@ async function createBlogPosts({ graphql, actions }) {
       return;
     }
 
-    // determine if there is popular posts
-    const popularPostsData = popularPosts?.length ? popularPosts : false;
-
     const { path } = postData.frontmatter;
 
     actions.createPage({
       path,
       component: Path.resolve('./src/templates/blog-post.jsx'),
-      context: { postData, popularPosts: popularPostsData },
+      context: { postData, popularPosts },
     });
   });
 }
 
 // Create Blog Pages
 async function createBlogPages({ graphql, actions, reporter }) {
+  const popularPosts = await getPopularPostsData(graphql);
   const { createPage } = actions;
 
   const {
     data: {
       featuredPostEdges: { nodes: featuredPost },
-      allPopularPosts: { nodes: popularPosts },
       allCategories: { group: allCategories },
     },
   } = await graphql(`
@@ -134,30 +146,6 @@ async function createBlogPages({ graphql, actions, reporter }) {
           fileAbsolutePath
         }
       }
-      allPopularPosts: allMdx(
-        filter: {
-          fileAbsolutePath: { regex: "/posts/" }
-          fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
-        }
-        limit: 3
-        sort: { order: DESC, fields: fileAbsolutePath }
-      ) {
-        nodes {
-          frontmatter {
-            path
-            date(locale: "en", formatString: "MMM DD, yyyy")
-            categories
-            title
-            ogSummary
-            ogImage {
-              childImageSharp {
-                gatsbyImageData(width: 550)
-              }
-            }
-          }
-          fileAbsolutePath
-        }
-      }
     }
   `);
 
@@ -169,9 +157,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
     );
   }
 
-  const getCategories = allCategories.map((category) => category.fieldValue);
-  const categoryAll = ['*'];
-  const categories = categoryAll.concat(getCategories);
+  const categories = ['*'].concat(allCategories.map((category) => category.fieldValue));
 
   // Create category pages
   await Promise.all(
@@ -201,10 +187,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
         const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
         const pathBase = slugifyCategory(category);
         // determine if there is featured post
-        const featuredPostData = featuredPost?.length ? featuredPost[0] : false;
-
-        // determine if there is popular posts
-        const popularPostsData = popularPosts?.length ? popularPosts : false;
+        const featuredPostData = featuredPost?.[0] ?? null;
 
         Array.from({ length: numPages }).forEach((_, i) => {
           const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
@@ -216,9 +199,9 @@ async function createBlogPages({ graphql, actions, reporter }) {
               skip: i * BLOG_POSTS_PER_PAGE,
               numPages,
               currentPage: i + 1,
-              queryFilter: category,
+              currentCategory: category,
               featured: featuredPostData,
-              popularPosts: popularPostsData,
+              popularPosts,
               categories,
               // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
               draftFilter:

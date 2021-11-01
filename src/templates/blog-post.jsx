@@ -26,7 +26,7 @@ const BlogPostPage = (props) => {
   return (
     <MainLayout showBanner={shouldShowBanner} pageMetadata={seoMetadata}>
       <Content path={path} html={html} date={date} title={title} tags={tags} summary={ogSummary} />
-      <PopularPosts items={popularPosts} />
+      {!!popularPosts?.length && <PopularPosts items={popularPosts} />}
     </MainLayout>
   );
 };
