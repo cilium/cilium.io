@@ -4,7 +4,6 @@ import 'prismjs/themes/prism.css';
 
 import Content from 'components/pages/blog-post/content';
 import PopularPosts from 'components/pages/blog-post/popular-posts';
-import Community from 'components/shared/community';
 
 import MainLayout from '../layouts/main';
 
@@ -28,7 +27,6 @@ const BlogPostPage = (props) => {
     <MainLayout showBanner={shouldShowBanner} pageMetadata={seoMetadata}>
       <Content path={path} html={html} date={date} title={title} tags={tags} summary={ogSummary} />
       <PopularPosts items={popularPosts} />
-      <Community />
     </MainLayout>
   );
 };
