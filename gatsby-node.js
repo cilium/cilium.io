@@ -18,7 +18,7 @@ async function getPopularPostsData(graphql) {
           fileAbsolutePath: { regex: "/posts/" }
           fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
         }
-        limit: 4
+        limit: 3
         sort: { order: DESC, fields: fileAbsolutePath }
       ) {
         nodes {
@@ -113,8 +113,7 @@ async function createBlogPosts({ graphql, actions }) {
 
 // Create Blog Pages
 async function createBlogPages({ graphql, actions, reporter }) {
-  const allPopularPosts = await getPopularPostsData(graphql);
-  const popularPosts = allPopularPosts.slice(0, 3);
+  const popularPosts = await getPopularPostsData(graphql);
   const { createPage } = actions;
 
   const {
