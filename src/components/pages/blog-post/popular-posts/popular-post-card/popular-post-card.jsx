@@ -13,6 +13,7 @@ const PopularPostCard = ({ frontmatter: { date, title, ogImage: cover, path } })
       className="flex-shrink-0 lg:max-w-[198px] md:min-h-[170px] lg:min-h-0"
       imgClassName="rounded"
       image={getImage(cover)}
+      objectFit="contain"
       alt="Cover"
     />
     <div>
