@@ -100,7 +100,7 @@ module.exports = {
               },
             },
             p: {
-              lineHeight: theme('lineHeight.relaxed'),
+              lineHeight: theme('lineHeight.normal'),
             },
             code: {
               '&::before': {
@@ -119,7 +119,7 @@ module.exports = {
               lineHeight: theme('lineHeight.tight'),
             },
             p: {
-              lineHeight: theme('lineHeight.relaxed'),
+              lineHeight: theme('lineHeight.normal'),
             },
             code: {
               '&::before': {
