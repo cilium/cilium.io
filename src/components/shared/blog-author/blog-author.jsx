@@ -26,7 +26,7 @@ const BlogAuthor = ({ header, bio, theme }) => {
       </div>
       <span
         className={classNames(
-          isPrimary ? 'my-6 md:!my-0 text-lg leading-normal lg:text-xl lg:leading-normal' : 'inline'
+          isPrimary ? 'my-6 md:!mt-0 text-lg leading-normal lg:text-xl lg:leading-normal' : 'inline'
         )}
         dangerouslySetInnerHTML={{ __html: bio }}
       />
