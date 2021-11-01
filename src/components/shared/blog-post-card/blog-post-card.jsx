@@ -16,6 +16,7 @@ const BlogPostCard = ({ path, ogImage: cover, date, title, ogSummary: summary, c
         className="min-h-[168px] max-h-[168px]"
         imgClassName="rounded-lg"
         image={getImage(cover)}
+        objectFit="contain"
         alt={title}
       />
     ) : (

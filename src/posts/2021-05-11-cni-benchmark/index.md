@@ -602,10 +602,8 @@ of all aspects of Cilium.
       Author: Thomas Graf
     </span>
     <span class="blog-author-bio">
-    Thomas Graf is a Co-Founder of Cilium and the CTO & Co-Founder of
-    <a href="https://isovalent.com">Isovalent</a>, the company behind Cilium. Before that, Thomas spent 15 years as
-    a kernel developer working on the <a href="https://kernel.org">Linux kernel</a> in networking, security and
-    eventually eBPF.
+    Thomas Graf is a Co-Founder of Cilium and the CTO & Co-Founder of <a href="https://isovalent.com">Isovalent</a>, the company behind Cilium. Before that, Thomas spent 15 years as
+    a kernel developer working on the <a href="https://kernel.org">Linux kernel</a> in networking, security and eventually eBPF.
     </span>
   </div>
 </div>
