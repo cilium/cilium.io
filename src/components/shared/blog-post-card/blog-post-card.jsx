@@ -30,7 +30,7 @@ const BlogPostCard = ({ path, ogImage: cover, date, title, ogSummary: summary, c
       <h3 className="mt-3 font-bold leading-normal transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-lg">
         {title}
       </h3>
-      <p className="mt-2 mb-4 line-clamp-3">{summary}</p>
+      <p className="mt-2 mb-4 line-clamp-5">{summary}</p>
       <div className="flex flex-wrap mt-auto gap-x-2 gap-y-2">
         {categories?.map((category) => (
           <span
