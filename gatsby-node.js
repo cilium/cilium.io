@@ -43,9 +43,7 @@ async function getPopularPostsData(graphql) {
 }
 
 // Create Blog Posts
-async function createBlogPosts({ graphql, actions }) {
-  const popularPosts = await getPopularPostsData(graphql);
-
+async function createBlogPosts({ graphql, actions }, popularPosts) {
   const {
     data: {
       allFile: { nodes: blogPosts },
@@ -109,8 +107,7 @@ async function createBlogPosts({ graphql, actions }) {
 }
 
 // Create Blog Pages
-async function createBlogPages({ graphql, actions, reporter }) {
-  const popularPosts = await getPopularPostsData(graphql);
+async function createBlogPages({ graphql, actions, reporter }, popularPosts) {
   const { createPage } = actions;
 
   const {
@@ -214,8 +211,9 @@ async function createBlogPages({ graphql, actions, reporter }) {
 }
 
 exports.createPages = async (options) => {
-  await createBlogPages(options);
-  await createBlogPosts(options);
+  const popularPosts = await getPopularPostsData(options.graphql);
+  await createBlogPages(options, popularPosts);
+  await createBlogPosts(options, popularPosts);
 };
 
 exports.onCreateNode = ({ node, actions }) => {
