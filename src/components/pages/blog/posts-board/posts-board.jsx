@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
@@ -10,16 +10,36 @@ import Pagination from './pagination';
 
 const blockTitle = 'All posts';
 
-const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => (
-  <section className="mt-10 md:mt-20 lg:mt-28">
-    <Container>
-      <Heading tag="h2">{blockTitle}</Heading>
-      <Categories categories={categories} currentCategory={currentCategory} />
-      <BlogPostsList posts={posts} />
-      <Pagination currentPage={currentPage} numPages={numPages} currentCategory={currentCategory} />
-    </Container>
-  </section>
-);
+const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
+  const scrollTo = () => {
+    const element = document.getElementById('categories');
+    const offset = -50;
+    const y = element.getBoundingClientRect().top + window.pageYOffset + offset;
+
+    window.scrollTo({ top: y });
+  };
+
+  useEffect(() => {
+    if (currentPage > 1) {
+      scrollTo();
+    }
+  }, [currentPage]);
+
+  return (
+    <section className="mt-10 md:mt-20 lg:mt-28">
+      <Container>
+        <Heading tag="h2">{blockTitle}</Heading>
+        <Categories id="categories" categories={categories} currentCategory={currentCategory} />
+        <BlogPostsList posts={posts} />
+        <Pagination
+          currentPage={currentPage}
+          numPages={numPages}
+          currentCategory={currentCategory}
+        />
+      </Container>
+    </section>
+  );
+};
 PostsBoard.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   posts: PropTypes.arrayOf(

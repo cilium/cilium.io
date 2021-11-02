@@ -5,7 +5,7 @@ import React, { useCallback } from 'react';
 
 import blogFilterToSlug from 'utils/blog-filter-to-slug';
 
-const Categories = ({ categories, currentCategory }) => {
+const Categories = ({ id, categories, currentCategory }) => {
   const handleCategoryClick = useCallback(
     (category) => (event) => {
       event.preventDefault();
@@ -17,7 +17,10 @@ const Categories = ({ categories, currentCategory }) => {
     []
   );
   return (
-    <div className="flex px-4 mt-6 -mx-4 overflow-x-auto gap-x-3.5 xl:flex-wrap xl:overflow-visible md:px-6 lg:px-10 xl:px-0 md:-mx-6 lg:-mx-10 xl:mx-0 no-scrollbar lg:gap-x-5 md:mt-10 lg:mt-14">
+    <div
+      id={id}
+      className="flex px-4 mt-6 -mx-4 overflow-x-auto gap-x-3.5 xl:flex-wrap xl:overflow-visible md:px-6 lg:px-10 xl:px-0 md:-mx-6 lg:-mx-10 xl:mx-0 no-scrollbar lg:gap-x-5 md:mt-10 lg:mt-14"
+    >
       {categories.map((category) => {
         const isActiveElement = currentCategory === category;
         const isCategoryAll = category === '*';
@@ -42,6 +45,7 @@ const Categories = ({ categories, currentCategory }) => {
 Categories.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   currentCategory: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Categories;
