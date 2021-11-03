@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { graphql } from 'gatsby';
 import React from 'react';
 import 'prismjs/themes/prism.css';
 
@@ -9,7 +10,8 @@ import MainLayout from '../layouts/main';
 
 const BlogPostPage = (props) => {
   const {
-    pageContext: { postData, popularPosts },
+    data: { mdx: postData },
+    pageContext: { popularPosts },
     location: { pathname },
   } = props;
   const {
@@ -32,5 +34,27 @@ const BlogPostPage = (props) => {
     </MainLayout>
   );
 };
+
+export const query = graphql`
+  query ($id: String!) {
+    mdx(id: { eq: $id }) {
+      frontmatter {
+        date(formatString: "MMM DD, yyyy")
+        title
+        path
+        tags
+        ogSummary
+        ogImage {
+          childImageSharp {
+            resize(jpegQuality: 90, toFormat: JPG, width: 1200, height: 630) {
+              src
+            }
+          }
+        }
+      }
+      body
+    }
+  }
+`;
 
 export default BlogPostPage;

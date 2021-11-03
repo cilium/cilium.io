@@ -46,62 +46,34 @@ async function getPopularPostsData(graphql) {
 async function createBlogPosts({ graphql, actions }, popularPosts) {
   const {
     data: {
-      allFile: { nodes: blogPosts },
+      allMdx: { nodes: blogPosts },
     },
   } = await graphql(`
-    query {
-      allFile(filter: { ext: { in: [".md", ".mdx"] } }) {
+    query BlogPosts {
+      allMdx(filter: { fileAbsolutePath: { regex: "/src/posts/" } }) {
         nodes {
-          children {
-            ... on Mdx {
-              id
-              fields {
-                draft
-              }
-              frontmatter {
-                date(formatString: "MMM DD, yyyy")
-                title
-                path
-                tags
-                ogSummary
-                ogImage {
-                  childImageSharp {
-                    resize(jpegQuality: 90, toFormat: JPG, width: 1200, height: 630) {
-                      src
-                    }
-                  }
-                }
-              }
-              body
-            }
+          id
+          fileAbsolutePath
+          frontmatter {
+            path
           }
-          relativeDirectory
         }
       }
     }
   `);
 
   blogPosts.forEach((file) => {
-    const { children } = file;
-    const postData = { ...children[0] };
-    // pure debugging condition
-    if (typeof postData.frontmatter === 'undefined') {
-      // eslint-disable-next-line no-console
-      console.log('\nmarkup is broken! check index.md file at\n\n', file.relativeDirectory);
-      return;
-    }
-
     // skip page creation if post has `draft` flag
-    if (process.env.NODE_ENV === 'production' && postData.fields.draft) {
+    if (process.env.NODE_ENV === 'production' && file.frontmatter.draft) {
       return;
     }
 
-    const { path } = postData.frontmatter;
+    const { path } = file.frontmatter;
 
     actions.createPage({
       path,
       component: Path.resolve('./src/templates/blog-post.jsx'),
-      context: { postData, popularPosts },
+      context: { id: file.id, popularPosts },
     });
   });
 }
