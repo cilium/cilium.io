@@ -141,7 +141,7 @@ traffic differently depending on the source IP address. For instance, a legacy
 firewall is able to filter traffic that originates from pods with particular
 labels, by matching purely on the source IP address of the inbound traffic.
 
-![Egress IP Gateway](/2021-05-cilium-110-egress-gateway.png)
+![Egress IP Gateway](2021-05-cilium-110-egress-gateway.png)
 
 As an example, the following policy instructs Cilium to use egress IP
 `192.168.33.100` for traffic from all pods in `default` namespace and destined
