@@ -1,36 +1,29 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import PropTypes from 'prop-types';
-import React, { useState, useLayoutEffect } from 'react';
+import React from 'react';
 
 import GithubLogo from 'icons/github.inline.svg';
 
 import Link from '../link';
 
-const FALLBACK_COUNT = 9300;
-
-const fetchGithubStartsCount = async (cb) => {
-  try {
-    const res = await fetch('https://api.github.com/repos/cilium/cilium').then((res) => res.json());
-    cb(res.stargazers_count);
-  } catch (e) {
-    // eslint-disable-next-line no-console
-    console.error('Unable to fetch git stars');
-  }
-};
-
 const GithubStars = ({ className }) => {
-  const [count, setCount] = useState(FALLBACK_COUNT);
+  const data = useStaticQuery(graphql`
+    query githubQuery {
+      github {
+        url
+        count
+      }
+    }
+  `);
 
-  useLayoutEffect(() => {
-    fetchGithubStartsCount(setCount);
-  }, []);
-
+  const { url, count } = data.github;
   return (
     <div className={className}>
       <Link
         type="text"
         theme="black-primary"
         className="flex items-center h-8 text-sm font-bold border rounded border-gray-3"
-        to="https://github.com/cilium/cilium"
+        to={url}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -46,6 +39,8 @@ const GithubStars = ({ className }) => {
   );
 };
 
+export default GithubStars;
+
 GithubStars.propTypes = {
   className: PropTypes.string,
 };
@@ -53,5 +48,3 @@ GithubStars.propTypes = {
 GithubStars.defaultProps = {
   className: null,
 };
-
-export default GithubStars;
