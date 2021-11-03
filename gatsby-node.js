@@ -43,7 +43,7 @@ async function getPopularPostsData(graphql) {
 }
 
 // Create Blog Posts
-async function createBlogPosts({ graphql, actions }, popularPosts) {
+async function createBlogPosts({ graphql, actions }) {
   const {
     data: {
       allMdx: { nodes: blogPosts },
@@ -73,7 +73,7 @@ async function createBlogPosts({ graphql, actions }, popularPosts) {
     actions.createPage({
       path,
       component: Path.resolve('./src/templates/blog-post.jsx'),
-      context: { id: file.id, popularPosts },
+      context: { id: file.id },
     });
   });
 }
