@@ -18,9 +18,10 @@ const BlogPostPage = (props) => {
   } = postData;
   const shouldShowBanner = pathname.startsWith('/blog');
   const slug = path.startsWith('/') ? path.slice(1) : path;
+  const description = `${ogSummary.slice(0, 133)}...`;
   const seoMetadata = {
     title,
-    description: ogSummary,
+    description,
     image: ogImage || null,
     slug,
   };
