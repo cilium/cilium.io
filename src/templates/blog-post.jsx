@@ -10,10 +10,7 @@ import MainLayout from '../layouts/main';
 
 const BlogPostPage = (props) => {
   const {
-    data: {
-      mdx: postData,
-      allPopularPosts: { nodes: popularPosts },
-    },
+    data: { mdx: postData },
     location: { pathname },
   } = props;
   const {
@@ -33,7 +30,7 @@ const BlogPostPage = (props) => {
   return (
     <MainLayout showBanner={shouldShowBanner} pageMetadata={seoMetadata}>
       <Content path={path} html={html} date={date} title={title} tags={tags} summary={ogSummary} />
-      {!!popularPosts?.length && <PopularPosts items={popularPosts} />}
+      <PopularPosts />
     </MainLayout>
   );
 };
@@ -56,30 +53,6 @@ export const query = graphql`
         }
       }
       body
-    }
-    allPopularPosts: allMdx(
-      filter: {
-        fileAbsolutePath: { regex: "/posts/" }
-        fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
-      }
-      limit: 3
-      sort: { order: DESC, fields: fileAbsolutePath }
-    ) {
-      nodes {
-        frontmatter {
-          path
-          date(locale: "en", formatString: "MMM DD, yyyy")
-          categories
-          title
-          ogSummary
-          ogImage {
-            childImageSharp {
-              gatsbyImageData(width: 550)
-            }
-          }
-        }
-        fileAbsolutePath
-      }
     }
   }
 `;

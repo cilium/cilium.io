@@ -6,42 +6,6 @@ const BLOG_POSTS_PER_PAGE = 9;
 
 const slugifyCategory = (item) => (item === '*' ? 'blog/' : `blog/categories/${slugify(item)}/`);
 
-async function getPopularPostsData(graphql) {
-  const {
-    data: {
-      allPopularPosts: { nodes: popularPosts },
-    },
-  } = await graphql(`
-    query {
-      allPopularPosts: allMdx(
-        filter: {
-          fileAbsolutePath: { regex: "/posts/" }
-          fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
-        }
-        limit: 3
-        sort: { order: DESC, fields: fileAbsolutePath }
-      ) {
-        nodes {
-          frontmatter {
-            path
-            date(locale: "en", formatString: "MMM DD, yyyy")
-            categories
-            title
-            ogSummary
-            ogImage {
-              childImageSharp {
-                gatsbyImageData(width: 550)
-              }
-            }
-          }
-          fileAbsolutePath
-        }
-      }
-    }
-  `);
-  return popularPosts;
-}
-
 // Create Blog Posts
 async function createBlogPosts({ graphql, actions }) {
   const {
@@ -79,7 +43,7 @@ async function createBlogPosts({ graphql, actions }) {
 }
 
 // Create Blog Pages
-async function createBlogPages({ graphql, actions, reporter }, popularPosts) {
+async function createBlogPages({ graphql, actions, reporter }) {
   const { createPage } = actions;
 
   const {
@@ -167,7 +131,6 @@ async function createBlogPages({ graphql, actions, reporter }, popularPosts) {
               currentPage: i + 1,
               currentCategory: category,
               featured: featuredPostData,
-              popularPosts,
               categories,
               // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
               draftFilter:
@@ -183,9 +146,8 @@ async function createBlogPages({ graphql, actions, reporter }, popularPosts) {
 }
 
 exports.createPages = async (options) => {
-  const popularPosts = await getPopularPostsData(options.graphql);
-  await createBlogPages(options, popularPosts);
-  await createBlogPosts(options, popularPosts);
+  await createBlogPages(options);
+  await createBlogPosts(options);
 };
 
 exports.onCreateNode = ({ node, actions }) => {

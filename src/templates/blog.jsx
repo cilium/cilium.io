@@ -14,7 +14,6 @@ const BlogPage = (props) => {
     },
     pageContext: {
       featured,
-      popularPosts,
       categories,
       currentCategory,
       currentPage,
@@ -37,7 +36,7 @@ const BlogPage = (props) => {
       canonicalUrl={canonicalUrl}
       pageMetadata={seoMetadata}
     >
-      <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
+      <FeaturedPosts featuredStory={featured.frontmatter} />
       <PostsBoard
         categories={categories}
         posts={posts}
