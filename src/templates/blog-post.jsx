@@ -17,11 +17,12 @@ const BlogPostPage = (props) => {
     frontmatter: { path, title, date, tags, ogImage, ogSummary },
   } = postData;
   const shouldShowBanner = pathname.startsWith('/blog');
-
+  const slug = path.startsWith('/') ? path.slice(1) : path;
   const seoMetadata = {
     title,
     description: ogSummary,
     image: ogImage || null,
+    slug,
   };
   return (
     <MainLayout showBanner={shouldShowBanner} pageMetadata={seoMetadata}>
