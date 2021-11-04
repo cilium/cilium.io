@@ -24,6 +24,11 @@ const featuredBlogs = {
       linkUrl: 'https://cilium.io/blog/2020/10/06/skybet-cilium-migration',
       linkText: 'How to perform a CNI Live Migration from Flannel+Calico to Cilium',
     },
+    {
+      linkUrl: 'https://thenewstack.io/how-ebpf-streamlines-the-service-mesh/',
+      linkText: 'How eBPF Streamlines the Service Mesh',
+      linkTarget: '_blank',
+    },
   ],
 };
 
