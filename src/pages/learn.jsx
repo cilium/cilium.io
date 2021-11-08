@@ -4,8 +4,8 @@ import Highlights from 'components/pages/home/highlights';
 import UserCommunity from 'components/pages/home/user-community';
 import Architecture from 'components/pages/learn/architecture';
 import EnterpriseDistributions from 'components/pages/learn/enterprise-distributions';
-import InstallDeploy from 'components/pages/learn/install-deploy';
 import Learn from 'components/pages/learn/learn';
+import News from 'components/pages/learn/news';
 import RelatedProjects from 'components/pages/learn/related-projects';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
@@ -137,7 +137,7 @@ const LearnPage = () => (
     <UserCommunity {...userCommunity} />
     <EnterpriseDistributions />
     <RelatedProjects />
-    <InstallDeploy />
+    <News />
     <Community withBanner />
   </MainLayout>
 );
