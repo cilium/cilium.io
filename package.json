@@ -1,9 +1,9 @@
 {
-  "name": "cilium-gatsby",
+  "name": "cilium.io-v2",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Alex Barashkov <alex@pixelpoint.io>",
+  "author": "Cilium",
   "scripts": {
     "start": "npm run develop",
     "develop": "gatsby develop",
@@ -96,9 +96,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pixel-point/gatsby-starter"
+    "url": "https://github.com/isovalent/cilium.io-v2"
   },
   "bugs": {
-    "url": "https://github.com/pixel-point/gatsby-starter/issues"
+    "url": "https://github.com/isovalent/cilium.io-v2/issues"
   }
 }

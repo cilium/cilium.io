@@ -1,4 +1,4 @@
-# Pixel Point Gatsby Starter
+# Cilium Website
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@
 1. Clone this repository
 
 ```bash
-git clone git@github.com:pixel-point/gatsby-starter.git
+git clone git@github.com:isovalent/cilium.io-v2.git
 ```
 
 2. Install dependencies
@@ -86,8 +86,7 @@ npm run clean
 ### Each component includes
 
 1. Main JavaScript File
-2. SASS File
-3. Index File
+2. Index File
 
 ### Each component optionally may include
 
@@ -105,15 +104,13 @@ component
 │  │  └── image.png
 │  ├── icons
 │  │  └── icon.svg
-│  ├── nested-component.js
-│  ├── nested-component.module.scss
+│  ├── nested-component.jsx
 │  └── index.js
 ├── images
 │  └── image.png
 ├── icons
 │  └── icon.svg
-├── component.js
-├── component.module.scss
+├── component.jsx
 └── index.js
 ```
 
