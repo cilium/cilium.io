@@ -13,7 +13,6 @@
   - [ESLint](#eslint)
   - [Prettier](#prettier)
   - [VS Code](#vs-code)
-- [Style Variables](#style-variables)
 - [How to create blog post](#how-to-create-blog-post)
 
 ## Getting Started
@@ -67,7 +66,6 @@ npm run clean
 │   │  └── shared — React components that are being used across the whole website
 │   ├── hooks
 │   ├── images — Images that are being quired using graphql. Read more about it here — gatsbyjs.org/docs/working-with-images. Also note, that folder structure should be equal to the structure of components folder
-│   ├── layouts
 │   ├── pages
 │   ├── styles
 │   ├── templates
@@ -90,8 +88,7 @@ npm run clean
 
 ### Each component optionally may include
 
-1. Folder with images
-2. Folder with icons
+1. Folder with icons and images
 
 Also, each component may include another component that follows all above listed rules.
 
@@ -101,14 +98,12 @@ Also, each component may include another component that follows all above listed
 component
 ├── nested-component
 │  ├── images
-│  │  └── image.png
-│  ├── icons
+│  │  ├── image.png
 │  │  └── icon.svg
 │  ├── nested-component.jsx
 │  └── index.js
 ├── images
-│  └── image.png
-├── icons
+│  ├── image.png
 │  └── icon.svg
 ├── component.jsx
 └── index.js
@@ -167,10 +162,6 @@ To enable Prettier go to Preferences -> Settings -> type "Format". Then check th
 
 Reload VS Code and auto-format will work for you.
 
-## Style Variables
-
-All style variables that being used across the whole application are stored in [src/styles/variables.scss](/src/styles/variables.scss).
-
 ## How to create blog post
 
 The blog is created using `gatsby-source-filesystem` plugin and `gatsby-plugin-mdx` along with the createPages Gatsby Node API. The blog is configured to dynamically create pages with `.md` files from `src/posts/`.
@@ -189,7 +180,7 @@ In `.md` files we can declare frontmatter at the beginning:
 - ogImage: the og:image in SEO metadata, also it is the cover image, which is displayed in the blog post card (featured story, popular posts);
 - ogSummary: the og:description in SEO metadata, also it is the description text, which is displayed in the blog post card (featured story, popular posts).
 
-The preview tags in `.md` files (which is used in the current Cilium blog) are fully converted to `ogImage` and `ogSummary` in `frontmatter`.
+The preview tags in `.md` files (which is used in the old Cilium blog) are fully converted to `ogImage` and `ogSummary` in `frontmatter`.
 
 ```markdown
 ---
