@@ -21,11 +21,6 @@ const featuredBlogs = {
       linkText: 'Cilium joins the CNCF',
     },
     {
-      linkUrl: 'https://isovalent.com/blog/post/its-dns',
-      linkTarget: '_blank',
-      linkText: 'Troubleshooting DNS Issues',
-    },
-    {
       linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
       linkText: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
       linkTarget: '_blank',
