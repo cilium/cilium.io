@@ -62,17 +62,6 @@ async function createBlogPages({ graphql, actions, reporter }) {
         filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isFeatured: { eq: true } } }
       ) {
         nodes {
-          frontmatter {
-            path
-            date(locale: "en", formatString: "MMM DD, yyyy")
-            title
-            ogSummary
-            ogImage {
-              childImageSharp {
-                gatsbyImageData(width: 735)
-              }
-            }
-          }
           fileAbsolutePath
         }
       }
@@ -116,8 +105,6 @@ async function createBlogPages({ graphql, actions, reporter }) {
         const posts = result.data.allMdx.edges;
         const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
         const pathBase = slugifyCategory(category);
-        // determine if there is featured post
-        const featuredPostData = featuredPost?.[0] ?? null;
 
         Array.from({ length: numPages }).forEach((_, i) => {
           const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
@@ -130,7 +117,6 @@ async function createBlogPages({ graphql, actions, reporter }) {
               numPages,
               currentPage: i + 1,
               currentCategory: category,
-              featured: featuredPostData,
               categories,
               // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
               draftFilter:

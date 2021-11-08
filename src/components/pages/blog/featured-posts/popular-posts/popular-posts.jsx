@@ -7,7 +7,7 @@ import Heading from 'components/shared/heading';
 
 const blockTitle = 'Popular posts';
 
-const PopularPosts = ({ className, items }) => {
+const PopularPosts = ({ className }) => {
   const {
     allPopularPosts: { posts },
   } = useStaticQuery(graphql`
