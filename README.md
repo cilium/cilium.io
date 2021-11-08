@@ -1,4 +1,4 @@
-# Pixel Point Gatsby Starter
+# Cilium Website
 
 ## Table of Contents
 
@@ -13,7 +13,6 @@
   - [ESLint](#eslint)
   - [Prettier](#prettier)
   - [VS Code](#vs-code)
-- [Style Variables](#style-variables)
 - [How to create blog post](#how-to-create-blog-post)
 
 ## Getting Started
@@ -21,7 +20,7 @@
 1. Clone this repository
 
 ```bash
-git clone git@github.com:pixel-point/gatsby-starter.git
+git clone git@github.com:isovalent/cilium.io-v2.git
 ```
 
 2. Install dependencies
@@ -67,12 +66,11 @@ npm run clean
 │   │  └── shared — React components that are being used across the whole website
 │   ├── hooks
 │   ├── images — Images that are being quired using graphql. Read more about it here — gatsbyjs.org/docs/working-with-images. Also note, that folder structure should be equal to the structure of components folder
-│   ├── layouts
 │   ├── pages
 │   ├── styles
 │   ├── templates
 │   ├── utils
-│   └── html.js — HTML template for all generated pages. Read more about it here — gatsbyjs.org/docs/custom-html
+│   └── html.jsx — HTML template for all generated pages. Read more about it here — gatsbyjs.org/docs/custom-html
 ├── static
 │   └── fonts - Self-hosted fonts
 ├── gatsby-browser.js — This file is where Gatsby expects to find any usage of the Gatsby browser APIs (if any). These allow customization/extension of default Gatsby settings affecting the browser. Read more about it here — gatsbyjs.org/docs/browser-apis
@@ -86,13 +84,11 @@ npm run clean
 ### Each component includes
 
 1. Main JavaScript File
-2. SASS File
-3. Index File
+2. Index File
 
 ### Each component optionally may include
 
-1. Folder with images
-2. Folder with icons
+1. Folder with icons and images
 
 Also, each component may include another component that follows all above listed rules.
 
@@ -102,18 +98,14 @@ Also, each component may include another component that follows all above listed
 component
 ├── nested-component
 │  ├── images
-│  │  └── image.png
-│  ├── icons
+│  │  ├── image.png
 │  │  └── icon.svg
 │  ├── nested-component.js
-│  ├── nested-component.module.scss
 │  └── index.js
 ├── images
-│  └── image.png
-├── icons
+│  ├── image.png
 │  └── icon.svg
 ├── component.js
-├── component.module.scss
 └── index.js
 ```
 
@@ -170,10 +162,6 @@ To enable Prettier go to Preferences -> Settings -> type "Format". Then check th
 
 Reload VS Code and auto-format will work for you.
 
-## Style Variables
-
-All style variables that being used across the whole application are stored in [src/styles/variables.scss](/src/styles/variables.scss).
-
 ## How to create blog post
 
 The blog is created using `gatsby-source-filesystem` plugin and `gatsby-plugin-mdx` along with the createPages Gatsby Node API. The blog is configured to dynamically create pages with `.md` files from `src/posts/`.
@@ -192,7 +180,7 @@ In `.md` files we can declare frontmatter at the beginning:
 - ogImage: the og:image in SEO metadata, also it is the cover image, which is displayed in the blog post card (featured story, popular posts);
 - ogSummary: the og:description in SEO metadata, also it is the description text, which is displayed in the blog post card (featured story, popular posts).
 
-The preview tags in `.md` files (which is used in the current Cilium blog) are fully converted to `ogImage` and `ogSummary` in `frontmatter`.
+The preview tags in `.md` files (which is used in the old Cilium blog) are fully converted to `ogImage` and `ogSummary` in `frontmatter`.
 
 ```markdown
 ---
