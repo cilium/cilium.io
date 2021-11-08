@@ -70,7 +70,7 @@ npm run clean
 │   ├── styles
 │   ├── templates
 │   ├── utils
-│   └── html.jsx — HTML template for all generated pages. Read more about it here — gatsbyjs.org/docs/custom-html
+│   └── html.js — HTML template for all generated pages. Read more about it here — gatsbyjs.org/docs/custom-html
 ├── static
 │   └── fonts - Self-hosted fonts
 ├── gatsby-browser.js — This file is where Gatsby expects to find any usage of the Gatsby browser APIs (if any). These allow customization/extension of default Gatsby settings affecting the browser. Read more about it here — gatsbyjs.org/docs/browser-apis
@@ -100,12 +100,12 @@ component
 │  ├── images
 │  │  ├── image.png
 │  │  └── icon.svg
-│  ├── nested-component.js
+│  ├── nested-component.jsx
 │  └── index.js
 ├── images
 │  ├── image.png
 │  └── icon.svg
-├── component.js
+├── component.jsx
 └── index.js
 ```
 
