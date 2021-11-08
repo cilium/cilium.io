@@ -4,10 +4,10 @@ import Discover from 'components/pages/home/discover';
 import Hero from 'components/pages/home/hero';
 import Highlights from 'components/pages/home/highlights';
 import Learn from 'components/pages/home/learn';
-import FeaturedTalks from 'components/pages/home/learn/featured-talks';
 import TwitterCards from 'components/pages/home/twitter-cards';
 import UserCommunity from 'components/pages/home/user-community';
 import Community from 'components/shared/community';
+import FeaturedTalks from 'components/shared/featured-talks';
 import MainLayout from 'layouts/main';
 
 const userCommunity1 = {

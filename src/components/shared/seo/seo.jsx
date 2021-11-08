@@ -5,7 +5,7 @@ import { Helmet } from 'react-helmet';
 
 import createMetaImagePath from 'utils/create-meta-image-path';
 
-const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) => {
+const SEO = ({ data: { title, description, image, slug } = {}, facebook, canonical } = {}) => {
   const {
     site: {
       siteMetadata: { siteTitle, siteDescription, siteUrl, siteImage, siteLanguage },
@@ -28,7 +28,7 @@ const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) 
   const currentDescription = description ?? siteDescription;
   const currentUrl = slug ? `${siteUrl}/${slug}` : siteUrl;
   const currentImagePath = image ? createMetaImagePath(image, siteUrl) : siteUrl + siteImage;
-
+  const currentCanonicalUrl = canonical || currentUrl;
   return (
     <Helmet
       title={currentTitle}
@@ -48,6 +48,11 @@ const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) 
       {facebook && <meta property="fb:app_id" content={facebook.appId} />}
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={currentTitle} />
+      <meta name="twitter:image" content={currentImagePath} />
+      <meta name="twitter:url" content={currentUrl} />
+      <meta name="twitter:description" content={currentDescription} />
+      <link rel="canonical" href={currentCanonicalUrl} />
     </Helmet>
   );
 };

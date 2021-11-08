@@ -24,6 +24,59 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [
+          'gatsby-remark-copy-linked-files',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 1008,
+              quality: 90,
+              withWebp: true,
+              backgroundColor: 'white',
+              disableBgImageOnAlpha: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              // Class prefix for <pre> tags containing syntax highlighting;
+              // defaults to 'language-' (eg <pre class="language-js">).
+              // If your site loads Prism into the browser at runtime,
+              // (eg for use with libraries like react-live),
+              // you may use this to prevent Prism from re-processing syntax.
+              // This is an uncommon use-case though;
+              // If you're unsure, it's best to use the default value.
+              classPrefix: 'language-',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-video',
+            options: {
+              width: 1008,
+              height: 'auto',
+              preload: 'auto',
+              muted: true,
+              autoplay: true,
+              playsinline: true,
+              controls: true,
+              loop: true,
+            },
+          },
+          'gatsby-remark-responsive-iframe',
+        ],
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-sharp',
@@ -82,6 +135,58 @@ module.exports = {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
         id: 'GTM-M533ZSF',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
+          {
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
+          {
+            serialize: ({ query: { site, allMdx } }) =>
+              allMdx.nodes.map((node) => ({
+                ...node.frontmatter,
+                description: node.excerpt,
+                date: node.frontmatter.date,
+                url: site.siteMetadata.siteUrl + node.frontmatter.path,
+                guid: site.siteMetadata.siteUrl + node.frontmatter.path,
+                custom_elements: [{ 'content:encoded': node.html }],
+              })),
+            query: `
+              {
+                allMdx(
+                  filter: {fileAbsolutePath: { regex: "/posts/" }, fields: {draft: {eq: false}} }
+                  limit: 20
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    html
+                    excerpt
+                    frontmatter {
+                      title
+                      date
+                      path
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/blog/rss.xml',
+            title:
+              'Cilium - The latest articles covering eBPF-based Networking, Observability, and Security',
+          },
+        ],
       },
     },
     {
