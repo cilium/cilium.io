@@ -10,18 +10,10 @@ import MainLayout from '../layouts/main';
 const BlogPage = (props) => {
   const {
     data: {
-      allMdx: { nodes: posts },
+      allPosts: { nodes: posts },
+      featuredPostEdges: { nodes: featuredStory },
     },
-    pageContext: {
-      featured,
-      popularPosts,
-      categories,
-      currentCategory,
-      currentPage,
-      numPages,
-      canonicalUrl,
-      slug,
-    },
+    pageContext: { categories, currentCategory, currentPage, numPages, canonicalUrl, slug },
     location: { pathname },
   } = props;
   const shouldShowBanner = pathname.startsWith('/blog');
@@ -37,7 +29,7 @@ const BlogPage = (props) => {
       canonicalUrl={canonicalUrl}
       pageMetadata={seoMetadata}
     >
-      <FeaturedPosts featuredStory={featured.frontmatter} popularPosts={popularPosts} />
+      <FeaturedPosts featuredStory={featuredStory?.[0].frontmatter} />
       <PostsBoard
         categories={categories}
         posts={posts}
@@ -58,7 +50,7 @@ export const blogPostsQuery = graphql`
     $currentCategory: String!
     $draftFilter: [Boolean]!
   ) {
-    allMdx(
+    allPosts: allMdx(
       filter: {
         fileAbsolutePath: { regex: "/posts/" }
         fields: {
@@ -84,6 +76,25 @@ export const blogPostsQuery = graphql`
             }
           }
         }
+      }
+    }
+
+    featuredPostEdges: allMdx(
+      filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isFeatured: { eq: true } } }
+    ) {
+      nodes {
+        frontmatter {
+          path
+          date(locale: "en", formatString: "MMM DD, yyyy")
+          title
+          ogSummary
+          ogImage {
+            childImageSharp {
+              gatsbyImageData(width: 735)
+            }
+          }
+        }
+        fileAbsolutePath
       }
     }
   }
