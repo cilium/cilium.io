@@ -34,7 +34,7 @@
     }
 
     ul {
-      @apply m-0;
+      @apply mb-0 mt-2;
 
       & > li {
         @apply my-1;

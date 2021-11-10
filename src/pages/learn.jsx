@@ -3,7 +3,6 @@ import React from 'react';
 import Highlights from 'components/pages/home/highlights';
 import UserCommunity from 'components/pages/home/user-community';
 import Architecture from 'components/pages/learn/architecture';
-import EnterpriseDistributions from 'components/pages/learn/enterprise-distributions';
 import Learn from 'components/pages/learn/learn';
 import News from 'components/pages/learn/news';
 import RelatedProjects from 'components/pages/learn/related-projects';
@@ -132,10 +131,9 @@ const LearnPage = () => (
     <Hero className="pt-5 md:pt-16 lg:pb-5" {...hero} />
     <Highlights className="mt-10 md:mt-20" />
     <Architecture />
-    <Learn />
     <TryCilium />
+    <Learn />
     <UserCommunity {...userCommunity} />
-    <EnterpriseDistributions />
     <RelatedProjects />
     <News />
     <Community withBanner />
