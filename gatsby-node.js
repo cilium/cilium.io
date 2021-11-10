@@ -7,108 +7,44 @@ const BLOG_POSTS_PER_PAGE = 9;
 
 const slugifyCategory = (item) => (item === '*' ? 'blog/' : `blog/categories/${slugify(item)}/`);
 
-async function getPopularPostsData(graphql) {
+// Create Blog Posts
+async function createBlogPosts({ graphql, actions }) {
   const {
     data: {
-      allPopularPosts: { nodes: popularPosts },
+      allMdx: { nodes: blogPosts },
     },
   } = await graphql(`
-    query {
-      allPopularPosts: allMdx(
-        filter: {
-          fileAbsolutePath: { regex: "/posts/" }
-          fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
-        }
-        limit: 3
-        sort: { order: DESC, fields: fileAbsolutePath }
-      ) {
+    query BlogPosts {
+      allMdx(filter: { fileAbsolutePath: { regex: "/src/posts/" } }) {
         nodes {
+          id
+          fileAbsolutePath
           frontmatter {
             path
-            date(locale: "en", formatString: "MMM DD, yyyy")
-            categories
-            title
-            ogSummary
-            ogImage {
-              childImageSharp {
-                gatsbyImageData(width: 550)
-              }
-            }
           }
-          fileAbsolutePath
-        }
-      }
-    }
-  `);
-  return popularPosts;
-}
-
-// Create Blog Posts
-async function createBlogPosts({ graphql, actions }, popularPosts) {
-  const {
-    data: {
-      allFile: { nodes: blogPosts },
-    },
-  } = await graphql(`
-    query {
-      allFile(filter: { ext: { in: [".md", ".mdx"] } }) {
-        nodes {
-          children {
-            ... on Mdx {
-              id
-              fields {
-                draft
-              }
-              frontmatter {
-                date(formatString: "MMM DD, yyyy")
-                title
-                path
-                tags
-                ogSummary
-                ogImage {
-                  childImageSharp {
-                    resize(jpegQuality: 90, toFormat: JPG, width: 1200, height: 630) {
-                      src
-                    }
-                  }
-                }
-              }
-              body
-            }
-          }
-          relativeDirectory
         }
       }
     }
   `);
 
   blogPosts.forEach((file) => {
-    const { children } = file;
-    const postData = { ...children[0] };
-    // pure debugging condition
-    if (typeof postData.frontmatter === 'undefined') {
-      // eslint-disable-next-line no-console
-      console.log('\nmarkup is broken! check index.md file at\n\n', file.relativeDirectory);
-      return;
-    }
-
     // skip page creation if post has `draft` flag
-    if (process.env.NODE_ENV === 'production' && postData.fields.draft) {
+    if (process.env.NODE_ENV === 'production' && file.frontmatter.draft) {
       return;
     }
 
-    const { path } = postData.frontmatter;
+    const { path } = file.frontmatter;
 
     actions.createPage({
       path,
       component: Path.resolve('./src/templates/blog-post.jsx'),
-      context: { postData, popularPosts },
+      context: { id: file.id },
     });
   });
 }
 
 // Create Blog Pages
-async function createBlogPages({ graphql, actions, reporter }, popularPosts) {
+async function createBlogPages({ graphql, actions, reporter }) {
   const { createPage } = actions;
 
   const {
@@ -127,17 +63,6 @@ async function createBlogPages({ graphql, actions, reporter }, popularPosts) {
         filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isFeatured: { eq: true } } }
       ) {
         nodes {
-          frontmatter {
-            path
-            date(locale: "en", formatString: "MMM DD, yyyy")
-            title
-            ogSummary
-            ogImage {
-              childImageSharp {
-                gatsbyImageData(width: 735)
-              }
-            }
-          }
           fileAbsolutePath
         }
       }
@@ -181,8 +106,6 @@ async function createBlogPages({ graphql, actions, reporter }, popularPosts) {
         const posts = result.data.allMdx.edges;
         const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
         const pathBase = slugifyCategory(category);
-        // determine if there is featured post
-        const featuredPostData = featuredPost?.[0] ?? null;
 
         Array.from({ length: numPages }).forEach((_, i) => {
           const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
@@ -195,8 +118,6 @@ async function createBlogPages({ graphql, actions, reporter }, popularPosts) {
               numPages,
               currentPage: i + 1,
               currentCategory: category,
-              featured: featuredPostData,
-              popularPosts,
               categories,
               // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
               draftFilter:
@@ -212,9 +133,8 @@ async function createBlogPages({ graphql, actions, reporter }, popularPosts) {
 }
 
 exports.createPages = async (options) => {
-  const popularPosts = await getPopularPostsData(options.graphql);
-  await createBlogPages(options, popularPosts);
-  await createBlogPosts(options, popularPosts);
+  await createBlogPages(options);
+  await createBlogPosts(options);
 };
 
 exports.onCreateNode = ({ node, actions }) => {
