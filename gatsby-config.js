@@ -12,8 +12,8 @@ module.exports = {
     siteLanguage: 'en',
     siteUrl: process.env.GATSBY_DEFAULT_SITE_URL,
     /* author */
-    authorName: 'pixel point',
-    authorTwitterAccount: '@',
+    authorName: 'cilium',
+    authorTwitterAccount: '@ciliumproject',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
