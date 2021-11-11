@@ -21,7 +21,7 @@ const hero = {
 };
 
 const userCommunity = {
-  title: 'User stories',
+  title: 'Use cases',
   items: [
     {
       iconName: 'aws',
@@ -133,8 +133,8 @@ const LearnPage = () => (
     <Architecture />
     <TryCilium />
     <Learn />
-    <UserCommunity {...userCommunity} />
     <RelatedProjects />
+    <UserCommunity {...userCommunity} />
     <News />
     <Community withBanner />
   </MainLayout>
