@@ -33,7 +33,7 @@ const items = [
         linkText: 'Watch video',
       },
       {
-        linkUrl: '/blog/2021/05/11/cni-benchmark',
+        linkUrl: '/blog/2020/11/10/ebpf-future-of-networking/',
         linkText: 'Read blog',
       },
     ],
@@ -44,7 +44,7 @@ const items = [
     text: 'Explore the performance characteristics of Cilium based on extensive benchmarks',
     links: [
       {
-        linkUrl: 'https://cilium.io/blog/2020/11/10/ebpf-future-of-networking/',
+        linkUrl: '/blog/2021/05/11/cni-benchmark',
         linkText: 'Read blog',
       },
     ],
