@@ -4,8 +4,8 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
 import CardItem from './card-item';
-import ConceptsIcon from './images/concepts.inline.svg';
 import IntroductionIcon from './images/introduction.inline.svg';
+import NetworkPerformanceIcon from './images/network-performance.inline.svg';
 import NetworkingIcon from './images/networking.inline.svg';
 
 const title = 'Learn about Cilium & eBPF';
@@ -23,19 +23,6 @@ const items = [
     ],
   },
   {
-    icon: ConceptsIcon,
-    name: 'Weekly Interactive Cilium Introduction and Live Q&A',
-    text: 'with Thomas Graf, Cilium Co-Creator',
-    links: [
-      {
-        isCalendlyPopUp: true,
-        linkTarget: '_blank',
-        linkUrl: 'https://calendly.com/cilium-events/cilium-introduction',
-        linkText: 'Book your Seat',
-      },
-    ],
-  },
-  {
     icon: NetworkingIcon,
     name: 'The Future of eBPF based Networking and Security',
     text: 'eBPF Summit 2020, Thomas Graf, Cilium Co-Creator, CTO & Co-Founder Isovalent',
@@ -46,7 +33,18 @@ const items = [
         linkText: 'Watch video',
       },
       {
-        linkUrl: 'https://cilium.io/blog/2020/11/10/ebpf-future-of-networking/',
+        linkUrl: '/blog/2020/11/10/ebpf-future-of-networking/',
+        linkText: 'Read blog',
+      },
+    ],
+  },
+  {
+    icon: NetworkPerformanceIcon,
+    name: 'Understanding Cilium Network Performance',
+    text: 'Explore the performance characteristics of Cilium based on extensive benchmarks',
+    links: [
+      {
+        linkUrl: '/blog/2021/05/11/cni-benchmark',
         linkText: 'Read blog',
       },
     ],
@@ -59,7 +57,7 @@ const Learn = () => (
       <Heading tag="h2">{title}</Heading>
       <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 lg:gap-8 md:mt-10 lg:grid-cols-3 lg:mt-14">
         {items.map((item, index) => (
-          <CardItem {...item} key={index} />
+          <CardItem size="sm" {...item} key={index} />
         ))}
       </div>
     </Container>

@@ -5,12 +5,12 @@ import React, { Fragment } from 'react';
 
 import Logo from 'images/logo.inline.svg';
 
-import Button from '../button';
 import Container from '../container';
 import GithubStars from '../github-stars';
 import Link from '../link';
 
 const navigation = [
+  { name: 'Enterprise', href: '/enterprise' },
   { name: 'Learn', href: '/learn' },
   { name: 'Blog', href: '/blog' },
   { name: 'Slack', target: '_blank', href: 'https://cilium.herokuapp.com/' },
@@ -45,11 +45,6 @@ const Header = () => (
                 </div>
               </div>
               <div className="hidden lg:flex lg:space-x-8 xl:space-x-11 lg:items-center">
-                <span className="inline-flex rounded-md">
-                  <Button size="sm" to="/enterprise">
-                    Enterprise
-                  </Button>
-                </span>
                 {navigation.map((item) => (
                   <Link
                     type="text"
@@ -95,8 +90,7 @@ const Header = () => (
                   </div>
                 </div>
                 <div className="flex flex-col items-center justify-center px-2 pb-11 mt-11">
-                  <Button to="/enterprise">Enterprise</Button>
-                  <div className="flex flex-col justify-center mt-9 space-y-9">
+                  <div className="flex flex-col justify-center space-y-9">
                     {navigation.map((item) => (
                       <Link
                         key={item.name}

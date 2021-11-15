@@ -9,20 +9,21 @@ import Podcasts from '../learn/podcasts';
 const title = 'Digging Deeper';
 
 const featuredBlogs = {
-  title: 'Technical Resources',
+  title: 'In the news',
   items: [
     {
-      linkUrl: 'https://cilium.io/blog/2021/05/11/cni-benchmark',
-      linkText: 'CNI Benchmark: Understanding Cilium Performance',
-    },
-    {
-      linkUrl: 'https://isovalent.com/blog/post/its-dns',
+      linkUrl: 'https://thenewstack.io/how-ebpf-streamlines-the-service-mesh/',
+      linkText: 'How eBPF Streamlines the Service Mesh',
       linkTarget: '_blank',
-      linkText: 'Troubleshooting DNS Issues',
     },
     {
-      linkUrl: 'https://cilium.io/blog/2020/10/06/skybet-cilium-migration',
-      linkText: 'How to perform a CNI Live Migration from Flannel+Calico to Cilium',
+      linkUrl: 'https://cilium.io/blog/2021/10/13/cilium-joins-cncf/',
+      linkText: 'Cilium joins the CNCF',
+    },
+    {
+      linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
+      linkText: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
+      linkTarget: '_blank',
     },
   ],
 };

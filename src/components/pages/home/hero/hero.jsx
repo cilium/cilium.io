@@ -16,7 +16,7 @@ const description =
   'Cilium is an open source software for providing, securing and observing network connectivity between container workloads - cloud native, and fueled by the revolutionary Kernel technology eBPF.';
 
 const Hero = () => (
-  <section className="pt-5 md:pt-16 lg:pt-32">
+  <section className="pt-5 overflow-hidden md:pt-16 lg:pt-32">
     <Container className="grid grid-cols-12 md:gap-x-8">
       <div className="col-span-full lg:-mr-8 lg:col-span-6 2xl:col-span-7 2xl:mr-0">
         <CNCFLogo />
