@@ -2,7 +2,6 @@ import React from 'react';
 
 import Distributions from 'components/pages/enterprise/distributions';
 import Training from 'components/pages/enterprise/training';
-import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
 import illustration from 'images/hero-illustration.svg';
 import MainLayout from 'layouts/main';
@@ -20,7 +19,6 @@ const EnterprisePage = () => (
     <Hero className="pt-5 md:pt-16 xl:pb-20" {...hero} />
     <Distributions />
     <Training />
-    <Community />
   </MainLayout>
 );
 
