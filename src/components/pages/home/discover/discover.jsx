@@ -40,12 +40,17 @@ const items = [
   },
   {
     icon: GuideSvg,
-    name: 'Do it yourself Tutorials',
-    text: 'Check out the Cilium documentation to quickly get started on a Kubernetes cluster of your choice.',
+    name: 'Documentation & Tutorials',
+    text: 'Check out the documentation or the interactive hands-on tutorial in a live environment to quickly get started with Cilium.',
     buttons: [
       {
         buttonUrl: 'https://docs.cilium.io/en/stable/',
-        buttonText: 'Learn more',
+        buttonText: 'Documentation',
+        buttonTarget: '_blank',
+      },
+      {
+        buttonUrl: 'https://play.instruqt.com/isovalent/invite/j4maqox5r1h5',
+        buttonText: 'Tutorial',
         buttonTarget: '_blank',
       },
     ],
