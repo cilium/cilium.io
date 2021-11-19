@@ -27,7 +27,7 @@ const CardItem = ({ icon: Icon, name, text, buttons, size }) => {
         <div
           className={classNames(
             'mt-auto',
-            has2Buttons && 'grid xs:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-3',
+            has2Buttons && 'grid xs:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-3',
             isSmallSize ? 'xl:gap-x-4' : 'lg:gap-x-5'
           )}
         >
