@@ -259,8 +259,7 @@ to their API endpoints. Running Hubble Relay as a deployment provides
 flexibility in terms of scheduling and resource allocation. Furthermore, as it
 is decoupled from Cilium, specific network policies can be applied.
 
-A new <a href="https://docs.cilium.io/en/v1.8/gettingstarted/hubble">networking and security observability with Hubble</a> getting started guide has been added to our documentation. It provides a walkthrough of setting up a local multi-node Kubernetes cluster on Docker using
-<a href="https://kind.sigs.k8s.io/">kind</a> in order to demonstrate some of
+A new <a href="https://docs.cilium.io/en/v1.8/gettingstarted/hubble">networking and security observability with Hubble</a> getting started guide has been added to our documentation. It provides a walkthrough of setting up a local multi-node Kubernetes cluster on Docker using <a href="https://kind.sigs.k8s.io/">kind</a> in order to demonstrate some of
 Hubble’s capabilities, including using Hubble Relay.
 
 Our vision for Hubble Relay is to make it the entrypoint for cluster-wide
@@ -387,9 +386,7 @@ Policy verdict log: flow 0xabf3bda6 local EP ID 343, remote ID 2986, dst port 80
 ```
 
 Now that we inject a policy to match on the traffic, we can see that the action
-is now to `allow` the traffic. For more details see the new
-<a href="https://docs.cilium.io/en/v1.8/gettingstarted/policy-creation">Policy
-Creation Getting Started Guide</a>.
+is now to `allow` the traffic. For more details see the new <a href="https://docs.cilium.io/en/v1.8/gettingstarted/policy-creation">Policy Creation Getting Started Guide</a>.
 
 <a name="performance"></a>
 
@@ -412,8 +409,7 @@ improvements in Cilium to have the same scalability results achieved in 1.5.
 
 In this release, we have created a detailed scalability report on Cilium
 entirely running in CRD mode for a cluster running 1000 nodes and 50000 pods.
-This report is part of the official documentation and can be found in
-<a href="https://docs.cilium.io/en/v1.8/concepts/scalability/report/">here</a>.
+This report is part of the official documentation and can be found in <a href="https://docs.cilium.io/en/v1.8/concepts/scalability/report/">here</a>.
 
 ![Endpoint regeneration time on 50k pods for 500 CCNP](scalability-report.png)
 
@@ -459,9 +455,7 @@ that the map sizes approximately correspond to the Linux connection track table 
 of the Cilium documentation.
 
 In addition, various improvements were made to reduce the size of all the Cilium binaries and
-container images. This directly results in a smaller RSS (Resident Set Size) of the Cilium processes
-at runtime and thus a smaller memory footprint. In addition, Cilium 1.8 is built using
-<a href="https://golang.org/doc/go1.14">Go release 1.14</a> which includes several improvements
+container images. This directly results in a smaller RSS (Resident Set Size) of the Cilium processes at runtime and thus a smaller memory footprint. In addition, Cilium 1.8 is built using <a href="https://golang.org/doc/go1.14">Go release 1.14</a> which includes several improvements
 resulting in both, reduced memory footprint and reduced binary size.
 
 | Binary                    |  1.7  |  1.8  | Reduction |
