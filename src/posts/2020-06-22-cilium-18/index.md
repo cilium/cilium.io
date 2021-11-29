@@ -117,16 +117,7 @@ _Contributed by Daniel Borkmann (Isovalent)_
 
 ![Green XDP Gopher](access-ok.png)
 
-We first introduced Cilium's kube-proxy replacement in eBPF in Cilium's
-<a href="/blog/2019/08/20/cilium-16/#kubeproxy-removal">1.6</a>
-release and further improved it in
-<a href="/blog/2020/02/18/cilium-17#kubeproxy-removal">1.7</a>
-to run by default in new Cilium deployments. For the Cilium 1.8 release we took
-it to another extreme and now _accelerate_ our eBPF-based kube-proxy replacement
-handling for Kubernetes service types `NodePort`, `LoadBalancer` and services
-with `externalIPs`. eXpress Data Path (XDP) in the Linux kernel
-allows for significantly better performance while at the same time making more
-efficient use of CPU resources on the worker nodes.
+We first introduced Cilium's kube-proxy replacement in eBPF in Cilium's <a href="/blog/2019/08/20/cilium-16/#kubeproxy-removal">1.6</a> release and further improved it in <a href="/blog/2020/02/18/cilium-17#kubeproxy-removal">1.7</a> to run by default in new Cilium deployments. For the Cilium 1.8 release we took it to another extreme and now _accelerate_ our eBPF-based kube-proxy replacement handling for Kubernetes service types `NodePort`, `LoadBalancer` and services with `externalIPs`. eXpress Data Path (XDP) in the Linux kernel allows for significantly better performance while at the same time making more efficient use of CPU resources on the worker nodes.
 
 The XDP layer, which we co-maintain and develop in the Linux kernel, is
 directly integrated into network drivers and supported by all major 10G, 40G or
@@ -163,12 +154,7 @@ sharing the same core code as our tc eBPF implementation. Three options are
 provided for redirecting traffic to remote backends after service translation
 in XDP: DSR, SNAT and Hybrid.
 
-- **DSR:** "Direct Server Return" (DSR) was introduced in
-  <a href="/blog/2020/02/18/cilium-17#kubeproxy-removal">1.7</a>
-  in the tc eBPF layer in order to remove an extra hop and therefore latency
-  for reply traffic as well as for client source IP address preservation. In
-  Cilium's DSR mode, we encode the service IP/port tuple as an IP option only
-  once for TCP in SYN packets, or in every UDP packet.
+- **DSR:** "Direct Server Return" (DSR) was introduced in <a href="/blog/2020/02/18/cilium-17#kubeproxy-removal">1.7</a> in the tc eBPF layer in order to remove an extra hop and therefore latency for reply traffic as well as for client source IP address preservation. In Cilium's DSR mode, we encode the service IP/port tuple as an IP option only once for TCP in SYN packets, or in every UDP packet.
 
 - **SNAT:** The simplest mode which does not require any MTU adoption is that
   packets are SNAT'ed through our eBPF-based NAT engine on the node. This
@@ -543,9 +529,7 @@ LLVM (http://llvm.org/):
 
 This is possible since we have also fully reworked our feature probing facilities which
 test the underlying kernel for available eBPF verifier, program, map and helper capabilities. The
-base tooling including LLVM which is integrated into the
-<a href="https://github.com/cilium/cilium/blob/master/contrib/packaging/docker/Dockerfile.runtime">cilium-runtime</a>
-image can be found <a href="https://github.com/cilium/image-tools">here</a>.
+base tooling including LLVM which is integrated into the <a href="https://github.com/cilium/cilium/blob/master/contrib/packaging/docker/Dockerfile.runtime">cilium-runtime</a> image can be found <a href="https://github.com/cilium/image-tools">here</a>.
 
 <a name="hubble-embedded"></a>
 
@@ -567,9 +551,7 @@ additional resource to expose the core Hubble functionality.
 
 In short, near-zero overhead network, service and security observability for
 Kubernetes is now as easy as specifying some parameters while deploying Cilium.
-See
-<a href="https://docs.cilium.io/en/v1.8/gettingstarted/hubble/">networking and security observability with Hubble</a>
-for more details on how to get started with Hubble.
+See <a href="https://docs.cilium.io/en/v1.8/gettingstarted/hubble/">networking and security observability with Hubble</a> for more details on how to get started with Hubble.
 
 <a name="iptables-free"></a>
 
@@ -676,9 +658,7 @@ excluded from the masquerading.
 
 Finally, if not specified, the eBPF masquerading program is attached to a
 network device which is used in a default route. If it does not meet user
-needs, the program can be attached to multiple specified by user devices. See
-<a href="https://docs.cilium.io/en/v1.8/concepts/networking/masquerading/#ebpf-based">
-eBPF-based masquerading</a> for more details.
+needs, the program can be attached to multiple specified by user devices. See <a href="https://docs.cilium.io/en/v1.8/concepts/networking/masquerading/#ebpf-based">eBPF-based masquerading</a> for more details.
 
 <a name="ipfrag"></a>
 
@@ -788,9 +768,7 @@ Cilium 1.8 brings a support for attaching eBPF NodePort to multiple devices.
 Each device can be specified via the helm option `global.devices`, e.g.
 `global.devices={eth0,eth1,eth2}`. If no device is specified, cilium-agent will
 try to attach the program to a device with a default route and a device which
-has Kubernetes `InternalIP` or `ExternalIP` set. See
-<a href="https://docs.cilium.io/en/v1.8/gettingstarted/kubeproxy-free/#nodeport-devices-port-and-bind-settings">
-Kubernetes without kube-proxy</a> for more details.
+has Kubernetes `InternalIP` or `ExternalIP` set. See <a href="https://docs.cilium.io/en/v1.8/gettingstarted/kubeproxy-free/#nodeport-devices-port-and-bind-settings">Kubernetes without kube-proxy</a> for more details.
 
 <a name="arm64"></a>
 
@@ -913,8 +891,7 @@ The end result is eBPF ALU32 support is now working correctly for the vast
 amount of C code we have seen and additionally generating better code that
 is smaller and more efficient.
 
-See the merged patch sets for further information: <a href="https://lore.kernel.org/bpf/158560409224.10843.3588655801186916301.stgit@john-Precision-5820-Tower/">here</a>
-and <a href="https://github.com/llvm/llvm-project/commit/13f6c81c5d9a7a34a684363bcaad8eb7c65356fd">here</a>
+See the merged patch sets for further information: <a href="https://lore.kernel.org/bpf/158560409224.10843.3588655801186916301.stgit@john-Precision-5820-Tower/">here</a> and <a href="https://github.com/llvm/llvm-project/commit/13f6c81c5d9a7a34a684363bcaad8eb7c65356fd">here</a>.
 
 <a name="tproxy"></a>
 
