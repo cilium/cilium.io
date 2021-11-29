@@ -54,14 +54,14 @@ const BlogPostCard = ({
       <div className="flex flex-wrap mt-auto gap-x-2 gap-y-2">
         {categories?.map((category) => (
           <span
-            className="text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none"
+            className="inline-flex items-center h-8 text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none"
             key={category}
           >
             {category}
           </span>
         ))}
         {externalUrl && (
-          <div className="inline-flex items-center text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none">
+          <div className="inline-flex items-center h-8 text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none">
             <span>External</span>
             <ExternalLinkIcon className="ml-1" />
           </div>
