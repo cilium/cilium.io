@@ -3,7 +3,7 @@ path: '/blog/2018/08/21/cilium-12'
 date: '2018-08-21T09:00:00.000Z'
 title: 'Cilium 1.2: DNS Security Policies, EKS Support, ClusterMesh, kube-router integration, ...'
 categories:
-  - Technology
+  - Release
 tags:
   - announcement
   - Kubernetes

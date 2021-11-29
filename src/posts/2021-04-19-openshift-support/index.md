@@ -4,7 +4,7 @@ date: '2021-04-09T17:00:00.000Z'
 title: 'Introducing the Cilium Certified OpenShift Plug-in'
 isPopular: true
 categories:
-  - Technology
+  - Release
 tags:
   - bpf
   - ebpf

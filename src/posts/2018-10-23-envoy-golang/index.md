@@ -3,7 +3,7 @@ path: '/blog/2018/10/23/cilium-13-envoy-go'
 date: '2018-10-23T09:00:00.000Z'
 title: 'Cilium 1.3: Go extensions for Envoy, Cassandra & Memcached Support'
 categories:
-  - Technology
+  - Release
 tags:
   - announcement
   - envoy

@@ -3,7 +3,7 @@ path: '/blog/cilium1dot0rc'
 date: '2017-12-06T17:00:00.000Z'
 title: 'Cilium 1.0.0-rc2 - gRPC, Kafka and much more'
 categories:
-  - Technology
+  - Release
 tags:
   - kafka
   - grpc

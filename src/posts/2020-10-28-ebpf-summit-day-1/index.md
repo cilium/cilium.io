@@ -4,7 +4,7 @@ date: '2020-10-28T16:00:00.000Z'
 isPopular: false
 title: 'eBPF Summit Day 1 Recap'
 categories:
-  - Technology
+  - Community
 tags:
   - eBPF
   - BPF

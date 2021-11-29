@@ -3,7 +3,7 @@ path: '/blog/2018/08/07/istio-10-cilium'
 date: '2018-08-07T09:00:00.000Z'
 title: 'Istio 1.0: How Cilium enhances Istio with socket-aware BPF programs'
 categories:
-  - How-To
+  - Technology
 tags:
   - guide
   - Kubernetes

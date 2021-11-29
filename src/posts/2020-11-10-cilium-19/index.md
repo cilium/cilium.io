@@ -4,7 +4,7 @@ date: '2020-11-10T17:00:00.000Z'
 title: 'Cilium 1.9: Maglev, Deny Policies, VM Support, OpenShift, Hubble mTLS, Bandwidth Manager, eBPF Node-Local Redirect, Datapath Optimizations, and more'
 isPopular: true
 categories:
-- Technology
+  - Release
 tags:
   - Kubernetes
   - kube-proxy

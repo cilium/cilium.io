@@ -4,7 +4,7 @@ date: '2020-08-19T09:00:00.000Z'
 isPopular: true
 title: 'Google announces Cilium & eBPF as the new networking dataplane for GKE'
 categories:
-  - Technology
+  - Community
 tags:
   - Kubernetes
   - Cilium
