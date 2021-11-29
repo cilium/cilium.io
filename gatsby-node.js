@@ -35,6 +35,10 @@ async function createBlogPosts({ graphql, actions }) {
 
     const { path } = file.frontmatter;
 
+    if (!path) {
+      return;
+    }
+
     actions.createPage({
       path,
       component: Path.resolve('./src/templates/blog-post.jsx'),

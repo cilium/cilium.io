@@ -2,7 +2,6 @@
 path: '/blog/2021/05/11/cni-benchmark'
 date: '2021-05-11T17:00:00.000Z'
 title: 'CNI Benchmark: Understanding Cilium Network Performance'
-ogimage: ogimage.png
 isPopular: true
 categories:
   - How-To

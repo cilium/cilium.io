@@ -32,6 +32,8 @@ const PopularPosts = () => {
                 gatsbyImageData(width: 550)
               }
             }
+            ogImageUrl
+            externalUrl
           }
           fileAbsolutePath
         }

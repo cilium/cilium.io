@@ -75,6 +75,8 @@ export const blogPostsQuery = graphql`
               gatsbyImageData(width: 550)
             }
           }
+          ogImageUrl
+          externalUrl
         }
       }
     }
@@ -93,6 +95,8 @@ export const blogPostsQuery = graphql`
               gatsbyImageData(width: 735)
             }
           }
+          ogImageUrl
+          externalUrl
         }
         fileAbsolutePath
       }

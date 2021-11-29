@@ -5,21 +5,41 @@ import React from 'react';
 import Link from 'components/shared/link';
 
 import CiliumLogo from './images/cilium-logo.inline.svg';
+import ExternalLinkIcon from './images/external-link.inline.svg';
 
-const BlogPostCard = ({ path, ogImage: cover, date, title, ogSummary: summary, categories }) => (
+const BlogPostCard = ({
+  path,
+  ogImage,
+  ogImageUrl,
+  date,
+  title,
+  ogSummary: summary,
+  categories,
+  externalUrl,
+}) => (
   <Link
-    to={path}
+    to={externalUrl || path}
     className="flex flex-col p-6 transition-all duration-200 border rounded-lg md:p-8 border-gray-3 group hover:border-transparent hover:shadow-tertiary"
+    target={externalUrl && '_blank'}
+    rel={externalUrl && 'noopener noreferrer'}
   >
-    {cover ? (
+    {ogImage && (
       <GatsbyImage
         className="min-h-[168px] max-h-[168px]"
         imgClassName="rounded-lg"
-        image={getImage(cover)}
+        image={getImage(ogImage)}
         objectFit="contain"
         alt={title}
       />
-    ) : (
+    )}
+    {ogImageUrl && (
+      <img
+        className="min-h-[168px] max-h-[168px] rounded-lg object-contain"
+        src={ogImageUrl}
+        alt={title}
+      />
+    )}
+    {!ogImage && !ogImageUrl && (
       <div className="h-[168px] flex justify-center items-center bg-gray-4 rounded-lg">
         <CiliumLogo />
       </div>
@@ -40,18 +60,26 @@ const BlogPostCard = ({ path, ogImage: cover, date, title, ogSummary: summary, c
             {category}
           </span>
         ))}
+        {externalUrl && (
+          <div className="inline-flex items-center text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none">
+            <span>External</span>
+            <ExternalLinkIcon className="ml-1" />
+          </div>
+        )}
       </div>
     </div>
   </Link>
 );
 
 BlogPostCard.propTypes = {
-  path: PropTypes.string.isRequired,
+  path: PropTypes.string,
   ogImage: PropTypes.shape({
     childImageSharp: PropTypes.shape({
       gatsbyImageData: PropTypes.shape(),
     }),
   }),
+  ogImageUrl: PropTypes.string,
+  externalUrl: PropTypes.string,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   ogSummary: PropTypes.string,
@@ -60,6 +88,9 @@ BlogPostCard.propTypes = {
 
 BlogPostCard.defaultProps = {
   ogImage: null,
+  path: null,
+  ogImageUrl: null,
+  externalUrl: null,
   ogSummary: null,
   categories: null,
 };
