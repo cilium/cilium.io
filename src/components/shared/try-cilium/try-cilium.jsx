@@ -38,8 +38,8 @@ const items = [
   },
   {
     icon: GuideSvg,
-    name: 'Documentation & Tutorials',
-    text: 'Check out the documentation or the interactive hands-on tutorial in a live environment to quickly get started with Cilium.',
+    name: 'Documentation &<br> Tutorials',
+    text: 'Quickly get started with Cilium. Read the documentation or use our interactive tutorial in a live environment.',
     buttons: [
       {
         buttonUrl: 'https://docs.cilium.io/en/stable/',
@@ -59,7 +59,7 @@ const TryCilium = () => (
   <section className="py-10 mt-12 md:pt-16 md:pb-20 md:mt-20 lg:pt-24 lg:mt-28 lg:pb-28 bg-gray-4">
     <Container>
       <Heading tag="h2">{title}</Heading>
-      <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 xl:gap-8 md:mt-10 md:grid-cols-3 lg:mt-14">
+      <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 xl:gap-8 md:mt-10 lg:grid-cols-3 lg:mt-14">
         {items.map((item, index) => (
           <CardItem size="sm" {...item} key={index} />
         ))}
