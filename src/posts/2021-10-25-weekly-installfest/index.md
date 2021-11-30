@@ -3,7 +3,6 @@ path: '/blog/2021/10/25/weekly-installfest'
 date: '2021-10-25T17:00:00.000Z'
 title: 'New Weekly Community InstallFest and Live QA'
 isPopular: true
-isFeatured: true
 ogImage: ogimage.png
 ogSummary: 'With Cilium joining the CNCF we have had a lot of people showing interest in Cilium and wanting to learn about it. We are excited to introduce two new community events available to everybody in the community to learn and explore Cilium: Weekly Community InstallFest & Weekly Cilium Introduction with live Q&A'
 categories:
