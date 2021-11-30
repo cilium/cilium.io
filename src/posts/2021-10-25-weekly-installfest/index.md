@@ -5,12 +5,12 @@ title: 'New Weekly Community InstallFest and Live QA'
 isPopular: true
 isFeatured: true
 ogImage: ogimage.png
-ogSummary: 'With Cilium joining the CNCF we have had a lot of people showing interest in Cilium and wanting to learn about it. We are excited to introduce two new community events available to everybody in the community to learn and explore Cilium: Weekly Community Installfest & Weekly Cilium Introduction with live Q&A'
+ogSummary: 'With Cilium joining the CNCF we have had a lot of people showing interest in Cilium and wanting to learn about it. We are excited to introduce two new community events available to everybody in the community to learn and explore Cilium: Weekly Community InstallFest & Weekly Cilium Introduction with live Q&A'
 categories:
   - Community
 tags:
   - Cilium
-  - installfest
+  - InstallFest
 ---
 
 ![](cover.png)
@@ -20,8 +20,8 @@ we have had a lot of people showing interest in Cilium and wanting to learn
 about it. We are excited to introduce two new community events available to
 everybody in the community to learn and explore Cilium:
 
-- [Weekly Community Installfest](#liveqa)
-- [Weekly Cilium Introduction with live Q&A](#installfest)
+- [Weekly Cilium Introduction with live Q&A](#liveqa)
+- [Weekly Community InstallFest](#installfest)
 
 <a name="liveqa"></a>
 
@@ -29,8 +29,8 @@ everybody in the community to learn and explore Cilium:
 
 ![](live_qa.png)
 
-The weekly Cilium Inroduction hosted by Cilium Co-Creator Thomas Graf is an
-ideal venue to learn about Cilium if you have never heard about it or if you
+The weekly Cilium Introduction hosted by Cilium Co-Creator Thomas Graf is an
+ideal venue to learn about Cilium if you have never heard about it, or if you
 already know about Cilium but have questions that you want to get answers to
 by one of the Cilium maintainers.
 
@@ -49,13 +49,13 @@ Simply click the link below to sign up for one of the available time slots:
 
 <a name="installfest"></a>
 
-# Weekly Community Installfest
+# Weekly Community InstallFest
 
 ![](installfest.png)
 
-The weekly installfest is ideal for everyone who wants to install Cilium and
+The weekly InstallFest is ideal for everyone who wants to install Cilium and
 get hands-on. In this weekly session, you will learn how to install Cilium and
-make your steps in using Hubble for observaibility, apply some NetworkPolicy
+make your steps in using Hubble for observability, apply some NetworkPolicy
 and explore next steps from there.
 
 The installfest is available to everyone in the community. Click the link below
@@ -63,8 +63,8 @@ to sign up for a time slot that suits you and the timezone you live in. You
 will receive additional information on how to set up the environment in the
 confirmation to the event
 
-- [Join Installfest in Europe](https://calendly.com/cilium-events/cilim-installfest-emea)
-- [Join Installfest in Americas](https://calendly.com/cilium-events/cilium-installfest-na)
+- [Join InstallFest in Europe](https://calendly.com/cilium-events/cilim-installfest-emea)
+- [Join InstallFest in Americas](https://calendly.com/cilium-events/cilium-installfest-na)
 - [cilium/installfest](https://github.com/cilium/installfest)
 
 # Further Reading
