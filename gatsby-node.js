@@ -35,6 +35,10 @@ async function createBlogPosts({ graphql, actions }) {
 
     const { path } = file.frontmatter;
 
+    if (!path) {
+      return;
+    }
+
     actions.createPage({
       path,
       component: Path.resolve('./src/templates/blog-post.jsx'),
@@ -160,6 +164,16 @@ exports.onCreateNode = ({ node, actions }) => {
       node,
       name: 'draft',
       value: node.frontmatter.draft || false,
+    });
+    createNodeField({
+      node,
+      name: 'ogImageUrl',
+      value: node.frontmatter.ogImageUrl || '',
+    });
+    createNodeField({
+      node,
+      name: 'externalUrl',
+      value: node.frontmatter.externalUrl || '',
     });
   }
 };

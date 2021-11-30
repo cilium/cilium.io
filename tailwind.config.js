@@ -104,10 +104,10 @@ module.exports = {
             },
             code: {
               '&::before': {
-                content: '""',
+                content: '"" !important',
               },
               '&::after': {
-                content: '""',
+                content: '"" !important',
               },
             },
           },
@@ -123,10 +123,10 @@ module.exports = {
             },
             code: {
               '&::before': {
-                content: '""',
+                content: '"" !important',
               },
               '&::after': {
-                content: '""',
+                content: '"" !important',
               },
             },
           },
