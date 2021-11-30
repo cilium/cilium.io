@@ -130,7 +130,14 @@ module.exports = {
     'gatsby-plugin-postcss',
     'gatsby-plugin-sitemap',
     'gatsby-plugin-image',
-    'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-plugin-netlify',
+      options: {
+        headers: {
+          '/fonts/*': ['Cache-Control: public, max-age=31536000, immutable'],
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
