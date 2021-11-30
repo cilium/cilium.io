@@ -18,7 +18,12 @@ const CardItem = ({ icon: Icon, name, text, buttons, size }) => {
           'flex flex-col items-center flex-grow p-6 pb-8  md:pt-6 md:pb-11'
         )}
       >
-        <Heading className="!leading-normal text-center" size={isSmallSize ? 'xs' : 'sm'} tag="h3">
+        <Heading
+          className="!leading-normal text-center flat-breaks lg:flat-none"
+          size={isSmallSize ? 'xs' : 'sm'}
+          tag="h3"
+          asHTML
+        >
           {name}
         </Heading>
         <p className={classNames(isSmallSize ? '' : 'md:text-lg', 'text-center mt-2.5 mb-5')}>
@@ -27,7 +32,8 @@ const CardItem = ({ icon: Icon, name, text, buttons, size }) => {
         <div
           className={classNames(
             'mt-auto',
-            has2Buttons && 'grid xs:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-3',
+            has2Buttons &&
+              'grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 xs:grid-cols-2 grid-cols-1 gap-3',
             isSmallSize ? 'xl:gap-x-4' : 'lg:gap-x-5'
           )}
         >

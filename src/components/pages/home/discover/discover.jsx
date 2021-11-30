@@ -40,12 +40,17 @@ const items = [
   },
   {
     icon: GuideSvg,
-    name: 'Do it yourself Tutorials',
-    text: 'Check out the Cilium documentation to quickly get started on a Kubernetes cluster of your choice.',
+    name: 'Documentation &<br> Tutorials',
+    text: 'Quickly get started with Cilium. Read the documentation or use our interactive tutorial in a live environment.',
     buttons: [
       {
         buttonUrl: 'https://docs.cilium.io/en/stable/',
-        buttonText: 'Learn more',
+        buttonText: 'Documentation',
+        buttonTarget: '_blank',
+      },
+      {
+        buttonUrl: 'https://play.instruqt.com/isovalent/invite/j4maqox5r1h5',
+        buttonText: 'Tutorial',
         buttonTarget: '_blank',
       },
     ],
@@ -56,7 +61,7 @@ const Discover = () => (
   <section className="mt-12 md:mt-20 lg:mt-28">
     <Container>
       <Heading tag="h2">{title}</Heading>
-      <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 xl:gap-8 md:mt-10 md:grid-cols-3 lg:mt-14">
+      <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 xl:gap-8 md:mt-10 lg:grid-cols-3 lg:mt-14">
         {items.map((item, index) => (
           <CardItem size="sm" {...item} key={index} />
         ))}

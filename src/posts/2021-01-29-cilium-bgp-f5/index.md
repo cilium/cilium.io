@@ -88,14 +88,11 @@ $ helm install cilium cilium/cilium --version 1.8.4 \
 
 All parameters above can be found in <i>values.yaml</i>, and it's noteworthy
 that <code>native-routing-cidr</code> allows to explicitly specify the CIDR for
-[native
-routing](https://docs.cilium.io/en/v1.8/concepts/networking/routing/#native-routing),
-which disables [IP
-masquerading](https://docs.cilium.io/en/v1.9/concepts/networking/masquerading/#masquerading)
-executed by Cilium automatically for the traffic sent from Pod to LTM, so that
+[native routing](https://docs.cilium.io/en/v1.8/concepts/networking/routing/#native-routing),
+which disables [IP masquerading](https://docs.cilium.io/en/v1.9/concepts/networking/masquerading/#masquerading) executed by Cilium automatically for the traffic sent from Pod to LTM, so that
 the traffic can be forwarded to Pods directly.
 
-<b>Step 2</b>. [Use BIRD to run BGP](https://docs.cilium.io/en/v1.9/gettingstarted/bird/#using-bird-to-run-bgp) between Kubernetes nodes and switch.
+<b>Step 2</b>. <a href="https://docs.cilium.io/en/v1.9/gettingstarted/bird/#using-bird-to-run-bgp">Use BIRD to run BGP</a> between Kubernetes nodes and switch.
 
 Configuration of BIRD:
 
