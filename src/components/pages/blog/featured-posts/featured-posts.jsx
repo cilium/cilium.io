@@ -26,7 +26,7 @@ FeaturedPosts.propTypes = {
         gatsbyImageData: PropTypes.shape(),
       }),
     }),
-    path: PropTypes.string.isRequired,
+    path: PropTypes.string,
   }).isRequired,
 };
 

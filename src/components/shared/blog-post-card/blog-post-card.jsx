@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Link from 'components/shared/link';
+import ExternalLinkIcon from 'icons/external-link.inline.svg';
 
 import CiliumLogo from './images/cilium-logo.inline.svg';
-import ExternalLinkIcon from './images/external-link.inline.svg';
 
 const BlogPostCard = ({
   path,

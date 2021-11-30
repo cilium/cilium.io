@@ -88,6 +88,7 @@ export const blogPostsQuery = graphql`
         frontmatter {
           path
           date(locale: "en", formatString: "MMM DD, yyyy")
+          categories
           title
           ogSummary
           ogImage {
