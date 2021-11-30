@@ -165,6 +165,16 @@ exports.onCreateNode = ({ node, actions }) => {
       name: 'draft',
       value: node.frontmatter.draft || false,
     });
+    createNodeField({
+      node,
+      name: 'ogImageUrl',
+      value: node.frontmatter.ogImageUrl || '',
+    });
+    createNodeField({
+      node,
+      name: 'externalUrl',
+      value: node.frontmatter.externalUrl || '',
+    });
   }
 };
 

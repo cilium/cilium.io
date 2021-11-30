@@ -21,6 +21,10 @@ const PopularPosts = () => {
         sort: { order: DESC, fields: fileAbsolutePath }
       ) {
         posts: nodes {
+          fields {
+            externalUrl
+            ogImageUrl
+          }
           frontmatter {
             path
             date(locale: "en", formatString: "MMM DD, yyyy")
@@ -32,8 +36,6 @@ const PopularPosts = () => {
                 gatsbyImageData(width: 550)
               }
             }
-            ogImageUrl
-            externalUrl
           }
           fileAbsolutePath
         }
@@ -45,8 +47,8 @@ const PopularPosts = () => {
       <Container>
         <Heading tag="h2">{title}</Heading>
         <div className="grid gap-6 mt-6 md:mt-8 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
-          {posts.map(({ frontmatter }, index) => (
-            <BlogPostCard {...frontmatter} key={index} />
+          {posts.map(({ frontmatter, fields }, index) => (
+            <BlogPostCard {...frontmatter} {...fields} key={index} />
           ))}
         </div>
       </Container>

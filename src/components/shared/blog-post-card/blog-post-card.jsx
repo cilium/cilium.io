@@ -16,60 +16,65 @@ const BlogPostCard = ({
   ogSummary: summary,
   categories,
   externalUrl,
-}) => (
-  <Link
-    to={externalUrl || path}
-    className="flex flex-col p-6 transition-all duration-200 border rounded-lg md:p-8 border-gray-3 group hover:border-transparent hover:shadow-tertiary"
-    target={externalUrl && '_blank'}
-    rel={externalUrl && 'noopener noreferrer'}
-  >
-    {ogImage && (
-      <GatsbyImage
-        className="min-h-[168px] max-h-[168px]"
-        imgClassName="rounded-lg"
-        image={getImage(ogImage)}
-        objectFit="contain"
-        alt={title}
-      />
-    )}
-    {ogImageUrl && (
-      <img
-        className="min-h-[168px] max-h-[168px] rounded-lg object-contain"
-        src={ogImageUrl}
-        alt={title}
-      />
-    )}
-    {!ogImage && !ogImageUrl && (
-      <div className="h-[168px] flex justify-center items-center bg-gray-4 rounded-lg">
-        <CiliumLogo />
-      </div>
-    )}
+}) => {
+  const url = externalUrl !== '' ? externalUrl : null;
+  const coverUrl = ogImageUrl !== '' ? ogImageUrl : null;
 
-    <div className="flex flex-col flex-grow mt-7">
-      <span className="text-sm font-medium leading-none text-gray-1">{date}</span>
-      <h3 className="mt-3 font-bold leading-normal transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-lg">
-        {title}
-      </h3>
-      <p className="mt-2 mb-4 line-clamp-5">{summary}</p>
-      <div className="flex flex-wrap mt-auto gap-x-2 gap-y-2">
-        {categories?.map((category) => (
-          <span
-            className="inline-flex items-center h-8 text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none"
-            key={category}
-          >
-            {category}
-          </span>
-        ))}
-        {externalUrl && (
-          <div className="inline-flex items-center h-8 text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none">
-            <span>External</span>
-            <ExternalLinkIcon className="ml-1" />
-          </div>
-        )}
+  return (
+    <Link
+      to={url || path}
+      className="flex flex-col p-6 transition-all duration-200 border rounded-lg md:p-8 border-gray-3 group hover:border-transparent hover:shadow-tertiary"
+      target={url ? '_blank' : ''}
+      rel={url ? 'noopener noreferrer' : ''}
+    >
+      {ogImage && (
+        <GatsbyImage
+          className="min-h-[168px] max-h-[168px]"
+          imgClassName="rounded-lg"
+          image={getImage(ogImage)}
+          objectFit="contain"
+          alt={title}
+        />
+      )}
+      {coverUrl && (
+        <img
+          className="min-h-[168px] max-h-[168px] rounded-lg object-contain"
+          src={coverUrl}
+          alt={title}
+        />
+      )}
+      {!ogImage && !coverUrl && (
+        <div className="h-[168px] flex justify-center items-center bg-gray-4 rounded-lg">
+          <CiliumLogo />
+        </div>
+      )}
+
+      <div className="flex flex-col flex-grow mt-7">
+        <span className="text-sm font-medium leading-none text-gray-1">{date}</span>
+        <h3 className="mt-3 font-bold leading-normal transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-lg">
+          {title}
+        </h3>
+        <p className="mt-2 mb-4 line-clamp-5">{summary}</p>
+        <div className="flex flex-wrap mt-auto gap-x-2 gap-y-2">
+          {categories?.map((category) => (
+            <span
+              className="inline-flex items-center h-8 text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none"
+              key={category}
+            >
+              {category}
+            </span>
+          ))}
+          {url && (
+            <div className="inline-flex items-center h-8 text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none">
+              <span>External</span>
+              <ExternalLinkIcon className="ml-1" />
+            </div>
+          )}
+        </div>
       </div>
-    </div>
-  </Link>
-);
+    </Link>
+  );
+};
 
 BlogPostCard.propTypes = {
   path: PropTypes.string,

@@ -29,7 +29,7 @@ const BlogPage = (props) => {
       canonicalUrl={canonicalUrl}
       pageMetadata={seoMetadata}
     >
-      <FeaturedPosts featuredStory={featuredStory?.[0].frontmatter} />
+      <FeaturedPosts featuredStory={featuredStory?.[0]} />
       <PostsBoard
         categories={categories}
         posts={posts}
@@ -64,6 +64,10 @@ export const blogPostsQuery = graphql`
       skip: $skip
     ) {
       nodes {
+        fields {
+          externalUrl
+          ogImageUrl
+        }
         frontmatter {
           path
           date(locale: "en", formatString: "MMM DD, yyyy")
@@ -75,8 +79,6 @@ export const blogPostsQuery = graphql`
               gatsbyImageData(width: 550)
             }
           }
-          ogImageUrl
-          externalUrl
         }
       }
     }
@@ -85,6 +87,10 @@ export const blogPostsQuery = graphql`
       filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isFeatured: { eq: true } } }
     ) {
       nodes {
+        fields {
+          externalUrl
+          ogImageUrl
+        }
         frontmatter {
           path
           date(locale: "en", formatString: "MMM DD, yyyy")
@@ -96,8 +102,6 @@ export const blogPostsQuery = graphql`
               gatsbyImageData(width: 735)
             }
           }
-          ogImageUrl
-          externalUrl
         }
         fileAbsolutePath
       }
