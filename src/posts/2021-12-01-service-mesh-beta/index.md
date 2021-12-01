@@ -37,7 +37,7 @@ interface, Cilium can dramatically shorten the overall path for each packet.
 href="https://thenewstack.io/how-ebpf-streamlines-the-service-mesh/">sidecarless,
 eBPF-based Service Mesh</a>.)
 
-![](Sidecarless.png)
+![](sidecarless.png)
 
 Alongside the upcoming Cilium 1.11 release, a new Cilium Service Mesh beta build
 will shortly be available that features:
