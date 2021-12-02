@@ -1,6 +1,6 @@
 ---
 path: '/blog/2021/12/01/cilium-service-mesh-beta'
-date: '2021-12-01T15:00:00.000Z'
+date: '2021-12-02T17:00:00.000Z'
 title: 'Try eBPF-powered Cilium Service Mesh - join the beta program!'
 isPopular: true
 isFeatured: true
