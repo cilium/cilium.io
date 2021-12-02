@@ -4,7 +4,7 @@ date: '2021-12-01T15:00:00.000Z'
 title: 'Try eBPF-powered Cilium Service Mesh - join the beta program!'
 isPopular: true
 isFeatured: true
-ogImage: sidecarless.png
+ogImage: sidecar-sweep.png
 ogSummary: "Cilium is bringing the power of eBPF to the world of Service Mesh,
 and we're inviting you to be amongst the first to try it out."
 categories:
@@ -14,6 +14,8 @@ tags:
   - Service Mesh
   - eBPF
 ---
+
+![](sidecar-sweep.png)
 
 You already know that Cilium accelerates networking, and provides security and
 observability in Kubernetes, using the power of eBPF. Now Cilium is bringing
@@ -25,7 +27,15 @@ Program](https://forms.gle/j9fwhAC6HnHRJQKeA).
 
 # What does Cilium bring to Service Mesh?
 
-The term “Service Mesh” encompasses a wide range of features, including service discovery, encryption, service authentication, load balancing, observability, canary roll-outs and more. Some of these features overlap with established Cilium capabilities - for example, Cilium has offered load balancing, Kubernetes service awareness, and visibility of network traffic at layer 3-7, for ages. Cilium already uses Envoy for L7 policy and observability for some protocols, and this same component is used as the sidecar proxy in many popular Service Mesh implementations. So it's a natural step to extend Cilium to offer more of the features commonly associated with Service Mesh.
+The term “Service Mesh” encompasses a wide range of features, including service
+discovery, encryption, service authentication, load balancing, observability,
+canary roll-outs and more. Some of these features overlap with established
+Cilium capabilities - for example, Cilium has offered load balancing, Kubernetes
+service awareness, multi-cluster connectivity, and visibility of network traffic
+at layer 3-7, for ages. Cilium already uses Envoy for L7 policy and
+observability for some protocols, and this same component is used as the sidecar
+proxy in many popular Service Mesh implementations. So it's a natural step to
+extend Cilium to offer more of the features commonly associated with Service Mesh.
 
 In a typical Service Mesh, all network packets need to pass through a sidecar
 proxy container on their path to or from the application container in a Pod. In
@@ -45,7 +55,8 @@ will shortly be available that features:
 - L7 Traffic Management & Load-balancing (HTTP, gRPC, …)
 - Topology Aware Routing across clusters, clouds, and premises
 - TLS Termination
-- Canary Rollouts, Retries, Rate Limiting, Circuit Breaking, ...
+- Canary Rollouts, Retries, Rate Limiting, Circuit Breaking, etc, configured
+  through Envoy
 - Tracing with OpenTelemetry & Jaeger integration
 - Built-in Kubernetes Ingress Support
 
@@ -60,7 +71,12 @@ service mesh.
 
 But the beta isn’t just about testing to make sure that connectivity works; we’d love to better understand your use cases, and get your help in prioritizing the service mesh features you need. We want to be sure we’re delivering the right user experience, before committing these features into a Cilium release.
 
-There are many different Service Mesh control planes in the cloud native ecosystem: Linkerd, Istio, Gloo, Consul, OSM… not to mention all the bespoke systems that many organizations have built around Envoy to meet their needs. From an architecture perspective, Cilium can serve as the data plane in all these environments. We’d like guidance from our Beta participants to help us prioritize different control plane integrations.
+There are many different Service Mesh control planes in the cloud native
+ecosystem: Linkerd, Istio, Gloo, Consul, OSM… not to mention all the bespoke
+systems that many organizations have built around Envoy to meet their needs.
+From an architecture perspective, Cilium can serve as the data plane in all
+these environments. We’d like guidance from our Beta participants to help us
+understand the control plane integrations they would like to see.
 
 During the beta phase, we’ll develop and maintain Service Mesh capabilities in a separate GitHub branch. This gives us the flexibility to make potentially non-backwards-compatible changes, for example changes to CRDs.
 
