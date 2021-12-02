@@ -71,12 +71,7 @@ service mesh.
 
 But the beta isn’t just about testing to make sure that connectivity works; we’d love to better understand your use cases, and get your help in prioritizing the service mesh features you need. We want to be sure we’re delivering the right user experience, before committing these features into a Cilium release.
 
-There are many different Service Mesh control planes in the cloud native
-ecosystem: Linkerd, Istio, Gloo, Consul, OSM… not to mention all the bespoke
-systems that many organizations have built around Envoy to meet their needs.
-From an architecture perspective, Cilium can serve as the data plane in all
-these environments. We’d like guidance from our Beta participants to help us
-understand the control plane integrations they would like to see.
+The initial beta build enables service mesh functionality with distributed Envoy configuration available via a CRD, or by configuring standard Kubernetes Ingress and Services objects. However, Cilium’s service mesh architecture is designed so that it can be integrated with any service mesh control plane and specification. We would love to hear from you which ones are of particular interest.
 
 During the beta phase, we’ll develop and maintain Service Mesh capabilities in a separate GitHub branch. This gives us the flexibility to make potentially non-backwards-compatible changes, for example changes to CRDs.
 
