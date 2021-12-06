@@ -2,6 +2,8 @@
 path: '/blog/grpc'
 date: '2017-12-06T09:13:48.000Z'
 title: 'Cilium Now Speaks gRPC!'
+categories:
+  - Technology
 tags:
   - grpc
   - cilium

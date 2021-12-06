@@ -2,6 +2,8 @@
 path: '/blog/2017/3/16/cilium-networking-and-security-for-containers-with-bpf-and-xdp'
 date: '2017-03-16T18:20:26.000Z'
 title: 'Cilium: Networking and security for containers with BPF and XDP'
+categories:
+  - Technology
 ogSummary: 'This is a guest post by Daniel Borkmann who was recently recognized through the Google Open Source Peer Bonus program for his work on the Cilium project. We invited Daniel to share his project on our blog.'
 ---
 

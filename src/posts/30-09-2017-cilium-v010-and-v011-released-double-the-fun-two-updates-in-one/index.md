@@ -3,7 +3,7 @@ path: '/blog/2017/9/29/cilium-v010-v011-released-double-the-fun-two-updates-in-o
 date: '2017-09-29T22:55:09.000Z'
 title: 'Cilium v0.10 & v0.11 Released: Double the Fun - Two Updates in One!'
 categories:
-  - Technology
+  - Release
 tags:
   - release
 ogSummary: "We're happy to announce our 2 recent Cilium releases:v0.10 and v0.11! This is a brief recap of noteworthy functionality, including the expansion of Network Policy, simplifying deployments, Kubernetes integration updates, and Mesos integration."

@@ -3,7 +3,7 @@ path: '/blog/2019/08/20/cilium-16'
 date: '2019-08-20T09:00:00.000Z'
 title: 'Cilium 1.6: KVstore-free operation, 100% kube-proxy replacement, Socket-based load-balancing, Generic CNI Chaining, Native AWS ENI support, ...'
 categories:
-  - Technology
+  - Release
 tags:
   - cluster-mesh
   - Kubernetes

@@ -3,7 +3,7 @@ path: '/blog/2019/08/22/lpc19-bpf'
 date: '2019-08-22T09:00:00.000Z'
 title: 'eBPF at Linux Plumbers 2019, Lisbon, Portugal'
 categories:
-  - Technology
+  - Community
 tags:
   - Linux Plumbers
   - Conference

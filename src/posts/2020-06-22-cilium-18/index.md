@@ -3,7 +3,7 @@ path: '/blog/2020/06/22/cilium-18'
 date: '2020-06-22T17:00:00.000Z'
 title: 'Cilium 1.8: XDP Load Balancing, Cluster-wide Flow Visibility, Host Network Policy, Native GKE & Azure modes, Session Affinity, CRD-mode Scalability, Policy Audit mode, ...'
 categories:
-- Technology
+  - Release
 tags:
   - Kubernetes
   - kube-proxy

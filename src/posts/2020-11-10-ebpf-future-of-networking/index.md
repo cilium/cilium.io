@@ -4,7 +4,7 @@ date: '2020-11-10T09:00:00.000Z'
 isPopular: true
 title: 'eBPF - The Future of Networking & Security'
 categories:
-  - How-To
+  - Technology
 tags:
   - Kubernetes
   - Cilium

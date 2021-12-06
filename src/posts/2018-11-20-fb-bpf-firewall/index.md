@@ -3,7 +3,7 @@ path: '/blog/2018/11/20/fb-bpf-firewall'
 date: '2018-11-20T09:00:00.000Z'
 title: "Deep Dive into Facebook's BPF edge firewall"
 categories:
-  - How-To
+  - Technology
 tags:
   - bpf
   - ebpf

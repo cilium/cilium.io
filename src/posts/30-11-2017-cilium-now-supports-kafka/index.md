@@ -3,8 +3,7 @@ path: '/blog/2017/11/7/cilium-with-kafka'
 date: '2017-11-30T19:30:43.000Z'
 title: 'Cilium now supports Kafka!'
 categories:
-  - Technology
-  - How-To
+  - Release
 tags:
   - release
 ogSummary: 'We have released Cilium v0.12 a couple of weeks back. One of the exciting feature additions is the introduction of Kafka protocol visibility and policy enforcement in form of a tech preview.'
