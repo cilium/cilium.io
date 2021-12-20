@@ -6,7 +6,6 @@ ogSummary: 'Coverage of many new features in the Cilium 1.11 release.'
 categories:
   - Release
 isPopular: true
-isFeatured: true
 externalUrl: 'https://isovalent.com/blog/post/2021-12-release-111'
 tags:
   - Cilium
