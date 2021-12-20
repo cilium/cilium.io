@@ -32,12 +32,18 @@ This is a fitting close to a wonderful year for the Cilium project, driven by ou
 
 - [Cilium Service Mesh is in beta](https://cilium.io/blog/2021/12/01/cilium-service-mesh-beta), with hundreds of people already participating, modernizing the data path in Service mesh implementations.
 
-All of this is possible thanks to every single person who contributes. Whether you’re working full-time on Cilium, raising issues, contributing to the docs, or sharing your knowledge of Cilium and eBPF, you’re playing a valuable part in Cilium’s progress. We hope you’ll join in celebrating this 10,000 star milestone success!
+All of this is possible thanks to every single person who contributes. Whether
+you’re working full-time on Cilium, raising issues, contributing to the docs, or
+sharing your knowledge of Cilium and eBPF, you’re playing a valuable part in
+Cilium’s progress. We hope you’ll join in celebrating this 10,000 star milestone
+success!
 
-As a small thank you, we have created [downloadable wallpapers](https://drive.google.com/file/d/1HgZn7jxQGSths5Ygmq4fuUt5-kKrV6ox/view?usp=sharing), designed by Vadim
+## Special edition designs
+
+As a small thank you, we have created **downloadable desktop wallpapers**, designed by Vadim
 Shchekoldin - the artist behind many of our wonderful graphics - to decorate
-your desktop. [Download them free here](https://drive.google.com/file/d/1HgZn7jxQGSths5Ygmq4fuUt5-kKrV6ox/view?usp=sharing).
+your desktop. [Download the free Cilium 10k stars wallpapers here](https://drive.google.com/file/d/1HgZn7jxQGSths5Ygmq4fuUt5-kKrV6ox/view?usp=sharing).
 
-We’ve also got a special edition T-shirt design in the [Cilium swag store](https://cilium.myspreadshop.com/10k+stars+on+github?idea=61c05a15e41cc92c76d59deb) - check it out!
+We’ve also got a **special edition T-shirt** design in the [Cilium swag store](https://cilium.myspreadshop.com/10k+stars+on+github?idea=61c05a15e41cc92c76d59deb) - check it out!
 
 ![](for-tshirts.png)
