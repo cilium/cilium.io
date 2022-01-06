@@ -73,6 +73,8 @@ const Header = () => (
           >
             <Popover.Panel
               className="absolute inset-x-0 top-0 z-20 transition origin-top-right transform lg:hidden"
+              // click outside logic is broken, it will be fixed in the next release https://github.com/tailwindlabs/headlessui/issues/283
+              tabIndex={-1}
               focus
               static
             >
