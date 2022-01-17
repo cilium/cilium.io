@@ -3,8 +3,10 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import classNames from 'classnames';
 import React, { Fragment } from 'react';
 
+import SlackIcon from 'icons/slack.inline.svg';
 import Logo from 'images/logo.inline.svg';
 
+import Button from '../button';
 import Container from '../container';
 import GithubStars from '../github-stars';
 import Link from '../link';
@@ -29,12 +31,23 @@ const Header = () => (
             >
               <div className="flex items-center flex-1 lg:absolute lg:inset-y-0 lg:left-0">
                 <div className="flex items-center justify-between w-full lg:w-auto">
-                  <div className="flex items-center space-x-4 md:space-x-8">
+                  <div className="flex items-center">
                     <Link to="/">
                       <span className="sr-only">Cilium</span>
                       <Logo />
                     </Link>
-                    <GithubStars className="hidden lg:inline-block" />
+                    <GithubStars className="hidden ml-4 lg:inline-block md:ml-8" />
+                    <Button
+                      className="items-center hidden ml-4 leading-none lg:inline-flex"
+                      to="https://cilium.herokuapp.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      theme="outline-gray"
+                      size="xs"
+                    >
+                      <SlackIcon className="w-4 h-4 mr-1.5" />
+                      <span>Join Slack</span>
+                    </Button>
                   </div>
                   <div className="flex items-center -mr-2 lg:hidden">
                     <Popover.Button className="inline-flex items-center justify-center p-1.5 text-black rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
@@ -44,7 +57,7 @@ const Header = () => (
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:flex lg:space-x-8 xl:space-x-11 lg:items-center">
+              <div className="hidden lg:flex lg:space-x-7 xl:space-x-11 lg:items-center">
                 {navigation.map((item) => (
                   <Link
                     type="text"
@@ -106,6 +119,17 @@ const Header = () => (
                       </Link>
                     ))}
                   </div>
+                  <Button
+                    className="inline-flex items-center ml-4 leading-none mt-9"
+                    to="https://cilium.herokuapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    theme="outline-gray"
+                    size="xs"
+                  >
+                    <SlackIcon className="w-4 h-4 mr-1.5" />
+                    <span>Join Slack</span>
+                  </Button>
                   <GithubStars className="mt-9" />
                 </div>
               </div>

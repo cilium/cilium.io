@@ -4,7 +4,7 @@ import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
-import SlackIcon from 'icons/slack.inline.svg';
+import TwitterIcon from 'icons/twitter.inline.svg';
 import YoutubeIcon from 'icons/youtube.inline.svg';
 import illustration from 'images/hero-illustration.svg';
 
@@ -35,17 +35,17 @@ const Hero = () => (
         />
         <div className="flex flex-col items-start mt-4 xl:flex-row xl:items-center md:mt-5 ">
           <Button to="/learn">What is Cilium?</Button>
-          <div className="flex flex-col mt-6 space-y-4 xl:mt-0 xs:space-y-0 xs:space-x-6 xs:flex-row xl:ml-11">
+          <div className="flex flex-col mt-6 space-y-4 xl:ml-11 xl:mt-0 sm:space-y-0 sm:space-x-6 sm:flex-row">
             <Link
               className="flex items-center space-x-3"
-              to="https://cilium.herokuapp.com/"
+              to="https://twitter.com/ciliumproject"
               target="_blank"
               rel="noopener noreferrer"
               type="text"
-              theme="primary"
+              theme="primary-normal-case"
             >
-              <SlackIcon className="w-auto h-4" />
-              <span>Join Slack</span>
+              <TwitterIcon className="w-5 h-auto" />
+              <span>FOLLOW CILIUM</span>
             </Link>
             <Link
               className="flex items-center space-x-3"
@@ -53,10 +53,10 @@ const Hero = () => (
               target="_blank"
               rel="noopener noreferrer"
               type="text"
-              theme="primary"
+              theme="primary-normal-case"
             >
               <YoutubeIcon className="w-auto h-4 xs:h-6" />
-              <span>eBPF & Cilium Stream</span>
+              <span>eBPF & CILIUM STREAM</span>
             </Link>
           </div>
         </div>

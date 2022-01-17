@@ -13,6 +13,7 @@ const themeClassNames = {
     black: 'text-black hover:text-gray-1',
     'black-primary': 'text-black hover:text-primary-1',
     primary: 'uppercase text-primary-1 text-sm hover:text-gray-1 tracking-wider',
+    'primary-normal-case': 'text-primary-1 text-sm hover:text-gray-1 tracking-wider',
   },
   arrow: {
     common: 'inline-flex items-center text-sm tracking-wider uppercase',
