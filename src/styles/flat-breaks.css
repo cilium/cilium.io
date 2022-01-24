@@ -1,19 +1,17 @@
-@layer components {
-  @variants responsive {
-    .flat-none br {
-      content: none;
-    }
+@layer utilities {
+  .flat-none br {
+    content: none;
+  }
 
-    .flat-none br::after {
-      content: none;
-    }
+  .flat-none br::after {
+    content: none;
+  }
 
-    .flat-breaks br {
-      content: '';
-    }
+  .flat-breaks br {
+    content: '';
+  }
 
-    .flat-breaks br::after {
-      content: ' ';
-    }
+  .flat-breaks br::after {
+    content: ' ';
   }
 }
