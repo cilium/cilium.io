@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const BlogAuthor = ({ header, bio, theme }) => {
+function BlogAuthor({ header, bio, theme }) {
   const isPrimary = theme === 'primary';
   return (
     <div
@@ -12,7 +12,7 @@ const BlogAuthor = ({ header, bio, theme }) => {
           : 'p-6 md:p-8 bg-gray-4 border border-gray-3 rounded-lg'
       )}
     >
-      <div className={classNames(isPrimary ? 'flex-shrink-0' : 'inline')}>
+      <div className={classNames(isPrimary ? 'shrink-0' : 'inline')}>
         <span
           className={classNames(
             isPrimary ? 'block text-lg md:text-xl lg:text-2xl' : 'pr-1',
@@ -32,7 +32,7 @@ const BlogAuthor = ({ header, bio, theme }) => {
       />
     </div>
   );
-};
+}
 
 BlogAuthor.propTypes = {
   header: PropTypes.string.isRequired,

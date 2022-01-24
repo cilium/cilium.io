@@ -32,8 +32,8 @@ const items = [
     url: 'https://discopossepodcast.com/ep-153-kubernetes-networking-and-security-and-building-business-on-open-source-with-isovalent-founder-thomas-graf/',
   },
 ];
-const Podcasts = ({ className }) => (
-  <div className={className}>
+function Podcasts({ className }) {
+  return <div className={className}>
     <Heading tag="h3" theme="gray">
       {title}
     </Heading>
@@ -50,7 +50,7 @@ const Podcasts = ({ className }) => (
             target={target || ''}
             to={url}
           >
-            <PlayIcon className="flex-shrink-0" />
+            <PlayIcon className="shrink-0" />
             <div className="flex flex-col lg:pt-1.5">
               <span className="text-lg font-medium leading-relaxed lg:text-xl ">{name}</span>
               <span className="mt-2 text-sm font-medium leading-none text-gray-1">{type}</span>
@@ -60,7 +60,7 @@ const Podcasts = ({ className }) => (
       ))}
     </div>
   </div>
-);
+}
 
 Podcasts.propTypes = {
   className: PropTypes.string,

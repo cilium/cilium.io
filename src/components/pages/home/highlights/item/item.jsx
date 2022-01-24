@@ -6,8 +6,8 @@ import React, { Fragment } from 'react';
 import Heading from 'components/shared/heading';
 import ChevronIcon from 'icons/chevron.inline.svg';
 
-const Item = ({ icon: Icon, title, description }) => (
-  <Popover className="relative">
+function Item({ icon: Icon, title, description }) {
+  return <Popover className="relative">
     {({ open }) => (
       <>
         <Popover.Button
@@ -16,11 +16,11 @@ const Item = ({ icon: Icon, title, description }) => (
             open && 'rounded-b-none shadow-primary border-transparent'
           )}
         >
-          <Icon className="flex-shrink-0 w-16 h-auto xl:w-max" />
+          <Icon className="shrink-0 w-16 h-auto xl:w-max" />
           <Heading className="mx-4 text-left" size="xxs" tag="h3">
             {title}
           </Heading>
-          <ChevronIcon className="flex-shrink-0 w-auto h-4 ml-auto rotate-90" />
+          <ChevronIcon className="shrink-0 w-auto h-4 ml-auto rotate-90" />
         </Popover.Button>
         <Transition
           as={Fragment}
@@ -41,7 +41,7 @@ const Item = ({ icon: Icon, title, description }) => (
       </>
     )}
   </Popover>
-);
+}
 
 Item.propTypes = {
   icon: PropTypes.func.isRequired,

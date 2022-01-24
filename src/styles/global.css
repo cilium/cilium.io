@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-
 @layer base {
   body {
     @apply text-base text-black antialiased;
@@ -24,9 +21,9 @@
     scrollbar-width: none; /* Firefox */
   }
 
-  :not(pre) > code[class*='language-text'] {
+  /* :not(pre) > code[class*='language-text'] {
     @apply border border-gray-3 !px-2 md:!px-2.5 !bg-gray-4 !rounded font-normal;
-  }
+  } */
 
   .content-style {
     p {

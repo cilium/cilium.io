@@ -6,7 +6,7 @@ import { PopupButton } from 'react-calendly';
 import Button from 'components/shared/button';
 import Heading from 'components/shared/heading';
 
-const CardItem = ({ icon: Icon, name, text, buttons, size }) => {
+function CardItem({ icon: Icon, name, text, buttons, size }) {
   const has2Buttons = buttons.length === 2;
   const isSmallSize = size === 'sm';
   return (
@@ -15,7 +15,7 @@ const CardItem = ({ icon: Icon, name, text, buttons, size }) => {
       <div
         className={classNames(
           isSmallSize ? 'xl:px-8' : 'md:px-8',
-          'flex flex-col items-center flex-grow p-6 pb-8  md:pt-6 md:pb-11'
+          'flex flex-col items-center grow p-6 pb-8  md:pt-6 md:pb-11'
         )}
       >
         <Heading
@@ -62,7 +62,7 @@ const CardItem = ({ icon: Icon, name, text, buttons, size }) => {
       </div>
     </div>
   );
-};
+}
 
 CardItem.propTypes = {
   icon: PropTypes.func.isRequired,

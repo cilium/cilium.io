@@ -106,8 +106,14 @@ module.exports = {
             svgoConfig: {
               plugins: [
                 {
-                  removeViewBox: false,
+                  name: 'preset-default',
+                  params: {
+                    overrides: {
+                      removeViewBox: false,
+                    },
+                  },
                 },
+                'prefixIds',
               ],
             },
           },
@@ -118,8 +124,14 @@ module.exports = {
             svgoConfig: {
               plugins: [
                 {
-                  removeViewBox: false,
+                  name: 'preset-default',
+                  params: {
+                    overrides: {
+                      removeViewBox: false,
+                    },
+                  },
                 },
+                'prefixIds',
               ],
             },
           },

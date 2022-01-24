@@ -1,5 +1,3 @@
-@tailwind components;
-
 @layer components {
   @variants responsive {
     .flat-none br {

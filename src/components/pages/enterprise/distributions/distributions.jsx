@@ -27,8 +27,8 @@ const list = [
 ];
 
 const title = 'Distributions & Support';
-const Distributions = () => (
-  <section className="pb-12 mt-2 md:pb-20 pt-11 md:pt-16 md:mt-20 bg-gray-4 lg:pt-24 lg:mt-28 lg:pb-28 xl:pb-32">
+function Distributions() {
+  return <section className="pb-12 mt-2 md:pb-20 pt-11 md:pt-16 md:mt-20 bg-gray-4 lg:pt-24 lg:mt-28 lg:pb-28 xl:pb-32">
     <Container>
       <Heading tag="h2">{title}</Heading>
       <div className="mt-6 md:mt-10 lg:mt-14">
@@ -48,7 +48,7 @@ const Distributions = () => (
                     className="flex space-x-3 md:flex-col md:space-x-0 md:space-y-4 xl:space-y-0 xl:space-x-4 xl:flex-row"
                     key={index}
                   >
-                    <Icon className="flex-shrink-0 w-14 h-14 xs:w-[72px] xs:h-[72px]" />
+                    <Icon className="shrink-0 w-14 h-14 xs:w-[72px] xs:h-[72px]" />
                     <span
                       className="text-sm font-bold md:text-base"
                       dangerouslySetInnerHTML={{ __html: name }}
@@ -71,6 +71,6 @@ const Distributions = () => (
       </div>
     </Container>
   </section>
-);
+}
 
 export default Distributions;

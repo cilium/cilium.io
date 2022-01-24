@@ -7,7 +7,7 @@ import ExternalLinkIcon from 'icons/external-link.inline.svg';
 
 import CiliumLogo from './images/cilium-logo.inline.svg';
 
-const BlogPostCard = ({
+function BlogPostCard({
   path,
   ogImage,
   ogImageUrl,
@@ -16,7 +16,7 @@ const BlogPostCard = ({
   ogSummary: summary,
   categories,
   externalUrl,
-}) => {
+}) {
   const url = externalUrl !== '' ? externalUrl : null;
   const coverUrl = ogImageUrl !== '' ? ogImageUrl : null;
 
@@ -49,7 +49,7 @@ const BlogPostCard = ({
         </div>
       )}
 
-      <div className="flex flex-col flex-grow mt-7">
+      <div className="flex flex-col grow mt-7">
         <span className="text-sm font-medium leading-none text-gray-1">{date}</span>
         <h3 className="mt-3 font-bold leading-normal transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-lg">
           {title}
@@ -74,7 +74,7 @@ const BlogPostCard = ({
       </div>
     </Link>
   );
-};
+}
 
 BlogPostCard.propTypes = {
   path: PropTypes.string,
