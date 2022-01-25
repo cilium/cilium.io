@@ -3,7 +3,6 @@ path: '/blog/2021/12/20/github-10k'
 date: '2021-12-20T17:00:00.000Z'
 title: 'An Amazing Milestone for Cilium - 10,000 stars!'
 isPopular: true
-isFeatured: true
 ogImage: ogimage.png
 ogSummary: "We're going to need another digit ⭐️"
 categories:
@@ -44,6 +43,6 @@ As a small thank you, we have created **downloadable desktop wallpapers**, desig
 Shchekoldin - the artist behind many of our wonderful graphics - to decorate
 your desktop. [Download the free Cilium 10k stars wallpapers here](https://drive.google.com/file/d/1HgZn7jxQGSths5Ygmq4fuUt5-kKrV6ox/view?usp=sharing).
 
-We’ve also got a **special edition T-shirt** design in the [Cilium swag store](https://cilium.myspreadshop.com/10k+stars+on+github?idea=61c05a15e41cc92c76d59deb) - check it out! *(Note: there's a country selector at the bottom of the swag store site, so you can pick the best one for your location.)*
+We’ve also got a **special edition T-shirt** design in the [Cilium swag store](https://cilium.myspreadshop.com/10k+stars+on+github?idea=61c05a15e41cc92c76d59deb) - check it out! _(Note: there's a country selector at the bottom of the swag store site, so you can pick the best one for your location.)_
 
 ![](for-tshirts.png)
