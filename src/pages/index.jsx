@@ -25,28 +25,29 @@ const userCommunity1 = {
       ],
     },
     {
-      iconName: 'adobe',
-      text: 'What Makes a Good Multi-tenant Kubernetes Solution',
+      iconName: 'bell',
+      text: 'Why eBPF is changing the Telco networking space?',
       links: [
         {
-          linkText: 'Video 1',
-          linkUrl: 'https://www.youtube.com/watch?v=7UQ2CU6UEGY&ab_channel=eBPFSummit',
-          linkTarget: '_blank',
-        },
-        {
-          linkText: 'Video 2',
-          linkUrl: 'https://www.youtube.com/watch?v=39FLsSc2P-Y&feature=youtu.be&t=116',
+          linkText: 'Watch video',
+          linkUrl: 'https://www.youtube.com/watch?v=fNtG0iHYne4',
           linkTarget: '_blank',
         },
       ],
     },
     {
-      iconName: 'capitalOne',
-      text: 'Building a Secure and Maintainable PaaS',
+      iconName: 'gitlab',
+      text: 'Kubernetes Network Policies in Action with Cilium',
       links: [
         {
-          linkText: 'Watch video',
-          linkUrl: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w&ab_channel=eBPFSummit',
+          linkText: 'Video',
+          linkUrl: 'https://www.youtube.com/watch?v=kwQ0ooO3UM8&ab_channel=eBPFSummit',
+          linkTarget: '_blank',
+        },
+        {
+          linkText: 'Docs',
+          linkUrl:
+            'https://docs.gitlab.com/ee/user/application_security/threat_monitoring/#container-network-policy',
           linkTarget: '_blank',
         },
       ],
@@ -84,12 +85,28 @@ const userCommunity2 = {
       ],
     },
     {
-      iconName: 'bell',
-      text: 'Why eBPF is changing the Telco networking space?',
+      iconName: 'adobe',
+      text: 'What Makes a Good Multi-tenant Kubernetes Solution',
+      links: [
+        {
+          linkText: 'Video 1',
+          linkUrl: 'https://www.youtube.com/watch?v=7UQ2CU6UEGY&ab_channel=eBPFSummit',
+          linkTarget: '_blank',
+        },
+        {
+          linkText: 'Video 2',
+          linkUrl: 'https://www.youtube.com/watch?v=39FLsSc2P-Y&feature=youtu.be&t=116',
+          linkTarget: '_blank',
+        },
+      ],
+    },
+    {
+      iconName: 'capitalOne',
+      text: 'Building a Secure and Maintainable PaaS',
       links: [
         {
           linkText: 'Watch video',
-          linkUrl: 'https://www.youtube.com/watch?v=fNtG0iHYne4',
+          linkUrl: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w&ab_channel=eBPFSummit',
           linkTarget: '_blank',
         },
       ],
@@ -134,23 +151,6 @@ const userCommunity2 = {
         {
           linkText: 'Watch video',
           linkUrl: 'https://www.youtube.com/watch?v=yXm7yZE2rk4',
-          linkTarget: '_blank',
-        },
-      ],
-    },
-    {
-      iconName: 'gitlab',
-      text: 'Kubernetes Network Policies in Action with Cilium',
-      links: [
-        {
-          linkText: 'Video',
-          linkUrl: 'https://www.youtube.com/watch?v=kwQ0ooO3UM8&ab_channel=eBPFSummit',
-          linkTarget: '_blank',
-        },
-        {
-          linkText: 'Docs',
-          linkUrl:
-            'https://docs.gitlab.com/ee/user/application_security/threat_monitoring/#container-network-policy',
           linkTarget: '_blank',
         },
       ],

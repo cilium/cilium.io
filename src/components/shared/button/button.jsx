@@ -9,8 +9,10 @@ const commonClassNames =
 const themeClassNames = {
   primary: 'text-white bg-primary-2 hover:bg-hover-1 disabled:hover:bg-primary-2',
   outline: 'border-2 border-black hover:text-gray-1 hover:border-gray-1',
+  'outline-gray': 'border border-gray-3 hover:text-primary-1',
 };
 const sizeClassNames = {
+  xs: 'text-sm py-[7px] px-3',
   sm: 'text-base py-2.5 px-3.5',
   md: 'text-base py-2.5 px-3.5 md:py-3 md:px-5 lg:py-4 lg:px-6 lg:text-lg',
 };
