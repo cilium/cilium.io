@@ -47,8 +47,8 @@ const items = [
         buttonTarget: '_blank',
       },
       {
-        buttonUrl: 'https://play.instruqt.com/isovalent/invite/j4maqox5r1h5',
-        buttonText: 'Tutorial',
+        buttonUrl: 'https://play.instruqt.com/isovalent',
+        buttonText: 'Tutorials',
         buttonTarget: '_blank',
       },
     ],

@@ -129,9 +129,9 @@ const userCommunity = {
 const LearnPage = () => (
   <MainLayout pageMetadata={SeoMetadata.learn}>
     <Hero className="pt-5 md:pt-16 lg:pb-5" {...hero} />
-    <Highlights className="mt-10 md:mt-20" />
-    <Architecture />
     <TryCilium />
+    <Architecture />
+    <Highlights className="mt-10 md:mt-20" />
     <Learn />
     <RelatedProjects />
     <UserCommunity {...userCommunity} />
