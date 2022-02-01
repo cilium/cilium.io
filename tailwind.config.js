@@ -49,6 +49,9 @@ module.exports = {
       borderRadius: {
         large: '20px',
       },
+      backgroundImage: {
+        'search-icon': "url('/images/search.svg')",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

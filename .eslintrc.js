@@ -20,6 +20,7 @@ module.exports = {
     'no-shadow': 'off',
     'react/no-array-index-key': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/function-component-definition': 'off',
     'react/no-danger': 'off',
     'react/jsx-sort-props': [
       'error',

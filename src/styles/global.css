@@ -38,6 +38,11 @@
       }
     }
   }
+  .highlight-text {
+    mark {
+      @apply bg-additional-4;
+    }
+  }
 }
 
 .gatsby-highlight {

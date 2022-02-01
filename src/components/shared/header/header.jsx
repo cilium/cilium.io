@@ -3,13 +3,19 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import classNames from 'classnames';
 import React, { Fragment } from 'react';
 
+import Button from 'components/shared/button';
 import SlackIcon from 'icons/slack.inline.svg';
 import Logo from 'images/logo.inline.svg';
+import AlgoliaQueries from 'utils/algoria-queries';
 
-import Button from '../button';
 import Container from '../container';
 import GithubStars from '../github-stars';
 import Link from '../link';
+import SearchBox from '../search-box';
+
+const searchIndices = [
+  { name: AlgoliaQueries[0].indexName, title: 'Blog Posts', hitComp: 'postPageHit' },
+];
 
 const navigation = [
   { name: 'Enterprise', href: '/enterprise' },
@@ -25,17 +31,17 @@ const Header = () => (
         <>
           <Container size="lg">
             <nav
-              className="relative flex items-center justify-end w-full sm:h-10"
+              className="relative flex items-center justify-between w-full sm:h-10 space-x-6"
               aria-label="Global"
             >
-              <div className="flex items-center flex-1 lg:absolute lg:inset-y-0 lg:left-0">
+              <div className="flex items-center w-full lg:w-auto justify-between flex-shrink-0">
                 <div className="flex items-center justify-between w-full lg:w-auto">
                   <div className="flex items-center">
                     <Link to="/">
                       <span className="sr-only">Cilium</span>
                       <Logo />
                     </Link>
-                    <GithubStars className="hidden ml-4 lg:inline-block md:ml-8" />
+                    <GithubStars className="hidden ml-4 lg:inline-block xl:ml-8" />
                     <Button
                       className="items-center hidden ml-4 leading-none lg:inline-flex"
                       to="https://cilium.herokuapp.com/"
@@ -44,11 +50,12 @@ const Header = () => (
                       theme="outline-gray"
                       size="xs"
                     >
-                      <SlackIcon className="w-4 h-4 mr-1.5" />
-                      <span>Join Slack</span>
+                      <SlackIcon className="w-4 h-4" />
+                      <span className="hidden xl:mr-1.5 xl:block">Join Slack</span>
                     </Button>
                   </div>
                   <div className="flex items-center -mr-2 lg:hidden">
+                    <SearchBox className="mr-6" indices={searchIndices} />
                     <Popover.Button className="inline-flex items-center justify-center p-1.5 text-black rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
                       <span className="sr-only">Open main menu</span>
                       <MenuIcon className="w-7 h-7" aria-hidden="true" />
@@ -56,19 +63,22 @@ const Header = () => (
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:flex lg:space-x-7 xl:space-x-11 lg:items-center">
-                {navigation.map((item) => (
-                  <Link
-                    type="text"
-                    theme="black"
-                    key={item.name}
-                    to={item.href}
-                    target={item.target || ''}
-                    className="text-base font-bold leading-none"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
+              <div className="hidden lg:flex space-x-5 xl:space-x-7 w-full lg:items-center lg:justify-end">
+                <SearchBox indices={searchIndices} />
+                <div className="flex lg:space-x-6 xl:space-x-8 2xl:space-x-11 items-center">
+                  {navigation.map((item) => (
+                    <Link
+                      type="text"
+                      theme="black"
+                      key={item.name}
+                      to={item.href}
+                      target={item.target || ''}
+                      className="text-sm xl:text-base font-bold leading-none"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
             </nav>
           </Container>

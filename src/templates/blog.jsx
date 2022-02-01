@@ -4,9 +4,11 @@ import React from 'react';
 
 import FeaturedPosts from 'components/pages/blog/featured-posts';
 import PostsBoard from 'components/pages/blog/posts-board';
+import AlgoliaQueries from 'utils/algoria-queries';
 
 import MainLayout from '../layouts/main';
 
+console.log(AlgoliaQueries);
 const BlogPage = (props) => {
   const {
     data: {
