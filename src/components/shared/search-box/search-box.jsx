@@ -38,7 +38,7 @@ const SearchBox = ({ indices, className }) => {
         <SearchResult
           indices={indices}
           className={classNames(
-            'absolute w-full top-full inset-x-0 z-50 bg-white border border-t-0 border-gray-2 rounded-b',
+            'absolute w-full top-full inset-x-0 z-50 bg-white border border-t-0 border-gray-2 shadow-tertiary rounded-b',
             shouldShowResult ? 'block' : 'hidden'
           )}
         />
