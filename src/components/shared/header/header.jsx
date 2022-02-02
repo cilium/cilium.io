@@ -1,6 +1,7 @@
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import Button from 'components/shared/button';
@@ -24,7 +25,7 @@ const navigation = [
   { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
 ];
 
-const Header = () => (
+const Header = ({ showSearchBox }) => (
   <div className="py-5">
     <Popover>
       {({ open }) => (
@@ -51,11 +52,11 @@ const Header = () => (
                       size="xs"
                     >
                       <SlackIcon className="w-4 h-4" />
-                      <span className="hidden xl:mr-1.5 xl:block">Join Slack</span>
+                      <span className="hidden xl:ml-1.5 xl:block">Join Slack</span>
                     </Button>
                   </div>
                   <div className="flex items-center -mr-2 lg:hidden">
-                    <SearchBox className="mr-6" indices={searchIndices} />
+                    {showSearchBox && <SearchBox className="mr-4" indices={searchIndices} />}
                     <Popover.Button className="inline-flex items-center justify-center p-1.5 text-black rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
                       <span className="sr-only">Open main menu</span>
                       <MenuIcon className="w-7 h-7" aria-hidden="true" />
@@ -64,7 +65,7 @@ const Header = () => (
                 </div>
               </div>
               <div className="hidden lg:flex space-x-5 xl:space-x-7 w-full lg:items-center lg:justify-end">
-                <SearchBox indices={searchIndices} />
+                {showSearchBox && <SearchBox indices={searchIndices} />}
                 <div className="flex lg:space-x-6 xl:space-x-8 2xl:space-x-11 items-center">
                   {navigation.map((item) => (
                     <Link
@@ -156,4 +157,11 @@ const Header = () => (
   </div>
 );
 
+Header.propTypes = {
+  showSearchBox: PropTypes.bool,
+};
+
+Header.defaultProps = {
+  showSearchBox: false,
+};
 export default Header;

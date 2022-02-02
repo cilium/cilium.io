@@ -4,11 +4,9 @@ import React from 'react';
 
 import FeaturedPosts from 'components/pages/blog/featured-posts';
 import PostsBoard from 'components/pages/blog/posts-board';
-import AlgoliaQueries from 'utils/algoria-queries';
 
 import MainLayout from '../layouts/main';
 
-console.log(AlgoliaQueries);
 const BlogPage = (props) => {
   const {
     data: {
@@ -18,19 +16,14 @@ const BlogPage = (props) => {
     pageContext: { categories, currentCategory, currentPage, numPages, canonicalUrl, slug },
     location: { pathname },
   } = props;
-  const shouldShowBanner = pathname.startsWith('/blog');
-
+  const isBlogPages = pathname.startsWith('/blog');
   const seoMetadata = {
     title: 'Blog — Cilium',
     description: 'The latest articles covering eBPF-based Networking, Observability, and Security',
     slug,
   };
   return (
-    <MainLayout
-      showBanner={shouldShowBanner}
-      canonicalUrl={canonicalUrl}
-      pageMetadata={seoMetadata}
-    >
+    <MainLayout isBlogPages={isBlogPages} canonicalUrl={canonicalUrl} pageMetadata={seoMetadata}>
       <FeaturedPosts featuredStory={featuredStory?.[0]} />
       <PostsBoard
         categories={categories}

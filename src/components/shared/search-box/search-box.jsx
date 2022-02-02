@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import algoliasearch from 'algoliasearch/lite';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React, { useRef, useState, useMemo } from 'react';
 import {
   InstantSearch,
@@ -81,7 +81,10 @@ const SearchBox = ({ indices, className }) => {
   useClickOutside(rootRef, () => setFocus(false));
   const shouldShowResult = !!query?.length && hasFocus;
   return (
-    <div className={classNames('relative w-full max-w-[340px] flex-grow', className)} ref={rootRef}>
+    <div
+      className={classNames('relative sm:w-[340px] lg:w-full max-w-[340px] flex-grow', className)}
+      ref={rootRef}
+    >
       <InstantSearch
         searchClient={searchClient}
         indexName={indices[0].name}
