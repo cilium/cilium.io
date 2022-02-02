@@ -20,7 +20,7 @@
 1. Clone this repository
 
 ```bash
-git clone git@github.com:isovalent/cilium.io-v2.git
+git clone git@github.com:cilium/cilium.io.git
 ```
 
 2. Install dependencies
