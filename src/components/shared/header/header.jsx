@@ -35,7 +35,7 @@ const Header = ({ showSearchBox }) => (
               className="relative flex items-center justify-between w-full sm:h-10 space-x-6"
               aria-label="Global"
             >
-              <div className="flex items-center w-full lg:w-auto justify-between flex-shrink-0">
+              <div className="flex items-center w-full lg:w-auto justify-between shrink-0">
                 <div className="flex items-center justify-between w-full lg:w-auto">
                   <div className="flex items-center">
                     <Link to="/">

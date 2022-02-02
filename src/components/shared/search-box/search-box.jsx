@@ -82,7 +82,7 @@ const SearchBox = ({ indices, className }) => {
   const shouldShowResult = !!query?.length && hasFocus;
   return (
     <div
-      className={classNames('relative sm:w-[340px] lg:w-full max-w-[340px] flex-grow', className)}
+      className={classNames('relative sm:w-[340px] lg:w-full max-w-[340px] grow', className)}
       ref={rootRef}
     >
       <InstantSearch

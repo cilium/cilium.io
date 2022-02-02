@@ -38,6 +38,7 @@
       }
     }
   }
+
   .highlight-text {
     mark {
       @apply bg-additional-4;
