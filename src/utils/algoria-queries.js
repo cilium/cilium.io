@@ -8,6 +8,7 @@ const pageQuery = `{
         frontmatter {
           title
           path
+          externalUrl
         }
         excerpt(pruneLength: 5000)
       }

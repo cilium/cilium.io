@@ -25,35 +25,34 @@ const HitCount = connectStateResults(({ searchResults }) => {
     </div>
   );
 });
-const PageHit = ({ hit }) =>
-  hit.path && (
-    <div>
-      <Link to={hit.path}>
-        <h4 className="font-medium text-sm highlight-text">
-          <Highlight attribute="title" hit={hit} tagName="mark" />
-        </h4>
-      </Link>
-      <Snippet
-        className="text-xs text-gray-1 mt-1.5 leading-relaxed block highlight-text"
-        attribute="excerpt"
-        hit={hit}
-        tagName="mark"
-      />
-    </div>
-  );
 
-const Hits = connectHits(({ hits, showAll }) => {
-  const filteredHits = hits?.length && hits.filter((hit) => hit.path !== null);
-  return filteredHits ? (
+const PageHit = ({ hit }) => (
+  <div>
+    <Link to={hit.path || hit.externalUrl}>
+      <h4 className="font-medium text-sm highlight-text">
+        <Highlight attribute="title" hit={hit} tagName="mark" />
+      </h4>
+    </Link>
+    <Snippet
+      className="text-xs text-gray-1 mt-1.5 leading-relaxed block highlight-text"
+      attribute="excerpt"
+      hit={hit}
+      tagName="mark"
+    />
+  </div>
+);
+
+const Hits = connectHits(({ hits, showAll }) =>
+  hits?.length ? (
     <ul className="divide-y divide-gray-3 px-3">
-      {filteredHits.slice(0, showAll ? filteredHits.length : 5).map((hit) => (
+      {hits.slice(0, showAll ? hits.length : 5).map((hit) => (
         <li className="py-2.5 first:pt-1.5" key={hit.objectID}>
           <PageHit hit={hit} />
         </li>
       ))}
     </ul>
-  ) : null;
-});
+  ) : null
+);
 
 const HitsInIndex = ({ index, allResultsShown }) => (
   <Index indexName={index.name}>
