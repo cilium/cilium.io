@@ -45,7 +45,7 @@ const PageHit = ({ hit }) =>
 const Hits = connectHits(({ hits, showAll }) => {
   const filteredHits = hits?.length && hits.filter((hit) => hit.path !== null);
   return filteredHits ? (
-    <ul className="divide-y divide-gray-2 px-3">
+    <ul className="divide-y divide-gray-3 px-3">
       {filteredHits.slice(0, showAll ? filteredHits.length : 5).map((hit) => (
         <li className="py-2.5 first:pt-1.5" key={hit.objectID}>
           <PageHit hit={hit} />
