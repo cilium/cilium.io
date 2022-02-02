@@ -82,7 +82,7 @@ const SearchBox = ({ indices, className }) => {
   const shouldShowResult = !!query?.length && hasFocus;
   return (
     <div
-      className={classNames('relative sm:w-[340px] lg:w-full max-w-[340px] grow', className)}
+      className={classNames('relative sm:w-[340px] lg:w-full sm:max-w-[340px] grow', className)}
       ref={rootRef}
     >
       <InstantSearch
@@ -97,11 +97,11 @@ const SearchBox = ({ indices, className }) => {
         />
         <div
           className={classNames(
-            'absolute w-full  top-full inset-x-0 z-50 bg-white border border-t-0 border-gray-2 rounded-b',
+            'absolute w-full top-full inset-x-0 z-50 bg-white border border-t-0 border-gray-2 rounded-b',
             shouldShowResult ? 'block' : 'hidden'
           )}
         >
-          <div className="overflow-y-scroll max-h-[70vh]">
+          <div className="overflow-y-scroll max-h-[50vh] sm:max-h-[70vh]">
             {indices.map((index) => (
               <HitsInIndex allResultsShown={allResultsShown} index={index} key={index.name} />
             ))}
