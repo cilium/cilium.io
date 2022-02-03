@@ -97,9 +97,9 @@ module.exports = {
               transitionDuration: theme('transitionDuration.200'),
               transitionProperty: theme('transitionProperty.colors'),
               transitionTimingFunction: theme('transitionTimingFunction.DEFAULT'),
-              '&:hover': {
-                color: theme('colors.gray.1'),
-              },
+            },
+            'a:hover': {
+              color: theme('colors.gray.1'),
             },
             p: {
               lineHeight: theme('lineHeight.normal'),
