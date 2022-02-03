@@ -17,7 +17,7 @@ const HitCount = connectStateResults(({ searchResults }) => {
   const hitCount = searchResults?.nbHits;
   const query = searchResults?.query;
   return (
-    <div className="text-xs leading-none font-medium px-3 py-2.5">
+    <div className="text-xs font-medium px-3 py-2.5">
       <span className="text-gray-2">
         {hitCount || 'No'} result{hitCount !== 1 || hitCount === 0 ? `s` : ``} for
       </span>{' '}
@@ -73,7 +73,7 @@ const SearchResult = ({ indices, className }) => {
       <div className="bg-gray-4 p-3 flex rounded-b border-t border-gray-3">
         {!allResultsShown && (
           <button
-            className="flex items-center mr-auto text-primary-1 uppercase  text-xs font-bold tracking-wider leading-none space-x-1"
+            className="flex items-center mr-auto text-primary-1 uppercase text-xs font-bold tracking-wider leading-none space-x-1"
             type="button"
             onClick={() => setAllResultsShown(!allResultsShown)}
           >

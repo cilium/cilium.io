@@ -6,12 +6,12 @@ import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
 import SEO from 'components/shared/seo';
 
-const MainLayout = ({ isBlogPages, pageMetadata, canonicalUrl, children }) => (
+const MainLayout = ({ isBlogPage, pageMetadata, canonicalUrl, children }) => (
   <>
     <SEO canonical={canonicalUrl} data={pageMetadata} />
     <div className="relative">
-      {isBlogPages && <Banner />}
-      <Header showSearchBox={isBlogPages} />
+      {isBlogPage && <Banner />}
+      <Header showSearchBox={isBlogPage} />
     </div>
     <main>{children}</main>
     <Footer />
@@ -20,7 +20,7 @@ const MainLayout = ({ isBlogPages, pageMetadata, canonicalUrl, children }) => (
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  isBlogPages: PropTypes.bool,
+  isBlogPage: PropTypes.bool,
   pageMetadata: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
@@ -30,7 +30,7 @@ MainLayout.propTypes = {
 
 MainLayout.defaultProps = {
   pageMetadata: {},
-  isBlogPages: false,
+  isBlogPage: false,
   canonicalUrl: null,
 };
 
