@@ -6,7 +6,7 @@ import { InstantSearch } from 'react-instantsearch-dom';
 
 import useClickOutside from 'utils/use-click-outside';
 
-import Input from './search-input';
+import SearchInput from './search-input';
 import SearchResult from './search-result';
 
 const SearchBox = ({ indices, className }) => {
@@ -30,7 +30,7 @@ const SearchBox = ({ indices, className }) => {
         indexName={indices[0].name}
         onSearchStateChange={({ query }) => setQuery(query)}
       >
-        <Input
+        <SearchInput
           className="w-full flex justify-end"
           hasFocus={hasFocus}
           onFocus={() => setFocus(true)}
@@ -38,8 +38,10 @@ const SearchBox = ({ indices, className }) => {
         <SearchResult
           indices={indices}
           className={classNames(
-            'absolute w-full top-full inset-x-0 z-50 bg-white border border-t-0 border-gray-2 shadow-tertiary rounded-b',
-            shouldShowResult ? 'block' : 'hidden'
+            'absolute top-full inset-x-0 z-50 w-full transition-[opacity,visibility] duration-200 bg-white border border-t-0 border-gray-2 shadow-tertiary rounded-b',
+            shouldShowResult
+              ? 'visible opacity-100 pointer-events-auto'
+              : 'invisible opacity-0 pointer-events-none'
           )}
         />
       </InstantSearch>
