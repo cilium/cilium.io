@@ -119,7 +119,7 @@ const Header = () => (
                     ))}
                   </div>
                   <Button
-                    className="inline-flex items-center ml-4 leading-none mt-9"
+                    className="inline-flex items-center leading-none mt-9"
                     to="https://cilium.herokuapp.com/"
                     target="_blank"
                     rel="noopener noreferrer"
