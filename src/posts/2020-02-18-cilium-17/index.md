@@ -561,59 +561,59 @@ To demonstrate this technique, the below example eBPF program implements an eBPF
 call jump to the constant map index `0`:
 
 ```
-    0: (b7) r3 = 0
-    1: (18) r2 = map[id:526]
-    3: (85) call bpf_tail_call#12
-    4: (b7) r0 = 1
-    5: (95) exit
+  0: (b7) r3 = 0
+  1: (18) r2 = map[id:526]
+  3: (85) call bpf_tail_call#12
+  4: (b7) r0 = 1
+  5: (95) exit
 ```
 
 The x86-64 eBPF JITed program would emit a retpoline on older kernels (marked in bold):
 
 ```
-    0xffffffffc076e55c:
-    [...]                                  _
-    19:   xor    %edx,%edx                |_ index (r3 = 0)
-    1b:   movabs $0xffff88d95cc82600,%rsi |_map (r2 = map[id:526])
-    25:   mov    %edx,%edx                |  index >= array->map.max_entries check
-    27:   cmp    %edx,0x24(%rsi)          |
-    2a:   jbe    0x0000000000000066       |_
-    2c:   mov    -0x224(%rbp),%eax        |  tail call limit check
-    32:   cmp    $0x20,%eax               |
-    35:   ja     0x0000000000000066       |
-    37:   add    $0x1,%eax                |
-    3a:   mov    %eax,-0x224(%rbp)        |_
-    40:   mov    0xd0(%rsi,%rdx,8),%rax   |_prog = array->ptrs[index]
-    48:   test   %rax,%rax                |  prog == NULL check
-    4b:   je     0x0000000000000066       |_
-    <b>4d:   mov    0x30(%rax),%rax</b>          |  goto *(prog->bpf_func + prologue_size)
-    <b>51:   add    $0x19,%rax</b>               |
-    <b>55:   callq  0x0000000000000061</b>       |  retpoline for indirect jump
-    <b>5a:   pause</b>                           |
-    <b>5c:   lfence</b>                          |
-    <b>5f:   jmp    0x000000000000005a</b>       |
-    <b>61:   mov    %rax,(%rsp)</b>              |
-    <b>65:   retq</b>                            |_
-    66:   mov    $0x1,%eax                (next instruction, r0 = 1)
-    [...]
+  0xffffffffc076e55c:
+  [...]                                  _
+  19:   xor    %edx,%edx                |_ index (r3 = 0)
+  1b:   movabs $0xffff88d95cc82600,%rsi |_map (r2 = map[id:526])
+  25:   mov    %edx,%edx                |  index >= array->map.max_entries check
+  27:   cmp    %edx,0x24(%rsi)          |
+  2a:   jbe    0x0000000000000066       |_
+  2c:   mov    -0x224(%rbp),%eax        |  tail call limit check
+  32:   cmp    $0x20,%eax               |
+  35:   ja     0x0000000000000066       |
+  37:   add    $0x1,%eax                |
+  3a:   mov    %eax,-0x224(%rbp)        |_
+  40:   mov    0xd0(%rsi,%rdx,8),%rax   |_prog = array->ptrs[index]
+  48:   test   %rax,%rax                |  prog == NULL check
+  4b:   je     0x0000000000000066       |_
+  4d:   mov    0x30(%rax),%rax          |  goto *(prog->bpf_func + prologue_size)
+  51:   add    $0x19,%rax               |
+  55:   callq  0x0000000000000061       |  retpoline for indirect jump
+  5a:   pause                           |
+  5c:   lfence                          |
+  5f:   jmp    0x000000000000005a       |
+  61:   mov    %rax,(%rsp)              |
+  65:   retq                            |_
+  66:   mov    $0x1,%eax                (next instruction, r0 = 1)
+  [...]
 ```
 
 For 5.5 or later kernels, the same program would get optimized into a direct jump
 (marked in bold) without the need for a retpoline:
 
 ```
-    0xffffffffc08e8930:
-    [...]                                  _
-    19:   xor    %edx,%edx                |_ index (r3 = 0)
-    1b:   movabs $0xffff9d8afd74c000,%rsi |_map (r2 = map[id:526])
-    25:   mov    -0x224(%rbp),%eax        |  tail call limit check
-    2b:   cmp    $0x20,%eax               |
-    2e:   ja     0x000000000000003e       |
-    30:   add    $0x1,%eax                |
-    33:   mov    %eax,-0x224(%rbp)        |_
-    <b>39:   jmpq   0xfffffffffffd1785</b>       |_[direct] goto *(prog->bpf_func + prologue_size)
-    3e:   mov    $0x1,%eax                (next instruction, r0 = 1)
-    [...]
+  0xffffffffc08e8930:
+  [...]                                  _
+  19:   xor    %edx,%edx                |_ index (r3 = 0)
+  1b:   movabs $0xffff9d8afd74c000,%rsi |_map (r2 = map[id:526])
+  25:   mov    -0x224(%rbp),%eax        |  tail call limit check
+  2b:   cmp    $0x20,%eax               |
+  2e:   ja     0x000000000000003e       |
+  30:   add    $0x1,%eax                |
+  33:   mov    %eax,-0x224(%rbp)        |_
+  39:   jmpq   0xfffffffffffd1785       |_[direct] goto *(prog->bpf_func + prologue_size)
+  3e:   mov    $0x1,%eax                (next instruction, r0 = 1)
+  [...]
 ```
 
 Upon program update, the instruction on address `39`, that is `jmpq 0xfffffffffffd1785`,
@@ -622,18 +622,18 @@ if the target eBPF program would get deleted from the tail call map, then the `j
 is patched into a same-sized `nop` instruction in order to allow a fall-through:
 
 ```
-    0xffffffffc08e8930:
-    [...]                                  _
-    19:   xor    %edx,%edx                |_ index (r3 = 0)
-    1b:   movabs $0xffff9d8afd74c000,%rsi |_map (r2 = map[id:526])
-    25:   mov    -0x224(%rbp),%eax        |
-    2b:   cmp    $0x20,%eax               .
-    2e:   ja     0x000000000000003e       .
-    30:   add    $0x1,%eax                .
-    33:   mov    %eax,-0x224(%rbp)        |_
-    <b>39:   nopl   0x0(%rax,%rax,1)</b>         |_ fall-through nop
-    3e:   mov    $0x1,%eax                (next instruction, r0 = 1)
-    [...]
+  0xffffffffc08e8930:
+  [...]                                  _
+  19:   xor    %edx,%edx                |_ index (r3 = 0)
+  1b:   movabs $0xffff9d8afd74c000,%rsi |_map (r2 = map[id:526])
+  25:   mov    -0x224(%rbp),%eax        |
+  2b:   cmp    $0x20,%eax               .
+  2e:   ja     0x000000000000003e       .
+  30:   add    $0x1,%eax                .
+  33:   mov    %eax,-0x224(%rbp)        |_
+  39:   nopl   0x0(%rax,%rax,1)         |_ fall-through nop
+  3e:   mov    $0x1,%eax                (next instruction, r0 = 1)
+  [...]
 ```
 
 Thus, instead of redirecting speculation into the `pause/lfence` loop, the kernel
