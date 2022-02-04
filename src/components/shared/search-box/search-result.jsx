@@ -73,12 +73,12 @@ const SearchResult = ({ indices, className }) => {
       <div className="bg-gray-4 p-3 flex rounded-b border-t border-gray-3">
         {!allResultsShown && (
           <button
-            className="flex items-center mr-auto text-primary-1 uppercase text-xs font-bold tracking-wider leading-none space-x-1"
+            className="flex items-center mr-auto text-primary-1 uppercase text-xs font-bold tracking-wider leading-none"
             type="button"
             onClick={() => setAllResultsShown(!allResultsShown)}
           >
             <span>View all</span>
-            <ChevronIcon />
+            <ChevronIcon className="ml-1 hidden sm:inline-block" />
           </button>
         )}
         <AlgoliaLogo className="ml-auto" />

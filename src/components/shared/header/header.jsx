@@ -7,7 +7,7 @@ import React, { Fragment } from 'react';
 import Button from 'components/shared/button';
 import SlackIcon from 'icons/slack.inline.svg';
 import Logo from 'images/logo.inline.svg';
-import AlgoliaQueries from 'utils/algoria-queries';
+import algoliaQueries from 'utils/algoria-queries';
 
 import Container from '../container';
 import GithubStars from '../github-stars';
@@ -15,7 +15,7 @@ import Link from '../link';
 import SearchBox from '../search-box';
 
 const searchIndices = [
-  { name: AlgoliaQueries[0].indexName, title: 'Blog Posts', hitComp: 'postPageHit' },
+  { name: algoliaQueries[0].indexName, title: 'Blog Posts', hitComp: 'postPageHit' },
 ];
 
 const navigation = [
