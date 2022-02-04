@@ -13,7 +13,7 @@ export default connectSearchBox(({ refine, currentRefinement, className, onFocus
         hasFocus && currentRefinement && 'rounded-b-none'
       )}
       aria-label="Search"
-      type="text"
+      type="search"
       value={currentRefinement}
       placeholder="Search"
       onChange={(e) => refine(e.target.value)}
