@@ -560,17 +560,17 @@ programs are updated, the eBPF JIT image is patched to directly jump to the new 
 To demonstrate this technique, the below example eBPF program implements an eBPF tail
 call jump to the constant map index `0`:
 
-<pre>
+```
     0: (b7) r3 = 0
     1: (18) r2 = map[id:526]
     3: (85) call bpf_tail_call#12
     4: (b7) r0 = 1
     5: (95) exit
-</pre>
+```
 
 The x86-64 eBPF JITed program would emit a retpoline on older kernels (marked in bold):
 
-<pre>
+```
     0xffffffffc076e55c:
     [...]                                  _
     19:   xor    %edx,%edx                |_ index (r3 = 0)
@@ -596,12 +596,12 @@ The x86-64 eBPF JITed program would emit a retpoline on older kernels (marked in
     <b>65:   retq</b>                            |_
     66:   mov    $0x1,%eax                (next instruction, r0 = 1)
     [...]
-</pre>
+```
 
 For 5.5 or later kernels, the same program would get optimized into a direct jump
 (marked in bold) without the need for a retpoline:
 
-<pre>
+```
     0xffffffffc08e8930:
     [...]                                  _
     19:   xor    %edx,%edx                |_ index (r3 = 0)
@@ -614,14 +614,14 @@ For 5.5 or later kernels, the same program would get optimized into a direct jum
     <b>39:   jmpq   0xfffffffffffd1785</b>       |_[direct] goto *(prog->bpf_func + prologue_size)
     3e:   mov    $0x1,%eax                (next instruction, r0 = 1)
     [...]
-</pre>
+```
 
 Upon program update, the instruction on address `39`, that is `jmpq 0xfffffffffffd1785`,
 would be live-updated with the address of the new target eBPF program. Similarly,
 if the target eBPF program would get deleted from the tail call map, then the `jmp`
 is patched into a same-sized `nop` instruction in order to allow a fall-through:
 
-<pre>
+```
     0xffffffffc08e8930:
     [...]                                  _
     19:   xor    %edx,%edx                |_ index (r3 = 0)
@@ -634,7 +634,7 @@ is patched into a same-sized `nop` instruction in order to allow a fall-through:
     <b>39:   nopl   0x0(%rax,%rax,1)</b>         |_ fall-through nop
     3e:   mov    $0x1,%eax                (next instruction, r0 = 1)
     [...]
-</pre>
+```
 
 Thus, instead of redirecting speculation into the `pause/lfence` loop, the kernel
 eliminates the need to potentially perform any speculation for the jump given the

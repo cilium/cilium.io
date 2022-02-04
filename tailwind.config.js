@@ -101,6 +101,7 @@ module.exports = {
               lineHeight: theme('lineHeight.normal'),
             },
             code: {
+              fontWeight: theme('fontWeight.normal'),
               '&::before': {
                 content: '"" !important',
               },
