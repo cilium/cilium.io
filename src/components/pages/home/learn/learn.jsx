@@ -1,49 +1,68 @@
-import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import React, { Fragment } from 'react';
 
+import BlogPostCard from 'components/shared/blog-post-card';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import List from 'components/shared/list';
 
-const title = 'Latest News & Blogs';
+const title = 'Learn about Cilium & eBPF';
 
-const featuredBlogs = {
-  title: 'Featured Blogs',
-  items: [
-    {
-      linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
-      linkTarget: '_blank',
-      linkText: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
-    },
-    {
-      linkUrl: 'https://cilium.io/blog/2021/08/03/best-of-echo',
-      linkText: 'eBPF and Cilium Office Hours - Highlights from Season 1',
-    },
-    {
-      linkUrl: 'https://cilium.io/blog/2021/05/20/cilium-110',
-      linkText:
-        'Cilium 1.10: WireGuard, BGP Support, Egress IP Gateway, New Cilium CLI, XDP Load Balancer, Alibaba Cloud Integration and more',
-    },
-    {
-      linkUrl: 'https://cilium.io/blog/2021/05/11/cni-benchmark',
-      linkText: 'CNI Benchmark: Understanding Cilium Network Performance',
-    },
-    {
-      linkUrl: 'https://cilium.io/blog/2021/04/19/openshift-certification',
-      linkText: 'Introducing the Cilium Certified OpenShift Plug-in',
-    },
-  ],
-  buttonUrl: '/blog',
-  buttonText: 'Read more',
+const Learn = () => {
+  const {
+    allMdx: { posts },
+  } = useStaticQuery(graphql`
+    query blogQuery {
+      allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 5) {
+        posts: nodes {
+          frontmatter {
+            path
+            externalUrl
+            title
+            date(locale: "en", formatString: "MMM DD, yyyy")
+            ogImageUrl
+            ogImage {
+              childImageSharp {
+                gatsbyImageData(width: 512)
+              }
+            }
+            ogSummary
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <section className="mt-10 md:mt-20 lg:mt-28">
+      <Container>
+        <Heading tag="h2">{title}</Heading>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-11 lg:grid-rows-4">
+          {posts.map(({ frontmatter }, index) => (
+            <Fragment key={index}>
+              {index === 0 ? (
+                <>
+                  <BlogPostCard
+                    className="row-span-full hidden lg:flex"
+                    titleSize="lg"
+                    coverSize="lg"
+                    {...frontmatter}
+                  />
+                  <BlogPostCard
+                    className="flex lg:hidden"
+                    coverSize="sm"
+                    isLandscapeView
+                    {...frontmatter}
+                  />
+                </>
+              ) : (
+                <BlogPostCard coverSize="sm" isLandscapeView {...frontmatter} />
+              )}
+            </Fragment>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
 };
-const Learn = () => (
-  <section className="mt-10 md:mt-20 lg:mt-28">
-    <Container>
-      <Heading tag="h2">{title}</Heading>
-      <div className="grid grid-cols-1 mt-6 md:mt-10 lg:mt-14 lg:grid-cols-12 gap-x-8">
-        <List className="lg:col-span-10" {...featuredBlogs} />
-      </div>
-    </Container>
-  </section>
-);
 
 export default Learn;
