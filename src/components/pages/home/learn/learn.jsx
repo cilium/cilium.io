@@ -36,26 +36,25 @@ const Learn = () => {
     <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{title}</Heading>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-11 lg:grid-rows-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6 md:mt-8 lg:mt-11 lg:grid-rows-4">
           {posts.map(({ frontmatter }, index) => (
             <Fragment key={index}>
               {index === 0 ? (
                 <>
                   <BlogPostCard
                     className="row-span-full hidden lg:flex"
-                    titleSize="lg"
-                    coverSize="lg"
+                    size="lg"
                     {...frontmatter}
                   />
                   <BlogPostCard
                     className="flex lg:hidden"
-                    coverSize="sm"
+                    size="sm"
                     isLandscapeView
                     {...frontmatter}
                   />
                 </>
               ) : (
-                <BlogPostCard coverSize="sm" isLandscapeView {...frontmatter} />
+                <BlogPostCard size="sm" isLandscapeView {...frontmatter} />
               )}
             </Fragment>
           ))}

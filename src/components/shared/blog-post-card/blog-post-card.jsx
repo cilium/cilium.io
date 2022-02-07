@@ -9,9 +9,16 @@ import ExternalLinkIcon from 'icons/external-link.inline.svg';
 import CiliumLogo from './images/cilium-logo.inline.svg';
 
 const coverStyles = {
-  lg: 'max-w-[512px]',
-  md: 'sm:min-h-[168px] sm:max-h-[168px]',
-  sm: 'sm:min-h-[107px] sm:max-h-[107px] sm:max-w-[198px]',
+  base: 'shrink-0',
+  lg: 'sm:max-w-[512px]',
+  md: 'min-h-[168px] sm:max-h-[168px] sm:max-w-[320px]',
+  sm: 'min-h-[107px] sm:max-h-[107px] sm:max-w-[198px]',
+};
+
+const titleStyles = {
+  lg: 'text-2xl lg:text-3xl font-semibold',
+  md: 'md:text-lg font-bold',
+  sm: 'md:text-lg font-bold',
 };
 
 function BlogPostCard({
@@ -20,17 +27,20 @@ function BlogPostCard({
   ogImageUrl,
   date,
   title,
-  titleSize,
   ogSummary: summary,
   categories,
   externalUrl,
-  coverSize,
+  size,
   className,
   isLandscapeView,
 }) {
   const url = externalUrl !== '' ? externalUrl : null;
   const coverUrl = ogImageUrl !== '' ? ogImageUrl : null;
-  const coverClassNames = classNames(coverStyles[coverSize], isLandscapeView && 'self-center');
+  const coverClassNames = classNames(
+    coverStyles.base,
+    coverStyles[size],
+    isLandscapeView && 'self-center'
+  );
   return (
     <Link
       to={url || path}
@@ -39,6 +49,7 @@ function BlogPostCard({
         isLandscapeView
           ? 'flex-col space-y-7 sm:space-y-0 sm:flex-row sm:space-x-7'
           : 'flex-col space-y-7',
+        size === 'lg' && 'lg:p-10',
         className
       )}
       target={url ? '_blank' : ''}
@@ -46,7 +57,7 @@ function BlogPostCard({
     >
       {ogImage && (
         <GatsbyImage
-          className={classNames(coverClassNames)}
+          className={coverClassNames}
           imgClassName="rounded-lg"
           image={getImage(ogImage)}
           objectFit="contain"
@@ -76,12 +87,21 @@ function BlogPostCard({
         <h3
           className={classNames(
             'mt-3 leading-normal transition-colors duration-200 md:leading-normal lg:leading-normal line-clamp-3 group-hover:text-primary-1',
-            titleSize === 'md' ? 'md:text-lg font-bold' : 'text-2xl lg:text-3xl font-semibold'
+            titleStyles[size]
           )}
         >
           {title}
         </h3>
-        {!isLandscapeView && <p className="mt-2 mb-4 line-clamp-5">{summary}</p>}
+        {!isLandscapeView && (
+          <p
+            className={classNames(
+              'mt-2 mb-4 line-clamp-5 leading-relaxed',
+              size === 'lg' && 'md:text-lg'
+            )}
+          >
+            {summary}
+          </p>
+        )}
         {!isLandscapeView && (
           <div className="flex flex-wrap mt-auto gap-x-2 gap-y-2">
             {categories?.map((category) => (
@@ -116,10 +136,9 @@ BlogPostCard.propTypes = {
   externalUrl: PropTypes.string,
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  titleSize: PropTypes.oneOf(['lg', 'md']),
   ogSummary: PropTypes.string,
   categories: PropTypes.arrayOf(PropTypes.string),
-  coverSize: PropTypes.oneOf(['lg', 'md', 'sm']),
+  size: PropTypes.oneOf(['lg', 'md', 'sm']),
   className: PropTypes.string,
   isLandscapeView: PropTypes.bool,
 };
@@ -129,10 +148,9 @@ BlogPostCard.defaultProps = {
   path: null,
   ogImageUrl: null,
   externalUrl: null,
-  titleSize: 'md',
   ogSummary: null,
   categories: null,
-  coverSize: 'md',
+  size: 'md',
   className: null,
   isLandscapeView: false,
 };
