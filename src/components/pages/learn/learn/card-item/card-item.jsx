@@ -38,7 +38,7 @@ const CardItem = ({ icon: Icon, name, text, links }) => (
       </div>
     </div>
   </div>
-}
+);
 
 CardItem.propTypes = {
   icon: PropTypes.func.isRequired,
