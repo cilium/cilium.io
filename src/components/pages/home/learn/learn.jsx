@@ -4,10 +4,14 @@ import React, { Fragment } from 'react';
 import BlogPostCard from 'components/shared/blog-post-card';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import useWindowSize from 'hooks/use-window-size';
 
+const TABLET_WIDTH = 1024;
 const title = 'Learn about Cilium & eBPF';
 
 const Learn = () => {
+  const { width } = useWindowSize();
+  const isDesktop = width >= TABLET_WIDTH;
   const {
     allMdx: { posts },
   } = useStaticQuery(graphql`
@@ -40,19 +44,12 @@ const Learn = () => {
           {posts.map(({ frontmatter }, index) => (
             <Fragment key={index}>
               {index === 0 ? (
-                <>
-                  <BlogPostCard
-                    className="row-span-full hidden lg:flex"
-                    size="lg"
-                    {...frontmatter}
-                  />
-                  <BlogPostCard
-                    className="flex lg:hidden"
-                    size="sm"
-                    isLandscapeView
-                    {...frontmatter}
-                  />
-                </>
+                <BlogPostCard
+                  className="lg:row-span-full"
+                  size={isDesktop ? 'lg' : 'sm'}
+                  isLandscapeView={!isDesktop}
+                  {...frontmatter}
+                />
               ) : (
                 <BlogPostCard size="sm" isLandscapeView {...frontmatter} />
               )}
