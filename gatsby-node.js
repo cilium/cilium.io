@@ -3,8 +3,9 @@ const Path = require('path');
 
 const { slugify } = require('./src/utils/slugify');
 
-const BLOG_POSTS_PER_PAGE = 9;
+const DRAFT_FILTER = process.env.NODE_ENV === 'production' ? [false] : [true, false];
 
+const BLOG_POSTS_PER_PAGE = 9;
 const slugifyCategory = (item) => (item === '*' ? 'blog/' : `blog/categories/${slugify(item)}/`);
 
 // Create Blog Posts
@@ -22,6 +23,9 @@ async function createBlogPosts({ graphql, actions }) {
           frontmatter {
             path
           }
+          fields {
+            draft
+          }
         }
       }
     }
@@ -29,7 +33,7 @@ async function createBlogPosts({ graphql, actions }) {
 
   blogPosts.forEach((file) => {
     // skip page creation if post has `draft` flag
-    if (process.env.NODE_ENV === 'production' && file.frontmatter.draft) {
+    if (process.env.NODE_ENV === 'production' && file.fields.draft) {
       return;
     }
 
@@ -88,11 +92,15 @@ async function createBlogPages({ graphql, actions, reporter }) {
     categories.map(async (category) =>
       graphql(
         `
-          query CategoryPostsQuery($tag: String!) {
+          query CategoryPostsQuery($tag: String!, $draftFilter: [Boolean]!) {
             allMdx(
               filter: {
                 fileAbsolutePath: { regex: "/posts/" }
-                fields: { isFeatured: { eq: false }, categories: { glob: $tag } }
+                fields: {
+                  isFeatured: { eq: false }
+                  categories: { glob: $tag }
+                  draft: { in: $draftFilter }
+                }
               }
               limit: 1000
             ) {
@@ -104,7 +112,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
             }
           }
         `,
-        { tag: category }
+        { tag: category, draftFilter: DRAFT_FILTER }
       ).then((result) => {
         if (result.errors) throw result.errors;
         const posts = result.data.allMdx.edges;
@@ -124,8 +132,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
               currentCategory: category,
               categories,
               // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
-              draftFilter:
-                process.env.NODE_ENV === 'production' ? Array.of(false) : Array.of(true, false),
+              draftFilter: DRAFT_FILTER,
               canonicalUrl: `${process.env.GATSBY_DEFAULT_SITE_URL}/${path}`,
               slug: path,
             },

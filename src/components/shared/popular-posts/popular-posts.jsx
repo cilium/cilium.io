@@ -7,7 +7,7 @@ import Heading from 'components/shared/heading';
 
 const blockTitle = 'Popular posts';
 
-const PopularPosts = ({ className }) => {
+const PopularPosts = ({ className, titleTheme }) => {
   const {
     allPopularPosts: { posts },
   } = useStaticQuery(graphql`
@@ -44,7 +44,7 @@ const PopularPosts = ({ className }) => {
   `);
   return (
     <div className={className}>
-      <Heading tag="h2" theme="gray" size="xxs">
+      <Heading tag="h2" theme={titleTheme} size={titleTheme === 'gray' ? 'xxs' : 'md'}>
         {blockTitle}
       </Heading>
       <div className="grid gap-6 mt-6 md:mt-8 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
@@ -58,10 +58,12 @@ const PopularPosts = ({ className }) => {
 
 PopularPosts.propTypes = {
   className: PropTypes.string,
+  titleTheme: PropTypes.oneOf(['gray']),
 };
 
 PopularPosts.defaultProps = {
   className: null,
+  titleTheme: null,
 };
 
 export default PopularPosts;
