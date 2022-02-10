@@ -1,6 +1,7 @@
 @layer base {
   body {
     @apply text-base text-black antialiased;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .highlight-words {
