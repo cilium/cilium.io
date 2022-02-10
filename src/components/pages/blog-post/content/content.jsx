@@ -1,7 +1,7 @@
 import { MDXProvider } from '@mdx-js/react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import BlogAuthor from 'components/shared/blog-author';
 import Container from 'components/shared/container';
@@ -9,8 +9,10 @@ import Heading from 'components/shared/heading';
 
 import SocialShare from './social-share';
 
+// eslint-disable-next-line react/prop-types
 const Wrapper = ({ children }) => <div className="prose md:prose-lg !max-w-none">{children}</div>;
-const components = { wrapper: Wrapper, BlogAuthor };
+// eslint-disable-next-line react/jsx-no-useless-fragment
+const components = { wrapper: Wrapper, BlogAuthor, undefined: (props) => <Fragment {...props} /> };
 const Content = ({ date, title, summary, html, path, tags }) => {
   const postUrl = `${process.env.GATSBY_DEFAULT_SITE_URL}${path}`;
   return (
