@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import BlogPostCard from 'components/shared/blog-post-card';
+import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
 const blockTitle = 'Popular posts';
@@ -44,14 +45,16 @@ const PopularPosts = ({ className, titleTheme }) => {
   `);
   return (
     <div className={className}>
-      <Heading tag="h2" theme={titleTheme} size={titleTheme === 'gray' ? 'xxs' : 'md'}>
-        {blockTitle}
-      </Heading>
-      <div className="grid gap-6 mt-6 md:mt-8 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
-        {posts.map(({ frontmatter, fields }, index) => (
-          <BlogPostCard {...frontmatter} {...fields} key={index} />
-        ))}
-      </div>
+      <Container>
+        <Heading tag="h2" theme={titleTheme} size={titleTheme === 'gray' ? 'xxs' : 'md'}>
+          {blockTitle}
+        </Heading>
+        <div className="grid gap-6 mt-6 md:mt-8 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
+          {posts.map(({ frontmatter, fields }, index) => (
+            <BlogPostCard {...frontmatter} {...fields} key={index} />
+          ))}
+        </div>
+      </Container>
     </div>
   );
 };
