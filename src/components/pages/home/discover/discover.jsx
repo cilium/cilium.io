@@ -23,8 +23,8 @@ const items = [
   },
   {
     icon: InstallFestSvg,
-    name: 'Weekly Community InstallFest',
-    text: 'Join us at our weekly InstallFest and learn how to setup and get started with Cilium.',
+    name: 'Monthly Community InstallFest',
+    text: 'Join us at our monthly InstallFest and learn how to setup and get started with Cilium.',
     buttons: [
       {
         buttonUrl: 'https://calendly.com/cilium-events/cilim-installfest-emea',
@@ -57,16 +57,18 @@ const items = [
   },
 ];
 
-const Discover = () => (
-  <section className="mt-12 md:mt-20 lg:mt-28">
-    <Container>
-      <Heading tag="h2">{title}</Heading>
-      <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 xl:gap-8 md:mt-10 lg:grid-cols-3 lg:mt-14">
-        {items.map((item, index) => (
-          <CardItem size="sm" {...item} key={index} />
-        ))}
-      </div>
-    </Container>
-  </section>
-);
+function Discover() {
+  return (
+    <section className="mt-12 md:mt-20 lg:mt-28">
+      <Container>
+        <Heading tag="h2">{title}</Heading>
+        <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 xl:gap-8 md:mt-10 lg:grid-cols-3 lg:mt-14">
+          {items.map((item, index) => (
+            <CardItem size="sm" {...item} key={index} />
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
 export default Discover;
