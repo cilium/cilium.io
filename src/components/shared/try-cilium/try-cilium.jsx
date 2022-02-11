@@ -23,8 +23,8 @@ const items = [
   },
   {
     icon: InstallFestSvg,
-    name: 'Weekly Community InstallFest',
-    text: 'Join us at our weekly InstallFest and learn how to setup and get started with Cilium.',
+    name: 'Monthly Community InstallFest',
+    text: 'Join us at our monthly InstallFest and learn how to setup and get started with Cilium.',
     buttons: [
       {
         buttonUrl: 'https://calendly.com/cilium-events/cilim-installfest-emea',
@@ -55,17 +55,19 @@ const items = [
   },
 ];
 
-const TryCilium = () => (
-  <section className="py-10 mt-12 md:pt-16 md:pb-20 md:mt-20 lg:pt-24 lg:mt-28 lg:pb-28 bg-gray-4">
-    <Container>
-      <Heading tag="h2">{title}</Heading>
-      <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 xl:gap-8 md:mt-10 lg:grid-cols-3 lg:mt-14">
-        {items.map((item, index) => (
-          <CardItem size="sm" {...item} key={index} />
-        ))}
-      </div>
-    </Container>
-  </section>
-);
+function TryCilium() {
+  return (
+    <section className="py-10 mt-12 md:pt-16 md:pb-20 md:mt-20 lg:pt-24 lg:mt-28 lg:pb-28 bg-gray-4">
+      <Container>
+        <Heading tag="h2">{title}</Heading>
+        <div className="grid grid-cols-1 gap-4 mt-6 md:gap-6 xl:gap-8 md:mt-10 lg:grid-cols-3 lg:mt-14">
+          {items.map((item, index) => (
+            <CardItem size="sm" {...item} key={index} />
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
 
 export default TryCilium;
