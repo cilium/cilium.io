@@ -45,7 +45,7 @@ PostsBoard.propTypes = {
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       frontmatter: PropTypes.shape({
-        path: PropTypes.string.isRequired,
+        path: PropTypes.string,
         ogImage: PropTypes.shape({
           childImageSharp: PropTypes.shape({
             gatsbyImageData: PropTypes.shape(),

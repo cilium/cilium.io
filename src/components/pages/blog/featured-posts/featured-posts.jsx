@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
+import PopularPosts from 'components/shared/popular-posts';
 
 import FeaturedStory from './featured-story';
-import PopularPosts from './popular-posts';
 
 const FeaturedPosts = ({ featuredStory }) => (
   <section className="mt-6 md:mt-10 lg:mt-16">
@@ -14,7 +14,7 @@ const FeaturedPosts = ({ featuredStory }) => (
         {...featuredStory.frontmatter}
         {...featuredStory.fields}
       />
-      <PopularPosts className="flex flex-col col-span-full" />
+      <PopularPosts className="flex flex-col col-span-full" titleTheme="gray" />
     </Container>
   </section>
 );
