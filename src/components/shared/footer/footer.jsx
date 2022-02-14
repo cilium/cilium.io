@@ -37,7 +37,7 @@ const Footer = () => (
         </div>
       </div>
       <div className="mt-10 space-y-3 text-sm lg:mt-16 with-link-primary-light text-gray-1">
-        <p>© 2021 Cilium Authors. All rights reserved.</p>
+        <p>Copyright The Cilium Authors. All rights reserved.</p>
         <p>
           The Linux Foundation has registered trademarks and uses trademarks. For a list of
           trademarks of The Linux Foundation, please see our{' '}
