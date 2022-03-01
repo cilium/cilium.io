@@ -2,6 +2,7 @@
 
 ## Table of Contents
 
+- [Contributing](#contributing)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
   - [Run website](#run-the-website)
@@ -14,6 +15,10 @@
   - [Prettier](#prettier)
   - [VS Code](#vs-code)
 - [How to create blog post](#how-to-create-blog-post)
+
+## Contributing
+
+Please see [Contributing](CONTRIBUTING.md) for guidelines on adding blogs, documentation, Cilium distributions and trainings, or any other content to the website.
 
 ## Getting Started
 
