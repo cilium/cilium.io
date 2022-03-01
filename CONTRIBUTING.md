@@ -4,13 +4,14 @@
 
 ## Blog posts
 
-Our blog page includes original blog posts about Cilium, as well as links to external articles hosted elsewhere. If you’d like to submit a blog post to Cilium.io please check that your article meets the following guidelines. We welcome PRs, but if you’d like to discuss a possible submission first please start a conversation in [#cilium-website in Slack](https://cilium.slack.com/archives/C033BUL97BK). 
+Our blog page includes original blog posts about Cilium, as well as links to external articles hosted elsewhere. If you'd like to submit a blog post to Cilium.io please check that your article meets the following guidelines. We welcome PRs, but if you'd like to discuss a possible submission first please start a conversation in [#cilium-website in Slack][slack]. 
 
 Content guidelines: 
 
 * Posts should be valuable content for the Cilium community
 * Posts should not be vendor pitches, and should focus on the open source Cilium project
 * Posts hosted on cilium.io should be original content. You can submit a link to an external article instead of copying content. 
+* All content is contributed under the CC-BY-4.0 license 
 
 Each post should be in one of the following categories: 
 
@@ -40,8 +41,10 @@ We would be delighted to list courses and providers that offer effective [Cilium
 
 ## Documentation
 
-The source for the Cilium docs is hosted in the main [cilium/cilium](github.com/cilium/cilium) repository. 
+The source for the Cilium docs is hosted in the main [cilium/cilium](https://github.com/cilium/cilium) repository. 
 
 ## Other changes
 
-Please raise ideas for any other changes or improvements to the web site in the [#cilium-website channel in Slack](https://cilium.slack.com/archives/C033BUL97BK). 
+Please raise ideas for any other changes or improvements to the web site in the [#cilium-website channel in Slack][slack].
+
+[slack]: https://cilium.slack.com/archives/C033BUL97BK
