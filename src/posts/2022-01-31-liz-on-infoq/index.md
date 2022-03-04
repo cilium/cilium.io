@@ -1,7 +1,7 @@
 ---
 date: '2022-01-31T17:00:00.000Z'
 title: 'Liz Rice on Programming the Linux Kernel with eBPF, Cilium and Service Meshes'
-ogImageUrl: 'https://www.infoq.com/styles/static/images/podcast/podcast-infoq.png
+ogImageUrl: 'https://www.infoq.com/styles/static/images/podcast/podcast-infoq.png'
 ogSummary: 'Liz Rice discusses eBPF, why it exists, how it works, what you can and can’t do with it, and Cilium'
 categories:
   - Technology
