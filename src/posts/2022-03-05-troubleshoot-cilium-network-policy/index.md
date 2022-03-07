@@ -1,0 +1,13 @@
+---
+date: '2022-03-05T17:00:00.000Z'
+title: 'Kubernetes Security — Control pod to pod communications with Cilium network policies'
+ogImageUrl: 'https://miro.medium.com/max/1400/0\*jB6FOO1Sdqe16get'
+ogSummary: 'Learn how deploy Cilium with network policies and fix pods communication errors with Hubble'
+categories:
+  - How To
+externalUrl: 'https://medium.com/@charled.breteche/kubernetes-security-control-pod-to-pod-communications-with-cilium-network-policies-d7275b2ed378'
+tags:
+  - Cilium
+  - Hubble
+  - Network Policy
+---
