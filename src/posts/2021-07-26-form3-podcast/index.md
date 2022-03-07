@@ -1,7 +1,7 @@
 ---
 date: '2021-07-26T17:00:00.000Z'
 title: 'Ep 16 .tech - Supercharge your Kubernetes clusters with Cilium'
-ogImageUrl: ''
+ogImageUrl: 'form3podcast.png'
 ogSummary: 'Dan Wendlandt, the CEO of Isovalent joins host Kevin Holditch for a discussion on the product they have created Cilium'
 categories:
   - Technology
