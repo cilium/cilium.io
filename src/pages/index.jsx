@@ -178,8 +178,8 @@ const IndexPage = () => (
     <UserCommunity {...userCommunity2} />
     <FeaturedTalks />
     <Learn />
-    <TwitterCards />
     <Community withBanner />
+    <TwitterCards />
   </MainLayout>
 );
 
