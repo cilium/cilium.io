@@ -88,9 +88,13 @@ const EventsModal = ({ calendarId, isOpen, closeModal }) => {
 };
 
 EventsModal.propTypes = {
-  calendarId: PropTypes.string.isRequired,
+  calendarId: PropTypes.string,
   isOpen: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
+};
+
+EventsModal.defaultProps = {
+  calendarId: null,
 };
 
 export default EventsModal;

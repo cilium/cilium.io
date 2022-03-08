@@ -24,7 +24,6 @@ const EventsBoard = ({ calendar, eventsData, setShowEvent, setUniqueId }) => {
     setUniqueId(unique);
     setShowEvent(true);
   };
-
   const events = eventsData?.events
     .slice(0, 5)
     .sort((a, b) => (a.date_start_unix > b.date_start_unix ? 1 : -1));
@@ -84,10 +83,10 @@ EventsBoard.propTypes = {
   eventsData: PropTypes.shape({
     events: PropTypes.arrayOf(
       PropTypes.shape({
-        timeZone: PropTypes.string.isRequired,
+        timezone: PropTypes.string.isRequired,
         date_start_unix: PropTypes.number,
         id: PropTypes.string.isRequired,
-        unique: PropTypes.number.isRequired,
+        unique: PropTypes.string.isRequired,
       })
     ),
   }).isRequired,
