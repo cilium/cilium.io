@@ -1,12 +1,22 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
-import { PopupButton } from 'react-calendly';
+import React, { Fragment, useState } from 'react';
 
 import Button from 'components/shared/button';
 import Heading from 'components/shared/heading';
 
+import EventsModal from '../events-modal';
+
 function CardItem({ icon: Icon, name, text, buttons, size }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const openModal = () => {
+    setIsOpen(true);
+  };
+  const closeModal = (e) => {
+    e.stopPropagation();
+    setIsOpen(false);
+  };
+
   const has2Buttons = buttons.length === 2;
   const isSmallSize = size === 'sm';
   return (
@@ -37,25 +47,18 @@ function CardItem({ icon: Icon, name, text, buttons, size }) {
             isSmallSize ? 'xl:gap-x-4' : 'lg:gap-x-5'
           )}
         >
-          {buttons.map(({ buttonUrl, buttonText, buttonTarget, isPopup }, index) => (
+          {buttons.map(({ buttonUrl, buttonText, buttonTarget, isPopup, calendarId }, index) => (
             <Fragment key={index}>
               {isPopup ? (
-                <PopupButton
-                  key={index}
-                  url={buttonUrl}
-                  className={classNames(
-                    isSmallSize
-                      ? 'py-2.5 px-3.5'
-                      : 'py-2.5 px-3.5 md:py-3 md:px-5 lg:py-4 lg:px-6 lg:text-lg text-base ',
-                    'cursor-pointer inline-flex font-bold text-white bg-primary-2 justify-center !leading-none whitespace-nowrap rounded transition-colors duration-200 hover:bg-hover-1 disabled:opacity-25 disabled:hover:bg-primary-1 disabled:cursor-auto focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary-2 outline-none'
-                  )}
-                  text={buttonText}
-                />
+                <Button size={size} onClick={openModal}>
+                  {buttonText}
+                </Button>
               ) : (
-                <Button key={index} to={buttonUrl} size={size} target={buttonTarget || ''}>
+                <Button to={buttonUrl} size={size} target={buttonTarget || ''}>
                   {buttonText}
                 </Button>
               )}
+              <EventsModal calendarId={calendarId} isOpen={isOpen} closeModal={closeModal} />
             </Fragment>
           ))}
         </div>
@@ -74,6 +77,7 @@ CardItem.propTypes = {
       buttonUrl: PropTypes.string.isRequired,
       buttonTarget: PropTypes.string,
       isPopup: PropTypes.bool,
+      calendarId: PropTypes.string.isRequired,
     })
   ).isRequired,
   size: PropTypes.oneOf(['sm', 'md']),
