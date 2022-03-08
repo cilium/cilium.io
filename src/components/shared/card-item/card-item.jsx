@@ -77,7 +77,7 @@ CardItem.propTypes = {
       buttonUrl: PropTypes.string.isRequired,
       buttonTarget: PropTypes.string,
       isPopup: PropTypes.bool,
-      calendarId: PropTypes.string.isRequired,
+      calendarId: PropTypes.string,
     })
   ).isRequired,
   size: PropTypes.oneOf(['sm', 'md']),

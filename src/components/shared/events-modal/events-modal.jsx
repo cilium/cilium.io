@@ -123,8 +123,8 @@ const EventsModal = ({ calendarId, isOpen, closeModal }) => {
     >
       <div
         className={classNames(
-          'relative flex flex-col py-12 h-full min-h-[650px]',
-          showEvent ? 'px-0' : 'px-[60px]'
+          'relative flex flex-col pb-12 h-full min-h-[650px]',
+          showEvent ? 'px-0 pt-4' : 'px-[60px] pt-12'
         )}
       >
         <button className="absolute top-8 right-8" type="button" onClick={closeModal}>
