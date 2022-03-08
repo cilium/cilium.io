@@ -1,17 +1,15 @@
-/* eslint-disable react/prop-types */
-
 import classNames from 'classnames';
-import moment from 'moment-timezone';
-import React, { Fragment, useState } from 'react';
+import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import ReactModal from 'react-modal';
 
 import Button from 'components/shared/button';
-import Heading from 'components/shared/heading';
 import useFetchAddEvent from 'hooks/use-fetch-addevent';
 import ArrowIcon from 'icons/arrow.inline.svg';
 import CloseIcon from 'icons/close.inline.svg';
 
 import EventIframe from './event-iframe';
+import EventsBoard from './events-board';
 
 const TOKEN_API = 'api1639396054e34I6Szjrxsa2b59EoPH142410';
 
@@ -22,71 +20,6 @@ const customStyles = {
   },
 };
 
-function getLocalTime(date_start_unix, timezone) {
-  const date = `${new Date(date_start_unix * 1000)
-    .toISOString()
-    .replace('T', ' ')
-    .replace('.000Z', '')}`;
-
-  const eventTime = moment.tz(date, timezone);
-  const localTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const localTime = eventTime.tz(localTimezone).format();
-
-  return localTime;
-}
-
-const EventsBoard = ({ calendar, eventsData, setShowEvent, setUniqueId }) => {
-  const onClick = (e, unique) => {
-    e.preventDefault();
-    setUniqueId(unique);
-    setShowEvent(true);
-  };
-
-  const events = eventsData?.events;
-  const { title, description } = calendar[0];
-  return (
-    <div className="flex flex-col">
-      <Heading tag="h3" size="sm">
-        {title}
-      </Heading>
-
-      <div className="flex mt-10 space-x-16">
-        <div dangerouslySetInnerHTML={{ __html: description }} />
-        <div className="flex shrink flex-col space-y-4">
-          {events
-            .sort((a, b) => (a.date_start_unix > b.date_start_unix ? 1 : -1))
-            .map(({ timezone, date_start_unix, id, unique }) => {
-              const localTime = getLocalTime(date_start_unix, timezone);
-              const formatDate = `${new Date(localTime).toLocaleDateString('en-US', {
-                weekday: 'short',
-                month: 'long',
-                day: 'numeric',
-              })} - ${new Date(localTime).toLocaleTimeString('en-US', {
-                hour: '2-digit',
-                minute: '2-digit',
-              })}`;
-              const shouldShowEvent = new Date(localTime) >= new Date();
-
-              return (
-                <Fragment key={id}>
-                  {shouldShowEvent && (
-                    <Button
-                      theme="outline"
-                      size="md"
-                      type="button"
-                      onClick={(e) => onClick(e, unique)}
-                    >
-                      {formatDate}
-                    </Button>
-                  )}
-                </Fragment>
-              );
-            })}
-        </div>
-      </div>
-    </div>
-  );
-};
 const EventsModal = ({ calendarId, isOpen, closeModal }) => {
   const [calendarsData, setCalendarsData] = useState({});
   const [eventsData, setEventsData] = useState({});
@@ -152,6 +85,12 @@ const EventsModal = ({ calendarId, isOpen, closeModal }) => {
       </div>
     </ReactModal>
   );
+};
+
+EventsModal.propTypes = {
+  calendarId: PropTypes.string.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  closeModal: PropTypes.func.isRequired,
 };
 
 export default EventsModal;
