@@ -18,11 +18,11 @@ function getLocalTime(date_start_unix, timezone) {
   return localTime;
 }
 
-const EventsBoard = ({ calendar, eventsData, setShowEvent, setUniqueId }) => {
+const EventsBoard = ({ calendar, eventsData, setModalState, setUniqueId }) => {
   const onClick = (e, unique) => {
     e.preventDefault();
     setUniqueId(unique);
-    setShowEvent(true);
+    setModalState('iframe');
   };
 
   const events = eventsData?.events
@@ -91,7 +91,7 @@ EventsBoard.propTypes = {
       })
     ),
   }).isRequired,
-  setShowEvent: PropTypes.func.isRequired,
+  setModalState: PropTypes.func.isRequired,
   setUniqueId: PropTypes.func.isRequired,
 };
 

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-const EventIframe = ({ setShowEvent, uniqueId }) => {
+const EventIframe = ({ uniqueId }) => {
   useEffect(() => {
     const script = document.createElement('script');
     script.type = 'text/javascript';
@@ -21,7 +21,6 @@ const EventIframe = ({ setShowEvent, uniqueId }) => {
 };
 
 EventIframe.propTypes = {
-  setShowEvent: PropTypes.func.isRequired,
   uniqueId: PropTypes.string.isRequired,
 };
 

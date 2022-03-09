@@ -6,8 +6,10 @@ import EventsModal from 'components/shared/events-modal';
 
 const CardButton = ({ buttonUrl, buttonText, buttonTarget, isPopup, calendarId, size }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [modalState, setModalState] = useState('events');
   const openModal = () => {
     setIsOpen(true);
+    setModalState('events');
   };
   const closeModal = (e) => {
     e.stopPropagation();
@@ -25,7 +27,13 @@ const CardButton = ({ buttonUrl, buttonText, buttonTarget, isPopup, calendarId, 
           {buttonText}
         </Button>
       )}
-      <EventsModal calendarId={calendarId} isOpen={isOpen} closeModal={closeModal} />
+      <EventsModal
+        calendarId={calendarId}
+        isOpen={isOpen}
+        modalState={modalState}
+        setModalState={setModalState}
+        closeModal={closeModal}
+      />
     </>
   );
 };

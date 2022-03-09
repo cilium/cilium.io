@@ -20,10 +20,10 @@ const customStyles = {
   },
 };
 
-const EventsModal = ({ calendarId, isOpen, closeModal }) => {
+const EventsModal = ({ calendarId, isOpen, closeModal, modalState, setModalState }) => {
   const [calendarsData, setCalendarsData] = useState({});
   const [eventsData, setEventsData] = useState({});
-  const [showEvent, setShowEvent] = useState(false);
+
   const [uniqueId, setUniqueId] = useState();
   useFetchAddEvent(
     `https://www.addevent.com/api/v1/me/calendars/list/?token=${TOKEN_API}`,
@@ -41,8 +41,10 @@ const EventsModal = ({ calendarId, isOpen, closeModal }) => {
 
   const onClickBack = (e) => {
     e.preventDefault();
-    setShowEvent(false);
+    setModalState('events');
   };
+
+  const isEventIframe = modalState === 'iframe';
 
   return (
     <ReactModal
@@ -57,15 +59,15 @@ const EventsModal = ({ calendarId, isOpen, closeModal }) => {
       <div
         className={classNames(
           'relative flex flex-col pb-12 h-full min-h-[650px]',
-          showEvent ? 'px-0 pt-4' : 'px-[60px] pt-12'
+          isEventIframe ? 'px-0 pt-4' : 'px-[60px] pt-12'
         )}
       >
         <button className="absolute top-8 right-8" type="button" onClick={closeModal}>
           <CloseIcon />
         </button>
-        {showEvent ? (
+        {isEventIframe ? (
           <>
-            <EventIframe setShowEvent={setShowEvent} uniqueId={uniqueId} />
+            <EventIframe setModalState={setModalState} uniqueId={uniqueId} />
             <Button
               className="mt-auto ml-[60px] items-center self-start"
               theme="outline-gray"
@@ -79,7 +81,7 @@ const EventsModal = ({ calendarId, isOpen, closeModal }) => {
             setUniqueId={setUniqueId}
             calendar={filteredCalendar}
             eventsData={eventsData}
-            setShowEvent={setShowEvent}
+            setModalState={setModalState}
           />
         )}
       </div>
@@ -91,6 +93,8 @@ EventsModal.propTypes = {
   calendarId: PropTypes.string,
   isOpen: PropTypes.bool.isRequired,
   closeModal: PropTypes.func.isRequired,
+  modalState: PropTypes.string.isRequired,
+  setModalState: PropTypes.func.isRequired,
 };
 
 EventsModal.defaultProps = {
