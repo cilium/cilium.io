@@ -28,13 +28,11 @@ const items = [
     text: 'Join us at our monthly InstallFest and learn how to setup and get started with Cilium.',
     buttons: [
       {
-        buttonUrl: 'https://calendly.com/cilium-events/cilim-installfest-emea',
         buttonText: 'Join Europe',
         isPopup: true,
         calendarId: '1646683949415478',
       },
       {
-        buttonUrl: 'https://calendly.com/cilium-events/cilium-installfest-na',
         buttonText: 'Join Americas',
         isPopup: true,
         calendarId: '1646683994415479',

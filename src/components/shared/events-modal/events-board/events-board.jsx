@@ -24,6 +24,7 @@ const EventsBoard = ({ calendar, eventsData, setShowEvent, setUniqueId }) => {
     setUniqueId(unique);
     setShowEvent(true);
   };
+
   const events = eventsData?.events
     .slice(0, 5)
     .sort((a, b) => (a.date_start_unix > b.date_start_unix ? 1 : -1));
@@ -79,7 +80,7 @@ EventsBoard.propTypes = {
       title: PropTypes.string.isRequired,
       description: PropTypes.string,
     })
-  ).isRequired,
+  ),
   eventsData: PropTypes.shape({
     events: PropTypes.arrayOf(
       PropTypes.shape({
@@ -92,6 +93,10 @@ EventsBoard.propTypes = {
   }).isRequired,
   setShowEvent: PropTypes.func.isRequired,
   setUniqueId: PropTypes.func.isRequired,
+};
+
+EventsBoard.defaultProps = {
+  calendar: null,
 };
 
 export default EventsBoard;
