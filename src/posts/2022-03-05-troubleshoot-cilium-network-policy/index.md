@@ -1,7 +1,7 @@
 ---
 date: '2022-03-05T17:00:00.000Z'
 title: 'Kubernetes Security — Control pod to pod communications with Cilium network policies'
-ogImageUrl: 'https://github.com/cilium/cilium.io/blob/add-network-policy-blog-post/src/posts/2022-03-05-troubleshoot-cilium-network-policy/brokenhubble.png'
+ogImageUrl: 'https://miro.medium.com/max/1400/1\*WaXOtrm9c-HO1tH-_K9VUg.png'
 ogSummary: 'Learn how deploy Cilium with network policies and fix pods communication errors with Hubble'
 categories:
   - How To
