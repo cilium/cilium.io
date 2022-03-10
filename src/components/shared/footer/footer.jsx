@@ -17,7 +17,7 @@ const navigation = [
 ];
 
 const Footer = () => (
-  <footer className="mt-11 md:mt-20 lg:mt-28 ">
+  <footer className="mt-11 md:mt-20 lg:mt-28">
     <Container className="pt-10 pb-10 border-t lg:pt-14 lg:pb-16 border-gray-3">
       <div className="grid grid-cols-3 space-y-8 md:space-y-10 lg:grid-cols-4 gap-x-8 lg:space-y-0">
         <Link to="/">

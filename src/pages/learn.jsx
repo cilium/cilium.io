@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Highlights from 'components/pages/home/highlights';
-import UserCommunity from 'components/pages/home/user-community';
 import Architecture from 'components/pages/learn/architecture';
 import Learn from 'components/pages/learn/learn';
 import News from 'components/pages/learn/news';
@@ -9,6 +8,7 @@ import RelatedProjects from 'components/pages/learn/related-projects';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
 import TryCilium from 'components/shared/try-cilium';
+import UserCommunity from 'components/shared/user-community';
 import illustration from 'images/hero-illustration.svg';
 import MainLayout from 'layouts/main';
 import SeoMetadata from 'utils/seo-metadata';
