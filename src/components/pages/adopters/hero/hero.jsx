@@ -5,7 +5,7 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
 const Hero = ({ title, description }) => (
-  <section className="mt-12 md:mt-16 lg:mt-20">
+  <section className="mt-5 md:mt-10 lg:mt-20">
     <Container className="text-center" size="xs">
       <Heading tag="h1">{title}</Heading>
       <p
