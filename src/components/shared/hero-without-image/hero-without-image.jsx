@@ -4,7 +4,7 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
-const Hero = ({ title, description }) => (
+const HeroWithoutImage = ({ title, description }) => (
   <section className="mt-5 md:mt-10 lg:mt-20">
     <Container className="text-center" size="xs">
       <Heading tag="h1">{title}</Heading>
@@ -16,9 +16,9 @@ const Hero = ({ title, description }) => (
   </section>
 );
 
-Hero.propTypes = {
+HeroWithoutImage.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };
 
-export default Hero;
+export default HeroWithoutImage;

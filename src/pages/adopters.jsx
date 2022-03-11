@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Hero from 'components/pages/adopters/hero';
 import Logos from 'components/pages/adopters/logos';
+import HeroWithoutImage from 'components/shared/hero-without-image';
 import UserCommunity from 'components/shared/user-community';
 import MainLayout from 'layouts/main/main';
 import caseStudiesData from 'utils/case-studies-data';
@@ -103,7 +103,7 @@ const logos2 = {
 
 const Adopters = () => (
   <MainLayout pageMetadata={seo}>
-    <Hero {...hero} />
+    <HeroWithoutImage {...hero} />
     <UserCommunity className="mt-10 md:mt-20 lg:mt-24" {...userCommunity1} />
     <Logos {...logos1} />
     <Logos {...logos2} />
