@@ -5,7 +5,7 @@ import Training from 'components/pages/enterprise/training';
 import Hero from 'components/shared/hero';
 import illustration from 'images/hero-illustration.svg';
 import MainLayout from 'layouts/main';
-import SeoMetadata from 'utils/seo-metadata';
+import { enterprise as seo } from 'utils/seo-metadata';
 
 const hero = {
   title: 'Cilium Enterprise Distributions & Training',
@@ -15,7 +15,7 @@ const hero = {
 };
 
 const EnterprisePage = () => (
-  <MainLayout pageMetadata={SeoMetadata.enterprise}>
+  <MainLayout pageMetadata={seo}>
     <Hero className="pt-5 md:pt-16 xl:pb-20" {...hero} />
     <Distributions />
     <Training />

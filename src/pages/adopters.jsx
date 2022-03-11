@@ -5,6 +5,7 @@ import Logos from 'components/pages/adopters/logos';
 import UserCommunity from 'components/shared/user-community';
 import MainLayout from 'layouts/main/main';
 import caseStudiesData from 'utils/case-studies-data';
+import { adopters as seo } from 'utils/seo-metadata';
 
 const {
   google,
@@ -101,7 +102,7 @@ const logos2 = {
 };
 
 const Adopters = () => (
-  <MainLayout>
+  <MainLayout pageMetadata={seo}>
     <Hero {...hero} />
     <UserCommunity className="mt-10 md:mt-20 lg:mt-24" {...userCommunity1} />
     <Logos {...logos1} />
