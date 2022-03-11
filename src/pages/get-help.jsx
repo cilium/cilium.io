@@ -5,6 +5,7 @@ import Faq from 'components/pages/get-help/faq';
 import Hero from 'components/pages/get-help/hero';
 import Community from 'components/shared/community';
 import MainLayout from 'layouts/main/main';
+import { getHelp as seo } from 'utils/seo-metadata';
 
 const items = [
   {
@@ -35,7 +36,7 @@ const items = [
 ];
 
 const GetHelp = () => (
-  <MainLayout theme="gray" footerWithoutTopBorder>
+  <MainLayout theme="gray" pageMetadata={seo} footerWithoutTopBorder>
     <Hero />
     <Cards items={items} />
     <Faq />

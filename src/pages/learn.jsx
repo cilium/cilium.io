@@ -11,7 +11,7 @@ import Hero from 'components/shared/hero';
 import TryCilium from 'components/shared/try-cilium';
 import illustration from 'images/hero-illustration.svg';
 import MainLayout from 'layouts/main';
-import SeoMetadata from 'utils/seo-metadata';
+import { learn as seo } from 'utils/seo-metadata';
 
 const hero = {
   title: 'What is Cilium?',
@@ -127,7 +127,7 @@ const userCommunity = {
 };
 
 const LearnPage = () => (
-  <MainLayout pageMetadata={SeoMetadata.learn}>
+  <MainLayout pageMetadata={seo}>
     <Hero className="pt-5 md:pt-16 lg:pb-5" {...hero} />
     <TryCilium />
     <Architecture />
