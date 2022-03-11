@@ -1,5 +1,5 @@
 {
-  "name": "cilium.io-v2",
+  "name": "cilium.io",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
@@ -84,9 +84,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/isovalent/cilium.io-v2"
+    "url": "https://github.com/cilium/cilium.io"
   },
   "bugs": {
-    "url": "https://github.com/isovalent/cilium.io-v2/issues"
+    "url": "https://github.com/cilium/cilium.io/issues"
   }
 }
