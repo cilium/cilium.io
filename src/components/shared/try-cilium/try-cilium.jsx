@@ -29,10 +29,12 @@ const items = [
       {
         buttonUrl: 'https://calendly.com/cilium-events/cilim-installfest-emea',
         buttonText: 'Join Europe',
+        isPopup: true,
       },
       {
         buttonUrl: 'https://calendly.com/cilium-events/cilium-installfest-na',
         buttonText: 'Join Americas',
+        isPopup: true,
       },
     ],
   },
@@ -55,8 +57,7 @@ const items = [
   },
 ];
 
-function TryCilium() {
-  return (
+const TryCilium = () => (
     <section className="py-10 mt-12 md:pt-16 md:pb-20 md:mt-20 lg:pt-24 lg:mt-28 lg:pb-28 bg-gray-4">
       <Container>
         <Heading tag="h2">{title}</Heading>
@@ -67,7 +68,6 @@ function TryCilium() {
         </div>
       </Container>
     </section>
-  );
-}
+  )
 
 export default TryCilium;
