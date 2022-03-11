@@ -26,6 +26,7 @@ module.exports = {
         primary: {
           1: '#0080FF',
           2: '#0A53A5',
+          3: '#1A40B2',
         },
         gray: {
           1: '#6C7993',
@@ -48,6 +49,9 @@ module.exports = {
       },
       borderRadius: {
         large: '20px',
+      },
+      backgroundImage: {
+        'dark-blue': 'linear-gradient(247.62deg, #272B41 21.37%, #161928 52.43%)',
       },
       typography: (theme) => ({
         DEFAULT: {
