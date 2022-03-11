@@ -1,6 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from 'components/shared/button';
@@ -11,7 +10,7 @@ const title = 'Founded by Isovalent. Built by the Community';
 const buttonText = 'Visit Isovalent';
 const buttonUrl = 'https://isovalent.com/';
 
-const Foundation = (props) => {
+const Foundation = () => {
   const { illustration } = useStaticQuery(graphql`
     query {
       illustration: file(relativePath: { eq: "pages/home/foundation/illustration.png" }) {
@@ -38,16 +37,12 @@ const Foundation = (props) => {
             {buttonText}
           </Button>
         </div>
-        <div className="col-span-full justify-self-center lg:col-start-7 lg:col-end-13">
-          <GatsbyImage image={getImage(illustration)} />
+        <div className="col-span-full justify-self-center lg:col-start-7 lg:col-end-13 lg:justify-self-start lg:max-w-[540px]">
+          <GatsbyImage image={getImage(illustration)} alt={title} />
         </div>
       </Container>
     </section>
   );
 };
-
-Foundation.propTypes = {};
-
-Foundation.defaultProps = {};
 
 export default Foundation;
