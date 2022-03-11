@@ -39,7 +39,7 @@ const CardItem = ({ icon: Icon, name, text, buttons, size }) => {
         >
           {buttons.map(({ buttonUrl, buttonText, buttonTarget, isPopup }, index) => (
             <Fragment key={index}>
-              {isPopup ? (
+              {isPopup && typeof document !== 'undefined' ? (
                 <PopupButton
                   key={index}
                   url={buttonUrl}
@@ -63,7 +63,7 @@ const CardItem = ({ icon: Icon, name, text, buttons, size }) => {
       </div>
     </div>
   );
-}
+};
 
 CardItem.propTypes = {
   icon: PropTypes.func.isRequired,
