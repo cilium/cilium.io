@@ -9,6 +9,7 @@ import ReportBugs from 'components/pages/get-involved/report-bugs';
 import Subscribe from 'components/pages/get-involved/subscribe';
 import Cards from 'components/shared/cards';
 import MainLayout from 'layouts/main';
+import { getInvolved as seo } from 'utils/seo-metadata';
 
 const cardItems1 = [
   {
@@ -68,7 +69,7 @@ const cardItems2 = {
 };
 
 const GetInvolved = () => (
-  <MainLayout theme="gray" footerWithoutTopBorder>
+  <MainLayout theme="gray" pageMetadata={seo} footerWithoutTopBorder>
     <Hero />
     <Cards
       className="pt-12 pb-10 md:pb-20 lg:pb-28"
