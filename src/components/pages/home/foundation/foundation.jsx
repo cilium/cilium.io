@@ -15,7 +15,7 @@ const Foundation = () => {
     query {
       illustration: file(relativePath: { eq: "pages/home/foundation/illustration.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 900, quality: 95, formats: [PNG])
+          gatsbyImageData(width: 600, quality: 95, formats: [PNG])
         }
       }
     }
@@ -24,7 +24,11 @@ const Foundation = () => {
     <section className="bg-dark-blue py-16 mt-10 md:mt-20 lg:mt-28">
       <Container className="grid grid-cols-12 gap-y-8 lg:gap-y-0 lg:gap-x-8 items-center">
         <div className="col-span-full lg:col-span-5">
-          <Heading className="text-white leading-normal lg:leading-normal" tag="h2" size="lg">
+          <Heading
+            className="text-white leading-normal lg:leading-normal text-3xl lg:text-4xl xl:leading-normal xl:text-5xl"
+            tag="h2"
+            size="lg"
+          >
             {title}
           </Heading>
           <Button
