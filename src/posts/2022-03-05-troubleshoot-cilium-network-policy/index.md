@@ -4,7 +4,7 @@ title: 'Kubernetes Security — Control pod to pod communications with Cilium ne
 ogImageUrl: 'https://docs.cilium.io/en/stable/_images/hubble_sw_service_map.png'
 ogSummary: 'Learn how deploy Cilium with network policies and fix pods communication errors with Hubble'
 categories:
-  - How To
+  - How-To
 externalUrl: 'https://medium.com/@charled.breteche/kubernetes-security-control-pod-to-pod-communications-with-cilium-network-policies-d7275b2ed378'
 tags:
   - Cilium
