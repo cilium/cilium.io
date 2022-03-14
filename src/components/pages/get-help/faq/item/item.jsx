@@ -43,7 +43,7 @@ const Item = ({ question, answer, faqId, isDefaultOpen }) => (
         >
           <Disclosure.Panel
             as="dd"
-            className="mt-2.5 pl-[38px] sm:pl-14 prose sm:prose-lg prose-hr:my-5 leading-relaxed max-w-none"
+            className="mt-2.5 pl-[38px] sm:pl-14 prose sm:prose-lg prose-hr:my-5 sm:prose-hr:my-5 leading-relaxed lg:leading-relaxed max-w-none"
             id={faqId}
             dangerouslySetInnerHTML={{ __html: answer }}
           />
