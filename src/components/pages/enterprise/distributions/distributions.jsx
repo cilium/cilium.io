@@ -15,7 +15,7 @@ const list = [
   {
     description:
       'Isovalent Cilium Enterprise. Enterprise Distribution maintained by the creators of Cilium & eBPF.',
-    linkUrl: 'https://isovalent.com/',
+    linkUrl: 'https://bit.ly/3hOKaXj',
     linkTarget: '_blank',
     linkText: 'Learn more',
     items: [
