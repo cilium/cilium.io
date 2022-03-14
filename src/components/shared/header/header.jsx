@@ -41,9 +41,9 @@ const Header = ({ theme }) => (
                       <span className="sr-only">Cilium</span>
                       <Logo />
                     </Link>
-                    <GithubStars className="hidden ml-4 lg:inline-block md:ml-8" />
+                    <GithubStars className="hidden ml-4 lg:inline-block md:ml-8 bg-white" />
                     <Button
-                      className="items-center hidden ml-4 leading-none lg:inline-flex"
+                      className="items-center hidden ml-4 leading-none lg:inline-flex bg-white"
                       to="https://cilium.herokuapp.com/"
                       target="_blank"
                       rel="noopener noreferrer"
