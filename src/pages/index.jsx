@@ -179,7 +179,7 @@ const IndexPage = () => (
     <FeaturedTalks />
     <Learn />
     <Community withBanner />
-    <TwitterCards />
+    <TwitterCards className="pb-10 md:pb-20 lg:pb-28" />
   </MainLayout>
 );
 
