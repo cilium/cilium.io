@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
@@ -16,9 +18,14 @@ const navigation = [
   [{ name: 'Learn', href: '/learn' }],
 ];
 
-const Footer = () => (
-  <footer className="mt-11 md:mt-20 lg:mt-28 ">
-    <Container className="pt-10 pb-10 border-t lg:pt-14 lg:pb-16 border-gray-3">
+const Footer = ({ withoutTopBorder }) => (
+  <footer>
+    <Container
+      className={classNames(
+        'pt-10 pb-10 lg:pt-14 lg:pb-16',
+        withoutTopBorder ? '' : 'border-t border-gray-3'
+      )}
+    >
       <div className="grid grid-cols-3 space-y-8 md:space-y-10 lg:grid-cols-4 gap-x-8 lg:space-y-0">
         <Link to="/">
           <span className="sr-only">Cilium</span>
@@ -70,5 +77,13 @@ const Footer = () => (
     </Container>
   </footer>
 );
+
+Footer.propTypes = {
+  withoutTopBorder: PropTypes.bool,
+};
+
+Footer.defaultProps = {
+  withoutTopBorder: false,
+};
 
 export default Footer;

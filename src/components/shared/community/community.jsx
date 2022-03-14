@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { PropTypes } from 'prop-types';
 import React from 'react';
 
@@ -38,17 +39,33 @@ const items = [
   },
 ];
 
-const Community = ({ withBanner }) => (
-  <section className="my-10 md:my-20 lg:my-28">
+const themeClassNames = {
+  white: {
+    wrapper: 'bg-white',
+    card: 'bg-transparent border-gray-3 border',
+  },
+  gray: {
+    wrapper: 'bg-gray-4',
+    card: 'bg-white shadow-card',
+  },
+};
+
+const Community = ({ withBanner, theme, isTitleCentered }) => (
+  <section className={classNames('py-10 md:py-20 lg:py-28', themeClassNames[theme].wrapper)}>
     <Container>
-      <Heading tag="h2">{title}</Heading>
+      <Heading className={classNames(isTitleCentered && 'text-center')} tag="h2">
+        {title}
+      </Heading>
       {withBanner && <Banner />}
       <div className="grid grid-cols-1 gap-4 md:gap-6 lg:gap-8 mt-7 md:mt-10 sm:grid-cols-2 lg:grid-cols-4 lg:mt-14">
         {items.map(({ icon: Icon, title, url, target }, index) => (
           <Link
             to={url}
             target={target}
-            className="flex items-center p-6 border rounded-lg md:pb-8 md:flex-col md:px-7 lg:pb-10 md:pt-7 border-gray-3"
+            className={classNames(
+              'flex items-center p-6  rounded-lg md:pb-8 md:flex-col md:px-7 lg:pb-10 md:pt-7',
+              themeClassNames[theme].card
+            )}
             key={index}
             type="text"
             theme="black"
@@ -66,10 +83,14 @@ const Community = ({ withBanner }) => (
 
 Community.propTypes = {
   withBanner: PropTypes.bool,
+  isTitleCentered: PropTypes.bool,
+  theme: PropTypes.oneOf(Object.keys(themeClassNames)),
 };
 
 Community.defaultProps = {
   withBanner: false,
+  isTitleCentered: false,
+  theme: 'white',
 };
 
 export default Community;

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Cards from 'components/pages/get-help/cards';
+import Faq from 'components/pages/get-help/faq';
 import Hero from 'components/pages/get-help/hero';
 import Community from 'components/shared/community';
 import MainLayout from 'layouts/main/main';
@@ -34,10 +35,11 @@ const items = [
 ];
 
 const GetHelp = () => (
-  <MainLayout theme="gray">
+  <MainLayout theme="gray" footerWithoutTopBorder>
     <Hero />
     <Cards items={items} />
-    <Community />
+    <Faq />
+    <Community theme="gray" isTitleCentered />
   </MainLayout>
 );
 

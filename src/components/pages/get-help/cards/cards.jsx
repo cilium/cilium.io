@@ -17,19 +17,30 @@ const icons = {
 
 const Cards = ({ items }) => (
   <section className="bg-gray-4 pt-12 pb-28">
-    <Container className="grid grid-cols-12 lg:gap-x-8">
-      {items.map(({ iconName, title, description, buttonText, buttonUrl }, index) => {
+    <Container className="grid grid-cols-12 gap-y-8 lg:gap-x-6 xl:gap-x-8">
+      {items.map(({ iconName, title, description, buttonText, buttonUrl, buttonTarget }, index) => {
         const Icon = icons[iconName];
         return (
-          <div className="flex flex-col col-span-4 bg-white rounded-xl shadow-card p-8" key={index}>
-            <Icon />
-            <Heading className="mt-5" size="xs" tag="h3">
-              {title}
-            </Heading>
-            <p className="mt-3.5 mb-7">{description}</p>
-            <Button className="mt-auto self-start" theme="primary-1" to={buttonUrl}>
-              {buttonText}
-            </Button>
+          <div
+            className="flex flex-col md:flex-row lg:flex-col col-span-full lg:col-span-4 space-y-4 md:space-y-0 md:space-x-5 lg:space-x-0 lg:space-y-5 bg-white rounded-xl shadow-card p-8"
+            key={index}
+          >
+            <Icon className="shrink-0" />
+            <div className="grow flex flex-col">
+              <Heading size="xs" tag="h3">
+                {title}
+              </Heading>
+              <p className="mt-3.5 mb-5 lg:mb-7 text-lg">{description}</p>
+              <Button
+                className="mt-auto self-start"
+                theme="primary-1"
+                to={buttonUrl}
+                target={buttonTarget || ''}
+                rel={buttonTarget ? 'noopener noreferrer' : ''}
+              >
+                {buttonText}
+              </Button>
+            </div>
           </div>
         );
       })}
@@ -37,8 +48,17 @@ const Cards = ({ items }) => (
   </section>
 );
 
-Cards.propTypes = {};
-
-Cards.defaultProps = {};
+Cards.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      iconName: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
+      buttonText: PropTypes.string.isRequired,
+      buttonUrl: PropTypes.string.isRequired,
+      buttonTarget: PropTypes.string,
+    })
+  ).isRequired,
+};
 
 export default Cards;
