@@ -35,10 +35,12 @@ const Hero = (props) => (
           src="./images/hero-image.jpg"
           width={650}
           height={373}
+          quality={95}
+          loading="eager"
           alt="Cilium team"
         />
         <img
-          className="absolute bottom-[-14.6%] left-[-5.8%] w-[115%] xl:w-[676px] max-w-none"
+          className="absolute bottom-[-14.6%] left-[-5.75%] w-[115%] xl:w-[676px] max-w-none"
           src={decor1}
           width={676}
           height={374}
