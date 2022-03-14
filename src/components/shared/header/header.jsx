@@ -1,6 +1,7 @@
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import SlackIcon from 'icons/slack.inline.svg';
@@ -18,8 +19,13 @@ const navigation = [
   { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
 ];
 
-const Header = () => (
-  <div className="py-5">
+const themeClassNames = {
+  white: 'bg-white',
+  gray: 'bg-gray-4',
+};
+
+const Header = ({ theme }) => (
+  <div className={classNames('py-5', themeClassNames[theme])}>
     <Popover>
       {({ open }) => (
         <>
@@ -145,5 +151,13 @@ const Header = () => (
     </Popover>
   </div>
 );
+
+Header.propTypes = {
+  theme: PropTypes.oneOf(Object.keys(themeClassNames)),
+};
+
+Header.defaultProps = {
+  theme: 'white',
+};
 
 export default Header;

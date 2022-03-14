@@ -6,12 +6,12 @@ import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
 import SEO from 'components/shared/seo';
 
-const MainLayout = ({ showBanner, pageMetadata, canonicalUrl, children }) => (
+const MainLayout = ({ showBanner, pageMetadata, canonicalUrl, children, theme }) => (
   <>
     <SEO canonical={canonicalUrl} data={pageMetadata} />
     <div className="relative">
       {showBanner && <Banner />}
-      <Header />
+      <Header theme={theme} />
     </div>
     <main>{children}</main>
     <Footer />
