@@ -16,9 +16,9 @@ const Item = ({ question, answer, faqId, isDefaultOpen }) => {
   const [isOpen, setIsOpen] = useState(isDefaultOpen);
   const handleButtonClick = () => setIsOpen((currentState) => !currentState);
   return (
-    <div className="py-5 first:pt-0 last:pb-0 relative after:absolute after:h-px after:left-[38px] sm:after:left-14 after:right-0 after:bottom-0 last:after:hidden after:bg-gray-3">
+    <div className="py-5 first:pt-0 last:pb-0 relative after:absolute after:h-px after:left-0 sm:after:left-14 after:right-0 after:bottom-0 last:after:hidden after:bg-gray-3">
       <dt
-        className="group text-lg sm:text-xl text-left leading-normal sm:leading-normal font-semibold space-x-3.5 sm:space-x-5 flex items-center"
+        className="group text-lg sm:text-xl text-left leading-normal sm:leading-normal font-semibold sm:space-x-5 flex items-center hover:text-primary-1 sm:hover:text-inherit duration-200 transition-colors"
         role="button"
         tabIndex="0"
         aria-expanded={isOpen}
@@ -28,7 +28,9 @@ const Item = ({ question, answer, faqId, isDefaultOpen }) => {
       >
         <div
           className={classNames(
-            'border-2 relative rounded-full shrink-0 w-6 h-6 sm:w-9 sm:h-9 duration-200 transition-[background,border,transform,color] group-hover:border-hover-1 group-hover:bg-hover-1 group-hover:text-white',
+            'border-2 relative rounded-full shrink-0 w-6 h-6 duration-200 transition-[background,border,transform,color] hidden',
+            'group-hover:border-hover-1 group-hover:bg-hover-1 group-hover:text-white',
+            'sm:w-9 sm:h-9 sm:block',
             isOpen
               ? '-rotate-90 border-primary-1 bg-primary-1 text-white'
               : 'rotate-0 border-gray-3 group-hover:text-primary-1'
@@ -40,7 +42,7 @@ const Item = ({ question, answer, faqId, isDefaultOpen }) => {
       </dt>
 
       <motion.dd
-        className="pl-[38px] sm:pl-14 prose sm:prose-lg prose-hr:my-5 sm:prose-hr:my-5 leading-relaxed lg:leading-relaxed max-w-none overflow-hidden"
+        className="sm:pl-14 prose sm:prose-lg prose-hr:my-5 sm:prose-hr:my-5 leading-relaxed lg:leading-relaxed max-w-none overflow-hidden"
         id={faqId}
         initial="hidden"
         animate={isOpen ? 'visible' : 'hidden'}
