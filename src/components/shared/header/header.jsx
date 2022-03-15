@@ -64,11 +64,10 @@ const Header = ({ theme }) => (
               </div>
               <ul className="hidden lg:flex lg:space-x-7 xl:space-x-11 lg:items-center">
                 {navigation.map((item) => (
-                  <li>
+                  <li key={item.name}>
                     <Link
                       type="text"
                       theme="black"
-                      key={item.name}
                       to={item.href}
                       target={item.target || null}
                       rel={item.target ? 'noopener noreferrer' : null}
@@ -115,9 +114,8 @@ const Header = ({ theme }) => (
                 <div className="flex flex-col items-center justify-center px-2 pb-11 mt-11">
                   <ul className="flex flex-col justify-center space-y-9">
                     {navigation.map((item) => (
-                      <li>
+                      <li key={item.name}>
                         <Link
-                          key={item.name}
                           to={item.href}
                           target={item.target}
                           theme="black"

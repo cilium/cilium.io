@@ -28,7 +28,6 @@
     "@tailwindcss/line-clamp": "^0.3.1",
     "@tailwindcss/typography": "^0.5.0",
     "classnames": "^2.3.1",
-    "framer-motion": "^6.2.8",
     "gatsby": "^4.5.4",
     "gatsby-plugin-feed": "^4.5.0",
     "gatsby-plugin-google-tagmanager": "^4.5.0",

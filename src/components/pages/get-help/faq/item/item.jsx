@@ -1,16 +1,8 @@
 import classNames from 'classnames';
-import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import ChevronIcon from '../images/chevron.inline.svg';
-
-const ANIMATION_DURATION = 0.2;
-
-const variantsAnimation = {
-  hidden: { opacity: 0, height: 0, marginTop: 0 },
-  visible: { opacity: 1, height: 'auto', marginTop: '10px' },
-};
 
 const Item = ({ question, answer, faqId, isDefaultOpen }) => {
   const [isOpen, setIsOpen] = useState(isDefaultOpen);
@@ -41,13 +33,12 @@ const Item = ({ question, answer, faqId, isDefaultOpen }) => {
         </button>
       </dt>
 
-      <motion.dd
-        className="sm:pl-14 prose sm:prose-lg prose-hr:my-5 sm:prose-hr:my-5 leading-relaxed lg:leading-relaxed max-w-none overflow-hidden"
+      <dd
+        className={classNames(
+          'sm:pl-14 prose sm:prose-lg prose-hr:my-5 sm:prose-hr:my-5 leading-relaxed lg:leading-relaxed max-w-none overflow-hidden duration-300 transition-[opacity,height,margin-top,visibility]',
+          isOpen ? 'opacity-100 mt-2.5 h-auto visible' : 'opacity-0 mt-0 h-0 invisible'
+        )}
         id={faqId}
-        initial="hidden"
-        animate={isOpen ? 'visible' : 'hidden'}
-        variants={variantsAnimation}
-        transition={{ duration: ANIMATION_DURATION }}
         dangerouslySetInnerHTML={{ __html: answer }}
       />
     </div>
