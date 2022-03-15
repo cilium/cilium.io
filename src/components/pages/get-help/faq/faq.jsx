@@ -37,7 +37,7 @@ const Faq = () => (
       <Heading className="text-center" size="lg" tag="h2">
         {title}
       </Heading>
-      <dl className="mt-6 md:mt-9">
+      <dl className="mt-6 md:mt-10 lg:mt-14">
         {items.map((item, index) => {
           const faqId = `faq${index + 1}`;
           return <Item {...item} faqId={faqId} key={index} isDefaultOpen={index === 0} />;

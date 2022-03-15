@@ -16,7 +16,7 @@ const icons = {
 };
 
 const Cards = ({ items }) => (
-  <section className="bg-gray-4 pt-12 pb-28">
+  <div className="bg-gray-4 pt-12 pb-28">
     <Container className="grid grid-cols-12 gap-y-8 lg:gap-x-6 xl:gap-x-8">
       {items.map(({ iconName, title, description, buttonText, buttonUrl, buttonTarget }, index) => {
         const Icon = icons[iconName];
@@ -35,7 +35,7 @@ const Cards = ({ items }) => (
                 className="mt-auto self-start"
                 theme="primary-1"
                 to={buttonUrl}
-                target={buttonTarget || ''}
+                target={buttonTarget || null}
                 rel={buttonTarget ? 'noopener noreferrer' : ''}
               >
                 {buttonText}
@@ -45,7 +45,7 @@ const Cards = ({ items }) => (
         );
       })}
     </Container>
-  </section>
+  </div>
 );
 
 Cards.propTypes = {
