@@ -1,5 +1,4 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
@@ -11,7 +10,7 @@ import decor2 from './images/decor-2.svg';
 const title = 'Find out how to get help with Cilium';
 const description = 'Get help with Cilium through slack, training, support and FAQs';
 
-const Hero = (props) => (
+const Hero = () => (
   <section className="bg-gray-4 py-10 md:py-20 lg:py-24 overflow-x-hidden">
     <Container className="grid grid-cols-12 gap-y-14 sm:gap-y-20 md:gap-y-24 lg:gap-y-0 lg:gap-x-8 lg:items-center xl:items-stretch">
       <div className="col-span-full lg:col-span-5 xl:pt-14">
@@ -51,9 +50,5 @@ const Hero = (props) => (
     </Container>
   </section>
 );
-
-Hero.propTypes = {};
-
-Hero.defaultProps = {};
 
 export default Hero;
