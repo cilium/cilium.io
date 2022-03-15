@@ -35,7 +35,7 @@ const Footer = ({ withoutTopBorder }) => (
           {navigation.map((menu, index) => (
             <ul className="flex flex-col space-y-6" key={index}>
               {menu.map(({ name, href, target }) => (
-                <li key={name}>
+                <li className="inline leading-none" key={name}>
                   <Link
                     theme="black"
                     type="text"

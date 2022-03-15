@@ -114,13 +114,13 @@ const Header = ({ theme }) => (
                 <div className="flex flex-col items-center justify-center px-2 pb-11 mt-11">
                   <ul className="flex flex-col justify-center space-y-9">
                     {navigation.map((item) => (
-                      <li key={item.name}>
+                      <li className="text-center" key={item.name}>
                         <Link
                           to={item.href}
                           target={item.target}
                           theme="black"
                           type="text"
-                          className="text-base font-bold leading-none text-center rounded-md"
+                          className="text-base font-bold leading-none  rounded-md"
                         >
                           {item.name}
                         </Link>
