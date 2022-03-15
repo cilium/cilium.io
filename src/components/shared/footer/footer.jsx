@@ -33,20 +33,22 @@ const Footer = ({ withoutTopBorder }) => (
         </Link>
         <div className="grid grid-cols-1 col-span-3 gap-x-8 gap-y-10 xs:grid-cols-2 sm:grid-cols-3">
           {navigation.map((menu, index) => (
-            <div className="flex flex-col space-y-6" key={index}>
+            <ul className="flex flex-col space-y-6" key={index}>
               {menu.map(({ name, href, target }) => (
-                <Link
-                  theme="black"
-                  type="text"
-                  key={name}
-                  to={href}
-                  target={target || null}
-                  rel={target ? 'noopener noreferrer' : null}
-                >
-                  {name}
-                </Link>
+                <li>
+                  <Link
+                    theme="black"
+                    type="text"
+                    key={name}
+                    to={href}
+                    target={target || null}
+                    rel={target ? 'noopener noreferrer' : null}
+                  >
+                    {name}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           ))}
         </div>
       </div>

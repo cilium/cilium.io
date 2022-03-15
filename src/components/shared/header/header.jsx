@@ -62,21 +62,23 @@ const Header = ({ theme }) => (
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:flex lg:space-x-7 xl:space-x-11 lg:items-center">
+              <ul className="hidden lg:flex lg:space-x-7 xl:space-x-11 lg:items-center">
                 {navigation.map((item) => (
-                  <Link
-                    type="text"
-                    theme="black"
-                    key={item.name}
-                    to={item.href}
-                    target={item.target || null}
-                    rel={item.target ? 'noopener noreferrer' : null}
-                    className="text-base font-bold leading-none"
-                  >
-                    {item.name}
-                  </Link>
+                  <li>
+                    <Link
+                      type="text"
+                      theme="black"
+                      key={item.name}
+                      to={item.href}
+                      target={item.target || null}
+                      rel={item.target ? 'noopener noreferrer' : null}
+                      className="text-base font-bold leading-none"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </nav>
           </Container>
 
@@ -111,20 +113,22 @@ const Header = ({ theme }) => (
                   </div>
                 </div>
                 <div className="flex flex-col items-center justify-center px-2 pb-11 mt-11">
-                  <div className="flex flex-col justify-center space-y-9">
+                  <ul className="flex flex-col justify-center space-y-9">
                     {navigation.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        target={item.target}
-                        theme="black"
-                        type="text"
-                        className="text-base font-bold leading-none text-center rounded-md"
-                      >
-                        {item.name}
-                      </Link>
+                      <li>
+                        <Link
+                          key={item.name}
+                          to={item.href}
+                          target={item.target}
+                          theme="black"
+                          type="text"
+                          className="text-base font-bold leading-none text-center rounded-md"
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                   <Button
                     className="inline-flex items-center leading-none mt-9"
                     to="https://cilium.herokuapp.com/"
