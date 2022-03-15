@@ -25,7 +25,7 @@ const Item = ({ question, answer, faqId, isDefaultOpen }) => {
           aria-controls={faqId}
           onClick={handleButtonClick}
         >
-          <div
+          <span
             className={classNames(
               'border-2 relative rounded-full shrink-0 w-6 h-6 duration-200 transition-[background,border,transform,color] hidden',
               'group-hover:border-hover-1 group-hover:bg-hover-1 group-hover:text-white',
@@ -36,8 +36,8 @@ const Item = ({ question, answer, faqId, isDefaultOpen }) => {
             )}
           >
             <ChevronIcon className="w-2.5 sm:w-4 h-auto absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2" />
-          </div>
-          <p>{question}</p>
+          </span>
+          <span>{question}</span>
         </button>
       </dt>
 
