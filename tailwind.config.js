@@ -50,6 +50,9 @@ module.exports = {
       borderRadius: {
         large: '20px',
       },
+      backgroundImage: {
+        'dark-blue': 'linear-gradient(247.62deg, #272B41 21.37%, #161928 52.43%)',
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {

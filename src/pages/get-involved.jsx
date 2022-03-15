@@ -3,6 +3,7 @@ import React from 'react';
 import EventBox from 'components/pages/get-involved/event-box';
 import Guidelines from 'components/pages/get-involved/guidelines';
 import Hero from 'components/pages/get-involved/hero';
+import ReportBug from 'components/pages/get-involved/report-bug';
 import Cards from 'components/shared/cards';
 import MainLayout from 'layouts/main';
 
@@ -70,6 +71,7 @@ const GetInvolved = () => (
     <Guidelines />
     <EventBox />
     <Cards className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" {...cardItems2} buttonType="link" />
+    <ReportBug />
   </MainLayout>
 );
 
