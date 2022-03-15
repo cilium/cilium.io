@@ -62,7 +62,8 @@ const UserCommunity = ({ title, items }) => (
                     type="text"
                     theme="primary"
                     to={linkUrl}
-                    target={linkTarget || ''}
+                    target={linkTarget || null}
+                    rel={linkTarget ? 'noopener noreferrer' : null}
                   >
                     {linkText}
                   </Link>

@@ -69,7 +69,8 @@ const Header = ({ theme }) => (
                     theme="black"
                     key={item.name}
                     to={item.href}
-                    target={item.target || ''}
+                    target={item.target || null}
+                    rel={item.target ? 'noopener noreferrer' : null}
                     className="text-base font-bold leading-none"
                   >
                     {item.name}

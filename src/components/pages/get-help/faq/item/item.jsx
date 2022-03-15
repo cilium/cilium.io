@@ -17,28 +17,28 @@ const Item = ({ question, answer, faqId, isDefaultOpen }) => {
   const handleButtonClick = () => setIsOpen((currentState) => !currentState);
   return (
     <div className="py-5 first:pt-0 last:pb-0 relative after:absolute after:h-px after:left-0 sm:after:left-14 after:right-0 after:bottom-0 last:after:hidden after:bg-gray-3">
-      <dt
-        className="group text-lg sm:text-xl text-left leading-normal sm:leading-normal font-semibold sm:space-x-5 flex items-center hover:text-primary-1 sm:hover:text-inherit duration-200 transition-colors"
-        role="button"
-        tabIndex="0"
-        aria-expanded={isOpen}
-        aria-controls={faqId}
-        onClick={handleButtonClick}
-        onKeyDown={handleButtonClick}
-      >
-        <div
-          className={classNames(
-            'border-2 relative rounded-full shrink-0 w-6 h-6 duration-200 transition-[background,border,transform,color] hidden',
-            'group-hover:border-hover-1 group-hover:bg-hover-1 group-hover:text-white',
-            'sm:w-9 sm:h-9 sm:block',
-            isOpen
-              ? '-rotate-90 border-primary-1 bg-primary-1 text-white'
-              : 'rotate-0 border-gray-3 group-hover:text-primary-1'
-          )}
+      <dt>
+        <button
+          className="group text-lg sm:text-xl text-left leading-normal sm:leading-normal font-semibold sm:space-x-5 flex items-center hover:text-primary-1 sm:hover:text-inherit duration-200 transition-colors"
+          type="button"
+          aria-expanded={isOpen}
+          aria-controls={faqId}
+          onClick={handleButtonClick}
         >
-          <ChevronIcon className="w-2.5 sm:w-4 h-auto absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2" />
-        </div>
-        <p>{question}</p>
+          <div
+            className={classNames(
+              'border-2 relative rounded-full shrink-0 w-6 h-6 duration-200 transition-[background,border,transform,color] hidden',
+              'group-hover:border-hover-1 group-hover:bg-hover-1 group-hover:text-white',
+              'sm:w-9 sm:h-9 sm:block',
+              isOpen
+                ? '-rotate-90 border-primary-1 bg-primary-1 text-white'
+                : 'rotate-0 border-gray-3 group-hover:text-primary-1'
+            )}
+          >
+            <ChevronIcon className="w-2.5 sm:w-4 h-auto absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2" />
+          </div>
+          <p>{question}</p>
+        </button>
       </dt>
 
       <motion.dd

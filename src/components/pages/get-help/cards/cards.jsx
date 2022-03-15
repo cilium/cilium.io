@@ -56,7 +56,7 @@ const Cards = () => (
                 theme="primary-1"
                 to={buttonUrl}
                 target={buttonTarget || null}
-                rel={buttonTarget ? 'noopener noreferrer' : ''}
+                rel={buttonTarget ? 'noopener noreferrer' : null}
               >
                 {buttonText}
               </Button>
