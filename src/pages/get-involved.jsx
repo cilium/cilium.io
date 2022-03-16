@@ -1,5 +1,6 @@
 import React from 'react';
 
+import EventBox from 'components/pages/get-involved/event-box';
 import Guidelines from 'components/pages/get-involved/guidelines';
 import Hero from 'components/pages/get-involved/hero';
 import Cards from 'components/shared/cards';
@@ -37,6 +38,7 @@ const GetInvolved = () => (
     <Hero />
     <Cards items={items} buttonType="link" />
     <Guidelines />
+    <EventBox />
   </MainLayout>
 );
 
