@@ -6,7 +6,7 @@ import Hero from 'components/pages/get-involved/hero';
 import Cards from 'components/shared/cards';
 import MainLayout from 'layouts/main';
 
-const items = [
+const cardItems1 = [
   {
     iconName: 'slack',
     title: 'Slack',
@@ -33,12 +33,43 @@ const items = [
   },
 ];
 
+const cardItems2 = {
+  title: 'Develop and contribute',
+  items: [
+    {
+      iconName: 'github',
+      title: 'Github',
+      description:
+        'Want to report a bug or ask for a feature? Issues can be found in the <a href="/">GitHub issue tracker</a>. If you want to report a bug or a new feature please file the issue according to the <a href="/">GitHub template</a>.',
+    },
+    {
+      iconName: 'devstats',
+      title: 'Devstats',
+      description:
+        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
+      buttonText: 'See project activity on Devstats',
+      buttonUrl: '/',
+      buttonTarget: '_blank',
+    },
+    {
+      iconName: 'conduct',
+      title: 'Code of Conduct',
+      description:
+        'To make Cilium a welcoming and harassment-free experience for everyone, we follow our Code of Conduct.',
+      buttonText: 'Read code of conduct',
+      buttonUrl: 'https://github.com/cilium/cilium/blob/master/CODE_OF_CONDUCT.md',
+      buttonTarget: '_blank',
+    },
+  ],
+};
+
 const GetInvolved = () => (
   <MainLayout>
     <Hero />
-    <Cards items={items} buttonType="link" />
+    <Cards className="pt-12 pb-28" items={cardItems1} buttonType="link" theme="gray" />
     <Guidelines />
     <EventBox />
+    <Cards className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" {...cardItems2} buttonType="link" />
   </MainLayout>
 );
 
