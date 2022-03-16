@@ -61,7 +61,7 @@ const Cards = ({ className, title, items, buttonType, theme }) => {
                     <div
                       className={classNames(
                         'mt-3.5 with-link-primary-light',
-                        buttonText && buttonUrl ? 'mb-5 lg:mb-7' : 'mb-2'
+                        buttonText && buttonUrl && 'mb-5 lg:mb-7'
                       )}
                       dangerouslySetInnerHTML={{ __html: description }}
                     />

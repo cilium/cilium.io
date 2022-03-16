@@ -1,6 +1,7 @@
 import { Popover, Transition } from '@headlessui/react';
 import { MenuIcon, XIcon } from '@heroicons/react/outline';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
 import SlackIcon from 'icons/slack.inline.svg';
@@ -18,8 +19,13 @@ const navigation = [
   { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
 ];
 
-const Header = () => (
-  <div className="py-5">
+const themeClassNames = {
+  white: 'bg-white',
+  gray: 'bg-gray-4',
+};
+
+const Header = ({ theme }) => (
+  <div className={classNames('py-5', themeClassNames[theme])}>
     <Popover>
       {({ open }) => (
         <>
@@ -35,9 +41,9 @@ const Header = () => (
                       <span className="sr-only">Cilium</span>
                       <Logo />
                     </Link>
-                    <GithubStars className="hidden ml-4 lg:inline-block md:ml-8" />
+                    <GithubStars className="hidden ml-4 lg:inline-block md:ml-8 bg-white" />
                     <Button
-                      className="items-center hidden ml-4 leading-none lg:inline-flex"
+                      className="items-center hidden ml-4 leading-none lg:inline-flex bg-white"
                       to="https://cilium.herokuapp.com/"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -56,20 +62,22 @@ const Header = () => (
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:flex lg:space-x-7 xl:space-x-11 lg:items-center">
+              <ul className="hidden lg:flex lg:space-x-7 xl:space-x-11 lg:items-center">
                 {navigation.map((item) => (
-                  <Link
-                    type="text"
-                    theme="black"
-                    key={item.name}
-                    to={item.href}
-                    target={item.target || ''}
-                    className="text-base font-bold leading-none"
-                  >
-                    {item.name}
-                  </Link>
+                  <li key={item.name}>
+                    <Link
+                      type="text"
+                      theme="black"
+                      to={item.href}
+                      target={item.target || null}
+                      rel={item.target ? 'noopener noreferrer' : null}
+                      className="text-base font-bold leading-none"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </nav>
           </Container>
 
@@ -104,20 +112,21 @@ const Header = () => (
                   </div>
                 </div>
                 <div className="flex flex-col items-center justify-center px-2 pb-11 mt-11">
-                  <div className="flex flex-col justify-center space-y-9">
+                  <ul className="flex flex-col justify-center space-y-9">
                     {navigation.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.href}
-                        target={item.target}
-                        theme="black"
-                        type="text"
-                        className="text-base font-bold leading-none text-center rounded-md"
-                      >
-                        {item.name}
-                      </Link>
+                      <li className="text-center" key={item.name}>
+                        <Link
+                          to={item.href}
+                          target={item.target}
+                          theme="black"
+                          type="text"
+                          className="text-base font-bold leading-none  rounded-md"
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                   <Button
                     className="inline-flex items-center leading-none mt-9"
                     to="https://cilium.herokuapp.com/"
@@ -145,5 +154,13 @@ const Header = () => (
     </Popover>
   </div>
 );
+
+Header.propTypes = {
+  theme: PropTypes.oneOf(Object.keys(themeClassNames)),
+};
+
+Header.defaultProps = {
+  theme: 'white',
+};
 
 export default Header;

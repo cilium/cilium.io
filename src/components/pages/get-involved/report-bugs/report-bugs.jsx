@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from 'components/shared/button';
@@ -13,7 +12,7 @@ const description =
 const buttonText = 'Report a Bug';
 const buttonUrl = '/';
 
-const ReportBug = () => (
+const ReportBugs = () => (
   <section className="mt-10">
     <Container className="bg-dark-blue text-white rounded-xl relative overflow-hidden">
       <div className="max-w-[640px] py-14 pl-20">
@@ -34,4 +33,4 @@ const ReportBug = () => (
   </section>
 );
 
-export default ReportBug;
+export default ReportBugs;

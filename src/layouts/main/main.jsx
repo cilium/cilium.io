@@ -6,15 +6,22 @@ import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
 import SEO from 'components/shared/seo';
 
-const MainLayout = ({ showBanner, pageMetadata, canonicalUrl, children }) => (
+const MainLayout = ({
+  showBanner,
+  pageMetadata,
+  canonicalUrl,
+  children,
+  theme,
+  footerWithoutTopBorder,
+}) => (
   <>
     <SEO canonical={canonicalUrl} data={pageMetadata} />
     <div className="relative">
       {showBanner && <Banner />}
-      <Header />
+      <Header theme={theme} />
     </div>
     <main>{children}</main>
-    <Footer />
+    <Footer withoutTopBorder={footerWithoutTopBorder} />
   </>
 );
 
@@ -26,12 +33,16 @@ MainLayout.propTypes = {
     description: PropTypes.string,
   }),
   canonicalUrl: PropTypes.string,
+  theme: PropTypes.string,
+  footerWithoutTopBorder: PropTypes.bool,
 };
 
 MainLayout.defaultProps = {
   pageMetadata: {},
   showBanner: false,
   canonicalUrl: null,
+  theme: null,
+  footerWithoutTopBorder: false,
 };
 
 export default MainLayout;

@@ -25,17 +25,27 @@ const EventBox = () => (
     <Container className="grid grid-cols-12 gap-x-8">
       <div className="col-span-7 pl-8">
         <div className="relative w-[592px]">
-          <img className="absolute top-[-8%] right-[-6%]" src={decor2} alt="" aria-hidden />
+          <img
+            className="absolute top-[-8%] right-[-6%] w-[24.5%]"
+            src={decor2}
+            alt=""
+            aria-hidden
+          />
           <StaticImage
             className="rounded-xl"
             imgClassName="rounded-xl"
-            src="./images/image.jpg"
+            src="./images/event-image.jpg"
             width={592}
             height={396}
             quality={95}
             loading="lazy"
           />
-          <img className="absolute top-0 max-w-none left-[-6.5%]" src={decor1} alt="" aria-hidden />
+          <img
+            className="absolute top-0 max-w-none left-[-6.5%] w-[105%]"
+            src={decor1}
+            alt=""
+            aria-hidden
+          />
         </div>
       </div>
       <div className="col-start-8 col-end-13">

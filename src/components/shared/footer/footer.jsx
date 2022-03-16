@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
@@ -7,7 +9,7 @@ import Logo from 'images/logo.inline.svg';
 const navigation = [
   [
     { name: 'Blog', href: '/blog' },
-    { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
+    { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/', target: '_blank' },
   ],
   [
     { name: 'Enterprise', href: '/enterprise' },
@@ -16,9 +18,14 @@ const navigation = [
   [{ name: 'Learn', href: '/learn' }],
 ];
 
-const Footer = () => (
-  <footer className="mt-11 md:mt-20 lg:mt-28 ">
-    <Container className="pt-10 pb-10 border-t lg:pt-14 lg:pb-16 border-gray-3">
+const Footer = ({ withoutTopBorder }) => (
+  <footer>
+    <Container
+      className={classNames(
+        'pt-10 pb-10 lg:pt-14 lg:pb-16',
+        withoutTopBorder ? '' : 'border-t border-gray-3'
+      )}
+    >
       <div className="grid grid-cols-3 space-y-8 md:space-y-10 lg:grid-cols-4 gap-x-8 lg:space-y-0">
         <Link to="/">
           <span className="sr-only">Cilium</span>
@@ -26,13 +33,21 @@ const Footer = () => (
         </Link>
         <div className="grid grid-cols-1 col-span-3 gap-x-8 gap-y-10 xs:grid-cols-2 sm:grid-cols-3">
           {navigation.map((menu, index) => (
-            <div className="flex flex-col space-y-6" key={index}>
-              {menu.map(({ name, href }) => (
-                <Link theme="black" type="text" key={name} to={href}>
-                  {name}
-                </Link>
+            <ul className="flex flex-col space-y-6" key={index}>
+              {menu.map(({ name, href, target }) => (
+                <li className="inline leading-none" key={name}>
+                  <Link
+                    theme="black"
+                    type="text"
+                    to={href}
+                    target={target || null}
+                    rel={target ? 'noopener noreferrer' : null}
+                  >
+                    {name}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           ))}
         </div>
       </div>
@@ -70,5 +85,13 @@ const Footer = () => (
     </Container>
   </footer>
 );
+
+Footer.propTypes = {
+  withoutTopBorder: PropTypes.bool,
+};
+
+Footer.defaultProps = {
+  withoutTopBorder: false,
+};
 
 export default Footer;
