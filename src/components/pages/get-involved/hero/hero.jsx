@@ -1,5 +1,4 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
@@ -7,7 +6,7 @@ import Heading from 'components/shared/heading';
 
 const title = 'Join the Cilium community';
 const description =
-  "Cilium is an Open Source project that anyone in the community can use, improve, and enjoy. We'd love you to join us! Here's a few ways to find out what's happening and get involved.";
+  "Cilium is an open source project that anyone in the community can use, improve, and enjoy. We'd love you to join us! Here's a few ways to find out what's happening and get involved.";
 
 const Hero = () => (
   <section className="py-10 bg-gray-4">
