@@ -41,6 +41,7 @@
     "gatsby-remark-prismjs": "^6.5.0",
     "gatsby-remark-responsive-iframe": "^5.5.0",
     "gatsby-remark-video": "^1.2.5",
+    "prettier-plugin-tailwindcss": "^0.1.8",
     "prismjs": "^1.26.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",

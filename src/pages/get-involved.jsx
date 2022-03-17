@@ -3,6 +3,7 @@ import React from 'react';
 import CiliumStory from 'components/pages/get-involved/cilium-story';
 import EventBox from 'components/pages/get-involved/event-box';
 import Guidelines from 'components/pages/get-involved/guidelines';
+import HandsOn from 'components/pages/get-involved/hands-on';
 import Hero from 'components/pages/get-involved/hero';
 import ReportBugs from 'components/pages/get-involved/report-bugs';
 import Cards from 'components/shared/cards';
@@ -66,7 +67,7 @@ const cardItems2 = {
 };
 
 const GetInvolved = () => (
-  <MainLayout theme="gray">
+  <MainLayout theme="gray" footerWithoutTopBorder>
     <Hero />
     <Cards className="pt-12 pb-28" items={cardItems1} buttonType="link" theme="gray" />
     <Guidelines />
@@ -74,6 +75,7 @@ const GetInvolved = () => (
     <Cards className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" {...cardItems2} buttonType="link" />
     <ReportBugs />
     <CiliumStory />
+    <HandsOn />
   </MainLayout>
 );
 
