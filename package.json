@@ -1,7 +1,7 @@
 {
-  "name": "cilium.io-v2",
+  "name": "cilium.io",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Cilium.io - Public website",
   "version": "0.1.0",
   "author": "Cilium",
   "scripts": {
@@ -27,8 +27,10 @@
     "@svgr/webpack": "^6.2.0",
     "@tailwindcss/line-clamp": "^0.3.1",
     "@tailwindcss/typography": "^0.5.0",
+    "algoliasearch": "^4.12.1",
     "classnames": "^2.3.1",
     "gatsby": "^4.5.4",
+    "gatsby-plugin-algolia": "^0.26.0",
     "gatsby-plugin-feed": "^4.5.0",
     "gatsby-plugin-google-tagmanager": "^4.5.0",
     "gatsby-plugin-hotjar": "^1.1.1",
@@ -47,6 +49,7 @@
     "react-calendly": "^2.2.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
+    "react-instantsearch-dom": "^6.20.0",
     "react-share": "^4.4.0"
   },
   "devDependencies": {

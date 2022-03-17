@@ -1,4 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable global-require */
+// eslint-disable-next-line import/no-extraneous-dependencies
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -49,6 +50,9 @@ module.exports = {
       borderRadius: {
         large: '20px',
       },
+      backgroundImage: {
+        'search-icon': "url('/images/search.svg')",
+      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -93,9 +97,9 @@ module.exports = {
               transitionDuration: theme('transitionDuration.200'),
               transitionProperty: theme('transitionProperty.colors'),
               transitionTimingFunction: theme('transitionTimingFunction.DEFAULT'),
-              '&:hover': {
-                color: theme('colors.gray.1'),
-              },
+            },
+            'a:hover': {
+              color: theme('colors.gray.1'),
             },
             p: {
               lineHeight: theme('lineHeight.normal'),
