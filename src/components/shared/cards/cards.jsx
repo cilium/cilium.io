@@ -40,7 +40,7 @@ const Cards = ({ className, title, items, buttonType, theme }) => {
     <div className={classNames(className, themeClassNames[theme])}>
       <Container>
         {title && (
-          <Heading className="text-center mb-6 md:mb-10 lg:mb-14" tag="h2">
+          <Heading className="mb-6 xs:text-center md:mb-10 lg:mb-14" tag="h2">
             {title}
           </Heading>
         )}
@@ -50,17 +50,17 @@ const Cards = ({ className, title, items, buttonType, theme }) => {
               const Icon = icons[iconName];
               return (
                 <li
-                  className="flex flex-col md:flex-row lg:flex-col col-span-full lg:col-span-4 space-y-4 md:space-y-0 md:space-x-5 lg:space-x-0 lg:space-y-5 bg-white rounded-xl shadow-card p-8"
+                  className="col-span-full flex flex-col space-y-4 rounded-xl bg-white p-8 shadow-card md:flex-row md:space-y-0 md:space-x-5 lg:col-span-4 lg:flex-col lg:space-x-0 lg:space-y-5"
                   key={index}
                 >
                   {Icon && <Icon className="shrink-0" />}
-                  <div className="grow flex flex-col">
+                  <div className="flex grow flex-col">
                     <Heading size="xs" tag="h3">
                       {title}
                     </Heading>
                     <div
                       className={classNames(
-                        'mt-3.5 with-link-primary-light',
+                        'with-link-primary-light mt-3.5',
                         buttonText && buttonUrl && 'mb-5 lg:mb-7'
                       )}
                       dangerouslySetInnerHTML={{ __html: description }}
@@ -70,7 +70,7 @@ const Cards = ({ className, title, items, buttonType, theme }) => {
                       <Tag
                         className={classNames(
                           'mt-auto',
-                          isTypeLink ? 'pt-6 border-t border-gray-3' : 'self-start'
+                          isTypeLink ? 'border-t border-gray-3 pt-6 leading-snug' : 'self-start'
                         )}
                         theme={buttonTheme}
                         type={isTypeLink && 'text'}
@@ -101,8 +101,8 @@ Cards.propTypes = {
       iconName: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
-      buttonText: PropTypes.string.isRequired,
-      buttonUrl: PropTypes.string.isRequired,
+      buttonText: PropTypes.string,
+      buttonUrl: PropTypes.string,
       buttonTarget: PropTypes.string,
     })
   ).isRequired,

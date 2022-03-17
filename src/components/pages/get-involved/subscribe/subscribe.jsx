@@ -9,18 +9,21 @@ const description =
   'Want to stay up to date with the latest from around the Cilium  and eBPF community?';
 
 const Subscribe = () => (
-  <section className="mt-10 bg-gray-4 pt-20 pb-24 text-center md:mt-20 lg:mt-32">
+  <section className="mt-10 bg-gray-4 py-10 text-center md:mt-20 md:py-14 lg:mt-32 lg:pt-20 lg:pb-24">
     <Container>
       <Heading tag="h2">{title}</Heading>
       <p className="mt-2.5">{description}</p>
-      <form className="relative mx-auto mt-10 max-w-[656px]">
+      <form className="relative mx-auto mt-10 flex max-w-[656px] flex-col space-y-3 xs:space-y-0">
         <input
-          className="remove-autocomplete-styles w-full rounded-xl py-[22px] pl-6  pr-44 text-xl leading-normal shadow-input"
+          className="remove-autocomplete-styles w-full rounded py-3 pl-6 pr-6 leading-normal shadow-input xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44"
           type="email"
           name="email"
           placeholder="Email address..."
         />
-        <Button className="absolute right-3 top-1/2 -translate-y-1/2" theme="primary-1">
+        <Button
+          className="right-3 top-1/2 h-12 items-center !text-lg xs:absolute xs:h-auto xs:-translate-y-1/2"
+          theme="primary-1"
+        >
           Subscribe
         </Button>
       </form>

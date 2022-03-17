@@ -70,7 +70,12 @@ const cardItems2 = {
 const GetInvolved = () => (
   <MainLayout theme="gray" footerWithoutTopBorder>
     <Hero />
-    <Cards className="pt-12 pb-28" items={cardItems1} buttonType="link" theme="gray" />
+    <Cards
+      className="pt-12 pb-10 md:pb-20 lg:pb-28"
+      items={cardItems1}
+      buttonType="link"
+      theme="gray"
+    />
     <Guidelines />
     <EventBox />
     <Cards className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" {...cardItems2} buttonType="link" />

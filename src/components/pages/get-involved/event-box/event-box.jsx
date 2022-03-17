@@ -22,9 +22,9 @@ const links = [
 ];
 const EventBox = () => (
   <section className="mt-10 md:mt-20 lg:mt-28 xl:mt-40">
-    <Container className="grid grid-cols-12 gap-x-8">
-      <div className="col-span-7 pl-8">
-        <div className="relative w-[592px]">
+    <Container className="flex flex-col-reverse items-center lg:grid lg:grid-cols-12 lg:gap-x-8">
+      <div className="mt-10 lg:col-span-7 lg:mt-0 lg:justify-self-center xl:justify-self-stretch xl:pl-8">
+        <div className="relative mx-auto max-w-[90%] lg:mx-0 lg:max-w-[520px] xl:max-w-[592px]">
           <img
             className="absolute top-[-8%] right-[-6%] w-[24.5%]"
             src={decor2}
@@ -41,23 +41,23 @@ const EventBox = () => (
             loading="lazy"
           />
           <img
-            className="absolute top-0 max-w-none left-[-6.5%] w-[105%]"
+            className="absolute top-0 left-[-6.5%] w-[105%] max-w-none"
             src={decor1}
             alt=""
             aria-hidden
           />
         </div>
       </div>
-      <div className="col-start-8 col-end-13">
+      <div className="lg:col-start-8 lg:col-end-13">
         <Heading tag="h2">{title}</Heading>
         <p className="mt-5">{description}</p>
-        <ul className="mt-6 pt-6 border-t border-gray-3 space-y-4">
+        <ul className="mt-4 space-y-4 border-t border-gray-3 pt-4 lg:mt-6 lg:pt-6">
           {links.map(({ text, url, description }, index) => (
             <li className="leading-none" key={index}>
               <Link theme="primary" type="text" to={url}>
                 {text}
               </Link>
-              {description && <span className="text-sm inline-block mt-2.5">{description}</span>}
+              {description && <span className="mt-2.5 block text-sm">{description}</span>}
             </li>
           ))}
         </ul>

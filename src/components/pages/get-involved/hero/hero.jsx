@@ -1,5 +1,4 @@
 import { graphql, useStaticQuery } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 import Container from 'components/shared/container';
@@ -35,15 +34,15 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-gray-4 py-10">
-      <Container className="grid grid-cols-12 items-center gap-x-8">
-        <div className="col-span-5">
+    <section className="bg-gray-4 pb-0 pt-5 lg:py-10">
+      <Container className="grid grid-cols-12 items-center gap-y-10 lg:gap-y-0 lg:gap-x-8">
+        <div className="col-span-full lg:col-span-5">
           <Heading tag="h1" size="lg">
             {title}
           </Heading>
           <p className="mt-5 text-lg">{description}</p>
         </div>
-        <div className="col-span-7 justify-self-center">
+        <div className="col-span-full  justify-self-center lg:col-span-7">
           <SvgAndGatsbyImage {...imageData} />
         </div>
       </Container>

@@ -17,15 +17,15 @@ const buttonUrl = '/';
 
 const CiliumStory = (props) => (
   <section className="mt-10 md:mt-20 lg:mt-28 xl:mt-40">
-    <Container className="flex space-x-[108px] items-center">
-      <div>
+    <Container className="flex flex-col items-center space-y-10 lg:flex-row lg:space-y-0 lg:space-x-20 xl:space-x-[108px]">
+      <div className="lg:flex-1 xl:flex-initial">
         <Heading tag="h2">{title}</Heading>
-        <div className="space-y-2.5 mt-5" dangerouslySetInnerHTML={{ __html: description }} />
+        <div className="mt-5 space-y-2.5" dangerouslySetInnerHTML={{ __html: description }} />
         <Button className="mt-5" theme="primary-1" to={buttonUrl}>
           {buttonText}
         </Button>
       </div>
-      <div className="relative shrink-0">
+      <div className="relative mx-auto max-w-[90%] shrink-0 lg:mx-0 lg:max-w-none lg:flex-1 xl:flex-initial">
         <img
           className="absolute bottom-[-8%] right-[-6%] w-[24.5%]"
           src={decor2}
@@ -42,7 +42,7 @@ const CiliumStory = (props) => (
           loading="lazy"
         />
         <img
-          className="absolute bottom-0 w-[103%] left-[-7%] max-w-none"
+          className="absolute bottom-0 left-[-7%] w-[103%] max-w-none"
           src={decor1}
           alt=""
           aria-hidden
