@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 import Button from 'components/shared/button';
@@ -15,7 +16,10 @@ const Subscribe = () => (
       <p className="mt-2.5">{description}</p>
       <form className="relative mx-auto mt-10 flex max-w-[656px] flex-col space-y-3 xs:space-y-0">
         <input
-          className="remove-autocomplete-styles w-full rounded py-3 pl-6 pr-6 leading-normal shadow-input xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44"
+          className={classNames(
+            'remove-autocomplete-styles w-full rounded border py-3 pl-6 pr-6 leading-normal shadow-input transition-[border,box-shadow] duration-200 xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44',
+            'hover:border-gray-2 focus-visible:border-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-1 focus-visible:ring-offset-0'
+          )}
           type="email"
           name="email"
           placeholder="Email address..."
