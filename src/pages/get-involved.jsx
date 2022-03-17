@@ -6,6 +6,7 @@ import Guidelines from 'components/pages/get-involved/guidelines';
 import HandsOn from 'components/pages/get-involved/hands-on';
 import Hero from 'components/pages/get-involved/hero';
 import ReportBugs from 'components/pages/get-involved/report-bugs';
+import Subscribe from 'components/pages/get-involved/subscribe';
 import Cards from 'components/shared/cards';
 import MainLayout from 'layouts/main';
 
@@ -76,6 +77,7 @@ const GetInvolved = () => (
     <ReportBugs />
     <CiliumStory />
     <HandsOn />
+    <Subscribe />
   </MainLayout>
 );
 
