@@ -15,7 +15,9 @@ const Subscribe = () => (
       <p className="mt-2.5">{description}</p>
       <form className="relative mx-auto mt-10 max-w-[656px]">
         <input
-          className="w-full rounded-xl py-[22px] pl-6 pr-44  text-xl leading-normal shadow-input"
+          className="remove-autocomplete-styles w-full rounded-xl py-[22px] pl-6  pr-44 text-xl leading-normal shadow-input"
+          type="email"
+          name="email"
           placeholder="Email address..."
         />
         <Button className="absolute right-3 top-1/2 -translate-y-1/2" theme="primary-1">

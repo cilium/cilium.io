@@ -84,7 +84,7 @@ const SVGAndGatsbyImage = ({
   return (
     <div
       className={classNames(
-        'relative opacity-0 transition-opacity duration-500 ease-linear',
+        'pointer-events-none relative opacity-0 transition-opacity duration-500 ease-linear',
         isImageLoaded && isCanvasImageLoaded && 'opacity-100',
         className
       )}

@@ -106,7 +106,7 @@ const HandsOn = () => {
         <ul className="mt-14 grid grid-cols-2 gap-x-8">
           {items.map(({ imageData, title, description, buttons }, index) => (
             <li className="flex flex-col rounded-xl shadow-card" key={index}>
-              <SvgAndGatsbyImage className="pointer-events-none" {...imageData} />
+              <SvgAndGatsbyImage {...imageData} />
               <div className="flex grow flex-col px-8 pt-4 pb-8 text-center">
                 <Heading size="xs" tag="h3" asHTML>
                   {title}
