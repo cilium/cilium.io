@@ -48,9 +48,9 @@ const Header = ({ showSearchBox, theme }) => (
                         <span className="sr-only">Cilium</span>
                         <Logo />
                       </Link>
-                      <GithubStars className="ml-4 hidden lg:inline-block xl:ml-8" />
+                      <GithubStars className="ml-4 hidden lg:inline-block xl:ml-8 bg-white" />
                       <Button
-                        className="ml-4 hidden items-center leading-none lg:inline-flex"
+                        className="ml-4 hidden items-center leading-none lg:inline-flex bg-white"
                         to="https://cilium.herokuapp.com/"
                         target="_blank"
                         rel="noopener noreferrer"
