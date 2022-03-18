@@ -60,8 +60,9 @@ const Cards = ({ className, title, items, buttonType, theme }) => {
                     </Heading>
                     <div
                       className={classNames(
-                        'with-link-primary-light mt-3.5',
-                        buttonText && buttonUrl && 'mb-5 lg:mb-7'
+                        'with-link-primary-light mt-3',
+                        buttonText && buttonUrl && !isTypeLink && 'mb-5 lg:mb-7',
+                        buttonText && buttonUrl && isTypeLink && 'mb-4 lg:mb-6'
                       )}
                       dangerouslySetInnerHTML={{ __html: description }}
                     />
@@ -70,7 +71,7 @@ const Cards = ({ className, title, items, buttonType, theme }) => {
                       <Tag
                         className={classNames(
                           'mt-auto',
-                          isTypeLink ? 'border-t border-gray-3 pt-6 leading-snug' : 'self-start'
+                          isTypeLink ? 'border-t border-gray-3 pt-5 leading-snug' : 'self-start'
                         )}
                         theme={buttonTheme}
                         type={isTypeLink && 'text'}

@@ -101,7 +101,7 @@ const Subscribe = () => {
             />
             <ErrorMessage serverError={errorMessage} error={errors?.email?.message} />
             <Button
-              className="right-3 top-1/2 h-12 items-center !text-lg xs:absolute xs:h-auto xs:-translate-y-1/2"
+              className="right-3 top-1/2 h-12 items-center !text-lg xs:absolute xs:h-auto xs:-translate-y-1/2 lg:px-7"
               theme="primary-1"
               type="submit"
               loading={isLoading}

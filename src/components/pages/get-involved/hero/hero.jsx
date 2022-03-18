@@ -43,7 +43,7 @@ const Hero = () => {
           </Heading>
           <p className="mt-5 text-lg">{description}</p>
         </div>
-        <div className="col-span-full  justify-self-center lg:col-span-7">
+        <div className="col-span-full justify-self-center lg:col-span-7 lg:pr-9">
           <SvgAndGatsbyImage {...imageData} />
         </div>
       </Container>

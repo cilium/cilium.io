@@ -111,7 +111,7 @@ const HandsOn = () => {
                 <Heading size="xs" tag="h3" asHTML>
                   {title}
                 </Heading>
-                <p className="mt-2.5 mb-5 lg:mb-7">{description}</p>
+                <p className="mt-2.5 mb-5 md:text-lg lg:mb-7">{description}</p>
                 <div className="mt-auto flex flex-col items-center justify-center space-y-3 xs:flex-row xs:space-y-0 xs:space-x-3 md:flex-col md:space-x-0 md:space-y-4 lg:flex-row lg:space-y-0 lg:space-x-5">
                   {buttons.map(({ title, url, theme, iconName, isPopup }, index) => (
                     <Fragment key={index}>

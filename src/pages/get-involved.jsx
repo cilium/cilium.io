@@ -43,7 +43,7 @@ const cardItems2 = {
   items: [
     {
       iconName: 'github',
-      title: 'Github',
+      title: 'GitHub',
       description:
         'Want to report a bug or ask for a feature? Issues can be found in the <a href="/">GitHub issue tracker</a>. If you want to report a bug or a new feature please file the issue according to the <a href="/">GitHub template</a>.',
     },
@@ -72,7 +72,7 @@ const GetInvolved = () => (
   <MainLayout theme="gray" pageMetadata={seo} footerWithoutTopBorder>
     <Hero />
     <Cards
-      className="pt-12 pb-10 md:pb-20 lg:pb-28"
+      className="pt-12 pb-10 md:pb-20 md:pt-16 lg:pt-[72px] lg:pb-28"
       items={cardItems1}
       buttonType="link"
       theme="gray"
