@@ -108,7 +108,7 @@ const SVGAndGatsbyImage = ({
         className={classNames('absolute top-0 left-0 h-full w-full', canvasClassName)}
         ref={canvasRef}
       />
-      <div ref={gastbyImageRef}>
+      <div className="absolute top-0 h-full w-full" ref={gastbyImageRef}>
         <GatsbyImage
           className={classNames('!absolute opacity-0', gatsbyImageClassName)}
           image={getImage(gatsbyImage)}

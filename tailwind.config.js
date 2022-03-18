@@ -39,6 +39,7 @@ module.exports = {
           1: '#3399FF',
         },
         additional: {
+          1: '#EB4748',
           4: '#D6EBFF',
         },
       },
@@ -57,6 +58,7 @@ module.exports = {
         eu: "url('/images/eu.svg')",
         usa: "url('/images/usa.svg')",
         'search-icon': "url('/images/search.svg')",
+        loader: "url('/images/loader.svg')",
       },
       typography: (theme) => ({
         DEFAULT: {
