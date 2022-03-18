@@ -118,7 +118,7 @@ const Subscribe = () => {
                 transition: { delay: APPEAR_AND_EXIT_ANIMATION_DURATION },
               }}
             >
-              <ActiveIcon className="flex-shrink-0" />
+              <ActiveIcon className="shrink-0" />
               <span className="text-2xl font-bold leading-none">Thanks for subscribing!</span>
             </motion.div>
           )}
