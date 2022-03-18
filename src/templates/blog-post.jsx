@@ -17,7 +17,7 @@ const BlogPostPage = (props) => {
     body: html,
     frontmatter: { path, title, date, tags, ogImage, ogSummary },
   } = postData;
-  const shouldShowBanner = pathname.startsWith('/blog');
+  const isBlogPage = pathname.startsWith('/blog');
   const slug = path.startsWith('/') ? path.slice(1) : path;
   const description = `${ogSummary.slice(0, 133)}...`;
   const seoMetadata = {
@@ -28,7 +28,7 @@ const BlogPostPage = (props) => {
   };
 
   return (
-    <MainLayout showBanner={shouldShowBanner} pageMetadata={seoMetadata}>
+    <MainLayout isBlogPage={isBlogPage} pageMetadata={seoMetadata}>
       <Content path={path} html={html} date={date} title={title} tags={tags} summary={ogSummary} />
       <PopularPosts className="mt-10 md:mt-20 lg:mt-28" />
     </MainLayout>

@@ -15,7 +15,7 @@ const CardItem = ({ icon: Icon, name, text, buttons, size }) => {
       <div
         className={classNames(
           isSmallSize ? 'xl:px-8' : 'md:px-8',
-          'flex flex-col items-center grow p-6 pb-8  md:pt-6 md:pb-11'
+          'flex flex-col items-center grow p-6 pb-8 md:pt-6 md:pb-11'
         )}
       >
         <Heading
