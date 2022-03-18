@@ -76,11 +76,10 @@ const Header = ({ showSearchBox, theme }) => (
                   {showSearchBox && <SearchBox indices={searchIndices} />}
                   <ul className="flex items-center lg:space-x-6 xl:space-x-8 2xl:space-x-11">
                     {navigation.map((item) => (
-                      <li>
+                      <li key={item.name}>
                         <Link
                           type="text"
                           theme="black"
-                          key={item.name}
                           to={item.href}
                           target={item.target || ''}
                           className="text-sm font-bold leading-none xl:text-base"
@@ -127,9 +126,8 @@ const Header = ({ showSearchBox, theme }) => (
                   <div className="mt-11 flex flex-col items-center justify-center px-2 pb-11">
                     <ul className="flex flex-col justify-center space-y-9">
                       {navigation.map((item) => (
-                        <li className="text-center">
+                        <li className="text-center" key={item.name}>
                           <Link
-                            key={item.name}
                             to={item.href}
                             target={item.target}
                             theme="black"

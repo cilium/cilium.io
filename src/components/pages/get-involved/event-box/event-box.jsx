@@ -39,6 +39,7 @@ const EventBox = () => (
             height={396}
             quality={95}
             loading="lazy"
+            alt=""
           />
           <img
             className="absolute top-0 left-[-6.5%] w-[105%] max-w-none"

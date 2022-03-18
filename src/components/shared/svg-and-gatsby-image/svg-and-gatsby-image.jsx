@@ -20,6 +20,7 @@ const SVGAndGatsbyImage = ({
   gatsbyImageHeight,
   imageProps,
   gatsbyImageProps,
+  loading,
 }) => {
   const canvasRef = useRef();
   const gastbyImageRef = useRef();
@@ -95,7 +96,7 @@ const SVGAndGatsbyImage = ({
         width={width}
         height={height}
         src={imageSrc}
-        loading="lazy"
+        loading={loading}
         alt=""
         ref={(img) => {
           if (img?.complete && !isImageLoaded) setIsImageLoaded(true);
@@ -111,7 +112,7 @@ const SVGAndGatsbyImage = ({
         <GatsbyImage
           className={classNames('!absolute opacity-0', gatsbyImageClassName)}
           image={getImage(gatsbyImage)}
-          loading="lazy"
+          loading={loading}
           alt=""
           {...gatsbyImageProps}
         />
@@ -135,6 +136,7 @@ SVGAndGatsbyImage.propTypes = {
   gatsbyImageHeight: PropTypes.number.isRequired,
   imageProps: PropTypes.object,
   gatsbyImageProps: PropTypes.object,
+  loading: PropTypes.oneOf(['eager', 'lazy']),
 };
 
 SVGAndGatsbyImage.defaultProps = {
@@ -144,6 +146,7 @@ SVGAndGatsbyImage.defaultProps = {
   gatsbyImageClassName: null,
   imageProps: null,
   gatsbyImageProps: null,
+  loading: 'lazy',
 };
 
 export default SVGAndGatsbyImage;

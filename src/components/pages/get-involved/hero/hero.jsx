@@ -31,6 +31,7 @@ const Hero = () => {
     gatsbyImageHeight: 391,
     gatsbyImageX: 40,
     gatsbyImageY: 23,
+    loading: 'eager',
   };
 
   return (

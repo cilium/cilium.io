@@ -15,7 +15,7 @@ const description =
 const buttonText = 'Send Story';
 const buttonUrl = '/';
 
-const CiliumStory = (props) => (
+const CiliumStory = () => (
   <section className="mt-10 md:mt-20 lg:mt-28 xl:mt-40">
     <Container className="flex flex-col items-center space-y-10 lg:flex-row lg:space-y-0 lg:space-x-20 xl:space-x-[108px]">
       <div className="lg:flex-1 xl:flex-initial">
@@ -25,7 +25,7 @@ const CiliumStory = (props) => (
           {buttonText}
         </Button>
       </div>
-      <div className="relative mx-auto max-w-[90%] shrink-0 lg:mx-0 lg:max-w-none lg:flex-1 xl:flex-initial">
+      <div className="relative mx-auto max-w-[90%] shrink-0 lg:max-w-none lg:mx-0 lg:flex-1 xl:flex-none">
         <img
           className="absolute bottom-[-8%] right-[-6%] w-[24.5%]"
           src={decor2}
@@ -40,6 +40,7 @@ const CiliumStory = (props) => (
           height={396}
           quality={95}
           loading="lazy"
+          alt=""
         />
         <img
           className="absolute bottom-0 left-[-7%] w-[103%] max-w-none"
@@ -51,9 +52,5 @@ const CiliumStory = (props) => (
     </Container>
   </section>
 );
-
-CiliumStory.propTypes = {};
-
-CiliumStory.defaultProps = {};
 
 export default CiliumStory;
