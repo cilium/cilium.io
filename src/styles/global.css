@@ -23,7 +23,7 @@
   }
 
   :not(pre) > code[class*='language-text'] {
-    @apply border border-gray-3 !px-2 !bg-gray-4 !rounded font-normal;
+    @apply !rounded border border-gray-3 !bg-gray-4 !px-2 font-normal;
   }
 
   .content-style {
@@ -39,10 +39,21 @@
       }
     }
   }
+
+  .highlight-text {
+    mark {
+      @apply bg-additional-4;
+    }
+  }
+
+  [type='search']::-webkit-search-cancel-button {
+    @apply h-3 w-3 cursor-pointer appearance-none bg-contain bg-no-repeat;
+    background-image: url('/images/close.svg');
+  }
 }
 
 .gatsby-highlight {
-  @apply my-6 px-3.5 py-2 bg-gray-4 rounded-lg border border-gray-3;
+  @apply my-6 rounded-lg border border-gray-3 bg-gray-4 px-3.5 py-2;
 
   pre {
     @apply !bg-gray-4;
@@ -55,11 +66,11 @@
   }
 
   .swiper-pagination {
-    @apply absolute bottom-0 left-1/2 -translate-x-1/2 space-x-2 z-10 flex;
+    @apply absolute bottom-0 left-1/2 z-10 flex -translate-x-1/2 space-x-2;
   }
 
   .swiper-pagination-bullet {
-    @apply block w-2.5 h-2.5 rounded-full outline-none bg-gray-3;
+    @apply block h-2.5 w-2.5 rounded-full bg-gray-3 outline-none;
   }
 
   .swiper-pagination-bullet-active {
