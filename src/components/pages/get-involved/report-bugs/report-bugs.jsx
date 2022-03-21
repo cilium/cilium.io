@@ -29,6 +29,7 @@ const ReportBugs = () => (
           width={484}
           height={484}
           alt={title}
+          loading="lazy"
         />
       </div>
     </Container>
