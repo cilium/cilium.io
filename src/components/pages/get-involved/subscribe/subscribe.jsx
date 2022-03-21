@@ -82,11 +82,10 @@ const Subscribe = () => {
           >
             <input
               className={classNames(
-                'remove-autocomplete-styles w-full appearance-none rounded border py-3 pl-6 pr-6 leading-normal shadow-input transition-[border,box-shadow] duration-200 xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44',
-                'hover:border-gray-2 focus:border-transparent focus-visible:outline-none',
-                errors?.email?.message || errorMessage
-                  ? 'ring-2 ring-additional-1 ring-offset-0'
-                  : 'focus:ring-2 focus:ring-primary-1 focus:ring-offset-0'
+                'remove-autocomplete-styles w-full appearance-none rounded border py-3 pl-6 pr-6 leading-normal shadow-input transition-colors duration-200 xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44',
+                'hover:border-gray-2 focus:border-primary-1 focus-visible:outline-none',
+                (errors?.email?.message || errorMessage) &&
+                  'border-additional-1 hover:border-additional-1 focus:border-additional-1'
               )}
               type="email"
               name="email"
