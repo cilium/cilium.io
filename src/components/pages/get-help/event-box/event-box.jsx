@@ -21,7 +21,7 @@ const links = [
   { text: 'Reach out on Slack with questions', url: '/' },
 ];
 const EventBox = () => (
-  <section className="mt-10 md:mt-20 lg:mt-28 xl:mt-40">
+  <section className="mt-16 md:mt-20 lg:mt-28 xl:mt-40">
     <Container className="flex flex-col-reverse items-center lg:grid lg:grid-cols-12 lg:gap-x-8">
       <div className="mt-10 lg:col-span-7 lg:mt-0 lg:justify-self-center xl:justify-self-stretch xl:pl-8">
         <div className="relative mx-auto max-w-[90%] lg:mx-0 lg:max-w-[520px] xl:max-w-[592px]">

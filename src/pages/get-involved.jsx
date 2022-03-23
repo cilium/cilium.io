@@ -76,7 +76,7 @@ const GetInvolved = () => (
       theme="gray"
     />
     <Guidelines />
-    <Cards className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" {...cardItems2} buttonType="link" />
+    <Cards className="mt-16 md:mt-20 lg:mt-28 xl:mt-40" {...cardItems2} buttonType="link" />
     <ReportBugs />
     <HandsOn />
     <Subscribe />
