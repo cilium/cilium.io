@@ -38,7 +38,7 @@ const items = [
 const GetHelp = () => (
   <MainLayout theme="gray" pageMetadata={seo} footerWithoutTopBorder>
     <Hero />
-    <Cards items={items} />
+    <Cards className="pt-4 pb-10 md:pb-20 lg:pt-12 lg:pb-28" theme="gray" items={items} />
     <Faq />
     <Community theme="gray" isTitleCentered />
   </MainLayout>

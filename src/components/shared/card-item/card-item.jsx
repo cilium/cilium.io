@@ -10,30 +10,30 @@ function CardItem({ icon: Icon, name, text, buttons, size }) {
   const has2Buttons = buttons.length === 2;
   const isSmallSize = size === 'sm';
   return (
-    <div className="flex flex-col bg-white border rounded-lg border-gray-3">
-      <Icon className="w-full h-auto" />
+    <div className="flex flex-col rounded-lg border border-gray-3 bg-white">
+      <Icon className="h-auto w-full" />
       <div
         className={classNames(
           isSmallSize ? 'xl:px-8' : 'md:px-8',
-          'flex flex-col items-center grow p-6 pb-8 md:pt-6 md:pb-11'
+          'flex grow flex-col items-center p-6 pb-8 md:pt-6 md:pb-11'
         )}
       >
         <Heading
-          className="!leading-normal text-center flat-breaks lg:flat-none"
+          className="flat-breaks lg:flat-none text-center !leading-normal"
           size={isSmallSize ? 'xs' : 'sm'}
           tag="h3"
           asHTML
         >
           {name}
         </Heading>
-        <p className={classNames(isSmallSize ? '' : 'md:text-lg', 'text-center mt-2.5 mb-5')}>
+        <p className={classNames(isSmallSize ? '' : 'md:text-lg', 'mt-2.5 mb-5 text-center')}>
           {text}
         </p>
         <div
           className={classNames(
             'mt-auto',
             has2Buttons &&
-              'grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 xs:grid-cols-2 grid-cols-1 gap-3',
+              'grid grid-cols-1 gap-3 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2',
             isSmallSize ? 'xl:gap-x-4' : 'lg:gap-x-5'
           )}
         >
@@ -46,8 +46,8 @@ function CardItem({ icon: Icon, name, text, buttons, size }) {
                   className={classNames(
                     isSmallSize
                       ? 'py-2.5 px-3.5'
-                      : 'py-2.5 px-3.5 md:py-3 md:px-5 lg:py-4 lg:px-6 lg:text-lg text-base ',
-                    'cursor-pointer inline-flex font-bold text-white bg-primary-2 justify-center !leading-none whitespace-nowrap rounded transition-colors duration-200 hover:bg-hover-1 disabled:opacity-25 disabled:hover:bg-primary-1 disabled:cursor-auto focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary-2 outline-none'
+                      : 'py-2.5 px-3.5 text-base md:py-3 md:px-5 lg:py-4 lg:px-6 lg:text-lg ',
+                    'inline-flex cursor-pointer justify-center whitespace-nowrap rounded bg-primary-2 font-bold !leading-none text-white outline-none transition-colors duration-200 hover:bg-hover-1 focus-visible:ring focus-visible:ring-primary-2 focus-visible:ring-offset-2 disabled:cursor-auto disabled:opacity-25 disabled:hover:bg-primary-1'
                   )}
                   text={buttonText}
                 />

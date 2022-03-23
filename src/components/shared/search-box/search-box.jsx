@@ -22,7 +22,7 @@ const SearchBox = ({ indices, className }) => {
   const shouldShowResult = !!query?.length && hasFocus;
   return (
     <div
-      className={classNames('relative sm:w-[340px] lg:w-full sm:max-w-[340px] grow', className)}
+      className={classNames('relative grow sm:w-[340px] sm:max-w-[340px] lg:w-full', className)}
       ref={rootRef}
     >
       <InstantSearch
@@ -31,17 +31,17 @@ const SearchBox = ({ indices, className }) => {
         onSearchStateChange={({ query }) => setQuery(query)}
       >
         <SearchInput
-          className="w-full flex justify-end"
+          className="flex w-full justify-end"
           hasFocus={hasFocus}
           onFocus={() => setFocus(true)}
         />
         <SearchResult
           indices={indices}
           className={classNames(
-            'absolute top-full inset-x-0 z-50 w-full transition-[opacity,visibility] duration-200 bg-white border border-t-0 border-gray-2 shadow-tertiary rounded-b',
+            'absolute inset-x-0 top-full z-50 w-full rounded-b border border-t-0 border-gray-2 bg-white shadow-tertiary transition-[opacity,visibility] duration-200',
             shouldShowResult
-              ? 'visible opacity-100 pointer-events-auto'
-              : 'invisible opacity-0 pointer-events-none'
+              ? 'pointer-events-auto visible opacity-100'
+              : 'pointer-events-none invisible opacity-0'
           )}
         />
       </InstantSearch>

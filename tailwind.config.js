@@ -39,6 +39,7 @@ module.exports = {
           1: '#3399FF',
         },
         additional: {
+          1: '#EB4748',
           4: '#D6EBFF',
         },
       },
@@ -47,12 +48,17 @@ module.exports = {
         secondary: '0px 10px 20px rgba(0, 0, 0, 0.09)',
         tertiary: '0px 5px 20px rgba(0, 0, 0, 0.1)',
         card: '0px 2px 10px rgba(20, 26, 31, 0.15)',
+        input: '0px 1px 8px rgba(20, 26, 31, 0.2)',
       },
       borderRadius: {
         large: '20px',
       },
       backgroundImage: {
+        'dark-blue': 'linear-gradient(247.62deg, #272B41 21.37%, #161928 52.43%)',
+        eu: "url('/images/eu.svg')",
+        usa: "url('/images/usa.svg')",
         'search-icon': "url('/images/search.svg')",
+        loader: "url('/images/loader.svg')",
       },
       typography: (theme) => ({
         DEFAULT: {

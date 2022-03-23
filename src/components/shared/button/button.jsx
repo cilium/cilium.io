@@ -15,8 +15,10 @@ const themeClassNames = {
 const sizeClassNames = {
   xs: 'text-sm py-[7px] px-3',
   sm: 'text-base py-2.5 px-3.5',
-  md: 'text-base py-2.5 px-3.5 md:py-3 md:px-5 lg:py-4 lg:px-6 lg:text-lg',
+  md: 'text-base py-3 px-5 lg:py-4 lg:px-6 lg:text-lg',
 };
+
+const loaderStyles = 'bg-loader bg-center bg-no-repeat text-transparent';
 
 const Button = ({
   className: additionalClassName,
@@ -25,12 +27,14 @@ const Button = ({
   theme,
   children,
   disabled,
+  loading,
   ...otherProps
 }) => {
   const className = classNames(
     commonClassNames,
     sizeClassNames[size],
     themeClassNames[theme],
+    loading && loaderStyles,
     additionalClassName
   );
   const Tag = to ? Link : 'button';
@@ -49,6 +53,7 @@ Button.propTypes = {
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
+  loading: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -57,6 +62,7 @@ Button.defaultProps = {
   size: 'md',
   theme: 'primary-2',
   disabled: false,
+  loading: false,
 };
 
 export default Button;

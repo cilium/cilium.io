@@ -19,4 +19,10 @@ const getHelp = {
   description: 'Get help with Cilium through slack, training, support, and FAQs',
 };
 
-export { enterprise, learn, adopters, getHelp };
+const getInvolved = {
+  title: 'Get involved in the Cilium community',
+  description:
+    'Learn how to follow, develop, and contribute to the Cilium community through Slack, Twitter, Youtube, the newsletter, and Github',
+};
+
+export { enterprise, learn, adopters, getHelp, getInvolved };

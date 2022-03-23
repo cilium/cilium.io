@@ -9,10 +9,10 @@ export default connectSearchBox(({ refine, currentRefinement, className, onFocus
     </label>
     <input
       className={classNames(
-        'border appearance-none w-full leading-none text-base border-gray-2 py-2.5 pl-9 pr-0 rounded max-h-9 focus-visible:outline-none bg-search-icon bg-no-repeat bg-[center_left_0.625rem] transition-[width,colors]',
+        'max-h-9 w-full appearance-none rounded border border-gray-2 bg-search-icon bg-[center_left_0.625rem] bg-no-repeat py-2.5 pl-9 pr-0 text-base leading-none transition-[width,colors] focus-visible:outline-none',
         hasFocus
-          ? 'sm:w-full pr-2.5 sm:placeholder:text-gray-2'
-          : 'sm:w-9 sm:placeholder:text-transparent cursor-pointer',
+          ? 'pr-2.5 sm:w-full sm:placeholder:text-gray-2'
+          : 'cursor-pointer sm:w-9 sm:placeholder:text-transparent',
         hasFocus && currentRefinement && 'rounded-b-none'
       )}
       aria-label="Search"
