@@ -1,5 +1,7 @@
 import React from 'react';
 
+import CiliumStory from 'components/pages/get-help/cilium-story';
+import EventBox from 'components/pages/get-help/event-box';
 import Faq from 'components/pages/get-help/faq';
 import Hero from 'components/pages/get-help/hero';
 import Cards from 'components/shared/cards';
@@ -40,7 +42,9 @@ const GetHelp = () => (
     <Hero />
     <Cards className="pt-4 pb-10 md:pb-20 lg:pt-12 lg:pb-28" theme="gray" items={items} />
     <Faq />
-    <Community theme="gray" isTitleCentered />
+    <CiliumStory />
+    <EventBox />
+    <Community className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

@@ -32,7 +32,7 @@ const items = [
 ];
 
 const Faq = () => (
-  <section className="py-10 md:py-20 lg:py-28">
+  <section className="mt-10 md:mt-20 lg:mt-28">
     <Container size="xs">
       <Heading className="text-center" size="lg" tag="h2">
         {title}

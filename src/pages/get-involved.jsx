@@ -1,7 +1,5 @@
 import React from 'react';
 
-import CiliumStory from 'components/pages/get-involved/cilium-story';
-import EventBox from 'components/pages/get-involved/event-box';
 import Guidelines from 'components/pages/get-involved/guidelines';
 import HandsOn from 'components/pages/get-involved/hands-on';
 import Hero from 'components/pages/get-involved/hero';
@@ -78,10 +76,8 @@ const GetInvolved = () => (
       theme="gray"
     />
     <Guidelines />
-    <EventBox />
     <Cards className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" {...cardItems2} buttonType="link" />
     <ReportBugs />
-    <CiliumStory />
     <HandsOn />
     <Subscribe />
   </MainLayout>
