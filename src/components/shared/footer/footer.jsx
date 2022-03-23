@@ -18,13 +18,21 @@ const navigation = [
 
 const Footer = () => (
   <footer className="mt-11 md:mt-20 lg:mt-28 ">
-    <Container className="pt-10 pb-10 border-t lg:pt-14 lg:pb-16 border-gray-3">
-      <div className="grid grid-cols-3 space-y-8 md:space-y-10 lg:grid-cols-4 gap-x-8 lg:space-y-0">
-        <Link to="/">
-          <span className="sr-only">Cilium</span>
-          <Logo className="col-span-1 lg:col-span-1" />
-        </Link>
-        <div className="grid grid-cols-1 col-span-3 gap-x-8 gap-y-10 xs:grid-cols-2 sm:grid-cols-3">
+    <Container className="border-t border-gray-3 pt-10 pb-10 lg:pt-14 lg:pb-16">
+      <div className="grid grid-cols-3 gap-y-10 xs:gap-x-8 lg:grid-cols-12 lg:gap-y-0">
+        <div className="col-span-full flex flex-col items-start xs:col-span-5">
+          <Link to="/">
+            <span className="sr-only">Cilium</span>
+            <Logo className="col-span-1 lg:col-span-1" />
+          </Link>
+          <span className="with-link-primary-light mt-6 text-sm leading-none">
+            Cilium was originally created by{' '}
+            <a className="" href="https://isovalent.com/" target="_blank" rel="noopener noreferrer">
+              Isovalent
+            </a>
+          </span>
+        </div>
+        <div className="col-span-7 grid grid-cols-1 gap-x-8 gap-y-10 xs:grid-cols-2 sm:grid-cols-3">
           {navigation.map((menu, index) => (
             <div className="flex flex-col space-y-6" key={index}>
               {menu.map(({ name, href }) => (
@@ -36,7 +44,7 @@ const Footer = () => (
           ))}
         </div>
       </div>
-      <div className="mt-10 space-y-3 text-sm lg:mt-16 with-link-primary-light text-gray-1">
+      <div className="with-link-primary-light mt-10 space-y-3 text-sm text-gray-1 lg:mt-16">
         <p>Copyright The Cilium Authors. All rights reserved.</p>
         <p>
           The Linux Foundation has registered trademarks and uses trademarks. For a list of
