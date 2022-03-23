@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Discover from 'components/pages/home/discover';
-import Foundation from 'components/pages/home/foundation';
 import Hero from 'components/pages/home/hero';
 import Highlights from 'components/pages/home/highlights';
 import Learn from 'components/pages/home/learn';
@@ -179,7 +178,6 @@ const IndexPage = () => (
     <UserCommunity {...userCommunity2} />
     <FeaturedTalks />
     <Learn />
-    <Foundation />
     <Community withBanner />
     <TwitterCards />
   </MainLayout>
