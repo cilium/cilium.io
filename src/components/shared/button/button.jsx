@@ -52,6 +52,7 @@ Button.propTypes = {
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
+  loading: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -60,6 +61,7 @@ Button.defaultProps = {
   size: 'md',
   theme: 'primary',
   disabled: false,
+  loading: false,
 };
 
 export default Button;
