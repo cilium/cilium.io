@@ -55,7 +55,7 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay }) => {
     <>
       {isOpen && (
         <motion.div
-          className="fixed inset-x-0 top-20 bottom-0 bg-black bg-opacity-50"
+          className="fixed inset-x-0 bottom-0 top-60 bg-black bg-opacity-50"
           initial="from"
           animate={controls}
           variants={overlayVariants}
@@ -66,7 +66,7 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay }) => {
       )}
 
       <motion.nav
-        className="safe-paddings py-safe fixed inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 bg-white shadow-lg lg:hidden"
+        className="safe-paddings py-safe absolute inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 bg-white shadow-lg lg:hidden"
         initial="from"
         animate={controls}
         variants={menuVariants}

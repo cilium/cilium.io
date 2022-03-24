@@ -10,6 +10,7 @@ import algoliaQueries from 'utils/algoria-queries';
 import Container from '../container';
 import GithubStars from '../github-stars';
 import Link from '../link';
+import MobileMenu from '../mobile-menu';
 import SearchBox from '../search-box';
 
 import Burger from './burger';
@@ -24,8 +25,15 @@ const themeClassNames = {
   gray: 'bg-gray-4',
 };
 
-const Header = ({ showSearchBox, isMobileMenuOpen, onBurgerClick, navigation, theme }) => (
-  <>
+const Header = ({
+  showSearchBox,
+  isMobileMenuOpen,
+  onBurgerClick,
+  navigation,
+  theme,
+  handleOverlay,
+}) => (
+  <div className="relative">
     <header
       className={classNames(
         'py-5 transition-[background] duration-200',
@@ -58,12 +66,12 @@ const Header = ({ showSearchBox, isMobileMenuOpen, onBurgerClick, navigation, th
                   <span className="hidden xl:ml-1.5 xl:block">Join Slack</span>
                 </Button>
               </div>
-              <div className="-mr-2 flex items-center lg:hidden">
-                {showSearchBox && (
+              <div className="flex items-center lg:hidden">
+                {showSearchBox && !isMobileMenuOpen && (
                   <SearchBox className="mr-4 hidden sm:flex" indices={searchIndices} />
                 )}
                 <Burger
-                  className="absolute right-0 top-1/2 block -translate-y-1/2 lg:hidden"
+                  className="lg:hidden"
                   isToggled={isMobileMenuOpen}
                   onClick={onBurgerClick}
                 />
@@ -81,8 +89,9 @@ const Header = ({ showSearchBox, isMobileMenuOpen, onBurgerClick, navigation, th
         </nav>
       </Container>
     </header>
+    <MobileMenu navigation={navigation} isOpen={isMobileMenuOpen} handleOverlay={handleOverlay} />
     {showSearchBox && <SearchBox className="mx-4 flex sm:hidden" indices={searchIndices} />}
-  </>
+  </div>
 );
 
 Header.propTypes = {

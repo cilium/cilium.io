@@ -59,13 +59,12 @@ const MainLayout = ({
           showSearchBox={isBlogPage}
           theme={theme}
           isMobileMenuOpen={isMobileMenuOpen}
+          handleOverlay={handleOverlay}
           onBurgerClick={handleHeaderBurgerClick}
         />
       </div>
       <main>{children}</main>
       <Footer withoutTopBorder={footerWithoutTopBorder} />
-
-      <MobileMenu navigation={navigation} isOpen={isMobileMenuOpen} handleOverlay={handleOverlay} />
     </>
   );
 };
