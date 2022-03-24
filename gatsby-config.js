@@ -1,6 +1,7 @@
 // Gatsby has dotenv by default
 // eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
+const queries = require('./src/utils/algoria-queries');
 
 module.exports = {
   siteMetadata: {
@@ -217,12 +218,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-algolia`,
+      resolve: `gatsby-plugin-algolia-search`,
       options: {
         appId: process.env.GATSBY_ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_ADMIN_KEY,
-        // eslint-disable-next-line global-require
-        queries: require('./src/utils/algoria-queries'),
+        indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
+        enablePartialUpdates: true,
+        queries,
+        chunkSize: 10000, // default: 1000
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
