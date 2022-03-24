@@ -104,7 +104,7 @@ const Form = () => {
           <ul className="mt-5 gap-x-8 grid md:grid-cols-[repeat(2,minmax(45%,max-content))] gap-y-4">
             <li>
               <Checkbox
-                id="Reviewing an abstract"
+                id="reviewAbstract"
                 label="Reviewing an abstract"
                 name="reviewAbstract"
                 value="reviewAbstract"
@@ -113,7 +113,7 @@ const Form = () => {
             </li>
             <li>
               <Checkbox
-                id="Writing a blog post"
+                id="writePost"
                 label="Writing a blog post"
                 name="writePost"
                 value="writePost"
@@ -122,7 +122,7 @@ const Form = () => {
             </li>
             <li>
               <Checkbox
-                id="Polish a presentation"
+                id="polishPresentation"
                 label="Polish a presentation"
                 name="polishPresentation"
                 value="polishPresentation"
@@ -131,7 +131,7 @@ const Form = () => {
             </li>
             <li>
               <Checkbox
-                id="Getting a Retweet"
+                id="getRetweet"
                 label="Getting a Retweet"
                 name="getRetweet"
                 value="getRetweet"
@@ -140,7 +140,7 @@ const Form = () => {
             </li>
             <li>
               <Checkbox
-                id="Finding a speaker for an event or livestream"
+                id="findSpeaker"
                 label="Finding a speaker for an event or livestream"
                 name="findSpeaker"
                 value="findSpeaker"
@@ -149,7 +149,7 @@ const Form = () => {
             </li>
             <li>
               <Checkbox
-                id="Submitting to eCHO News"
+                id="echoNews"
                 label="Submitting to eCHO News"
                 name="echoNews"
                 value="echoNews"
@@ -158,7 +158,7 @@ const Form = () => {
             </li>
             <li>
               <Checkbox
-                id="Other"
+                id="other"
                 label="Other"
                 name="other"
                 value="other"
