@@ -104,55 +104,66 @@ const Form = () => {
           <ul className="mt-5 gap-x-8 grid md:grid-cols-[repeat(2,minmax(45%,max-content))] gap-y-4">
             <li>
               <Checkbox
-                type="checkbox"
                 id="Reviewing an abstract"
                 label="Reviewing an abstract"
-                name="Reviewing an abstract"
-                value="Reviewing an abstract"
+                name="reviewAbstract"
+                value="reviewAbstract"
+                {...register('reviewAbstract')}
               />
             </li>
             <li>
               <Checkbox
                 id="Writing a blog post"
                 label="Writing a blog post"
-                name="Writing a blog post"
-                value="Writing a blog post"
+                name="writePost"
+                value="writePost"
+                {...register('writePost')}
               />
             </li>
             <li>
               <Checkbox
                 id="Polish a presentation"
                 label="Polish a presentation"
-                name="Polish a presentation"
-                value="Polish a presentation"
+                name="polishPresentation"
+                value="polishPresentation"
+                {...register('polishPresentation')}
               />
             </li>
             <li>
               <Checkbox
                 id="Getting a Retweet"
                 label="Getting a Retweet"
-                name="Getting a Retweet"
-                value="Getting a Retweet"
+                name="getRetweet"
+                value="getRetweet"
+                {...register('getRetweet')}
               />
             </li>
             <li>
               <Checkbox
                 id="Finding a speaker for an event or livestream"
                 label="Finding a speaker for an event or livestream"
-                name="Finding a speaker for an event or livestream"
-                value="Finding a speaker for an event or livestream"
+                name="findSpeaker"
+                value="findSpeaker"
+                {...register('findSpeaker')}
               />
             </li>
             <li>
               <Checkbox
                 id="Submitting to eCHO News"
                 label="Submitting to eCHO News"
-                name="Submitting to eCHO News"
-                value="Submitting to eCHO News"
+                name="echoNews"
+                value="echoNews"
+                {...register('echoNews')}
               />
             </li>
             <li>
-              <Checkbox id="Other" label="Other" name="Other" value="Other" />
+              <Checkbox
+                id="Other"
+                label="Other"
+                name="other"
+                value="other"
+                {...register('other')}
+              />
             </li>
           </ul>
         </div>
@@ -172,7 +183,7 @@ const Form = () => {
           <SuccessHero />
           <h3 className="font-semibold text-3xl leading-none">Thanks for your story!</h3>
           <span className="mt-3">We will get in touch with you as soon as possible</span>
-          <Link className="mt-8" theme="primary-1" to="/get-involved">
+          <Link className="mt-8" theme="primary" to="/get-involved">
             back to get involved
           </Link>
         </motion.div>

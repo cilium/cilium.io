@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const Checkbox = (props) => {
+const Checkbox = React.forwardRef((props, ref) => {
   const { className, id, label, defaultChecked, ...otherProps } = props;
 
   return (
@@ -12,6 +12,7 @@ const Checkbox = (props) => {
         type="checkbox"
         id={id}
         defaultChecked={defaultChecked}
+        ref={ref}
         {...otherProps}
       />
       <label className="checkbox__label" htmlFor={id}>
@@ -19,7 +20,7 @@ const Checkbox = (props) => {
       </label>
     </div>
   );
-};
+});
 
 Checkbox.defaultProps = {
   className: null,
