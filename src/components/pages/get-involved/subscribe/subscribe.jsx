@@ -42,8 +42,7 @@ const Subscribe = () => {
   const onSubmit = async (values) => {
     setIsLoading(true);
     try {
-      // TODO add actual fetch URL
-      await fetch('/', {
+      await fetch('https://formspree.io/f/xoqrnawo', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -77,6 +76,7 @@ const Subscribe = () => {
               opacity: formState === 'success' ? 0 : 1,
               transition: { duration: APPEAR_AND_EXIT_ANIMATION_DURATION },
             }}
+            method="POST"
             noValidate
             onSubmit={handleSubmit(onSubmit)}
           >
