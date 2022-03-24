@@ -34,11 +34,13 @@ module.exports = {
           3: '#E0E5EB',
           4: '#F6F7F8',
           5: '#D1D7E0',
+          6: '#F6F7F8',
         },
         hover: {
           1: '#3399FF',
         },
         additional: {
+          3: '#00877C',
           4: '#D6EBFF',
         },
       },

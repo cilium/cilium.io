@@ -1,0 +1,21 @@
+@layer components {
+  .checkbox__input {
+    @apply absolute -z-10 opacity-0;
+  }
+
+  .checkbox__input + label {
+    @apply inline-flex items-center select-none;
+  }
+  .checkbox__input + label::before {
+    @apply content-[''] inline-block w-6 h-6 shrink-0 grow-0 mr-2.5 border border-gray-2 bg-gray-6 rounded bg-no-repeat bg-center;
+  }
+
+  .checkbox__label > span {
+    @apply text-sm lg:leading-none;
+  }
+
+  .checkbox__input:checked + label::before {
+    @apply border-additional-3 bg-additional-3;
+    background-image: url('icons/check.inline.svg');
+  }
+}

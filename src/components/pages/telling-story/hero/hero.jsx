@@ -3,6 +3,7 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
+import Form from './form';
 import decor1 from './images/decor-1.svg';
 import decor2 from './images/decor-2.svg';
 
@@ -42,8 +43,8 @@ const Hero = () => (
           aria-hidden
         />
 
-        <div className="relative rounded-xl bg-white h-[695px] w-full shadow-card">
-          {/* TODO: integrate form for HubSpot */}
+        <div className="relative rounded-xl bg-white lg:h-[695px] w-full shadow-card">
+          <Form />
         </div>
       </div>
     </Container>
