@@ -12,10 +12,10 @@ const Field = ({ fieldName, className, tag: Tag, error, ...otherProps }) => (
     {fieldName && <span className="text-sm font-semibold leading-none">{fieldName}</span>}
     <Tag
       className={classNames(
-        'remove-autocomplete-styles w-full appearance-none rounded border border-gray-3 px-3 xl:px-4 py-3 xl:py-5 text-[16px] !leading-none outline-none transition duration-200 focus:border-gray-9',
+        'remove-autocomplete-styles w-full appearance-none rounded border border-gray-3 px-3 xl:px-4 py-3 xl:py-5 text-[16px] !leading-none outline-none transition duration-200 hover:border-gray-2 focus:border-primary-1',
         className,
         {
-          '!border-primary-2': error,
+          'border-additional-1 hover:border-additional-1 focus:border-additional-1': error,
           'h-14 md:h-12': Tag === FIELD_TAGS.INPUT,
           'py-5': Tag === FIELD_TAGS.TEXTAREA,
           'mt-2': fieldName,
@@ -24,9 +24,7 @@ const Field = ({ fieldName, className, tag: Tag, error, ...otherProps }) => (
       {...otherProps}
     />
     {error && (
-      <span className="text-xs absolute -bottom-1 left-0 translate-y-full leading-none text-primary-2 sm:text-[10px]">
-        {error}
-      </span>
+      <span className="text-xs absolute top-[calc(100%+0.1rem)] text-additional-1">{error}</span>
     )}
   </div>
 );

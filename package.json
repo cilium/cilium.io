@@ -29,6 +29,7 @@
     "@tailwindcss/typography": "^0.5.0",
     "algoliasearch": "^4.12.1",
     "classnames": "^2.3.1",
+    "framer-motion": "^6.2.8",
     "gatsby": "^4.5.4",
     "gatsby-plugin-algolia": "^0.26.0",
     "gatsby-plugin-feed": "^4.5.0",
@@ -49,6 +50,7 @@
     "react-calendly": "^2.2.2",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.28.1",
     "react-instantsearch-dom": "^6.20.0",
     "react-share": "^4.4.0"
   },

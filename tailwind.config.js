@@ -40,6 +40,7 @@ module.exports = {
           1: '#3399FF',
         },
         additional: {
+          1: '#EB4748',
           3: '#00877C',
           4: '#D6EBFF',
         },
