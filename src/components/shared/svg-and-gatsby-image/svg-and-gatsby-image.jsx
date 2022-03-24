@@ -23,7 +23,7 @@ const SVGAndGatsbyImage = ({
   loading,
 }) => {
   const canvasRef = useRef();
-  const gastbyImageRef = useRef();
+  const gatsbyImageRef = useRef();
 
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [isCanvasImageLoaded, setIsCanvasImageLoaded] = useState(false);
@@ -34,7 +34,7 @@ const SVGAndGatsbyImage = ({
 
   const handleGatsbyImageLoad = () => {
     const canvas = canvasRef.current;
-    const gatsbyImage = gastbyImageRef.current.querySelector('picture img');
+    const gatsbyImage = gatsbyImageRef.current.querySelector('picture img');
     canvas.width = width * RATIO;
     canvas.height = height * RATIO;
 
@@ -65,7 +65,7 @@ const SVGAndGatsbyImage = ({
 
   useEffect(() => {
     const verificationInterval = setInterval(() => {
-      const img = gastbyImageRef.current.querySelector('picture img');
+      const img = gatsbyImageRef.current.querySelector('picture img');
       // hack solution that gurantees triggering on image load, todo check it more
       if (img && img.currentSrc) {
         clearInterval(verificationInterval);
@@ -85,8 +85,8 @@ const SVGAndGatsbyImage = ({
   return (
     <div
       className={classNames(
-        'pointer-events-none relative opacity-0 transition-opacity duration-500 ease-linear',
-        isImageLoaded && isCanvasImageLoaded && 'opacity-100',
+        'pointer-events-none relative transition-opacity duration-500 ease-linear',
+        isImageLoaded && isCanvasImageLoaded ? 'opacity-100' : 'opacity-0',
         className
       )}
       aria-hidden
@@ -108,7 +108,7 @@ const SVGAndGatsbyImage = ({
         className={classNames('absolute top-0 left-0 h-full w-full', canvasClassName)}
         ref={canvasRef}
       />
-      <div className="absolute top-0 h-full w-full" ref={gastbyImageRef}>
+      <div className="absolute top-0 h-full w-full" ref={gatsbyImageRef}>
         <GatsbyImage
           className={classNames('!absolute opacity-0', gatsbyImageClassName)}
           image={getImage(gatsbyImage)}
