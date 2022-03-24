@@ -225,6 +225,7 @@ module.exports = {
         indexName: process.env.GATSBY_ALGOLIA_INDEX_NAME,
         enablePartialUpdates: true,
         queries,
+        matchFields: ['title', 'excerpt'],
         chunkSize: 10000, // default: 1000
       },
     },
