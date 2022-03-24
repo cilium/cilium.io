@@ -1,6 +1,8 @@
+import { yupResolver } from '@hookform/resolvers/yup';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import * as yup from 'yup';
 
 import Button from 'components/shared/button';
 import Checkbox from 'components/shared/checkbox';
@@ -11,9 +13,14 @@ import SuccessHero from './images/success.svg';
 
 const APPEAR_AND_EXIT_ANIMATION_DURATION = 0.5;
 
-const emailRegexp =
-  // eslint-disable-next-line no-control-regex, no-useless-escape
-  /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i;
+const validationSchema = yup.object().shape({
+  firstName: yup.string().trim().required('First name is a required field'),
+  email: yup
+    .string()
+    .trim()
+    .email('Please provide a valid email')
+    .required('Email is a required field'),
+});
 
 const Form = () => {
   const {
@@ -21,10 +28,9 @@ const Form = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({ resolver: yupResolver(validationSchema) });
   const [formState, setFormState] = useState('default');
   const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState(null);
 
   const onSubmit = async (values) => {
     setIsLoading(true);
@@ -38,7 +44,6 @@ const Form = () => {
           ...values,
         }),
       });
-      setErrorMessage(null);
       setFormState('success');
       setTimeout(() => {
         setFormState('default');
@@ -47,7 +52,6 @@ const Form = () => {
       reset();
     } catch (error) {
       setFormState('error');
-      setErrorMessage('Something went wrong. Please reload the page and try again');
     }
   };
 
@@ -77,13 +81,7 @@ const Form = () => {
             name="email"
             error={errors?.email?.message}
             autoComplete="email"
-            {...register('email', {
-              required: 'Email address is required field',
-              pattern: {
-                value: emailRegexp,
-                message: 'Please enter a valid email address',
-              },
-            })}
+            {...register('email')}
           />
         </div>
         <div className="flex lg:space-x-8 lg:space-y-0 lg:flex-row justify-between flex-col space-y-6">
@@ -91,13 +89,13 @@ const Form = () => {
             fieldName="Cilium Slack Username"
             type="text"
             name="ciliumSlackUsername"
-            {...register('username')}
+            {...register('ciliumSlackUsername')}
           />
           <Field
             fieldName="How are you using Cilium?"
             type="text"
             name="howAreYouUsingCilium"
-            {...register('usingCilium')}
+            {...register('howAreYouUsingCilium')}
           />
         </div>
         <Field tag={FIELD_TAGS.TEXTAREA} fieldName="Message" {...register('message')} />

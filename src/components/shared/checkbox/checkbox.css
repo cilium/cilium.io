@@ -14,6 +14,10 @@
     @apply text-sm lg:leading-none;
   }
 
+  .checkbox__input:focus + label::before {
+    @apply border-primary-1;
+  }
+
   .checkbox__input:checked + label::before {
     @apply border-additional-3 bg-additional-3;
     background-image: url('icons/check.inline.svg');

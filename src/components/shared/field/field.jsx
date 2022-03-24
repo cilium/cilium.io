@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 export const FIELD_TAGS = {
   INPUT: 'input',
   TEXTAREA: 'textarea',
 };
 
-const Field = ({ fieldName, className, tag: Tag, error, ...otherProps }) => (
+const Field = forwardRef(({ fieldName, className, tag: Tag, error, ...otherProps }, ref) => (
   <div className="flex flex-col w-full">
     {fieldName && <span className="text-sm font-semibold leading-none">{fieldName}</span>}
     <Tag
@@ -21,13 +21,14 @@ const Field = ({ fieldName, className, tag: Tag, error, ...otherProps }) => (
           'mt-2': fieldName,
         }
       )}
+      ref={ref}
       {...otherProps}
     />
     {error && (
       <span className="text-xs absolute top-[calc(100%+0.1rem)] text-additional-1">{error}</span>
     )}
   </div>
-);
+));
 
 Field.propTypes = {
   fieldName: PropTypes.string,

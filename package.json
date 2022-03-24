@@ -22,6 +22,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",
+    "@hookform/resolvers": "^2.8.8",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "@svgr/webpack": "^6.2.0",
@@ -52,7 +53,8 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.28.1",
     "react-instantsearch-dom": "^6.20.0",
-    "react-share": "^4.4.0"
+    "react-share": "^4.4.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
