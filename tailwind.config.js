@@ -56,6 +56,7 @@ module.exports = {
       },
       backgroundImage: {
         'search-icon': "url('/images/search.svg')",
+        loader: "url('/images/loader.svg')",
       },
       typography: (theme) => ({
         DEFAULT: {
