@@ -16,6 +16,7 @@ const menuVariants = {
   from: {
     opacity: 0,
     translateY: -20,
+    pointerEvents: 'none',
     transitionEnd: {
       zIndex: -1,
     },
@@ -24,6 +25,7 @@ const menuVariants = {
     zIndex: 40,
     opacity: 1,
     translateY: 0,
+    pointerEvents: 'auto',
   },
 };
 
