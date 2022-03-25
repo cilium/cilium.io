@@ -16,7 +16,7 @@ import SuccessHero from './images/success.svg';
 const APPEAR_AND_EXIT_ANIMATION_DURATION = 0.5;
 
 const validationSchema = yup.object().shape({
-  firstName: yup.string().trim().required('First name is a required field'),
+  firstName: yup.string().trim().required('Name is a required field'),
   email: yup
     .string()
     .trim()
@@ -74,6 +74,7 @@ const Form = ({ formClassName }) => {
             fieldName="Name"
             type="text"
             name="firstName"
+            error={errors?.firstName?.message}
             autoComplete="given-name"
             {...register('firstName')}
           />
