@@ -21,7 +21,7 @@ const HeroWithImage = ({
         <Heading size="lg" tag="h1">
           {title}
         </Heading>
-        <p className="mt-5 text-lg">{description}</p>
+        <p className="mt-5 text-lg space-y-5" dangerouslySetInnerHTML={{ __html: description }} />
       </div>
       <div
         className={classNames(
@@ -29,7 +29,14 @@ const HeroWithImage = ({
           imgWrapperClassName
         )}
       >
-        <img className={decor2.className} src={decor2.src} alt="" aria-hidden />
+        {decor1 && (
+          <img
+            className={classNames(decor2.className, 'absolute max-w-none')}
+            src={decor2.src}
+            alt=""
+            aria-hidden
+          />
+        )}
         <GatsbyImage
           className="rounded-xl"
           imgClassName="rounded-xl"
@@ -37,7 +44,14 @@ const HeroWithImage = ({
           loading="eager"
           alt={title}
         />
-        <img className={decor1.className} src={decor1.src} alt="" aria-hidden />
+        {decor2 && (
+          <img
+            className={classNames(decor1.className, 'absolute max-w-none')}
+            src={decor1.src}
+            alt=""
+            aria-hidden
+          />
+        )}
       </div>
     </Container>
   </section>
