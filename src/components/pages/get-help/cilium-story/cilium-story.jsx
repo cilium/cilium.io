@@ -1,5 +1,4 @@
 import { StaticImage } from 'gatsby-plugin-image';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from 'components/shared/button';

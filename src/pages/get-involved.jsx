@@ -1,11 +1,14 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
 import Guidelines from 'components/pages/get-involved/guidelines';
 import HandsOn from 'components/pages/get-involved/hands-on';
-import Hero from 'components/pages/get-involved/hero';
 import ReportBugs from 'components/pages/get-involved/report-bugs';
 import Subscribe from 'components/pages/get-involved/subscribe';
 import Cards from 'components/shared/cards';
+import HeroWithImage from 'components/shared/hero-with-image';
+import decor1 from 'images/pages/get-involved/hero/decor-1.svg';
+import decor2 from 'images/pages/get-involved/hero/decor-2.svg';
 import MainLayout from 'layouts/main';
 import { getInvolved as seo } from 'utils/seo-metadata';
 
@@ -66,21 +69,50 @@ const cardItems2 = {
   ],
 };
 
-const GetInvolved = () => (
-  <MainLayout theme="gray" pageMetadata={seo} footerWithoutTopBorder>
-    <Hero />
-    <Cards
-      className="pt-12 pb-10 md:pb-20 md:pt-16 lg:pt-[72px] lg:pb-28"
-      items={cardItems1}
-      buttonType="link"
-      theme="gray"
-    />
-    <Guidelines />
-    <Cards className="mt-16 md:mt-20 lg:mt-28 xl:mt-40" {...cardItems2} buttonType="link" />
-    <ReportBugs />
-    <HandsOn />
-    <Subscribe />
-  </MainLayout>
-);
+const GetInvolved = () => {
+  const { heroImage } = useStaticQuery(graphql`
+    query {
+      heroImage: file(relativePath: { eq: "pages/get-involved/hero/hero-image.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 519, quality: 90, formats: [PNG])
+        }
+      }
+    }
+  `);
+  const hero = {
+    title: 'Join the Cilium community',
+    description:
+      "Cilium is an open source project that anyone in the community can use, improve, and enjoy. We'd love you to join us! Here's a few ways to find out what's happening and get involved.",
+    heroImage,
+    decor1: {
+      src: decor1,
+      className: 'absolute top-[5.3%] left-[32.5%] w-[27%] max-w-none',
+    },
+    decor2: {
+      src: decor2,
+      className: 'absolute top-[-6%] left-[-7.3%] w-[113.7%] max-w-none',
+    },
+  };
+  return (
+    <MainLayout theme="gray" pageMetadata={seo} footerWithoutTopBorder>
+      <HeroWithImage
+        className="pb-10 pt-5 md:pt-10 lg:py-16"
+        imgWrapperClassName="mr-0 xl:mr-8"
+        {...hero}
+      />
+      <Cards
+        className="pt-4 pb-10 md:pb-20 md:pt-16 lg:pt-[72px] lg:pb-28"
+        items={cardItems1}
+        buttonType="link"
+        theme="gray"
+      />
+      <Guidelines />
+      <Cards className="mt-16 md:mt-20 lg:mt-28 xl:mt-40" {...cardItems2} buttonType="link" />
+      <ReportBugs />
+      <HandsOn />
+      <Subscribe />
+    </MainLayout>
+  );
+};
 
 export default GetInvolved;
