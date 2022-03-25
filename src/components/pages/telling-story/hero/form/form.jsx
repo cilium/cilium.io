@@ -69,7 +69,6 @@ const Form = ({ formClassName }) => {
           className="space-y-6"
           animate={{
             display: formState === FORM_STATES.SUCCESS ? 'none' : 'block',
-            height: formState === FORM_STATES.SUCCESS ? '0' : '100%',
             transition: { duration: APPEAR_AND_EXIT_ANIMATION_DURATION },
           }}
           method="POST"
