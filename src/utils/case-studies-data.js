@@ -185,7 +185,7 @@ export default {
   },
   sportradar: {
     iconName: 'sportradar',
-    text: '<b<Sportradar</b> is using Cilium as their main CNI plugin in AWS (using kops)',
+    text: '<b>Sportradar</b> is using Cilium as their main CNI plugin in AWS (using kops)',
   },
   utmost: {
     iconName: 'utmost',

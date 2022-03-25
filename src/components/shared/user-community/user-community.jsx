@@ -60,12 +60,26 @@ const icons = {
   yahoo: YahooLogo,
 };
 
-const UserCommunity = ({ className, title, items, isTitleCentered, titleTheme }) => (
-  <section className={className}>
+const themeClassNames = {
+  white: {
+    wrapper: 'bg-white',
+    card: 'bg-gray-4 border-gray-3 border',
+  },
+  gray: {
+    wrapper: 'bg-gray-4',
+    card: 'bg-white shadow-card',
+  },
+};
+
+const UserCommunity = ({ className, title, items, isTitleCentered, titleTheme, theme }) => (
+  <section className={classNames(className, themeClassNames[theme].wrapper)}>
     <Container>
       {title && (
         <Heading
-          className={classNames(isTitleCentered && 'text-center')}
+          className={classNames(
+            isTitleCentered && 'text-center mb-6',
+            titleTheme === 'gray' ? ' lg:mb-8' : 'md:mb-10 lg:mb-14'
+          )}
           tag="h3"
           theme={titleTheme}
         >
@@ -74,15 +88,17 @@ const UserCommunity = ({ className, title, items, isTitleCentered, titleTheme })
       )}
       <div
         className={classNames(
-          'grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-4 xl:gap-8 auto-rows-fr',
-          titleTheme === 'gray' ? ' mt-6 lg:mt-8' : 'mt-6 md:mt-10 lg:mt-14'
+          'grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-4 xl:gap-8 auto-rows-fr'
         )}
       >
         {items.map(({ iconName, text, links }, index) => {
           const Icon = icons[iconName];
           return (
             <div
-              className="flex flex-col h-full p-6 border rounded-lg xl:p-8 bg-gray-4 border-gray-3"
+              className={classNames(
+                'flex flex-col h-full p-6 rounded-lg xl:p-8',
+                themeClassNames[theme].card
+              )}
               key={index}
             >
               <Icon className="h-12" />
@@ -132,6 +148,7 @@ UserCommunity.propTypes = {
       ),
     })
   ).isRequired,
+  theme: PropTypes.oneOf(Object.keys(themeClassNames)),
 };
 
 UserCommunity.defaultProps = {
@@ -139,6 +156,7 @@ UserCommunity.defaultProps = {
   title: null,
   titleTheme: null,
   isTitleCentered: false,
+  theme: 'white',
 };
 
 export default UserCommunity;

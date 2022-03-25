@@ -5,7 +5,7 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
 const HeroWithoutImage = ({ title, description }) => (
-  <section className="mt-5 md:mt-10 lg:mt-20">
+  <section className="pt-5 md:pt-10 lg:pt-20 bg-gray-4">
     <Container className="text-center" size="xs">
       <Heading tag="h1">{title}</Heading>
       <p

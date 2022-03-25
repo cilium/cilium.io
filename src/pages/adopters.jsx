@@ -41,9 +41,7 @@ const hero = {
 };
 
 const userCommunity1 = {
-  title: 'Real world case studies',
-  titleTheme: 'gray',
-  isTitleCentered: true,
+  theme: 'gray',
   items: [
     wildLife,
     adobe,
@@ -63,6 +61,7 @@ const userCommunity1 = {
 const userCommunity2 = {
   title: 'Cilium is everywhere',
   isTitleCentered: true,
+  theme: 'gray',
   items: [
     canonical,
     civo,
@@ -104,10 +103,13 @@ const logos2 = {
 const Adopters = () => (
   <MainLayout pageMetadata={seo}>
     <HeroWithoutImage {...hero} />
-    <UserCommunity className="mt-10 md:mt-20 lg:mt-24" {...userCommunity1} />
+    <UserCommunity className="pt-6 md:pt-10 lg:pt-14 lg:pb-32 md:pb-20 pb-10" {...userCommunity1} />
     <Logos {...logos1} />
     <Logos {...logos2} />
-    <UserCommunity className="mt-10 md:mt-20 lg:mt-32" {...userCommunity2} />
+    <UserCommunity
+      className="py-10 md:py-20 lg:py-28 mt-10 md:mt-20 lg:mt-28"
+      {...userCommunity2}
+    />
   </MainLayout>
 );
 

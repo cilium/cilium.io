@@ -50,7 +50,7 @@ const Logos = ({ title, items, spaceXSize }) => (
           return (
             <Logo
               className={classNames(
-                'w-auto mt-5 md:mt-8 lg:mt-11 h-12 md:h-14 lg:h-16',
+                'w-auto mt-5 md:mt-8 lg:mt-11 h-12 md:h-14 lg:h-16 text-gray-1',
                 spaceXClassNames[spaceXSize]
               )}
               key={index}
