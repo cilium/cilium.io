@@ -161,7 +161,13 @@ const Form = ({ formClassName }) => {
             <Checkbox id="other" label="Other" name="other" value="other" {...register('other')} />
           </div>
         </div>
-        <Button size="md" theme="primary" type="submit" loading={isLoading}>
+        <Button
+          className="w-full md:w-auto"
+          size="md"
+          theme="primary"
+          type="submit"
+          loading={isLoading}
+        >
           Send Story
         </Button>
       </motion.form>
