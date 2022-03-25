@@ -15,8 +15,8 @@ const descriptionParagraphSecond =
 
 const Hero = () => (
   <section className="bg-gray-4 py-10 lg:pt-16 pb-44 overflow-x-hidden">
-    <Container className="grid grid-cols-12 gap-y-14 sm:gap-y-20 md:gap-y-24 lg:gap-y-0 lg:gap-x-8 lg:items-center xl:items-stretch">
-      <div className="col-span-full lg:col-span-5 xl:col-span-4 xl:pt-10">
+    <Container className="grid grid-cols-12 gap-y-14 sm:gap-y-20 md:gap-y-24 lg:gap-y-0 lg:gap-x-8 lg:items-stretch">
+      <div className="col-span-full lg:col-span-5 xl:col-span-4 lg:pt-10">
         <Heading size="lg" tag="h1">
           {title}
         </Heading>
