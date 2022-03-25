@@ -1,5 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -64,134 +64,144 @@ const Form = ({ formClassName }) => {
 
   return (
     <section className={formClassName}>
-      <motion.form
-        className="space-y-6"
-        animate={{
-          display: formState === FORM_STATES.SUCCESS ? 'none' : 'block',
-          transition: { duration: APPEAR_AND_EXIT_ANIMATION_DURATION },
-        }}
-        method="POST"
-        noValidate
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <div className="relative flex lg:space-x-8 lg:space-y-0 lg:flex-row justify-between flex-col space-y-6">
-          <Field
-            fieldName="Name"
-            type="text"
-            name="firstName"
-            error={errors?.firstName?.message}
-            autoComplete="given-name"
-            {...register('firstName')}
-          />
-          <Field
-            fieldName="Email"
-            type="email"
-            name="email"
-            error={errors?.email?.message}
-            autoComplete="email"
-            {...register('email')}
-          />
-        </div>
-        <div className="flex lg:space-x-8 lg:space-y-0 lg:flex-row justify-between flex-col space-y-6">
-          <Field
-            fieldName="Cilium Slack Username"
-            type="text"
-            name="ciliumSlackUsername"
-            {...register('ciliumSlackUsername')}
-          />
-          <Field
-            fieldName="How are you using Cilium?"
-            type="text"
-            name="howAreYouUsingCilium"
-            {...register('howAreYouUsingCilium')}
-          />
-        </div>
-        <Field tag={FIELD_TAGS.TEXTAREA} fieldName="Message" {...register('message')} />
-        <div className="border-b border-gray-4 pb-4">
-          <span className="text-sm font-semibold">What do you need help with?</span>
-          <div className="mt-5 gap-x-8 grid md:grid-cols-[repeat(2,minmax(45%,max-content))] gap-y-4">
-            <Checkbox
-              id="reviewAbstract"
-              label="Reviewing an abstract"
-              name="reviewAbstract"
-              value="reviewAbstract"
-              {...register('reviewAbstract')}
-            />
-
-            <Checkbox
-              id="writePost"
-              label="Writing a blog post"
-              name="writePost"
-              value="writePost"
-              {...register('writePost')}
-            />
-
-            <Checkbox
-              id="polishPresentation"
-              label="Polish a presentation"
-              name="polishPresentation"
-              value="polishPresentation"
-              {...register('polishPresentation')}
-            />
-
-            <Checkbox
-              id="getRetweet"
-              label="Getting a Retweet"
-              name="getRetweet"
-              value="getRetweet"
-              {...register('getRetweet')}
-            />
-
-            <Checkbox
-              id="findSpeaker"
-              label="Finding a speaker for an event or livestream"
-              name="findSpeaker"
-              value="findSpeaker"
-              {...register('findSpeaker')}
-            />
-
-            <Checkbox
-              id="echoNews"
-              label="Submitting to eCHO News"
-              name="echoNews"
-              value="echoNews"
-              {...register('echoNews')}
-            />
-
-            <Checkbox id="other" label="Other" name="other" value="other" {...register('other')} />
-          </div>
-        </div>
-        <Button
-          className="w-full md:w-auto"
-          size="md"
-          theme="primary"
-          type="submit"
-          loading={isLoading}
-        >
-          Send Story
-        </Button>
-      </motion.form>
-      {formState === FORM_STATES.SUCCESS && (
-        <motion.div
-          className="flex flex-col items-center justify-center"
-          initial={{ opacity: 0 }}
+      <AnimatePresence>
+        <motion.form
+          className="space-y-6"
           animate={{
-            opacity: 1,
-            transition: { delay: APPEAR_AND_EXIT_ANIMATION_DURATION },
+            display: formState === FORM_STATES.SUCCESS ? 'none' : 'block',
+            transition: { duration: APPEAR_AND_EXIT_ANIMATION_DURATION },
           }}
+          method="POST"
+          noValidate
+          onSubmit={handleSubmit(onSubmit)}
         >
-          <img src={SuccessHero} alt="" loading="eager" />
-          <h3 className="font-semibold text-xl lg:text-3xl leading-none text-center">
-            Thanks for your story!
-          </h3>
-          <span className="mt-3 text-sm lg:text-base text-center">
-            We will get in touch with you as soon as possible
-          </span>
-          <Link className="mt-8 mb-12" type="text" theme="primary" to="/get-involved">
-            back to get involved
-          </Link>
-        </motion.div>
-      )}
+          <div className="relative flex lg:space-x-8 lg:space-y-0 lg:flex-row justify-between flex-col space-y-6">
+            <Field
+              fieldName="Name"
+              type="text"
+              name="firstName"
+              error={errors?.firstName?.message}
+              autoComplete="given-name"
+              {...register('firstName')}
+            />
+            <Field
+              fieldName="Email"
+              type="email"
+              name="email"
+              error={errors?.email?.message}
+              autoComplete="email"
+              {...register('email')}
+            />
+          </div>
+          <div className="flex lg:space-x-8 lg:space-y-0 lg:flex-row justify-between flex-col space-y-6">
+            <Field
+              fieldName="Cilium Slack Username"
+              type="text"
+              name="ciliumSlackUsername"
+              {...register('ciliumSlackUsername')}
+            />
+            <Field
+              fieldName="How are you using Cilium?"
+              type="text"
+              name="howAreYouUsingCilium"
+              {...register('howAreYouUsingCilium')}
+            />
+          </div>
+          <Field tag={FIELD_TAGS.TEXTAREA} fieldName="Message" {...register('message')} />
+          <div className="border-b border-gray-4 pb-4">
+            <span className="text-sm font-semibold">What do you need help with?</span>
+            <div className="mt-5 gap-x-8 grid md:grid-cols-[repeat(2,minmax(45%,max-content))] gap-y-4">
+              <Checkbox
+                id="reviewAbstract"
+                label="Reviewing an abstract"
+                name="reviewAbstract"
+                value="reviewAbstract"
+                {...register('reviewAbstract')}
+              />
+
+              <Checkbox
+                id="writePost"
+                label="Writing a blog post"
+                name="writePost"
+                value="writePost"
+                {...register('writePost')}
+              />
+
+              <Checkbox
+                id="polishPresentation"
+                label="Polish a presentation"
+                name="polishPresentation"
+                value="polishPresentation"
+                {...register('polishPresentation')}
+              />
+
+              <Checkbox
+                id="getRetweet"
+                label="Getting a Retweet"
+                name="getRetweet"
+                value="getRetweet"
+                {...register('getRetweet')}
+              />
+
+              <Checkbox
+                id="findSpeaker"
+                label="Finding a speaker for an event or livestream"
+                name="findSpeaker"
+                value="findSpeaker"
+                {...register('findSpeaker')}
+              />
+
+              <Checkbox
+                id="echoNews"
+                label="Submitting to eCHO News"
+                name="echoNews"
+                value="echoNews"
+                {...register('echoNews')}
+              />
+
+              <Checkbox
+                id="other"
+                label="Other"
+                name="other"
+                value="other"
+                {...register('other')}
+              />
+            </div>
+          </div>
+          <Button
+            className="w-full md:w-auto"
+            size="md"
+            theme="primary"
+            type="submit"
+            loading={isLoading}
+          >
+            Send Story
+          </Button>
+        </motion.form>
+      </AnimatePresence>
+      <AnimatePresence>
+        {formState === FORM_STATES.SUCCESS && (
+          <motion.div
+            className="flex flex-col items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { delay: APPEAR_AND_EXIT_ANIMATION_DURATION },
+            }}
+          >
+            <img src={SuccessHero} alt="" loading="eager" />
+            <h3 className="font-semibold text-xl lg:text-3xl leading-none text-center">
+              Thanks for your story!
+            </h3>
+            <span className="mt-3 text-sm lg:text-base text-center">
+              We will get in touch with you as soon as possible
+            </span>
+            <Link className="mt-8 mb-12" type="text" theme="primary" to="/get-involved">
+              back to get involved
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };
