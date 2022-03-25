@@ -138,7 +138,11 @@ const UserCommunity = ({
         })}
       </div>
       {buttonText && buttonUrl && (
-        <Button theme="primary-1" className="mx-auto mt-6 md:mt-10 lg:mt-14" to={buttonUrl}>
+        <Button
+          className="mx-auto w-full xs:w-auto mt-6 md:mt-10 lg:mt-14"
+          theme="primary-1"
+          to={buttonUrl}
+        >
           {buttonText}
         </Button>
       )}
