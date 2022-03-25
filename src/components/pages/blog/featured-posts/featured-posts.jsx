@@ -10,11 +10,14 @@ const FeaturedPosts = ({ featuredStory }) => (
   <section className="mt-6 md:mt-10 lg:mt-16">
     <Container className="grid grid-cols-12 gap-y-10 md:gap-y-16 md:gap-x-8">
       <FeaturedStory
-        className="flex flex-col col-span-full"
+        className="col-span-full flex flex-col"
         {...featuredStory.frontmatter}
         {...featuredStory.fields}
       />
-      <PopularPosts className="flex flex-col col-span-full" titleTheme="gray" />
+      <PopularPosts
+        className="col-span-full -mx-4 flex flex-col md:-mx-6 lg:-mx-10"
+        titleTheme="gray"
+      />
     </Container>
   </section>
 );
