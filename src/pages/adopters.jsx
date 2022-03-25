@@ -101,7 +101,7 @@ const logos2 = {
 };
 
 const Adopters = () => (
-  <MainLayout pageMetadata={seo}>
+  <MainLayout pageMetadata={seo} theme="gray" footerWithoutTopBorder>
     <HeroWithoutImage {...hero} />
     <UserCommunity className="pt-6 md:pt-10 lg:pt-14 lg:pb-32 md:pb-20 pb-10" {...userCommunity1} />
     <Logos {...logos1} />
