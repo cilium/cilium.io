@@ -66,13 +66,13 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay }) => {
       )}
 
       <motion.nav
-        className="safe-paddings py-safe absolute inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 bg-white shadow-lg lg:hidden"
+        className="safe-paddings py-safe absolute inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 bg-white shadow-lg xl:hidden"
         initial="from"
         animate={controls}
         variants={menuVariants}
         transition={{ duration: ANIMATION_DURATION }}
       >
-        <ul className="flex flex-grow flex-col divide-y divide-gray-3 px-4 md:px-6">
+        <ul className="flex flex-grow flex-col divide-y divide-gray-3 px-4 md:px-6 lg:px-10">
           {navigation.map((item, index) => (
             <MenuItem {...item} key={index} />
           ))}

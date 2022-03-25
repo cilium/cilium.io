@@ -46,16 +46,16 @@ const Header = ({
           className="relative flex w-full items-center justify-between space-x-6 sm:h-10"
           aria-label="Global"
         >
-          <div className="flex w-full shrink-0 items-center justify-between lg:w-auto">
-            <div className="flex w-full items-center justify-between lg:w-auto">
-              <div className="flex items-center">
-                <Link to="/">
-                  <span className="sr-only">Cilium</span>
-                  <Logo />
-                </Link>
-                <GithubStars className="ml-4 hidden bg-white lg:inline-block xl:ml-8" />
+          <div className="flex w-full shrink-0 items-center justify-between xl:w-auto">
+            <div className="flex items-center">
+              <Link to="/">
+                <span className="sr-only">Cilium</span>
+                <Logo />
+              </Link>
+              <div className="hidden items-center xl:inline-flex">
+                <GithubStars className="ml-4  bg-white  xl:ml-8" />
                 <Button
-                  className="ml-4 hidden items-center bg-white leading-none lg:inline-flex"
+                  className="ml-4 inline-flex items-center bg-white leading-none"
                   to="https://cilium.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -66,19 +66,15 @@ const Header = ({
                   <span className="hidden xl:ml-1.5 xl:block">Join Slack</span>
                 </Button>
               </div>
-              <div className="flex items-center lg:hidden">
-                {showSearchBox && !isMobileMenuOpen && (
-                  <SearchBox className="mr-4 hidden sm:flex" indices={searchIndices} />
-                )}
-                <Burger
-                  className="lg:hidden"
-                  isToggled={isMobileMenuOpen}
-                  onClick={onBurgerClick}
-                />
-              </div>
+            </div>
+            <div className="flex items-center xl:hidden">
+              {showSearchBox && !isMobileMenuOpen && (
+                <SearchBox className="mr-4 sm:flex" indices={searchIndices} />
+              )}
+              <Burger isToggled={isMobileMenuOpen} onClick={onBurgerClick} />
             </div>
           </div>
-          <div className="hidden w-full space-x-5 lg:flex lg:items-center lg:justify-end xl:space-x-7">
+          <div className="hidden w-full space-x-5 lg:items-center lg:justify-end xl:flex xl:space-x-7">
             {showSearchBox && <SearchBox indices={searchIndices} />}
             <ul className="flex items-center lg:space-x-6 xl:space-x-8 2xl:space-x-11">
               {navigation.map((item, index) => (
@@ -95,6 +91,7 @@ const Header = ({
 );
 
 Header.propTypes = {
+  handleOverlay: PropTypes.func.isRequired,
   showSearchBox: PropTypes.bool,
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
   isMobileMenuOpen: PropTypes.bool.isRequired,
