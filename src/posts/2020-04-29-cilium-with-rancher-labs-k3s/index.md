@@ -62,7 +62,7 @@ which can help solve problems related to compliance and regulatory concerns.
 - **Helm:** [Helm](https://helm.sh) version 3 is required to install Cilium and
   Hubble. To determine if you have Helm version 3 you can run the following
   command at a terminal prompt: `helm version`
-- **Git:** Code examples are available via [GitHub](https://www.github.com/sesanmwinn/cilium-k3s-demo)
+- **Git:** Code examples are available via [GitHub](https://github.com/seanmwinn/cilium-k3s-demo)
   —and may be downloaded using [Git](https://git-scm.com)—but are not required.
   I have provided all of the necessary code bits here in the post to follow
   along, but if you want to customize your environment beyond this post I
