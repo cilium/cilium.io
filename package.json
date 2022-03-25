@@ -52,7 +52,8 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^7.28.0",
     "react-instantsearch-dom": "^6.20.0",
-    "react-share": "^4.4.0"
+    "react-share": "^4.4.0",
+    "react-use": "^17.3.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",

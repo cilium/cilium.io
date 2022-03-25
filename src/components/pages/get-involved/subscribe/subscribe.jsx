@@ -2,14 +2,17 @@ import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useCookie, useLocation } from 'react-use';
 
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import submitHubspotForm from 'utils/submit-hubspot-form';
 
 import ActiveIcon from './images/active.inline.svg';
 
 const APPEAR_AND_EXIT_ANIMATION_DURATION = 0.5;
+const HUBSPOT_FORM_ID = 'ef11d76b-e770-455f-903b-246d91db193d';
 
 const emailRegexp =
   // eslint-disable-next-line no-control-regex, no-useless-escape
@@ -38,19 +41,21 @@ const Subscribe = () => {
   const [formState, setFormState] = useState('default');
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
+  // HubSpot cookie tracking
+  // read more: https://legacydocs.hubspot.com/docs/methods/forms/submit_form
+  const [hubspotutk] = useCookie('hubspotutk');
+  const { href } = useLocation();
 
   const onSubmit = async (values) => {
+    const { email } = values;
+    const fields = [{ name: 'email', value: email }];
+    const context = {
+      hutk: hubspotutk,
+      pageUri: href,
+    };
     setIsLoading(true);
     try {
-      await fetch('https://formspree.io/f/xoqrnawo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...values,
-        }),
-      });
+      await submitHubspotForm(HUBSPOT_FORM_ID, fields, context);
       setErrorMessage(null);
       setFormState('success');
       setTimeout(() => {
