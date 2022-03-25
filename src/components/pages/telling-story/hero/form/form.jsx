@@ -10,7 +10,7 @@ import Checkbox from 'components/shared/checkbox';
 import Field, { FIELD_TAGS } from 'components/shared/field';
 import Link from 'components/shared/link';
 
-import SuccessHero from './images/success.svg';
+import successHero from './images/success.svg';
 
 const APPEAR_AND_EXIT_ANIMATION_DURATION = 0.5;
 
@@ -189,7 +189,7 @@ const Form = ({ formClassName }) => {
               transition: { delay: APPEAR_AND_EXIT_ANIMATION_DURATION },
             }}
           >
-            <img src={SuccessHero} alt="" loading="eager" />
+            <img src={successHero} alt="" loading="eager" />
             <h3 className="font-semibold text-xl lg:text-3xl leading-none text-center">
               Thanks for your story!
             </h3>
@@ -197,7 +197,7 @@ const Form = ({ formClassName }) => {
               We will get in touch with you as soon as possible
             </span>
             <Link className="mt-8 mb-12" type="text" theme="primary" to="/get-involved">
-              back to get involved
+              Back to get involved
             </Link>
           </motion.div>
         )}
