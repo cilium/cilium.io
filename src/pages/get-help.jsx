@@ -56,11 +56,11 @@ const GetHelp = () => {
     heroImage,
     decor1: {
       src: decor1,
-      className: 'absolute bottom-[-14.6%] left-[-5.75%] w-[115%] max-w-none xl:w-[676px]',
+      className: 'absolute bottom-[-14.6%] left-[-5.75%] w-[115%] max-w-none',
     },
     decor2: {
       src: decor2,
-      className: 'absolute bottom-[-6%] left-[-12.3%] w-[120%] max-w-none xl:w-[696px]',
+      className: 'absolute bottom-[-6%] left-[-12.3%] w-[120%] max-w-none',
     },
   };
 
