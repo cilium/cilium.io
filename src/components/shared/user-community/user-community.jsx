@@ -20,6 +20,8 @@ import TripLogo from 'icons/logo-trip.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
 import SkyLogo from 'icons/sky.inline.svg';
 
+import Button from '../button';
+
 import CanonicalLogo from './images/canonical.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
@@ -71,9 +73,18 @@ const themeClassNames = {
   },
 };
 
-const UserCommunity = ({ className, title, items, isTitleCentered, titleTheme, theme }) => (
+const UserCommunity = ({
+  className,
+  title,
+  items,
+  isTitleCentered,
+  titleTheme,
+  theme,
+  buttonText,
+  buttonUrl,
+}) => (
   <section className={classNames(className, themeClassNames[theme].wrapper)}>
-    <Container>
+    <Container className="flex flex-col">
       {title && (
         <Heading
           className={classNames(
@@ -126,6 +137,11 @@ const UserCommunity = ({ className, title, items, isTitleCentered, titleTheme, t
           );
         })}
       </div>
+      {buttonText && buttonUrl && (
+        <Button theme="primary-1" className="mx-auto mt-6 md:mt-10 lg:mt-14" to={buttonUrl}>
+          {buttonText}
+        </Button>
+      )}
     </Container>
   </section>
 );
@@ -149,6 +165,8 @@ UserCommunity.propTypes = {
     })
   ).isRequired,
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
+  buttonText: PropTypes.string,
+  buttonUrl: PropTypes.string,
 };
 
 UserCommunity.defaultProps = {
@@ -157,6 +175,8 @@ UserCommunity.defaultProps = {
   titleTheme: null,
   isTitleCentered: false,
   theme: 'white',
+  buttonText: null,
+  buttonUrl: null,
 };
 
 export default UserCommunity;

@@ -76,6 +76,8 @@ const userCommunity2 = {
     utmost,
     yahoo,
   ],
+  buttonText: 'Add your company',
+  buttonUrl: '/telling-story',
 };
 
 const logos1 = {
