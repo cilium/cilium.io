@@ -11,7 +11,7 @@
   }
 
   .checkbox__label > span {
-    @apply text-sm lg:leading-none;
+    @apply text-sm leading-tight xl:leading-none;
   }
 
   .checkbox__input:focus + label::before {

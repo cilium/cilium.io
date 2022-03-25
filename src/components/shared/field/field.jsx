@@ -8,7 +8,7 @@ export const FIELD_TAGS = {
 };
 
 const Field = forwardRef(({ fieldName, className, tag: Tag, error, ...otherProps }, ref) => (
-  <div className="flex flex-col w-full">
+  <div className="relative flex flex-col w-full">
     {fieldName && <span className="text-sm font-semibold leading-none">{fieldName}</span>}
     <Tag
       className={classNames(

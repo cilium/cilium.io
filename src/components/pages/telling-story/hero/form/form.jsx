@@ -1,5 +1,4 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
@@ -14,6 +13,12 @@ import Link from 'components/shared/link';
 import SuccessHero from './images/success.svg';
 
 const APPEAR_AND_EXIT_ANIMATION_DURATION = 0.5;
+
+const FORM_STATES = {
+  DEFAULT: 'default',
+  ERROR: 'error',
+  SUCCESS: 'success',
+};
 
 const validationSchema = yup.object().shape({
   firstName: yup.string().trim().required('Name is a required field'),
@@ -31,7 +36,7 @@ const Form = ({ formClassName }) => {
     reset,
     formState: { errors },
   } = useForm({ resolver: yupResolver(validationSchema) });
-  const [formState, setFormState] = useState('default');
+  const [formState, setFormState] = useState(FORM_STATES.DEFAULT);
   const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = async (values) => {
@@ -46,14 +51,14 @@ const Form = ({ formClassName }) => {
           ...values,
         }),
       });
-      setFormState('success');
+      setFormState(FORM_STATES.SUCCESS);
       setTimeout(() => {
-        setFormState('default');
+        setFormState(FORM_STATES.DEFAULT);
       }, 3000);
       setIsLoading(false);
       reset();
     } catch (error) {
-      setFormState('error');
+      setFormState(FORM_STATES.ERROR);
     }
   };
 
@@ -62,7 +67,7 @@ const Form = ({ formClassName }) => {
       <motion.form
         className="space-y-6"
         animate={{
-          display: formState === 'success' ? 'none' : 'block',
+          display: formState === FORM_STATES.SUCCESS ? 'none' : 'block',
           transition: { duration: APPEAR_AND_EXIT_ANIMATION_DURATION },
         }}
         method="POST"
@@ -104,77 +109,63 @@ const Form = ({ formClassName }) => {
         <Field tag={FIELD_TAGS.TEXTAREA} fieldName="Message" {...register('message')} />
         <div className="border-b border-gray-4 pb-4">
           <span className="text-sm font-semibold">What do you need help with?</span>
-          <ul className="mt-5 gap-x-8 grid md:grid-cols-[repeat(2,minmax(45%,max-content))] gap-y-4">
-            <li>
-              <Checkbox
-                id="reviewAbstract"
-                label="Reviewing an abstract"
-                name="reviewAbstract"
-                value="reviewAbstract"
-                {...register('reviewAbstract')}
-              />
-            </li>
-            <li>
-              <Checkbox
-                id="writePost"
-                label="Writing a blog post"
-                name="writePost"
-                value="writePost"
-                {...register('writePost')}
-              />
-            </li>
-            <li>
-              <Checkbox
-                id="polishPresentation"
-                label="Polish a presentation"
-                name="polishPresentation"
-                value="polishPresentation"
-                {...register('polishPresentation')}
-              />
-            </li>
-            <li>
-              <Checkbox
-                id="getRetweet"
-                label="Getting a Retweet"
-                name="getRetweet"
-                value="getRetweet"
-                {...register('getRetweet')}
-              />
-            </li>
-            <li>
-              <Checkbox
-                id="findSpeaker"
-                label="Finding a speaker for an event or livestream"
-                name="findSpeaker"
-                value="findSpeaker"
-                {...register('findSpeaker')}
-              />
-            </li>
-            <li>
-              <Checkbox
-                id="echoNews"
-                label="Submitting to eCHO News"
-                name="echoNews"
-                value="echoNews"
-                {...register('echoNews')}
-              />
-            </li>
-            <li>
-              <Checkbox
-                id="other"
-                label="Other"
-                name="other"
-                value="other"
-                {...register('other')}
-              />
-            </li>
-          </ul>
+          <div className="mt-5 gap-x-8 grid md:grid-cols-[repeat(2,minmax(45%,max-content))] gap-y-4">
+            <Checkbox
+              id="reviewAbstract"
+              label="Reviewing an abstract"
+              name="reviewAbstract"
+              value="reviewAbstract"
+              {...register('reviewAbstract')}
+            />
+
+            <Checkbox
+              id="writePost"
+              label="Writing a blog post"
+              name="writePost"
+              value="writePost"
+              {...register('writePost')}
+            />
+
+            <Checkbox
+              id="polishPresentation"
+              label="Polish a presentation"
+              name="polishPresentation"
+              value="polishPresentation"
+              {...register('polishPresentation')}
+            />
+
+            <Checkbox
+              id="getRetweet"
+              label="Getting a Retweet"
+              name="getRetweet"
+              value="getRetweet"
+              {...register('getRetweet')}
+            />
+
+            <Checkbox
+              id="findSpeaker"
+              label="Finding a speaker for an event or livestream"
+              name="findSpeaker"
+              value="findSpeaker"
+              {...register('findSpeaker')}
+            />
+
+            <Checkbox
+              id="echoNews"
+              label="Submitting to eCHO News"
+              name="echoNews"
+              value="echoNews"
+              {...register('echoNews')}
+            />
+
+            <Checkbox id="other" label="Other" name="other" value="other" {...register('other')} />
+          </div>
         </div>
         <Button size="md" theme="primary" type="submit" loading={isLoading}>
           Send Story
         </Button>
       </motion.form>
-      {formState === 'success' && (
+      {formState === FORM_STATES.SUCCESS && (
         <motion.div
           className="flex flex-col items-center justify-center"
           initial={{ opacity: 0 }}
