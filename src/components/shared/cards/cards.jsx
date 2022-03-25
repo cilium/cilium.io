@@ -31,7 +31,7 @@ const themeClassNames = {
   gray: 'bg-gray-4',
 };
 
-const Cards = ({ className, title, items, buttonType, theme }) => {
+const Cards = ({ className, title, items, buttonType, theme, textSize }) => {
   const isTypeLink = buttonType === 'link';
   const Tag = isTypeLink ? Link : Button;
   const buttonTheme = isTypeLink ? 'primary' : 'primary-1';
@@ -61,6 +61,7 @@ const Cards = ({ className, title, items, buttonType, theme }) => {
                     <div
                       className={classNames(
                         'with-link-primary-light mt-3',
+                        textSize === 'lg' && 'text-lg',
                         buttonText && buttonUrl && !isTypeLink && 'mb-5 lg:mb-7',
                         buttonText && buttonUrl && isTypeLink && 'mb-4 lg:mb-6'
                       )}
@@ -74,7 +75,7 @@ const Cards = ({ className, title, items, buttonType, theme }) => {
                           isTypeLink ? 'border-t border-gray-3 pt-5 leading-snug' : 'self-start'
                         )}
                         theme={buttonTheme}
-                        type={isTypeLink && 'text'}
+                        type={isTypeLink ? 'text' : null}
                         to={buttonUrl}
                         target={buttonTarget || null}
                         rel={buttonTarget ? 'noopener noreferrer' : null}
@@ -97,6 +98,7 @@ Cards.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
   buttonType: PropTypes.oneOf(['button', 'link']),
+  textSize: PropTypes.oneOf(['md', 'lg']),
   items: PropTypes.arrayOf(
     PropTypes.exact({
       iconName: PropTypes.string.isRequired,
@@ -113,6 +115,7 @@ Cards.propTypes = {
 Cards.defaultProps = {
   className: null,
   title: null,
+  textSize: 'md',
   buttonType: 'button',
   theme: 'white',
 };

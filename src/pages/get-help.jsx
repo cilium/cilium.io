@@ -40,10 +40,15 @@ const items = [
 const GetHelp = () => (
   <MainLayout theme="gray" pageMetadata={seo} footerWithoutTopBorder>
     <Hero />
-    <Cards className="pt-4 pb-10 md:pb-20 lg:pt-12 lg:pb-28" theme="gray" items={items} />
-    <Faq />
+    <Cards
+      className="pt-4 pb-10 md:pb-20 lg:pt-12 lg:pb-28"
+      theme="gray"
+      items={items}
+      textSize="lg"
+    />
     <CiliumStory />
     <EventBox />
+    <Faq />
     <Community className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" theme="gray" isTitleCentered />
   </MainLayout>
 );

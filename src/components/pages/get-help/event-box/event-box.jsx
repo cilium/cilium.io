@@ -21,12 +21,12 @@ const links = [
   { text: 'Reach out on Slack with questions', url: '/' },
 ];
 const EventBox = () => (
-  <section className="mt-16 md:mt-20 lg:mt-28 xl:mt-40">
+  <section className="mt-16 md:mt-20 lg:mt-28 xl:mt-48">
     <Container className="flex flex-col-reverse items-center lg:grid lg:grid-cols-12 lg:gap-x-8">
-      <div className="mt-10 lg:col-span-7 lg:mt-0 lg:justify-self-center xl:justify-self-stretch xl:pl-8">
-        <div className="relative mx-auto max-w-[90%] lg:mx-0 lg:max-w-[520px] xl:max-w-[592px]">
+      <div className="mx-auto mt-10 max-w-[90%] lg:col-span-7 lg:mx-0 lg:mt-0 lg:flex-1 lg:justify-self-center xl:flex-none xl:justify-self-stretch xl:pl-5">
+        <div className="relative xl:max-w-[592px]">
           <img
-            className="absolute top-[-8%] right-[-6%] w-[24.5%]"
+            className="absolute bottom-[-8%] left-[-5.3%] w-[24.5%]"
             src={decor2}
             alt=""
             aria-hidden
@@ -42,7 +42,7 @@ const EventBox = () => (
             alt=""
           />
           <img
-            className="absolute top-0 left-[-6.5%] w-[105%] max-w-none"
+            className="absolute top-[-7.6%] left-[2%] w-[106%] max-w-none"
             src={decor1}
             alt=""
             aria-hidden
