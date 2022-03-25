@@ -1,5 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
+import classNames from 'classnames';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import * as yup from 'yup';
@@ -22,7 +24,7 @@ const validationSchema = yup.object().shape({
     .required('Email is a required field'),
 });
 
-const Form = () => {
+const Form = ({ formClassName }) => {
   const {
     register,
     handleSubmit,
@@ -56,11 +58,11 @@ const Form = () => {
   };
 
   return (
-    <section>
+    <section className={formClassName}>
       <motion.form
-        className="space-y-6 p-8"
+        className="space-y-6"
         animate={{
-          opacity: formState === 'success' ? 0 : 1,
+          display: formState === 'success' ? 'none' : 'block',
           transition: { duration: APPEAR_AND_EXIT_ANIMATION_DURATION },
         }}
         method="POST"
@@ -180,16 +182,28 @@ const Form = () => {
             transition: { delay: APPEAR_AND_EXIT_ANIMATION_DURATION },
           }}
         >
-          <SuccessHero />
-          <h3 className="font-semibold text-3xl leading-none">Thanks for your story!</h3>
-          <span className="mt-3">We will get in touch with you as soon as possible</span>
-          <Link className="mt-8" theme="primary" to="/get-involved">
+          <img src={SuccessHero} alt="" loading="eager" />
+          <h3 className="font-semibold text-xl lg:text-3xl leading-none text-center">
+            Thanks for your story!
+          </h3>
+          <span className="mt-3 text-sm lg:text-base text-center">
+            We will get in touch with you as soon as possible
+          </span>
+          <Link className="mt-8 mb-12" type="text" theme="primary" to="/get-involved">
             back to get involved
           </Link>
         </motion.div>
       )}
     </section>
   );
+};
+
+Form.propTypes = {
+  formClassName: PropTypes.string,
+};
+
+Form.defaultProps = {
+  formClassName: null,
 };
 
 export default Form;
