@@ -55,10 +55,7 @@ function Distributions() {
               key={index}
             >
               <Icon className="shrink-0 w-14 h-14 xs:w-[72px] xs:h-[72px]" />
-              <span
-                className="text-sm font-bold md:text-base"
-                dangerouslySetInnerHTML={{ __html: name }}
-              />
+              <span className="font-bold" dangerouslySetInnerHTML={{ __html: name }} />
             </div>
           ))}
         </div>

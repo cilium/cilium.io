@@ -21,7 +21,7 @@ const Training = () => (
       <div className="xl:max-w-[384px]">
         <Heading tag="h2">{title}</Heading>
         <p
-          className="md:text-lg with-link-primary mt-5"
+          className="text-lg with-link-primary mt-5"
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </div>
