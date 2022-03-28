@@ -30,6 +30,7 @@ const queries = [
     transformer: ({ data }) => data.pages.edges.map(pageToAlgoliaRecord),
     indexName,
     settings: { attributesToSnippet: [`excerpt:20`] },
+    matchFields: ['title', 'excerpt'],
   },
 ];
 
