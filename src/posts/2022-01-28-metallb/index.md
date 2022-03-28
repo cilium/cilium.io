@@ -1,7 +1,7 @@
 ---
 date: '2022-01-28T17:00:00.000Z'
 title: 'Kind, Cilium, MetalLB, and still no kube-proxy'
-ogImageUrl: 'https://raw.githubusercontent.com/cncf/landscape/f9e5b54bbd9b99d624e10ac8e6468fa45ebefb98/hosted_logos/metallb.svg'
+ogImageUrl: 'https://avatars.githubusercontent.com/u/60239468?s=200&v=4'
 ogSummary: 'Learn how add MetalLB to a cluster with Cilium'
 categories:
   - How-To
