@@ -1,7 +1,9 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
-import TwitterIcon from 'icons/twitter.inline.svg';
+import Heading from 'components/shared/heading';
+import TwitterIcon from 'icons/twitter-inverse.inline.svg';
 
 const items = [
   {
@@ -14,24 +16,39 @@ const items = [
   },
 ];
 
-const TwitterCards = () => (
-  <section>
-    <Container className="grid grid-cols-1 gap-4 mt-10 md:gap-6 lg:gap-8 md:mt-20 md:grid-cols-2 lg:mt-28">
-      {items.map(({ text, name }, index) => (
-        <div
-          className="flex flex-col p-6 leading-relaxed border rounded-lg md:text-lg md:p-8 border-gray-3"
-          key={index}
-        >
-          <TwitterIcon className="w-7 h-7" />
-          <p
-            className="my-3 md:my-5 with-link-primary-light"
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-          <span className="mt-auto font-semibold">{name}</span>
-        </div>
-      ))}
+const TwitterCards = ({ title }) => (
+  <section className="mt-10 md:mt-20 lg:mt-32">
+    <Container>
+      {title && (
+        <Heading tag="h3" className="text-center">
+          {title}
+        </Heading>
+      )}
+      <div className="mt-16 grid grid-cols-1 gap-4 md:gap-6 lg:gap-8 md:grid-cols-2 ">
+        {items.map(({ text, name }, index) => (
+          <div
+            className="flex flex-col p-6 leading-relaxed border rounded-lg md:text-lg md:p-8 border-gray-3"
+            key={index}
+          >
+            <TwitterIcon className="w-16 h-16" />
+            <p
+              className="my-3 md:my-5 with-link-primary-light"
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
+            <span className="mt-auto font-semibold">{name}</span>
+          </div>
+        ))}
+      </div>
     </Container>
   </section>
 );
+
+TwitterCards.propTypes = {
+  title: PropTypes.string,
+};
+
+TwitterCards.defaultProps = {
+  title: null,
+};
 
 export default TwitterCards;

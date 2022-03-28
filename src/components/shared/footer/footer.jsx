@@ -17,9 +17,9 @@ const navigation = [
 ];
 
 const Footer = () => (
-  <footer className="mt-11 md:mt-20 lg:mt-28 ">
-    <Container className="pt-10 pb-10 border-t lg:pt-14 lg:pb-16 border-gray-3">
-      <div className="grid grid-cols-3 space-y-8 md:space-y-10 lg:grid-cols-4 gap-x-8 lg:space-y-0">
+  <footer>
+    <Container className="pt-10 pb-10 lg:pt-14 lg:pb-16">
+      <div className="grid grid-cols-3 space-y-8 md:space-y-10 lg:grid-cols-4 gap-x-8 lg:space-y-0 pb-14 border-b border-gray-4">
         <Link to="/">
           <span className="sr-only">Cilium</span>
           <Logo className="col-span-1 lg:col-span-1" />
@@ -36,8 +36,8 @@ const Footer = () => (
           ))}
         </div>
       </div>
-      <div className="mt-10 space-y-3 text-sm lg:mt-16 with-link-primary-light text-gray-1">
-        <p>Copyright The Cilium Authors. All rights reserved.</p>
+      <div className="mt-6 space-y-3 text-sm lg:mt-8 with-link-primary-light text-gray-1">
+        <p>© 2022 Cilium Authors. All rights reserved</p>
         <p>
           The Linux Foundation has registered trademarks and uses trademarks. For a list of
           trademarks of The Linux Foundation, please see our{' '}

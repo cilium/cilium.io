@@ -1,7 +1,5 @@
-import { PropTypes } from 'prop-types';
 import React from 'react';
 
-import Banner from 'components/pages/home/banner';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
@@ -38,11 +36,12 @@ const items = [
   },
 ];
 
-const Community = ({ withBanner }) => (
-  <section className="my-10 md:my-20 lg:my-28">
-    <Container>
-      <Heading tag="h2">{title}</Heading>
-      {withBanner && <Banner />}
+const Community = () => (
+  <section className="mt-10 md:mt-20 lg:mt-28 bg-gray-4">
+    <Container className="py-8 md:py-16 lg:py-28">
+      <Heading tag="h2" className="text-center">
+        {title}
+      </Heading>
       <div className="grid grid-cols-1 gap-4 md:gap-6 lg:gap-8 mt-7 md:mt-10 sm:grid-cols-2 lg:grid-cols-4 lg:mt-14">
         {items.map(({ icon: Icon, title, url, target }, index) => (
           <Link
@@ -63,13 +62,5 @@ const Community = ({ withBanner }) => (
     </Container>
   </section>
 );
-
-Community.propTypes = {
-  withBanner: PropTypes.bool,
-};
-
-Community.defaultProps = {
-  withBanner: false,
-};
 
 export default Community;

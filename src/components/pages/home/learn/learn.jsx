@@ -37,10 +37,12 @@ const Learn = () => {
   `);
 
   return (
-    <section className="mt-10 md:mt-20 lg:mt-28">
+    <section className="mt-10 md:mt-20 lg:mt-32">
       <Container>
-        <Heading tag="h2">{title}</Heading>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6 md:mt-8 lg:mt-11 lg:grid-rows-4">
+        <Heading tag="h2" className="text-center">
+          {title}
+        </Heading>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6 md:mt-8 lg:mt-16 lg:grid-rows-4">
           {posts.map(({ frontmatter }, index) => (
             <Fragment key={index}>
               {index === 0 ? (

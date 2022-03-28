@@ -11,6 +11,7 @@ import FeaturedTalks from 'components/shared/featured-talks';
 import MainLayout from 'layouts/main';
 
 const userCommunity1 = {
+  className: '!mt-0',
   items: [
     {
       iconName: 'google',
@@ -67,6 +68,7 @@ const userCommunity1 = {
 };
 
 const userCommunity2 = {
+  title: 'User Community',
   items: [
     {
       iconName: 'wildLife',
@@ -173,13 +175,14 @@ const IndexPage = () => (
   <MainLayout>
     <Hero />
     <UserCommunity {...userCommunity1} />
-    <Highlights className="mt-10 md:mt-20 lg:mt-28" />
+    <Highlights withBanner />
+    {/* Discover component will have the same name but the content will be from the Get Hands-on with Cilium from PR #31 */}
     <Discover />
     <UserCommunity {...userCommunity2} />
     <FeaturedTalks />
     <Learn />
-    <Community withBanner />
-    <TwitterCards />
+    <TwitterCards title="What people think about Cilium" />
+    <Community />
   </MainLayout>
 );
 

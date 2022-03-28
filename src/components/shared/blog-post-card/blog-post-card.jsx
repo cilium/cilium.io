@@ -80,11 +80,11 @@ const BlogPostCard = ({
     <Link
       to={url || path}
       className={classNames(
-        'flex p-6 transition-all duration-200 border rounded-lg md:p-8 border-gray-3 group hover:border-transparent hover:shadow-tertiary',
+        'flex transition-all duration-200 border rounded-lg p-5 border-gray-3 group hover:border-transparent hover:shadow-tertiary',
         isLandscapeView
           ? 'flex-col space-y-7 sm:space-y-0 sm:flex-row sm:space-x-7'
           : 'flex-col space-y-7',
-        size === 'lg' && 'lg:p-10',
+        size === 'lg' && 'lg:p-8',
         className
       )}
       target={url ? '_blank' : ''}

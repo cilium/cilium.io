@@ -3,12 +3,6 @@
     @apply text-base text-black antialiased;
     -webkit-tap-highlight-color: transparent;
   }
-
-  .highlight-words {
-    span {
-      @apply font-bold;
-    }
-  }
 }
 
 @layer components {

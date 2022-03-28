@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -36,20 +37,20 @@ const icons = {
   datadog: DatadogLogo,
 };
 
-const UserCommunity = ({ title, items }) => (
-  <section className="mt-10 md:mt-20 lg:mt-28">
-    <Container>
+const UserCommunity = ({ className, title, items }) => (
+  <section className={classNames('mt-10 md:mt-20 lg:mt-32 bg-gray-4', className)}>
+    <Container className="py-10 md:py-20 lg:py-32">
       {title && (
-        <Heading tag="h3" theme="gray">
+        <Heading tag="h3" className="text-center">
           {title}
         </Heading>
       )}
-      <div className="grid gap-4 mt-6 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-4 xl:gap-8 lg:mt-8">
+      <div className="grid gap-4 mt-6 md:mt-16 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 lg:gap-4 xl:gap-8 lg:mt-8">
         {items.map(({ iconName, text, links }, index) => {
           const Icon = icons[iconName];
           return (
             <div
-              className="flex flex-col h-full p-6 border rounded-lg xl:p-8 bg-gray-4 border-gray-3"
+              className="flex flex-col h-full p-6 border rounded-lg xl:p-8 bg-white shadow-card"
               key={index}
             >
               <Icon className="h-12" />
@@ -77,6 +78,7 @@ const UserCommunity = ({ title, items }) => (
 );
 
 UserCommunity.propTypes = {
+  className: PropTypes.string,
   title: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -94,6 +96,7 @@ UserCommunity.propTypes = {
 };
 
 UserCommunity.defaultProps = {
+  className: null,
   title: null,
 };
 
