@@ -1,15 +1,15 @@
 import React from 'react';
 
 import Highlights from 'components/pages/home/highlights';
-import UserCommunity from 'components/pages/home/user-community';
 import Architecture from 'components/pages/learn/architecture';
+import HandsOn from 'components/pages/learn/hands-on';
 import Learn from 'components/pages/learn/learn';
 import News from 'components/pages/learn/news';
 import RelatedProjects from 'components/pages/learn/related-projects';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
-import TryCilium from 'components/shared/try-cilium';
-import illustration from 'images/hero-illustration.svg';
+import UserCommunity from 'components/shared/user-community';
+import illustration from 'images/pages/learn/hero/illustration.svg';
 import MainLayout from 'layouts/main';
 import SeoMetadata from 'utils/seo-metadata';
 
@@ -127,16 +127,21 @@ const userCommunity = {
 };
 
 const LearnPage = () => (
-  <MainLayout pageMetadata={SeoMetadata.learn}>
-    <Hero className="pt-5 md:pt-16 lg:pb-5" {...hero} />
-    <TryCilium />
-    <Architecture />
+  <MainLayout pageMetadata={SeoMetadata.learn} theme="gray" footerWithoutTopBorder>
+    <Hero className="pt-5 md:pt-16 pb-10 md:pb-20 lg:pb-[138px]" theme="gray" {...hero} />
     <Highlights className="mt-10 md:mt-20" />
+    <Architecture />
+    <HandsOn />
     <Learn />
     <RelatedProjects />
-    <UserCommunity {...userCommunity} />
+    <UserCommunity
+      className="mt-10 md:mt-20 lg:mt-32 py-10 md:py-20 lg:py-32 "
+      theme="gray"
+      isTitleCentered
+      {...userCommunity}
+    />
     <News />
-    <Community withBanner />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

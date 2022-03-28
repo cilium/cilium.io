@@ -21,7 +21,7 @@ const HeroWithImage = ({
         <Heading size="lg" tag="h1">
           {title}
         </Heading>
-        <p className="mt-5 text-lg space-y-5" dangerouslySetInnerHTML={{ __html: description }} />
+        <div className="mt-5 text-lg space-y-5" dangerouslySetInnerHTML={{ __html: description }} />
       </div>
       <div
         className={classNames(
