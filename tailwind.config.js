@@ -46,12 +46,14 @@ module.exports = {
         primary: '0px 5px 20px rgba(0, 0, 0, 0.09)',
         secondary: '0px 10px 20px rgba(0, 0, 0, 0.09)',
         tertiary: '0px 5px 20px rgba(0, 0, 0, 0.1)',
+        card: '0px 1px 8px rgba(20, 26, 31, 0.2)',
       },
       borderRadius: {
         large: '20px',
       },
       backgroundImage: {
         'search-icon': "url('/images/search.svg')",
+        grid: "url('/images/grid.svg')",
       },
       typography: (theme) => ({
         DEFAULT: {

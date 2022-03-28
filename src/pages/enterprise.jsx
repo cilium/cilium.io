@@ -3,6 +3,7 @@ import React from 'react';
 
 import Distributions from 'components/pages/enterprise/distributions';
 import Training from 'components/pages/enterprise/training';
+import Community from 'components/shared/community';
 import HeroWithImage from 'components/shared/hero-with-image';
 import decor1 from 'images/pages/enterprise/hero/decor-1.svg';
 import decor2 from 'images/pages/enterprise/hero/decor-2.svg';
@@ -40,6 +41,7 @@ const EnterprisePage = () => {
       <HeroWithImage className="pb-16 pt-5 md:pt-16 lg:pt-24" {...hero} />
       <Distributions />
       <Training />
+      <Community theme="gray" isTitleCentered />
     </MainLayout>
   );
 };

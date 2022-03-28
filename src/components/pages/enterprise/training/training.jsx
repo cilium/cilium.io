@@ -7,40 +7,35 @@ import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 
 const title = 'Training';
 const description =
-  'The following partners offer Cilium related training in accordance with the  training partner requirements of the Cilium project.';
-const items = [
-  {
-    logo: IsovalentLogo,
-    title: 'Getting started with Cilium',
-    buttonUrl: '',
-    buttonText: 'Coming soon',
-  },
-];
+  'The following partners offer Cilium related training in accordance with the training partner requirements of the Cilium project.';
+
+const isovalent = {
+  title: 'Getting started with Cilium',
+  description:
+    'Quickly get started with Cilium. Read the documentation or use our interactive tutorial in a live environment.',
+  buttonText: 'Coming soon',
+};
 const Training = () => (
-  <section className="mt-10 md:mt-20 lg:mt-28">
-    <Container>
-      <Heading tag="h2">{title}</Heading>
-      <p
-        className="md:text-lg with-link-primary max-w-[592px] mt-5"
-        dangerouslySetInnerHTML={{ __html: description }}
-      />
-      <div className="grid grid-cols-1 max-w-[1008px] mt-8 md:mt-10 lg:mt-14 gap-y-8">
-        {items.map(({ logo: Logo, title, buttonUrl, buttonText }, index) => (
-          <div
-            className="flex flex-col items-start p-6 pt-4 border rounded-lg md:px-8 md:py-6 sm:justify-between border-gray-3"
-            key={index}
-          >
-            <Logo />
-            <div className="flex flex-col items-start justify-between w-full pt-6 mt-6 space-y-4 border-t sm:space-y-0 sm:flex-row sm:space-x-10 border-gray-3">
-              <h3 className="mt-1.5 text-xl font-bold leading-snug lg:leading-snug lg:text-2xl">
-                {title}
-              </h3>
-              <Button to={buttonUrl} disabled={!buttonUrl}>
-                {buttonText}
-              </Button>
-            </div>
-          </div>
-        ))}
+  <section className="py-10 md:py-20 lg:py-28">
+    <Container className="flex space-y-10 xl:space-y-0 xl:space-x-28  xl:items-center flex-col xl:flex-row">
+      <div className="xl:max-w-[384px]">
+        <Heading tag="h2">{title}</Heading>
+        <p
+          className="md:text-lg with-link-primary mt-5"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
+      </div>
+      <div className="flex-grow pt-9 pb-20 bg-grid bg-cover sm:bg-contain bg-center bg-no-repeat">
+        <div className="max-w-[384px] relative mx-auto z-10 flex flex-col text-center px-8 pb-8 pt-11 shadow-card bg-white rounded-xl">
+          <IsovalentLogo className="h-10 w-auto" />
+          <Heading className="mt-10" size="2xs" tag="h3">
+            {isovalent.title}
+          </Heading>
+          <p className="mt-2.5">{isovalent.description}</p>
+          <Button className="self-center mt-7" theme="primary-1" disabled>
+            {isovalent.buttonText}
+          </Button>
+        </div>
       </div>
     </Container>
   </section>
