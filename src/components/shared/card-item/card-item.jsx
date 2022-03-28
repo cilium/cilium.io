@@ -1,14 +1,11 @@
 import classNames from 'classnames';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import { PopupButton } from 'react-calendly';
 
 import Button from 'components/shared/button';
 import Heading from 'components/shared/heading';
-
-import SvgAndGatsbyImage, {
-  svgAndGatsbyImageProps,
-} from '../svg-and-gatsby-image/svg-and-gatsby-image';
 
 const buttonThemesClassNames = {
   'primary-1':
@@ -27,7 +24,20 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
   return (
     <li className="flex flex-col rounded-xl shadow-card">
       {imageData ? (
-        <SvgAndGatsbyImage className="self-center" {...imageData} />
+        <div className="relative self-center">
+          <img
+            src={imageData.imageSrc}
+            alt=""
+            width={imageData.width}
+            height={imageData.height}
+            aria-hidden
+          />
+          <GatsbyImage
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            image={getImage(imageData.gatsbyImage)}
+            alt={name}
+          />
+        </div>
       ) : (
         <img
           className="self-center"
@@ -96,7 +106,10 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
 
 CardItem.propTypes = {
   imageData: PropTypes.exact({
-    ...svgAndGatsbyImageProps,
+    width: PropTypes.number,
+    height: PropTypes.number,
+    imageSrc: PropTypes.string,
+    gatsbyImage: PropTypes.object,
   }),
   svgData: PropTypes.exact({
     imageSrc: PropTypes.string,
