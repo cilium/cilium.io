@@ -37,7 +37,7 @@ const EnterprisePage = () => {
     },
   };
   return (
-    <MainLayout pageMetadata={SeoMetadata.enterprise}>
+    <MainLayout pageMetadata={SeoMetadata.enterprise} theme="gray" footerWithoutTopBorder>
       <HeroWithImage className="pb-16 pt-5 md:pt-16 lg:pt-24" {...hero} />
       <Distributions />
       <Training />
