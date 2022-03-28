@@ -1,63 +1,107 @@
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
 import CardItem from 'components/shared/card-item';
 import Container from 'components/shared/container/container';
 import Heading from 'components/shared/heading';
-import GuideSvg from 'icons/guide.inline.svg';
-import InstallFestSvg from 'icons/installfest.inline.svg';
-import IntroSvg from 'icons/intro.inline.svg';
+import svgIllustration3 from 'images/documentation.svg';
+import svgIllustration2 from 'images/monthly-introduction.svg';
+import svgIllustration1 from 'images/weekly-introduction.svg';
 
 const title = 'Discover Cilium';
-const items = [
-  {
-    icon: IntroSvg,
-    name: 'Weekly Interactive Cilium Introduction and Live Q&A',
-    text: 'with Thomas Graf, Cilium Co-Creator',
-    buttons: [
-      {
-        buttonUrl: 'https://calendly.com/cilium-events/cilium-introduction',
-        buttonText: 'Book your seat',
-        isPopup: true,
-      },
-    ],
-  },
-  {
-    icon: InstallFestSvg,
-    name: 'Monthly Community InstallFest',
-    text: 'Join us at our monthly InstallFest and learn how to setup and get started with Cilium.',
-    buttons: [
-      {
-        buttonUrl: 'https://calendly.com/cilium-events/cilim-installfest-emea',
-        buttonText: 'Join Europe',
-        isPopup: true,
-      },
-      {
-        buttonUrl: 'https://calendly.com/cilium-events/cilium-installfest-na',
-        buttonText: 'Join Americas',
-        isPopup: true,
-      },
-    ],
-  },
-  {
-    icon: GuideSvg,
-    name: 'Documentation &<br> Tutorials',
-    text: 'Quickly get started with Cilium. Read the documentation or use our interactive tutorial in a live environment.',
-    buttons: [
-      {
-        buttonUrl: 'https://docs.cilium.io/en/stable/',
-        buttonText: 'Documentation',
-        buttonTarget: '_blank',
-      },
-      {
-        buttonUrl: 'https://play.instruqt.com/isovalent/invite/j4maqox5r1h5',
-        buttonText: 'Tutorial',
-        buttonTarget: '_blank',
-      },
-    ],
-  },
-];
 
-function Discover() {
+const Discover = () => {
+  const { imageIllustration1, imageIllustration2 } = useStaticQuery(graphql`
+    query {
+      imageIllustration1: file(relativePath: { eq: "pages/learn/hands-on/thomasgraf.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 92, quality: 95)
+        }
+      }
+      imageIllustration2: file(
+        relativePath: { eq: "pages/learn/hands-on/thomasgraf-lizrice.png" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(width: 172, quality: 95)
+        }
+      }
+    }
+  `);
+  const items = [
+    {
+      imageData: {
+        width: 384,
+        height: 224,
+        imageSrc: svgIllustration1,
+        gatsbyImage: imageIllustration1,
+        gatsbyImageWidth: 92,
+        gatsbyImageHeight: 92,
+        gatsbyImageX: 146,
+        gatsbyImageY: 66,
+      },
+      name: 'Weekly Interactive Cilium Introduction and Live Q&A',
+      text: 'With Thomas Graf, Cilium Co-Creator',
+      buttons: [
+        {
+          url: 'https://calendly.com/cilium-events/cilium-introduction',
+          title: 'Book your seat',
+          isPopup: true,
+          theme: 'primary-1',
+        },
+      ],
+    },
+    {
+      imageData: {
+        width: 384,
+        height: 224,
+        imageSrc: svgIllustration2,
+        gatsbyImage: imageIllustration2,
+        gatsbyImageWidth: 172,
+        gatsbyImageHeight: 92,
+        gatsbyImageX: 106,
+        gatsbyImageY: 66,
+      },
+      name: 'Monthly Community InstallFest',
+      text: 'Join us at our monthly InstallFest and learn how to setup and get started with Cilium.',
+      buttons: [
+        {
+          url: 'https://calendly.com/cilium-events/cilim-installfest-emea',
+          title: 'Join Europe',
+          isPopup: true,
+          theme: 'outline-gray-dark',
+        },
+        {
+          url: 'https://calendly.com/cilium-events/cilium-installfest-na',
+          title: 'Join Americas',
+          isPopup: true,
+          theme: 'outline-gray-dark',
+        },
+      ],
+    },
+    {
+      svgData: {
+        width: 592,
+        height: 256,
+        imageSrc: svgIllustration3,
+      },
+      name: 'Documentation & Tutorials',
+      text: 'Quickly get started with Cilium. Read the documentation or use our interactive tutorial in a live environment.',
+      buttons: [
+        {
+          url: 'https://docs.cilium.io/en/stable/',
+          title: 'Documentation',
+          target: '_blank',
+          theme: 'outline-gray-dark',
+        },
+        {
+          url: 'https://play.instruqt.com/isovalent',
+          title: 'Tutorials',
+          target: '_blank',
+          theme: 'outline-gray-dark',
+        },
+      ],
+    },
+  ];
   return (
     <section className="mt-12 md:mt-20 lg:mt-28">
       <Container>
@@ -70,5 +114,5 @@ function Discover() {
       </Container>
     </section>
   );
-}
+};
 export default Discover;

@@ -16,7 +16,7 @@ const items = [
 
 const TwitterCards = () => (
   <section>
-    <Container className="grid grid-cols-1 gap-4 mt-10 md:gap-6 lg:gap-8 md:mt-20 md:grid-cols-2 lg:mt-28">
+    <Container className="grid grid-cols-1 gap-4 md:gap-6 lg:gap-8 md:grid-cols-2">
       {items.map(({ text, name }, index) => (
         <div
           className="flex flex-col p-6 leading-relaxed border rounded-lg md:text-lg md:p-8 border-gray-3"

@@ -4,10 +4,9 @@ import React from 'react';
 import CardItem from 'components/shared/card-item';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-
-import svgIllustration1 from './images/illustration1.svg';
-import svgIllustration2 from './images/illustration2.svg';
-import svgIllustration3 from './images/illustration3.svg';
+import svgIllustration3 from 'images/documentation.svg';
+import svgIllustration2 from 'images/monthly-introduction.svg';
+import svgIllustration1 from 'images/weekly-introduction.svg';
 
 const title = 'Get Hands-On With Cilium';
 

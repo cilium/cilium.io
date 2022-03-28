@@ -172,10 +172,10 @@ const userCommunity2 = {
 const IndexPage = () => (
   <MainLayout>
     <Hero />
-    <UserCommunity {...userCommunity1} />
+    <UserCommunity className="mt-10 md:mt-20 lg:mt-32" {...userCommunity1} />
     <Highlights className="mt-10 md:mt-20 lg:mt-28" />
     <Discover />
-    <UserCommunity {...userCommunity2} />
+    <UserCommunity className="mt-10 md:mt-20 lg:mt-32" {...userCommunity2} />
     <FeaturedTalks />
     <Learn />
     <Community withBanner />
