@@ -43,8 +43,8 @@ const IndexPage = () => (
     <UserCommunity className="mt-10 md:mt-20 lg:mt-28" {...userCommunity2} />
     <FeaturedTalks />
     <Learn />
-    <TwitterCards />
     <Community withBanner />
+    <TwitterCards />
   </MainLayout>
 );
 

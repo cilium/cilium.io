@@ -16,19 +16,14 @@ const BlogPage = (props) => {
     pageContext: { categories, currentCategory, currentPage, numPages, canonicalUrl, slug },
     location: { pathname },
   } = props;
-  const shouldShowBanner = pathname.startsWith('/blog');
-
+  const isBlogPage = pathname.startsWith('/blog');
   const seoMetadata = {
     title: 'Blog — Cilium',
     description: 'The latest articles covering eBPF-based Networking, Observability, and Security',
     slug,
   };
   return (
-    <MainLayout
-      showBanner={shouldShowBanner}
-      canonicalUrl={canonicalUrl}
-      pageMetadata={seoMetadata}
-    >
+    <MainLayout isBlogPage={isBlogPage} canonicalUrl={canonicalUrl} pageMetadata={seoMetadata}>
       <FeaturedPosts featuredStory={featuredStory?.[0]} />
       <PostsBoard
         categories={categories}
