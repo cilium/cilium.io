@@ -63,12 +63,12 @@ const Form = ({ formClassName }) => {
   };
 
   return (
-    <section className={formClassName}>
+    <div className={formClassName}>
       <AnimatePresence>
         <motion.form
           className="space-y-6"
           animate={{
-            display: formState === FORM_STATES.SUCCESS ? 'none' : 'block',
+            opacity: formState === FORM_STATES.SUCCESS ? 0 : 1,
             transition: { duration: APPEAR_AND_EXIT_ANIMATION_DURATION },
           }}
           method="POST"
@@ -79,7 +79,8 @@ const Form = ({ formClassName }) => {
             <Field
               fieldName="Name"
               type="text"
-              name="firstName"
+              id="firstName"
+              name="name"
               error={errors?.firstName?.message}
               autoComplete="given-name"
               {...register('firstName')}
@@ -87,6 +88,7 @@ const Form = ({ formClassName }) => {
             <Field
               fieldName="Email"
               type="email"
+              id="email"
               name="email"
               error={errors?.email?.message}
               autoComplete="email"
@@ -97,17 +99,26 @@ const Form = ({ formClassName }) => {
             <Field
               fieldName="Cilium Slack Username"
               type="text"
+              id="ciliumSlackUsername"
               name="ciliumSlackUsername"
               {...register('ciliumSlackUsername')}
             />
             <Field
               fieldName="How are you using Cilium?"
               type="text"
+              id="howAreYouUsingCilium"
               name="howAreYouUsingCilium"
               {...register('howAreYouUsingCilium')}
             />
           </div>
-          <Field tag={FIELD_TAGS.TEXTAREA} fieldName="Message" {...register('message')} />
+          <Field
+            className="min-h-[100px] leading-tight"
+            tag={FIELD_TAGS.TEXTAREA}
+            fieldName="Message"
+            id="message"
+            name="message"
+            {...register('message')}
+          />
           <div className="border-b border-gray-4 pb-4">
             <span className="text-sm font-semibold">What do you need help with?</span>
             <div className="mt-5 gap-x-8 grid md:grid-cols-[repeat(2,minmax(45%,max-content))] gap-y-4">
@@ -182,7 +193,7 @@ const Form = ({ formClassName }) => {
       <AnimatePresence>
         {formState === FORM_STATES.SUCCESS && (
           <motion.div
-            className="flex flex-col items-center justify-center"
+            className="absolute inset-0 flex flex-col items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1,
@@ -202,7 +213,7 @@ const Form = ({ formClassName }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </div>
   );
 };
 

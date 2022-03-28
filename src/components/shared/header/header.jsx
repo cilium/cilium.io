@@ -111,7 +111,10 @@ const Header = ({ showSearchBox }) => (
                       <Logo />
                     </div>
                     <div className="-mr-3">
-                      <Popover.Button className="inline-flex p-1.5 items-center justify-center text-black bg-white rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline">
+                      <Popover.Button
+                        id="firstPopover"
+                        className="inline-flex p-1.5 items-center justify-center text-black bg-white rounded-md hover:text-gray-1 hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-outline"
+                      >
                         <span className="sr-only">Close menu</span>
                         <XIcon className="w-7 h-7" aria-hidden="true" />
                       </Popover.Button>
@@ -149,6 +152,7 @@ const Header = ({ showSearchBox }) => (
               </Popover.Panel>
             </Transition>
             <Popover.Button
+              id="secondPopover"
               className={classNames(
                 'fixed inset-0 transition-colors z-10 duration-200 bg-black bg-opacity-50',
                 open ? 'opacity-100 visible w-full h-full' : 'opacity-0 invisible'

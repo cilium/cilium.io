@@ -15,7 +15,8 @@
   }
 
   .checkbox__input:focus + label::before {
-    @apply border-primary-1;
+    @apply border-0;
+    box-shadow: 0 0 0 1px #0080ff;
   }
 
   .checkbox__input:checked + label::before {

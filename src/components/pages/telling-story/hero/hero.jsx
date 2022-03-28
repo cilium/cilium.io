@@ -42,7 +42,7 @@ const Hero = () => (
           alt=""
           aria-hidden
         />
-        <Form formClassName="relative rounded-xl bg-white w-full shadow-card p-8" />
+        <Form formClassName="relative rounded-xl bg-white w-full shadow-card p-4 md:p-8" />
       </div>
     </Container>
   </section>

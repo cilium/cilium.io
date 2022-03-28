@@ -7,20 +7,25 @@ export const FIELD_TAGS = {
   TEXTAREA: 'textarea',
 };
 
-const Field = forwardRef(({ fieldName, className, tag: Tag, error, ...otherProps }, ref) => (
+const Field = forwardRef(({ id, fieldName, className, tag: Tag, error, ...otherProps }, ref) => (
   <div className="relative flex flex-col w-full">
-    {fieldName && <span className="text-sm font-semibold leading-none">{fieldName}</span>}
+    {fieldName && (
+      <label htmlFor={id} className="text-sm font-semibold leading-none">
+        {fieldName}
+      </label>
+    )}
     <Tag
       className={classNames(
-        'remove-autocomplete-styles w-full appearance-none rounded border border-gray-3 px-3 xl:px-4 py-3 xl:py-5 text-[16px] !leading-none outline-none transition duration-200 hover:border-gray-2 focus:border-primary-1',
+        'remove-autocomplete-styles w-full appearance-none rounded border border-gray-3 px-3 xl:px-4 py-3 xl:py-5 text-[16px] outline-none transition duration-200 hover:border-gray-2 focus:border-primary-1',
         className,
         {
           'border-additional-1 hover:border-additional-1 focus:border-additional-1': error,
-          'h-14 md:h-12': Tag === FIELD_TAGS.INPUT,
+          'h-10 md:h-12': Tag === FIELD_TAGS.INPUT,
           'py-5': Tag === FIELD_TAGS.TEXTAREA,
           'mt-2': fieldName,
         }
       )}
+      id={id}
       ref={ref}
       {...otherProps}
     />
@@ -31,6 +36,7 @@ const Field = forwardRef(({ fieldName, className, tag: Tag, error, ...otherProps
 ));
 
 Field.propTypes = {
+  id: PropTypes.string.isRequired,
   fieldName: PropTypes.string,
   className: PropTypes.string,
   tag: PropTypes.oneOf(Object.values(FIELD_TAGS)),
