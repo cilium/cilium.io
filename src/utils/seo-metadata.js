@@ -25,4 +25,10 @@ const getInvolved = {
     'Learn how to follow, develop, and contribute to the Cilium community through Slack, Twitter, Youtube, the newsletter, and Github',
 };
 
-export { enterprise, learn, adopters, getHelp, getInvolved };
+const tellingStory = {
+  title: 'Cilium - Get help telling your story about Cilium',
+  description:
+    'Are you passionate about Cilium and sharing your experience with the broader community? We want to help you tell your story!',
+};
+
+export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory };
