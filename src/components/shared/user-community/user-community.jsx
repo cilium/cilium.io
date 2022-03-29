@@ -22,6 +22,18 @@ import SkyLogo from 'icons/sky.inline.svg';
 
 import Button from '../button';
 
+import CanonicalLogo from './images/canonical.inline.svg';
+import CivoLogo from './images/civo.inline.svg';
+import Form3Logo from './images/form3.inline.svg';
+import KubesphereLogo from './images/kubesphere.inline.svg';
+import MeltwaterLogo from './images/meltwater.inline.svg';
+import PalantirLogo from './images/palantir.inline.svg';
+import PostfinanceLogo from './images/postfinance.inline.svg';
+import ScalewayLogo from './images/scaleway.inline.svg';
+import SportradarLogo from './images/sportradar.inline.svg';
+import UtmostLogo from './images/utmost.inline.svg';
+import YahooLogo from './images/yahoo.inline.svg';
+
 const icons = {
   google: GoogleLogo,
   adobe: AdobeLogo,
@@ -37,6 +49,17 @@ const icons = {
   bell: BellLogo,
   sky: SkyLogo,
   datadog: DatadogLogo,
+  canonical: CanonicalLogo,
+  civo: CivoLogo,
+  form3: Form3Logo,
+  kubesphere: KubesphereLogo,
+  meltwater: MeltwaterLogo,
+  palantir: PalantirLogo,
+  postfinance: PostfinanceLogo,
+  scaleway: ScalewayLogo,
+  sportradar: SportradarLogo,
+  utmost: UtmostLogo,
+  yahoo: YahooLogo,
 };
 
 const themeClassNames = {

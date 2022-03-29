@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Banner from 'components/shared/banner';
 import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
-import MobileMenu from 'components/shared/mobile-menu';
 import SEO from 'components/shared/seo';
 import AdoptersIcon from 'icons/adopters.inline.svg';
 import BlogIcon from 'icons/blog.inline.svg';
