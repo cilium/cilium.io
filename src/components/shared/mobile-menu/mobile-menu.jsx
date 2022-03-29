@@ -87,12 +87,12 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage }) => {
         <div
           className={classNames(
             'mt-auto flex flex-col items-center space-y-3 border-t border-gray-3 bg-gray-4 px-4 py-[33px]',
-            'xs:flex-row xs:items-stretch xs:justify-center xs:space-y-0'
+            'xs:flex-row xs:items-stretch xs:justify-center xs:space-y-0 xs:space-x-4'
           )}
         >
-          <GithubStars className="ml-4 bg-white" />
+          <GithubStars className="bg-white" />
           <Button
-            className="ml-4 inline-flex items-center bg-white leading-none"
+            className="inline-flex items-center bg-white leading-none"
             to="https://cilium.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
