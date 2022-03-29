@@ -32,11 +32,9 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
             height={imageData.height}
             aria-hidden
           />
-          <GatsbyImage
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-            image={getImage(imageData.gatsbyImage)}
-            alt={name}
-          />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <GatsbyImage image={getImage(imageData.gatsbyImage)} alt={name} />
+          </div>
         </div>
       ) : (
         <img
