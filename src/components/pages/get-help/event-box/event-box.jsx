@@ -22,8 +22,8 @@ const links = [
 ];
 const EventBox = () => (
   <section className="mt-10 overflow-hidden pb-8 md:mt-20 lg:mt-28 lg:overflow-visible lg:pb-0 xl:mt-48">
-    <Container className="flex flex-col-reverse items-center lg:grid lg:grid-cols-12 lg:gap-x-8">
-      <div className="mx-auto mt-10 lg:col-span-7 lg:mx-0 lg:mt-0 lg:flex-1 lg:justify-self-center xl:flex-none xl:justify-self-stretch">
+    <Container className="grid grid-cols-12  lg:gap-x-8 ">
+      <div className="order-1 col-span-full mt-10 justify-self-center lg:order-none lg:col-span-6 lg:mt-0 lg:justify-self-start">
         <div className="relative xl:max-w-[592px]">
           <img
             className="absolute bottom-[-8%] left-[-5.3%] w-[24.5%]"
@@ -49,7 +49,7 @@ const EventBox = () => (
           />
         </div>
       </div>
-      <div className="lg:col-start-8 lg:col-end-13">
+      <div className="col-span-full lg:col-span-6 lg:pl-8 xl:col-start-8 xl:col-end-13 xl:pl-0">
         <Heading tag="h2">{title}</Heading>
         <p className="mt-5">{description}</p>
         <ul className="mt-4 space-y-4 border-t border-gray-3 pt-4 lg:mt-6 lg:pt-6">

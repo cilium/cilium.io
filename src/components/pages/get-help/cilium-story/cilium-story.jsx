@@ -15,16 +15,16 @@ const buttonText = 'Send Story';
 const buttonUrl = '/telling-story';
 
 const CiliumStory = () => (
-  <section className="mt-16 overflow-hidden pb-8 md:mt-20 lg:mt-28 lg:overflow-visible lg:pb-0 xl:mt-36">
-    <Container className="flex flex-col items-center space-y-10 lg:flex-row lg:space-y-0 lg:space-x-20 xl:space-x-[108px]">
-      <div className="lg:flex-1 xl:flex-initial">
+  <section className="mt-10 overflow-hidden pb-8 md:mt-20 lg:mt-28 lg:overflow-visible lg:pb-0 xl:mt-36">
+    <Container className="grid grid-cols-12 items-center gap-y-10 lg:gap-y-0 lg:gap-x-8">
+      <div className="col-span-full lg:col-span-6 lg:max-w-[519px]">
         <Heading tag="h2">{title}</Heading>
         <div className="mt-5 space-y-2.5" dangerouslySetInnerHTML={{ __html: description }} />
         <Button className="mt-5" theme="primary-1" to={buttonUrl}>
           {buttonText}
         </Button>
       </div>
-      <div className="relative mx-auto shrink-0 lg:mx-0 lg:max-w-none lg:flex-1 xl:flex-none">
+      <div className="relative  col-span-full justify-self-center lg:col-span-6 lg:justify-self-end">
         <img
           className="absolute bottom-[-8%] right-[-6%] w-[24.5%]"
           src={decor2}
