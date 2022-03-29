@@ -3,7 +3,7 @@ import React from 'react';
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 
-const text = 'Join eCHO livestream - eBPF & Cilium Office Hours<br/> - every Friday!';
+const text = 'Join eCHO livestream - eBPF & Cilium<br/> Office Hours - every Friday!';
 const buttonText = 'Join Now';
 const Banner = () => (
   <div className="bg-additional-4 bg-opacity-30 py-3">
