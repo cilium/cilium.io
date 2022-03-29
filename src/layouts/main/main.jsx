@@ -46,7 +46,7 @@ const MainLayout = ({
   canonicalUrl,
   children,
   theme,
-  footerWithoutTopBorder,
+  footerWithTopBorder,
 }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -67,7 +67,7 @@ const MainLayout = ({
         />
       </div>
       <main>{children}</main>
-      <Footer withoutTopBorder={footerWithoutTopBorder} />
+      <Footer withTopBorder={footerWithTopBorder} />
     </>
   );
 };
@@ -81,7 +81,7 @@ MainLayout.propTypes = {
   }),
   canonicalUrl: PropTypes.string,
   theme: PropTypes.string,
-  footerWithoutTopBorder: PropTypes.bool,
+  footerWithTopBorder: PropTypes.bool,
 };
 
 MainLayout.defaultProps = {
@@ -89,7 +89,7 @@ MainLayout.defaultProps = {
   isBlogPage: false,
   canonicalUrl: null,
   theme: null,
-  footerWithoutTopBorder: false,
+  footerWithTopBorder: false,
 };
 
 export default MainLayout;

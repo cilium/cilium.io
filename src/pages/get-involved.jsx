@@ -94,7 +94,7 @@ const GetInvolved = () => {
     },
   };
   return (
-    <MainLayout theme="gray" pageMetadata={seo} footerWithoutTopBorder>
+    <MainLayout theme="gray" pageMetadata={seo}>
       <HeroWithImage
         className="pb-10 pt-5 md:pt-10 lg:py-16"
         imgWrapperClassName="mr-0 xl:mr-8"

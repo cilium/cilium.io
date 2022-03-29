@@ -42,7 +42,7 @@ const userCommunity = {
 };
 
 const LearnPage = () => (
-  <MainLayout pageMetadata={seo} theme="gray" footerWithoutTopBorder>
+  <MainLayout pageMetadata={seo} theme="gray">
     <Hero className="pt-5 pb-10 md:pt-16 md:pb-20 lg:pb-[138px]" theme="gray" {...hero} />
     <Highlights className="mt-10 md:mt-20" />
     <Architecture />

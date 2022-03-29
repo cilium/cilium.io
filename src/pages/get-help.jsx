@@ -66,7 +66,7 @@ const GetHelp = () => {
   };
 
   return (
-    <MainLayout theme="gray" pageMetadata={seo} footerWithoutTopBorder>
+    <MainLayout theme="gray" pageMetadata={seo}>
       <HeroWithImage className="pb-10 pt-5 md:py-20 lg:py-24" {...hero} />
       <Cards
         className="pt-4 pb-10 md:pb-20 lg:pt-12 lg:pb-28"
@@ -77,7 +77,7 @@ const GetHelp = () => {
       <CiliumStory />
       <EventBox />
       <Faq />
-      <Community className="mt-10 md:mt-20 lg:mt-28 xl:mt-40" theme="gray" isTitleCentered />
+      <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
     </MainLayout>
   );
 };

@@ -18,12 +18,12 @@ const navigation = [
   [{ name: 'Learn', href: '/learn' }],
 ];
 
-const Footer = ({ withoutTopBorder }) => (
+const Footer = ({ withTopBorder }) => (
   <footer>
     <Container
       className={classNames(
-        'pt-10 pb-10 lg:pt-14 lg:pb-16',
-        withoutTopBorder ? '' : 'border-t border-gray-3'
+        ' pt-10 pb-10 lg:pt-14 lg:pb-16',
+        withTopBorder && 'border-t border-gray-3'
       )}
     >
       <div className="grid grid-cols-3 gap-y-10 xs:gap-x-8 lg:grid-cols-12 lg:gap-y-0">
@@ -95,11 +95,11 @@ const Footer = ({ withoutTopBorder }) => (
 );
 
 Footer.propTypes = {
-  withoutTopBorder: PropTypes.bool,
+  withTopBorder: PropTypes.bool,
 };
 
 Footer.defaultProps = {
-  withoutTopBorder: false,
+  withTopBorder: false,
 };
 
 export default Footer;

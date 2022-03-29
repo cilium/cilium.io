@@ -38,7 +38,7 @@ const userCommunity2 = {
 };
 
 const IndexPage = () => (
-  <MainLayout theme="gray" footerWithoutTopBorder>
+  <MainLayout theme="gray">
     <Hero />
     <UserCommunity className="pb-10 pt-8 md:pb-20 lg:pb-32" theme="gray" {...userCommunity1} />
     <Highlights />
