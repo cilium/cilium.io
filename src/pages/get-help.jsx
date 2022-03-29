@@ -53,6 +53,7 @@ const GetHelp = () => {
   const hero = {
     title: 'Find out how to get help with Cilium',
     description: 'Get help with Cilium through slack, training, support and FAQs',
+    imgWrapperClassName: 'lg:!col-start-7',
     heroImage,
     decor1: {
       src: decor1,
@@ -60,7 +61,7 @@ const GetHelp = () => {
     },
     decor2: {
       src: decor2,
-      className: 'absolute bottom-[-6%] left-[-12.3%] w-[120%] max-w-none',
+      className: 'absolute bottom-[-6%] left-[-12.3%] w-[118.5%] max-w-none',
     },
   };
 

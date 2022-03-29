@@ -25,7 +25,7 @@ const HeroWithImage = ({
       </div>
       <div
         className={classNames(
-          'relative col-start-2 col-end-12 justify-self-center md:col-span-full lg:col-start-7 lg:col-end-13 lg:self-start xl:col-start-6',
+          'relative col-span-full justify-self-center md:col-span-full lg:col-start-7 lg:col-end-13 lg:self-start lg:justify-self-end xl:col-start-6',
           imgWrapperClassName
         )}
       >
