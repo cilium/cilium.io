@@ -59,7 +59,7 @@ const Footer = ({ withoutTopBorder }) => (
           ))}
         </div>
       </div>
-      <div className="with-link-primary-light mt-10 space-y-3 text-sm text-gray-1 lg:mt-16">
+      <div className="with-link-primary-light mt-8 space-y-3 border-t border-gray-3 pt-8 text-sm text-gray-1 md:mt-10 lg:mt-12">
         <p>Copyright The Cilium Authors. All rights reserved.</p>
         <p>
           The Linux Foundation has registered trademarks and uses trademarks. For a list of

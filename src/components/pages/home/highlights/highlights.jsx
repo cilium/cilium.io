@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Banner from 'components/pages/home/banner';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
@@ -80,31 +81,32 @@ const list = [
   },
 ];
 
-const Highlights = ({ className }) => (
-  <section className={className}>
-    <Container className="grid gap-4 md:gap-6 lg:gap-8 lg:grid-cols-3 md:auto-rows-fr">
+const Highlights = ({ withBanner }) => (
+  <section className="mt-10 md:mt-20 lg:mt-32">
+    <Container className="grid gap-4 md:gap-6 lg:grid-cols-3 lg:gap-8">
       {list.map(({ title, items }, index) => (
         <div key={index}>
           <Heading tag="h2" size="sm">
             {title}
           </Heading>
-          <div className="grid grid-cols-1 gap-4 mt-6 lg:mt-9 md:gap-6 lg:gap-8 lg:auto-rows-[130px] xl:auto-rows-fr">
+          <div className="mt-6 grid grid-cols-1 gap-4 md:gap-6 lg:mt-9 lg:auto-rows-[130px] lg:gap-8 xl:auto-rows-fr">
             {items.map((item, index) => (
               <Item {...item} key={index} />
             ))}
           </div>
         </div>
       ))}
+      {withBanner && <Banner className="col-span-full" />}
     </Container>
   </section>
 );
 
 Highlights.propTypes = {
-  className: PropTypes.string,
+  withBanner: PropTypes.bool,
 };
 
 Highlights.defaultProps = {
-  className: null,
+  withBanner: false,
 };
 
 export default Highlights;

@@ -1,8 +1,10 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
-import TwitterIcon from 'icons/twitter.inline.svg';
+import Heading from 'components/shared/heading';
+import TwitterIcon from 'icons/twitter-inverse.inline.svg';
 
 const items = [
   {
@@ -15,32 +17,41 @@ const items = [
   },
 ];
 
-const TwitterCards = ({ className }) => (
-  <section className={className}>
-    <Container className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:gap-8">
-      {items.map(({ text, name }, index) => (
-        <div
-          className="flex flex-col rounded-lg border border-gray-3 p-6 leading-relaxed md:p-8 md:text-lg"
-          key={index}
-        >
-          <TwitterIcon className="h-7 w-7" />
-          <p
-            className="with-link-primary-light my-3 md:my-5"
-            dangerouslySetInnerHTML={{ __html: text }}
-          />
-          <span className="mt-auto font-semibold">{name}</span>
-        </div>
-      ))}
+const TwitterCards = ({ title, className }) => (
+  <section className={classNames('mt-10 md:mt-20 lg:mt-32', className)}>
+    <Container>
+      {title && (
+        <Heading tag="h3" className="text-center">
+          {title}
+        </Heading>
+      )}
+      <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:gap-8 ">
+        {items.map(({ text, name }, index) => (
+          <div
+            className="flex flex-col rounded-lg border border-gray-3 p-6 leading-relaxed md:p-8 md:text-lg"
+            key={index}
+          >
+            <TwitterIcon className="h-16 w-16" />
+            <p
+              className="with-link-primary-light my-3 md:my-5"
+              dangerouslySetInnerHTML={{ __html: text }}
+            />
+            <span className="mt-auto font-semibold">{name}</span>
+          </div>
+        ))}
+      </div>
     </Container>
   </section>
 );
 
 TwitterCards.propTypes = {
   className: PropTypes.string,
+  title: PropTypes.string,
 };
 
 TwitterCards.defaultProps = {
   className: null,
+  title: null,
 };
 
 export default TwitterCards;

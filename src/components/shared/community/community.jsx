@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import { PropTypes } from 'prop-types';
 import React from 'react';
 
-import Banner from 'components/pages/home/banner';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';

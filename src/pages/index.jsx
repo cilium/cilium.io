@@ -31,20 +31,27 @@ const userCommunity1 = {
 };
 
 const userCommunity2 = {
+  title: 'User community',
+  isTitleCentered: true,
   items: [wildLife, adobe, capitalOne, alibabaCloud, masmovil, trip, cengn, digitalOcean],
 };
 
 const IndexPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray" footerWithoutTopBorder>
     <Hero />
-    <UserCommunity className="mt-10 md:mt-20 lg:mt-28" {...userCommunity1} />
-    <Highlights className="mt-10 md:mt-20 lg:mt-28" />
+    <UserCommunity className="py-10 md:py-20 lg:py-32" theme="gray" {...userCommunity1} />
+    <Highlights withBanner />
+    {/* Discover component will have the same name but the content will be from the Get Hands-on with Cilium from PR #31 */}
     <Discover />
-    <UserCommunity className="mt-10 md:mt-20 lg:mt-28" {...userCommunity2} />
+    <UserCommunity
+      className="mt-10 py-10 md:mt-20 md:py-20 lg:mt-28 lg:py-32"
+      theme="gray"
+      {...userCommunity2}
+    />
     <FeaturedTalks />
     <Learn />
-    <Community withBanner />
-    <TwitterCards className="pb-10 md:pb-20 lg:pb-28" />
+    <TwitterCards title="What people think about Cilium" />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

@@ -8,7 +8,7 @@ import svgIllustration3 from 'images/documentation.svg';
 import svgIllustration2 from 'images/monthly-introduction.svg';
 import svgIllustration1 from 'images/weekly-introduction.svg';
 
-const title = 'Discover Cilium';
+const title = 'Get Hands-On With Cilium';
 
 const Discover = () => {
   const { imageIllustration1, imageIllustration2 } = useStaticQuery(graphql`
@@ -97,7 +97,9 @@ const Discover = () => {
   return (
     <section className="mt-12 md:mt-20 lg:mt-28">
       <Container>
-        <Heading tag="h2">{title}</Heading>
+        <Heading className="text-center" tag="h2">
+          {title}
+        </Heading>
         <div className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:gap-6 lg:mt-14 lg:grid-cols-3 xl:gap-8">
           {items.map((item, index) => (
             <CardItem size="sm" {...item} key={index} />
