@@ -60,7 +60,7 @@ const Cards = ({ className, title, items, buttonType, theme, textSize }) => {
                     </Heading>
                     <p
                       className={classNames(
-                        'with-link-primary-light mt-3',
+                        'with-link-primary-medium mt-3',
                         textSize === 'lg' && 'md:text-lg',
                         buttonText && buttonUrl && !isTypeLink && 'mb-5 lg:mb-7',
                         buttonText && buttonUrl && isTypeLink && 'mb-4 lg:mb-6'

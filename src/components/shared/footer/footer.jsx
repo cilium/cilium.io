@@ -32,7 +32,7 @@ const Footer = ({ withTopBorder }) => (
             <span className="sr-only">Cilium</span>
             <Logo className="col-span-1 lg:col-span-1" />
           </Link>
-          <span className="with-link-primary-light mt-6 text-sm leading-none">
+          <span className="with-link-primary-medium mt-6 text-sm leading-none">
             Cilium was originally created by{' '}
             <a className="" href="https://isovalent.com/" target="_blank" rel="noopener noreferrer">
               Isovalent
