@@ -21,7 +21,6 @@ const FORM_STATES = {
 };
 
 const validationSchema = yup.object().shape({
-  firstName: yup.string().trim().required('Name is a required field'),
   email: yup
     .string()
     .trim()
@@ -81,7 +80,6 @@ const Form = ({ formClassName }) => {
               type="text"
               id="firstName"
               name="name"
-              error={errors?.firstName?.message}
               autoComplete="given-name"
               {...register('firstName')}
             />
