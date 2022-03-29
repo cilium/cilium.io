@@ -35,7 +35,6 @@ const Subscribe = () => {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors },
   } = useForm();
   const [formState, setFormState] = useState('default');
@@ -58,11 +57,7 @@ const Subscribe = () => {
       await submitHubspotForm(HUBSPOT_FORM_ID, fields, context);
       setErrorMessage(null);
       setFormState('success');
-      setTimeout(() => {
-        setFormState('default');
-      }, 3000);
       setIsLoading(false);
-      reset();
     } catch (error) {
       setFormState('error');
       setErrorMessage('Something went wrong. Please reload the page and try again');
