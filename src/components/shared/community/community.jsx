@@ -14,24 +14,28 @@ const title = 'Community';
 const items = [
   {
     icon: SlackIcon,
+    logoName: 'Slack',
     title: 'Join our Slack channel',
     url: 'https://cilium.herokuapp.com/',
     target: '_blank',
   },
   {
     icon: GithubIcon,
+    logoName: 'GitHub',
     title: 'Contribute on GitHub',
     url: 'https://github.com/cilium/cilium',
     target: '_blank',
   },
   {
     icon: TwitterIcon,
+    logoName: 'Twitter',
     title: 'Follow us on Twitter',
     url: 'https://twitter.com/ciliumproject',
     target: '_blank',
   },
   {
     icon: YoutubeIcon,
+    logoName: 'YouTube',
     title: 'Watch Echo Livestream',
     url: 'https://www.youtube.com/channel/UCJFUxkVQTBJh3LD1wYBWvuQ',
     target: '_blank',
@@ -49,7 +53,7 @@ const themeClassNames = {
   },
 };
 
-const Community = ({ className, withBanner, theme, isTitleCentered }) => (
+const Community = ({ className, theme, isTitleCentered }) => (
   <section
     className={classNames('py-10 md:py-20 lg:py-28', className, themeClassNames[theme].wrapper)}
   >
@@ -57,9 +61,8 @@ const Community = ({ className, withBanner, theme, isTitleCentered }) => (
       <Heading className={classNames(isTitleCentered && 'text-center')} tag="h2">
         {title}
       </Heading>
-      {withBanner && <Banner />}
       <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-10 md:gap-6 lg:mt-14 lg:grid-cols-4 lg:gap-8">
-        {items.map(({ icon: Icon, title, url, target }, index) => (
+        {items.map(({ icon: Icon, logoName, title, url, target }, index) => (
           <Link
             to={url}
             target={target}
@@ -71,8 +74,8 @@ const Community = ({ className, withBanner, theme, isTitleCentered }) => (
             type="text"
             theme="black"
           >
-            <Icon className="h-9 w-9 md:h-10 md:w-10" />
-            <span className="ml-4 text-center font-semibold md:m-0 md:mt-5 md:text-lg xl:leading-none">
+            <Icon className="h-9 w-9 md:h-11 md:w-11" aria-label={`${logoName} logo`} />
+            <span className="ml-4 text-center font-semibold leading-snug md:m-0 md:mt-[18px] md:text-lg md:leading-snug xl:leading-none">
               {title}
             </span>
           </Link>
@@ -84,14 +87,12 @@ const Community = ({ className, withBanner, theme, isTitleCentered }) => (
 
 Community.propTypes = {
   className: PropTypes.string,
-  withBanner: PropTypes.bool,
   isTitleCentered: PropTypes.bool,
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
 };
 
 Community.defaultProps = {
   className: null,
-  withBanner: false,
   isTitleCentered: false,
   theme: 'white',
 };

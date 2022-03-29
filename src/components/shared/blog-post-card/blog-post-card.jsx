@@ -31,6 +31,7 @@ const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
         image={getImage(ogImage)}
         objectFit="contain"
         alt={title}
+        loading="lazy"
       />
     );
   } else if (coverUrl) {

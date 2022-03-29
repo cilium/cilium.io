@@ -39,7 +39,7 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
             }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
           >
-            <GatsbyImage image={getImage(imageData.gatsbyImage)} alt={name} />
+            <GatsbyImage image={getImage(imageData.gatsbyImage)} alt={name} loading="lazy" />
           </div>
         </div>
       ) : (
@@ -53,7 +53,7 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
       )}
       <div
         className={classNames(
-          'flex grow flex-col px-8 pb-8 text-center',
+          'flex grow flex-col px-6 pb-8 text-center xl:px-8',
           isSmallSize ? '' : 'pt-4'
         )}
       >

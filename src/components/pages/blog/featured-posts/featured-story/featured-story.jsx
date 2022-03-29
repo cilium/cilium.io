@@ -22,32 +22,46 @@ const FeaturedStory = ({
   return (
     <div className={className}>
       <Link
-        className="flex flex-col items-center flex-1 space-y-6 group lg:items-start md:space-y-0 md:flex-row md:space-x-10 xl:space-x-14"
+        className="group flex flex-1 flex-col items-center space-y-6 md:flex-row md:space-y-0 md:space-x-10 lg:items-start xl:space-x-14"
         to={url || path}
         target={url ? '_blank' : ''}
         rel={url ? 'noopener noreferrer' : ''}
       >
-        <div className="flex items-center flex-1 border border-gray-3 transition rounded-2xl group-hover:shadow-tertiary group-hover:border-transparent md:max-w-[592px] xl:flex-none">
-          {ogImage && <GatsbyImage imgClassName="rounded-2xl" image={getImage(ogImage)} alt="" />}
-          {coverUrl && <img className="object-contain rounded-2xl" src={coverUrl} alt={title} />}
+        <div className="flex flex-1 items-center rounded-2xl border border-gray-3 transition group-hover:border-transparent group-hover:shadow-tertiary md:max-w-[592px] xl:flex-none">
+          {ogImage && (
+            <GatsbyImage
+              imgClassName="rounded-2xl"
+              image={getImage(ogImage)}
+              alt=""
+              loading="eager"
+            />
+          )}
+          {coverUrl && (
+            <img
+              className="rounded-2xl object-contain"
+              src={coverUrl}
+              alt={title}
+              loading="eager"
+            />
+          )}
         </div>
-        <div className="flex flex-col flex-1">
+        <div className="flex flex-1 flex-col">
           <span className="font-medium leading-none text-gray-1">{date}</span>
           <Heading className="mt-4 line-clamp-3 group-hover:text-primary-1" tag="h3" size="md">
             {title}
           </Heading>
-          <p className="my-5 md:text-lg md:leading-relaxed line-clamp-4">{summary}</p>
-          <div className="flex flex-wrap mt-auto gap-x-2 gap-y-2">
+          <p className="my-5 line-clamp-4 md:text-lg md:leading-relaxed">{summary}</p>
+          <div className="mt-auto flex flex-wrap gap-x-2 gap-y-2">
             {categories?.map((category) => (
               <span
-                className="inline-flex items-center h-8 text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none"
+                className="inline-flex h-8 items-center rounded bg-additional-4 bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider text-primary-1"
                 key={category}
               >
                 {category}
               </span>
             ))}
             {url && (
-              <div className="inline-flex items-center h-8 text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none">
+              <div className="inline-flex h-8 items-center rounded bg-additional-4 bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider text-primary-1">
                 <span>External</span>
                 <ExternalLinkIcon className="ml-1" />
               </div>

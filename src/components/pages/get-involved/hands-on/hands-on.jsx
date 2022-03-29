@@ -76,7 +76,7 @@ const HandsOn = () => {
     },
   ];
   return (
-    <section className="mt-16 md:mt-20 lg:mt-28 xl:mt-40">
+    <section className="mt-16 md:mt-20 lg:mt-32">
       <Container>
         <Heading className="xs:text-center" tag="h2">
           {title}

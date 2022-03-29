@@ -50,18 +50,18 @@ const Cards = ({ className, title, items, buttonType, theme, textSize }) => {
               const Icon = icons[iconName];
               return (
                 <li
-                  className="col-span-full flex flex-col space-y-4 rounded-xl bg-white p-8 shadow-card md:flex-row md:space-y-0 md:space-x-5 lg:col-span-4 lg:flex-col lg:space-x-0 lg:space-y-5"
+                  className="col-span-full flex flex-col space-y-4 rounded-xl bg-white px-6 py-8 shadow-card md:flex-row md:space-y-0 md:space-x-5 lg:col-span-4 lg:flex-col lg:space-x-0 lg:space-y-5 xl:px-8"
                   key={index}
                 >
-                  {Icon && <Icon className="shrink-0" />}
+                  {Icon && <Icon className="shrink-0" aria-label={`${title} logo`} />}
                   <div className="flex grow flex-col">
                     <Heading size="xs" tag="h3">
                       {title}
                     </Heading>
-                    <div
+                    <p
                       className={classNames(
                         'with-link-primary-light mt-3',
-                        textSize === 'lg' && 'text-lg',
+                        textSize === 'lg' && 'md:text-lg',
                         buttonText && buttonUrl && !isTypeLink && 'mb-5 lg:mb-7',
                         buttonText && buttonUrl && isTypeLink && 'mb-4 lg:mb-6'
                       )}

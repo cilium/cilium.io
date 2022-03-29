@@ -71,6 +71,7 @@ const RelatedProjects = () => {
                   objectFit="contain"
                   image={getImage(image)}
                   alt=""
+                  loading="lazy"
                 />
                 <Heading className="mt-7" tag="h3" size="xs">
                   {title}

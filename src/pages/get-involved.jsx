@@ -97,7 +97,7 @@ const GetInvolved = () => {
     <MainLayout theme="gray" pageMetadata={seo}>
       <HeroWithImage
         className="pb-10 pt-5 md:pt-10 lg:py-16"
-        imgWrapperClassName="mr-0 xl:mr-8"
+        imgWrapperClassName="mr-0 xl:mr-8 lg:!justify-self-center"
         {...hero}
       />
       <Cards
@@ -107,7 +107,7 @@ const GetInvolved = () => {
         theme="gray"
       />
       <Guidelines />
-      <Cards className="mt-16 md:mt-20 lg:mt-28 xl:mt-40" {...cardItems2} buttonType="link" />
+      <Cards className="mt-16 md:mt-20 lg:mt-32" {...cardItems2} buttonType="link" />
       <ReportBugs />
       <HandsOn />
       <Subscribe />

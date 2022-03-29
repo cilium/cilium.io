@@ -12,10 +12,10 @@ const title = 'Telling the Cilium Story';
 const description =
   '<p>Creating an abstract, putting a presentation together, or writing a blog post doesn’t come naturally to everyone. If you are eager to tell your Cilium story and need help, we’re here for you.</p><p>Not a native speaker and/or not confident about your writing skills? No worries. Bring the story and we’ll help you tell it in an engaging way.</p>';
 const buttonText = 'Send Story';
-const buttonUrl = '/';
+const buttonUrl = '/telling-story';
 
 const CiliumStory = () => (
-  <section className="mt-16 md:mt-20 lg:mt-28 xl:mt-36">
+  <section className="mt-16 overflow-hidden pb-8 md:mt-20 lg:mt-28 lg:overflow-visible lg:pb-0 xl:mt-36">
     <Container className="flex flex-col items-center space-y-10 lg:flex-row lg:space-y-0 lg:space-x-20 xl:space-x-[108px]">
       <div className="lg:flex-1 xl:flex-initial">
         <Heading tag="h2">{title}</Heading>
@@ -24,7 +24,7 @@ const CiliumStory = () => (
           {buttonText}
         </Button>
       </div>
-      <div className="relative mx-auto max-w-[90%] shrink-0 lg:mx-0 lg:max-w-none lg:flex-1 xl:flex-none">
+      <div className="relative mx-auto shrink-0 lg:mx-0 lg:max-w-none lg:flex-1 xl:flex-none">
         <img
           className="absolute bottom-[-8%] right-[-6%] w-[24.5%]"
           src={decor2}

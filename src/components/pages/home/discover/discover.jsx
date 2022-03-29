@@ -102,11 +102,11 @@ const Discover = () => {
         <Heading className="text-center" tag="h2">
           {title}
         </Heading>
-        <div className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:gap-6 lg:mt-14 lg:grid-cols-3 xl:gap-8">
+        <ul className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:gap-6 lg:mt-14 lg:grid-cols-3 xl:gap-8">
           {items.map((item, index) => (
             <CardItem size="sm" {...item} key={index} />
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

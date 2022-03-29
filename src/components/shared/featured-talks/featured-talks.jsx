@@ -61,12 +61,13 @@ const FeaturedTalks = () => {
             const card = placeholders[thumbnail];
             return (
               <div key={index}>
-                <Link className="" to={url} target="_blank" rel="noopener noreferrer">
+                <Link to={url} target="_blank" rel="noopener noreferrer">
                   <GatsbyImage
                     className="h-auto w-full rounded-lg border border-gray-3"
                     imgClassName="rounded-lg"
                     image={getImage(card)}
                     alt={title}
+                    loading="lazy"
                   />
                 </Link>
                 <Heading className="mt-3 !text-xl md:mt-5" tag="h3" size="xs">

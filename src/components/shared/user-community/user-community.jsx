@@ -107,7 +107,7 @@ const UserCommunity = ({
               )}
               key={index}
             >
-              <Icon className="h-12" />
+              <Icon className="h-12" aria-label={`${iconName} logo`} />
               <p
                 className={classNames('mt-5', links && 'mb-4')}
                 dangerouslySetInnerHTML={{ __html: text }}
