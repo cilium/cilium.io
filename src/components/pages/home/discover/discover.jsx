@@ -74,8 +74,8 @@ const Discover = () => {
     },
     {
       svgData: {
-        width: 592,
-        height: 256,
+        width: 382,
+        height: 224,
         imageSrc: svgIllustration3,
       },
       name: 'Documentation & Tutorials',
