@@ -22,7 +22,7 @@ const Footer = ({ withTopBorder }) => (
   <footer>
     <Container
       className={classNames(
-        ' pt-10 pb-10 lg:pt-14 lg:pb-16',
+        'pt-10 pb-8 lg:pt-14 lg:pb-9',
         withTopBorder && 'border-t border-gray-3'
       )}
     >

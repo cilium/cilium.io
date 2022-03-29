@@ -1,44 +1,49 @@
 import classNames from 'classnames';
+import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import ChevronIcon from '../images/chevron.inline.svg';
 
+const ANIMATION_DURATION = 0.3;
+
+const variantsAnimation = {
+  hidden: { opacity: 0, height: 0, marginTop: 0 },
+  visible: { opacity: 1, height: 'auto', marginTop: '10px' },
+};
+
 const Item = ({ question, answer, faqId, isDefaultOpen }) => {
   const [isOpen, setIsOpen] = useState(isDefaultOpen);
   const handleButtonClick = () => setIsOpen((currentState) => !currentState);
   return (
-    <div className="py-5 first:pt-0 last:pb-0 relative after:absolute after:h-px after:left-0 sm:after:left-14 after:right-0 after:bottom-0 last:after:hidden after:bg-gray-3">
-      <dt>
+    <div className="relative py-5 after:absolute after:left-[38px] after:right-0 after:bottom-0 after:h-px after:bg-gray-3 first:pt-0 last:pb-0 last:after:hidden sm:after:left-14">
+      <dt aria-expanded={isOpen} aria-controls={faqId}>
         <button
-          className="group text-lg sm:text-xl text-left leading-normal sm:leading-normal font-semibold sm:space-x-5 flex items-center hover:text-primary-1 sm:hover:text-inherit duration-200 transition-colors"
+          className="group flex items-center space-x-3.5 text-left text-lg font-semibold leading-normal sm:space-x-5 sm:text-xl sm:leading-normal"
           type="button"
-          aria-expanded={isOpen}
-          aria-controls={faqId}
           onClick={handleButtonClick}
         >
-          <span
+          <div
             className={classNames(
-              'border-2 relative rounded-full shrink-0 w-6 h-6 duration-200 transition-[background,border,transform,color] hidden',
-              'group-hover:border-hover-1 group-hover:bg-hover-1 group-hover:text-white',
-              'sm:w-9 sm:h-9 sm:block',
+              'relative h-6 w-6 shrink-0 rounded-full border-2 transition-[background,border,transform,color] duration-200 group-hover:border-hover-1 group-hover:bg-hover-1 group-hover:text-white sm:h-9 sm:w-9',
               isOpen
                 ? '-rotate-90 border-primary-1 bg-primary-1 text-white'
                 : 'rotate-0 border-gray-3 group-hover:text-primary-1'
             )}
           >
-            <ChevronIcon className="w-2.5 sm:w-4 h-auto absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2" />
-          </span>
-          <span>{question}</span>
+            <ChevronIcon className="absolute top-1/2 left-1/2 h-auto w-2.5 -translate-x-1/2 -translate-y-1/2 sm:w-4" />
+          </div>
+          <p>{question}</p>
         </button>
       </dt>
 
-      <dd
-        className={classNames(
-          'sm:pl-14 prose sm:prose-lg prose-hr:my-5 sm:prose-hr:my-5 leading-relaxed lg:leading-relaxed max-w-none overflow-hidden duration-300 transition-[opacity,height,margin-top,visibility]',
-          isOpen ? 'opacity-100 mt-2.5 h-auto visible' : 'opacity-0 mt-0 h-0 invisible'
-        )}
+      <motion.dd
+        className="prose max-w-none overflow-hidden pl-[38px] leading-relaxed prose-hr:my-5 sm:prose-lg sm:pl-14 sm:prose-hr:my-5 lg:leading-relaxed"
         id={faqId}
+        initial="hidden"
+        animate={isOpen ? 'visible' : 'hidden'}
+        variants={variantsAnimation}
+        transition={{ duration: ANIMATION_DURATION }}
         dangerouslySetInnerHTML={{ __html: answer }}
       />
     </div>
