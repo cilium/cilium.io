@@ -90,9 +90,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/isovalent/cilium.io-v2"
+    "url": "https://github.com/cilium/cilium.io"
   },
   "bugs": {
-    "url": "https://github.com/isovalent/cilium.io-v2/issues"
+    "url": "https://github.com/cilium/cilium.io/issues"
   }
 }

@@ -16,7 +16,7 @@ const themeClassNames = {
     'primary-normal-case': 'text-primary-1 text-sm hover:text-gray-1 tracking-wider',
   },
   arrow: {
-    common: 'inline-flex items-center text-sm tracking-wider uppercase',
+    common: 'inline-flex items-start text-sm tracking-wider uppercase',
     primary: 'text-primary-1 hover:text-gray-1',
   },
 };
