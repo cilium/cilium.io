@@ -15,7 +15,7 @@ const navigation = [
     { name: 'Enterprise', href: '/enterprise' },
     { name: 'eBPF', href: 'https://ebpf.io/', target: '_blank' },
   ],
-  [{ name: 'Learn', href: '/learn' }],
+  [{ name: 'Get Started', href: '/get-started' }],
 ];
 
 const Footer = ({ withTopBorder }) => (

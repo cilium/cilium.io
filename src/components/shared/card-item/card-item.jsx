@@ -30,6 +30,7 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
             alt=""
             width={imageData.width}
             height={imageData.height}
+            loading="lazy"
             aria-hidden
           />
           <div
@@ -49,6 +50,7 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
           width={svgData.width}
           height={svgData.height}
           alt={name}
+          loading="lazy"
         />
       )}
       <div

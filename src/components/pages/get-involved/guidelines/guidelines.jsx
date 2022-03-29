@@ -28,6 +28,7 @@ const Guidelines = () => (
         height={352}
         src={illustration}
         alt="Guidelines illustration"
+        loading="lazy"
       />
     </Container>
   </section>

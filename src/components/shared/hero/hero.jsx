@@ -31,6 +31,7 @@ const Hero = ({ className, title, description, illustration, theme }) => (
           className="left-auto h-full w-full md:max-w-[720px] lg:absolute lg:-right-10 lg:top-1/2 lg:my-0 lg:h-auto lg:w-[500px] lg:translate-y-[calc(-50%+1rem)] xl:w-[592px] 2xl:left-0"
           src={illustration}
           alt=""
+          loading="eager"
         />
       </div>
     </Container>

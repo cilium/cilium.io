@@ -40,6 +40,7 @@ const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
         className={classNames('rounded-lg object-contain', coverClassNames)}
         src={coverUrl}
         alt={title}
+        loading="lazy"
       />
     );
   } else if (!ogImage && !coverUrl) {
@@ -50,7 +51,7 @@ const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
           coverClassNames
         )}
       >
-        <CiliumLogo />
+        <CiliumLogo aria-label="Cilium logo" />
       </div>
     );
   }

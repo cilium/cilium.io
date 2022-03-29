@@ -19,7 +19,7 @@ const navigation = [
     name: 'Learn',
     childItems: [
       { icon: AdoptersIcon, name: 'Adopters', href: '/adopters' },
-      { icon: GetStartedIcon, name: 'Get Started', href: '/learn' },
+      { icon: GetStartedIcon, name: 'Get Started', href: '/get-started' },
       { icon: GetInvolvedIcon, name: 'Get Involved', href: '/get-involved' },
       { icon: GetHelpIcon, name: 'Get Help', href: '/get-help' },
     ],

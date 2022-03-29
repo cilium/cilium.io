@@ -16,8 +16,8 @@ const Architecture = () => (
         <Heading tag="h2">{title}</Heading>
         <p className="mt-5 md:text-lg">{description}</p>
       </div>
-      <div className="mx-auto col-span-full lg:col-span-7">
-        <img className="xl:max-w-[664px] xl:ml-auto" src={diagram} alt="Diagram" />
+      <div className="col-span-full mx-auto lg:col-span-7">
+        <img className="xl:ml-auto xl:max-w-[664px]" src={diagram} alt="Diagram" loading="lazy" />
       </div>
     </Container>
   </section>
