@@ -41,7 +41,6 @@ const IndexPage = () => (
     <Hero />
     <UserCommunity className="py-10 md:py-20 lg:py-32" theme="gray" {...userCommunity1} />
     <Highlights withBanner />
-    {/* Discover component will have the same name but the content will be from the Get Hands-on with Cilium from PR #31 */}
     <Discover />
     <UserCommunity
       className="mt-10 py-10 md:mt-20 md:py-20 lg:mt-28 lg:py-32"

@@ -33,7 +33,7 @@ const Hero = () => (
       </div>
       <div className="relative col-span-full flex justify-center lg:col-span-6 2xl:col-span-5 2xl:-ml-8">
         <img
-          className="top-0 mt-4 h-full w-full md:mt-10 lg:absolute lg:-right-10 lg:mt-0 lg:h-auto lg:w-[580px] lg:max-w-max xl:-top-16 xl:right-auto xl:left-0 xl:w-max"
+          className="top-0 z-10 mt-4 h-full w-full md:mt-10 lg:absolute lg:-right-10 lg:mt-0 lg:h-auto lg:w-[580px] lg:max-w-max xl:-top-28 xl:right-auto xl:-left-24 xl:w-max"
           src={illustration}
           alt=""
         />

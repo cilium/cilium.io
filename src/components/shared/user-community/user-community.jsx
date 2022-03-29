@@ -78,7 +78,6 @@ const UserCommunity = ({
   title,
   items,
   isTitleCentered,
-  titleTheme,
   theme,
   buttonText,
   buttonUrl,
@@ -86,20 +85,13 @@ const UserCommunity = ({
   <section className={classNames(className, themeClassNames[theme].wrapper)}>
     <Container className="flex flex-col">
       {title && (
-        <Heading
-          className={classNames(
-            isTitleCentered && 'mb-6 text-center',
-            titleTheme === 'gray' ? ' lg:mb-8' : 'md:mb-10 lg:mb-14'
-          )}
-          tag="h3"
-          theme={titleTheme}
-        >
+        <Heading className={classNames(isTitleCentered && 'text-center')} tag="h3">
           {title}
         </Heading>
       )}
       <div
         className={classNames(
-          'grid auto-rows-fr gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4 lg:gap-4 xl:gap-8'
+          'mt-6 grid auto-rows-fr gap-4 sm:grid-cols-2 md:mt-10 md:gap-6 lg:mt-16 lg:grid-cols-4 lg:gap-4 xl:gap-8'
         )}
       >
         {items.map(({ iconName, text, links }, index) => {

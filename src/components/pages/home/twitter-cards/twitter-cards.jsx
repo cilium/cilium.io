@@ -25,7 +25,7 @@ const TwitterCards = ({ title, className }) => (
           {title}
         </Heading>
       )}
-      <div className="mt-16 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:gap-8 ">
+      <div className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:grid-cols-2 md:gap-6 lg:mt-16 lg:gap-8 ">
         {items.map(({ text, name }, index) => (
           <div
             className="flex flex-col rounded-lg border border-gray-3 p-6 leading-relaxed md:p-8 md:text-lg"
