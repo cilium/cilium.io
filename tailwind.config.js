@@ -59,6 +59,7 @@ module.exports = {
         usa: "url('/images/usa.svg')",
         'search-icon': "url('/images/search.svg')",
         loader: "url('/images/loader.svg')",
+        grid: "url('/images/grid.svg')",
       },
       typography: (theme) => ({
         DEFAULT: {

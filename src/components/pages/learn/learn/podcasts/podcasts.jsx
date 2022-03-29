@@ -32,22 +32,22 @@ const items = [
     url: 'https://discopossepodcast.com/ep-153-kubernetes-networking-and-security-and-building-business-on-open-source-with-isovalent-founder-thomas-graf/',
   },
 ];
-function Podcasts({ className }) {
-  return <div className={className}>
+const Podcasts = ({ className }) => (
+  <div className={className}>
     <Heading tag="h3" theme="gray">
       {title}
     </Heading>
     <div className="mt-3.5">
       {items.map(({ name, type, target, url }, index) => (
         <div
-          className="py-3 border-b md:py-4 lg:py-6 last:pb-0 border-gray-3 last:border-none"
+          className="border-b border-gray-3 py-3 last:border-none last:pb-0 md:py-4 lg:py-6"
           key={index}
         >
           <Link
             className="flex space-x-4"
             theme="black-primary"
             type="text"
-            target={target || ''}
+            target={target || null}
             to={url}
           >
             <PlayIcon className="shrink-0" />
@@ -60,7 +60,7 @@ function Podcasts({ className }) {
       ))}
     </div>
   </div>
-}
+);
 
 Podcasts.propTypes = {
   className: PropTypes.string,

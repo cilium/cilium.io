@@ -17,15 +17,15 @@ const items = [
 
 const TwitterCards = ({ className }) => (
   <section className={className}>
-    <Container className="grid grid-cols-1 gap-4 md:gap-6 lg:gap-8 md:grid-cols-2">
+    <Container className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:gap-8">
       {items.map(({ text, name }, index) => (
         <div
-          className="flex flex-col p-6 leading-relaxed border rounded-lg md:text-lg md:p-8 border-gray-3"
+          className="flex flex-col rounded-lg border border-gray-3 p-6 leading-relaxed md:p-8 md:text-lg"
           key={index}
         >
-          <TwitterIcon className="w-7 h-7" />
+          <TwitterIcon className="h-7 w-7" />
           <p
-            className="my-3 md:my-5 with-link-primary-light"
+            className="with-link-primary-light my-3 md:my-5"
             dangerouslySetInnerHTML={{ __html: text }}
           />
           <span className="mt-auto font-semibold">{name}</span>

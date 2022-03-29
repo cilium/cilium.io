@@ -46,10 +46,10 @@ const PopularPosts = ({ className, titleTheme }) => {
   return (
     <div className={className}>
       <Container>
-        <Heading tag="h2" theme={titleTheme} size={titleTheme === 'gray' ? 'xxs' : 'md'}>
+        <Heading tag="h2" theme={titleTheme} size={titleTheme === 'gray' ? '3xs' : 'md'}>
           {blockTitle}
         </Heading>
-        <div className="grid gap-6 mt-6 md:mt-8 sm:grid-cols-2 md:gap-8 lg:grid-cols-3">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 md:mt-8 md:gap-8 lg:grid-cols-3">
           {posts.map(({ frontmatter, fields }, index) => (
             <BlogPostCard {...frontmatter} {...fields} key={index} />
           ))}

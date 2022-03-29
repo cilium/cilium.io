@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import { PopupButton } from 'react-calendly';
@@ -6,72 +7,121 @@ import { PopupButton } from 'react-calendly';
 import Button from 'components/shared/button';
 import Heading from 'components/shared/heading';
 
-function CardItem({ icon: Icon, name, text, buttons, size }) {
-  const has2Buttons = buttons.length === 2;
+const buttonThemesClassNames = {
+  'primary-1':
+    'text-white bg-primary-1 hover:bg-hover-1 disabled:opacity-25 border-2 border-primary-1 disabled:hover:bg-primary-1 focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary-2 outline-none',
+  'outline-gray-dark': 'border-2 border-gray-3 hover:text-primary-1',
+};
+
+const buttonIconClassNames = {
+  base: 'relative !pl-11 lg:!pl-14 after:absolute after:w-[22px] after:h-[22px] after:left-3.5 lg:after:left-6 after:top-1/2 after:-translate-y-1/2',
+  eu: 'after:bg-eu',
+  usa: 'after:bg-usa',
+};
+
+const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
   const isSmallSize = size === 'sm';
   return (
-    <div className="flex flex-col rounded-lg border border-gray-3 bg-white">
-      <Icon className="h-auto w-full" />
+    <li className="flex flex-col rounded-xl shadow-card">
+      {imageData ? (
+        <div className="relative self-center">
+          <img
+            src={imageData.imageSrc}
+            alt=""
+            width={imageData.width}
+            height={imageData.height}
+            aria-hidden
+          />
+          <GatsbyImage
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            image={getImage(imageData.gatsbyImage)}
+            alt={name}
+          />
+        </div>
+      ) : (
+        <img
+          className="self-center"
+          src={svgData.imageSrc}
+          width={svgData.width}
+          height={svgData.height}
+          alt={name}
+        />
+      )}
       <div
         className={classNames(
-          isSmallSize ? 'xl:px-8' : 'md:px-8',
-          'flex grow flex-col items-center p-6 pb-8 md:pt-6 md:pb-11'
+          'flex grow flex-col px-8 pb-8 text-center',
+          isSmallSize ? '' : 'pt-4'
         )}
       >
-        <Heading
-          className="flat-breaks lg:flat-none text-center !leading-normal"
-          size={isSmallSize ? 'xs' : 'sm'}
-          tag="h3"
-          asHTML
-        >
+        <Heading size={isSmallSize ? '2xs' : 'xs'} tag="h3" asHTML>
           {name}
         </Heading>
-        <p className={classNames(isSmallSize ? '' : 'md:text-lg', 'mt-2.5 mb-5 text-center')}>
-          {text}
-        </p>
+        <p
+          className={classNames('mt-2.5 mb-5 lg:mb-7', isSmallSize ? 'text-base' : 'md:text-lg')}
+          dangerouslySetInnerHTML={{ __html: text }}
+        />
         <div
           className={classNames(
-            'mt-auto',
-            has2Buttons &&
-              'grid grid-cols-1 gap-3 xs:grid-cols-2 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2',
-            isSmallSize ? 'xl:gap-x-4' : 'lg:gap-x-5'
+            'mt-auto flex flex-col items-center justify-center space-y-3 xs:flex-row xs:space-y-0 xs:space-x-3 xl:space-x-5',
+            isSmallSize
+              ? 'lg:flex-col lg:space-x-0 lg:space-y-4 xl:flex-row xl:space-y-0'
+              : 'md:flex-col md:space-x-0 md:space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4'
           )}
         >
-          {buttons.map(({ buttonUrl, buttonText, buttonTarget, isPopup }, index) => (
+          {buttons.map(({ title, url, target, theme, iconName, isPopup }, index) => (
             <Fragment key={index}>
               {isPopup ? (
                 <PopupButton
-                  key={index}
-                  url={buttonUrl}
+                  url={url}
                   className={classNames(
+                    'inline-flex cursor-pointer justify-center whitespace-nowrap rounded text-base font-bold !leading-none transition-colors duration-200 disabled:cursor-auto',
                     isSmallSize
-                      ? 'py-2.5 px-3.5'
-                      : 'py-2.5 px-3.5 text-base md:py-3 md:px-5 lg:py-4 lg:px-6 lg:text-lg ',
-                    'inline-flex cursor-pointer justify-center whitespace-nowrap rounded bg-primary-2 font-bold !leading-none text-white outline-none transition-colors duration-200 hover:bg-hover-1 focus-visible:ring focus-visible:ring-primary-2 focus-visible:ring-offset-2 disabled:cursor-auto disabled:opacity-25 disabled:hover:bg-primary-1'
+                      ? 'py-2.5 px-3.5 text-base'
+                      : 'py-2.5 px-3.5 md:py-3 md:px-5 lg:py-4 lg:px-6 lg:text-lg',
+                    buttonThemesClassNames[theme],
+                    iconName && buttonIconClassNames.base,
+                    iconName && buttonIconClassNames[iconName]
                   )}
-                  text={buttonText}
+                  text={title}
                 />
               ) : (
-                <Button key={index} to={buttonUrl} size={size} target={buttonTarget || ''}>
-                  {buttonText}
+                <Button
+                  className="border-2"
+                  to={url}
+                  target={target || null}
+                  rel={target ? 'noopener noreferrer' : null}
+                  theme={theme}
+                  size={size}
+                >
+                  {title}
                 </Button>
               )}
             </Fragment>
           ))}
         </div>
       </div>
-    </div>
+    </li>
   );
-}
+};
 
 CardItem.propTypes = {
-  icon: PropTypes.func.isRequired,
+  imageData: PropTypes.exact({
+    width: PropTypes.number,
+    height: PropTypes.number,
+    imageSrc: PropTypes.string,
+    gatsbyImage: PropTypes.object,
+  }),
+  svgData: PropTypes.exact({
+    imageSrc: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
+  }),
   name: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
   buttons: PropTypes.arrayOf(
     PropTypes.shape({
-      buttonText: PropTypes.string.isRequired,
-      buttonUrl: PropTypes.string.isRequired,
+      buttonText: PropTypes.string,
+      buttonUrl: PropTypes.string,
       buttonTarget: PropTypes.string,
       isPopup: PropTypes.bool,
     })
@@ -80,6 +130,8 @@ CardItem.propTypes = {
 };
 
 CardItem.defaultProps = {
+  imageData: null,
+  svgData: null,
   size: 'md',
 };
 

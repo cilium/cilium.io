@@ -5,10 +5,10 @@ import Hero from 'components/pages/home/hero';
 import Highlights from 'components/pages/home/highlights';
 import Learn from 'components/pages/home/learn';
 import TwitterCards from 'components/pages/home/twitter-cards';
-import UserCommunity from 'components/pages/home/user-community';
 import Community from 'components/shared/community';
 import FeaturedTalks from 'components/shared/featured-talks';
-import MainLayout from 'layouts/main';
+import UserCommunity from 'components/shared/user-community';
+import MainLayout from 'layouts/main/main';
 
 const userCommunity1 = {
   items: [
@@ -172,10 +172,10 @@ const userCommunity2 = {
 const IndexPage = () => (
   <MainLayout>
     <Hero />
-    <UserCommunity {...userCommunity1} />
+    <UserCommunity className="mt-10 md:mt-20 lg:mt-32" {...userCommunity1} />
     <Highlights className="mt-10 md:mt-20 lg:mt-28" />
     <Discover />
-    <UserCommunity {...userCommunity2} />
+    <UserCommunity className="mt-10 md:mt-20 lg:mt-32" {...userCommunity2} />
     <FeaturedTalks />
     <Learn />
     <Community withBanner />
