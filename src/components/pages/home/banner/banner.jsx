@@ -19,7 +19,7 @@ const Banner = ({ className }) => (
       >
         {title}
       </Heading>
-      <CNCFLogo className="h-auto max-w-[296px]" />
+      <CNCFLogo className="h-auto max-w-[200px] sm:max-w-[296px]" />
     </div>
   </div>
 );

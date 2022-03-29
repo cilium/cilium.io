@@ -83,7 +83,7 @@ const list = [
 
 const Highlights = ({ withBanner }) => (
   <section className="mt-10 md:mt-20 lg:mt-32">
-    <Container className="grid gap-4 md:gap-6 lg:grid-cols-3 lg:gap-8">
+    <Container className="grid grid-cols-[minmax(95%,max-content)] gap-4 sm:grid-cols-none md:gap-6 lg:grid-cols-3 lg:gap-8">
       {list.map(({ title, items }, index) => (
         <div key={index}>
           <Heading tag="h2" size="sm">
