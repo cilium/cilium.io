@@ -38,7 +38,7 @@ const overlayVariants = {
   },
 };
 
-const MobileMenu = ({ navigation, isOpen, handleOverlay }) => {
+const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage }) => {
   const controls = useAnimation();
 
   useEffect(() => {
@@ -68,20 +68,25 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay }) => {
       )}
 
       <motion.nav
-        className="safe-paddings py-safe absolute inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 bg-white shadow-lg xl:hidden"
+        className={classNames(
+          'safe-paddings py-safe absolute inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 bg-white shadow-lg xl:hidden',
+          isBlogPage
+            ? 'max-h-[calc(100vh-12.5rem)] sm:max-h-[calc(100vh-11rem)] md:max-h-[calc(100vh-9rem)]'
+            : 'max-h-[calc(100vh-5rem)]'
+        )}
         initial="from"
         animate={controls}
         variants={menuVariants}
         transition={{ duration: ANIMATION_DURATION }}
       >
-        <ul className="flex flex-grow flex-col divide-y divide-gray-3 px-4 md:px-6 lg:px-10">
+        <ul className="flex h-full flex-grow flex-col divide-y divide-gray-3 overflow-x-hidden overflow-y-scroll px-4 md:px-6 lg:px-10">
           {navigation.map((item, index) => (
             <MenuItem {...item} key={index} />
           ))}
         </ul>
         <div
           className={classNames(
-            'flex flex-col items-center space-y-3 border-t border-gray-3 bg-gray-4 px-4 py-[33px]',
+            'mt-auto flex flex-col items-center space-y-3 border-t border-gray-3 bg-gray-4 px-4 py-[33px]',
             'xs:flex-row xs:items-stretch xs:justify-center xs:space-y-0'
           )}
         >

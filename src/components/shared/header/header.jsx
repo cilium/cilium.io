@@ -69,7 +69,7 @@ const Header = ({
             </div>
             <div className="flex items-center xl:hidden">
               {showSearchBox && !isMobileMenuOpen && (
-                <SearchBox className="mr-4 sm:flex" indices={searchIndices} />
+                <SearchBox className="mr-4 hidden sm:flex" indices={searchIndices} />
               )}
               <Burger isToggled={isMobileMenuOpen} onClick={onBurgerClick} />
             </div>
@@ -85,7 +85,12 @@ const Header = ({
         </nav>
       </Container>
     </header>
-    <MobileMenu navigation={navigation} isOpen={isMobileMenuOpen} handleOverlay={handleOverlay} />
+    <MobileMenu
+      isBlogPage={showSearchBox}
+      navigation={navigation}
+      isOpen={isMobileMenuOpen}
+      handleOverlay={handleOverlay}
+    />
     {showSearchBox && <SearchBox className="mx-4 flex sm:hidden" indices={searchIndices} />}
   </div>
 );
