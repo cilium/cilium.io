@@ -6,11 +6,13 @@ import HandsOn from 'components/pages/learn/hands-on';
 import Learn from 'components/pages/learn/learn';
 import News from 'components/pages/learn/news';
 import RelatedProjects from 'components/pages/learn/related-projects';
+import CNCFBanner from 'components/shared/cncf-banner';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
 import UserCommunity from 'components/shared/user-community';
 import illustration from 'images/pages/learn/hero/illustration.svg';
 import MainLayout from 'layouts/main';
+import caseStudiesData from 'utils/case-studies-data';
 import { learn as seo } from 'utils/seo-metadata';
 
 const hero = {
@@ -20,110 +22,23 @@ const hero = {
   illustration,
 };
 
-const userCommunity = {
-  title: 'Use cases',
-  items: [
+const datadog = {
+  iconName: 'datadog',
+  text: 'How Datadog uses Cilium',
+  links: [
     {
-      iconName: 'aws',
-      text: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
-      links: [
-        {
-          linkText: 'Read blog',
-          linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
-          linkTarget: '_blank',
-        },
-      ],
-    },
-    {
-      iconName: 'google',
-      text: 'Google chooses Cilium for Google Kubernetes Engine (GKE) networking',
-      links: [
-        {
-          linkText: 'Read blog',
-          linkUrl:
-            'https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebfp-and-cilium-to-google-kubernetes-engine',
-          linkTarget: '_blank',
-        },
-      ],
-    },
-    {
-      iconName: 'bell',
-      text: 'Why eBPF is changing the Telco networking space?',
-      links: [
-        {
-          linkText: 'Watch video',
-          linkUrl: 'https://www.youtube.com/watch?v=fNtG0iHYne4',
-          linkTarget: '_blank',
-        },
-      ],
-    },
-    {
-      iconName: 'sky',
-      text: 'eBPF & Cilium at Sky',
-      links: [
-        {
-          linkText: 'Watch video',
-          linkUrl: 'https://www.youtube.com/watch?v=u-4naOMfs_w',
-          linkTarget: '_blank',
-        },
-      ],
-    },
-    {
-      iconName: 'adobe',
-      text: 'What Makes a Good Multi-tenant Kubernetes Solution',
-      links: [
-        {
-          linkText: 'Video 1',
-          linkUrl: 'https://www.youtube.com/watch?v=7UQ2CU6UEGY&ab_channel=eBPFSummit',
-          linkTarget: '_blank',
-        },
-        {
-          linkText: 'Video 2',
-          linkUrl: 'https://www.youtube.com/watch?v=39FLsSc2P-Y&feature=youtu.be&t=116',
-          linkTarget: '_blank',
-        },
-      ],
-    },
-    {
-      iconName: 'capitalOne',
-      text: 'Building a Secure and Maintainable PaaS',
-      links: [
-        {
-          linkText: 'Watch video',
-          linkUrl: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w&ab_channel=eBPFSummit',
-          linkTarget: '_blank',
-        },
-      ],
-    },
-    {
-      iconName: 'datadog',
-      text: 'How Datadog uses Cilium',
-      links: [
-        {
-          linkText: 'Watch video',
-          linkUrl: 'https://www.youtube.com/watch?v=6mTVuZUHLBg&ab_channel=eBPFSummit',
-          linkTarget: '_blank',
-        },
-      ],
-    },
-    {
-      iconName: 'gitlab',
-      text: 'Kubernetes Network Policies in Action with Cilium',
-      links: [
-        {
-          linkText: 'Video',
-          linkUrl: 'https://www.youtube.com/watch?v=kwQ0ooO3UM8&ab_channel=eBPFSummit',
-          linkTarget: '_blank',
-        },
-        {
-          linkText: 'Docs',
-          linkUrl:
-            'https://docs.gitlab.com/ee/user/application_security/threat_monitoring/#container-network-policy',
-          linkTarget: '_blank',
-        },
-      ],
+      linkText: 'Watch video',
+      linkUrl: 'https://www.youtube.com/watch?v=6mTVuZUHLBg&ab_channel=eBPFSummit',
+      linkTarget: '_blank',
     },
   ],
+};
+
+const { google, bell, gitlab, aws, sky, adobe, capitalOne } = caseStudiesData;
+
+const userCommunity = {
+  title: 'Use cases',
+  items: [aws, google, bell, sky, adobe, capitalOne, datadog, gitlab],
 };
 
 const LearnPage = () => (
@@ -132,6 +47,7 @@ const LearnPage = () => (
     <Highlights className="mt-10 md:mt-20" />
     <Architecture />
     <HandsOn />
+    <CNCFBanner />
     <Learn />
     <RelatedProjects />
     <UserCommunity

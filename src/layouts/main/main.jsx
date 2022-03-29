@@ -17,10 +17,9 @@ const navigation = [
   { name: 'Enterprise', href: '/enterprise' },
   {
     name: 'Learn',
-    href: '/learn',
     childItems: [
       { icon: AdoptersIcon, name: 'Adopters', href: '/adopters' },
-      { icon: GetStartedIcon, name: 'Get Started', href: '/get-started' },
+      { icon: GetStartedIcon, name: 'Get Started', href: '/learn' },
       { icon: GetInvolvedIcon, name: 'Get Involved', href: '/get-involved' },
       { icon: GetHelpIcon, name: 'Get Help', href: '/get-help' },
     ],

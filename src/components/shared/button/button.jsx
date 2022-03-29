@@ -8,7 +8,7 @@ const commonClassNames =
   'inline-flex font-bold justify-center !leading-none whitespace-nowrap rounded transition-colors duration-200 disabled:bg-opacity-40 disabled:cursor-auto focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary-2 outline-none';
 const themeClassNames = {
   'primary-1':
-    'text-white bg-primary-1 hover:bg-hover-1 disabled:hover:bg-primary-1 border-primary-1',
+    'text-white bg-primary-1 hover:bg-hover-1 disabled:hover:bg-primary-1 disabled:hover:bg-opacity-40 border-primary-1',
   'primary-2': 'text-white bg-primary-2 hover:bg-hover-1 disabled:hover:bg-primary-2',
   outline: 'border-2 border-black hover:text-gray-1 hover:border-gray-1',
   'outline-gray': 'border border-gray-3 hover:text-primary-1',

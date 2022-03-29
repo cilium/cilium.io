@@ -147,6 +147,17 @@ export default {
       },
     ],
   },
+  sky: {
+    iconName: 'sky',
+    text: 'eBPF & Cilium at Sky',
+    links: [
+      {
+        linkText: 'Watch video',
+        linkUrl: 'https://www.youtube.com/watch?v=u-4naOMfs_w',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   canonical: {
     iconName: 'canonical',
     text: `<b>Canonical</b>'s Kubernetes distribution microk8s uses Cilium as CNI plugin`,

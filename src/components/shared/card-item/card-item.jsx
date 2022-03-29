@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import PropTypes from 'prop-types';
+import PropTypes, { number } from 'prop-types';
 import React, { Fragment } from 'react';
 import { PopupButton } from 'react-calendly';
 
@@ -32,7 +32,13 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
             height={imageData.height}
             aria-hidden
           />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <div
+            style={{
+              width: `${Math.round((imageData.gatsbyImageWidth / imageData.width) * 100)}%`,
+              height: 'auto',
+            }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
             <GatsbyImage image={getImage(imageData.gatsbyImage)} alt={name} />
           </div>
         </div>
@@ -108,6 +114,7 @@ CardItem.propTypes = {
     height: PropTypes.number,
     imageSrc: PropTypes.string,
     gatsbyImage: PropTypes.object,
+    gatsbyImageWidth: number,
   }),
   svgData: PropTypes.exact({
     imageSrc: PropTypes.string,

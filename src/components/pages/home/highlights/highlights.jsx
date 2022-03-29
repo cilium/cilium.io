@@ -1,7 +1,5 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-import Banner from 'components/pages/home/banner';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
@@ -81,7 +79,7 @@ const list = [
   },
 ];
 
-const Highlights = ({ withBanner }) => (
+const Highlights = () => (
   <section className="mt-10 md:mt-20 lg:mt-32">
     <Container className="grid grid-cols-[minmax(95%,max-content)] gap-4 sm:grid-cols-none md:gap-6 lg:grid-cols-3 lg:gap-8">
       {list.map(({ title, items }, index) => (
@@ -96,17 +94,8 @@ const Highlights = ({ withBanner }) => (
           </div>
         </div>
       ))}
-      {withBanner && <Banner className="col-span-full" />}
     </Container>
   </section>
 );
-
-Highlights.propTypes = {
-  withBanner: PropTypes.bool,
-};
-
-Highlights.defaultProps = {
-  withBanner: false,
-};
 
 export default Highlights;
