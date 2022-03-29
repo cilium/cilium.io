@@ -1,9 +1,9 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 import Link from 'components/shared/link';
 
-import ChevronIcon from '../images/chevron.inline.svg';
 import Submenu from '../submenu';
 
 const MenuItem = ({ name, href, target, childItems }) => {
@@ -30,7 +30,22 @@ const MenuItem = ({ name, href, target, childItems }) => {
         >
           <span>{name}</span>
         </Tag>
-        {childItems && <ChevronIcon className="mr-2.5 h-auto w-3.5" />}
+        {childItems && (
+          <div className="relative h-1.5 w-[12.5px]">
+            <span
+              className={classNames(
+                'absolute top-0.5 right-0 h-0.5 w-2 bg-black transition-transform duration-200',
+                isSubmenuOpen ? 'rotate-45' : '-rotate-45'
+              )}
+            />
+            <span
+              className={classNames(
+                'absolute top-0.5 left-0 h-0.5 w-2 bg-black transition-transform duration-200',
+                isSubmenuOpen ? '-rotate-45' : 'rotate-45'
+              )}
+            />
+          </div>
+        )}
       </div>
       {childItems && <Submenu childItems={childItems} isOpen={isSubmenuOpen} />}
     </li>

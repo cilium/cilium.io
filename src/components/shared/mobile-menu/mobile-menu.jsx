@@ -126,8 +126,11 @@ MobileMenu.propTypes = {
   ).isRequired,
   isOpen: PropTypes.bool.isRequired,
   handleOverlay: PropTypes.func.isRequired,
+  isBlogPage: PropTypes.bool,
 };
 
-MobileMenu.defaultProps = {};
+MobileMenu.defaultProps = {
+  isBlogPage: null,
+};
 
 export default MobileMenu;
