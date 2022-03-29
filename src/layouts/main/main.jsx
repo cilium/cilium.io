@@ -28,7 +28,12 @@ const navigation = [
     name: 'News and media',
     childItems: [
       { icon: BlogIcon, name: 'Blog', href: '/blog' },
-      { icon: BrandingIcon, name: 'Branding', href: '/' },
+      {
+        icon: BrandingIcon,
+        name: 'Branding',
+        href: 'https://github.com/cncf/artwork/blob/master/examples/incubating.md#cilium-logos',
+        target: '_blank',
+      },
       { icon: NewsletterIcon, name: 'Newsletter', href: '/' },
     ],
   },
