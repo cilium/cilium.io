@@ -26,7 +26,7 @@ const Hero = () => (
           dangerouslySetInnerHTML={{ __html: description }}
         />
         <div className="mt-5 flex flex-col items-start md:mt-7 xl:flex-row xl:items-center ">
-          <Button to="/learn" theme="primary-1">
+          <Button to="/get-started" theme="primary-1">
             Discover Cilium
           </Button>
         </div>
