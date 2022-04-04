@@ -70,10 +70,10 @@ const SearchResult = ({ indices, className }) => {
           <HitsInIndex allResultsShown={allResultsShown} index={index} key={index.name} />
         ))}
       </div>
-      <div className="bg-gray-4 p-3 flex rounded-b border-t border-gray-3">
+      <div className="bg-gray-4 p-3 flex rounded-b border-t border-gray-3 lg:flex-col-reverse xl:flex-row">
         {!allResultsShown && (
           <button
-            className="flex items-center mr-auto text-primary-1 uppercase text-xs font-bold tracking-wider leading-none"
+            className="flex items-center mr-auto text-primary-1 uppercase text-xs font-bold tracking-wider leading-none lg:mt-4 xl:mt-0"
             type="button"
             onClick={() => setAllResultsShown(!allResultsShown)}
           >
@@ -81,7 +81,10 @@ const SearchResult = ({ indices, className }) => {
             <ChevronIcon className="ml-1 hidden sm:inline-block" />
           </button>
         )}
-        <AlgoliaLogo className="ml-auto" />
+        <div className="xl:ml-auto inline-flex items-center space-x-2">
+          <span className="text-xs text-gray-1 leading-none">Search By Algolia</span>
+          <AlgoliaLogo className="shrink-0" />
+        </div>
       </div>
     </div>
   );
