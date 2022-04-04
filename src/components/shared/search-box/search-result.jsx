@@ -81,10 +81,17 @@ const SearchResult = ({ indices, className }) => {
             <ChevronIcon className="ml-1 hidden sm:inline-block" />
           </button>
         )}
-        <div className="xl:ml-auto inline-flex items-center space-x-2">
-          <span className="text-xs text-gray-1 leading-none">Search By Algolia</span>
+        <Link
+          className="xl:ml-auto inline-flex items-center space-x-2 group"
+          to="https://www.algolia.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span className="text-xs text-gray-1 leading-none group-hover:text-black transition-colors duration-200">
+            Search By Algolia
+          </span>
           <AlgoliaLogo className="shrink-0" />
-        </div>
+        </Link>
       </div>
     </div>
   );
