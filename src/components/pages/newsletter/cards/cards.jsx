@@ -26,6 +26,7 @@ const Cards = () => {
         {
           title: 'Follow on Twitter',
           url: 'https://twitter.com/ciliumproject',
+          target: '_blank',
         },
       ],
       image: billMulligan,
@@ -37,11 +38,13 @@ const Cards = () => {
       links: [
         {
           title: 'Send on Slack',
-          url: '/',
+          url: 'https://cilium.herokuapp.com/',
+          target: '_blank',
         },
         {
           title: 'Write an email',
-          url: '/',
+          url: 'mailto:bill@isovalent.com',
+          target: '_blank',
         },
       ],
       image: submitArticleSvg,
@@ -65,13 +68,15 @@ const Cards = () => {
                 dangerouslySetInnerHTML={{ __html: description }}
               />
               <div className="mt-auto mb-6 flex flex-col space-y-3 xs:flex-row xs:space-y-0 xl:mb-0">
-                {links.map(({ title, url }, index) => (
+                {links.map(({ title, url, target }, index) => (
                   <Link
                     className="relative before:absolute before:top-1/2 before:left-2.5 before:hidden before:h-1 before:w-1 before:-translate-y-1/2 before:rounded-full before:bg-gray-5 first:pl-0 first:before:hidden xs:pl-6 xs:before:inline-block"
                     type="text"
                     theme="primary"
                     key={index}
                     to={url}
+                    target={target || null}
+                    rel={target ? 'noopener noreferrer' : null}
                   >
                     {title}
                   </Link>
