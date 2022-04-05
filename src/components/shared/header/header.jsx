@@ -63,7 +63,14 @@ const Header = ({
                   size="xs"
                 >
                   <SlackIcon className="h-4 w-4" />
-                  <span className="hidden xl:ml-1.5 xl:block">Join Slack</span>
+                  <span
+                    className={classNames(
+                      'hidden xl:ml-1.5',
+                      showSearchBox ? '2xl:block' : 'xl:block'
+                    )}
+                  >
+                    Join Slack
+                  </span>
                 </Button>
               </div>
             </div>
