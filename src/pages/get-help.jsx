@@ -26,16 +26,17 @@ const items = [
     iconName: 'support',
     title: 'Training and Support',
     description: 'Please check the Enterprise page.',
-    buttonText: 'Check it Now',
+    buttonText: 'Go There Now',
     buttonUrl: '/enterprise',
   },
   {
     iconName: 'github',
     title: 'GitHub',
     description:
-      'Cilium uses GitHub tags to maintain a list of asked questions. So you can check if your question is answered.',
+      'Cilium uses GitHub tags to maintain a list of asked questions. You can check if your question is answered there.',
     buttonText: 'Join GitHub',
-    buttonUrl: 'https://github.com/cilium/cilium',
+    buttonUrl:
+      'https://github.com/cilium/cilium/issues?utf8=%E2%9C%93&q=label%3Akind%2Fquestion%20',
     buttonTarget: '_blank',
   },
 ];
@@ -52,7 +53,7 @@ const GetHelp = () => {
   `);
   const hero = {
     title: 'Find out how to get help with Cilium',
-    description: 'Get help with Cilium through slack, training, support and FAQs',
+    description: 'Get help with Cilium through slack, training, support, and FAQs',
     imgWrapperClassName: 'lg:!col-start-7',
     heroImage,
     decor1: {
@@ -77,7 +78,13 @@ const GetHelp = () => {
       <CiliumStory />
       <EventBox />
       {/* <Faq /> */}
-      <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
+      <Community
+        className="mt-10 md:mt-20 lg:mt-32"
+        theme="gray"
+        title="Join our community"
+        isTitleCentered
+        withImage
+      />
     </MainLayout>
   );
 };
