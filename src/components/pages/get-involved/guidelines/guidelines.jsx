@@ -10,7 +10,7 @@ const title = 'Brand and Logo Guidelines';
 const description =
   'Check out the branding section for logos, color, and icons for your website, swag, or presentation.';
 const buttonText = 'Check Guidelines';
-const buttonUrl = '/';
+const buttonUrl = 'https://github.com/cncf/artwork/blob/master/examples/incubating.md#cilium-logos';
 
 const Guidelines = () => (
   <section className="mt-10 md:mt-20 lg:mt-28">
@@ -18,7 +18,13 @@ const Guidelines = () => (
       <div className="col-span-full lg:col-span-5">
         <Heading tag="h2">{title}</Heading>
         <p className="mt-5 text-lg">{description}</p>
-        <Button className="mt-7" theme="primary-1" to={buttonUrl}>
+        <Button
+          className="mt-7"
+          theme="primary-1"
+          to={buttonUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {buttonText}
         </Button>
       </div>

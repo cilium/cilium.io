@@ -10,7 +10,7 @@ const title = 'Security Bugs';
 const description =
   'We strongly encourage you to report security vulnerabilities to our private security mailing list';
 const buttonText = 'Report a Bug';
-const buttonUrl = '/';
+const buttonUrl = 'mailto:security@cilium.io';
 
 const ReportBugs = () => (
   <section className="mt-10">

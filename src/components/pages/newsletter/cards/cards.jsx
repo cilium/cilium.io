@@ -1,6 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
@@ -9,7 +8,7 @@ import Link from 'components/shared/link';
 
 import submitArticleSvg from './images/submit-article.svg';
 
-const Cards = (props) => {
+const Cards = () => {
   const { billMulligan } = useStaticQuery(graphql`
     query {
       billMulligan: file(relativePath: { eq: "pages/newsletter/cards/bill-mulligan.png" }) {
@@ -22,7 +21,7 @@ const Cards = (props) => {
   const items = [
     {
       title: 'eCHO News is curated by Bill Mulligan',
-      description: 'Bill Mulligan is working to grow the Cilium community',
+      description: 'Bill Mulligan is working to grow<br/> the Cilium community',
       links: [
         {
           title: 'Follow on Twitter',
@@ -32,9 +31,9 @@ const Cards = (props) => {
       image: billMulligan,
     },
     {
-      title: 'Interested in submitting an article?',
+      title: 'Interested in<br/> submitting an article?',
       description:
-        'Send it to the Cilium slack or email <a href="mailto:bill@isovalent.com">bill@isovalent.com</a>',
+        'Send it to the Cilium slack or<br/> email <a href="mailto:bill@isovalent.com">bill@isovalent.com</a>',
       links: [
         {
           title: 'Send on Slack',
@@ -58,10 +57,13 @@ const Cards = (props) => {
             key={index}
           >
             <div className="flex flex-col sm:max-w-[290px] md:max-w-none xl:max-w-[285px]">
-              <Heading tag="h3" size="xs">
+              <Heading className="flat-breaks xl:flat-none" tag="h3" size="xs" asHTML>
                 {title}
               </Heading>
-              <p className="mt-2.5 mb-6" dangerouslySetInnerHTML={{ __html: description }} />
+              <p
+                className="with-black-link flat-breaks xl:flat-none mt-2.5 mb-6"
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
               <div className="mt-auto mb-6 flex flex-col space-y-3 xs:flex-row xs:space-y-0 xl:mb-0">
                 {links.map(({ title, url }, index) => (
                   <Link
@@ -89,9 +91,5 @@ const Cards = (props) => {
     </div>
   );
 };
-
-Cards.propTypes = {};
-
-Cards.defaultProps = {};
 
 export default Cards;

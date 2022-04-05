@@ -81,6 +81,7 @@ const UserCommunity = ({
   theme,
   buttonText,
   buttonUrl,
+  buttonTarget,
 }) => (
   <section className={classNames(className, themeClassNames[theme].wrapper)}>
     <Container className="flex flex-col">
@@ -137,6 +138,8 @@ const UserCommunity = ({
           className="mx-auto mt-6 w-full xs:w-auto md:mt-10 lg:mt-14"
           theme="primary-1"
           to={buttonUrl}
+          target={buttonTarget || null}
+          rel={buttonTarget ? 'noopener noreferrer' : null}
         >
           {buttonText}
         </Button>
@@ -149,7 +152,6 @@ UserCommunity.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string,
   isTitleCentered: PropTypes.bool,
-  titleTheme: PropTypes.string,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       iconName: PropTypes.string.isRequired,
@@ -166,16 +168,17 @@ UserCommunity.propTypes = {
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
   buttonText: PropTypes.string,
   buttonUrl: PropTypes.string,
+  buttonTarget: PropTypes.string,
 };
 
 UserCommunity.defaultProps = {
   className: null,
   title: null,
-  titleTheme: null,
   isTitleCentered: false,
   theme: 'white',
   buttonText: null,
   buttonUrl: null,
+  buttonTarget: null,
 };
 
 export default UserCommunity;

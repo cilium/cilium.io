@@ -12,13 +12,16 @@ const title = 'Event in a Box';
 const description =
   'All you need for a successful Cilium talk. Are you passionate about Cilium and want to share your experience with the broader community? We want to help you tell your story! Whether writing a blog post, creating a YouTube or Twitch video, or speaking at a conference, we will help you deliver your Cilium story to a broad audience.';
 const links = [
+  // {
+  //   text: 'Cilium intro slides',
+  //   url: '/',
+  //   description: 'As start Cilium & eBPF Introduction CNCF Bratislava',
+  // },
   {
-    text: 'Cilium intro slides',
-    url: '/',
-    description: 'As start Cilium & eBPF Introduction CNCF Bratislava',
+    text: 'Reach out on Slack with questions',
+    url: 'https://cilium.herokuapp.com/',
+    target: '_blank',
   },
-  { text: 'Request swag for attendees', url: '/' },
-  { text: 'Reach out on Slack with questions', url: '/' },
 ];
 const EventBox = () => (
   <section className="mt-10 overflow-hidden pb-8 md:mt-20 lg:mt-28 lg:overflow-visible lg:pb-0 xl:mt-48">
@@ -53,9 +56,15 @@ const EventBox = () => (
         <Heading tag="h2">{title}</Heading>
         <p className="mt-5">{description}</p>
         <ul className="mt-4 space-y-4 border-t border-gray-3 pt-4 lg:mt-6 lg:pt-6">
-          {links.map(({ text, url, description }, index) => (
+          {links.map(({ text, url, target, description }, index) => (
             <li className="leading-none" key={index}>
-              <Link theme="primary" type="text" to={url}>
+              <Link
+                theme="primary"
+                type="text"
+                to={url}
+                target={target || null}
+                rel={target ? 'noopener noreferrer' : null}
+              >
                 {text}
               </Link>
               {description && <span className="mt-2.5 block text-sm">{description}</span>}

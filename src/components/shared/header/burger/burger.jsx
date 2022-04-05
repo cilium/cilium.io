@@ -96,7 +96,7 @@ const Burger = ({ className, theme, isToggled, onClick }) => (
 
 Burger.propTypes = {
   className: PropTypes.string,
-  theme: PropTypes.oneOf(['white', 'black']).isRequired,
+  theme: PropTypes.oneOf(['white', 'black']),
   isToggled: PropTypes.bool,
   onClick: PropTypes.func,
 };
@@ -105,6 +105,7 @@ Burger.defaultProps = {
   className: null,
   isToggled: false,
   onClick: null,
+  theme: 'white',
 };
 
 export default Burger;

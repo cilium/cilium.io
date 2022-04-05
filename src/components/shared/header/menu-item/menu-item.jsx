@@ -48,6 +48,7 @@ MenuItem.propTypes = {
     PropTypes.exact({
       name: PropTypes.string.isRequired,
       href: PropTypes.string,
+      target: PropTypes.string,
       icon: PropTypes.func,
     })
   ),
