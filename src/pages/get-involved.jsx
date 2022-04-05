@@ -35,7 +35,7 @@ const cardItems1 = [
     title: 'Newsletter',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     buttonText: 'Subscribe to newsletter',
-    buttonUrl: '/',
+    buttonUrl: '/newsletter',
   },
 ];
 
