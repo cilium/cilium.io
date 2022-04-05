@@ -25,7 +25,7 @@ const cardItems1 = [
   {
     iconName: 'twitter',
     title: 'Twitter',
-    description: 'Don’t forget to follow Cilium on Twitter for the latest news and announcements.',
+    description: 'Follow Cilium on Twitter for the latest news and announcements.',
     buttonText: 'Follow Cilium on Twitter',
     buttonUrl: 'https://twitter.com/ciliumproject',
     buttonTarget: '_blank',
@@ -33,7 +33,7 @@ const cardItems1 = [
   {
     iconName: 'newsletter',
     title: 'Newsletter',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+    description: 'Keep up with the latest news from the Cilium and eBPF community',
     buttonText: 'Subscribe to newsletter',
     buttonUrl: '/',
   },
