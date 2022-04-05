@@ -31,4 +31,10 @@ const tellingStory = {
     'Are you passionate about Cilium and sharing your experience with the broader community? We want to help you tell your story!',
 };
 
-export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory };
+const newsletter = {
+  title: 'Subscribe to bi-weekly eCHO News',
+  description:
+    'If you want to keep up on the latest in cloud native networking, observability, and security this is your source',
+};
+
+export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter };
