@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import { StaticImage } from 'gatsby-plugin-image';
 import { PropTypes } from 'prop-types';
 import React from 'react';
 
@@ -11,9 +10,7 @@ import SlackIcon from 'icons/slack.inline.svg';
 import TwitterIcon from 'icons/twitter.inline.svg';
 import YoutubeIcon from 'icons/youtube.inline.svg';
 
-import decor1 from './images/decor-1.svg';
-import decor2 from './images/decor-2.svg';
-
+const title = 'Community';
 const items = [
   {
     icon: SlackIcon,
@@ -56,7 +53,7 @@ const themeClassNames = {
   },
 };
 
-const Community = ({ className, theme, isTitleCentered, title, withImage }) => (
+const Community = ({ className, theme, isTitleCentered }) => (
   <section
     className={classNames(
       'overflow-hidden py-10 sm:overflow-visible md:py-20 lg:py-28',
@@ -88,36 +85,6 @@ const Community = ({ className, theme, isTitleCentered, title, withImage }) => (
           </Link>
         ))}
       </div>
-      {withImage && (
-        <div className="relative mt-8">
-          <img
-            className="absolute right-[-2.88%] bottom-[-7.4%] w-[13.32%] max-w-none"
-            width={1234}
-            height={455}
-            src={decor2}
-            alt=""
-            aria-hidden
-          />
-          <StaticImage
-            className="rounded-xl"
-            imgClassName="rounded-xl"
-            src="./images/team.jpg"
-            width={1216}
-            height={473}
-            quality={95}
-            loading="lazy"
-            alt="Cilium Team"
-          />
-          <img
-            className="absolute top-0 left-[-2.96%] w-[101.48%] max-w-none"
-            width={162}
-            height={162}
-            src={decor1}
-            alt=""
-            aria-hidden
-          />
-        </div>
-      )}
     </Container>
   </section>
 );
@@ -126,16 +93,12 @@ Community.propTypes = {
   className: PropTypes.string,
   isTitleCentered: PropTypes.bool,
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
-  title: PropTypes.string,
-  withImage: PropTypes.bool,
 };
 
 Community.defaultProps = {
   className: null,
   isTitleCentered: false,
   theme: 'white',
-  title: 'Community',
-  withImage: false,
 };
 
 export default Community;

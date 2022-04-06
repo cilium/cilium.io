@@ -26,7 +26,7 @@ const CiliumStory = () => (
       </div>
       <div className="relative  col-span-full justify-self-center lg:col-span-6 lg:justify-self-end">
         <img
-          className="absolute bottom-[-8%] right-[-6%] w-[24.5%]"
+          className="absolute bottom-[-8%] right-[-5.4%] w-[24.4%]"
           src={decor2}
           alt=""
           aria-hidden
@@ -39,10 +39,10 @@ const CiliumStory = () => (
           height={396}
           quality={95}
           loading="lazy"
-          alt=""
+          alt="Cilium community"
         />
         <img
-          className="absolute bottom-0 left-[-7%] w-[103%] max-w-none"
+          className="absolute top-[-8%] left-[-7%] w-[103%] max-w-none"
           src={decor1}
           alt=""
           aria-hidden
