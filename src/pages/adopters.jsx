@@ -84,21 +84,35 @@ const logos1 = {
   title: 'Deploy on your prefered cloud',
   items: [
     'aws',
-    'tencentCloud',
     'googleCloud',
-    'azure',
-    'appuio',
+    'sovereign',
     'alibabaCloud',
     'scaleway',
+    'appuio',
+    'civo',
+    'tencentCloud',
     'digitalOcean',
     'openStack',
+    'daocloud',
+    'azure',
   ],
   spaceXSize: 'sm',
 };
 
 const logos2 = {
   title: 'Use your favorite Kubernetes installers',
-  items: ['kind', 'kubespray', 'kops'],
+  items: [
+    'kubeone',
+    'kubeasz',
+    'kind',
+    'amazonEks',
+    'gardener',
+    'rke2',
+    'kubekey',
+    'kubespray',
+    'kops',
+    'crane',
+  ],
   spaceXSize: 'md',
 };
 
