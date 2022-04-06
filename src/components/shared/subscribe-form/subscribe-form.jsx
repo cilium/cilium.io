@@ -55,6 +55,7 @@ const SubscribeForm = ({ className }) => {
       setIsLoading(false);
     } catch (error) {
       setFormState('error');
+      setIsLoading(false);
       setErrorMessage('Something went wrong. Please reload the page and try again');
     }
   };
