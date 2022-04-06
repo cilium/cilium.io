@@ -1,16 +1,16 @@
 import React from 'react';
 
+import Architecture from 'components/pages/get-started/architecture';
+import HandsOn from 'components/pages/get-started/hands-on';
+import Learn from 'components/pages/get-started/learn';
+import News from 'components/pages/get-started/news';
+import RelatedProjects from 'components/pages/get-started/related-projects';
 import Highlights from 'components/pages/home/highlights';
-import Architecture from 'components/pages/learn/architecture';
-import HandsOn from 'components/pages/learn/hands-on';
-import Learn from 'components/pages/learn/learn';
-import News from 'components/pages/learn/news';
-import RelatedProjects from 'components/pages/learn/related-projects';
 import CNCFBanner from 'components/shared/cncf-banner';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
 import UserCommunity from 'components/shared/user-community';
-import illustration from 'images/pages/learn/hero/illustration.svg';
+import illustration from 'images/pages/get-started/hero/illustration.svg';
 import MainLayout from 'layouts/main';
 import caseStudiesData from 'utils/case-studies-data';
 import { learn as seo } from 'utils/seo-metadata';
