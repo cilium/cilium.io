@@ -5,15 +5,9 @@ import React from 'react';
 
 const ANIMATION_DURATION = 0.2;
 
-const Burger = ({ className, theme, isToggled, onClick }) => (
+const Burger = ({ className, isToggled, onClick }) => (
   <motion.button
-    className={classNames(
-      'relative h-5 w-7 shrink-0',
-      theme === 'white' && 'text-white',
-      theme === 'black' && 'text-black',
-      isToggled && 'text-black',
-      className
-    )}
+    className={classNames('relative h-5 w-7 shrink-0 text-black', className)}
     type="button"
     animate={isToggled ? 'toggled' : 'initial'}
     onClick={onClick}
@@ -96,7 +90,6 @@ const Burger = ({ className, theme, isToggled, onClick }) => (
 
 Burger.propTypes = {
   className: PropTypes.string,
-  theme: PropTypes.oneOf(['white', 'black']),
   isToggled: PropTypes.bool,
   onClick: PropTypes.func,
 };
@@ -105,7 +98,6 @@ Burger.defaultProps = {
   className: null,
   isToggled: false,
   onClick: null,
-  theme: 'white',
 };
 
 export default Burger;
