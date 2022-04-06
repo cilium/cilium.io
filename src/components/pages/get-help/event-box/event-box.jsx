@@ -18,6 +18,10 @@ const links = [
   //   description: 'As start Cilium & eBPF Introduction CNCF Bratislava',
   // },
   {
+    text: 'Request swag for attendees',
+    url: '/telling-story',
+  },
+  {
     text: 'Reach out on Slack with questions',
     url: 'https://cilium.herokuapp.com/',
     target: '_blank',
