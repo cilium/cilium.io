@@ -37,17 +37,17 @@ const items = [
 const RelatedProjects = () => {
   const { image1, image2, image3 } = useStaticQuery(graphql`
     query {
-      image1: file(relativePath: { eq: "pages/learn/related-projects/image-1.jpg" }) {
+      image1: file(relativePath: { eq: "pages/get-started/related-projects/image-1.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 592)
         }
       }
-      image2: file(relativePath: { eq: "pages/learn/related-projects/image-2.jpg" }) {
+      image2: file(relativePath: { eq: "pages/get-started/related-projects/image-2.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 592)
         }
       }
-      image3: file(relativePath: { eq: "pages/learn/related-projects/image-3.jpg" }) {
+      image3: file(relativePath: { eq: "pages/get-started/related-projects/image-3.jpg" }) {
         childImageSharp {
           gatsbyImageData(width: 592)
         }

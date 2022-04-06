@@ -13,13 +13,13 @@ const title = 'Get Hands-On With Cilium';
 const HandsOn = () => {
   const { imageIllustration1, imageIllustration2 } = useStaticQuery(graphql`
     query {
-      imageIllustration1: file(relativePath: { eq: "pages/learn/hands-on/thomasgraf.png" }) {
+      imageIllustration1: file(relativePath: { eq: "pages/get-started/hands-on/thomasgraf.png" }) {
         childImageSharp {
           gatsbyImageData(width: 92, quality: 95)
         }
       }
       imageIllustration2: file(
-        relativePath: { eq: "pages/learn/hands-on/thomasgraf-lizrice.png" }
+        relativePath: { eq: "pages/get-started/hands-on/thomasgraf-lizrice.png" }
       ) {
         childImageSharp {
           gatsbyImageData(width: 172, quality: 95)
