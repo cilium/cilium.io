@@ -18,7 +18,6 @@ const navigation = [
   {
     name: 'Learn',
     childItems: [
-      { icon: AdoptersIcon, name: 'Adopters', href: '/adopters' },
       { icon: GetStartedIcon, name: 'Get Started', href: '/get-started' },
       { icon: GetInvolvedIcon, name: 'Get Involved', href: '/get-involved' },
       { icon: GetHelpIcon, name: 'Get Help', href: '/get-help' },
@@ -35,6 +34,7 @@ const navigation = [
         target: '_blank',
       },
       { icon: NewsletterIcon, name: 'Newsletter', href: '/newsletter' },
+      { icon: AdoptersIcon, name: 'Adopters', href: '/adopters' },
     ],
   },
   { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },

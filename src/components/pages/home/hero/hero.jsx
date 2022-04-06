@@ -3,7 +3,8 @@ import React from 'react';
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import illustration from 'images/hero-illustration.svg';
+
+import illustration from './images/hero-illustration.svg';
 
 const title = 'eBPF-based Networking, Observability, Security';
 const description =
