@@ -167,6 +167,13 @@ const Form = ({ formClassName }) => {
                 value="echoNews"
                 {...register('echoNews')}
               />
+              <Checkbox
+                id="requestSwag"
+                label="Request swag"
+                name="requestSwag"
+                value="requestSwag"
+                {...register('requestSwag')}
+              />
 
               <Checkbox
                 id="other"
