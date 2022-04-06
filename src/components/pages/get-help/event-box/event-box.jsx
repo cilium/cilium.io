@@ -29,7 +29,7 @@ const links = [
 ];
 const EventBox = () => (
   <section className="mt-10 overflow-hidden pb-8 md:mt-20 lg:mt-28 lg:overflow-visible lg:pb-0 xl:mt-48">
-    <Container className="grid grid-cols-12  lg:gap-x-8 ">
+    <Container className="grid grid-cols-12 lg:gap-x-8">
       <div className="order-1 col-span-full mt-10 justify-self-center lg:order-none lg:col-span-6 lg:mt-0 lg:justify-self-start">
         <div className="relative xl:max-w-[592px]">
           <img

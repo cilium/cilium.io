@@ -25,7 +25,7 @@ const Cards = () => {
       links: [
         {
           title: 'Follow on Twitter',
-          url: 'https://twitter.com/ciliumproject',
+          url: 'https://twitter.com/breakawaybilly',
           target: '_blank',
         },
       ],
