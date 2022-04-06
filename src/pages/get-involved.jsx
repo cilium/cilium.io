@@ -51,8 +51,7 @@ const cardItems2 = {
     {
       iconName: 'devstats',
       title: 'Devstats',
-      description:
-        'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
+      description: 'Check the project activity on Devstats to see how fast we are moving.',
       buttonText: 'See project activity on Devstats',
       buttonUrl: 'https://cilium.devstats.cncf.io/',
       buttonTarget: '_blank',
