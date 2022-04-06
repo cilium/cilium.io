@@ -39,7 +39,7 @@ const Footer = ({ withTopBorder }) => (
             </a>
           </span>
         </div>
-        <div className="col-span-7 grid grid-cols-1 gap-x-8 gap-y-10 xs:grid-cols-2 sm:grid-cols-3">
+        <div className="col-span-7 grid grid-cols-1 gap-x-8 gap-y-10 xs:grid-cols-2 sm:grid-cols-3 lg:pt-4">
           {navigation.map((menu, index) => (
             <ul className="flex flex-col space-y-6" key={index}>
               {menu.map(({ name, href, target }) => (

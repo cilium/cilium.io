@@ -77,7 +77,8 @@ const userCommunity2 = {
     yahoo,
   ],
   buttonText: 'Add Your Company',
-  buttonUrl: '/',
+  buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
+  buttonTarget: '_blank',
 };
 
 const logos1 = {

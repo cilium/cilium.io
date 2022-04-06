@@ -34,7 +34,7 @@ const navigation = [
         href: 'https://github.com/cncf/artwork/blob/master/examples/incubating.md#cilium-logos',
         target: '_blank',
       },
-      { icon: NewsletterIcon, name: 'Newsletter', href: '/' },
+      { icon: NewsletterIcon, name: 'Newsletter', href: '/newsletter' },
     ],
   },
   { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },

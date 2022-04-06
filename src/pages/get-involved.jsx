@@ -35,7 +35,7 @@ const cardItems1 = [
     title: 'Newsletter',
     description: 'Keep up with the latest news from the Cilium and eBPF community',
     buttonText: 'Subscribe to newsletter',
-    buttonUrl: '/',
+    buttonUrl: '/newsletter',
   },
 ];
 
@@ -46,7 +46,7 @@ const cardItems2 = {
       iconName: 'github',
       title: 'GitHub',
       description:
-        'Want to report a bug or ask for a feature? Issues can be found in the <a href="/">GitHub issue tracker</a>. If you want to report a bug or a new feature please file the issue according to the <a href="/">GitHub template</a>.',
+        'Want to report a bug or ask for a feature? Issues can be found in the <a href="https://github.com/cilium/cilium/issues" target="_blank" rel="noopener noreferrer">GitHub issue tracker</a>. If you want to report a bug or a new feature please file the issue according to the <a href="https://github.com/cilium/cilium/issues/new/choose" target="_blank" rel="noopener noreferrer">GitHub template</a>.',
     },
     {
       iconName: 'devstats',
@@ -54,7 +54,7 @@ const cardItems2 = {
       description:
         'There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.',
       buttonText: 'See project activity on Devstats',
-      buttonUrl: '/',
+      buttonUrl: 'https://cilium.devstats.cncf.io/',
       buttonTarget: '_blank',
     },
     {
