@@ -95,7 +95,7 @@ const UserCommunity = ({
       )}
       <div
         className={classNames(
-          'grid auto-rows-fr gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4 lg:gap-4 xl:gap-8'
+          'grid gap-4 sm:grid-cols-2 md:gap-6 lg:auto-rows-fr lg:grid-cols-4 lg:gap-4 xl:gap-8'
         )}
       >
         {items.map(({ iconName, text, links }, index) => {
@@ -103,7 +103,7 @@ const UserCommunity = ({
           return (
             <div
               className={classNames(
-                'flex h-full flex-col rounded-lg p-6 xl:p-8',
+                'flex flex-col rounded-lg p-6 xl:p-8',
                 themeClassNames[theme].card
               )}
               key={index}
@@ -122,7 +122,8 @@ const UserCommunity = ({
                       type="text"
                       theme="primary"
                       to={linkUrl}
-                      target={linkTarget || ''}
+                      target={linkTarget || null}
+                      rel={linkTarget ? 'noopener noreferrer' : null}
                     >
                       {linkText}
                     </Link>
