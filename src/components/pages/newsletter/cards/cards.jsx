@@ -42,9 +42,8 @@ const Cards = () => {
           target: '_blank',
         },
         {
-          title: 'Write an email',
-          url: 'mailto:bill@isovalent.com',
-          target: '_blank',
+          title: 'Submit form',
+          url: '/telling-story',
         },
       ],
       image: submitArticleSvg,

@@ -1,6 +1,7 @@
 import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
+import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
@@ -11,6 +12,8 @@ import decor2 from './images/decor-2.svg';
 const title = 'Event in a Box';
 const description =
   'All you need for a successful Cilium talk. Are you passionate about Cilium and want to share your experience with the broader community? We want to help you tell your story! Whether writing a blog post, creating a YouTube or Twitch video, or speaking at a conference, we will help you deliver your Cilium story to a broad audience.';
+const buttonText = 'Request Event Help';
+const buttonUrl = '/telling-story';
 const links = [
   // {
   //   text: 'Cilium intro slides',
@@ -59,7 +62,10 @@ const EventBox = () => (
       <div className="col-span-full lg:col-span-6 lg:pl-8 xl:col-start-8 xl:col-end-13 xl:pl-0">
         <Heading tag="h2">{title}</Heading>
         <p className="mt-5">{description}</p>
-        <ul className="mt-4 space-y-4 border-t border-gray-3 pt-4 lg:mt-6 lg:pt-6">
+        <Button className="mt-5" theme="primary-1" to={buttonUrl}>
+          {buttonText}
+        </Button>
+        <ul className="mt-5 space-y-4 lg:mt-7">
           {links.map(({ text, url, target, description }, index) => (
             <li className="leading-none" key={index}>
               <Link
