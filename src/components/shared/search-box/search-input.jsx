@@ -9,7 +9,7 @@ export default connectSearchBox(({ refine, currentRefinement, className, onFocus
     </label>
     <input
       className={classNames(
-        'max-h-8 w-full appearance-none rounded border border-gray-2 bg-search-icon bg-[center_left_0.5rem] bg-no-repeat py-2.5 pl-8 pr-0 text-sm leading-none transition-[width,colors] focus-visible:outline-none',
+        'max-h-9 w-full appearance-none rounded border border-gray-2 bg-white bg-search-icon bg-[center_left_0.5rem] bg-no-repeat py-2.5 pl-8 pr-0 leading-none transition-[width,colors] focus-visible:outline-none sm:max-h-8 sm:text-sm',
         hasFocus
           ? 'pr-2.5 sm:w-full sm:placeholder:text-gray-2'
           : 'cursor-pointer sm:w-8 sm:placeholder:text-transparent',
