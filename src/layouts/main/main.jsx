@@ -26,6 +26,7 @@ const navigation = [
   {
     name: 'News and media',
     childItems: [
+      { icon: AdoptersIcon, name: 'Adopters', href: '/adopters' },
       { icon: BlogIcon, name: 'Blog', href: '/blog' },
       {
         icon: BrandingIcon,
@@ -34,7 +35,6 @@ const navigation = [
         target: '_blank',
       },
       { icon: NewsletterIcon, name: 'Newsletter', href: '/newsletter' },
-      { icon: AdoptersIcon, name: 'Adopters', href: '/adopters' },
     ],
   },
   { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
