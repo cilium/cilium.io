@@ -37,11 +37,11 @@ In the absence of conformance testing, it will be at the discretion of Cilium ma
 
 ## Listing Cilium training
 
-In order to be listed as a Cilium Training Partner, the following requirements must be met:
+In order to be listed as a [Cilium Training Partner](https://cilium.io/enterprise), the following requirements must be met:
 
 * Training partner must have a track record of providing high-quality trainings for open source technology and projects
-* Trainings must cover Cilium Open Source or an approved distribution
-* The provided Cilium training will be reviewed by a Cilium committer to assess quality, accuracy, and completness.
+* Trainings must cover Cilium Open Source or an [approved distribution](https://cilium.io/enterprise)
+* The provided Cilium training will be reviewed by a Cilium committer to assess quality, accuracy, and completeness.
 * Have a landing page that includes information on your Cilium training.
 
 ## Documentation
