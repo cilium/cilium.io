@@ -180,7 +180,7 @@ export default {
   },
   meltwater: {
     iconName: 'meltwater',
-    text: '<b>Meltwater</b> is using Cilim in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
+    text: '<b>Meltwater</b> is using Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
   },
   palantir: {
     iconName: 'palantir',
