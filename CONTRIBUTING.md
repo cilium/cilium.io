@@ -37,7 +37,12 @@ In the absence of conformance testing, it will be at the discretion of Cilium ma
 
 ## Listing Cilium training
 
-We would be delighted to list courses and providers that offer effective [Cilium training](https://cilium.io/enterprise). In the absence of a formal training program (along similar lines to [Kubernetes Training Partners](https://www.cncf.io/certification/training/becoming-a-ktp/)), please reach out on [Cilium Slack](https://cilium.herokuapp.com/) to discuss your offering. 
+In order to be listed as a Cilium Training Partner, the following requirements must be met:
+
+* Training partner must have a track record of providing high-quality trainings for open source technology and projects
+* Trainings must cover Cilium Open Source or an approved distribution
+* The provided Cilium training will be reviewed by a Cilium committer to assess quality, accuracy, and completness.
+* Have a landing page that includes information on your Cilium training.
 
 ## Documentation
 
