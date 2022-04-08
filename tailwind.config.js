@@ -25,7 +25,7 @@ module.exports = {
         white: '#ffffff',
         black: '#141A1F',
         primary: {
-          1: '#0080FF',
+          1: '#0073E6',
           2: '#0A53A5',
         },
         gray: {
@@ -34,11 +34,14 @@ module.exports = {
           3: '#E0E5EB',
           4: '#F6F7F8',
           5: '#D1D7E0',
+          6: '#F6F7F8',
         },
         hover: {
           1: '#3399FF',
         },
         additional: {
+          1: '#EB4748',
+          3: '#00877C',
           4: '#D6EBFF',
         },
       },
@@ -46,12 +49,19 @@ module.exports = {
         primary: '0px 5px 20px rgba(0, 0, 0, 0.09)',
         secondary: '0px 10px 20px rgba(0, 0, 0, 0.09)',
         tertiary: '0px 5px 20px rgba(0, 0, 0, 0.1)',
+        card: '0px 2px 10px rgba(20, 26, 31, 0.15)',
+        input: '0px 1px 8px rgba(20, 26, 31, 0.2)',
       },
       borderRadius: {
         large: '20px',
       },
       backgroundImage: {
+        'dark-blue': 'linear-gradient(247.62deg, #272B41 21.37%, #161928 52.43%)',
+        eu: "url('/images/eu.svg')",
+        usa: "url('/images/usa.svg')",
         'search-icon': "url('/images/search.svg')",
+        loader: "url('/images/loader.svg')",
+        grid: "url('/images/grid.svg')",
       },
       typography: (theme) => ({
         DEFAULT: {

@@ -1,13 +1,25 @@
 @layer components {
   .with-link-primary {
     a {
-      @apply text-primary-1 font-semibold hover:text-gray-1 duration-200 transition-colors;
+      @apply font-semibold text-primary-1 transition-colors duration-200 hover:text-gray-1;
+    }
+  }
+
+  .with-link-primary-medium {
+    a {
+      @apply font-medium text-primary-1 transition-colors duration-200 hover:text-gray-1;
     }
   }
 
   .with-link-primary-light {
     a {
-      @apply text-primary-1 hover:text-gray-1 duration-200 transition-colors;
+      @apply text-primary-1 transition-colors duration-200 hover:text-gray-1;
+    }
+  }
+
+  .with-black-link {
+    a {
+      @apply font-semibold transition-colors duration-200 hover:text-primary-1;
     }
   }
 }

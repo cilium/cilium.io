@@ -1,0 +1,67 @@
+<svg width="384" height="224" viewBox="0 0 384 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_3200_10274" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="384" height="224">
+<rect width="384" height="224" fill="url(#paint0_radial_3200_10274)"/>
+</mask>
+<g mask="url(#mask0_3200_10274)">
+<rect x="-32" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="24" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="80" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="136" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="192" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="248" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="304" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="360" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="-32" y="56" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="24" y="56" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="80" y="56" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="136" y="56" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="192" y="56" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="248" y="56" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="304" y="56" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="360" y="56" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="-32" y="112" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="24" y="112" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="80" y="112" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="136" y="112" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="192" y="112" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="248" y="112" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="304" y="112" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="360" y="112" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="-32" y="168" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="24" y="168" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="80" y="168" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="136" y="168" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="192" y="168" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="248" y="168" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="304" y="168" width="56" height="56" stroke="#E0E5EB"/>
+<rect x="360" y="168" width="56" height="56" stroke="#E0E5EB"/>
+</g>
+<rect x="136.5" y="56.5" width="111" height="111" fill="white"/>
+<rect x="154" y="69" width="76" height="86" stroke="#00877C" stroke-width="8"/>
+<rect x="164" y="79" width="56" height="6" fill="#00877C"/>
+<rect x="164" y="91" width="36" height="6" fill="#00877C"/>
+<rect x="164" y="103" width="48" height="6" fill="#00877C"/>
+<rect x="164" y="115" width="40" height="6" fill="#00877C"/>
+<rect x="164" y="127" width="56" height="6" fill="#00877C"/>
+<rect x="164" y="139" width="48" height="6" fill="#00877C"/>
+<g clip-path="url(#clip0_3200_10274)">
+<path d="M328.549 91.2191L344.549 75.2191C345.049 74.719 345.33 74.0408 345.33 73.3337C345.33 72.6266 345.049 71.9485 344.549 71.4484L341.883 68.7817C341.383 68.2818 340.704 68.001 339.997 68.001C339.29 68.001 338.612 68.2818 338.112 68.7817L322.112 84.7817C321.909 84.9844 321.739 85.2185 321.611 85.4751L319.445 93.8857L327.856 91.7337C328.114 91.601 328.348 91.4272 328.549 91.2191Z" fill="#FFBF00"/>
+<path d="M346.667 97.334H317.333C316.98 97.334 316.641 97.4745 316.391 97.7245C316.14 97.9746 316 98.3137 316 98.6673C316 99.0209 316.14 99.3601 316.391 99.6101C316.641 99.8602 316.98 100.001 317.333 100.001H346.667C347.02 100.001 347.359 99.8602 347.609 99.6101C347.86 99.3601 348 99.0209 348 98.6673C348 98.3137 347.86 97.9746 347.609 97.7245C347.359 97.4745 347.02 97.334 346.667 97.334Z" fill="#FFBF00"/>
+</g>
+<path d="M53 121.5V85H109.5V139H143.5" stroke="#A7B1BE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.01 10"/>
+<circle cx="121.5" cy="139" r="4" fill="#FFBF00"/>
+<rect x="76.5" y="80" width="10" height="10" fill="#EB4748"/>
+<path d="M332.5 107.5V140H276V86H242" stroke="#A7B1BE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.01 10"/>
+<circle cx="285" cy="140" r="4" fill="#EB4748"/>
+<rect x="259" y="85.6572" width="8" height="8" transform="rotate(-45 259 85.6572)" fill="#0073E6"/>
+<path d="M44.4911 126.205C44.3159 126.085 44.1112 126.014 43.8991 126.002C43.687 125.99 43.4755 126.035 43.2875 126.134C43.0994 126.233 42.942 126.382 42.8321 126.563C42.7223 126.745 42.6641 126.954 42.6641 127.166V152.833C42.6645 153.045 42.7229 153.254 42.8331 153.436C42.9433 153.617 43.1011 153.766 43.2894 153.864C43.4559 153.953 43.6419 154 43.8307 154C44.0665 153.999 44.2968 153.928 44.4911 153.794L63.1577 140.961C63.3137 140.854 63.4412 140.71 63.5293 140.543C63.6173 140.375 63.6634 140.189 63.6634 140C63.6634 139.81 63.6173 139.624 63.5293 139.456C63.4412 139.289 63.3137 139.145 63.1577 139.038L44.4911 126.205Z" fill="#0073E6"/>
+<defs>
+<radialGradient id="paint0_radial_3200_10274" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(192 112) rotate(90) scale(112 192)">
+<stop offset="0.0892857" stop-color="#F6F7F8"/>
+<stop offset="1" stop-color="#F6F7F8" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip0_3200_10274">
+<rect width="32" height="32" fill="white" transform="translate(316 68)"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,6 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
@@ -52,26 +51,29 @@ const FeaturedTalks = () => {
   `);
   const placeholders = { card1, card2, card3, card4 };
   return (
-    <section className="mt-10 md:mt-20 lg:mt-28">
+    <section className="mt-10 md:mt-20 lg:mt-32">
       <Container>
-        <Heading tag="h2">{title}</Heading>
-        <div className="grid grid-cols-1 gap-4 mt-6 md:mt-10 md:gap-6 lg:gap-8 lg:mt-14 md:grid-cols-3">
+        <Heading tag="h2" className="text-center">
+          {title}
+        </Heading>
+        <div className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:grid-cols-3 md:gap-6 lg:mt-14 lg:gap-8">
           {videoUrls.map(({ thumbnail, url, title, text }, index) => {
             const card = placeholders[thumbnail];
             return (
               <div key={index}>
-                <Link className="" to={url} target="_blank" rel="noopener noreferrer">
+                <Link to={url} target="_blank" rel="noopener noreferrer">
                   <GatsbyImage
-                    className="w-full h-auto border rounded-lg border-gray-3"
+                    className="h-auto w-full rounded-lg border border-gray-3"
                     imgClassName="rounded-lg"
                     image={getImage(card)}
                     alt={title}
+                    loading="lazy"
                   />
                 </Link>
-                <Heading className="mt-4 md:mt-6" tag="h3" size="xs">
+                <Heading className="mt-3 !text-xl md:mt-5" tag="h3" size="xs">
                   {title}
                 </Heading>
-                <p className="md:mt-1.5 lg:text-lg">{text}</p>
+                <p className="md:mt-2">{text}</p>
               </div>
             );
           })}

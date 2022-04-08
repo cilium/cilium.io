@@ -2,24 +2,33 @@ import React from 'react';
 
 import Distributions from 'components/pages/enterprise/distributions';
 import Training from 'components/pages/enterprise/training';
+import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
-import illustration from 'images/hero-illustration.svg';
+import illustration from 'images/pages/enterprise/hero/illustration.svg';
 import MainLayout from 'layouts/main';
-import SeoMetadata from 'utils/seo-metadata';
+import { enterprise as seo } from 'utils/seo-metadata';
 
-const hero = {
-  title: 'Cilium Enterprise Distributions & Training',
-  description:
-    '<p>Cilium was originally created by <a href="https://bit.ly/3hOKaXj" target="_blank" rel="noopener noreferrer">Isovalent</a> and contributed to the CNCF as an incubation-level project in 2021.</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium.</p>',
-  illustration,
+const EnterprisePage = () => {
+  const hero = {
+    title: 'Cilium Enterprise Distributions & Training',
+    description:
+      '<p>Cilium was originally created by Isovalent and contributed to the CNCF as an incubation-level project in 2021</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium.</p>',
+    illustration,
+  };
+
+  return (
+    <MainLayout pageMetadata={seo} theme="gray">
+      <Hero
+        className="pt-5 pb-10 md:pt-24 md:pb-20 lg:pb-[70px]"
+        theme="gray"
+        size="lg"
+        {...hero}
+      />
+      <Distributions />
+      <Training />
+      <Community theme="gray" isTitleCentered />
+    </MainLayout>
+  );
 };
-
-const EnterprisePage = () => (
-  <MainLayout pageMetadata={SeoMetadata.enterprise}>
-    <Hero className="pt-5 md:pt-16 xl:pb-20" {...hero} />
-    <Distributions />
-    <Training />
-  </MainLayout>
-);
 
 export default EnterprisePage;

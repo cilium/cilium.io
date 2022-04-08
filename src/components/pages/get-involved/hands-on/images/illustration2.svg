@@ -1,0 +1,72 @@
+<svg width="592" height="256" viewBox="0 0 592 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_3085_6676" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="592" height="256">
+<rect width="592" height="256" fill="url(#paint0_radial_3085_6676)"/>
+</mask>
+<g mask="url(#mask0_3085_6676)">
+<rect x="-24" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="40" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="104" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="168" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="232" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="296" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="360" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="424" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="488" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="552" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="-24" y="64" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="40" y="64" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="104" y="64" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="168" y="64" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="232" y="64" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="296" y="64" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="360" y="64" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="424" y="64" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="488" y="64" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="552" y="64" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="-24" y="128" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="40" y="128" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="104" y="128" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="168" y="128" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="232" y="128" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="296" y="128" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="360" y="128" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="424" y="128" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="488" y="128" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="552" y="128" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="-24" y="192" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="40" y="192" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="104" y="192" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="168" y="192" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="232" y="192" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="296" y="192" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="360" y="192" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="424" y="192" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="488" y="192" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="552" y="192" width="64" height="64" stroke="#E0E5EB"/>
+<rect x="168.5" y="64.5" width="255" height="127" fill="white"/>
+</g>
+<circle cx="136" cy="160" r="22" fill="#EB4748"/>
+<g clip-path="url(#clip0_3085_6676)">
+<path d="M136 160C139.038 160 141.5 157.538 141.5 154.5C141.5 151.462 139.038 149 136 149C132.962 149 130.5 151.462 130.5 154.5C130.5 157.538 132.962 160 136 160Z" fill="white"/>
+<path d="M147 167.15C147.002 166.623 146.853 166.107 146.569 165.664C146.285 165.221 145.88 164.868 145.401 164.65C142.437 163.36 139.233 162.712 136 162.75C132.767 162.712 129.564 163.36 126.599 164.65C126.12 164.868 125.715 165.221 125.431 165.664C125.147 166.107 124.998 166.623 125 167.15V171H147V167.15Z" fill="white"/>
+</g>
+<circle cx="456" cy="96" r="22" fill="#FFBF00"/>
+<g clip-path="url(#clip1_3085_6676)">
+<path d="M456 96C459.038 96 461.5 93.5376 461.5 90.5C461.5 87.4624 459.038 85 456 85C452.962 85 450.5 87.4624 450.5 90.5C450.5 93.5376 452.962 96 456 96Z" fill="#141A1F"/>
+<path d="M467 103.15C467.002 102.623 466.853 102.107 466.569 101.664C466.285 101.221 465.88 100.868 465.401 100.65C462.437 99.3599 459.233 98.7123 456 98.7496C452.767 98.7123 449.564 99.3599 446.599 100.65C446.12 100.868 445.715 101.221 445.431 101.664C445.147 102.107 444.998 102.623 445 103.15V107H467V103.15Z" fill="#141A1F"/>
+</g>
+<path d="M136 189.5V224H456V124" stroke="#A7B1BE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.01 10"/>
+<rect x="126.807" y="96" width="13" height="13" transform="rotate(-45 126.807 96)" fill="white" stroke="#0073E6" stroke-width="5"/>
+<defs>
+<radialGradient id="paint0_radial_3085_6676" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(296 128) rotate(90) scale(128 296)">
+<stop offset="0.375" stop-color="#F6F7F8"/>
+<stop offset="1" stop-color="#F6F7F8" stop-opacity="0"/>
+</radialGradient>
+<clipPath id="clip0_3085_6676">
+<rect width="22" height="22" fill="white" transform="translate(125 149)"/>
+</clipPath>
+<clipPath id="clip1_3085_6676">
+<rect width="22" height="22" fill="white" transform="translate(445 85)"/>
+</clipPath>
+</defs>
+</svg>

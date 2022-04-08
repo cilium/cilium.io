@@ -30,7 +30,7 @@ const BlogPostPage = (props) => {
   return (
     <MainLayout isBlogPage={isBlogPage} pageMetadata={seoMetadata}>
       <Content path={path} html={html} date={date} title={title} tags={tags} summary={ogSummary} />
-      <PopularPosts className="mt-10 md:mt-20 lg:mt-28" />
+      <PopularPosts className="my-10 md:my-20 lg:my-28" />
     </MainLayout>
   );
 };

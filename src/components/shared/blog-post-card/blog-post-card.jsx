@@ -31,6 +31,7 @@ const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
         image={getImage(ogImage)}
         objectFit="contain"
         alt={title}
+        loading="lazy"
       />
     );
   } else if (coverUrl) {
@@ -39,17 +40,18 @@ const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
         className={classNames('rounded-lg object-contain', coverClassNames)}
         src={coverUrl}
         alt={title}
+        loading="lazy"
       />
     );
   } else if (!ogImage && !coverUrl) {
     content = (
       <div
         className={classNames(
-          'flex justify-center items-center bg-gray-4 rounded-lg',
+          'flex items-center justify-center rounded-lg bg-gray-4',
           coverClassNames
         )}
       >
-        <CiliumLogo />
+        <CiliumLogo aria-label="Cilium logo" />
       </div>
     );
   }
@@ -80,11 +82,11 @@ const BlogPostCard = ({
     <Link
       to={url || path}
       className={classNames(
-        'flex p-6 transition-all duration-200 border rounded-lg md:p-8 border-gray-3 group hover:border-transparent hover:shadow-tertiary',
+        'group flex rounded-lg border border-gray-3 p-5 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
         isLandscapeView
-          ? 'flex-col space-y-7 sm:space-y-0 sm:flex-row sm:space-x-7'
+          ? 'flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-7'
           : 'flex-col space-y-7',
-        size === 'lg' && 'lg:p-10',
+        size === 'lg' && 'lg:p-8',
         className
       )}
       target={url ? '_blank' : ''}
@@ -96,11 +98,11 @@ const BlogPostCard = ({
         coverUrl={coverUrl}
         coverClassNames={coverClassNames}
       />
-      <article className="flex flex-col grow">
+      <article className="flex grow flex-col">
         <span className="text-sm font-medium leading-none text-gray-1">{date}</span>
         <h3
           className={classNames(
-            'mt-3 leading-normal transition-colors duration-200 md:leading-normal lg:leading-normal line-clamp-3 group-hover:text-primary-1',
+            'mt-3 leading-normal transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:leading-normal lg:leading-normal',
             titleStyles[size]
           )}
         >
@@ -110,23 +112,23 @@ const BlogPostCard = ({
           <>
             <p
               className={classNames(
-                'mt-2 mb-4 line-clamp-5 leading-relaxed',
+                'mt-2 mb-4 leading-relaxed line-clamp-5',
                 size === 'lg' && 'md:text-lg'
               )}
             >
               {summary}
             </p>
-            <div className="flex flex-wrap mt-auto gap-x-2 gap-y-2">
+            <div className="mt-auto flex flex-wrap gap-x-2 gap-y-2">
               {categories?.map((category) => (
                 <span
-                  className="inline-flex items-center h-8 text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none"
+                  className="inline-flex h-8 items-center rounded bg-additional-4 bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider text-primary-1"
                   key={category}
                 >
                   {category}
                 </span>
               ))}
               {url && (
-                <div className="inline-flex items-center h-8 text-primary-1 font-bold bg-additional-4 bg-opacity-70 rounded p-2.5 tracking-wider uppercase text-xs leading-none">
+                <div className="inline-flex h-8 items-center rounded bg-additional-4 bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider text-primary-1">
                   <span>External</span>
                   <ExternalLinkIcon className="ml-1" />
                 </div>
