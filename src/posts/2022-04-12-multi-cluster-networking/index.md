@@ -29,7 +29,7 @@ Our first approach centred around the open source proxy called [Envoy](https://w
 
 If your ingress is in one cluster, Envoy will be configured to send traffic for that host into that cluster.
 
-![alt_text](images/image1.png "image_tooltip")
+![figure 1](Yggdrasil%20figure%201.png)
 
 However, if the ingress is in multiple clusters, Envoy will be configured to load balance across them.
 
