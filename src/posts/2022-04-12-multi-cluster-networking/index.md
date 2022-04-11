@@ -29,16 +29,16 @@ Our first approach centred around the open source proxy called [Envoy](https://w
 
 If your ingress is in one cluster, Envoy will be configured to send traffic for that host into that cluster.
 
-![Envoy load balancing to one cluster](Yggdrasil%20figure%201.png)
+![Envoy load balancing to one cluster](Yggdrasil1.png)
 
 However, if the ingress is in multiple clusters, Envoy will be configured to load balance across them.
 
-![Envoy load balancing to multiple clusters](Yggdrasil%20figure%202.png)
+![Envoy load balancing to multiple clusters](Yggdrasil2.png)
 
 This allowed us to set up HA services spread across multiple clusters and reduce the risk of outages caused by something going wrong in one cluster.  \
 While this system was primarily intended for user traffic, it inadvertently became a very convenient way for applications to talk to each other. As Envoy would always send traffic to the correct cluster, applications could just talk to Envoy if they wanted to reach another internal service regardless of whether it was running in the same cluster or not.
 
-![Envoy long request path](Yggdrasil%20figure%203.png)
+![Envoy long request path](Yggdrasil3.png)
 
 There were a few major drawbacks with this approach. First, a user would talk to one service which then called another service in another cluster by going through Envoy. This resulted in the request having to go out of the cluster and back again adding a fair amount of latency (P95 of around 20ms per trip). This round trip also caused us to lose identity information. As far as our apps were concerned everything was coming from Envoy.
 
@@ -77,33 +77,33 @@ So let's compare Cilium to our original requirements, first real pod IPs:
 
 Cilium does this in AWS by associating ENIs with your instance that it can then assign additional IPs to, each IP corresponding to one of the pods on the node. This means every pod has an IP that is a valid IP in the VPC you’re running in, allowing all the normal AWS networking features to work with them. No virtual network needed!
 
-![Cilium assigning pod IPs](Cilium%20figure%201.png)
+![Cilium assigning pod IPs](Cilium1.png)
 
 Cilium maps pod IPs to services in the same way a more traditional setup would work, but instead of just relying on IPTables rules, Cilium can replace kube-proxy leveraging eBPF which at scale outperforms IPTables and ensures Service Endpoint changes are atomic using eBPF maps.
 
-![Cilium eBPF rules](Cilium%20figure%202.png)
+![Cilium eBPF rules](Cilium2.png)
 
 The (Cluster) Mesh works by allowing Cilium to populate Service Endpoints in each Cluster using eBPF Maps. If you have the same service in two different clusters, Cilium will combine all those pod IPs as possible destinations. Thus, when you talk to the service address, you will get sent to any cluster where that service has endpoints.
 
-![Cilium Service Endpoints across clusters](Cilium%20figure%203.png)
+![Cilium Service Endpoints across clusters](Cilium3.png)
 
 This makes the mesh completely transparent to normal applications, they just need to talk to the service in their cluster as they normally would and they’ll be talking across Kubernetes clusters!
 
 Establishing load-balancing between clusters is achieved by defining a Kubernetes service with identical name and namespace in each cluster and adding the annotation io.cilium/global-service: "true" to declare it global. Cilium will automatically perform load-balancing to pods in both clusters.
 
-![Cilium YAML file](Cilium%20Figure%204.png)
+![Cilium YAML file](Cilium4.png)
 
 Our new cross cluster journey for applications is just one hop. From one pod to another pod via their pod IP. Not only does this remove a load of latency but it also maintains identity so we can now use things like Network Policy to control what services can talk to each other.
 
-![Cilium direct routing](Cilium%20figure%205.png)
+![Cilium direct routing](Cilium5.png)
 
 The actual networking setup for this was also quite simple thanks to the use of AWS Transit Gateway which we use to peer all our clusters together. Since all our pod IPs were ‘real’, as long as routes and Security groups were set up, it all just worked seamlessly.
 
-![AWS transit gateway connecting clusters](AWS%20figure%201.png)
+![AWS transit gateway connecting clusters](AWS1.png)
 
 We even extended this to go across clouds by setting up a VPN between Google Cloud and AWS. Our GKE and EKS clusters talk to each other via the Cilium Clustermesh without any hassle.
 
-![VPN from Google Cloud to AWS](multi%20cloud%20figure%201.png)
+![VPN from Google Cloud to AWS](multicloud1.png)
 
 # What’s Next?
 
