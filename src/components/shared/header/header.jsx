@@ -74,7 +74,7 @@ const Header = ({
                   <span
                     className={classNames(
                       'hidden lg:ml-1.5',
-                      showSearchBox ? 'xl:block' : 'lg:block'
+                      showSearchBox ? '2xl:block' : 'xl:block'
                     )}
                   >
                     Join Slack
