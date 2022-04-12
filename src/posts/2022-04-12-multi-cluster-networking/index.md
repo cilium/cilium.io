@@ -15,7 +15,7 @@ tags:
 
 ![USwitch logo](uswitchheader.svg)
 
-*April 12, 2022* 
+*April 12, 2022*  
 *Author: Joseph Irving, Platform Lead at RVU (Uswitch)*
 
 # Multi Cluster Networking with Cilium and Friends
