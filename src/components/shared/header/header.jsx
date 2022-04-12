@@ -46,16 +46,24 @@ const Header = ({
           className="relative flex w-full items-center justify-between space-x-6 sm:h-10"
           aria-label="Global"
         >
-          <div className="flex w-full shrink-0 items-center justify-between xl:w-auto">
+          <div className="flex w-full shrink-0 items-center justify-between lg:w-auto">
             <div className="flex items-center">
               <Link to="/">
                 <span className="sr-only">Cilium</span>
                 <Logo />
               </Link>
-              <div className="hidden items-center xl:inline-flex">
-                <GithubStars className="ml-4  bg-white  xl:ml-8" />
+              <div className="hidden items-center lg:inline-flex">
+                <GithubStars
+                  className={classNames(
+                    'ml-4 bg-white lg:ml-8',
+                    showSearchBox ? 'hidden xl:inline-flex' : 'inline-flex'
+                  )}
+                />
                 <Button
-                  className="ml-4 inline-flex items-center bg-white leading-none"
+                  className={classNames(
+                    'ml-4 items-center bg-white leading-none ',
+                    showSearchBox ? 'hidden xl:inline-flex' : 'inline-flex'
+                  )}
                   to="https://cilium.herokuapp.com/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -65,8 +73,8 @@ const Header = ({
                   <SlackIcon className="h-4 w-4" />
                   <span
                     className={classNames(
-                      'hidden xl:ml-1.5',
-                      showSearchBox ? '2xl:block' : 'xl:block'
+                      'hidden lg:ml-1.5',
+                      showSearchBox ? 'xl:block' : 'lg:block'
                     )}
                   >
                     Join Slack
@@ -74,14 +82,14 @@ const Header = ({
                 </Button>
               </div>
             </div>
-            <div className="flex items-center xl:hidden">
+            <div className="flex items-center lg:hidden">
               {showSearchBox && !isMobileMenuOpen && (
                 <SearchBox className="mr-4 hidden sm:flex" indices={searchIndices} />
               )}
               <Burger isToggled={isMobileMenuOpen} onClick={onBurgerClick} />
             </div>
           </div>
-          <div className="hidden w-full space-x-5 lg:items-center lg:justify-end xl:flex xl:space-x-7">
+          <div className="hidden w-full space-x-5 lg:flex lg:items-center lg:justify-end lg:space-x-7">
             {showSearchBox && <SearchBox indices={searchIndices} />}
             <ul className="flex items-center lg:space-x-6 xl:space-x-8 2xl:space-x-11">
               {navigation.map((item, index) => (
