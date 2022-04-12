@@ -13,6 +13,7 @@ tags:
   - Clustermesh
 ---
 
+![USwitch logo](uswitchheader.svg)
 April 12, 2022
 Author: Joseph Irving, Platform Lead at RVU (Uswitch)
 
