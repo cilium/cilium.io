@@ -13,6 +13,9 @@ tags:
   - Clustermesh
 ---
 
+April 12, 2022
+Author: Joseph Irving, Platform Lead at RVU (Uswitch)
+
 # Multi Cluster Networking with Cilium and Friends
 
 Setting up networking for one Kubernetes cluster can be a challenge but it becomes even more fun once you add multiple clusters into the mix. In this blog, we’ll go over the solutions that [RVU](https://www.rvu.co.uk/) ([Uswitch](https://www.uswitch.com/)) came up with to allow their applications to talk between clusters and the rationale behind them, from [building our own tools](https://labs.rvu.co.uk/multi-cluster-kubernetes-load-balancing-in-aws-with-yggdrasil-c1583ea7d78f) like [Yggdrasil](https://github.com/uswitch/yggdrasil) (Envoy controller) to implementing other tools such as Cilium. We’ll see what benefits and drawbacks the different approaches can have and also explore why we opted to avoid using a traditional service mesh to achieve our multi-cluster networking goals. 
