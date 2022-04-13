@@ -35,12 +35,12 @@ const Training = () => (
         dangerouslySetInnerHTML={{ __html: description }}
       />
       <div className="mt-12 flex flex-col space-y-8 md:flex-row md:justify-between md:space-y-0 md:space-x-8">
-        <div className="relative mx-auto flex min-h-[350px] max-w-[592px] basis-1/2 flex-col rounded-xl bg-white p-6 shadow-card md:min-h-[400px] md:p-8 lg:min-h-[350px]">
+        <div className="relative mx-auto flex min-h-[320px] max-w-[592px] basis-1/2 flex-col rounded-xl bg-white p-4 shadow-card sm:p-6 md:min-h-[400px] md:p-8 lg:min-h-[350px]">
           <AcendLogo className="h-10" />
           <Heading className="mt-7" size="2xs" tag="h3">
             {acend.title}
           </Heading>
-          <p className="mt-2.5 text-lg">{acend.description}</p>
+          <p className="mt-2.5 text-sm sm:text-base xl:text-lg">{acend.description}</p>
           <Button
             className="mt-auto w-full self-start md:w-auto"
             theme="primary-1"
@@ -55,7 +55,7 @@ const Training = () => (
           <Heading className="mt-7" size="2xs" tag="h3">
             {isovalent.title}
           </Heading>
-          <p className="mt-2.5 text-lg">{isovalent.description}</p>
+          <p className="mt-2.5 text-sm sm:text-base xl:text-lg">{isovalent.description}</p>
           <Button className="mt-auto w-full self-start md:w-auto" theme="primary-1" disabled>
             {isovalent.buttonText}
           </Button>
