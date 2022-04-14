@@ -22,9 +22,12 @@ const BlogPage = (props) => {
     description: 'The latest articles covering eBPF-based Networking, Observability, and Security',
     slug,
   };
+
+  const isCategoryPage = pathname.includes('categories');
+
   return (
     <MainLayout isBlogPage={isBlogPage} canonicalUrl={canonicalUrl} pageMetadata={seoMetadata}>
-      <FeaturedPosts featuredStory={featuredStory?.[0]} />
+      {!isCategoryPage && <FeaturedPosts featuredStory={featuredStory?.[0]} />}
       <PostsBoard
         categories={categories}
         posts={posts}

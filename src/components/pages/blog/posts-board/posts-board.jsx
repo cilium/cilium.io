@@ -8,9 +8,9 @@ import BlogPostsList from './blog-posts-list';
 import Categories from './categories';
 import Pagination from './pagination';
 
-const blockTitle = 'All posts';
-
 const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
+  const blockTitle = currentCategory === '*' ? 'All posts' : currentCategory;
+
   const scrollTo = () => {
     const element = document.getElementById('categories');
     const offset = -50;
