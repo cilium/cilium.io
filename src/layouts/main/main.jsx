@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-import Banner from 'components/shared/banner';
 import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
 import SEO from 'components/shared/seo';
@@ -41,7 +40,6 @@ const navigation = [
 ];
 
 const MainLayout = ({
-  withBanner,
   isBlogPage,
   pageMetadata,
   canonicalUrl,
@@ -57,7 +55,6 @@ const MainLayout = ({
     <>
       <SEO canonical={canonicalUrl} data={pageMetadata} />
       <div className="relative z-20">
-        {withBanner && <Banner />}
         <Header
           navigation={navigation}
           showSearchBox={isBlogPage}
@@ -75,7 +72,6 @@ const MainLayout = ({
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  withBanner: PropTypes.bool,
   isBlogPage: PropTypes.bool,
   pageMetadata: PropTypes.shape({
     title: PropTypes.string,
@@ -88,7 +84,6 @@ MainLayout.propTypes = {
 
 MainLayout.defaultProps = {
   pageMetadata: {},
-  withBanner: false,
   isBlogPage: false,
   canonicalUrl: null,
   theme: null,

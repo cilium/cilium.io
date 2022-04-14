@@ -6,6 +6,7 @@ import Heading from 'components/shared/heading';
 
 import BlogPostsList from './blog-posts-list';
 import Categories from './categories';
+import CommunityLinks from './community-links';
 import Pagination from './pagination';
 
 const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
@@ -36,10 +37,12 @@ const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages 
           numPages={numPages}
           currentCategory={currentCategory}
         />
+        <CommunityLinks />
       </Container>
     </section>
   );
 };
+
 PostsBoard.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   posts: PropTypes.arrayOf(
