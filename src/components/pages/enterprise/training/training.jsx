@@ -55,14 +55,14 @@ const Training = () => (
 
             return (
               <div
-                className="relative mx-auto flex min-h-[320px] max-w-[592px] basis-1/2 flex-col rounded-xl bg-white p-4 shadow-card sm:p-6 md:min-h-[400px] md:p-8 lg:min-h-[350px]"
+                className="relative mx-auto flex max-w-[592px] basis-1/2 flex-col rounded-xl bg-white p-4 shadow-card sm:p-6 md:p-8"
                 key={index}
               >
                 <Logo className="h-10" />
                 <Heading className="mt-7" size="2xs" tag="h3">
                   {title}
                 </Heading>
-                <p className="mt-2.5 text-sm sm:text-base xl:text-lg">{description}</p>
+                <p className="mt-2.5 mb-5 text-sm sm:text-base xl:text-lg">{description}</p>
                 <Button
                   className="mt-auto w-full self-start md:w-auto"
                   theme="primary-1"
