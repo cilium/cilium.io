@@ -24,7 +24,7 @@ const items = [
     logoName: 'Twitter',
     title: 'Twitter',
     description: 'Don’t forget to follow Cilium on Twitter for the latest news and announcements.',
-    linkText: 'follow Cilium on Twitter',
+    linkText: 'Follow Cilium on Twitter',
     url: 'https://twitter.com/ciliumproject',
     target: '_blank',
   },
@@ -50,6 +50,7 @@ const Community = () => (
           <Link
             to={url}
             target={target}
+            rel={target ? 'noopener noreferrer' : null}
             className="flex basis-1/3 items-center justify-between rounded-lg bg-white p-6 shadow-card md:flex-col md:items-stretch xl:p-8"
             key={index}
             type="text"

@@ -2,6 +2,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
+import CommunityLinks from 'components/pages/blog/community-links';
 import FeaturedPosts from 'components/pages/blog/featured-posts';
 import PostsBoard from 'components/pages/blog/posts-board';
 
@@ -35,6 +36,7 @@ const BlogPage = (props) => {
         currentPage={currentPage}
         numPages={numPages}
       />
+      <CommunityLinks />
     </MainLayout>
   );
 };
