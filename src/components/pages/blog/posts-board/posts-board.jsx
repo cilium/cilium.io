@@ -26,7 +26,7 @@ const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages 
   }, [currentPage]);
 
   return (
-    <section className="my-10 md:my-20 lg:my-28">
+    <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{blockTitle}</Heading>
         <Categories id="categories" categories={categories} currentCategory={currentCategory} />
