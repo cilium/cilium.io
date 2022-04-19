@@ -1,13 +1,13 @@
 import React from 'react';
 
 import Architecture from 'components/pages/get-started/architecture';
-import HandsOn from 'components/pages/get-started/hands-on';
 import Learn from 'components/pages/get-started/learn';
 import News from 'components/pages/get-started/news';
 import RelatedProjects from 'components/pages/get-started/related-projects';
 import Highlights from 'components/pages/home/highlights';
 import CNCFBanner from 'components/shared/cncf-banner';
 import Community from 'components/shared/community';
+import HandsOn from 'components/shared/hands-on';
 import Hero from 'components/shared/hero';
 import UserCommunity from 'components/shared/user-community';
 import illustration from 'images/pages/get-started/hero/illustration.svg';

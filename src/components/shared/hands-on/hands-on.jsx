@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
 import CardItem from 'components/shared/card-item';
-import Container from 'components/shared/container/container';
+import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import svgIllustration3 from 'images/documentation.svg';
 import svgIllustration2 from 'images/monthly-introduction.svg';
@@ -10,7 +10,7 @@ import svgIllustration1 from 'images/weekly-introduction.svg';
 
 const title = 'Get Hands-On With Cilium';
 
-const Discover = () => {
+const HandsOn = () => {
   const { imageIllustration1, imageIllustration2 } = useStaticQuery(graphql`
     query {
       imageIllustration1: file(relativePath: { eq: "pages/get-started/hands-on/thomasgraf.png" }) {
@@ -43,7 +43,7 @@ const Discover = () => {
           url: 'https://calendly.com/cilium-events/cilium-introduction',
           title: 'Book your seat',
           isPopup: true,
-          theme: 'primary-1',
+          theme: 'outline-gray-dark',
         },
       ],
     },
@@ -74,7 +74,7 @@ const Discover = () => {
     },
     {
       svgData: {
-        width: 382,
+        width: 384,
         height: 224,
         imageSrc: svgIllustration3,
       },
@@ -96,19 +96,21 @@ const Discover = () => {
       ],
     },
   ];
+
   return (
-    <section className="mt-12 md:mt-20 lg:mt-28">
+    <section className="mt-10 md:mt-20 lg:mt-32">
       <Container>
         <Heading className="text-center" tag="h2">
           {title}
         </Heading>
-        <ul className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:gap-6 lg:mt-14 lg:grid-cols-3 xl:gap-8">
+        <div className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:gap-6 lg:mt-14 lg:grid-cols-3 xl:gap-8">
           {items.map((item, index) => (
             <CardItem size="sm" {...item} key={index} />
           ))}
-        </ul>
+        </div>
       </Container>
     </section>
   );
 };
-export default Discover;
+
+export default HandsOn;

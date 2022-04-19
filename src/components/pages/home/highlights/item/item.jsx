@@ -7,7 +7,7 @@ import Heading from 'components/shared/heading';
 import ChevronIcon from 'icons/chevron.inline.svg';
 
 const Item = ({ icon: Icon, title, description }) => (
-  <Popover className="relative">
+  <Popover as="li" className="relative">
     {({ open }) => (
       <>
         <Popover.Button

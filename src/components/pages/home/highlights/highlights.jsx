@@ -87,11 +87,11 @@ const Highlights = () => (
           <Heading tag="h2" size="sm">
             {title}
           </Heading>
-          <div className="mt-6 grid grid-cols-1 gap-4 md:gap-6 lg:mt-9 lg:auto-rows-[130px] lg:gap-8 xl:auto-rows-fr">
+          <ul className="mt-6 grid grid-cols-1 gap-4 md:gap-6 lg:mt-9 lg:auto-rows-[130px] lg:gap-8 xl:auto-rows-fr">
             {items.map((item, index) => (
               <Item {...item} key={index} />
             ))}
-          </div>
+          </ul>
         </div>
       ))}
     </Container>
