@@ -33,7 +33,7 @@ const Distributions = () => (
       <Heading tag="h2">{title}</Heading>
       <div className="mt-6 flex flex-col divide-y divide-gray-3 rounded-xl bg-white px-8 py-8 shadow-card md:mt-10 lg:mt-14 lg:flex-row lg:divide-x lg:divide-y-0 lg:px-0">
         <div className="flex-1 pb-6 lg:w-[340px] lg:flex-none lg:px-6 lg:pb-0 xl:px-8">
-          <IsovalentLogo className="h-[26px] w-auto" />
+          <IsovalentLogo className="h-[32px] w-auto" />
           <Heading className="mt-3" tag="h3" size="xs">
             {enterprise.title}
           </Heading>

@@ -58,7 +58,7 @@ const Training = () => (
                 className="relative mx-auto flex max-w-[592px] basis-1/2 flex-col rounded-xl bg-white p-4 shadow-card sm:p-6 md:p-8"
                 key={index}
               >
-                <Logo className="h-10" />
+                <Logo className="h-9" />
                 <Heading className="mt-7" size="2xs" tag="h3">
                   {title}
                 </Heading>
