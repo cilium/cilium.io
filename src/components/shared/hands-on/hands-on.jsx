@@ -88,7 +88,7 @@ const HandsOn = () => {
           theme: 'outline-gray-dark',
         },
         {
-          url: 'https://play.instruqt.com/isovalent',
+          url: 'https://play.instruqt.com/isovalent/invite/j4maqox5r1h5',
           title: 'Tutorials',
           target: '_blank',
           theme: 'outline-gray-dark',
