@@ -58,4 +58,8 @@ I’ve found the maintainers to be extremely helpful and welcoming of new people
 
 I’m very excited about traveling! It's something I've really been missing over the last two years. Just to get out and see other countries again. It’s been hard, but I can’t wait to do it.
 
-Catch his two talks about Cilium at KubeCon EU 2022, [Logs Told Us It Was DNS, It Felt Like DNS, It Had To Be DNS, It Wasn’t DNS](https://sched.co/ytrw) Friday May 20, 2022 11:55 - 12:30 CEST and [Cilium: Welcome, Vision and Updates](https://sched.co/ytq0) Thursday May 19, 2022 15:25 - 16:00 CEST.
+Catch his two talks about Cilium at KubeCon EU 2022
+[Logs Told Us It Was DNS, It Felt Like DNS, It Had To Be DNS, It Wasn’t DNS](https://sched.co/ytrw) Friday May 20, 2022 11:55 - 12:30 CEST
+[Cilium: Welcome, Vision and Updates](https://sched.co/ytq0) Thursday May 19, 2022 15:25 - 16:00 CEST.
+
+Follow him on Twitter [@lbernail](https://twitter.com/lbernail)
