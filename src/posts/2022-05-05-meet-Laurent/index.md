@@ -13,6 +13,7 @@ tags:
   - Maintainer
 ---
 
+![Laurent Bernaille](laurent.jpg)
 
 *May 05th, 2022*  
 *Interviewed by: Bill Mulligan, Isovalent*
