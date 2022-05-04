@@ -71,6 +71,12 @@ Friday May 20, 2022 11:00 - 12:30 CEST
 
 Kubernetes Networking 101 will introduce attendees to the world of network communications in a hands on Cloud Native setting. This talk delivers a high level but completely practical end to end look at service communications within and without a Kubernetes cluster. Attendees will see how the many facets of Kubernetes networking come together to enable powerful communications solutions first hand. The tutorial begins with the simplest types of service communications, using Kubernetes services, DNS (CoreDNS) and CNI plugins (Cilium) to facilitate interprocess communications and load balancing. The tutorial builds additional scenarios on this base, including ingress (Emissary/Envoy), NodePort / HostPort features, load balancing (Metal-lb) and finally a short look at service mesh functionality (Linkerd). Upon completion of this tutorial, attendees will have a clear understanding of the Kubernetes communications possibilities and pointers to next steps in the learning journey.
 
+[Logs Told Us It Was DNS, It Felt Like DNS, It Had To Be DNS, It Wasn’t DNS](https://sched.co/ytrw)
+
+Friday May 20, 2022 11:55 - 12:30 CEST
+
+It all started with a team reaching out because they had DNS issues during rolling updates. Business as usual when you host hundreds of applications on dozens of Kubernetes clusters… Four weeks later: We are reading kernel code to understand the corner cases of dropping Martian packets. Could this be the connection between gRPC client reconnect algorithms and the overflowing conntrack table we can feel but not see? In time, we solved the issue. And for once… it wasn't DNS! In this talk, we will focus on one of the most complex incidents we have faced in our Kubernetes environment. We will go through the debugging steps in detail, dive deep into the mysterious behaviors we discovered and explain how we finally addressed the incident by simply removing three lines of code.
+
 [Better Bandwidth Management with eBPF](https://sched.co/ytsQ)
 
 Friday May 20, 2022 14:00 - 14:35 CEST
