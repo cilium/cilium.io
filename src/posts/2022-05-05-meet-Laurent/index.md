@@ -4,7 +4,7 @@ date: '2022-05-05T17:00:00.000Z'
 title: 'Meet the Maintainer - Laurent Bernaille'
 isPopular: false
 isFeatured: false
-ogImage: laurent.jpg
+ogImage: laurent.jpeg
 ogSummary: "Learn more about Laurent and how he got involved in Cilium"
 categories:
   - Community
@@ -13,7 +13,6 @@ tags:
   - Maintainer
 ---
 
-![Cilium Talks at KubeCon](ciliumtalks.jpg)
 
 *May 05th, 2022*  
 *Interviewed by: Bill Mulligan, Isovalent*
