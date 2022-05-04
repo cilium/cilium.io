@@ -34,7 +34,7 @@ I’ve been using open source for a long time, but I only first started really c
 
 **How did you first hear about eBPF and Cilium?**
 
-I first heard about eBPF before I even joined Datadog or used kube-proxy. I also saw one of the first demos of Cilium at DockerCon 2017 when Thomas did the Star Wars demo.
+I first heard about eBPF before I even joined Datadog or used kube-proxy. I also saw one of the first demos of [Cilium at DockerCon 2017](https://www.youtube.com/watch?v=ilKlmTDdFgk) when Thomas did the Star Wars demo.
 
 The key turning point for us with Cilium was when we were having many problems with our existing CNI plugin and kube-proxy. We started talking to people at KubeCon who were in a similar situation to us, running very large clusters and using a CNI plug-in with deep integration into AWS. We were starting to migrate to Cilium so we chatted with people in the hallway track and we became pretty convinced that Cilium was the way to go. As the integration between Cilium, Kubernetes, and AWS became stronger, it became more obvious that we chose the right path.
 
@@ -44,9 +44,9 @@ There was actually a very specific use case that got me into becoming a maintain
 
 **What are you working on right now in Cilium?**
 
-The last few things I've worked on have been related to datapath optimizations. For instance, we found out during an incident that when you try to connect to a pod that has been deleted from the nodes, the packets are just dropped and the client can’t know that this IP is unreachable so it will use the normal retries and timeouts. We made a change to notify the client that this was happening.
+The last few things I've worked on have been related to datapath optimizations. For instance, we found out during an [incident](https://www.datadoghq.com/blog/engineering/grpc-dns-and-load-balancing-incident/) that when you try to connect to a pod that has been deleted from the nodes, the packets are just dropped and the client can’t know that this IP is unreachable so it will use the normal retries and timeouts. We made a [change](https://github.com/cilium/cilium/pull/18505) to notify the client that this was happening.
 
-And one of the features that I followed very closely, but I didn't directly work on is the support for prefix delegation in AWS. It is a recent feature in AWS and the integration for it was built by someone from our team.
+And one of the features that I followed very closely, but I didn't directly work on is the support for [prefix delegation in AWS](https://github.com/cilium/cilium/pull/18463). It is a recent feature in AWS that has become very important to us given the size of our VPCs and the integration for it was built by [Hemanth Malla](https://github.com/hemanthmalla) from our team.
 
 **What advice do you have for people just getting into the Cilium community?**
 
