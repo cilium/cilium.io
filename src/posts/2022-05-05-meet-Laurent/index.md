@@ -40,7 +40,7 @@ The key turning point for us with Cilium was when we were having many problems w
 
 **How did you become a maintainer of Cilium?**
 
-There was actually a very specific use case that got me into becoming a maintainer. We wanted to use Cilium to perform IPsec encryption for workloads running in the host network namespace, which was not covered at the time. The Isovalent team was extremely helpful with getting this code developed.  We were running very recent code and as we were testing and discovering subtle and "fun" edge cases (often involving MTU and fragmentation), I started contributing patches to address them. 
+There was actually a very specific use case that got me into becoming a maintainer. We wanted to use Cilium to perform IPsec encryption for workloads running in the host network namespace, which was not covered at the time. The Isovalent team was extremely helpful with getting this code developed.  We were running very recent code and as we were testing and discovering subtle and "fun" edge cases (often involving [MTU](https://github.com/cilium/cilium/pull/9201) and fragmentation), I started contributing patches to address them. 
 
 **What are you working on right now in Cilium?**
 
