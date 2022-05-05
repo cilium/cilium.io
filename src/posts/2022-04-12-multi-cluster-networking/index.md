@@ -3,7 +3,7 @@ path: '/blog/2022/04/12/cilium-multi-cluster-networking'
 date: '2022-04-12T17:00:00.000Z'
 title: 'Multi Cluster Networking with Cilium and Friends'
 isPopular: true
-isFeatured: false
+isFeatured: true
 ogImage: Cilium5.png
 ogSummary: "Learn how RVU uses Cilium Clustermesh to load balance across clusters and across clouds"
 categories:
