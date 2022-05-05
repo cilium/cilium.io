@@ -2,7 +2,7 @@
 path: '/blog/2021/12/20/github-10k'
 date: '2021-12-20T17:00:00.000Z'
 title: 'An Amazing Milestone for Cilium - 10,000 stars!'
-isPopular: true
+isPopular: false
 ogImage: ogimage.png
 ogSummary: "We're going to need another digit ⭐️"
 categories:
