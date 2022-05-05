@@ -52,7 +52,7 @@ const SEO = ({ data: { title, description, image, slug } = {}, facebook, canonic
       <meta name="twitter:image" content={currentImagePath} />
       <meta name="twitter:url" content={currentUrl} />
       <meta name="twitter:description" content={currentDescription} />
-      {slug && canonical && <link rel="canonical" href={currentCanonicalUrl} />}
+      {(slug || canonical) && <link rel="canonical" href={currentCanonicalUrl} />}
     </Helmet>
   );
 };
