@@ -2,7 +2,7 @@
 path: '/blog/2022/05/05/meet-maintainer-laurent-bernaille'
 date: '2022-05-05T17:00:00.000Z'
 title: 'Meet the Maintainer - Laurent Bernaille'
-isPopular: false
+isPopular: true
 isFeatured: false
 ogImage: laurent.jpeg
 ogSummary: "Learn more about Laurent and how he got involved in Cilium"
