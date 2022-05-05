@@ -135,6 +135,7 @@ const plugins = [
     options: {
       headers: {
         '/fonts/*': ['Cache-Control: public, max-age=31536000, immutable'],
+        '/*': ['Content-Security-Policy: frame-ancestors instruqt.com play.instruqt.com'],
       },
     },
   },

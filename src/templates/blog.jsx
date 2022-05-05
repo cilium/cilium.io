@@ -4,8 +4,37 @@ import React from 'react';
 
 import FeaturedPosts from 'components/pages/blog/featured-posts';
 import PostsBoard from 'components/pages/blog/posts-board';
+import Cards from 'components/shared/cards';
 
 import MainLayout from '../layouts/main';
+
+const cardItems = [
+  {
+    iconName: 'slack',
+    title: 'Slack',
+    description:
+      'For live conversation and quick questions, join the Cilium Slack workspace. Don’t forget to say hi!',
+    buttonText: 'Join slack workspace',
+    buttonUrl: 'https://cilium.herokuapp.com/',
+    buttonTarget: '_blank',
+  },
+  {
+    iconName: 'twitter',
+    title: 'Twitter',
+    description: 'Follow Cilium on Twitter for the latest news and announcements.',
+    buttonText: 'Follow Cilium on Twitter',
+    buttonUrl: 'https://twitter.com/ciliumproject',
+    buttonTarget: '_blank',
+  },
+  {
+    iconName: 'github',
+    title: 'Github',
+    description: 'Cilium uses GitHub tags to maintain a list of asked questions.',
+    buttonText: 'Join Github',
+    buttonUrl: 'https://github.com/cilium/cilium',
+    buttonTarget: '_blank',
+  },
+];
 
 const BlogPage = (props) => {
   const {
@@ -22,15 +51,25 @@ const BlogPage = (props) => {
     description: 'The latest articles covering eBPF-based Networking, Observability, and Security',
     slug,
   };
+
+  const isCategoryPage = pathname.includes('categories');
+
   return (
     <MainLayout isBlogPage={isBlogPage} canonicalUrl={canonicalUrl} pageMetadata={seoMetadata}>
-      <FeaturedPosts featuredStory={featuredStory?.[0]} />
+      {!isCategoryPage && <FeaturedPosts featuredStory={featuredStory?.[0]} />}
       <PostsBoard
         categories={categories}
         posts={posts}
         currentCategory={currentCategory}
         currentPage={currentPage}
         numPages={numPages}
+      />
+      <Cards
+        className="py-10 md:py-20 lg:py-28"
+        title="Community"
+        items={cardItems}
+        buttonType="link"
+        theme="white"
       />
     </MainLayout>
   );

@@ -24,7 +24,7 @@ const items = [
         url: 'https://www.youtube.com/watch?v=80OYrzS1dCA&t=405s',
         target: '_blank',
         title: 'Watch video',
-        theme: 'primary-1',
+        theme: 'outline-gray-dark',
       },
     ],
   },

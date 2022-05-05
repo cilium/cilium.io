@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
-import Banner from 'components/shared/banner';
 import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
 import SEO from 'components/shared/seo';
@@ -56,7 +55,6 @@ const MainLayout = ({
     <>
       <SEO canonical={canonicalUrl} data={pageMetadata} />
       <div className="relative z-20">
-        {isBlogPage && <Banner />}
         <Header
           navigation={navigation}
           showSearchBox={isBlogPage}

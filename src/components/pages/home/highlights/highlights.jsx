@@ -20,7 +20,7 @@ const list = [
     items: [
       {
         icon: NativeSupportIcon,
-        title: 'Native support for service type Load Balancer and Egress',
+        title: 'Service Load Balancing',
         description: `<p>Kubernetes doesn't come with an implementation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
       },
       {
@@ -87,11 +87,11 @@ const Highlights = () => (
           <Heading tag="h2" size="sm">
             {title}
           </Heading>
-          <div className="mt-6 grid grid-cols-1 gap-4 md:gap-6 lg:mt-9 lg:auto-rows-[130px] lg:gap-8 xl:auto-rows-fr">
+          <ul className="mt-6 grid grid-cols-1 gap-4 md:gap-6 lg:mt-9 lg:auto-rows-[130px] lg:gap-8 xl:auto-rows-fr">
             {items.map((item, index) => (
               <Item {...item} key={index} />
             ))}
-          </div>
+          </ul>
         </div>
       ))}
     </Container>

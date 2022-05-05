@@ -8,9 +8,9 @@ import BlogPostsList from './blog-posts-list';
 import Categories from './categories';
 import Pagination from './pagination';
 
-const blockTitle = 'All posts';
-
 const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
+  const blockTitle = currentCategory === '*' ? 'All posts' : currentCategory;
+
   const scrollTo = () => {
     const element = document.getElementById('categories');
     const offset = -50;
@@ -26,7 +26,7 @@ const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages 
   }, [currentPage]);
 
   return (
-    <section className="my-10 md:my-20 lg:my-28">
+    <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{blockTitle}</Heading>
         <Categories id="categories" categories={categories} currentCategory={currentCategory} />
@@ -40,6 +40,7 @@ const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages 
     </section>
   );
 };
+
 PostsBoard.propTypes = {
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   posts: PropTypes.arrayOf(

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Discover from 'components/pages/home/discover';
 import Hero from 'components/pages/home/hero';
 import Highlights from 'components/pages/home/highlights';
 import Learn from 'components/pages/home/learn';
@@ -8,6 +7,7 @@ import TwitterCards from 'components/pages/home/twitter-cards';
 import CNCFBanner from 'components/shared/cncf-banner';
 import Community from 'components/shared/community';
 import FeaturedTalks from 'components/shared/featured-talks';
+import HandsOn from 'components/shared/hands-on';
 import UserCommunity from 'components/shared/user-community';
 import MainLayout from 'layouts/main';
 import caseStudiesData from 'utils/case-studies-data';
@@ -43,7 +43,7 @@ const IndexPage = () => (
     <UserCommunity className="pb-10 pt-8 md:pb-20 lg:pb-32" theme="gray" {...userCommunity1} />
     <Highlights />
     <CNCFBanner />
-    <Discover />
+    <HandsOn />
     <UserCommunity
       className="mt-10 py-10 md:mt-20 md:py-20 lg:mt-28 lg:py-32"
       theme="gray"

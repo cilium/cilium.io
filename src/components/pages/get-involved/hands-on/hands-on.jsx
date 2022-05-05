@@ -42,7 +42,7 @@ const HandsOn = () => {
         {
           title: 'Book a Seat',
           url: 'https://calendly.com/cilium-events/cilium-introduction',
-          theme: 'primary-1',
+          theme: 'outline-gray-dark',
           isPopup: true,
         },
       ],
