@@ -1,10 +1,9 @@
 /* https://cilium.netlify.app/:splat 200
 
-/learn /get-started
-
 /blog/categories/How-To  /blog/categories/how-to
 /blog/categories/Community  /blog/categories/community
 
+/learn /get-started 301
 /try  http://docs.cilium.io/en/stable/gettingstarted/ 301
 /slack  https://cilium.herokuapp.com 301
 /try-mesos  http://docs.cilium.io/en/stable/gettingstarted/mesos/ 301
