@@ -1,5 +1,3 @@
-/* https://cilium.netlify.app/:splat 200
-
 /blog/categories/How-To  /blog/categories/how-to
 /blog/categories/Community  /blog/categories/community
 /learn /get-started
@@ -24,3 +22,5 @@
 /hubble https://github.com/cilium/hubble
 /swag https://shop.spreadshirt.net/cilium
 /install-aws-marketplace https://isovalent.com/install-aws-marketplace
+
+/* https://cilium.netlify.app/:splat 200
