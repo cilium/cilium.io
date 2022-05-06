@@ -1,5 +1,5 @@
 ---
-path: '/blog/2022/05/06/cilium-multi-cluster-networking'
+path: '/blog/2022/05/06/cilium-kubecon-eu-talks'
 date: '2022-05-06T17:00:00.000Z'
 title: 'Cilium Talks at KubeCon EU 2022'
 isPopular: false
