@@ -1,27 +1,27 @@
-/* https://cilium.netlify.app/:splat 200
-
-/learn /get-started
-
 /blog/categories/How-To  /blog/categories/how-to
 /blog/categories/Community  /blog/categories/community
 
-/try  http://docs.cilium.io/en/stable/gettingstarted/ 301
-/slack  https://cilium.herokuapp.com 301
-/try-mesos  http://docs.cilium.io/en/stable/gettingstarted/mesos/ 301
-/starwars-demo  https://youtu.be/ilKlmTDdFgk?list=PLkA60AVN3hh_nihZ1mh6cO3n-uMdF7UlV&t=382 301
-/try-kafka  http://docs.cilium.io/en/stable/gettingstarted/kafka/ 301
-/try-grpc http://docs.cilium.io/en/stable/gettingstarted/grpc/ 301
-/k8s-yaml https://raw.githubusercontent.com/cilium/cilium/HEAD/examples/kubernetes/cilium.yaml 301
-/k8s-demo-yaml  https://raw.githubusercontent.com/cilium/cilium/HEAD/examples/minikube/demo.yaml 301
-/clusterdebug https://s3-us-west-2.amazonaws.com/covalentpublicassets/clusterdebug.zip 301
+/try http://docs.cilium.io/en/stable/gettingstarted
+/slack https://cilium.herokuapp.com
+/try-mesos http://docs.cilium.io/en/stable/gettingstarted/mesos
+/starwars-demo https://youtu.be/ilKlmTDdFgk?list=PLkA60AVN3hh_nihZ1mh6cO3n-uMdF7UlV&t=382
+/try-kafka http://docs.cilium.io/en/stable/gettingstarted/kafka
+/try-grpc http://docs.cilium.io/en/stable/gettingstarted/grpc
+/k8s-yaml https://raw.githubusercontent.com/cilium/cilium/HEAD/examples/kubernetes/cilium.yaml
+/k8s-demo-yaml https://raw.githubusercontent.com/cilium/cilium/HEAD/examples/minikube/demo.yaml
+/clusterdebug https://s3-us-west-2.amazonaws.com/covalentpublicassets/clusterdebug.zip
+/cilium-envoy-stable.yaml https://s3-us-west-2.amazonaws.com/covalentpublicassets/cilium-envoy-stable.yaml
+/eks http://docs.cilium.io/en/stable/kubernetes/install/eks
+/upgrade http://docs.cilium.io/en/stable/install/upgrade
+/hubble https://github.com/cilium/hubble
+/swag https://shop.spreadshirt.net/cilium
+/install-aws-marketplace https://isovalent.com/install-aws-marketplace
+
+/learn /get-started 301
 /release-1-0-rc1-blog /blog/cilium1dot0rc 301
 /grpc-blog  /blog/grpc 301
-/cilium-envoy-stable.yaml https://s3-us-west-2.amazonaws.com/covalentpublicassets/cilium-envoy-stable.yaml 301
 /kafka-blog /blog/2017/11/7/cilium-with-kafka 301
 /istio /blog/2018/08/07/istio-10-cilium 301
-/eks http://docs.cilium.io/en/stable/kubernetes/install/eks/ 301
-/upgrade http://docs.cilium.io/en/stable/install/upgrade/ 301
-/hubble https://github.com/cilium/hubble 301
-/blog/2020/11/10/ebpf-future-of-network/ https://cilium.io/blog/2020/11/10/ebpf-future-of-networking/ 301
-/swag https://shop.spreadshirt.net/cilium 301
-/install-aws-marketplace https://isovalent.com/install-aws-marketplace 301
+/blog/2020/11/10/ebpf-future-of-network /blog/2020/11/10/ebpf-future-of-networking 301
+
+/* https://cilium.netlify.app/:splat 200
