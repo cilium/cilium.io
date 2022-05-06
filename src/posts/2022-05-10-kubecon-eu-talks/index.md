@@ -3,7 +3,7 @@ path: '/blog/2022/05/06/cilium-multi-cluster-networking'
 date: '2022-05-06T17:00:00.000Z'
 title: 'Cilium Talks at KubeCon EU 2022'
 isPopular: false
-isFeatured: false
+isFeatured: true
 ogImage: ciliumtalks.jpg
 ogSummary: "Find all the Cilium talk at KubeCon EU"
 categories:
