@@ -1,6 +1,6 @@
 ---
-path: '/blog/2022/05/10/cilium-multi-cluster-networking'
-date: '2022-05-10T17:00:00.000Z'
+path: '/blog/2022/05/06/cilium-multi-cluster-networking'
+date: '2022-05-06T17:00:00.000Z'
 title: 'Cilium Talks at KubeCon EU 2022'
 isPopular: false
 isFeatured: false
@@ -15,7 +15,7 @@ tags:
 
 ![Cilium Talks at KubeCon](ciliumtalks.jpg)
 
-*May 10th, 2022*  
+*May 6th, 2022*  
 *Author: Bill Mulligan, Isovalent*
 
 The first in-person KubeCon + CloudNativeCon EU since 2019 is just around the corner and we can’t wait to see the Cilium community again outside a Zoom meeting. In case you lost track, that means we last met in Europe at [Cilium 1.5](https://cilium.io/blog/2019/04/24/cilium-15) and boy have there been a lot of updates to Cilium in the meantime (we were able to meet at KubeCon NA in the fall, but missed most of the people outside the US). With that much of a gap, there is a lot to catch up on and the KubeCon schedule has not failed to deliver. The talks cover both technical talks from Cilium contributors and end user stories from people putting Cilium into production. You will be able to catch presentations on everything from Cilium Clustermesh to Cilium for telco workloads to a tour of the Cilium service mesh. Let’s dive into each of the talks below.
