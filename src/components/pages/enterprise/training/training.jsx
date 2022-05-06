@@ -20,7 +20,7 @@ const items = [
     logoName: 'acend',
     title: 'Cilium Basics',
     description:
-      'This one-day training in English or German provides a practical and clear introduction to Cilium, an eBFP-based networking, observability and security stack for cloud and on-premise infrastructure.',
+      'This one-day training in English or German provides a practical and clear introduction to Cilium, an eBPF-based networking, observability and security stack for cloud and on-premise infrastructure.',
     buttonText: 'Learn more',
     buttonLink: 'https://www.acend.ch/en/trainings/cilium/',
     buttonTarget: '_blank',

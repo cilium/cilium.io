@@ -11,7 +11,7 @@ import CiliumLogo from './images/cilium-logo.inline.svg';
 const coverStyles = {
   base: 'shrink-0',
   lg: 'sm:max-w-[512px]',
-  md: 'min-h-[168px] sm:max-h-[168px] sm:max-w-[320px]',
+  md: 'min-h-[168px] sm:max-h-[168px] max-w-full',
   sm: 'min-h-[107px] sm:max-h-[107px] sm:max-w-[198px]',
 };
 
@@ -27,7 +27,7 @@ const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
     content = (
       <GatsbyImage
         className={coverClassNames}
-        imgClassName="rounded-lg"
+        imgClassName="self-center rounded-lg"
         image={getImage(ogImage)}
         objectFit="contain"
         alt={title}
@@ -37,7 +37,7 @@ const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
   } else if (coverUrl) {
     content = (
       <img
-        className={classNames('rounded-lg object-contain', coverClassNames)}
+        className={classNames('self-center rounded-lg object-contain', coverClassNames)}
         src={coverUrl}
         alt={title}
         loading="lazy"
