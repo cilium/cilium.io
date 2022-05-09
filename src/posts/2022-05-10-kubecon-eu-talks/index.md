@@ -47,6 +47,12 @@ Tuesday May 17, 2022 11:35 - 11:45 CEST
 
 Edge computing can require connecting hundreds of clusters across disparate locations and infrastructures. Without a networking solution to manage this scale and complexity, you will just have a bunch of computers talking to themselves rather than each other and your customers. Cilium is the next generation, eBPF powered open-source Cloud Native Networking solution, providing security, observability, scalability, and superior performance. Cilium has joined the CNCF as an incubating project. In this session, you’ll learn how you can leverage Cilium Cluster Mesh for providing connectivity for load-balancing, observability, and security between nodes across multiple clusters, enabling simple, high-performance cross-cluster connectivity at the edge. We’ll explore how Cluster Mesh allows endpoints in connected clusters to communicate while providing full security policy enforcement. The audience will walk away with an appreciation for how eBPF can help solve their networking challenges at the edge.
 
+[The Future of Service Mesh: Is eBPF a Silver Lining or a Silver Bullet](https://sched.co/zsaO)
+
+Tuesday, May 17 2022 16:05 - 17:05 CEST
+
+Service mesh implementations normally take one of two forms: a proxy per node, or a proxy per workload (the so-called "sidecar"). Linkerd went from A to B. Cilium is suggesting we can go from B to A. Is eBPF a savior, or are we hyper-optimizing a tiny piece of the datapath? And what else might the future of service mesh hold?
+
 [Transparent Live Migration of Services Between Kubernetes Clusters](https://sched.co/ytpo)
 
 Thursday May 19, 2022 15:25 - 16:00 CEST
