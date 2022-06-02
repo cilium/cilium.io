@@ -2,7 +2,7 @@
 path: '/blog/2022/01/25/cilium-service-mesh-beta-feedback'
 date: '2022-01-25T17:00:00.000Z'
 title: 'Help prioritize Cilium Service Mesh features'
-isPopular: false
+isPopular: true
 isFeatured: false
 ogImage: service-mesh-features.png
 ogSummary: "Here’s an update on what we’ve learned so far with the eBPF-powered Cilium Service Mesh that's currently in beta, and some thoughts on next steps."
