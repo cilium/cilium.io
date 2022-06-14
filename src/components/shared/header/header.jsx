@@ -5,7 +5,7 @@ import React from 'react';
 import Button from 'components/shared/button';
 import SlackIcon from 'icons/slack.inline.svg';
 import Logo from 'images/logo.inline.svg';
-import algoliaQueries from 'utils/algoria-queries';
+import algoliaQueries from 'utils/algolia-queries';
 
 import Container from '../container';
 import GithubStars from '../github-stars';

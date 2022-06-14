@@ -18,7 +18,7 @@ const items = [
     },
 
     name: '10min Introduction to Cilium',
-    text: `Liz Rice and Thomas Graf answer the most popular questions about the Сillium, its creation and the problems it solves`,
+    text: `Liz Rice and Thomas Graf answer the most popular questions about the Cilium, its creation and the problems it solves`,
     buttons: [
       {
         url: 'https://www.youtube.com/watch?v=80OYrzS1dCA&t=405s',

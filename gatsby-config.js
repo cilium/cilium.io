@@ -1,7 +1,7 @@
 // Gatsby has dotenv by default
 // eslint-disable-next-line import/no-extraneous-dependencies
 require('dotenv').config();
-const queries = require('./src/utils/algoria-queries');
+const queries = require('./src/utils/algolia-queries');
 
 const plugins = [
   'gatsby-plugin-react-helmet',
