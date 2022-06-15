@@ -2,10 +2,10 @@ import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
 import Guidelines from 'components/pages/get-involved/guidelines';
-import HandsOn from 'components/pages/get-involved/hands-on';
 import ReportBugs from 'components/pages/get-involved/report-bugs';
 import Subscribe from 'components/pages/get-involved/subscribe';
 import Cards from 'components/shared/cards';
+import HandsOn from 'components/shared/hands-on';
 import HeroWithImage from 'components/shared/hero-with-image';
 import decor1 from 'images/pages/get-involved/hero/decor-1.svg';
 import decor2 from 'images/pages/get-involved/hero/decor-2.svg';
