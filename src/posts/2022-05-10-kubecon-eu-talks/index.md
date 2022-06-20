@@ -3,7 +3,7 @@ path: '/blog/2022/05/06/cilium-kubecon-eu-talks'
 date: '2022-05-06T17:00:00.000Z'
 title: 'Cilium Talks at KubeCon EU 2022'
 isPopular: false
-isFeatured: true
+isFeatured: false
 ogImage: ciliumtalks.jpg
 ogSummary: "Find all the Cilium talk at KubeCon EU"
 categories:
