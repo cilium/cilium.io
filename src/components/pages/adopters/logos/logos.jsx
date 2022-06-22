@@ -14,6 +14,7 @@ import CivoLogo from './images/civo.inline.svg';
 import CraneLogo from './images/crane.inline.svg';
 import DaoCloudLogo from './images/daocloud.inline.svg';
 import DigitalOceanLogo from './images/digitalocean.inline.svg';
+import EquinixLogo from './images/equinix.inline.svg';
 import GardernerLogo from './images/gardener.inline.svg';
 import GoogleCloudLogo from './images/google-cloud.inline.svg';
 import KindLogo from './images/kind.inline.svg';
@@ -22,6 +23,7 @@ import KubeaszLogo from './images/kubeasz.inline.svg';
 import KubekeyLogo from './images/kubekey.inline.svg';
 import KubeoneLogo from './images/kubeone.inline.svg';
 import KubesprayLogo from './images/kuberspray.inline.svg';
+import OpenShiftLogo from './images/openshift.inline.svg';
 import OpenStackLogo from './images/openstack.inline.svg';
 import Rke2Logo from './images/rke2.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
@@ -36,6 +38,7 @@ const logos = {
   appuio: AppuioLogo,
   alibabaCloud: AlibabaCloudLogo,
   scaleway: ScalewayLogo,
+  equinix: EquinixLogo,
   digitalOcean: DigitalOceanLogo,
   openStack: OpenStackLogo,
   kind: KindLogo,
@@ -51,6 +54,7 @@ const logos = {
   daocloud: DaoCloudLogo,
   civo: CivoLogo,
   sovereign: SovereignLogo,
+  openshift: OpenShiftLogo,
 };
 
 const spaceXClassNames = {
@@ -60,7 +64,7 @@ const spaceXClassNames = {
 
 const Logos = ({ title, items, spaceXSize }) => (
   <section className="mt-10 md:mt-20 lg:mt-28 xl:mt-32">
-    <Container>
+    <Container size="sm">
       <Heading className="text-center" tag="h2">
         {title}
       </Heading>

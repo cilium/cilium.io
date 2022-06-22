@@ -43,7 +43,7 @@ export default {
   },
   alibabaCloud: {
     iconName: 'alibabaCloud',
-    text: 'Building High-Performance Cloud-Native Pod Networks',
+    text: 'Building High-Performance Cloud Native Pod Networks',
     links: [
       {
         linkText: 'Read blog',
@@ -55,7 +55,7 @@ export default {
   },
   masmovil: {
     iconName: 'masmovil',
-    text: 'Scaling a Multi-Tenant k8s Cluster in a Telco',
+    text: 'Scaling a Multi-Tenant Kubernetes Clusters in a Telco',
     links: [
       {
         linkText: 'Watch video',
@@ -64,9 +64,19 @@ export default {
       },
     ],
   },
+  uswitch: {
+    iconName: 'uswitch',
+    text: 'Uswitch uses Cilium Clustermesh for multi cluster networking',
+    links: [
+      {
+        linkText: 'Read blog',
+        linkUrl: 'https://cilium.io/blog/2022/04/12/cilium-multi-cluster-networking',
+      },
+    ],
+  },
   trip: {
     iconName: 'trip',
-    text: 'First step towards cloud native networking',
+    text: 'Trip.com uses Cilium both on premise and in AWS',
     links: [
       {
         linkText: 'Read blog',
@@ -110,7 +120,7 @@ export default {
   },
   bell: {
     iconName: 'bell',
-    text: 'Why eBPF is changing the Telco networking space?',
+    text: 'Bell uses Cilium and eBPF for telco networking',
     links: [
       {
         linkText: 'Watch video',
@@ -147,6 +157,17 @@ export default {
       },
     ],
   },
+  ikea: {
+    iconName: 'ikea',
+    text: 'IKEA uses Cilium for their self-hosted bare-metal private cloud',
+    links: [
+      {
+        linkText: 'Watch video',
+        linkUrl: 'https://www.youtube.com/watch?v=sg-F_R-ZVNc',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   sky: {
     iconName: 'sky',
     text: 'eBPF & Cilium at Sky',
@@ -154,6 +175,39 @@ export default {
       {
         linkText: 'Watch video',
         linkUrl: 'https://www.youtube.com/watch?v=u-4naOMfs_w',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  datadog: {
+    iconName: 'datadog',
+    text: 'Datadog is using Cilium in AWS (self-hosted k8s)',
+    links: [
+      {
+        linkText: 'Watch video',
+        linkUrl: 'https://www.youtube.com/watch?v=6mTVuZUHLBg',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  meltwater: {
+    iconName: 'meltwater',
+    text: 'Meltwater is using Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
+    links: [
+      {
+        linkText: 'Watch video',
+        linkUrl: 'https://www.youtube.com/watch?v=w6S6baRHHu8',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  utmost: {
+    iconName: 'utmost',
+    text: 'Utmost is using Cilium in all tiers of its Kubernetes ecosystem to implement zero trust',
+    links: [
+      {
+        linkText: 'Read blog',
+        linkUrl: 'https://blog.utmost.co/zero-trust-security-at-utmost',
         linkTarget: '_blank',
       },
     ],
@@ -166,10 +220,6 @@ export default {
     iconName: 'civo',
     text: '<b>Civo</b> is offering Cilium as the CNI option for Civo users to choose it for their Civo Kubernetes clusters',
   },
-  datadog: {
-    iconName: 'datadog',
-    text: '<b>Datadog</b> is using Cilium in AWS (self-hosted k8s)',
-  },
   form3: {
     iconName: 'form3',
     text: '<b>Form3</b> is using Cilium in their production clusters (self-hosted, bare-metal, private cloud)',
@@ -177,10 +227,6 @@ export default {
   kubesphere: {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',
-  },
-  meltwater: {
-    iconName: 'meltwater',
-    text: '<b>Meltwater</b> is using Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
   },
   palantir: {
     iconName: 'palantir',
@@ -198,12 +244,100 @@ export default {
     iconName: 'sportradar',
     text: '<b>Sportradar</b> is using Cilium as their main CNI plugin in AWS (using kops)',
   },
-  utmost: {
-    iconName: 'utmost',
-    text: '<b>Utmost</b> is using Cilium in all tiers of its Kubernetes ecosystem to implement zero trust',
-  },
   yahoo: {
     iconName: 'yahoo',
     text: '<b>Yahoo</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
+  },
+  accuknox: {
+    iconName: 'accuknox',
+    text: '<b>AccuKnox</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
+  },
+  acoss: {
+    iconName: 'acoss',
+    text: '<b>Acoss</b> uses Cilium as their main CNI plugin for self hosted Kubernetes',
+  },
+  arangodb: {
+    iconName: 'arangodb',
+    text: '<b>ArangoDB</b> Oasis uses Cilium to separate database deployments in a multi-tenant cloud environment',
+  },
+  ayedo: {
+    iconName: 'ayedo',
+    text: '<b>Ayedo</b> builds and operates cloud native platforms using Cilium',
+  },
+  cognite: {
+    iconName: 'cognite',
+    text: '<b>Cognite</b> uses Cilium as the CNI plugin for industrial DataOps',
+  },
+  finleap: {
+    iconName: 'finleap',
+    text: '<b>finleap connect</b> uses Cilium on a bare metal private cloud',
+  },
+  infomaniak: {
+    iconName: 'infomaniak',
+    text: '<b>Infomaniak</b> uses Cilium in self-hosted clusters on bare-metal and Openstack',
+  },
+  jumo: {
+    iconName: 'jumo',
+    text: '<b>JUMO</b> uses Cilium as the CNI plugin for all of their AWS-hosted EKS clusters',
+  },
+  kubermatic: {
+    iconName: 'kubermatic',
+    text: '<b>Kubermatic</b> uses Cilium as the CNI for its Kubernetes installer and platform',
+  },
+  liquidReply: {
+    iconName: 'liquidReply',
+    text: '<b>Liquid Reply</b> is a consulting firm that uses Cilium in client projects',
+  },
+  myFitnessPal: {
+    iconName: 'myFitnessPal',
+    text: '<b>MyFitnessPal</b> trusts Cilium with high volume user traffic on AWS and GKE',
+  },
+  mux: {
+    iconName: 'mux',
+    text: '<b>Mux</b> uses Cilium on self-hosted clusters in GCP and AWS to run its video streaming/analytics platforms',
+  },
+  theNewYorkTimes: {
+    iconName: 'theNewYorkTimes',
+    text: '<b>The New York Times</b> uses Cilium on EKS to build multi-region multi-tenant shared clusters',
+  },
+  nexxiot: {
+    iconName: 'nexxiot',
+    text: '<b>Nexxiot</b> using Cilium as the CNI plugin on EKS for its IoT SaaS',
+  },
+  northflank: {
+    iconName: 'northflank',
+    text: '<b>Northflank</b> uses Cilium as its CNI plugin across GCP, Azure, AWS and bare metal',
+  },
+  radioFrance: {
+    iconName: 'radioFrance',
+    text: '<b>Radio France</b> uses Cilium in their self hosted clusters on AWS',
+  },
+  rapyutaRobotics: {
+    iconName: 'rapyutaRobotics',
+    text: '<b>Rapyuta Robotics</b> uses Cilium as their main CNI plugin for self hosted clusters',
+  },
+  sap: {
+    iconName: 'sap',
+    text: '<b>SAP</b> uses Cilium for projects across AWS, Azure, GCP, and OpenStack',
+  },
+  simple: {
+    iconName: 'simple',
+    text: '<b>Simple</b> uses Cilium as default CNI for EKS',
+  },
+  smileDirectClub: {
+    iconName: 'smileDirectClub',
+    text: '<b>SmileDirectClub</b> uses Cilium in self hosted clusters vSphere and EC2 for manufacturing',
+  },
+  snapp: {
+    iconName: 'snapp',
+    text: '<b>Snapp</b> uses Cilium for its on premise Openshift clusters',
+  },
+  tsi: {
+    iconName: 'tsi',
+    text: `<b>TSI</b> uses Cilium for it's Open Sovereign Cloud product`,
+  },
+  tailorBrands: {
+    iconName: 'tailorBrands',
+    text: '<b>Tailor Brands</b> uses Cilium in their EKS clusters',
   },
 };

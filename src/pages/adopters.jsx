@@ -9,11 +9,14 @@ import { adopters as seo } from 'utils/seo-metadata';
 
 const {
   google,
+  acoss,
+  arangodb,
   bell,
   gitlab,
   aws,
   wildLife,
   adobe,
+  accuknox,
   capitalOne,
   alibabaCloud,
   masmovil,
@@ -22,6 +25,8 @@ const {
   digitalOcean,
   canonical,
   civo,
+  sky,
+  uswitch,
   datadog,
   form3,
   kubesphere,
@@ -32,21 +37,45 @@ const {
   sportradar,
   utmost,
   yahoo,
+  ikea,
+  ayedo,
+  cognite,
+  finleap,
+  infomaniak,
+  jumo,
+  kubermatic,
+  liquidReply,
+  myFitnessPal,
+  mux,
+  theNewYorkTimes,
+  nexxiot,
+  northflank,
+  radioFrance,
+  rapyutaRobotics,
+  sap,
+  simple,
+  smileDirectClub,
+  snapp,
+  tsi,
+  tailorBrands,
 } = caseStudiesData;
 
 const hero = {
   title: 'Adopters',
   description:
-    'Here are some of the organizations we know are using Cilium.<br/> If you’re using Cilium and aren’t on this list, please submit a pull request!',
+    'Here are some of the organizations we know are using Cilium.<br/> If you’re using Cilium and aren’t on this list, <a href="https://github.com/cilium/cilium/blob/master/USERS.md" target="_blank">please submit a pull request</a>!',
 };
 
 const userCommunity1 = {
   theme: 'gray',
   items: [
-    wildLife,
     adobe,
-    capitalOne,
     alibabaCloud,
+    aws,
+    sky,
+    datadog,
+    wildLife,
+    capitalOne,
     masmovil,
     trip,
     cengn,
@@ -54,32 +83,63 @@ const userCommunity1 = {
     google,
     bell,
     gitlab,
-    aws,
+    uswitch,
+    utmost,
+    meltwater,
+    ikea,
   ],
 };
+
+userCommunity1.items.sort((a, b) =>
+  a.iconName.toLowerCase().localeCompare(b.iconName.toLowerCase())
+);
 
 const userCommunity2 = {
   title: 'Cilium is everywhere',
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    accuknox,
+    arangodb,
+    acoss,
     canonical,
     civo,
-    datadog,
     form3,
     kubesphere,
-    meltwater,
     palantir,
     postfinance,
     scaleway,
     sportradar,
-    utmost,
     yahoo,
+    ayedo,
+    cognite,
+    finleap,
+    infomaniak,
+    jumo,
+    kubermatic,
+    liquidReply,
+    myFitnessPal,
+    mux,
+    theNewYorkTimes,
+    nexxiot,
+    northflank,
+    radioFrance,
+    rapyutaRobotics,
+    sap,
+    simple,
+    smileDirectClub,
+    snapp,
+    tsi,
+    tailorBrands,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
   buttonTarget: '_blank',
 };
+
+userCommunity2.items.sort((a, b) =>
+  a.iconName.toLowerCase().localeCompare(b.iconName.toLowerCase())
+);
 
 const logos1 = {
   title: 'Deploy on your prefered cloud',
@@ -96,6 +156,7 @@ const logos1 = {
     'openStack',
     'daocloud',
     'azure',
+    'equinix',
   ],
   spaceXSize: 'sm',
 };
@@ -113,6 +174,7 @@ const logos2 = {
     'kubespray',
     'kops',
     'crane',
+    'openshift',
   ],
   spaceXSize: 'md',
 };

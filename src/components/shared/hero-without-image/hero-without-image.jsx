@@ -9,7 +9,7 @@ const HeroWithoutImage = ({ title, description }) => (
     <Container className="text-center" size="xs">
       <Heading tag="h1">{title}</Heading>
       <p
-        className="flat-breaks lg:flat-none mt-4 md:mt-5 md:text-lg"
+        className="flat-breaks lg:flat-none with-link-primary-light mt-4 md:mt-5 md:text-lg"
         dangerouslySetInnerHTML={{ __html: description }}
       />
     </Container>
