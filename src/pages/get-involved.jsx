@@ -38,7 +38,7 @@ const cardItems1 = [
   },
   {
     iconName: 'youtube',
-    title: 'Youtube',
+    title: 'YouTube',
     description: 'Watch the videos from the Cilium and eBPF Communities.',
     buttonText: 'Watch on youtube',
     buttonUrl: 'https://www.youtube.com/c/eBPFCiliumCommunity/',
