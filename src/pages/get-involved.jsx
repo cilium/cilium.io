@@ -16,8 +16,7 @@ const cardItems1 = [
   {
     iconName: 'slack',
     title: 'Slack',
-    description:
-      'For live conversation and quick questions, join the Cilium Slack workspace. Don’t forget to say hi!',
+    description: 'For live conversation and quick questions, join the Cilium Slack workspace.',
     buttonText: 'Join slack workspace',
     buttonUrl: 'https://cilium.herokuapp.com/',
     buttonTarget: '_blank',
@@ -25,17 +24,25 @@ const cardItems1 = [
   {
     iconName: 'twitter',
     title: 'Twitter',
-    description: 'Follow Cilium on Twitter for the latest news and announcements.',
-    buttonText: 'Follow Cilium on Twitter',
+    description: "Don't forget to follow Cilium on Twitter for the latest news and announcements.",
+    buttonText: 'Follow on twitter',
     buttonUrl: 'https://twitter.com/ciliumproject',
     buttonTarget: '_blank',
   },
   {
     iconName: 'newsletter',
     title: 'Newsletter',
-    description: 'Keep up with the latest news from the Cilium and eBPF community',
-    buttonText: 'Subscribe to newsletter',
+    description: 'Keep up with the latest news from the Cilium and eBPF communities.',
+    buttonText: 'Subscribe',
     buttonUrl: '/newsletter',
+  },
+  {
+    iconName: 'youtube',
+    title: 'YouTube',
+    description: 'Watch the videos from the Cilium and eBPF Communities.',
+    buttonText: 'Watch on youtube',
+    buttonUrl: 'https://www.youtube.com/c/eBPFCiliumCommunity/',
+    buttonTarget: '_blank',
   },
 ];
 
@@ -104,6 +111,7 @@ const GetInvolved = () => {
         items={cardItems1}
         buttonType="link"
         theme="gray"
+        cardSize="sm"
       />
       <Guidelines />
       <Cards className="mt-16 md:mt-20 lg:mt-32" {...cardItems2} buttonType="link" />
