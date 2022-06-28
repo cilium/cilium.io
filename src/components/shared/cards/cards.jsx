@@ -35,6 +35,7 @@ const themeClassNames = {
 
 const Cards = ({ className, title, items, buttonType, theme, textSize, cardSize }) => {
   const isTypeLink = buttonType === 'link';
+  const isSmSize = cardSize === 'sm';
   const Tag = isTypeLink ? Link : Button;
   const buttonTheme = isTypeLink ? 'primary' : 'primary-1';
 
@@ -54,15 +55,15 @@ const Cards = ({ className, title, items, buttonType, theme, textSize, cardSize 
                 <li
                   className={classNames(
                     'col-span-full flex flex-col space-y-4 rounded-xl bg-white px-6 py-8 shadow-card md:flex-row md:space-y-0 md:space-x-5 lg:flex-col lg:space-x-0 lg:space-y-5 xl:px-8',
-                    cardSize === 'sm' ? 'lg:col-span-6 xl:col-span-3' : 'lg:col-span-4'
+                    isSmSize ? 'lg:col-span-6 xl:col-span-3' : 'lg:col-span-4'
                   )}
                   key={index}
                 >
                   <div className="flex grow flex-col">
-                    <div className={classNames(cardSize === 'sm' && 'flex items-center space-x-3')}>
+                    <div className={classNames(isSmSize && 'flex items-center space-x-3')}>
                       {Icon && (
                         <Icon
-                          className={classNames('shrink-0', cardSize === 'sm' && 'h-8 w-8')}
+                          className={classNames('shrink-0', isSmSize && 'h-8 w-8')}
                           aria-label={`${title} logo`}
                         />
                       )}
@@ -70,7 +71,7 @@ const Cards = ({ className, title, items, buttonType, theme, textSize, cardSize 
                       <Heading
                         size="xs"
                         tag="h3"
-                        className={classNames(cardSize === 'md' && 'mt-5 md:mt-4')}
+                        className={classNames(!isSmSize && 'mt-5 md:mt-4')}
                       >
                         {title}
                       </Heading>
