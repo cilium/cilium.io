@@ -15,6 +15,7 @@ import NewsletterIcon from './images/newsletter.inline.svg';
 import SlackIcon from './images/slack.inline.svg';
 import SupportIcon from './images/support.inline.svg';
 import TwitterIcon from './images/twitter.inline.svg';
+import YoutubeIcon from './images/youtube.inline.svg';
 
 const icons = {
   github: GithubIcon,
@@ -24,6 +25,7 @@ const icons = {
   twitter: TwitterIcon,
   conduct: ConductIcon,
   devstats: DevstatsIcon,
+  youtube: YoutubeIcon,
 };
 
 const themeClassNames = {
@@ -31,7 +33,7 @@ const themeClassNames = {
   gray: 'bg-gray-4',
 };
 
-const Cards = ({ className, title, items, buttonType, theme, textSize }) => {
+const Cards = ({ className, title, items, buttonType, theme, textSize, cardSize }) => {
   const isTypeLink = buttonType === 'link';
   const Tag = isTypeLink ? Link : Button;
   const buttonTheme = isTypeLink ? 'primary' : 'primary-1';
@@ -50,14 +52,29 @@ const Cards = ({ className, title, items, buttonType, theme, textSize }) => {
               const Icon = icons[iconName];
               return (
                 <li
-                  className="col-span-full flex flex-col space-y-4 rounded-xl bg-white px-6 py-8 shadow-card md:flex-row md:space-y-0 md:space-x-5 lg:col-span-4 lg:flex-col lg:space-x-0 lg:space-y-5 xl:px-8"
+                  className={classNames(
+                    'col-span-full flex flex-col space-y-4 rounded-xl bg-white px-6 py-8 shadow-card md:flex-row md:space-y-0 md:space-x-5 lg:flex-col lg:space-x-0 lg:space-y-5 xl:px-8',
+                    cardSize === 'sm' ? 'lg:col-span-3' : 'lg:col-span-4'
+                  )}
                   key={index}
                 >
-                  {Icon && <Icon className="shrink-0" aria-label={`${title} logo`} />}
                   <div className="flex grow flex-col">
-                    <Heading size="xs" tag="h3">
-                      {title}
-                    </Heading>
+                    <div className={classNames(cardSize === 'sm' && 'flex items-center space-x-3')}>
+                      {Icon && (
+                        <Icon
+                          className={classNames('shrink-0', cardSize === 'sm' && 'h-8 w-8')}
+                          aria-label={`${title} logo`}
+                        />
+                      )}
+
+                      <Heading
+                        size="xs"
+                        tag="h3"
+                        className={classNames(cardSize === 'md' && 'mt-5 md:mt-4')}
+                      >
+                        {title}
+                      </Heading>
+                    </div>
                     <p
                       className={classNames(
                         'with-link-primary-medium mt-3',
@@ -99,6 +116,7 @@ Cards.propTypes = {
   title: PropTypes.string,
   buttonType: PropTypes.oneOf(['button', 'link']),
   textSize: PropTypes.oneOf(['md', 'lg']),
+  cardSize: PropTypes.oneOf(['md', 'sm']),
   items: PropTypes.arrayOf(
     PropTypes.exact({
       iconName: PropTypes.string.isRequired,
@@ -116,6 +134,7 @@ Cards.defaultProps = {
   className: null,
   title: null,
   textSize: 'md',
+  cardSize: 'md',
   buttonType: 'button',
   theme: 'white',
 };
