@@ -158,8 +158,8 @@ throughput, certain types of application will care for this type of benchmark:
 - Data upload/download services (backup services, VM images, container registries, ...)
 - Media streaming services, in particular for 4K+
 
-We'll dive into [Measuring Latency: Requests per Second](/blog/2021/05/04/cni-performance#rr)
-and [Rate of new Connections](/blog/2021/05/04/cni-performance#crr) later on in
+We'll dive into [Measuring Latency: Requests per Second](/blog/2021/05/11/cni-benchmark#rr)
+and [Rate of new Connections](/blog/2021/05/11/cni-benchmark#crr) later on in
 this post which better represent typical microservices workload.
 
 <a name="overhead"></a>

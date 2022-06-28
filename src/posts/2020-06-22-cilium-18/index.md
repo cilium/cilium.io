@@ -110,6 +110,7 @@ Cilium](https://docs.cilium.io/en/v1.8/intro/)** for a more detailed general
 introduction to Cilium.
 
 <a name="kubeproxy-removal"></a>
+<a name="kube-proxy-replacement-at-the-xdp-layer"></a>
 
 # Kube-proxy replacement at the XDP layer
 
@@ -548,6 +549,7 @@ Kubernetes is now as easy as specifying some parameters while deploying Cilium.
 See <a href="https://docs.cilium.io/en/v1.8/gettingstarted/hubble/">networking and security observability with Hubble</a> for more details on how to get started with Hubble.
 
 <a name="iptables-free"></a>
+<a name="voyaging-towards-iptables-free"></a>
 
 # Voyaging towards iptables-free
 
@@ -888,6 +890,7 @@ is smaller and more efficient.
 See the merged patch sets for further information: <a href="https://lore.kernel.org/bpf/158560409224.10843.3588655801186916301.stgit@john-Precision-5820-Tower/">here</a> and <a href="https://github.com/llvm/llvm-project/commit/13f6c81c5d9a7a34a684363bcaad8eb7c65356fd">here</a>.
 
 <a name="tproxy"></a>
+<a name="ebpf-based-tproxy-replacement"></a>
 
 ### eBPF-based TPROXY replacement
 

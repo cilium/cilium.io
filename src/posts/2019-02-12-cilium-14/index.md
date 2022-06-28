@@ -95,6 +95,8 @@ control plane via an internal Kubernetes Loadbalancer to expose it to the
 internal VPCs. TLS is used to authenticate the client and server with the
 certificates and keys managed as Kubernetes secrets.
 
+<a name="ipvlan-support-beta"></a>
+
 ## IPVLAN support (beta)
 
 A new IPVLAN based datapath mode has been added. IPVLAN has latency advantages
@@ -223,6 +225,8 @@ via specialized CPU instruction sets as found in modern processors.
 Transparent encryption is a beta level feature. To enable the feature, pass
 `--enable-ipsec` option to the agent and provide a pre shared key (PSK) via
 the `--ipsec-key-file` option or by using a Kubernetes secret.
+
+<a name="sockmap-bpf-based-sidecar-acceleration-alpha"></a>
 
 ## Sockmap BPF based sidecar acceleration (alpha)
 

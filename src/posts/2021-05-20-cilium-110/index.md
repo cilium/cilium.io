@@ -427,10 +427,10 @@ $ cilium connectivity test
 _Primary contributors: Gilberto Bertin (Isovalent), Kornilios Kourtis (Isovalent) and Daniel Borkmann (Isovalent)_
 
 Following up
-[work from previous releases](https://cilium.io/blog/2020/11/10/cilium-19#performance-testing-framework),
+[work from previous releases](/blog/2020/11/10/cilium-19#performance-testing-framework),
 we continued to rigorously evaluate Cilium's networking performance. Our latest
 findings were recently summarized in a
-[blog post](https://cilium.io/blog/2021/05/11/cni-benchmark) as well as integrated
+[blog post](/blog/2021/05/11/cni-benchmark) as well as integrated
 into Cilium's [documentation](https://docs.cilium.io/en/v1.10/operations/performance/benchmark/),
 where we provided numbers for different types of direct routing workloads, showed
 how eBPF enables for low-latency as well as high CNI throughput performance, and
@@ -440,7 +440,7 @@ Guided by our in-depth performance evaluation, Cilium 1.10 includes a number of
 datapath improvements, this time mainly focussed on the VXLAN/Geneve tunneling
 performance as well as reduction of Netfilter overhead. Most notably:
 
-- [BPF host routing](https://cilium.io/blog/2020/11/10/cilium-19#virtual-ethernet-device-optimization-with-ebpf)
+- [BPF host routing](/blog/2020/11/10/cilium-19#virtual-ethernet-device-optimization-with-ebpf)
   was extended to support encapsulation. This means that maximizing performance
   using eBPF can now be achieved in both direct routing and tunneling modes. In
   particular, this improves the north-south service handling to be on par with
@@ -487,7 +487,7 @@ there. Moving the aggregation to the physical device significantly boosted the p
 
 For the case where an external client is connecting to a Pod on a Cilium-managed
 node, for example, through a NodePort service, then the same improvements can be
-applied [as done earlier](https://cilium.io/blog/2020/11/10/cilium-19#virtual-ethernet-device-optimization-with-ebpf)
+applied [as done earlier](/blog/2020/11/10/cilium-19#virtual-ethernet-device-optimization-with-ebpf)
 for the direct routing case. Meaning, forwarding can be performed right in the
 tc eBPF layer instead of having to push packets up the host stack. This results
 in significant gains in single stream throughput (TCP_STREAM) as well as significant
@@ -528,9 +528,9 @@ rate.
 _Primary contributors: Daniel Borkmann (Isovalent), Martynas Pumputis (Isovalent), Chris Tarazi (Isovalent) and Sebastian Wicki (Isovalent)_
 
 Recent advances of Cilium's eBPF-based load balancer added support for
-[Maglev](https://cilium.io/blog/2020/11/10/cilium-19#maglev-load-balancing)
+[Maglev](/blog/2020/11/10/cilium-19#maglev-load-balancing)
 consistent hashing as well as forwarding plane acceleration at the
-[eXpress Data Path](https://cilium.io/blog/2020/06/22/cilium-18#kube-proxy-replacement-at-the-xdp-layer) (XDP)
+[eXpress Data Path](/blog/2020/06/22/cilium-18#kube-proxy-replacement-at-the-xdp-layer) (XDP)
 layer, and therefore significantly improving robustness as well as load
 balancing efficiency. While those features were targeting a Kubernetes
 environment in order to replace kube-proxy, they also paved the way for
