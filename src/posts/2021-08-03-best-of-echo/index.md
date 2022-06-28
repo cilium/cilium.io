@@ -27,10 +27,7 @@ moments from what we might call Season 1.
 
 ## Thomas introduces the Cilium CLI
 
-We started the series with a bang: Thomas Graf joined Liz for a demo-rich [introduction to Cilium](https://youtu.be/80OYrzS1dCA?t=768). For many viewers this was the first peak at the new [Cilium
-CLI added in 1.10](https://cilium.io/blog/2021/05/20/cilium-110#cli). We saw how
-easy it is to use this to install Cilium and Hubble and get a quick view of
-status and network connectivity.
+We started the series with a bang: Thomas Graf joined Liz for a demo-rich [introduction to Cilium](https://youtu.be/80OYrzS1dCA?t=768). For many viewers this was the first peak at the new [Cilium CLI added in 1.10](/blog/2021/05/20/cilium-110#cli). We saw how easy it is to use this to install Cilium and Hubble and get a quick view of status and network connectivity.
 
 <div><iframe width="560" height="315" src="https://www.youtube.com/embed/80OYrzS1dCA?t=768" title="Introduction to Cilium" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 

@@ -103,6 +103,7 @@ including all keynotes and lightning talks are now available on the [eBPF
 Summit website](https://ebpf.io/summit-2020).
 
 <a name="maglev"></a>
+<a name="maglev-load-balancing"></a>
 
 # Maglev Load Balancing
 
@@ -531,6 +532,7 @@ Cilium's Bandwidth Manager can be enabled by setting the Helm option `bandwidthM
 Further information on the Bandwidth Manager can be found in its [getting started guide](https://docs.cilium.io/en/v1.9/gettingstarted/bandwidth-manager/).
 
 <a name="veth"></a>
+<a name="virtual-ethernet-device-optimization-with-ebpf"></a>
 
 # Virtual Ethernet Device Optimization with eBPF
 
@@ -626,6 +628,7 @@ the journey to a world free of iptables, this is yet another positive step
 forwards.
 
 <a name="perftest"></a>
+<a name="performance-testing-framework"></a>
 
 # Performance Testing Framework
 

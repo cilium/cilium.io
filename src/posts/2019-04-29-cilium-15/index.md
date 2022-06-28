@@ -332,6 +332,7 @@ templating](https://lore.kernel.org/bpf/CAADnVQKaPEi5-vjG_fvt0o8e9b9wAC665++3s48
 which will be part of the Linux 5.2 release later this year.
 
 <a name="BpfMasquerading"></a>
+<a name="bpf-based-masquerading-support"></a>
 
 # BPF-based masquerading support
 

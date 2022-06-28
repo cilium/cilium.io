@@ -275,9 +275,7 @@ port 53/UDP regardless of the destination. Instead of an entities match on
 
 ### Kubernetes Service Account Policy
 
-The service account of a pod is either defined via the [service account
-admission controller]
-(https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#serviceaccount)
+The service account of a pod is either defined via the [service account admission controller](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/#serviceaccount)
 or can be directly specified in the Pod, Deployment, ReplicationController
 resource like this:
 

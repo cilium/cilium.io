@@ -93,6 +93,7 @@ shift in the following blog post from April: **[Why is the kernel community
 replacing iptables with
 BPF?](/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables/)**
 
+<a name="socket-level-redirection-to-accelerate-istio-and-envoy">
 ### Socket level redirection to accelerate Istio and Envoy
 
 The service mesh architecture of Istio requires all network traffic

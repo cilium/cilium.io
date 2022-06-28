@@ -167,6 +167,7 @@ We are happy to announce, Hubble UI code is now open sourced and available under
 During Cilium 1.7 development cycle several performance improvements were made to Hubble UI to work better in small multi-node clusters; however we still consider Hubble UI in preview release stage and encourage the community to provide feedback on [Hubble Github page](https://github.com/cilium/hubble/issues) or [Cilium Slack #hubble channel](https://cilium.herokuapp.com/).
 
 <a name="ccnp"></a>
+<a name="cilium-cluster-wide-network-policies"></a>
 
 # Cilium Cluster-wide Network Policies
 
@@ -425,6 +426,7 @@ The policy documentation describes how to use these pod annotations in [more
 detail](http://docs.cilium.io/en/stable/policy/visibility/).
 
 <a name="ebpf-library"></a>
+<a name="pure-go-ebpf-library"></a>
 
 # Pure Go eBPF library
 
@@ -641,6 +643,8 @@ eliminates the need to potentially perform any speculation for the jump given th
 direct address and can therefore execute the generated eBPF code more efficiently.
 
 See the [merged patch set](https://lore.kernel.org/bpf/cover.1574452833.git.daniel@iogearbox.net/) for further information.
+
+<a name="safe-and-multi-architecture-supported-ebpf-probe-helpers-for-tracing"></a>
 
 ### Safe and multi-architecture supported eBPF probe helpers for tracing
 

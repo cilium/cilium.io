@@ -83,6 +83,7 @@ Cilium](https://cilium.readthedocs.io/en/stable/intro/)** for a more detailed ge
 introduction to Cilium.
 
 <a name="kvstorefree"></a>
+<a name="kvstore-free-operation-crd-storage"></a>
 
 # KVStore Free Operation (CRD storage)
 
