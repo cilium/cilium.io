@@ -54,7 +54,7 @@ const Cards = ({ className, title, items, buttonType, theme, textSize, cardSize 
                 <li
                   className={classNames(
                     'col-span-full flex flex-col space-y-4 rounded-xl bg-white px-6 py-8 shadow-card md:flex-row md:space-y-0 md:space-x-5 lg:flex-col lg:space-x-0 lg:space-y-5 xl:px-8',
-                    cardSize === 'sm' ? 'lg:col-span-3' : 'lg:col-span-4'
+                    cardSize === 'sm' ? 'lg:col-span-6 xl:col-span-3' : 'lg:col-span-4'
                   )}
                   key={index}
                 >
