@@ -264,13 +264,29 @@ export default {
     iconName: 'ayedo',
     text: '<b>Ayedo</b> builds and operates cloud native platforms using Cilium',
   },
+  bytedance: {
+    iconName: 'bytedance',
+    text: '<b>ByteDance</b> uses Cilium as their CNI for self-hosted Kubernetes clusters',
+  },
   cognite: {
     iconName: 'cognite',
     text: '<b>Cognite</b> uses Cilium as the CNI plugin for industrial DataOps',
   },
+  elasticpath: {
+    iconName: 'elasticpath',
+    text: '<b>Elastic Path</b> uses Cilium in their production CloudOps Kubernetes clusters',
+  },
+  f5: {
+    iconName: 'f5',
+    text: '<b>F5</b> uses Cilium VXLAN tunnel integration with BIG-IP',
+  },
   finleap: {
     iconName: 'finleap',
     text: '<b>finleap connect</b> uses Cilium on a bare metal private cloud',
+  },
+  innoq: {
+    iconName: 'innoq',
+    text: '<b>innoQ</b> uses Cilium to run their customer’s infrastructure',
   },
   infomaniak: {
     iconName: 'infomaniak',
@@ -280,6 +296,14 @@ export default {
     iconName: 'jumo',
     text: '<b>JUMO</b> uses Cilium as the CNI plugin for all of their AWS-hosted EKS clusters',
   },
+  kryptos: {
+    iconName: 'kryptos',
+    text: '<b>Kryptos</b> uses Cilium as the CNI for their on-prem Kubernetes clusters',
+  },
+  kubeOvn: {
+    iconName: 'kubeOvn',
+    text: '<b>Kube-OVN</b> uses Cilium to enhance the CNI service performance, security and monitoring',
+  },
   kubermatic: {
     iconName: 'kubermatic',
     text: '<b>Kubermatic</b> uses Cilium as the CNI for its Kubernetes installer and platform',
@@ -288,6 +312,10 @@ export default {
     iconName: 'liquidReply',
     text: '<b>Liquid Reply</b> is a consulting firm that uses Cilium in client projects',
   },
+  melenion: {
+    iconName: 'melenion',
+    text: '<b>Melenion</b> uses Cilium as the CNI for its on-premise production clusters',
+  },
   myFitnessPal: {
     iconName: 'myFitnessPal',
     text: '<b>MyFitnessPal</b> trusts Cilium with high volume user traffic on AWS and GKE',
@@ -295,6 +323,10 @@ export default {
   mux: {
     iconName: 'mux',
     text: '<b>Mux</b> uses Cilium on self-hosted clusters in GCP and AWS to run its video streaming/analytics platforms',
+  },
+  overstock: {
+    iconName: 'overstock',
+    text: '<b>Overstock</b> uses Cilium as their CNI for self hosted bar metal clusters',
   },
   theNewYorkTimes: {
     iconName: 'theNewYorkTimes',
@@ -331,6 +363,18 @@ export default {
   snapp: {
     iconName: 'snapp',
     text: '<b>Snapp</b> uses Cilium for its on premise Openshift clusters',
+  },
+  solo: {
+    iconName: 'solo',
+    text: 'Cilium is part of <b>Solo.io</b>’s Gloo Application Networking platform',
+  },
+  sproutfi: {
+    iconName: 'sproutfi',
+    text: '<b>Sproutfi</b> uses Cilium as the CNI on its GKE based clusters',
+  },
+  superorbital: {
+    iconName: 'superorbital',
+    text: '<b>Superorbital</b> uses Cilium in their customer engagements',
   },
   tsi: {
     iconName: 'tsi',
