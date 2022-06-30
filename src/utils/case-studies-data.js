@@ -69,11 +69,11 @@ export default {
     text: 'Uswitch uses Cilium Clustermesh for multi cluster networking',
     links: [
       {
-        linkText: 'Read blog',
+        linkText: 'Blog',
         linkUrl: 'https://cilium.io/blog/2022/04/12/cilium-multi-cluster-networking',
       },
       {
-        linkText: 'Watch video',
+        linkText: 'Video',
         linkUrl: 'https://youtu.be/MsbrVLaPFMo',
         linkTarget: '_blank',
       },
