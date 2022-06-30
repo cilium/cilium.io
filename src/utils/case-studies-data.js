@@ -72,6 +72,11 @@ export default {
         linkText: 'Read blog',
         linkUrl: 'https://cilium.io/blog/2022/04/12/cilium-multi-cluster-networking',
       },
+      {
+        linkText: 'Watch video',
+        linkUrl: 'https://youtu.be/MsbrVLaPFMo',
+        linkTarget: '_blank',
+      },
     ],
   },
   trip: {
@@ -250,7 +255,7 @@ export default {
   },
   accuknox: {
     iconName: 'accuknox',
-    text: '<b>AccuKnox</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
+    text: '<b>AccuKnox</b> uses Cilium for network visibility and network policy enforcement',
   },
   acoss: {
     iconName: 'acoss',
