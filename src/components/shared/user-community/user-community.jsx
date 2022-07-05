@@ -32,6 +32,7 @@ import BytedanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
+import Ect888Logo from './images/ect888.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
@@ -46,6 +47,7 @@ import KubesphereLogo from './images/kubesphere.inline.svg';
 import LiquidReplyLogo from './images/liquid-reply.inline.svg';
 import MelenionLogo from './images/melenion.inline.svg';
 import MeltwaterLogo from './images/meltwater.inline.svg';
+import MobilabLogo from './images/mobilab.inline.svg';
 import MuxLogo from './images/mux.inline.svg';
 import MyFitnessPalLogo from './images/myfitnesspal.inline.svg';
 import NexxiotLogo from './images/nexxiot.inline.svg';
@@ -53,12 +55,14 @@ import NorthflankLogo from './images/northflank.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
+import PlanetscaleLogo from './images/planetscale.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
 import RadioFranceLogo from './images/radiofrance.inline.svg';
 import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
 import SapLogo from './images/sap.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
+import SkybetLogo from './images/skybet.inline.svg';
 import SmileLogo from './images/smile.inline.svg';
 import SnappLogo from './images/snapp.inline.svg';
 import SoloLogo from './images/solo.inline.svg';
@@ -86,6 +90,7 @@ const icons = {
   kryptos: KryptosLogo,
   innoq: InnoqLogo,
   arangodb: ArangoDbLogo,
+  ect888: Ect888Logo,
   accuknox: AccuKnoxLogo,
   capitalOne: CapitalOneLogo,
   alibabaCloud: AlibabaCloudLogo,
@@ -98,6 +103,8 @@ const icons = {
   bell: BellLogo,
   kubeOvn: KubeOvnLogo,
   sky: SkyLogo,
+  skybet: SkybetLogo,
+  planetscale: PlanetscaleLogo,
   ikea: IkeaLogo,
   datadog: DatadogLogo,
   canonical: CanonicalLogo,
@@ -121,6 +128,7 @@ const icons = {
   liquidReply: LiquidReplyLogo,
   myFitnessPal: MyFitnessPalLogo,
   mux: MuxLogo,
+  mobilab: MobilabLogo,
   theNewYorkTimes: NYTLogo,
   nexxiot: NexxiotLogo,
   northflank: NorthflankLogo,

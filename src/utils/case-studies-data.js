@@ -14,6 +14,37 @@ export default {
       },
     ],
   },
+  ect888: {
+    iconName: 'ect888',
+    text: 'There are many variations of passages of Lorem Ipsum available',
+    links: [
+      {
+        linkText: 'Read blog',
+        linkUrl: 'https://cilium.io/blog/2021/01/29/how-to-build-k8s-networking-with-f5-and-cilium',
+      },
+    ],
+  },
+  mobilab: {
+    iconName: 'mobilab',
+    text: 'There are many variations of passages of Lorem Ipsum available',
+    links: [
+      {
+        linkText: 'Read blog',
+        linkUrl: 'https://mobilabsolutions.com/2019/01/why-we-switched-to-cilium/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  skybet: {
+    iconName: 'skybet',
+    text: 'There are many variations of passages of Lorem Ipsum available',
+    links: [
+      {
+        linkText: 'Read blog',
+        linkUrl: 'https://cilium.io/blog/2020/10/06/skybet-cilium-migration',
+      },
+    ],
+  },
   adobe: {
     iconName: 'adobe',
     text: 'What Makes a Good Multi-tenant Kubernetes Solution',
@@ -344,6 +375,10 @@ export default {
   northflank: {
     iconName: 'northflank',
     text: '<b>Northflank</b> uses Cilium as its CNI plugin across GCP, Azure, AWS and bare metal',
+  },
+  planetscale: {
+    iconName: 'planetscale',
+    text: '<b>PlanetScale</b> uses Cilium as the CNI for its serverless database platform',
   },
   radioFrance: {
     iconName: 'radioFrance',

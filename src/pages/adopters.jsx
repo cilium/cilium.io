@@ -11,6 +11,7 @@ const {
   elasticpath,
   bytedance,
   google,
+  planetscale,
   sproutfi,
   superorbital,
   acoss,
@@ -69,6 +70,9 @@ const {
   f5,
   innoq,
   kubeOvn,
+  mobilab,
+  ect888,
+  skybet,
 } = caseStudiesData;
 
 const hero = {
@@ -98,6 +102,9 @@ const userCommunity1 = {
     utmost,
     meltwater,
     ikea,
+    ect888,
+    mobilab,
+    skybet,
   ],
 };
 
@@ -153,6 +160,7 @@ const userCommunity2 = {
     kubeOvn,
     kryptos,
     superorbital,
+    planetscale,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
