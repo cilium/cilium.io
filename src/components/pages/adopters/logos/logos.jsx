@@ -26,6 +26,7 @@ import KubeaszLogo from './images/kubeasz.inline.svg';
 import KubekeyLogo from './images/kubekey.inline.svg';
 import KubeoneLogo from './images/kubeone.inline.svg';
 import KubesprayLogo from './images/kuberspray.inline.svg';
+import NineLogo from './images/nine.inline.svg';
 import OpenShiftLogo from './images/openshift.inline.svg';
 import OpenStackLogo from './images/openstack.inline.svg';
 import Rke2Logo from './images/rke2.inline.svg';
@@ -56,6 +57,7 @@ const logos = {
   kubekey: KubekeyLogo,
   kubeone: KubeoneLogo,
   rke2: Rke2Logo,
+  nine: NineLogo,
   daocloud: DaoCloudLogo,
   civo: CivoLogo,
   sovereign: SovereignLogo,
