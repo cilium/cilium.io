@@ -15,29 +15,83 @@ import CengnLogo from 'icons/logo-cengn.inline.svg';
 import DigitalOceanLogo from 'icons/logo-digital-ocean.inline.svg';
 import GitlabLogo from 'icons/logo-gitlab.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
+import IkeaLogo from 'icons/logo-ikea.inline.svg';
 import MasmovilLogo from 'icons/logo-masmovil.inline.svg';
+import SkyLogo from 'icons/logo-sky.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
+import UswitchLogo from 'icons/logo-uswitch.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
-import SkyLogo from 'icons/sky.inline.svg';
 
 import Button from '../button';
 
+import AccuKnoxLogo from './images/accuknox.inline.svg';
+import AcossLogo from './images/acoss.inline.svg';
+import ArangoDbLogo from './images/arangodb.inline.svg';
+import AyedoLogo from './images/ayedo.inline.svg';
+import BytedanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
+import CogniteLogo from './images/cognite.inline.svg';
+import Ect888Logo from './images/ect888.inline.svg';
+import ElasticPathLogo from './images/elasticpath.inline.svg';
+import F5Logo from './images/f5.inline.svg';
+import FinleapLogo from './images/finleap.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
+import InfomaniakLogo from './images/infomaniak.inline.svg';
+import InnoqLogo from './images/innoq.inline.svg';
+import JumoLogo from './images/jumo.inline.svg';
+import KryptosLogo from './images/kryptos.inline.svg';
+import KubeOvnLogo from './images/kube-ovn.inline.svg';
+import KubermaticLogo from './images/kubermatic.inline.svg';
 import KubesphereLogo from './images/kubesphere.inline.svg';
+import LiquidReplyLogo from './images/liquid-reply.inline.svg';
+import MelenionLogo from './images/melenion.inline.svg';
 import MeltwaterLogo from './images/meltwater.inline.svg';
+import MobilabLogo from './images/mobilab.inline.svg';
+import MuxLogo from './images/mux.inline.svg';
+import MyFitnessPalLogo from './images/myfitnesspal.inline.svg';
+import NexxiotLogo from './images/nexxiot.inline.svg';
+import NorthflankLogo from './images/northflank.inline.svg';
+import NYTLogo from './images/nyt.inline.svg';
+import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
+import PlanetscaleLogo from './images/planetscale.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
+import RadioFranceLogo from './images/radiofrance.inline.svg';
+import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
+import SapLogo from './images/sap.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
+import SimpleLogo from './images/simple.inline.svg';
+import SkybetLogo from './images/skybet.inline.svg';
+import SmileLogo from './images/smile.inline.svg';
+import SnappLogo from './images/snapp.inline.svg';
+import SoloLogo from './images/solo.inline.svg';
 import SportradarLogo from './images/sportradar.inline.svg';
+import SproutfiLogo from './images/sproutfi.inline.svg';
+import SuperorbitalLogo from './images/superorbital.inline.svg';
+import TSILogo from './images/t-systems.inline.svg';
+import TailorBrandsLogo from './images/tailor-brands.inline.svg';
 import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  superorbital: SuperorbitalLogo,
+  sproutfi: SproutfiLogo,
+  solo: SoloLogo,
+  melenion: MelenionLogo,
+  overstock: OverstockLogo,
+  acoss: AcossLogo,
   google: GoogleLogo,
+  bytedance: BytedanceLogo,
+  elasticpath: ElasticPathLogo,
   adobe: AdobeLogo,
   aws: AWSLogo,
+  f5: F5Logo,
+  kryptos: KryptosLogo,
+  innoq: InnoqLogo,
+  arangodb: ArangoDbLogo,
+  ect888: Ect888Logo,
+  accuknox: AccuKnoxLogo,
   capitalOne: CapitalOneLogo,
   alibabaCloud: AlibabaCloudLogo,
   cengn: CengnLogo,
@@ -47,7 +101,11 @@ const icons = {
   trip: TripLogo,
   wildLife: WildLifeLogo,
   bell: BellLogo,
+  kubeOvn: KubeOvnLogo,
   sky: SkyLogo,
+  skybet: SkybetLogo,
+  planetscale: PlanetscaleLogo,
+  ikea: IkeaLogo,
   datadog: DatadogLogo,
   canonical: CanonicalLogo,
   civo: CivoLogo,
@@ -58,8 +116,30 @@ const icons = {
   postfinance: PostfinanceLogo,
   scaleway: ScalewayLogo,
   sportradar: SportradarLogo,
+  uswitch: UswitchLogo,
   utmost: UtmostLogo,
   yahoo: YahooLogo,
+  ayedo: AyedoLogo,
+  cognite: CogniteLogo,
+  finleap: FinleapLogo,
+  infomaniak: InfomaniakLogo,
+  jumo: JumoLogo,
+  kubermatic: KubermaticLogo,
+  liquidReply: LiquidReplyLogo,
+  myFitnessPal: MyFitnessPalLogo,
+  mux: MuxLogo,
+  mobilab: MobilabLogo,
+  theNewYorkTimes: NYTLogo,
+  nexxiot: NexxiotLogo,
+  northflank: NorthflankLogo,
+  radioFrance: RadioFranceLogo,
+  rapyutaRobotics: RapyutaRoboticsLogo,
+  sap: SapLogo,
+  simple: SimpleLogo,
+  smileDirectClub: SmileLogo,
+  snapp: SnappLogo,
+  tsi: TSILogo,
+  tailorBrands: TailorBrandsLogo,
 };
 
 const themeClassNames = {

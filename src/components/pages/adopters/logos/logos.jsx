@@ -13,15 +13,21 @@ import AzureLogo from './images/azure.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import CraneLogo from './images/crane.inline.svg';
 import DaoCloudLogo from './images/daocloud.inline.svg';
+import DeckhouseLogo from './images/deckhouse.inline.svg';
 import DigitalOceanLogo from './images/digitalocean.inline.svg';
+import EquinixLogo from './images/equinix.inline.svg';
+import ExoscaleLogo from './images/exoscale.inline.svg';
 import GardernerLogo from './images/gardener.inline.svg';
 import GoogleCloudLogo from './images/google-cloud.inline.svg';
+import K8ELogo from './images/k8e.inline.svg';
 import KindLogo from './images/kind.inline.svg';
 import KopsLogo from './images/kops.inline.svg';
 import KubeaszLogo from './images/kubeasz.inline.svg';
 import KubekeyLogo from './images/kubekey.inline.svg';
 import KubeoneLogo from './images/kubeone.inline.svg';
 import KubesprayLogo from './images/kuberspray.inline.svg';
+import NineLogo from './images/nine.inline.svg';
+import OpenShiftLogo from './images/openshift.inline.svg';
 import OpenStackLogo from './images/openstack.inline.svg';
 import Rke2Logo from './images/rke2.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
@@ -35,7 +41,10 @@ const logos = {
   azure: AzureLogo,
   appuio: AppuioLogo,
   alibabaCloud: AlibabaCloudLogo,
+  deckhouse: DeckhouseLogo,
+  k8e: K8ELogo,
   scaleway: ScalewayLogo,
+  equinix: EquinixLogo,
   digitalOcean: DigitalOceanLogo,
   openStack: OpenStackLogo,
   kind: KindLogo,
@@ -48,9 +57,12 @@ const logos = {
   kubekey: KubekeyLogo,
   kubeone: KubeoneLogo,
   rke2: Rke2Logo,
+  nine: NineLogo,
   daocloud: DaoCloudLogo,
   civo: CivoLogo,
   sovereign: SovereignLogo,
+  openshift: OpenShiftLogo,
+  exoscale: ExoscaleLogo,
 };
 
 const spaceXClassNames = {
@@ -60,7 +72,7 @@ const spaceXClassNames = {
 
 const Logos = ({ title, items, spaceXSize }) => (
   <section className="mt-10 md:mt-20 lg:mt-28 xl:mt-32">
-    <Container>
+    <Container size="md">
       <Heading className="text-center" tag="h2">
         {title}
       </Heading>
