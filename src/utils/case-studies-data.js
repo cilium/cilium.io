@@ -16,7 +16,7 @@ export default {
   },
   ect888: {
     iconName: 'ect888',
-    text: 'There are many variations of passages of Lorem Ipsum available',
+    text: 'ect888 uses Cilium as their CNI and for load balancing',
     links: [
       {
         linkText: 'Read blog',
@@ -26,7 +26,7 @@ export default {
   },
   mobilab: {
     iconName: 'mobilab',
-    text: 'There are many variations of passages of Lorem Ipsum available',
+    text: 'Mobilabs uses Cilium as the CNI for their internal cloud',
     links: [
       {
         linkText: 'Read blog',
@@ -37,7 +37,7 @@ export default {
   },
   skybet: {
     iconName: 'skybet',
-    text: 'There are many variations of passages of Lorem Ipsum available',
+    text: 'Skybet uses Cilium as their CNI',
     links: [
       {
         linkText: 'Read blog',
