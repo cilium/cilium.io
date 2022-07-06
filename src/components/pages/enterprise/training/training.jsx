@@ -29,9 +29,10 @@ const items = [
     logoName: 'isovalent',
     title: 'Getting started with Cilium',
     description:
-      'Quickly get started with Cilium. Read the documentation or use our interactive tutorial in a live environment.',
-    buttonText: 'Coming soon',
-    buttonDisabled: true,
+      'Quickly get started with Cilium in our interactive tutorials with a live environment.',
+    buttonText: 'Explore Tutorials',
+    buttonLink: 'https://isovalent.com/labs/',
+    buttonTarget: '_blank',
   },
 ];
 
