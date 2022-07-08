@@ -29,7 +29,7 @@ const items = [
   },
 ];
 
-const Issues = (props) => (
+const Issues = () => (
   <div className="bg-white py-10 md:py-20 lg:py-28">
     <Container className="">
       {items.map(({ year, issues }, index) => (
@@ -61,9 +61,5 @@ const Issues = (props) => (
     </Container>
   </div>
 );
-
-Issues.propTypes = {};
-
-Issues.defaultProps = {};
 
 export default Issues;
