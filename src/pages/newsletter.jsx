@@ -7,7 +7,7 @@ import MainLayout from 'layouts/main/main';
 import { newsletter as seo } from 'utils/seo-metadata';
 
 const Newsletter = () => (
-  <MainLayout pageMetadata={seo} theme="gray">
+  <MainLayout pageMetadata={seo} theme="gray" footerWithTopBorder>
     <Hero />
     <Cards />
     <Issues />
