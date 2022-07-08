@@ -198,6 +198,12 @@ const plugins = [
     },
   },
   {
+    resolve: 'gatsby-plugin-canonical-urls',
+    options: {
+      siteUrl: process.env.GATSBY_DEFAULT_SITE_URL,
+    },
+  },
+  {
     resolve: `gatsby-plugin-hotjar`,
     options: {
       includeInDevelopment: true, // optional parameter to include script in development
@@ -226,6 +232,7 @@ if (process.env.CONTEXT === 'production') {
 }
 
 module.exports = {
+  trailingSlash: 'always',
   siteMetadata: {
     siteTitle: 'Cilium - Linux Native, API-Aware Networking and Security for Containers', // <title>
     siteDescription:
