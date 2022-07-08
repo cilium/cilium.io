@@ -4,8 +4,10 @@ import PropTypes, { number } from 'prop-types';
 import React, { Fragment } from 'react';
 import { PopupButton } from 'react-calendly';
 
+
 import Button from 'components/shared/button';
 import Heading from 'components/shared/heading';
+import isSSR from 'utils/is-ssr';
 
 const buttonThemesClassNames = {
   'primary-1':
@@ -79,7 +81,7 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
               {isPopup ? (
                 <PopupButton
                   url={url}
-                  rootElement={document.querySelector('#___gatsby')}
+                  rootElement={isSSR && document.querySelector('#___gatsby')}
                   className={classNames(
                     'inline-flex cursor-pointer justify-center whitespace-nowrap rounded text-base font-bold !leading-none transition-colors duration-200 disabled:cursor-auto',
                     isSmallSize

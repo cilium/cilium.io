@@ -3,6 +3,7 @@ import React, { Fragment } from 'react';
 import { PopupButton } from 'react-calendly';
 
 import Link from 'components/shared/link';
+import isSSR from 'utils/is-ssr';
 
 const CardItem = ({ icon: Icon, name, text, links }) => (
   <div className="flex flex-col rounded-lg border border-gray-3 p-6 sm:flex-row sm:space-x-5 lg:flex-col lg:space-x-0 lg:p-8">
@@ -18,7 +19,7 @@ const CardItem = ({ icon: Icon, name, text, links }) => (
           <Fragment key={index}>
             {isCalendlyPopUp ? (
               <PopupButton
-                rootElement={document.querySelector('#___gatsby')}
+                rootElement={isSSR && document.querySelector('#___gatsby')}
                 className="self-start text-sm font-bold uppercase tracking-wider text-primary-1 transition-colors duration-200 hover:text-gray-1"
                 text={linkText}
                 url={linkUrl}
