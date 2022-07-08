@@ -42,7 +42,7 @@ const BlogPage = (props) => {
       allPosts: { nodes: posts },
       featuredPostEdges: { nodes: featuredStory },
     },
-    pageContext: { categories, currentCategory, currentPage, numPages, canonicalUrl, slug },
+    pageContext: { categories, currentCategory, currentPage, numPages, slug },
     location: { pathname },
   } = props;
   const isBlogPage = pathname.startsWith('/blog');
@@ -55,7 +55,7 @@ const BlogPage = (props) => {
   const isCategoryPage = pathname.includes('categories');
 
   return (
-    <MainLayout isBlogPage={isBlogPage} canonicalUrl={canonicalUrl} pageMetadata={seoMetadata}>
+    <MainLayout isBlogPage={isBlogPage} pageMetadata={seoMetadata}>
       {!isCategoryPage && <FeaturedPosts featuredStory={featuredStory?.[0]} />}
       <PostsBoard
         categories={categories}
