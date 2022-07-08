@@ -37,10 +37,10 @@ const Issues = () => (
           <Heading className="flat-breaks xl:flat-none" tag="h3" size="md" asHTML>
             {year}
           </Heading>
-          <div className="mt-8 flex flex-col flex-wrap gap-x-8 gap-y-8 xs:flex-row md:mt-10 lg:mt-12">
+          <div className="mt-8 grid grid-cols-1 gap-6 xs:grid-cols-2 sm:gap-8 md:mt-10 md:grid-cols-3 lg:mt-12 lg:grid-cols-4">
             {issues.map(({ title, date, link }, index) => (
               <Link
-                className="min-w-[200px] rounded-lg border-2 border-gray-7 p-4 md:min-w-[280px] lg:p-6"
+                className="min-w-[180px] rounded-lg border-2 border-gray-7 p-4 sm:min-w-[200px] lg:p-6 xl:min-w-[280px]"
                 key={index}
                 to={link}
                 target="_blank"
