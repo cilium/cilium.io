@@ -26,7 +26,7 @@ const MenuItem = ({ name, href, target, childItems }) => {
           to={href}
           target={target || null}
           rel={target ? 'noopener noreferrer' : null}
-          className="whitespace-nowrap font-bold leading-none transition-colors duration-200 hover:cursor-pointer hover:text-primary-1 xl:text-base"
+          className="w-full whitespace-nowrap font-bold leading-none transition-colors duration-200 hover:cursor-pointer hover:text-primary-1 xl:text-base"
         >
           <span>{name}</span>
         </Tag>
