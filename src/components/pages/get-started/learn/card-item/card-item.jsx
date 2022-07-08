@@ -18,6 +18,7 @@ const CardItem = ({ icon: Icon, name, text, links }) => (
           <Fragment key={index}>
             {isCalendlyPopUp ? (
               <PopupButton
+                rootElement={document.querySelector('#root')}
                 className="self-start text-sm font-bold uppercase tracking-wider text-primary-1 transition-colors duration-200 hover:text-gray-1"
                 text={linkText}
                 url={linkUrl}

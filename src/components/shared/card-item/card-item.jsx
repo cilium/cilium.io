@@ -79,6 +79,7 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
               {isPopup ? (
                 <PopupButton
                   url={url}
+                  rootElement={document.querySelector('#___gatsby')}
                   className={classNames(
                     'inline-flex cursor-pointer justify-center whitespace-nowrap rounded text-base font-bold !leading-none transition-colors duration-200 disabled:cursor-auto',
                     isSmallSize
