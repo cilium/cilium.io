@@ -10,6 +10,7 @@ const Burger = ({ className, isToggled, onClick }) => (
     className={classNames('relative h-5 w-7 shrink-0 text-black', className)}
     type="button"
     animate={isToggled ? 'toggled' : 'initial'}
+    aria-label={isToggled ? 'Close menu' : 'Open menu'}
     onClick={onClick}
   >
     <motion.span

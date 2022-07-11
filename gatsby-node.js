@@ -133,7 +133,6 @@ async function createBlogPages({ graphql, actions, reporter }) {
               categories,
               // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
               draftFilter: DRAFT_FILTER,
-              canonicalUrl: `${process.env.GATSBY_DEFAULT_SITE_URL}/${path}`,
               slug: path,
             },
           });
