@@ -13,7 +13,7 @@ tags:
   - Clustermesh
 ---
 
-![Seznam.cz logo](Seznamcz.svg)
+![Seznam.cz logo](Seznam.cz_logo.svg)
 
 _July 13th, 2022_  
 _Author: Ondrej Blazek, Infrastructure Engineer @ Seznam.cz_
@@ -160,11 +160,11 @@ Each output screenshot below is taken from the corresponding server - either the
  
 IPVS htop output:
 
-![IPVS 1Mpps](IPVS1.svg) 
+![IPVS 1Mpps](1mpps-ipvs-htop.png) 
  
 Curl client output:
  
-![IPVS 1Mpps curl](IPVScurl.svg)
+![IPVS 1Mpps curl](1mpps-ipvs-curl.png)
  
 The CPUs were not fully maxed out, but were close to their limit and dropped a few packet drops from time to time.
  
@@ -172,11 +172,11 @@ The CPUs were not fully maxed out, but were close to their limit and dropped a f
  
 IPVS htop output:
  
-![IPVS 3Mpps](IPVS3.svg)
+![IPVS 3Mpps](3mpps-ipvs-htop.png)
  
 Curl client output:
  
-![IPVS 3Mpps curl](IPVS3curl.svg)
+![IPVS 3Mpps curl](3mpps-ipvs-curl.png)
  
 Since all of the CPU cores handling the interrupts were maxed out, almost all the packets from the second client were dropped by the IPVS node.
 
@@ -184,35 +184,35 @@ Since all of the CPU cores handling the interrupts were maxed out, almost all th
  
 L4LB htop output:
  
-![L4LB 10Mpps](L4LB10.svg)
+![L4LB 10Mpps](10mpps-xdp-htop.png)
  
 Curl client output:
  
-![L4LB 10Mpps curl](L4LB10curl.svg)
+![L4LB 10Mpps curl](10mpps-xdp-curl.png)
  
 ## 14.8Mpps - L4LB XDP
  
 L4LB htop output:
  
-![L4LB 14.8Mpps](L4LB148.svg)
+![L4LB 14.8Mpps](14_8Mpps-xdp-htop.png)
  
 Curl client output:
  
-![L4LB 14.8Mpps curl](L4LB148curl.svg)
+![L4LB 14.8Mpps curl](14_8Mpps-xdp-curl.png)
 
 At 14.8Mpps there were a few packet drops here and there but because we were hitting NIC limits this was totally expected.
 
 # Production Traffic
 The biggest surprise came when we deployed the L4LB XDP to one of our production nodes (which was previously running IPVS). As we have full access to our nodes and are able to start/stop BIRD at any point in time, we were able to cleanly pass traffic between L4LB XDP nodes and IPVS nodes. At approx 11:00 AM, we stopped BIRD on the IPVS nodes so that the L4LB XDP node was handling all the traffic and at approx 11:14 AM, we switched to the 2 nodes running IPVS. 
  
-![Packets per second](pps.svg)
+![Packets per second](pps+.png)
 _Packets per second (Higher is better)_ 
  
 The output above shows that during time ~11:04 - 11:13 the production traffic went from 750kpps up to 1Mpps and this was handled by a single host `lb-l3-5.ko.iszn.cz` using L4LB XDP. At ~11:16, we switched to 2 hosts `lb-l3-7.ko.iszn.cz` and `lb-l3-9.ko.iszn.cz` running IPVS (the summed traffic during that time was also around 1Mpps).
  
 The wow effect really came when we started to look at CPU usage. At one point, we were not sure if we had a bug somewhere because the CPU load was so low when L4LB XDP was handling the traffic. But after looking closely, it really was consuming only half of a single CPU compared to 2x18 CPUs when IPVS was handling the traffic. We were saving 36 CPUs when switched to L4LB XDP.
 
-![CPU Load](cpuload.svg)
+![CPU Load](cpu+.png)
  
 _Note: The pictures were taken from our production grafana. CPU Load (Lower is better)_ 
  
