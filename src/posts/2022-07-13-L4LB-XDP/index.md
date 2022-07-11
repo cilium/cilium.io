@@ -4,7 +4,7 @@ date: '2022-07-13T17:00:00.000Z'
 title: 'Cilium Standalone Layer 4 Load Balancer XDP'
 isPopular: true
 isFeatured: false
-ogImage: Cilium5.png
+ogImage: cpu+.png
 ogSummary: 'See the performance increase Seznam.cz saw using Cilium for load balancing'
 categories:
   - Community
@@ -13,7 +13,7 @@ tags:
   - Clustermesh
 ---
 
-![Seznam.cz logo](Seznam.cz_logo.svg)
+![Seznam.cz logo](Seznam.cz_logo.png)
 
 _July 13th, 2022_  
 _Author: Ondrej Blazek, Infrastructure Engineer @ Seznam.cz_
@@ -156,7 +156,7 @@ In both scenarios (scenario #1 IPVS and scenario #2 L4LB) the MoonGen client was
 Each output screenshot below is taken from the corresponding server - either the server IPVS/L4LB under the test and the `curl` client. For L4LB XDP, both 1Mpps and 3Mpps were too easy and did not have any performance impact. We instead started with 10Mpps and only saw an impact at 14.8 Mpps which was probably due to constraints of the NIC rather than L4LB.
  
  
-## 1Mpps - IPVS
+### 1Mpps - IPVS
  
 IPVS htop output:
 
@@ -168,7 +168,7 @@ Curl client output:
  
 The CPUs were not fully maxed out, but were close to their limit and dropped a few packet drops from time to time.
  
-## 3Mpps - IPVS
+### 3Mpps - IPVS
  
 IPVS htop output:
  
@@ -180,7 +180,7 @@ Curl client output:
  
 Since all of the CPU cores handling the interrupts were maxed out, almost all the packets from the second client were dropped by the IPVS node.
 
-## 10Mpps - L4LB XDP
+### 10Mpps - L4LB XDP
  
 L4LB htop output:
  
@@ -190,7 +190,7 @@ Curl client output:
  
 ![L4LB 10Mpps curl](10mpps-xdp-curl.png)
  
-## 14.8Mpps - L4LB XDP
+### 14.8Mpps - L4LB XDP
  
 L4LB htop output:
  
