@@ -39,7 +39,7 @@ const Issues = () => {
   // AFAIK there is no way to apply filters to children nodes
   // https://github.com/gatsbyjs/gatsby/discussions/14060
   const items = data.hubspotEmails.objects
-    .filter((item) => item.name.match(/^eCHO news \d{1,3}$/))
+    .filter((item) => item.name.match(/^eCHO news \d{1,3}$/) && item.isPublished)
     .sort((a, b) => b.publishDate - a.publishDate);
 
   items.forEach((item) => {
