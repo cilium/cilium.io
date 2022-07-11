@@ -39,21 +39,14 @@ const navigation = [
   { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
 ];
 
-const MainLayout = ({
-  isBlogPage,
-  pageMetadata,
-  canonicalUrl,
-  children,
-  theme,
-  footerWithTopBorder,
-}) => {
+const MainLayout = ({ isBlogPage, pageMetadata, children, theme, footerWithTopBorder }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleHeaderBurgerClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const handleOverlay = () => setIsMobileMenuOpen(false);
   return (
     <>
-      <SEO canonical={canonicalUrl} data={pageMetadata} />
+      <SEO data={pageMetadata} />
       <div className="relative z-20">
         <Header
           navigation={navigation}
@@ -77,7 +70,6 @@ MainLayout.propTypes = {
     title: PropTypes.string,
     description: PropTypes.string,
   }),
-  canonicalUrl: PropTypes.string,
   theme: PropTypes.string,
   footerWithTopBorder: PropTypes.bool,
 };
@@ -85,7 +77,6 @@ MainLayout.propTypes = {
 MainLayout.defaultProps = {
   pageMetadata: {},
   isBlogPage: false,
-  canonicalUrl: null,
   theme: null,
   footerWithTopBorder: false,
 };

@@ -22,13 +22,13 @@ const Submenu = ({ isOpen, childItems }) => (
     {childItems.map(({ name, href, target, icon: Icon }, index) => (
       <li className="flex" key={index}>
         <Link
-          className="inline-flex items-center space-x-2.5 font-medium leading-none hover:text-primary-1"
+          className="inline-flex w-full items-center space-x-2.5 font-medium leading-none hover:text-primary-1"
           to={href}
           target={target || null}
           rel={target ? 'noopener noreferrer' : null}
         >
           <Icon className="shrink-0" />
-          <span>{name}</span>
+          <span className="flex-grow">{name}</span>
         </Link>
       </li>
     ))}

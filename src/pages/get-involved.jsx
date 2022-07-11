@@ -80,7 +80,7 @@ const GetInvolved = () => {
     query {
       heroImage: file(relativePath: { eq: "pages/get-involved/hero/hero-image.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 519, quality: 90, formats: [PNG])
+          gatsbyImageData(width: 521, quality: 95)
         }
       }
     }
@@ -96,7 +96,7 @@ const GetInvolved = () => {
     },
     decor2: {
       src: decor2,
-      className: 'absolute top-[-6%] left-[-7.3%] w-[113.7%] max-w-none',
+      className: 'absolute top-[-5.4%] left-[-7.2%] w-[113.8%] max-w-none',
     },
   };
   return (
