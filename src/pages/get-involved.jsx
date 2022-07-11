@@ -80,7 +80,7 @@ const GetInvolved = () => {
     query {
       heroImage: file(relativePath: { eq: "pages/get-involved/hero/hero-image.png" }) {
         childImageSharp {
-          gatsbyImageData(width: 519, quality: 90, formats: [PNG])
+          gatsbyImageData(width: 519, quality: 95)
         }
       }
     }
