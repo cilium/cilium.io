@@ -23,18 +23,18 @@ Seznam.cz is a Czech technological company developing a custom search engine, ad
  
 # Architecture
  
-Seznam's infrastructure historically used F5 hardware load balancers but we switched to software load balancers a few years ago. Up until now we've been using a [multiple tier](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer) setup - [ECMP routing](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer#first-tier-ecmp-routing) as the first tier + [IPVS](http://www.linuxvirtualserver.org/software/ipvs.html) as the second tier [L4 load balancer (L4LB)](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer#second-tier-l4-load-balancing) + [Envoy proxy](https://www.envoyproxy.io/) as the third tier [L7 load balancer](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer#last-tier-l7-load-balancing).  Unfortunately as traffic increased and, thanks to COVID, we started running short on hardware supplies, we had to look for alternatives to use our hardware more effectively.
+Seznam's infrastructure historically used F5 hardware load balancers but we switched to software load balancers a few years ago. Up until now we've been using a [multiple tier](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer) setup - [ECMP routing](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer#first-tier-ecmp-routing) as the first tier + [IPVS](http://www.linuxvirtualserver.org/software/ipvs.html) as the second tier ([L4 load balancer (L4LB)](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer#second-tier-l4-load-balancing)) + [Envoy proxy](https://www.envoyproxy.io/) as the third tier ([L7 load balancer](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer#last-tier-l7-load-balancing)).  Unfortunately as traffic increased and, thanks to COVID, we started running short on hardware supplies, we had to look for alternatives to use our hardware more effectively.
  
-We have been watching Cilium closely and noticed the [announcement of maglev in Cilium](https://cilium.io/blog/2020/11/10/cilium-19#maglev) together with [`Standalone L4LB XDP`](https://cilium.io/blog/2021/05/20/cilium-110#standalonelb) announced in 1.10. XDP hook is known for its efficient use of CPU and has an extremely high performance. This was very interesting for our team because we have been hitting traffic spikes up to 20M active connections which was massively increasing CPU usage of our IPVS nodes.
+We have been watching Cilium closely and noticed the [announcement of maglev in Cilium](https://cilium.io/blog/2020/11/10/cilium-19#maglev) together with [**Standalone L4LB XDP**](https://cilium.io/blog/2021/05/20/cilium-110#standalonelb) announced in 1.10. XDP hook is known for its efficient use of CPU and has an extremely high performance. This was very interesting for our team because we have been hitting traffic spikes up to 20M active connections which was massively increasing CPU usage of our IPVS nodes.
  
  
 Our load balancer setup directs external traffic into the Kubernetes and OpenStack clusters and IPVS is used in a classic "load balancer on a stick" scenario. In a simplified world this looks like this:
  
 ![Seznam.cz architecture](architecture.svg)
  
-Since, we have been using the maglev scheduler (which is part of a netfilter inside the Linux kernel since v4.18) the `Standalone L4LB XDP` was a perfect match to try as an alternative because it supports all the main features we required (IPIP, DSR, maglev).
+Since, we have been using the maglev scheduler (which is part of a netfilter inside the Linux kernel since v4.18) the **Standalone L4LB XDP** was a perfect match to try as an alternative because it supports all the main features we required (IPIP, DSR, maglev).
  
-We are using 25GbE NICs on IPVS nodes so there was no problem running L4LB at the XDP driver layer as majority of the modern NICs support it.
+We are using 25GbE NICs on our IPVS nodes so there was no problem running L4LB at the XDP driver layer as the majority of the modern NICs support it.
  
  
 ```
@@ -75,7 +75,6 @@ Type=bpf
 [Install]
 WantedBy=multi-user.target
  
-# mount bpffs /sys/fs/bpf -t bpf
 ```
  
 and then we launched Cilium in load balancer only mode:
@@ -153,7 +152,7 @@ The test setup looked like this:
 ## Results
  
 In both scenarios (scenario #1 IPVS and scenario #2 L4LB) the MoonGen client was configured to generate 1Mpps (million packets per second) and 3Mpps.
-Each output screenshot below is taken from the corresponding server - either the server IPVS/L4LB under the test and the `curl` client. For L4LB XDP, both 1Mpps and 3Mpps were too easy and did not have any performance impact. We instead started with 10Mpps and only saw an impact at 14.8 Mpps which was probably due to constraints of the NIC rather than L4LB.
+Each output screenshot below is taken from the corresponding server - either the server IPVS/L4LB under test or the `curl` client. For L4LB XDP, both 1Mpps and 3Mpps were too easy and did not have any performance impact. We instead started with 10Mpps and only saw an impact at 14.8 Mpps which was probably due to constraints of the NIC rather than L4LB.
  
  
 ### 1Mpps - IPVS
@@ -218,7 +217,7 @@ _Note: The pictures were taken from our production grafana. CPU Load (Lower is b
  
 # Endnotes
  
-The screenshots speak for themselves, but the key take away for us was, L4LB XDP at the driver layer with a majority of HTTP traffic (~90% of our traffic is HTTP requests) saves us an unbelievable amount of CPUs needed to handle our production traffic.
+The screenshots speak for themselves, but the key take away for us was, **L4LB XDP at the driver layer with a majority of HTTP traffic (~90% of our traffic is HTTP requests) saves us an unbelievable amount of CPUs needed to handle our production traffic**.
  
 The only thing we found missing in Cilium, before we can fully switch to L4LB XDP, are weighted backends which we are currently working on - [https://github.com/cilium/cilium/pull/18306](https://github.com/cilium/cilium/pull/18306). After this is done there is nothing stopping us from saying goodbye to IPVS. 
  
