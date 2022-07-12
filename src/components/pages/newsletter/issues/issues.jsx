@@ -35,8 +35,6 @@ const Issues = () => {
     return `${month}, ${day}`;
   };
 
-  console.log(data.hubspotEmails.objects);
-
   const items = data.hubspotEmails.objects.filter(
     (item) => item.name.match(/^eCHO news \d{1,3}$/) && item.isPublished
   );
@@ -47,7 +45,7 @@ const Issues = () => {
     item.date = getMonthAndDay(item.publishDate);
   });
 
-  // I have used a polyfill from core-js here, as the Array.Prototype.group() is only an experimental feature at the moment
+  // A polyfill from core-js is used here, as the Array.Prototype.group() is only an experimental feature at the moment
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/group
   const newsletterData = group(items, (item) => item.year);
 
