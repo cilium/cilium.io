@@ -204,9 +204,8 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
     },
   });
 
-  // TODO: check the issue with limit value in the request: if you run the request without specifying the limit, you get only 10 first entries, why?
   const hubspotEmails = await fetch(
-    `https://api.hubapi.com/marketing-emails/v1/emails?hapikey=${process.env.HUBSPOT_API_KEY}&limit=150`
+    `https://api.hubapi.com/marketing-emails/v1/emails?hapikey=${process.env.HUBSPOT_API_KEY}&limit=150&name__icontains=eCHO+news&orderBy=-publish_date`
   );
   const hubspotEmailsData = await hubspotEmails.json();
   createNode({
