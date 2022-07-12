@@ -1,5 +1,4 @@
 /* eslint-disable no-param-reassign */
-import group from 'core-js-pure/actual/array/group';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
@@ -7,6 +6,8 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import CalendarIcon from 'icons/calendar.inline.svg';
+import getMonthAndDay from 'utils/get-month-and-day.js';
+import getYear from 'utils/get-year.js';
 
 const Issues = () => {
   const data = useStaticQuery(graphql`
@@ -22,19 +23,6 @@ const Issues = () => {
     }
   `);
 
-  const getYear = (date) => {
-    const convertedDate = new Date(date);
-    const year = convertedDate.getFullYear();
-    return year;
-  };
-
-  const getMonthAndDay = (date) => {
-    const convertedDate = new Date(date);
-    const day = convertedDate.getUTCDate();
-    const month = convertedDate.toLocaleString('default', { month: 'long' });
-    return `${month}, ${day}`;
-  };
-
   const items = data.hubspotEmails.objects.filter(
     (item) => item.name.match(/^eCHO news \d{1,3}$/) && item.isPublished
   );
@@ -45,9 +33,17 @@ const Issues = () => {
     item.date = getMonthAndDay(item.publishDate);
   });
 
-  // A polyfill from core-js is used here, as the Array.Prototype.group() is only an experimental feature at the moment
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/group
-  const newsletterData = group(items, (item) => item.year);
+  const getIssues = () =>
+    items.reduce((acc, item) => {
+      if (!acc[item.year]) {
+        acc[item.year] = [item];
+      } else {
+        acc[item.year].push(item);
+      }
+      return acc;
+    }, {});
+
+  const newsletterData = getIssues();
 
   return (
     <div className="bg-white py-10 md:py-20 lg:py-28">
