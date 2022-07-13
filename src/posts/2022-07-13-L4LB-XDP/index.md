@@ -219,6 +219,6 @@ _Note: The pictures were taken from our production grafana. CPU Load (Lower is b
  
 The screenshots speak for themselves, but the key take away for us was, **L4LB XDP at the driver layer with a majority of HTTP traffic (~90% of our traffic is HTTP requests) saves us an unbelievable amount of CPUs needed to handle our production traffic**.
  
-The only thing we found missing in Cilium, before we can fully switch to L4LB XDP, are weighted backends which we are currently working on - [https://github.com/cilium/cilium/pull/18306](https://github.com/cilium/cilium/pull/18306). After this is done there is nothing stopping us from saying goodbye to IPVS. 
+The only thing we found missing in Cilium, before we can fully switch to L4LB XDP, are weighted backends which we are currently working on - [maglev: support setting a weight of a backend in a service spec via new cmdline argument](https://github.com/cilium/cilium/pull/18306). After this is done there is nothing stopping us from saying goodbye to IPVS. 
  
 With this we would like to thank the Cilium community for building such a great project and for their support!
