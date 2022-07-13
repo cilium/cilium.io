@@ -30,7 +30,7 @@ We have been watching Cilium closely and noticed the [announcement of maglev in 
  
 Our load balancer setup directs external traffic into the Kubernetes and OpenStack clusters and IPVS is used in a classic "load balancer on a stick" scenario. In a simplified world this looks like this:
  
-![Seznam.cz architecture](architecture.svg)
+![Seznam.cz architecture](architecture.png)
  
 Since, we have been using the maglev scheduler (which is part of a netfilter inside the Linux kernel since v4.18) the **Standalone L4LB XDP** was a perfect match to try as an alternative because it supports all the main features we required (IPIP, DSR, maglev).
  
@@ -147,7 +147,7 @@ During the test run we used another client running a simple GET request (using c
  
 The test setup looked like this:
 
-![Seznam.cz testing](testing.svg)
+![Seznam.cz testing](testing.png)
  
 ## Results
  
