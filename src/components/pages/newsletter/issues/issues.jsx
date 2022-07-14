@@ -29,7 +29,7 @@ const Issues = () => {
 
   items.forEach((item) => {
     item.year = getYear(item.publishDate);
-    item.title = `eCHO News <br/> Episode #${item.name.split(' ')[2]}`;
+    item.title = `eCHO News Episode #${item.name.split(' ')[2]}`;
     item.date = getMonthAndDay(item.publishDate);
   });
 
@@ -62,7 +62,7 @@ const Issues = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Heading className="flat-breaks md:flat-none" tag="h4" size="2xs" asHTML>
+                  <Heading tag="h4" size="3xs" asHTML>
                     {title}
                   </Heading>
                   <div className="mt-3 flex items-center space-x-2">
