@@ -46,7 +46,7 @@ const Issues = () => {
   const newsletterData = getIssues();
 
   return (
-    <div className="bg-white py-10 md:py-20 lg:py-28">
+    <div className="bg-white py-10 md:py-20 lg:py-28" id="archive">
       <Container>
         {Object.entries(newsletterData).map(([year, issues], index) => (
           <div className="mt-10 first:mt-0 md:mt-20 lg:mt-24" key={index}>
