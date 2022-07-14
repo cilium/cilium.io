@@ -7,7 +7,7 @@
     @apply inline-flex select-none items-center;
   }
   .checkbox__input + label::before {
-    @apply mr-2.5 inline-block h-6 w-6 shrink-0 grow-0 rounded border border-gray-2 bg-gray-6 bg-center bg-no-repeat content-[''];
+    @apply mr-2.5 inline-block h-6 w-6 shrink-0 grow-0 rounded border border-gray-2 bg-gray-4 bg-center bg-no-repeat content-[''];
   }
 
   .checkbox__label > span {

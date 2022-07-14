@@ -4,7 +4,6 @@ import PropTypes, { number } from 'prop-types';
 import React, { Fragment } from 'react';
 import { PopupButton } from 'react-calendly';
 
-
 import Button from 'components/shared/button';
 import Heading from 'components/shared/heading';
 import isSSR from 'utils/is-ssr';

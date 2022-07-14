@@ -61,12 +61,9 @@ const SubscribeForm = ({ className }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative min-h-[160px]">
       <motion.form
-        className={classNames(
-          'relative mx-auto mt-10 flex flex-col space-y-3 xs:space-y-0',
-          className
-        )}
+        className={classNames('relative mx-auto flex flex-col space-y-3 xs:space-y-0', className)}
         animate={{
           opacity: formState === 'success' ? 0 : 1,
           transition: { duration: APPEAR_AND_EXIT_ANIMATION_DURATION },
@@ -105,15 +102,25 @@ const SubscribeForm = ({ className }) => {
       </motion.form>
       {formState === 'success' && (
         <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-center space-y-5 xs:flex-row xs:space-y-0 xs:space-x-2.5"
+          className="absolute inset-0 flex flex-col items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             transition: { delay: APPEAR_AND_EXIT_ANIMATION_DURATION },
           }}
         >
-          <ActiveIcon className="shrink-0" />
-          <span className="text-2xl font-bold leading-none">Thanks for subscribing!</span>
+          <div className="flex flex-col items-center justify-center space-y-3 xs:flex-row xs:space-y-0 xs:space-x-2.5">
+            <ActiveIcon className="h-9 w-9 shrink-0" />
+            <span className="text-xl font-bold leading-none xs:text-2xl">
+              Thanks for subscribing!
+            </span>
+          </div>
+          <span className="mt-3.5 max-w-[280px] text-base leading-normal xs:max-w-none">
+            Explore previous releases of eCHO News right now
+          </span>
+          <Button className="mt-5 lg:text-base" theme="primary-1" size="md" to="#archive">
+            Explore Archive
+          </Button>
         </motion.div>
       )}
     </div>

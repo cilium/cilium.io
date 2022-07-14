@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -19,13 +18,8 @@ const navigation = [
 ];
 
 const Footer = ({ withTopBorder }) => (
-  <footer>
-    <Container
-      className={classNames(
-        'pt-10 pb-8 lg:pt-14 lg:pb-9',
-        withTopBorder && 'border-t border-gray-3'
-      )}
-    >
+  <footer className={withTopBorder ? 'border-t border-gray-3' : null}>
+    <Container className="pt-10 pb-8 lg:pt-14 lg:pb-9">
       <div className="grid grid-cols-3 gap-y-10 xs:gap-x-8 lg:grid-cols-12 lg:gap-y-0">
         <div className="col-span-full flex flex-col items-start xs:col-span-5">
           <Link to="/">

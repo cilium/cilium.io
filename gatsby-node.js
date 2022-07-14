@@ -203,4 +203,19 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
       contentDigest: createContentDigest(resultData),
     },
   });
+
+  const hubspotEmails = await fetch(
+    `https://api.hubapi.com/marketing-emails/v1/emails?hapikey=${process.env.HUBSPOT_API_KEY}&limit=150&name__icontains=eCHO+news&orderBy=-publish_date`
+  );
+  const hubspotEmailsData = await hubspotEmails.json();
+  createNode({
+    objects: hubspotEmailsData.objects,
+    id: `hubspot-email-data`,
+    parent: null,
+    children: [],
+    internal: {
+      type: `HubspotEmails`,
+      contentDigest: createContentDigest(hubspotEmailsData),
+    },
+  });
 };
