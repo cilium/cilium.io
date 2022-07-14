@@ -68,7 +68,7 @@ const Cards = () => {
       <Container className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {items.map(({ title, description, links, image, isSvg }, index) => (
           <div
-            className="flex flex-col items-center justify-center overflow-hidden rounded-xl bg-white p-6 text-center shadow-card md:p-8"
+            className="flex flex-col items-center justify-center overflow-hidden rounded-xl bg-white p-6 !pt-0 text-center shadow-card md:p-8"
             key={index}
           >
             {isSvg ? (
