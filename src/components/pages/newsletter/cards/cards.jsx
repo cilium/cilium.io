@@ -64,7 +64,7 @@ const Cards = () => {
     },
   ];
   return (
-    <div className="bg-gray-4 pb-10 md:pt-10 md:pb-20 lg:pb-28">
+    <div className="bg-gray-4 py-10 md:pb-20 lg:pt-20 lg:pb-28">
       <Container className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {items.map(({ title, description, links, image, isSvg }, index) => (
           <div
