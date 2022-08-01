@@ -186,23 +186,27 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) => {
   // get data from GitHub API at build time
-  const result = await fetch(`https://api.github.com/repos/cilium/cilium`);
-  const resultData = await result.json();
-  // create node for build time data example in the docs
-  createNode({
-    // nameWithOwner and url are arbitrary fields from the data
-    nameWithOwner: resultData.full_name,
-    url: resultData.html_url,
-    count: resultData.stargazers_count,
-    // required fields
-    id: `github-data`,
-    parent: null,
-    children: [],
-    internal: {
-      type: `Github`,
-      contentDigest: createContentDigest(resultData),
-    },
-  });
+  try {
+    const result = await fetch(`https://api.github.com/repos/cilium/cilium`);
+    const resultData = await result.json();
+    // create node for build time data example in the docs
+    createNode({
+      // nameWithOwner and url are arbitrary fields from the data
+      nameWithOwner: resultData.full_name,
+      url: resultData.html_url,
+      count: resultData.stargazers_count,
+      // required fields
+      id: `github-data`,
+      parent: null,
+      children: [],
+      internal: {
+        type: `Github`,
+        contentDigest: createContentDigest(resultData),
+      },
+    });
+  } catch (e) {
+    throw new Error(`Failed to fetch GitHub stars, please retry`);
+  }
 
   const hubspotEmails = await fetch(
     `https://api.hubapi.com/marketing-emails/v1/emails?hapikey=${process.env.HUBSPOT_API_KEY}&limit=150&name__icontains=eCHO+news&orderBy=-publish_date`
@@ -218,4 +222,16 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
       contentDigest: createContentDigest(hubspotEmailsData),
     },
   });
+};
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type Github implements Node {
+      nameWithOwner: String,
+      url: String,
+      count: Int,
+    }
+  `;
+  createTypes(typeDefs);
 };
