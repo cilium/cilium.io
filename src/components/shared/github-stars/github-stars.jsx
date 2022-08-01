@@ -9,10 +9,7 @@ import Link from '../link';
 const GithubStars = ({ className }) => {
   const data = useStaticQuery(graphql`
     query githubQuery {
-      github {
-        url
-        count
-      }
+      githubStars
     }
   `);
 
@@ -22,7 +19,7 @@ const GithubStars = ({ className }) => {
         type="text"
         theme="black-primary"
         className="flex h-8 items-center rounded border border-gray-3 text-sm font-bold"
-        to={data.github?.url || '/'}
+        to="https://github.com/cilium/cilium"
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -31,7 +28,7 @@ const GithubStars = ({ className }) => {
           <span>GitHub Stars</span>
         </div>
         <div className="px-2 text-black xs:px-3">
-          <span>{`${(data.github?.count / 1000).toFixed(1)}k` || '12k'}</span>
+          <span>{`${(parseInt(data.githubStars.replace(/,/g, '')) / 1000).toFixed(1)}k`}</span>
         </div>
       </Link>
     </div>
