@@ -1,7 +1,7 @@
 ---
 date: '2022-05-16T17:00:00.000Z'
 title: 'Tetragon - eBPF-based Security Observability & Runtime Enforcement'
-ogImageUrl: 'https://github.com/cilium/tetragon/raw/main/docs/images/smart_observability.png'
+ogImage: ogimage.png
 ogSummary: 'Isovalent open sources Tetgragon for eBPF based security'
 categories:
   - Release

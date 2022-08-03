@@ -1,7 +1,7 @@
 ---
 date: '2022-04-05T17:00:00.000Z'
 title: 'Bring your own Container Network Interface (CNI) plugin with Azure Kubernetes Service (AKS)'
-ogImageUrl: 'https://pixelrobots.co.uk/wp-content/uploads/2022/04/image-11.png'
+ogImage: ogimage.png
 ogSummary: 'Walk through adding Cilium to your AKS cluster'
 categories:
   - How-To

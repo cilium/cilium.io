@@ -1,7 +1,7 @@
 ---
 date: '2022-05-11T17:00:00.000Z'
 title: 'How Meltwater migrated from the Amazon VPC CNI plugin to Cilium in K8s'
-ogImageUrl: 'https://img.youtube.com/vi/w6S6baRHHu8/0.jpg'
+ogImage: ogimage.jpg
 ogSummary: 'Watch this meetup recording to see how Meltwater migrated to Cilium'
 categories:
   - Community
