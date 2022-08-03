@@ -185,25 +185,6 @@ exports.onCreateNode = ({ node, actions }) => {
 };
 
 exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) => {
-  // get data from GitHub API at build time
-  const result = await fetch(`https://api.github.com/repos/cilium/cilium`);
-  const resultData = await result.json();
-  // create node for build time data example in the docs
-  createNode({
-    // nameWithOwner and url are arbitrary fields from the data
-    nameWithOwner: resultData.full_name,
-    url: resultData.html_url,
-    count: resultData.stargazers_count,
-    // required fields
-    id: `github-data`,
-    parent: null,
-    children: [],
-    internal: {
-      type: `Github`,
-      contentDigest: createContentDigest(resultData),
-    },
-  });
-
   const hubspotEmails = await fetch(
     `https://api.hubapi.com/marketing-emails/v1/emails?hapikey=${process.env.HUBSPOT_API_KEY}&limit=150&name__icontains=eCHO+news&orderBy=-publish_date`
   );
@@ -216,6 +197,47 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
     internal: {
       type: `HubspotEmails`,
       contentDigest: createContentDigest(hubspotEmailsData),
+    },
+  });
+};
+
+exports.createResolvers = ({ createResolvers, cache }) => {
+  createResolvers({
+    Query: {
+      githubStars: {
+        type: 'String',
+        resolve: async () => {
+          try {
+            let stars;
+            // Set expiration time as 24 hours in milliseconds
+            const expirationTime = 24 * 60 * 60 * 1000;
+            const cacheKey = `stars-cilium`;
+            const cacheStarsData = await cache.get(cacheKey);
+            // Use cache if it is not expired
+            if (cacheStarsData && cacheStarsData.created > Date.now() - expirationTime) {
+              stars = cacheStarsData.stars;
+            } else {
+              // Use setTimeout to avoid hitting GitHub API rate limit with a random delay with interval from 500ms to 1500ms
+              await new Promise((resolve) => setTimeout(resolve, Math.random() * 3000 + 500));
+              const response = await fetch('https://api.github.com/repos/cilium/cilium');
+              const { stargazers_count } = await response.json();
+              if (!stargazers_count) {
+                throw new Error('Failed to fetch GitHub stars');
+              }
+              stars = new Intl.NumberFormat('en-US').format(stargazers_count);
+              await cache.set(cacheKey, {
+                stars,
+                created: Date.now(),
+              });
+            }
+
+            return stars;
+          } catch (error) {
+            console.log(error);
+            throw new Error('Failed to fetch GitHub stars');
+          }
+        },
+      },
     },
   });
 };
