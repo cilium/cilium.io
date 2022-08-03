@@ -1,7 +1,7 @@
 ---
 date: '2022-07-21T17:00:00.000Z'
 title: 'Cilium 1.12 Adds Cilium Service Mesh And Other New Features For Enterprise Kubernetes'
-ogImageUrl: 'https://i0.wp.com/www.tfir.io/wp-content/uploads/2020/07/mesh.jpg?resize=1600%2C800&ssl=1'
+ogImage: ogimage.jpg
 ogSummary: 'Cilium 1.12 is now available'
 categories:
   - Release

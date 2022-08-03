@@ -1,7 +1,7 @@
 ---
 date: '2022-03-15T17:00:00.000Z'
 title: 'Kubernetes Security — Explore Cilium host firewall and host policies'
-ogImageUrl: 'https://www.berl.at/wp-content/uploads/2021/11/web3.jpg'
+ogImage: ogimage.jpg
 ogSummary: 'Create network policies that apply to nodes in the host namespace'
 categories:
   - How-To

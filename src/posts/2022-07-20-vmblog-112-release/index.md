@@ -1,7 +1,7 @@
 ---
 date: '2022-07-20T17:00:00.000Z'
 title: 'VMblog Expert Interview: Isovalent on the Launch of Cilium Service Mesh'
-ogImageUrl: 'https://vmblog.com/images/interview-isovalent-rice.png'
+ogImage: ogimage.png
 ogSummary: 'Hear Liz Rice give the inside scoop on Cilium Service Mesh'
 categories:
   - Release
