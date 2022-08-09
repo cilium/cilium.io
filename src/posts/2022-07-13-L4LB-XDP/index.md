@@ -213,7 +213,7 @@ The output above shows that during time ~11:04 - 11:13 the production traffic we
 
 The wow effect really came when we started to look at CPU usage. At one point, we were not sure if we had a bug somewhere because the CPU load was so low when L4LB XDP was handling the traffic. But after looking closely, it really was consuming only half of a single CPU compared to 2x18 CPUs when IPVS was handling the traffic. We were saving 36 CPUs when switched to L4LB XDP.
 
-![CPU Load](cpu+.png)
+![CPU Load](cpu.png)
 
 _Note: The pictures were taken from our production grafana. CPU Load (Lower is better)_
 
