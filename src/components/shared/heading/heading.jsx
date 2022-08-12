@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const sizeClassNames = {
+  xl: 'text-4xl lg:text-5xl xl:text-[64px]',
   lg: 'text-4xl lg:text-5xl',
   md: 'text-3xl lg:text-4xl',
   sm: 'text-2xl lg:text-3xl font-semibold',
