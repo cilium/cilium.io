@@ -36,7 +36,7 @@ const websiteColors = [
 ];
 
 const Colors = () => (
-  <section className="relative bg-white pt-16 md:pt-24 lg:pt-28">
+  <section className="relative mt-10 bg-white md:mt-20 lg:mt-28 xl:mt-48">
     <Container>
       <div className="flex flex-col justify-between space-y-10 border-b border-gray-3 pb-10 lg:flex-row lg:space-y-0">
         <div className="flex flex-col space-y-2.5">

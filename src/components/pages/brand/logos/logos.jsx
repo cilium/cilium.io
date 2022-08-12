@@ -93,12 +93,12 @@ const Logos = () => (
           })}
         </div>
       </div>
-      <div className="mt-10 flex flex-col items-center justify-between md:mt-20 lg:mt-28 lg:flex-row xl:mt-48">
+      <div className="mt-10 flex flex-col items-center md:mt-20 lg:mt-28 lg:flex-row lg:space-x-36 xl:mt-48">
         <div className="flex flex-col space-y-2.5">
           <Heading tag="h2" size="lg">
             Full logo
           </Heading>
-          <p className="lg:max-w-lg">
+          <p className="text-lg leading-relaxed lg:max-w-[488px]">
             Our logo is the combination of a simple wordmark and the icon. When using the logo with
             other logos and graphic elements, please, observe the clean space around the logo to
             maximize visual effectiveness.
@@ -106,13 +106,13 @@ const Logos = () => (
         </div>
         <img src={fullLogo} alt="Cilium logo" width={592} height={406} />
       </div>
-      <div className="mt-10 flex flex-col items-center justify-between md:mt-16 lg:mt-24 lg:flex-row xl:mt-32">
+      <div className="mt-10 flex flex-col items-center md:mt-16 lg:mt-24 lg:flex-row lg:space-x-36 xl:mt-32">
         <img className="order-2 lg:order-1" src={icon} alt="Cilium icon" width={592} height={406} />
         <div className="order-1 flex flex-col space-y-2.5 lg:order-2">
           <Heading tag="h2" size="lg">
             Cilium icon
           </Heading>
-          <p className="lg:max-w-lg">
+          <p className="text-lg leading-relaxed lg:max-w-[488px]">
             Icon is an identifying mark or symbol that doesn&apos;t contain the business name, like
             a drawing or image that represents the business. Icon should only be used in cases where
             a company icon or avatar is required (traditionally constrained to a perfect square or
