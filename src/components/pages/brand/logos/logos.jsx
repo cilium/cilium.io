@@ -53,7 +53,7 @@ const Logos = () => (
             ensure its proper usage.
           </p>
         </div>
-        <Button className="!px-7 lg:self-end" theme="outline">
+        <Button to="/" className="!px-7 lg:self-end" theme="outline">
           Download Logo ZIP
         </Button>
       </div>
