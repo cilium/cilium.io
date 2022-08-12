@@ -30,8 +30,7 @@ const navigation = [
       {
         icon: BrandingIcon,
         name: 'Branding',
-        href: 'https://github.com/cncf/artwork/blob/master/examples/incubating.md#cilium-logos',
-        target: '_blank',
+        href: '/brand',
       },
       { icon: NewsletterIcon, name: 'Newsletter', href: '/newsletter' },
     ],
