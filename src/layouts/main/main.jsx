@@ -46,16 +46,14 @@ const MainLayout = ({ isBlogPage, pageMetadata, children, theme, footerWithTopBo
   return (
     <>
       <SEO data={pageMetadata} />
-      <div className="relative z-20">
-        <Header
-          navigation={navigation}
-          showSearchBox={isBlogPage}
-          theme={theme}
-          isMobileMenuOpen={isMobileMenuOpen}
-          handleOverlay={handleOverlay}
-          onBurgerClick={handleHeaderBurgerClick}
-        />
-      </div>
+      <Header
+        navigation={navigation}
+        showSearchBox={isBlogPage}
+        theme={theme}
+        isMobileMenuOpen={isMobileMenuOpen}
+        handleOverlay={handleOverlay}
+        onBurgerClick={handleHeaderBurgerClick}
+      />
       <main>{children}</main>
       <Footer withTopBorder={footerWithTopBorder} />
     </>

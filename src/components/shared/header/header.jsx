@@ -33,7 +33,7 @@ const Header = ({
   theme,
   handleOverlay,
 }) => (
-  <div className="relative">
+  <div className="relative z-20">
     <header
       className={classNames(
         'py-5 transition-[background] duration-200',
