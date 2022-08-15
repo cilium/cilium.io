@@ -61,7 +61,7 @@ const Logos = () => (
         <Heading tag="h3" theme="gray" size="3xs">
           Light background
         </Heading>
-        <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 lg:gap-8">
+        <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           {logosLight.map(({ logoName }, index) => {
             const Logo = logos[logoName];
             return (
@@ -79,7 +79,7 @@ const Logos = () => (
         <Heading tag="h3" theme="gray" size="3xs">
           Dark background
         </Heading>
-        <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4 xl:gap-8">
+        <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4 xl:gap-8">
           {logosDark.map(({ logoName }, index) => {
             const Logo = logos[logoName];
             return (

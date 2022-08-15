@@ -29,7 +29,7 @@ const Hero = () => (
       </div>
     </Container>
     <img
-      className="hidden sm:absolute sm:top-1/4 sm:left-1/2 sm:block sm:-translate-x-1/2 sm:translate-y-0 md:top-4 lg:top-12 xl:-bottom-8 xl:top-0"
+      className="hidden sm:absolute sm:bottom-0 sm:left-1/2 sm:block sm:-translate-x-1/2 sm:translate-y-0 md:bottom-4 xl:-bottom-8"
       src={backgroundSvg}
       alt=""
       aria-hidden
