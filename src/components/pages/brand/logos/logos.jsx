@@ -43,7 +43,7 @@ const logosLight = [
 const Logos = () => (
   <section className="relative bg-white pt-16 md:pt-24 lg:pt-28">
     <Container>
-      <div className="flex flex-col justify-between space-y-10 border-b border-gray-3 pb-10 lg:flex-row lg:space-y-0">
+      <div className="flex flex-col items-start space-y-10 border-b border-gray-3 pb-10 lg:flex-row lg:justify-between lg:space-y-0">
         <div className="flex flex-col space-y-2.5">
           <Heading tag="h2" size="md">
             Cilium Logo
@@ -53,7 +53,7 @@ const Logos = () => (
             ensure its proper usage.
           </p>
         </div>
-        <Button to="/" className="!px-7 lg:self-end" theme="outline">
+        <Button to="/" className="w-full !px-7 md:w-auto lg:self-end" theme="outline">
           Download Logo ZIP
         </Button>
       </div>

@@ -38,7 +38,7 @@ const websiteColors = [
 const Colors = () => (
   <section className="relative mt-10 bg-white md:mt-20 lg:mt-28 xl:mt-48">
     <Container>
-      <div className="flex flex-col justify-between space-y-10 border-b border-gray-3 pb-10 lg:flex-row lg:space-y-0">
+      <div className="flex flex-col items-start space-y-10 border-b border-gray-3 pb-10 lg:flex-row lg:justify-between lg:space-y-0">
         <div className="flex flex-col space-y-2.5">
           <Heading tag="h2" size="md">
             Cilium Colors
@@ -48,7 +48,7 @@ const Colors = () => (
             that the colors for the logo are highlighted separately.
           </p>
         </div>
-        <Button to="/" className="!px-7 lg:self-end" theme="primary-1">
+        <Button to="/" className="w-full !px-7 md:w-auto lg:self-end" theme="primary-1">
           Download Brand Guide
         </Button>
       </div>
