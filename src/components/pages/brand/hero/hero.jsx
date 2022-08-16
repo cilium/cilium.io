@@ -20,7 +20,7 @@ const Hero = () => (
       <div className="mt-7 flex flex-col lg:mx-auto lg:max-w-[708px] lg:self-end lg:text-right xl:ml-80">
         <p className="text-base md:max-w-[600px] md:text-lg lg:text-xl">{description}</p>
         <Button
-          to="/"
+          to="/data/cilium-brandbook.pdf"
           theme="primary-1"
           className="mt-6 !px-7 sm:mt-12 sm:max-w-[257px] sm:self-center md:mt-6 lg:self-end"
         >

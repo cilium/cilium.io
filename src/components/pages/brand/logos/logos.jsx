@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
@@ -53,9 +52,13 @@ const Logos = () => (
             ensure its proper usage.
           </p>
         </div>
-        <Button to="/" className="w-full !px-7 md:w-auto lg:self-end" theme="outline">
+        <a
+          download="cilium-logos.zip"
+          href="/data/cilium-logos.zip"
+          className="inline-flex w-full justify-center whitespace-nowrap rounded border-2 border-black py-3 px-5 text-base font-bold !leading-none outline-none transition-colors duration-200 hover:border-gray-1 hover:text-gray-1 focus-visible:ring focus-visible:ring-primary-2 focus-visible:ring-offset-2 disabled:cursor-auto disabled:bg-opacity-40 md:w-auto lg:self-end lg:py-4 lg:px-7 lg:text-lg"
+        >
           Download Logo ZIP
-        </Button>
+        </a>
       </div>
       <div className="mt-10">
         <Heading tag="h3" theme="gray" size="3xs">

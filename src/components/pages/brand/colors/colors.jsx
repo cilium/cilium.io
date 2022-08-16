@@ -48,7 +48,11 @@ const Colors = () => (
             that the colors for the logo are highlighted separately.
           </p>
         </div>
-        <Button to="/" className="w-full !px-7 md:w-auto lg:self-end" theme="primary-1">
+        <Button
+          to="/data/cilium-brandbook.pdf"
+          className="w-full !px-7 md:w-auto lg:self-end"
+          theme="primary-1"
+        >
           Download Brand Guide
         </Button>
       </div>
