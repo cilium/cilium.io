@@ -48,8 +48,8 @@ const Logos = () => (
             Cilium Logo
           </Heading>
           <p className="flat-breaks lg:flat-none xl:flat-breaks">
-            Logo is a crucial part of our brand and one of our most valuable assets. <br /> We must
-            ensure its proper usage.
+            Our logo is in the shape of a honeycomb to represent the Cilium hive. <br /> Please use
+            use it correctly and help us grow community.
           </p>
         </div>
         <a
@@ -116,10 +116,9 @@ const Logos = () => (
             Cilium icon
           </Heading>
           <p className="text-lg leading-relaxed lg:max-w-[488px]">
-            Icon is an identifying mark or symbol that doesn&apos;t contain the business name, like
-            a drawing or image that represents the business. Icon should only be used in cases where
-            a company icon or avatar is required (traditionally constrained to a perfect square or
-            circle). In all other cases, use the logo.
+            Our icon is our identifying mark that doesn&apos;t contain the name. The icon should
+            only be used in cases where it is required (traditionally constrained to a perfect
+            square or circle). In all other cases, use the logo.
           </p>
         </div>
       </div>

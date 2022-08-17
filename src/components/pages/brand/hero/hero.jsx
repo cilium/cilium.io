@@ -9,7 +9,7 @@ import backgroundSvg from './images/background.svg';
 
 const title = 'Cilium Brand Guidelines';
 const description =
-  'We’ve created some guidelines to help you use our brand  and assets, including our logo, content and trademarks';
+  'Do you want to help grow the buzz around Cilium? We’ve created some guidelines to help you use our brand and assets, including our logo, content, and trademarks';
 
 const Hero = () => (
   <section className="relative bg-gray-4 pb-24 pt-20 xs:pb-36 xs:pt-32 sm:pt-10 sm:pb-28 md:pb-36 lg:pt-24 lg:pb-40">

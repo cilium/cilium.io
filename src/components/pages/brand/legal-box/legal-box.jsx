@@ -15,11 +15,11 @@ const LegalBox = () => (
         <a href="https://www.linuxfoundation.org/trademark-usage/" target="_blank" rel="noreferrer">
           the Trademark Usage Guidelines
         </a>
-        , these CNCF branding guidelines, and{' '}
+        , the CNCF branding guidelines, and{' '}
         <a href="https://www.cncf.io/brand-guidelines/#legal" target="_blank" rel="noreferrer">
           all CNCF rules and policies
         </a>{' '}
-        as may be updated from time to time. You also acknowledge that CNCF is the sole owner of
+        which may be updated from time to time. You also acknowledge that CNCF is the sole owner of
         CNCF trademarks, promise not to interfere with CNCFs rights in them, and acknowledge that
         goodwill derived from their use accrues only to CNCF. CNCF may review use of the branding
         materials at any time and reserves the right to terminate or modify any use.
