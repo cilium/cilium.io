@@ -19,6 +19,7 @@ import EquinixLogo from './images/equinix.inline.svg';
 import ExoscaleLogo from './images/exoscale.inline.svg';
 import GardernerLogo from './images/gardener.inline.svg';
 import GoogleCloudLogo from './images/google-cloud.inline.svg';
+import HetznerLogo from './images/hetzner.inline.svg';
 import K8ELogo from './images/k8e.inline.svg';
 import KindLogo from './images/kind.inline.svg';
 import KopsLogo from './images/kops.inline.svg';
@@ -63,6 +64,7 @@ const logos = {
   sovereign: SovereignLogo,
   openshift: OpenShiftLogo,
   exoscale: ExoscaleLogo,
+  hetzner: HetznerLogo,
 };
 
 const spaceXClassNames = {

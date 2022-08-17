@@ -95,6 +95,17 @@ export default {
       },
     ],
   },
+  nexxiot: {
+    iconName: 'nexxiot',
+    text: 'Nexxiot using Cilium as the CNI plugin on EKS for its IoT SaaS',
+    links: [
+      {
+        linkText: 'Read User Story',
+        linkUrl: 'https://www.cncf.io/case-studies/nexxiot/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   uswitch: {
     iconName: 'uswitch',
     text: 'Uswitch uses Cilium Clustermesh for multi cluster networking',
@@ -115,8 +126,13 @@ export default {
     text: 'Trip.com uses Cilium both on premise and in AWS',
     links: [
       {
-        linkText: 'Read blog',
+        linkText: 'Blog 1',
         linkUrl: 'https://cilium.io/blog/2020/02/05/how-trip-com-uses-cilium/',
+      },
+      {
+        linkText: 'Blog 2',
+        linkUrl: 'https://arthurchiao.art/blog/trip-first-step-towards-cloud-native-security/',
+        linkTarget: '_blank',
       },
     ],
   },
@@ -172,12 +188,6 @@ export default {
       {
         linkText: 'Video',
         linkUrl: 'https://www.youtube.com/watch?v=kwQ0ooO3UM8&ab_channel=eBPFSummit',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Docs',
-        linkUrl:
-          'https://docs.gitlab.com/ee/user/application_security/threat_monitoring/#container-network-policy',
         linkTarget: '_blank',
       },
     ],
@@ -328,6 +338,10 @@ export default {
     iconName: 'infomaniak',
     text: '<b>Infomaniak</b> uses Cilium in self-hosted clusters on bare-metal and Openstack',
   },
+  isovalent: {
+    iconName: 'isovalent',
+    text: 'Cilium is the platform that powers <b>Isovalent</b>’s enterprise networking, observability, and security solutions',
+  },
   jumo: {
     iconName: 'jumo',
     text: '<b>JUMO</b> uses Cilium as the CNI plugin for all of their AWS-hosted EKS clusters',
@@ -368,17 +382,17 @@ export default {
     iconName: 'theNewYorkTimes',
     text: '<b>The New York Times</b> uses Cilium on EKS to build multi-region multi-tenant shared clusters',
   },
-  nexxiot: {
-    iconName: 'nexxiot',
-    text: '<b>Nexxiot</b> using Cilium as the CNI plugin on EKS for its IoT SaaS',
-  },
   northflank: {
     iconName: 'northflank',
     text: '<b>Northflank</b> uses Cilium as its CNI plugin across GCP, Azure, AWS and bare metal',
   },
+  plaid: {
+    iconName: 'plaid',
+    text: '<b>Plaid</b> uses Cilium as the CNI for its serverless database platform',
+  },
   planetscale: {
     iconName: 'planetscale',
-    text: '<b>PlanetScale</b> uses Cilium as the CNI for its serverless database platform',
+    text: '<b>PlanetScale</b> uses Cilium as their CNI plugin in self-hosted Kubernetes on AWS',
   },
   radioFrance: {
     iconName: 'radioFrance',
@@ -391,6 +405,10 @@ export default {
   sap: {
     iconName: 'sap',
     text: '<b>SAP</b> uses Cilium for projects across AWS, Azure, GCP, and OpenStack',
+  },
+  schubergPhilis: {
+    iconName: 'schubergPhilis',
+    text: '<b>Schuberg Philis</b> uses Cilium as the CNI for mission critical Kubernetes clusters they run for their customers',
   },
   simple: {
     iconName: 'simple',
@@ -407,6 +425,10 @@ export default {
   solo: {
     iconName: 'solo',
     text: 'Cilium is part of <b>Solo.io</b>’s Gloo Application Networking platform',
+  },
+  spherity: {
+    iconName: 'spherity',
+    text: '<b>Spherity</b> uses Cilium on AWS EKS for CNI, Hubble, and network policies',
   },
   sproutfi: {
     iconName: 'sproutfi',

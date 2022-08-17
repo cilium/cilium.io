@@ -39,6 +39,7 @@ import FinleapLogo from './images/finleap.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
 import InnoqLogo from './images/innoq.inline.svg';
+import IsovalentLogo from './images/isovalent.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
 import KryptosLogo from './images/kryptos.inline.svg';
 import KubeOvnLogo from './images/kube-ovn.inline.svg';
@@ -55,17 +56,20 @@ import NorthflankLogo from './images/northflank.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
+import PlaidLogo from './images/plaid.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
 import RadioFranceLogo from './images/radiofrance.inline.svg';
 import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
 import SapLogo from './images/sap.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
+import SchubergPhilisLogo from './images/schuberg-philis.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
 import SkybetLogo from './images/skybet.inline.svg';
 import SmileLogo from './images/smile.inline.svg';
 import SnappLogo from './images/snapp.inline.svg';
 import SoloLogo from './images/solo.inline.svg';
+import SpherityLogo from './images/spherity.inline.svg';
 import SportradarLogo from './images/sportradar.inline.svg';
 import SproutfiLogo from './images/sproutfi.inline.svg';
 import SuperorbitalLogo from './images/superorbital.inline.svg';
@@ -75,6 +79,10 @@ import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  isovalent: IsovalentLogo,
+  spherity: SpherityLogo,
+  schubergPhilis: SchubergPhilisLogo,
+  plaid: PlaidLogo,
   superorbital: SuperorbitalLogo,
   sproutfi: SproutfiLogo,
   solo: SoloLogo,
