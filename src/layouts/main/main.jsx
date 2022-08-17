@@ -30,8 +30,7 @@ const navigation = [
       {
         icon: BrandingIcon,
         name: 'Branding',
-        href: 'https://github.com/cncf/artwork/blob/master/examples/incubating.md#cilium-logos',
-        target: '_blank',
+        href: '/brand',
       },
       { icon: NewsletterIcon, name: 'Newsletter', href: '/newsletter' },
     ],
@@ -47,16 +46,14 @@ const MainLayout = ({ isBlogPage, pageMetadata, children, theme, footerWithTopBo
   return (
     <>
       <SEO data={pageMetadata} />
-      <div className="relative z-20">
-        <Header
-          navigation={navigation}
-          showSearchBox={isBlogPage}
-          theme={theme}
-          isMobileMenuOpen={isMobileMenuOpen}
-          handleOverlay={handleOverlay}
-          onBurgerClick={handleHeaderBurgerClick}
-        />
-      </div>
+      <Header
+        navigation={navigation}
+        showSearchBox={isBlogPage}
+        theme={theme}
+        isMobileMenuOpen={isMobileMenuOpen}
+        handleOverlay={handleOverlay}
+        onBurgerClick={handleHeaderBurgerClick}
+      />
       <main>{children}</main>
       <Footer withTopBorder={footerWithTopBorder} />
     </>

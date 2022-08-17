@@ -14,6 +14,11 @@ const adopters = {
     'Discover who is using Cilium in production, their use case, and where you can deploy Cilium',
 };
 
+const brand = {
+  title: 'Cilium brand guidelines',
+  description: 'Cilium brand guidelines to help you use our brand and assets',
+};
+
 const getHelp = {
   title: 'Find out how to get help with Cilium',
   description: 'Get help with Cilium through slack, training, support, and FAQs',
@@ -37,4 +42,4 @@ const newsletter = {
     'If you want to keep up on the latest in cloud native networking, observability, and security this is your source',
 };
 
-export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter };
+export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand };
