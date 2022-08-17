@@ -49,7 +49,7 @@ const Logos = () => (
           </Heading>
           <p className="flat-breaks lg:flat-none xl:flat-breaks">
             Our logo is in the shape of a honeycomb to represent the Cilium hive. <br /> Please use
-            use it correctly and help us grow community.
+            use it correctly and help us grow the community.
           </p>
         </div>
         <a
