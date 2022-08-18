@@ -19,7 +19,6 @@ const {
   bell,
   gitlab,
   aws,
-  nine,
   wildLife,
   adobe,
   accuknox,
@@ -74,6 +73,10 @@ const {
   mobilab,
   ect888,
   skybet,
+  plaid,
+  isovalent,
+  schubergPhilis,
+  spherity,
 } = caseStudiesData;
 
 const hero = {
@@ -86,6 +89,7 @@ const userCommunity1 = {
   theme: 'gray',
   items: [
     adobe,
+    nexxiot,
     alibabaCloud,
     aws,
     sky,
@@ -137,6 +141,10 @@ const userCommunity2 = {
     scaleway,
     sportradar,
     yahoo,
+    plaid,
+    isovalent,
+    schubergPhilis,
+    spherity,
     ayedo,
     cognite,
     finleap,
@@ -147,7 +155,6 @@ const userCommunity2 = {
     myFitnessPal,
     mux,
     theNewYorkTimes,
-    nexxiot,
     northflank,
     radioFrance,
     rapyutaRobotics,
@@ -190,6 +197,7 @@ const logos1 = {
     'azure',
     'exoscale',
     'appuio',
+    'hetzner',
   ],
   spaceXSize: 'sm',
 };
