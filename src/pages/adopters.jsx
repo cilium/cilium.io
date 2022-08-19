@@ -89,6 +89,7 @@ const userCommunity1 = {
   theme: 'gray',
   items: [
     adobe,
+    postfinance,
     nexxiot,
     alibabaCloud,
     aws,
@@ -137,7 +138,6 @@ const userCommunity2 = {
     kubesphere,
     elasticpath,
     palantir,
-    postfinance,
     scaleway,
     sportradar,
     yahoo,
