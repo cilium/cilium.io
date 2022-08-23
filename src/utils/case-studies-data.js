@@ -186,8 +186,13 @@ export default {
     text: 'Bell uses Cilium and eBPF for telco networking',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Video 1',
         linkUrl: 'https://www.youtube.com/watch?v=fNtG0iHYne4',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video 2',
+        linkUrl: 'https://www.youtube.com/watch?v=vJaOKGWiyvU',
         linkTarget: '_blank',
       },
     ],
