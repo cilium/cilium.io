@@ -1,6 +1,7 @@
 const fetch = require(`node-fetch`);
 const Path = require('path');
 
+const redirects = require('./redirects.json');
 const { slugify } = require('./src/utils/slugify');
 
 const DRAFT_FILTER = process.env.NODE_ENV === 'production' ? [false] : [true, false];
@@ -143,6 +144,16 @@ async function createBlogPages({ graphql, actions, reporter }) {
 }
 
 exports.createPages = async (options) => {
+  const { createRedirect } = options.actions;
+
+  redirects.forEach((redirect) =>
+    createRedirect({
+      fromPath: redirect.fromPath,
+      toPath: redirect.toPath,
+      statusCode: redirect.statusCode,
+      force: redirect.force,
+    })
+  );
   await createBlogPages(options);
   await createBlogPosts(options);
 };

@@ -1,0 +1,7 @@
+[
+  {
+    "fromPath": "https://blog.cilium.io/",
+    "toPath": "https://cilium.io/blog",
+    "statusCode": 200
+  }
+]
