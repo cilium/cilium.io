@@ -106,6 +106,17 @@ export default {
       },
     ],
   },
+  postfinance: {
+    iconName: 'postfinance',
+    text: 'PostFinance is using Cilium as their CNI for all mission critical, on premise k8s clusters',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://isovalent.com/data/isovalent-case-study-postfinance.pdf',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   uswitch: {
     iconName: 'uswitch',
     text: 'Uswitch uses Cilium Clustermesh for multi cluster networking',
@@ -175,8 +186,13 @@ export default {
     text: 'Bell uses Cilium and eBPF for telco networking',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Video 1',
         linkUrl: 'https://www.youtube.com/watch?v=fNtG0iHYne4',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video 2',
+        linkUrl: 'https://www.youtube.com/watch?v=vJaOKGWiyvU',
         linkTarget: '_blank',
       },
     ],
@@ -277,10 +293,6 @@ export default {
   palantir: {
     iconName: 'palantir',
     text: '<b>Palantir</b> is using Cilium as their main CNI plugin in AWS (self hosted k8s)',
-  },
-  postfinance: {
-    iconName: 'postfinance',
-    text: '<b>PostFinance</b> is using Cilium as their CNI for all mission critical, on premise k8s clusters',
   },
   scaleway: {
     iconName: 'scaleway',
