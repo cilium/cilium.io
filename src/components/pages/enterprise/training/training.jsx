@@ -5,6 +5,7 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import AcendLogo from 'icons/logo-acend.inline.svg';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
+import SoloioLogo from 'icons/logo-soloio.inline.svg'; 
 
 const title = 'Training';
 const description =
@@ -13,6 +14,7 @@ const description =
 const logos = {
   acend: AcendLogo,
   isovalent: IsovalentLogo,
+  soloio: SoloioLogo,
 };
 
 const items = [
@@ -32,6 +34,15 @@ const items = [
       'Quickly get started with Cilium in our interactive tutorials with a live environment.',
     buttonText: 'Explore Tutorials',
     buttonLink: 'https://isovalent.com/labs/',
+    buttonTarget: '_blank',
+  },
+  {
+    logoName: 'soloio',
+    title: 'Introduction to Cilium with Certification Option',
+    description:
+      'Cilium is an open source software for providing, securing and observing network connectivity between container workloads - cloud native, and fueled by the revolutionary Kernel technology eBPF. In this workshop, you will learn the essential skills to deploy the Cilium CNI on a test Kubernetes cluster, gather metrics and enforce network policies. At the completion of the workshop, you will be able to take an assessment and with a score 80% or higher you will earn the “Fundamentals for Cilium” credential, offered by Solo.io with Credly.',
+    buttonText: 'Link to Workshop',
+    buttonLink: 'https://www.solo.io/solo-academy/workshops-cilium/',
     buttonTarget: '_blank',
   },
 ];
