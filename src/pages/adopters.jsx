@@ -221,7 +221,7 @@ const logos2 = {
     'kubespray',
     'deckhouse',
   ],
-  spaceXSize: 'lg',
+  spaceXSize: 'sm',
 };
 
 const Adopters = () => (

@@ -74,7 +74,6 @@ const logos = {
 const spaceXClassNames = {
   sm: 'mx-4 md:mx-6 lg:mx-[26px]',
   md: 'mx-4 md:mx-6 lg:mx-8',
-  lg: 'mx-5 md:mx-7 lg:mx-10',
 };
 
 const Logos = ({ title, items, spaceXSize }) => (
