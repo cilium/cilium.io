@@ -10,6 +10,7 @@ import AmazonEKSlogo from './images/amazon-eks.inline.svg';
 import AppuioLogo from './images/appuio.inline.svg';
 import AWSLogo from './images/aws.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
+import AzureKsLogo from './images/azureks.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import CraneLogo from './images/crane.inline.svg';
 import DaoCloudLogo from './images/daocloud.inline.svg';
@@ -18,6 +19,7 @@ import DigitalOceanLogo from './images/digitalocean.inline.svg';
 import EquinixLogo from './images/equinix.inline.svg';
 import ExoscaleLogo from './images/exoscale.inline.svg';
 import GardernerLogo from './images/gardener.inline.svg';
+import GoogleKeLogo from './images/gke.inline.svg';
 import GoogleCloudLogo from './images/google-cloud.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
 import K8ELogo from './images/k8e.inline.svg';
@@ -53,6 +55,8 @@ const logos = {
   kops: KopsLogo,
   amazonEks: AmazonEKSlogo,
   gardener: GardernerLogo,
+  googleKe: GoogleKeLogo,
+  azureKs: AzureKsLogo,
   crane: CraneLogo,
   kubeasz: KubeaszLogo,
   kubekey: KubekeyLogo,
@@ -70,6 +74,7 @@ const logos = {
 const spaceXClassNames = {
   sm: 'mx-4 md:mx-6 lg:mx-[26px]',
   md: 'mx-4 md:mx-6 lg:mx-8',
+  lg: 'mx-5 md:mx-7 lg:mx-10',
 };
 
 const Logos = ({ title, items, spaceXSize }) => (

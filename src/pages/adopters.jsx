@@ -203,23 +203,25 @@ const logos1 = {
 };
 
 const logos2 = {
-  title: 'Use your favorite Kubernetes installers',
+  title: 'Use your favorite Kubernetes distribution',
   items: [
-    'deckhouse',
-    'kubeasz',
-    'kubeone',
-    'k8e',
+    'azureKs',
+    'openshift',
     'amazonEks',
+    'rke2',
+    'googleKe',
     'gardener',
     'kind',
     'crane',
     'kops',
-    'kubespray',
     'kubekey',
-    'rke2',
-    'openshift',
+    'k8e',
+    'kubeasz',
+    'kubeone',
+    'kubespray',
+    'deckhouse',
   ],
-  spaceXSize: 'md',
+  spaceXSize: 'lg',
 };
 
 const Adopters = () => (
