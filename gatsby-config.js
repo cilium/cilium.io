@@ -163,14 +163,18 @@ const plugins = [
       feeds: [
         {
           serialize: ({ query: { site, allMdx } }) =>
-            allMdx.nodes.map((node) => ({
-              ...node.frontmatter,
-              description: node.excerpt,
-              date: node.frontmatter.date,
-              url: site.siteMetadata.siteUrl + node.frontmatter.path,
-              guid: site.siteMetadata.siteUrl + node.frontmatter.path,
-              custom_elements: [{ 'content:encoded': node.html }],
-            })),
+            allMdx.nodes.map(({ excerpt, frontmatter, html }) => {
+              const { path, date, externalUrl } = frontmatter;
+              const url = externalUrl || site.siteMetadata.siteUrl + path;
+              return {
+                ...frontmatter,
+                description: excerpt,
+                date,
+                url,
+                guid: url,
+                custom_elements: [{ 'content:encoded': html }],
+              };
+            }),
           query: `
             {
               allMdx(
@@ -185,6 +189,7 @@ const plugins = [
                     title
                     date
                     path
+                    externalUrl
                   }
                 }
               }
