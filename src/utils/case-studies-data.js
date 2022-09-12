@@ -265,10 +265,15 @@ export default {
   },
   utmost: {
     iconName: 'utmost',
-    text: 'Utmost is using Cilium in all tiers of its Kubernetes ecosystem to implement zero trust',
+    text: 'Utmost is using Cilium in all tiers of its Kubernetes ecosystem to implement zero trust networking',
     links: [
       {
-        linkText: 'Read blog',
+        linkText: 'User Story',
+        linkUrl: 'https://www.cncf.io/case-studies/utmost/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Blog',
         linkUrl: 'https://blog.utmost.co/zero-trust-security-at-utmost',
         linkTarget: '_blank',
       },
