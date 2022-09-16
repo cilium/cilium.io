@@ -111,8 +111,13 @@ export default {
     text: 'PostFinance is using Cilium as their CNI for all mission critical, on premise k8s clusters',
     links: [
       {
-        linkText: 'Read Case Study',
+        linkText: 'Case Study',
         linkUrl: 'https://isovalent.com/data/isovalent-case-study-postfinance.pdf',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video',
+        linkUrl: 'https://isovalent.com/postfinance-cilium-webinar/',
         linkTarget: '_blank',
       },
     ],
