@@ -37,8 +37,8 @@ const items = [
 ];
 
 const Training = () => (
-  <section className="py-10 md:py-20 lg:py-28">
-    <Container className="">
+  <section className="py-10 md:py-20 lg:py-28" id="trainings">
+    <Container>
       <Heading className="text-center" tag="h2">
         {title}
       </Heading>
