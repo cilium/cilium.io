@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import Hero from 'components/pages/home/hero';
@@ -8,6 +9,7 @@ import CNCFBanner from 'components/shared/cncf-banner';
 import Community from 'components/shared/community';
 import FeaturedTalks from 'components/shared/featured-talks';
 import HandsOn from 'components/shared/hands-on';
+import SEO from 'components/shared/seo';
 import UserCommunity from 'components/shared/user-community';
 import MainLayout from 'layouts/main';
 import caseStudiesData from 'utils/case-studies-data';
@@ -57,3 +59,5 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+export const Head = ({ location: { pathname } }) => <SEO slug={pathname} />;

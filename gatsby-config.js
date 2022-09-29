@@ -4,7 +4,6 @@ require('dotenv').config();
 const queries = require('./src/utils/algolia-queries');
 
 const plugins = [
-  'gatsby-plugin-react-helmet',
   {
     resolve: 'gatsby-source-filesystem',
     options: {

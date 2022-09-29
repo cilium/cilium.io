@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import Logos from 'components/pages/adopters/logos';
 import HeroWithoutImage from 'components/shared/hero-without-image';
+import SEO from 'components/shared/seo';
 import UserCommunity from 'components/shared/user-community';
 import MainLayout from 'layouts/main/main';
 import caseStudiesData from 'utils/case-studies-data';
@@ -225,7 +227,7 @@ const logos2 = {
 };
 
 const Adopters = () => (
-  <MainLayout pageMetadata={seo} theme="gray">
+  <MainLayout theme="gray">
     <HeroWithoutImage {...hero} />
     <UserCommunity className="pt-6 pb-10 md:pt-10 md:pb-20 lg:pt-14 lg:pb-32" {...userCommunity1} />
     <Logos {...logos1} />
@@ -238,3 +240,8 @@ const Adopters = () => (
 );
 
 export default Adopters;
+
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = { ...seo, slug: pathname };
+  return <SEO data={pageMetadata} />;
+};

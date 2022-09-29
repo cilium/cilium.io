@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import Architecture from 'components/pages/get-started/architecture';
@@ -9,6 +10,7 @@ import CNCFBanner from 'components/shared/cncf-banner';
 import Community from 'components/shared/community';
 import HandsOn from 'components/shared/hands-on';
 import Hero from 'components/shared/hero';
+import SEO from 'components/shared/seo';
 import UserCommunity from 'components/shared/user-community';
 import illustration from 'images/pages/get-started/hero/illustration.svg';
 import MainLayout from 'layouts/main';
@@ -62,3 +64,8 @@ const LearnPage = () => (
 );
 
 export default LearnPage;
+
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = { ...seo, slug: pathname };
+  return <SEO data={pageMetadata} />;
+};
