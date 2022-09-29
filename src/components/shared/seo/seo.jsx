@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
-import { useStaticQuery, graphql } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
-import { Helmet } from 'react-helmet';
 
 import createMetaImagePath from 'utils/create-meta-image-path';
 
-const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) => {
+const SEO = ({ data: { title, description, image, slug } = {}, facebook, children } = {}) => {
   const {
     site: {
-      siteMetadata: { siteTitle, siteDescription, siteUrl, siteImage, siteLanguage },
+      siteMetadata: { siteTitle, siteDescription, siteUrl, siteImage },
     },
   } = useStaticQuery(graphql`
     query SEO {
@@ -26,16 +25,11 @@ const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) 
 
   const currentTitle = title ?? siteTitle;
   const currentDescription = description ?? siteDescription;
-  const currentUrl = slug ? `${siteUrl}/${slug}` : siteUrl;
+  const currentUrl = slug ? `${siteUrl}${slug}` : siteUrl;
   const currentImagePath = image ? createMetaImagePath(image, siteUrl) : siteUrl + siteImage;
   return (
-    <Helmet
-      title={currentTitle}
-      htmlAttributes={{
-        lang: siteLanguage,
-        prefix: 'og: http://ogp.me/ns#',
-      }}
-    >
+    <>
+      <title>{currentTitle}</title>
       {/* General */}
       <meta name="description" content={currentDescription} />
       {/* Open Graph */}
@@ -51,7 +45,8 @@ const SEO = ({ data: { title, description, image, slug } = {}, facebook } = {}) 
       <meta name="twitter:image" content={currentImagePath} />
       <meta name="twitter:url" content={currentUrl} />
       <meta name="twitter:description" content={currentDescription} />
-    </Helmet>
+      {children}
+    </>
   );
 };
 

@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 
 import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
-import SEO from 'components/shared/seo';
 import AdoptersIcon from 'icons/adopters.inline.svg';
 import BlogIcon from 'icons/blog.inline.svg';
 import BrandingIcon from 'icons/branding.inline.svg';
@@ -38,14 +37,13 @@ const navigation = [
   { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
 ];
 
-const MainLayout = ({ isBlogPage, pageMetadata, children, theme, footerWithTopBorder }) => {
+const MainLayout = ({ isBlogPage, children, theme, footerWithTopBorder }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleHeaderBurgerClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const handleOverlay = () => setIsMobileMenuOpen(false);
   return (
     <>
-      <SEO data={pageMetadata} />
       <Header
         navigation={navigation}
         showSearchBox={isBlogPage}
@@ -63,16 +61,11 @@ const MainLayout = ({ isBlogPage, pageMetadata, children, theme, footerWithTopBo
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
   isBlogPage: PropTypes.bool,
-  pageMetadata: PropTypes.shape({
-    title: PropTypes.string,
-    description: PropTypes.string,
-  }),
   theme: PropTypes.string,
   footerWithTopBorder: PropTypes.bool,
 };
 
 MainLayout.defaultProps = {
-  pageMetadata: {},
   isBlogPage: false,
   theme: null,
   footerWithTopBorder: false,

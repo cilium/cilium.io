@@ -5,6 +5,7 @@ import React from 'react';
 import FeaturedPosts from 'components/pages/blog/featured-posts';
 import PostsBoard from 'components/pages/blog/posts-board';
 import Cards from 'components/shared/cards';
+import SEO from 'components/shared/seo';
 
 import MainLayout from '../layouts/main';
 
@@ -46,16 +47,11 @@ const BlogPage = (props) => {
     location: { pathname },
   } = props;
   const isBlogPage = pathname.startsWith('/blog');
-  const seoMetadata = {
-    title: 'Blog — Cilium',
-    description: 'The latest articles covering eBPF-based Networking, Observability, and Security',
-    slug,
-  };
 
   const isCategoryPage = pathname.includes('categories');
 
   return (
-    <MainLayout isBlogPage={isBlogPage} pageMetadata={seoMetadata}>
+    <MainLayout isBlogPage={isBlogPage}>
       {!isCategoryPage && <FeaturedPosts featuredStory={featuredStory?.[0]} />}
       <PostsBoard
         categories={categories}
@@ -76,6 +72,15 @@ const BlogPage = (props) => {
 };
 
 export default BlogPage;
+
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: 'Blog — Cilium',
+    description: 'The latest articles covering eBPF-based Networking, Observability, and Security',
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};
 
 export const blogPostsQuery = graphql`
   query blogPostsQuery(

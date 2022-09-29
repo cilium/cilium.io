@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
@@ -7,6 +8,7 @@ import EventBox from 'components/pages/get-help/event-box';
 import Cards from 'components/shared/cards';
 import Community from 'components/shared/community';
 import HeroWithImage from 'components/shared/hero-with-image';
+import SEO from 'components/shared/seo';
 import decor1 from 'images/pages/get-help/hero/decor-1.svg';
 import decor2 from 'images/pages/get-help/hero/decor-2.svg';
 import MainLayout from 'layouts/main/main';
@@ -84,3 +86,8 @@ const GetHelp = () => {
 };
 
 export default GetHelp;
+
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = { ...seo, slug: pathname };
+  return <SEO data={pageMetadata} />;
+};

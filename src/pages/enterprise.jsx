@@ -1,9 +1,11 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 import Distributions from 'components/pages/enterprise/distributions';
 import Training from 'components/pages/enterprise/training';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
+import SEO from 'components/shared/seo';
 import illustration from 'images/pages/enterprise/hero/illustration.svg';
 import MainLayout from 'layouts/main';
 import { enterprise as seo } from 'utils/seo-metadata';
@@ -32,3 +34,8 @@ const EnterprisePage = () => {
 };
 
 export default EnterprisePage;
+
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = { ...seo, slug: pathname };
+  return <SEO data={pageMetadata} />;
+};
