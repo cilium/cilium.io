@@ -4,7 +4,7 @@ date: '2022-10-18T17:00:00.000Z'
 title: 'Cilium Talks at KubeCon NA 2022'
 isPopular: true
 isFeatured: false
-ogImage: ciliumtalks.jpg
+ogImage: ciliumtalksna.jpg
 ogSummary: "Find all the Cilium talk at KubeCon NA"
 categories:
   - Community
@@ -13,7 +13,7 @@ tags:
   - KubeCon
 ---
 
-![Cilium Talks at KubeCon](ciliumtalks.jpg)
+![Cilium Talks at KubeCon](ciliumtalksna.jpg)
 
 *October 18th, 2022*  
 *Author: Bill Mulligan, Isovalent*
