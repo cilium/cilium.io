@@ -1,9 +1,3 @@
 [build]
   publish = "public"
   command = "gatsby build"
-
-[[redirects]]
-  from = "https://blog.cilium.io/*"
-  to = "https://cilium.io/blog/:splat"
-  status = 200
-  force = true

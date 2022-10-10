@@ -24,4 +24,5 @@
 /istio /blog/2018/08/07/istio-10-cilium 301
 /blog/2020/11/10/ebpf-future-of-network /blog/2020/11/10/ebpf-future-of-networking 301
 
+https://blog.cilium.io/* /blog/:splat 200!
 /* https://cilium.netlify.app/:splat 200
