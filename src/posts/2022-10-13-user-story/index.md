@@ -4,7 +4,7 @@ date: '2022-10-13T17:00:00.000Z'
 title: 'Cilium User Story: Securing 100,000+ RPS in a Multi-Tenant Environment'
 isPopular: true
 isFeatured: false
-ogImage: userstory.png
+ogImage: Publishing.png
 ogSummary: "Learn how a publishing platform created a secure multi-tenant environment with Cilium"
 categories:
   - Community
@@ -12,7 +12,7 @@ tags:
   - Cilium
 ---
 
-![Cilium User Story - Securing 100,000+ RPS in a Multi-Tenant Environment](Publishing.jpg)
+![Cilium User Story - Securing 100,000+ RPS in a Multi-Tenant Environment](Publishing.png)
 
 *October 13th, 2022*  
 *Author: Bill Mulligan, Isovalent*
