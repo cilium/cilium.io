@@ -17,15 +17,15 @@ tags:
 *October 13th, 2022*  
 *Author: Bill Mulligan, Isovalent*
 
-● Challenges: Consistency, Isolation, Scalability
+Challenges: Consistency, Isolation, Scalability
 
-● Industry: Publishing
+Industry: Publishing
 
-● Cloud type: Public
+Cloud type: Public
 
-● Product Type: Publishing Platform
+Product Type: Publishing Platform
 
-● Projects Used: Cilium and Hubble
+Projects Used: Cilium and Hubble
 
 # Cilium User Story: Securing 100,000+ RPS in a Multi-Tenant Environment
 
