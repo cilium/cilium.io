@@ -1,5 +1,5 @@
 ---
-path: '/blog/2022/10/18/cilium-kubecon-eu-talks'
+path: '/blog/2022/10/18/cilium-kubecon-na-talks'
 date: '2022-10-18T17:00:00.000Z'
 title: 'Cilium Talks at KubeCon NA 2022'
 isPopular: true
