@@ -103,7 +103,7 @@ systemctl start sys-fs-bpf.mount; docker run \
 --enable-l7-proxy=false \
 --preallocate-bpf-maps=false \
 --disable-envoy-version-check=true \
--auto-direct-node-routes=false \
+--auto-direct-node-routes=false \
 --enable-ipv4=true \
 --enable-ipv6=true
 ```
