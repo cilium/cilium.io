@@ -17,16 +17,6 @@ tags:
 *October 13th, 2022*  
 *Author: Bill Mulligan, Isovalent*
 
-Challenges: Consistency, Isolation, Scalability
-
-Industry: Publishing
-
-Cloud type: Public
-
-Product Type: Publishing Platform
-
-Projects Used: Cilium and Hubble
-
 # Cilium User Story: Securing 100,000+ RPS in a Multi-Tenant Environment
 
 With today's technology and new cycles, news "fresh off the press" means something quite different than the days of just printing presses. Publishing companies today need to keep their technology up to speed with the pace the world moves. For one publishing company, Cilium became their solution to connect their worlds together.
