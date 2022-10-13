@@ -19,6 +19,8 @@ tags:
 
 # Cilium User Story: Securing 100,000+ RPS in a Multi-Tenant Environment
 
+*This User Story comes from a company in the publishing industry*
+
 With today's technology and new cycles, news "fresh off the press" means something quite different than the days of just printing presses. Publishing companies today need to keep their technology up to speed with the pace the world moves. For one publishing company, Cilium became their solution to connect their worlds together.
 
 To make sure the news gets to you every morning, afternoon, and evening, the publishing platform has a Delivery Engineering Team that provides infrastructure to product engineering teams. Rather than running their own data centers, they have a cloud first strategy where everything should be moved to the cloud. The Delivery Engineering team is responsible for centralized infrastructure that everyone can deploy their services onto and is building out this cloud platform for the product engineering teams. By abstracting the business logic from the infrastructure, the platform allows teams to move more quickly.
