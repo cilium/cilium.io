@@ -1,6 +1,6 @@
 ---
-path: '/blog/2022/10/18/cilium-kubecon-na-talks'
-date: '2022-10-18T17:00:00.000Z'
+path: '/blog/2022/10/17/cilium-kubecon-na-talks'
+date: '2022-10-17T17:00:00.000Z'
 title: 'Cilium Talks at KubeCon NA 2022'
 isPopular: true
 isFeatured: false
@@ -15,7 +15,7 @@ tags:
 
 ![Cilium Talks at KubeCon](ciliumkubeconna.jpg)
 
-*October 18th, 2022*  
+*October 17th, 2022*  
 *Author: Bill Mulligan, Isovalent*
 
 KubeCon + CloudNativeCon is already back around upon us and Cilium is represented in full force! There are 12 talks, workshops, and meetings that cover technical talks from Cilium contributors, tutorials to get people started, and end user stories from people putting Cilium into production. You will be able to catch presentations on everything from Cilium NetworkPolicies to Cilium for telco workloads to a tour of the Cilium for security. Let’s dive into each of the talks below.
