@@ -22,6 +22,11 @@ KubeCon + CloudNativeCon is already back around upon us and Cilium is represente
 
 ## Cloud Native eBPF Day
 
+[Keynote: eBPF - Everything You Need to Know in 5 Minutes - Thomas Graf, CTO, Isovalent](https://sched.co/1Auye)
+ 
+ Monday, October 24 • 9:15am - 9:20am
+
+eBPF has become the key technology for infrastructure software. This session tells you everything you need to know about eBPF in 5 minutes. Why eBPF matters and why it exists. What it can do. What it can’t do. Who uses it for what. And finally, what the future holds.
 [Extending Cilium with eBPF for Exposing HTTP/1 Golden Metrics - Aidan Carson, Solo.io](https://sched.co/1Auyq)
 
 Monday, October 24 • 10:40am - 11:10am
