@@ -17,7 +17,7 @@ import caseStudiesData from 'utils/case-studies-data';
 const {
   google,
   bell,
-  ikea,
+  homeRetailer,
   aws,
   wildLife,
   adobe,
@@ -30,7 +30,7 @@ const {
 } = caseStudiesData;
 
 const userCommunity1 = {
-  items: [google, bell, ikea, aws],
+  items: [google, bell, adobe, aws],
 };
 
 const userCommunity2 = {

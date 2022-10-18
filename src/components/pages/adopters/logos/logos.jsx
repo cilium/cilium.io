@@ -12,6 +12,7 @@ import AWSLogo from './images/aws.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
 import AzureKsLogo from './images/azureks.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
+import ConstellationLogo from './images/constellation.inline.svg';
 import CraneLogo from './images/crane.inline.svg';
 import DaoCloudLogo from './images/daocloud.inline.svg';
 import DeckhouseLogo from './images/deckhouse.inline.svg';
@@ -39,6 +40,7 @@ import TencentCloudLogo from './images/tencent-cloud.inline.svg';
 
 const logos = {
   aws: AWSLogo,
+  constellation: ConstellationLogo,
   tencentCloud: TencentCloudLogo,
   googleCloud: GoogleCloudLogo,
   azure: AzureLogo,
