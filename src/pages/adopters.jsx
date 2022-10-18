@@ -10,8 +10,17 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  vshn,
+  edgelessSystems,
+  giantSwarm,
+  immerok,
+  magicLeap,
+  sapian,
+  ungleich,
   elasticpath,
   bytedance,
+  seznam,
+  sandp,
   google,
   planetscale,
   sproutfi,
@@ -45,7 +54,7 @@ const {
   sportradar,
   utmost,
   yahoo,
-  ikea,
+  homeRetailer,
   overstock,
   ayedo,
   cognite,
@@ -90,7 +99,11 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    vshn,
     adobe,
+    theNewYorkTimes,
+    seznam,
+    sandp,
     postfinance,
     nexxiot,
     alibabaCloud,
@@ -109,10 +122,11 @@ const userCommunity1 = {
     uswitch,
     utmost,
     meltwater,
-    ikea,
+    homeRetailer,
     ect888,
     mobilab,
     skybet,
+    form3,
   ],
 };
 
@@ -136,7 +150,6 @@ const userCommunity2 = {
     canonical,
     melenion,
     civo,
-    form3,
     kubesphere,
     elasticpath,
     palantir,
@@ -156,7 +169,6 @@ const userCommunity2 = {
     liquidReply,
     myFitnessPal,
     mux,
-    theNewYorkTimes,
     northflank,
     radioFrance,
     rapyutaRobotics,
@@ -171,6 +183,12 @@ const userCommunity2 = {
     kryptos,
     superorbital,
     planetscale,
+    edgelessSystems,
+    giantSwarm,
+    immerok,
+    magicLeap,
+    sapian,
+    ungleich,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -182,7 +200,7 @@ userCommunity2.items.sort((a, b) =>
 );
 
 const logos1 = {
-  title: 'Deploy on your prefered cloud',
+  title: 'Deploy on your preferred cloud',
   items: [
     'aws',
     'sovereign',
@@ -210,6 +228,7 @@ const logos2 = {
     'azureKs',
     'openshift',
     'amazonEks',
+    'constellation',
     'rke2',
     'googleKe',
     'gardener',
