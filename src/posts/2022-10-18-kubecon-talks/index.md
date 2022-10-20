@@ -68,6 +68,16 @@ Monday, October 24 • 10:25am - 10:55am
 
 Until now, validating the build environment and detecting tampered tooling in a build has been very difficult. This talk will show how Cillium Tetragon and Witness integration simplifies this process for developers and security engineers. Witness is a framework for supply chain security that implements the in-toto specification. It has a modular design, easily extendable for various attestors, backends, and key providers (including SPIFFE/SPIRE). This talk will show an attestation plugin that programs Cillum Tetragon to provide detailed eBPF traces of a build step. Additionally, we will create a build policy that verifies the trace and blocks the execution of workload compiled by a malicious compiler when the compiled workload is executed.
 
+## Service MeshCon
+
+### [How Many Proxies Do You Need? - Liz Rice & Thomas Graf, Isovalent](https://sched.co/1Azt0)
+
+Tuesday, October 25 • 3:30pm - 4:00pm
+
+To provide app-level network functionality like L7 load balancing and TLS termination, Service Meshes use a proxy component that terminates L7 connections on behalf of applications. Traditionally the proxy has been co-located in each application pod as a sidecar container, but Cilium Service Mesh changed this with the innovation of sidecarless service mesh. Istio have also now adopted a sidecarless approach that was recently announced as Istio Ambient Mesh. 
+
+But “sidecarless” doesn’t mean “proxyless”! It’s a question of where you deploy the proxies, and how you create the relationship between apps and proxies. In this talk we’ll explore the pro’s and con’s of different models, and explain where eBPF makes a difference (and where it doesn’t) in not only network performance, but also to provide observability and security capabilities.
+
 ### [Hands-on Workshop: Network Policies - The Not-So-Hard Way - Raymond de Jong, Isovalent](https://sched.co/1AOju)
 
 Tuesday, October 25 • 12:55pm - 2:05pm
