@@ -36,7 +36,7 @@ Cilium has 13,000+ GitHub stars and 500+ contributors across the various repos i
 
 ## How to Help
 
-- If you are a fan of Cilium, we would love a 👍, ❤️, or 🚀on the [PR](https://github.com/cncf/toc/pull/95).
+- If you are a fan of Cilium, we would love a 👍, ❤️, or 🚀on the [PR](https://github.com/cncf/toc/pull/952).
 - If you are using Cilium in dev, testing, or production, we would love to hear your feedback in our [User Survey](https://docs.google.com/forms/d/e/1FAIpQLSfL01ttSgzmWQbOHxZu61B99Iw3Yw3irZ1X7CRCQfBJkrN7Rg/viewform?usp=sf_link)
 - If you are using Cilium in production, please add your name to the [Users](https://github.com/cilium/cilium/blob/master/USERS.md) doc
 - If you do any of the above, share it on the social media platform of your choice
