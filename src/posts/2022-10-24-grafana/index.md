@@ -1,7 +1,7 @@
 ---
 date: '2022-10-24T17:00:00.000Z'
 title: 'Grafana and Cilium: Deep eBPF-powered observability for Kubernetes and cloud native infrastructure'
-ogImage: ogimage.
+ogImage: ogimage.png
 ogSummary: 'Learn how Cilium integrates with Grafana for observability'
 categories:
   - How-To
