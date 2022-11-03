@@ -4,7 +4,7 @@ date: '2022-11-04T17:00:00.000Z'
 title: 'Cilium at KubeCon NA 2022 Wrap Up'
 isPopular: false
 isFeatured: false
-ogImage: 
+ogImage: kubecon_stage.webp
 ogSummary: "Find out the buzz from around the community at KubeCon"
 categories:
   - Community
@@ -12,8 +12,6 @@ tags:
   - Cilium
   - KubeCon
 ---
-
-![Cilium Talks at KubeCon](ciliumtalks.jpg)
 
 *November 4th, 2022*  
 *Author: Bill Mulligan, Isovalent*
@@ -43,7 +41,7 @@ Live on stage, Cilium applied for CNCF Graduation (If you haven’t yet, make su
 
 Cilium was a part of 13 talks all around the conference covering KubeCon, eBPF Day, ServiceMeshCon, Observability Con, Security Con, and Kubernetes on Edge Day. You can read all about them in [blog post](https://cilium.io/blog/2022/10/17/cilium-kubecon-na-talks/) and the videos should be up soon too.
 
-![Cilium Talks at KubeCon](ciliumtalks.jpg)
+![Cilium Talks at KubeCon](ciliumtalksna.jpg)
 
 ### Cilium Project Meeting
 
