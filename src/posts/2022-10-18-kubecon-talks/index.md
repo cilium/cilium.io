@@ -2,7 +2,6 @@
 path: '/blog/2022/10/17/cilium-kubecon-na-talks'
 date: '2022-10-17T17:00:00.000Z'
 title: 'Cilium Talks at KubeCon NA 2022'
-isPopular: true
 isFeatured: false
 ogImage: ciliumkubeconna.jpg
 ogSummary: "Find all the Cilium talk at KubeCon NA"
