@@ -45,7 +45,7 @@ Cilium was a part of 13 talks all around the conference covering KubeCon, eBPF D
 
 ### Cilium Project Meeting
 
-Cilium hosted it's first project meeting at KubeCon. I wasn't quite sure what to expect, but I was blown away by the response! We had four hours packed with getting people introduced to Cilium, disucssing issues and development, and diving into service mesh. It was also great to see some faces I have only seen on slack so far.
+Cilium hosted its first project meeting at KubeCon. I wasn't quite sure what to expect, but I was blown away by the response! We had four hours packed with getting people introduced to Cilium, disucssing issues and development, and diving into service mesh. It was also great to see some faces I have only seen on slack so far.
 
 ![lots of people in a room](projectmeeting.jpeg)
 
