@@ -2,7 +2,7 @@
 path: '/blog/2022/11/04/cilium-kubecon-na-wrapup'
 date: '2022-11-04T17:00:00.000Z'
 title: 'Cilium at KubeCon NA 2022 Wrap Up'
-isPopular: false
+isPopular: true
 isFeatured: false
 ogImage: kubecon_stage.webp
 ogSummary: "Find out the buzz from around the community at KubeCon"
