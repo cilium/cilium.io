@@ -2,6 +2,7 @@
 path: '/blog/2022/10/27/cilium-applies-for-graduation'
 date: '2022-10-27T17:00:00.000Z'
 title: 'Cilium CNCF Graduation Application'
+isFeatured: true
 ogImage: ogimage.png
 ogSummary: 'Cilium applies to become a CNCF graduated project.'
 categories:
