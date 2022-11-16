@@ -350,7 +350,7 @@ export default {
     links: [
       {
         linkText: 'Watch video',
-        linkUrl: 'https://www.youtube.com/watch?v=NIsU4I950l4',
+        linkUrl: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
         linkTarget: '_blank',
       },
     ],
