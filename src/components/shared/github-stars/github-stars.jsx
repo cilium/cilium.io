@@ -7,9 +7,13 @@ import GithubLogo from 'icons/github.inline.svg';
 import Link from '../link';
 
 const GithubStars = ({ className }) => {
-  const data = useStaticQuery(graphql`
+  const {
+    githubStars: { githubStars },
+  } = useStaticQuery(graphql`
     query githubQuery {
-      githubStars
+      githubStars(id: { eq: "github-stars-cilium" }) {
+        githubStars
+      }
     }
   `);
 
@@ -28,7 +32,7 @@ const GithubStars = ({ className }) => {
           <span>GitHub Stars</span>
         </div>
         <div className="px-2 text-black xs:px-3">
-          <span>{`${(parseInt(data.githubStars.replace(/,/g, '')) / 1000).toFixed(1)}k`}</span>
+          <span>{`${(parseInt(githubStars.replace(/,/g, ''), 10) / 1000).toFixed(1)}k`}</span>
         </div>
       </Link>
     </div>
