@@ -186,11 +186,27 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) => {
   const hubspotEmails = await fetch(
-    `https://api.hubapi.com/marketing-emails/v1/emails?hapikey=${process.env.HUBSPOT_API_KEY}&limit=150&name__icontains=eCHO+news&orderBy=-publish_date`
+    `https://api.hubapi.com/marketing-emails/v1/emails?limit=150&name__icontains=eCHO+news&orderBy=-publish_date`,
+    {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${process.env.HUBSPOT_ACCESS_TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+    }
   );
   const hubspotEmailsData = await hubspotEmails.json();
+  const objects = hubspotEmailsData.objects.map(
+    ({ name, publishDate, isPublished, publishedUrl }) => ({
+      name,
+      publishDate,
+      isPublished,
+      publishedUrl,
+    })
+  );
+
   createNode({
-    objects: hubspotEmailsData.objects,
+    objects,
     id: `hubspot-email-data`,
     parent: null,
     children: [],
