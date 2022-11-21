@@ -184,26 +184,47 @@ exports.onCreateNode = ({ node, actions }) => {
   }
 };
 
-exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) => {
-  const hubspotEmails = await fetch(
-    `https://api.hubapi.com/marketing-emails/v1/emails?limit=150&name__icontains=eCHO+news&orderBy=-publish_date`,
-    {
-      method: 'GET',
-      headers: {
-        Authorization: `Bearer ${process.env.HUBSPOT_ACCESS_TOKEN}`,
-        'Content-Type': 'application/json',
-      },
+exports.sourceNodes = async ({ actions: { createNode }, createContentDigest, cache }) => {
+  const getObjects = async () => {
+    const hubspotCacheKey = 'hubspot-emails';
+    const cacheHubspotEmailsData = await cache.get(hubspotCacheKey);
+    if (cacheHubspotEmailsData && process.env.CONTEXT !== 'production') {
+      return cacheHubspotEmailsData;
     }
-  );
-  const hubspotEmailsData = await hubspotEmails.json();
-  const objects = hubspotEmailsData.objects.map(
-    ({ name, publishDate, isPublished, publishedUrl }) => ({
-      name,
-      publishDate,
-      isPublished,
-      publishedUrl,
-    })
-  );
+    const hubspotEmails = await fetch(
+      `https://api.hubapi.com/marketing-emails/v1/emails?limit=150&name__icontains=eCHO+news&orderBy=-publish_date`,
+      {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${process.env.HUBSPOT_ACCESS_TOKEN}`,
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+    const hubspotEmailsData = await hubspotEmails.json();
+    if (hubspotEmailsData?.objects) {
+      const objects = hubspotEmailsData.objects.map(
+        ({ name, publishDate, isPublished, publishedUrl }) => ({
+          name,
+          publishDate,
+          isPublished,
+          publishedUrl,
+        })
+      );
+      await cache.set(hubspotCacheKey, objects);
+      return objects;
+    }
+
+    // in case of HUBSPOT_ACCESS_TOKEN lack, return an stub array
+    return Array.from({ length: 3 }).map((_, i) => ({
+      name: `eCHO news ${i + 1}`,
+      publishDate: new Date(Date.now() - Math.floor(Math.random() * 10000000000)).toISOString(),
+      isPublished: true,
+      publishedUrl: '/',
+    }));
+  };
+
+  const objects = await getObjects();
 
   createNode({
     objects,
@@ -212,7 +233,7 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
     children: [],
     internal: {
       type: `HubspotEmails`,
-      contentDigest: createContentDigest(hubspotEmailsData),
+      contentDigest: createContentDigest(objects),
     },
   });
 };
