@@ -184,25 +184,21 @@ exports.onCreateNode = ({ node, actions }) => {
   }
 };
 
-exports.sourceNodes = async ({ actions: { createNode }, createContentDigest, cache }) => {
+exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) => {
   const getObjects = async () => {
-    const hubspotCacheKey = 'hubspot-emails';
-    const cacheHubspotEmailsData = await cache.get(hubspotCacheKey);
-    if (cacheHubspotEmailsData && process.env.CONTEXT !== 'production') {
-      return cacheHubspotEmailsData;
-    }
-    const hubspotEmails = await fetch(
-      `https://api.hubapi.com/marketing-emails/v1/emails?limit=150&name__icontains=eCHO+news&orderBy=-publish_date`,
-      {
-        method: 'GET',
-        headers: {
-          Authorization: `Bearer ${process.env.HUBSPOT_ACCESS_TOKEN}`,
-          'Content-Type': 'application/json',
-        },
-      }
-    );
-    const hubspotEmailsData = await hubspotEmails.json();
-    if (hubspotEmailsData?.objects) {
+    if (process.env.NODE_ENV === 'production' && process.env.HUBSPOT_ACCESS_TOKEN) {
+      const hubspotEmails = await fetch(
+        `https://api.hubapi.com/marketing-emails/v1/emails?limit=150&name__icontains=eCHO+news&orderBy=-publish_date`,
+        {
+          method: 'GET',
+          headers: {
+            Authorization: `Bearer ${process.env.HUBSPOT_ACCESS_TOKEN}`,
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+      const hubspotEmailsData = await hubspotEmails.json();
+
       const objects = hubspotEmailsData.objects.map(
         ({ name, publishDate, isPublished, publishedUrl }) => ({
           name,
@@ -211,7 +207,6 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest, cac
           publishedUrl,
         })
       );
-      await cache.set(hubspotCacheKey, objects);
       return objects;
     }
 
