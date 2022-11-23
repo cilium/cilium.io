@@ -47,7 +47,7 @@ const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
     content = (
       <div
         className={classNames(
-          'flex w-full items-center justify-center rounded-lg bg-gray-4',
+          'flex aspect-4/2 w-full items-center justify-center rounded-lg bg-gray-4',
           coverClassNames
         )}
       >
