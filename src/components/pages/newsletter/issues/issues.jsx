@@ -45,7 +45,7 @@ const Issues = () => {
 
   const newsletterData = getIssues();
 
-  return (
+  return Object.keys(newsletterData).length > 0 ? (
     <div className="bg-white py-10 md:py-20 lg:py-28" id="archive">
       <Container>
         {Object.entries(newsletterData).map(([year, issues], index) => (
@@ -76,7 +76,7 @@ const Issues = () => {
         ))}
       </Container>
     </div>
-  );
+  ) : null;
 };
 
 export default Issues;
