@@ -64,9 +64,6 @@ module.exports = {
         loader: "url('/images/loader.svg')",
         grid: "url('/images/grid.svg')",
       },
-      aspectRatio: {
-        '4/2': '4 / 2',
-      },
       typography: (theme) => ({
         DEFAULT: {
           css: {
