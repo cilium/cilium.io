@@ -199,15 +199,12 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
       );
       const hubspotEmailsData = await hubspotEmails.json();
 
-      const objects = hubspotEmailsData.objects.map(
-        ({ name, publishDate, isPublished, publishedUrl }) => ({
-          name,
-          publishDate,
-          isPublished,
-          publishedUrl,
-        })
-      );
-      return objects;
+      return hubspotEmailsData.objects.map(({ name, publishDate, isPublished, publishedUrl }) => ({
+        name,
+        publishDate,
+        isPublished,
+        publishedUrl,
+      }));
     }
 
     // in case of HUBSPOT_ACCESS_TOKEN lack, return an stub array
