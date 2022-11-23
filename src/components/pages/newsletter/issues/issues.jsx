@@ -16,21 +16,18 @@ const Issues = () => {
         objects {
           name
           publishDate
-          isPublished
           publishedUrl
         }
       }
     }
   `);
 
-  const items = data.hubspotEmails.objects.filter(
-    (item) => item.name.match(/^eCHO news \d{1,3}$/) && item.isPublished
-  );
+  const items = data.hubspotEmails.objects.filter((item) => item.name.match(/^eCHO news \d{1,3}$/));
 
   items.forEach((item) => {
-    item.year = getYear(item.publishDate);
+    item.year = getYear(Number(item.publishDate));
     item.title = `eCHO News Episode #${item.name.split(' ')[2]}`;
-    item.date = getMonthAndDay(item.publishDate);
+    item.date = getMonthAndDay(Number(item.publishDate));
   });
 
   const getIssues = () =>
