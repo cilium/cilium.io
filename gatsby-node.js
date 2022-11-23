@@ -186,7 +186,7 @@ exports.onCreateNode = ({ node, actions }) => {
 
 exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) => {
   const getObjects = async () => {
-    if (process.env.NODE_ENV === 'production' && process.env.HUBSPOT_ACCESS_TOKEN) {
+    if (process.env.HUBSPOT_ACCESS_TOKEN) {
       const hubspotEmails = await fetch(
         `https://api.hubapi.com/marketing-emails/v1/emails?limit=150&name__icontains=eCHO+news&orderBy=-publish_date`,
         {
@@ -211,7 +211,7 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
     return Array.from({ length: 3 }).map((_, i) => ({
       name: `eCHO news ${i + 1}`,
       publishDate: new Date(Date.now() - Math.floor(Math.random() * 10000000000)).toISOString(),
-      isPublished: true,
+      isPublished: false,
       publishedUrl: '/',
     }));
   };
