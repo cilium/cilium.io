@@ -5,7 +5,7 @@ import React from 'react';
 
 import Link from 'components/shared/link';
 import ExternalLinkIcon from 'icons/external-link.inline.svg';
-import useElementtRect from 'utils/use-element-rect';
+import useElementRect from 'utils/use-element-rect';
 
 import CiliumLogo from './images/cilium-logo.inline.svg';
 
@@ -23,7 +23,7 @@ const titleStyles = {
 };
 
 const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
-  const [rect, placeholder] = useElementtRect();
+  const [rect, placeholder] = useElementRect();
   const { width = 0 } = rect ?? {};
   const placeholderHeight = width / 2;
 

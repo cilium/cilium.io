@@ -1,6 +1,6 @@
 import { useLayoutEffect, useState } from 'react';
 
-const useElementtRect = () => {
+const useElementRect = () => {
   const [rect, setRect] = useState(null);
   const [current, setCurrent] = useState(null);
 
@@ -16,4 +16,4 @@ const useElementtRect = () => {
   return [rect, setCurrent];
 };
 
-export default useElementtRect;
+export default useElementRect;
