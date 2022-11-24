@@ -202,6 +202,7 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
         hubspotEmailsData = await hubspotEmails.json();
       } catch (error) {
         console.log(error);
+        return [];
       }
 
       return hubspotEmailsData.objects
