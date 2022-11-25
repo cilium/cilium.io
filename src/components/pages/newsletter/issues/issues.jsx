@@ -16,21 +16,18 @@ const Issues = () => {
         objects {
           name
           publishDate
-          isPublished
           publishedUrl
         }
       }
     }
   `);
 
-  const items = data.hubspotEmails.objects.filter(
-    (item) => item.name.match(/^eCHO news \d{1,3}$/) && item.isPublished
-  );
+  const items = data.hubspotEmails.objects.filter((item) => item.name.match(/^eCHO news \d{1,3}$/));
 
   items.forEach((item) => {
-    item.year = getYear(item.publishDate);
+    item.year = getYear(Number(item.publishDate));
     item.title = `eCHO News Episode #${item.name.split(' ')[2]}`;
-    item.date = getMonthAndDay(item.publishDate);
+    item.date = getMonthAndDay(Number(item.publishDate));
   });
 
   const getIssues = () =>
@@ -45,7 +42,7 @@ const Issues = () => {
 
   const newsletterData = getIssues();
 
-  return (
+  return Object.keys(newsletterData).length > 0 ? (
     <div className="bg-white py-10 md:py-20 lg:py-28" id="archive">
       <Container>
         {Object.entries(newsletterData).map(([year, issues], index) => (
@@ -76,7 +73,7 @@ const Issues = () => {
         ))}
       </Container>
     </div>
-  );
+  ) : null;
 };
 
 export default Issues;
