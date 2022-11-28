@@ -249,7 +249,9 @@ async function getGithubStars({ actions: { createNode }, createContentDigest, ca
       if (typeof stargazers_count !== 'number') {
         throw new Error('Failed to fetch GitHub stars');
       }
-      stars = new Intl.NumberFormat('en-US').format(stargazers_count);
+
+      // covert stars to string
+      stars = stargazers_count.toString();
 
       await cache.set(cacheKey, {
         stars,
