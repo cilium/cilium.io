@@ -11,7 +11,7 @@ const GithubStars = ({ className }) => {
     githubStars: { githubStars },
   } = useStaticQuery(graphql`
     query githubQuery {
-      githubStars(id: { eq: "github-stars-cilium" }) {
+      githubStars {
         githubStars
       }
     }
