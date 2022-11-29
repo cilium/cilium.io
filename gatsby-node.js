@@ -184,7 +184,7 @@ exports.onCreateNode = ({ node, actions }) => {
   }
 };
 
-exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) => {
+async function getHubspotEmails({ actions: { createNode }, createContentDigest }) {
   const getObjects = async () => {
     if (process.env.NODE_ENV === 'production' && process.env.HUBSPOT_ACCESS_TOKEN) {
       let hubspotEmailsData;
@@ -230,6 +230,54 @@ exports.sourceNodes = async ({ actions: { createNode }, createContentDigest }) =
       contentDigest: createContentDigest(objects),
     },
   });
+}
+
+async function getGithubStars({ actions: { createNode }, createContentDigest, cache }) {
+  let stars;
+  try {
+    // Set expiration time as 24 hours in milliseconds
+    const expirationTime = 24 * 60 * 60 * 1000;
+    const cacheKey = `stars-cilium`;
+    const cacheStarsData = await cache.get(cacheKey);
+    // Use cache if it is not expired
+    if (cacheStarsData && cacheStarsData.created > Date.now() - expirationTime) {
+      stars = cacheStarsData.stars;
+    } else {
+      const response = await fetch(`https://api.github.com/repos/cilium/cilium`);
+      const { stargazers_count } = await response.json();
+
+      if (typeof stargazers_count !== 'number') {
+        throw new Error('Failed to fetch GitHub stars');
+      }
+
+      // covert stars to string
+      stars = stargazers_count.toString();
+
+      await cache.set(cacheKey, {
+        stars,
+        created: Date.now(),
+      });
+    }
+  } catch (error) {
+    console.log(error);
+    throw new Error('Failed to fetch GitHub stars');
+  }
+
+  createNode({
+    id: `github-stars-cilium`,
+    parent: null,
+    githubStars: stars,
+    children: [],
+    internal: {
+      type: `GithubStars`,
+      contentDigest: createContentDigest(stars),
+    },
+  });
+}
+
+exports.sourceNodes = async (options) => {
+  await getHubspotEmails(options);
+  await getGithubStars(options);
 };
 
 exports.createSchemaCustomization = ({ actions }) => {
@@ -246,45 +294,4 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `;
   createTypes(typeDefs);
-};
-
-exports.createResolvers = ({ createResolvers, cache }) => {
-  createResolvers({
-    Query: {
-      githubStars: {
-        type: 'String',
-        resolve: async () => {
-          try {
-            let stars;
-            // Set expiration time as 24 hours in milliseconds
-            const expirationTime = 24 * 60 * 60 * 1000;
-            const cacheKey = `stars-cilium`;
-            const cacheStarsData = await cache.get(cacheKey);
-            // Use cache if it is not expired
-            if (cacheStarsData && cacheStarsData.created > Date.now() - expirationTime) {
-              stars = cacheStarsData.stars;
-            } else {
-              // Use setTimeout to avoid hitting GitHub API rate limit with a random delay with interval from 500ms to 1500ms
-              await new Promise((resolve) => setTimeout(resolve, Math.random() * 3000 + 500));
-              const response = await fetch('https://api.github.com/repos/cilium/cilium');
-              const { stargazers_count } = await response.json();
-              if (!stargazers_count) {
-                throw new Error('Failed to fetch GitHub stars');
-              }
-              stars = new Intl.NumberFormat('en-US').format(stargazers_count);
-              await cache.set(cacheKey, {
-                stars,
-                created: Date.now(),
-              });
-            }
-
-            return stars;
-          } catch (error) {
-            console.log(error);
-            throw new Error('Failed to fetch GitHub stars');
-          }
-        },
-      },
-    },
-  });
 };
