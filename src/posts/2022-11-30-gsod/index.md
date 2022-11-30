@@ -28,7 +28,7 @@ Improving the structure of the documentation will help new users adopt Cilium an
 
 ### **Creating the proposal**
 
-The Cilium team knew about Season of Docs from other CNCF projects that had participated in the past. We had some open PRs about restructuring the documentation, but nobody was finding the time to finish them. Two people from the Cilium team (Liz and Bill) volunteered to create a project proposal.
+The Cilium team knew about Season of Docs from other CNCF projects that had participated in the past. We had some open PRs about restructuring the documentation, but nobody was finding the time to finish them. Two people from the Cilium team (Liz and Bill) volunteered to create a project [proposal](https://docs.cilium.io/en/v1.12/contributing/development/season_of_docs/).
 
 Once the proposal was written, we shared it in the weekly developer meeting for feedback. People were really excited about finally having someone to look at the overall docs structure! We made a PR of the proposal in the docs and had it approved by the maintainers. Finally, we opened our Open Collective account to participate and receive payments.
 
