@@ -2,7 +2,7 @@
 path: '/blog/2022/11/30/cilium-google-season-of-docs-2022'
 date: '2022-11-30T17:00:00.000Z'
 title: 'Cilium Google Season of Docs Case Study'
-ogImage: ogimage.png
+ogImage: GSoD.png
 ogSummary: "Learn how Google Season of Docs went for Cilium"
 categories:
   - Community
