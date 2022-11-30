@@ -14,7 +14,7 @@ tags:
 
 *Authors: _Bill Mulligan_*
 
-Organization Description: Cilium (current version 1.11, first released in 2017) is an Apache 2.0-licensed project for providing, securing, and observing network connectivity between container workloads - cloud native, and built around the revolutionary Linux Kernel technology eBPF. Our users adopt Cilium to solve their cloud networking, observability, and security issues at scale including running some of the largest Kubernetes clusters in the world. Cilium has a large community of contributors from over 50 countries around the world. Multiple companies have staff paid to work on Cilium too. Cilium is an incubating project in the Cloud Native Computing Foundation and is the networking data plane for Google Kubernetes Engine and Anthos.
+Organization Description: Cilium (current version 1.12, first released in 2017) is an Apache 2.0-licensed project for providing, securing, and observing network connectivity between container workloads - cloud native, and built around the revolutionary Linux Kernel technology eBPF. Our users adopt Cilium to solve their cloud networking, observability, and security issues at scale including running some of the largest Kubernetes clusters in the world. Cilium has a large community of contributors from over 50 countries around the world. Multiple companies have staff paid to work on Cilium too. Cilium is an incubating project in the Cloud Native Computing Foundation and is the networking data plane for Google Kubernetes Engine and Anthos.
 
 ## **Problem Statement**
 
