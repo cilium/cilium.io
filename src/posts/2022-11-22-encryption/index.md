@@ -1,5 +1,5 @@
 ---
-date: '2022-T17:00:00.000Z'
+date: '2022-11-22T17:00:00.000Z'
 title: "Tutorial: Transparent Encryption with IPsec and WireGuard"
 ogImage: ogimage.png
 ogSummary: 'Learn how to enable each type of encryption, how it works, and the advantages it brings'
