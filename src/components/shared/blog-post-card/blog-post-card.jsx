@@ -5,6 +5,7 @@ import React from 'react';
 
 import Link from 'components/shared/link';
 import ExternalLinkIcon from 'icons/external-link.inline.svg';
+import useElementRect from 'utils/use-element-rect';
 
 import CiliumLogo from './images/cilium-logo.inline.svg';
 
@@ -22,6 +23,10 @@ const titleStyles = {
 };
 
 const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
+  const [rect, placeholder] = useElementRect();
+  const { width = 0 } = rect ?? {};
+  const placeholderHeight = width / 2;
+
   let content = null;
   if (ogImage) {
     content = (
@@ -50,6 +55,8 @@ const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
           'flex w-full items-center justify-center rounded-lg bg-gray-4',
           coverClassNames
         )}
+        ref={placeholder}
+        style={{ height: placeholderHeight }}
       >
         <CiliumLogo aria-label="Cilium logo" />
       </div>
