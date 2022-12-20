@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { motion } from 'framer-motion';
+import { LazyMotion, m, domAnimation } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -61,69 +61,71 @@ const SubscribeForm = ({ className }) => {
   };
 
   return (
-    <div className="relative min-h-[160px]">
-      <motion.form
-        className={classNames('relative mx-auto flex flex-col space-y-3 xs:space-y-0', className)}
-        animate={{
-          opacity: formState === 'success' ? 0 : 1,
-          transition: { duration: APPEAR_AND_EXIT_ANIMATION_DURATION },
-        }}
-        method="POST"
-        noValidate
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <input
-          className={classNames(
-            'remove-autocomplete-styles w-full appearance-none rounded border py-3 pl-6 pr-6 leading-normal shadow-input transition-colors duration-200 xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44',
-            'outline-none hover:border-gray-2 focus:border-primary-1',
-            (errors?.email?.message || errorMessage) &&
-              'border-additional-1 hover:border-additional-1 focus:border-additional-1'
-          )}
-          type="email"
-          name="email"
-          placeholder="Email address..."
-          {...register('email', {
-            required: 'Email address is required field',
-            pattern: {
-              value: emailRegexp,
-              message: 'Please enter a valid email address',
-            },
-          })}
-        />
-        <ErrorMessage serverError={errorMessage} error={errors?.email?.message} />
-        <Button
-          className="right-3 top-1/2 h-12 items-center !text-lg xs:absolute xs:h-auto xs:-translate-y-1/2 lg:px-7"
-          theme="primary-1"
-          type="submit"
-          loading={isLoading}
-        >
-          Subscribe
-        </Button>
-      </motion.form>
-      {formState === 'success' && (
-        <motion.div
-          className="absolute inset-0 flex flex-col items-center justify-center"
-          initial={{ opacity: 0 }}
+    <LazyMotion features={domAnimation}>
+      <div className="relative min-h-[160px]">
+        <m.form
+          className={classNames('relative mx-auto flex flex-col space-y-3 xs:space-y-0', className)}
           animate={{
-            opacity: 1,
-            transition: { delay: APPEAR_AND_EXIT_ANIMATION_DURATION },
+            opacity: formState === 'success' ? 0 : 1,
+            transition: { duration: APPEAR_AND_EXIT_ANIMATION_DURATION },
           }}
+          method="POST"
+          noValidate
+          onSubmit={handleSubmit(onSubmit)}
         >
-          <div className="flex flex-col items-center justify-center space-y-3 xs:flex-row xs:space-y-0 xs:space-x-2.5">
-            <ActiveIcon className="h-9 w-9 shrink-0" />
-            <span className="text-xl font-bold leading-none xs:text-2xl">
-              Thanks for subscribing!
-            </span>
-          </div>
-          <span className="mt-3.5 max-w-[280px] text-base leading-normal xs:max-w-none">
-            Explore previous releases of eCHO News right now
-          </span>
-          <Button className="mt-5 lg:text-base" theme="primary-1" size="md" to="#archive">
-            Explore Archive
+          <input
+            className={classNames(
+              'remove-autocomplete-styles w-full appearance-none rounded border py-3 pl-6 pr-6 leading-normal shadow-input transition-colors duration-200 xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44',
+              'outline-none hover:border-gray-2 focus:border-primary-1',
+              (errors?.email?.message || errorMessage) &&
+                'border-additional-1 hover:border-additional-1 focus:border-additional-1'
+            )}
+            type="email"
+            name="email"
+            placeholder="Email address..."
+            {...register('email', {
+              required: 'Email address is required field',
+              pattern: {
+                value: emailRegexp,
+                message: 'Please enter a valid email address',
+              },
+            })}
+          />
+          <ErrorMessage serverError={errorMessage} error={errors?.email?.message} />
+          <Button
+            className="right-3 top-1/2 h-12 items-center !text-lg xs:absolute xs:h-auto xs:-translate-y-1/2 lg:px-7"
+            theme="primary-1"
+            type="submit"
+            loading={isLoading}
+          >
+            Subscribe
           </Button>
-        </motion.div>
-      )}
-    </div>
+        </m.form>
+        {formState === 'success' && (
+          <m.div
+            className="absolute inset-0 flex flex-col items-center justify-center"
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: { delay: APPEAR_AND_EXIT_ANIMATION_DURATION },
+            }}
+          >
+            <div className="flex flex-col items-center justify-center space-y-3 xs:flex-row xs:space-y-0 xs:space-x-2.5">
+              <ActiveIcon className="h-9 w-9 shrink-0" />
+              <span className="text-xl font-bold leading-none xs:text-2xl">
+                Thanks for subscribing!
+              </span>
+            </div>
+            <span className="mt-3.5 max-w-[280px] text-base leading-normal xs:max-w-none">
+              Explore previous releases of eCHO News right now
+            </span>
+            <Button className="mt-5 lg:text-base" theme="primary-1" size="md" to="#archive">
+              Explore Archive
+            </Button>
+          </m.div>
+        )}
+      </div>
+    </LazyMotion>
   );
 };
 
