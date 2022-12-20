@@ -12,11 +12,11 @@
     font-family: 'Inter Fallback';
     font-style: normal;
     font-weight: 700;
-    src: local('Arial');
-    ascent-override: 97.98%;
-    descent-override: 38.39%;
+    src: local('Arial Bold');
+    ascent-override: 106%;
+    descent-override: 41.54%;
     line-gap-override: 0%;
-    size-adjust: 111.53%;
+    size-adjust: 103.09%;
   }
 
   @font-face {
@@ -32,11 +32,11 @@
     font-family: 'Inter Fallback';
     font-style: normal;
     font-weight: 600;
-    src: local('Arial');
-    ascent-override: 98.9%;
-    descent-override: 38.09%;
+    src: local('Arial Bold');
+    ascent-override: 107%;
+    descent-override: 41.21%;
     line-gap-override: 0%;
-    size-adjust: 110.24%;
+    size-adjust: 101.9%;
   }
 
   @font-face {
