@@ -47,7 +47,7 @@ const Cards = () => {
     {
       title: 'Interested in submitting <br> an article?',
       description:
-        'Send it to the slack, submit form <br> or email <a href="mailto:bill@isovalent.com">bill@isovalent.com</a>',
+        'Send it on Slack, submit the form, <br> or email <a href="mailto:bill@cilium.io">bill@cilium.io</a>',
       links: [
         {
           title: 'Send on Slack',
