@@ -276,7 +276,12 @@ export default {
     text: 'Home furnishings retailer uses Cilium for their self-hosted bare-metal private cloud',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Blog',
+        linkUrl: 'https://cilium.io/blog/2023/01/05/retail-user-story/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video',
         linkUrl: 'https://www.youtube.com/watch?v=sg-F_R-ZVNc',
         linkTarget: '_blank',
       },
