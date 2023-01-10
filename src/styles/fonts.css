@@ -2,36 +2,80 @@
   @font-face {
     font-family: 'Inter';
     font-style: normal;
-    font-weight: bold;
+    font-weight: 700;
+    font-display: swap;
     src: url('/fonts/inter-bold.woff2') format('woff2'),
       url('/fonts/inter-bold.woff') format('woff');
-    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: 'Inter Fallback';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Arial Bold');
+    ascent-override: 106%;
+    descent-override: 41.54%;
+    line-gap-override: 0%;
+    size-adjust: 103.09%;
   }
 
   @font-face {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
+    font-display: swap;
     src: url('/fonts/inter-semibold.woff2') format('woff2'),
       url('/fonts/inter-semibold.woff') format('woff');
-    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: 'Inter Fallback';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Arial Bold');
+    ascent-override: 107%;
+    descent-override: 41.21%;
+    line-gap-override: 0%;
+    size-adjust: 101.9%;
   }
 
   @font-face {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
+    font-display: swap;
     src: url('/fonts/inter-medium.woff2') format('woff2'),
       url('/fonts/inter-medium.woff') format('woff');
-    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: 'Inter Fallback';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Arial');
+    ascent-override: 100.06%;
+    descent-override: 37.82%;
+    line-gap-override: 0%;
+    size-adjust: 108.97%;
   }
 
   @font-face {
     font-family: 'Inter';
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
+    font-display: swap;
     src: url('/fonts/inter-regular.woff2') format('woff2'),
       url('/fonts/inter-regular.woff') format('woff');
-    font-display: fallback;
+  }
+
+  @font-face {
+    font-family: 'Inter Fallback';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Arial');
+    ascent-override: 101.24%;
+    descent-override: 37.54%;
+    line-gap-override: 0%;
+    size-adjust: 107.7%;
   }
 }
