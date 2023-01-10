@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React from 'react';
 
@@ -12,7 +12,7 @@ const submenuVariants = {
 };
 
 const Submenu = ({ isOpen, childItems }) => (
-  <motion.ul
+  <m.ul
     className="space-y-[18px] overflow-hidden"
     initial="hidden"
     animate={isOpen ? 'visible' : 'hidden'}
@@ -32,7 +32,7 @@ const Submenu = ({ isOpen, childItems }) => (
         </Link>
       </li>
     ))}
-  </motion.ul>
+  </m.ul>
 );
 
 Submenu.propTypes = {

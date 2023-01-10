@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { motion } from 'framer-motion';
+import { m, LazyMotion, domAnimation } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
@@ -36,16 +36,17 @@ const Item = ({ question, answer, faqId, isDefaultOpen }) => {
           <p>{question}</p>
         </button>
       </dt>
-
-      <motion.dd
-        className="prose max-w-none overflow-hidden pl-[38px] leading-relaxed prose-hr:my-5 sm:prose-lg sm:pl-14 sm:prose-hr:my-5 lg:leading-relaxed"
-        id={faqId}
-        initial="hidden"
-        animate={isOpen ? 'visible' : 'hidden'}
-        variants={variantsAnimation}
-        transition={{ duration: ANIMATION_DURATION }}
-        dangerouslySetInnerHTML={{ __html: answer }}
-      />
+      <LazyMotion features={domAnimation}>
+        <m.dd
+          className="prose max-w-none overflow-hidden pl-[38px] leading-relaxed prose-hr:my-5 sm:prose-lg sm:pl-14 sm:prose-hr:my-5 lg:leading-relaxed"
+          id={faqId}
+          initial="hidden"
+          animate={isOpen ? 'visible' : 'hidden'}
+          variants={variantsAnimation}
+          transition={{ duration: ANIMATION_DURATION }}
+          dangerouslySetInnerHTML={{ __html: answer }}
+        />
+      </LazyMotion>
     </div>
   );
 };

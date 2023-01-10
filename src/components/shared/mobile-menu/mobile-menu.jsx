@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { motion, useAnimation } from 'framer-motion';
+import { m, LazyMotion, domAnimation, useAnimation } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
@@ -54,9 +54,9 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage }) => {
   }, [isOpen, controls]);
 
   return (
-    <>
+    <LazyMotion features={domAnimation}>
       {isOpen && (
-        <motion.div
+        <m.div
           className="fixed inset-x-0 bottom-0 top-60 bg-black bg-opacity-50"
           initial="from"
           animate={controls}
@@ -67,7 +67,7 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage }) => {
         />
       )}
 
-      <motion.nav
+      <m.nav
         className={classNames(
           'safe-paddings py-safe absolute inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 bg-white shadow-lg xl:hidden',
           isBlogPage
@@ -103,8 +103,8 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage }) => {
             <span className="ml-1.5 block">Join Slack</span>
           </Button>
         </div>
-      </motion.nav>
-    </>
+      </m.nav>
+    </LazyMotion>
   );
 };
 
