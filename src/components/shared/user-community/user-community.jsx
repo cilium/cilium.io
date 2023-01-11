@@ -188,16 +188,19 @@ const UserCommunity = ({
   buttonText,
   buttonUrl,
   buttonTarget,
+  id,
 }) => (
-  <section className={classNames(className, themeClassNames[theme].wrapper)}>
+  <section className={classNames(className, themeClassNames[theme].wrapper)} id={id}>
     <Container className="flex flex-col">
       {title && (
-        <Heading
-          className={classNames(isTitleCentered && 'mb-6 text-center md:mb-10 lg:mb-16')}
-          tag="h3"
+        <Link
+          className={classNames(
+            isTitleCentered && 'mb-6 self-center text-center md:mb-10 lg:mb-16'
+          )}
+          to={`#${id}`}
         >
-          {title}
-        </Heading>
+          <Heading tag="h3">{title}</Heading>
+        </Link>
       )}
       <div
         className={classNames(
@@ -276,6 +279,7 @@ UserCommunity.propTypes = {
   buttonText: PropTypes.string,
   buttonUrl: PropTypes.string,
   buttonTarget: PropTypes.string,
+  id: PropTypes.string,
 };
 
 UserCommunity.defaultProps = {
@@ -286,6 +290,7 @@ UserCommunity.defaultProps = {
   buttonText: null,
   buttonUrl: null,
   buttonTarget: null,
+  id: null,
 };
 
 export default UserCommunity;
