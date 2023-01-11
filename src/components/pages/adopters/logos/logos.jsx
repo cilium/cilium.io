@@ -4,6 +4,7 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import Link from 'components/shared/link';
 
 import AlibabaCloudLogo from './images/alibaba-cloud.inline.svg';
 import AmazonEKSlogo from './images/amazon-eks.inline.svg';
@@ -78,12 +79,12 @@ const spaceXClassNames = {
   md: 'mx-4 md:mx-6 lg:mx-8',
 };
 
-const Logos = ({ title, items, spaceXSize }) => (
-  <section className="mt-10 md:mt-20 lg:mt-28 xl:mt-32">
+const Logos = ({ title, items, spaceXSize, id }) => (
+  <section className="pt-10 md:pt-20 lg:pt-28 xl:pt-32" id={id}>
     <Container size="md">
-      <Heading className="text-center" tag="h2">
-        {title}
-      </Heading>
+      <Link className="text-center" to={`#${id}`}>
+        <Heading tag="h2">{title}</Heading>
+      </Link>
       <div className="mx-0 mt-4 flex flex-wrap justify-center md:mt-6 lg:mx-[-26px] lg:mt-8">
         {items.map((logo, index) => {
           const Logo = logos[logo];
@@ -103,9 +104,14 @@ const Logos = ({ title, items, spaceXSize }) => (
 );
 
 Logos.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
   spaceXSize: PropTypes.oneOf(Object.keys(spaceXClassNames)).isRequired,
+};
+
+Logos.defaultProps = {
+  id: null,
 };
 
 export default Logos;
