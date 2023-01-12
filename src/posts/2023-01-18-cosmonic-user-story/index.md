@@ -12,7 +12,6 @@ tags:
   - Cilium
 ---
 
-![Cilium User Story: Running Cilium on Nomad for Wasm Workloads - That was the killer feature. I’ve run service meshes before. Its great but that’s yet another system to manage. [With Cilium], you can just toggle that flag and you’re done.](User_Story_Cosmonic.png)
 
 *January 11th, 2023*  
 *Author: Bill Mulligan, Isovalent*
