@@ -45,6 +45,7 @@ Running a hosted service for microservices also meant that the team needed a goo
 
 Initially, integrating Cilium with Nomad was challenging as Cilium is, unsurprisingly given Kubernetes’ omnipresence, better integrated with Kubernetes. Dan and the team at Cosmonic wrote a custom operator, integrated with Cilium and capable of working with Nomad - they are looking at open sourcing it in the future.
 
+![Cosmonic dashboard screenshot](paas.png)
 **Securing the Network and Platform with Cilium**
 
 On Cosmonic, once a [host](https://cosmonic.com/docs/faq/glossary#host) is launched, a Nomad job is created and Cilium is used to provide network policy and traffic encryption. “Cilium felt like a no-brainer” Dan explains, “especially, with regards to network policy support. We used to allow Internet egress access but needed to prevent internal access or multi-tenancy communications. We want to run thousands of customer workloads so we needed to aggressively multi-tenant from the beginning.”
