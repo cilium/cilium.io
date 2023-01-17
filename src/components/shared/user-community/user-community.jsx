@@ -41,6 +41,7 @@ import ElasticPathLogo from './images/elasticpath.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
+import FRSCALogo from './images/frsca.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
 import ImmerokLogo from './images/immerok.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
@@ -67,6 +68,7 @@ import PlaidLogo from './images/plaid.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
 import RadioFranceLogo from './images/radiofrance.inline.svg';
+import RafayLogo from './images/rafay.inline.svg';
 import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
 import SapLogo from './images/sap.inline.svg';
 import SapianLogo from './images/sapian.inline.svg';
@@ -120,6 +122,8 @@ const icons = {
   seznam: SeznamCZLogo,
   wildLife: WildLifeLogo,
   bell: BellLogo,
+  rafay: RafayLogo,
+  frsca: FRSCALogo,
   kubeOvn: KubeOvnLogo,
   sky: SkyLogo,
   skybet: SkybetLogo,

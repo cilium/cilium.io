@@ -426,6 +426,10 @@ export default {
     iconName: 'finleap',
     text: '<b>finleap connect</b> uses Cilium on a bare metal private cloud',
   },
+  frsca: {
+    iconName: 'frsca',
+    text: '<b>FRSCA</b> uses Tetragon to create runtime attestation to attest artifact and builder attribute',
+  },
   innoq: {
     iconName: 'innoq',
     text: '<b>innoQ</b> uses Cilium to run their customer’s infrastructure',
@@ -489,6 +493,10 @@ export default {
   radioFrance: {
     iconName: 'radioFrance',
     text: '<b>Radio France</b> uses Cilium in their self hosted clusters on AWS',
+  },
+  rafay: {
+    iconName: 'rafay',
+    text: `<b>Rafay's</b> Kubernetes Operations Platform uses Cilium for centralized network visibility and network policy enforcement`,
   },
   rapyutaRobotics: {
     iconName: 'rapyutaRobotics',

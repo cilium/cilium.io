@@ -88,6 +88,8 @@ const {
   isovalent,
   schubergPhilis,
   spherity,
+  frsca,
+  rafay,
 } = caseStudiesData;
 
 const hero = {
@@ -139,6 +141,8 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    frsca,
+    rafay,
     innoq,
     f5,
     sproutfi,
@@ -241,6 +245,7 @@ const logos2 = {
     'kubeone',
     'kubespray',
     'deckhouse',
+    'kubelift',
   ],
   spaceXSize: 'sm',
 };
