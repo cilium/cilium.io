@@ -29,6 +29,7 @@ import KindLogo from './images/kind.inline.svg';
 import KopsLogo from './images/kops.inline.svg';
 import KubeaszLogo from './images/kubeasz.inline.svg';
 import KubekeyLogo from './images/kubekey.inline.svg';
+import KubeliftLogo from './images/kubelift.inline.svg';
 import KubeoneLogo from './images/kubeone.inline.svg';
 import KubesprayLogo from './images/kuberspray.inline.svg';
 import NineLogo from './images/nine.inline.svg';
@@ -54,6 +55,7 @@ const logos = {
   digitalOcean: DigitalOceanLogo,
   openStack: OpenStackLogo,
   kind: KindLogo,
+  kubelift: KubeliftLogo,
   kubespray: KubesprayLogo,
   kops: KopsLogo,
   amazonEks: AmazonEKSlogo,
