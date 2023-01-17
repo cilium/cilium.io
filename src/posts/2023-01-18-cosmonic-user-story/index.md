@@ -4,7 +4,7 @@ date: '2023-01-18T17:00:00.000Z'
 title: 'Cosmonic User Story: Running Cilium on Nomad for Wasm Workloads'
 isPopular: true
 isFeatured: false
-ogImage: User_Story_Cosmonic.png
+ogImage: User_Story_Cosmonic.jpg
 ogSummary: "Learn why Cosmonic chose Cilium for the network layer of their Wasm PaaS"
 categories:
   - Community
