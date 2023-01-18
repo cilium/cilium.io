@@ -103,12 +103,25 @@ Total: 64088.5 RPS
 P99 latency: 0.0511 - 0.0734 s
 
 It is worth noticing that we had some HTTP timeouts in this test.
+Layer 4 Load Balancer
 
+![Grafana dashboard showing 60% cpu](rps-config01-cilium-l4lb-01-cpu.jpg)
+
+Cilium Worker
+
+![Grafana dashboard showing 22% cpu](rps-config01-cilium-worker-01-cpu.jpg)
 
 ##### **Throughput:**
 
 Total: 12.93 Gbits/sec
 
+Layer 4 Load Balancer
+
+![Grafana dashboard showing 22% cpu](iperf-config01-cilium-14lb-01-cpu.jpg)
+
+Cilium Worker
+
+![Grafana dashboard showing 5% cpu](iperf-config01-cilium-worker-01-cpu.jpg)
 
 ## Test 2
 
@@ -121,11 +134,27 @@ Total: 77367.8 RPS
 
 P99 latency: 0.0522 - 0.0820 s
 
+Layer 4 Load Balancer
+
+Layer 4 Load Balancer
+
+![Grafana dashboard](rps-config02-cilium-l4lb-01-cpu.jpg)
+
+Cilium Worker
+
+![Grafana dashboard showing](rps-config02-cilium-worker-01-cpu.jpg)
 
 ##### **Throughput:**
 
 Total: 13.18 Gbits/sec
 
+Layer 4 Load Balancer
+
+![Grafana dashboard showing 22% cpu](iperf-config02-cilium-14lb-01-cpu.jpg)
+
+Cilium Worker
+
+![Grafana dashboard showing 5% cpu](iperf-config02-cilium-worker-01-cpu.jpg)
 
 ## Test 3
 
@@ -138,11 +167,24 @@ Total: 85672.3 RPS
 
 P99 latency: 0.0328 - 0.0428 s
 
+Layer 4 Load Balancer
+
+![Grafana dashboard](rps-config03-cilium-l4lb-01-cpu.jpg)
+
+Cilium Worker
+
+![Grafana dashboard](rps-config03-cilium-worker-01-cpu.jpg)
 
 ##### **Throughput:**
 
 Total: 16.89 Gbits/sec
 
+Layer 4 Load Balancer
+
+![Grafana dashboard](iperf-config03-cilium-14lb-01-cpu.jpg)
+
+Cilium Worker
+![Grafana dashboard](iperf-config03-cilium-worker-01-cpu.jpg)
 
 ## Test 4A
 
@@ -156,10 +198,25 @@ Total: 131689.3 RPS
 P99 latency: 0.0262 - 0.0266 s
 
 
+Layer 4 Load Balancer
+
+![Grafana dashboard](rps-config04-A-cilium-l4lb-01-cpu.jpg)
+
+Cilium Worker
+
+![Grafana dashboard](rps-config04-A-cilium-worker-01-cpu.jpg)
+
 ##### **Throughput:**
 
 Total: 18.81 Gbits/sec
 
+Layer 4 Load Balancer
+
+![Grafana dashboard](iperf-config04-A-cilium-14lb-01-cpu.jpg)
+
+Cilium Worker
+
+![Grafana dashboard](iperf-config04-A-cilium-worker-01-cpu.jpg)
 
 ## Test 4B
 
@@ -171,10 +228,26 @@ Total: 131294.4 RPS
 
 P99 latency: 0.0279 - 0.0275 s
 
+
+Layer 4 Load Balancer
+
+![Grafana dashboard](rps-config04-B-cilium-l4lb-01-cpu.jpg)
+
+Cilium Worker
+
+![Grafana dashboard](rps-config04-B-cilium-worker-01-cpu.jpg)
+
 ##### **Throughput:**
 
 Total: 18.8 Gbits/sec
 
+Layer 4 Load Balancer
+
+![Grafana dashboard](iperf-config04-B-cilium-14lb-01-cpu.jpg)
+
+Cilium Worker
+
+![Grafana dashboard](iperf-config04-B-cilium-worker-01-cpu.jpg)
 
 ## **Results**
 
