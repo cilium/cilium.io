@@ -150,7 +150,7 @@ Total: 13.18 Gbits/sec
 
 Layer 4 Load Balancer
 
-![Grafana dashboard showing 22% cpu](iperf-config02-cilium-14lb-01-cpu.jpg)
+![Grafana dashboard showing 22% cpu](iperf-config02-cilium-l4lb-01-cpu.jpg)
 
 Cilium Worker
 
@@ -181,7 +181,7 @@ Total: 16.89 Gbits/sec
 
 Layer 4 Load Balancer
 
-![Grafana dashboard](iperf-config03-cilium-14lb-01-cpu.jpg)
+![Grafana dashboard](iperf-config03-cilium-l4lb-01-cpu.jpg)
 
 Cilium Worker
 ![Grafana dashboard](iperf-config03-cilium-worker-01-cpu.jpg)
@@ -212,7 +212,7 @@ Total: 18.81 Gbits/sec
 
 Layer 4 Load Balancer
 
-![Grafana dashboard](iperf-config04-A-cilium-14lb-01-cpu.jpg)
+![Grafana dashboard](iperf-config04-A-cilium-l4lb-01-cpu.jpg)
 
 Cilium Worker
 
@@ -243,7 +243,7 @@ Total: 18.8 Gbits/sec
 
 Layer 4 Load Balancer
 
-![Grafana dashboard](iperf-config04-B-cilium-14lb-01-cpu.jpg)
+![Grafana dashboard](iperf-config04-B-cilium-l4lb-01-cpu.jpg)
 
 Cilium Worker
 
