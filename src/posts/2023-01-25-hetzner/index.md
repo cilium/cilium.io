@@ -61,7 +61,7 @@ Target systems (Kubernetes cluster):
 
 All systems had 10G NICs.
 
-####### image ########
+![Architectural overview](architecture.png)
 
 The benchmark systems had the following tuning configuration:
 
