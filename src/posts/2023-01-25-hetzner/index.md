@@ -5,7 +5,7 @@ title: 'Performance Testing Cilium Ingress at Hetzner Cloud'
 ogImage: architecture.png
 isPopular: true
 isFeatured: false
-ogSummary: ""
+ogSummary: "Learn why Hetzner chose Cilium and the performance improvements they saw by switching"
 categories:
   - Community
 tags:
