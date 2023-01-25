@@ -2,10 +2,9 @@
 path: '/blog/2023/01/25/hetzner-performance-testing'
 date: '2023-01-25T17:00:00.000Z'
 title: 'Performance Testing Cilium Ingress at Hetzner Cloud'
-ogimage: architecture.png
+ogImage: architecture.png
 isPopular: true
 isFeatured: false
-ogImage: 
 ogSummary: ""
 categories:
   - Community
