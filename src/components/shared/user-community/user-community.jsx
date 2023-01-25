@@ -12,6 +12,7 @@ import AdobeLogo from 'icons/logo-adobe.inline.svg';
 import AlibabaCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
 import AWSLogo from 'icons/logo-aws.inline.svg';
 import CengnLogo from 'icons/logo-cengn.inline.svg';
+import CosmonicLogo from 'icons/logo-cosmonic.inline.svg';
 import DigitalOceanLogo from 'icons/logo-digital-ocean.inline.svg';
 import GitlabLogo from 'icons/logo-gitlab.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
@@ -130,6 +131,7 @@ const icons = {
   planetscale: PlanetscaleLogo,
   homeRetailer: Placeholder,
   datadog: DatadogLogo,
+  cosmonic: CosmonicLogo,
   canonical: CanonicalLogo,
   civo: CivoLogo,
   form3: Form3Logo,

@@ -314,6 +314,17 @@ export default {
       },
     ],
   },
+  cosmonic: {
+    iconName: 'cosmonic',
+    text: "Cilium is the CNI for Cosmonic's Nomad based PaaS",
+    links: [
+      {
+        linkText: 'Read User Story',
+        linkUrl: 'https://cilium.io/blog/2023/01/18/cosmonic-user-story/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   meltwater: {
     iconName: 'meltwater',
     text: 'Meltwater is using Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
