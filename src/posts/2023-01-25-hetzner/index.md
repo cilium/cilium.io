@@ -125,7 +125,7 @@ Cilium Worker
 
 ## Test 2
 
-In this test we have deployed Cilium without kube-proxy replacement, VXLAN encapsulation, or Cilium native BGP and Maglev. Exact parameters and test outputs can be found [here](https://github.com/hetznercloud/cilium-tests#test-2).
+In this test we have deployed Cilium with kube-proxy replacement, VXLAN encapsulation, or Cilium native BGP and Maglev. Exact parameters and test outputs can be found [here](https://github.com/hetznercloud/cilium-tests#test-2).
 
 
 ##### **RPS:**
@@ -133,8 +133,6 @@ In this test we have deployed Cilium without kube-proxy replacement, VXLAN encap
 Total: 77367.8 RPS
 
 P99 latency: 0.0522 - 0.0820 s
-
-Layer 4 Load Balancer
 
 Layer 4 Load Balancer
 
