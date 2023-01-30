@@ -44,6 +44,7 @@ import FinleapLogo from './images/finleap.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
+import HetznerLogo from './images/hetzner.inline.svg';
 import ImmerokLogo from './images/immerok.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
 import InnoqLogo from './images/innoq.inline.svg';
@@ -172,6 +173,7 @@ const icons = {
   sapian: SapianLogo,
   ungleich: UngleichLogo,
   vshn: VshnLogo,
+  hetzner: HetznerLogo,
 };
 
 const themeClassNames = {

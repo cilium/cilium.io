@@ -91,6 +91,7 @@ const {
   spherity,
   frsca,
   rafay,
+  hetzner,
 } = caseStudiesData;
 
 const hero = {
@@ -121,6 +122,7 @@ const userCommunity1 = {
     cengn,
     digitalOcean,
     google,
+    hetzner,
     bell,
     gitlab,
     uswitch,
