@@ -239,8 +239,7 @@ export default {
     links: [
       {
         linkText: 'Read Blog',
-        linkUrl: 'blog/2023/01/25/hetzner-performance-testing/',
-        linkTarget: '_blank',
+        linkUrl: '/blog/2023/01/25/hetzner-performance-testing/',
       },
     ],
   },
