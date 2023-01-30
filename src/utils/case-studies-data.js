@@ -233,6 +233,17 @@ export default {
       },
     ],
   },
+  hetzner: {
+    iconName: 'hetzner',
+    text: 'Hetzner uses Cilium for Ingress and as a CNI for Hetzner Cloud',
+    links: [
+      {
+        linkText: 'read Blog',
+        linkUrl: 'https://cilium.io/blog/2023/01/25/hetzner-performance-testing/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   bell: {
     iconName: 'bell',
     text: 'Bell uses Cilium and eBPF for telco networking',
