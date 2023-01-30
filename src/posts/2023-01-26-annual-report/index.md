@@ -1,5 +1,5 @@
 ---
-date: '2023-T17:00:00.000Z'
+date: '2023-01-26T17:00:00.000Z'
 title: "Announcing the Cilium annual report"
 ogImage: ogimage.jpeg
 isFeatured: true
