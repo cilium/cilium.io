@@ -299,11 +299,16 @@ export default {
   },
   sky: {
     iconName: 'sky',
-    text: 'eBPF & Cilium at Sky',
+    text: 'Sky uses Cilium as their CNI and for network security',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Video 1',
         linkUrl: 'https://www.youtube.com/watch?v=u-4naOMfs_w',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video 2',
+        linkUrl: 'https://www.youtube.com/watch?v=1LXKafeuTPo',
         linkTarget: '_blank',
       },
     ],
