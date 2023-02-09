@@ -1,5 +1,5 @@
 ---
-date: '2023-02/06T17:00:00.000Z'
+date: '2023-02-06T17:00:00.000Z'
 title: "Cilium Registers Massive Growth In Contribution And Adoption In 2022"
 ogImage: ogimage.webp
 ogSummary: 'TFIR covers the Cilium Annual Report'
