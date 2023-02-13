@@ -24,7 +24,7 @@ const MenuItem = ({ name, href, target, childItems }) => {
             {childItems.map(({ name, href, target, icon: Icon }) => (
               <li className="flex" key={name}>
                 <Link
-                  className="inline-flex items-center space-x-2.5 font-medium leading-none hover:text-primary-1"
+                  className="inline-flex items-center space-x-2.5 font-medium leading-none transition-colors duration-200 hover:text-primary-1"
                   to={href}
                   target={target || null}
                   rel={target ? 'noopener noreferrer' : null}
