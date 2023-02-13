@@ -233,6 +233,16 @@ export default {
       },
     ],
   },
+  hetzner: {
+    iconName: 'hetzner',
+    text: 'Hetzner uses Cilium for Ingress and as a CNI for Hetzner Cloud',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: '/blog/2023/01/25/hetzner-performance-testing/',
+      },
+    ],
+  },
   bell: {
     iconName: 'bell',
     text: 'Bell uses Cilium and eBPF for telco networking',
@@ -289,11 +299,16 @@ export default {
   },
   sky: {
     iconName: 'sky',
-    text: 'eBPF & Cilium at Sky',
+    text: 'Sky uses Cilium as their CNI and for network security',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Video 1',
         linkUrl: 'https://www.youtube.com/watch?v=u-4naOMfs_w',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video 2',
+        linkUrl: 'https://www.youtube.com/watch?v=1LXKafeuTPo',
         linkTarget: '_blank',
       },
     ],
@@ -310,6 +325,17 @@ export default {
       {
         linkText: 'User story',
         linkUrl: 'https://www.cncf.io/case-studies/datadog/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  cosmonic: {
+    iconName: 'cosmonic',
+    text: "Cilium is the CNI for Cosmonic's Nomad based PaaS",
+    links: [
+      {
+        linkText: 'Read User Story',
+        linkUrl: 'https://cilium.io/blog/2023/01/18/cosmonic-user-story/',
         linkTarget: '_blank',
       },
     ],
@@ -426,6 +452,10 @@ export default {
     iconName: 'finleap',
     text: '<b>finleap connect</b> uses Cilium on a bare metal private cloud',
   },
+  frsca: {
+    iconName: 'frsca',
+    text: '<b>FRSCA</b> uses Tetragon to create runtime attestation to attest artifact and builder attribute',
+  },
   innoq: {
     iconName: 'innoq',
     text: '<b>innoQ</b> uses Cilium to run their customer’s infrastructure',
@@ -489,6 +519,10 @@ export default {
   radioFrance: {
     iconName: 'radioFrance',
     text: '<b>Radio France</b> uses Cilium in their self hosted clusters on AWS',
+  },
+  rafay: {
+    iconName: 'rafay',
+    text: `<b>Rafay's</b> Kubernetes Operations Platform uses Cilium for centralized network visibility and network policy enforcement`,
   },
   rapyutaRobotics: {
     iconName: 'rapyutaRobotics',

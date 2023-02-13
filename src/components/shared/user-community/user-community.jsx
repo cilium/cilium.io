@@ -12,6 +12,7 @@ import AdobeLogo from 'icons/logo-adobe.inline.svg';
 import AlibabaCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
 import AWSLogo from 'icons/logo-aws.inline.svg';
 import CengnLogo from 'icons/logo-cengn.inline.svg';
+import CosmonicLogo from 'icons/logo-cosmonic.inline.svg';
 import DigitalOceanLogo from 'icons/logo-digital-ocean.inline.svg';
 import GitlabLogo from 'icons/logo-gitlab.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
@@ -41,7 +42,9 @@ import ElasticPathLogo from './images/elasticpath.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
+import FRSCALogo from './images/frsca.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
+import HetznerLogo from './images/hetzner.inline.svg';
 import ImmerokLogo from './images/immerok.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
 import InnoqLogo from './images/innoq.inline.svg';
@@ -67,6 +70,7 @@ import PlaidLogo from './images/plaid.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
 import RadioFranceLogo from './images/radiofrance.inline.svg';
+import RafayLogo from './images/rafay.inline.svg';
 import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
 import SapLogo from './images/sap.inline.svg';
 import SapianLogo from './images/sapian.inline.svg';
@@ -120,12 +124,15 @@ const icons = {
   seznam: SeznamCZLogo,
   wildLife: WildLifeLogo,
   bell: BellLogo,
+  rafay: RafayLogo,
+  frsca: FRSCALogo,
   kubeOvn: KubeOvnLogo,
   sky: SkyLogo,
   skybet: SkybetLogo,
   planetscale: PlanetscaleLogo,
   homeRetailer: Placeholder,
   datadog: DatadogLogo,
+  cosmonic: CosmonicLogo,
   canonical: CanonicalLogo,
   civo: CivoLogo,
   form3: Form3Logo,
@@ -166,6 +173,7 @@ const icons = {
   sapian: SapianLogo,
   ungleich: UngleichLogo,
   vshn: VshnLogo,
+  hetzner: HetznerLogo,
 };
 
 const themeClassNames = {
@@ -188,16 +196,19 @@ const UserCommunity = ({
   buttonText,
   buttonUrl,
   buttonTarget,
+  id,
 }) => (
-  <section className={classNames(className, themeClassNames[theme].wrapper)}>
+  <section className={classNames(className, themeClassNames[theme].wrapper)} id={id}>
     <Container className="flex flex-col">
       {title && (
-        <Heading
-          className={classNames(isTitleCentered && 'mb-6 text-center md:mb-10 lg:mb-16')}
-          tag="h3"
+        <Link
+          className={classNames(
+            isTitleCentered && 'mb-6 self-center text-center md:mb-10 lg:mb-16'
+          )}
+          to={`#${id}`}
         >
-          {title}
-        </Heading>
+          <Heading tag="h3">{title}</Heading>
+        </Link>
       )}
       <div
         className={classNames(
@@ -276,6 +287,7 @@ UserCommunity.propTypes = {
   buttonText: PropTypes.string,
   buttonUrl: PropTypes.string,
   buttonTarget: PropTypes.string,
+  id: PropTypes.string,
 };
 
 UserCommunity.defaultProps = {
@@ -286,6 +298,7 @@ UserCommunity.defaultProps = {
   buttonText: null,
   buttonUrl: null,
   buttonTarget: null,
+  id: null,
 };
 
 export default UserCommunity;
