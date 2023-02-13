@@ -1,8 +1,9 @@
 ---
 date: '2023-01-26T17:00:00.000Z'
-title: "Announcing the Cilium annual report"
+title: 'Announcing the Cilium annual report'
 ogImage: ogimage.jpeg
-isFeatured: true
+isFeatured: false
+isPopular: true
 ogSummary: 'Learn how fast the Cilium project contributors and end users grew in 2022'
 categories:
   - Community
