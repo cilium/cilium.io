@@ -43,7 +43,7 @@ the topic of container networking benchmarking a bit deeper and look at:
 - [The Throughput Benchmark](#throughput)
 - [Does Container Networking add Overhead?](#overhead)
 - [Breaking the Rules: eBPF Host-Routing](#ebpfhostrouting)
-- [Measuring Latency: Requests per Second](/blog/2021/05/11/cni-benchmark#rr)
+- [Measuring Latency: Requests per Second](#rr)
 - [Comparing CPU Flamegraphs Cilium eBPF vs Calico eBPF](#flamegraph)
 - [Rate of new Connections](#crr)
 - [The Cost of Encryption - Wireguard vs IPsec](#encryption)
