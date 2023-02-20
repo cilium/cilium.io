@@ -40,14 +40,14 @@ including measurements for Calico to allow for a direct comparison.
 However, instead of just presenting the numbers, we are going to dive into
 the topic of container networking benchmarking a bit deeper and look at:
 
-- [The Throughput Benchmark](/blog/2021/05/11/cni-benchmark#throughput)
-- [Does Container Networking add Overhead?](/blog/2021/05/11/cni-benchmark#overhead)
-- [Breaking the Rules: eBPF Host-Routing](/blog/2021/05/11/cni-benchmark#ebpfhostrouting)
+- [The Throughput Benchmark](#throughput)
+- [Does Container Networking add Overhead?](#overhead)
+- [Breaking the Rules: eBPF Host-Routing](#ebpfhostrouting)
 - [Measuring Latency: Requests per Second](/blog/2021/05/11/cni-benchmark#rr)
-- [Comparing CPU Flamegraphs Cilium eBPF vs Calico eBPF](/blog/2021/05/11/cni-benchmark#flamegraph)
-- [Rate of new Connections](/blog/2021/05/11/cni-benchmark#crr)
-- [The Cost of Encryption - Wireguard vs IPsec](/blog/2021/05/11/cni-benchmark#encryption)
-- [How to reproduce the results](/blog/2021/05/11/cni-benchmark#env)
+- [Comparing CPU Flamegraphs Cilium eBPF vs Calico eBPF](#flamegraph)
+- [Rate of new Connections](#crr)
+- [The Cost of Encryption - Wireguard vs IPsec](#encryption)
+- [How to reproduce the results](#env)
 
 <a name="summary"></a>
 
