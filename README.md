@@ -36,6 +36,10 @@ npm install
 
 3. Copy .env.example and rename it into .env
 
+```bash
+cp .env.example .env
+```
+
 ## Usage
 
 ### Run the website
