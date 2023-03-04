@@ -20,7 +20,12 @@ const Item = ({ icon: Icon, title, description }) => (
           <Heading className="mx-4 text-left" size="3xs" tag="h3">
             {title}
           </Heading>
-          <ChevronIcon className="ml-auto h-4 w-auto shrink-0 rotate-90" />
+
+          <ChevronIcon
+            className={`  ml-auto h-4 w-auto shrink-0   duration-300  ${
+              open ? '  -rotate-90 transform ' : 'rotate-90 '
+            } `}
+          />
         </Popover.Button>
         <Transition
           as={Fragment}
@@ -50,3 +55,5 @@ Item.propTypes = {
 };
 
 export default Item;
+
+// <ChevronIcon className="   ml-auto h-4 w-auto shrink-0 rotate-90 " />
