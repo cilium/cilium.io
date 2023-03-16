@@ -26,7 +26,7 @@ This set up works fine for the most part, however we started to have connections
 
 The natural tendency is to focus on what you can trace, so I was pretty myopic on the idea that iptables was doing something that I wasn't seeing.
 
-![network flow diagram](fig1.png)
+![network flow diagram](1.png)
 
 _Figure 1. Packet path on the affected system_
 
@@ -42,7 +42,7 @@ If IP Masquerade unwittingly picked the right interface to borrow an address fro
 
 To make this more nefarious, when packets are dropped in this way iptables says nothing about it. You can see with the trace that the masquerade rule was applied and then nothing when it is dropped because the following stages never happen. It is just gone. I didn't know there was more code in that path that could decide to drop packets outside of iptables.
 
-![pwru network flow](fig2.png)
+![pwru network flow](2.png)
 
 _Figure 2. The same packet path from the pwru point of view_
 
