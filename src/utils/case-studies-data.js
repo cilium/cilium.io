@@ -30,7 +30,7 @@ export default {
     text: 'Ascend uses Cilium as their one CNI across multiple cloud providers',
     links: [
       {
-        linkText: 'Read Blog',
+        linkText: 'Read User Story',
         linkUrl: 'https://www.cncf.io/case-studies/ascend/',
         linkTarget: '_blank',
       },
