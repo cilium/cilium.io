@@ -10,6 +10,7 @@ import CapitalOneLogo from 'icons/capitalone.inline.svg';
 import DatadogLogo from 'icons/datadog.inline.svg';
 import AdobeLogo from 'icons/logo-adobe.inline.svg';
 import AlibabaCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
+import AscendLogo from 'icons/logo-ascend.inline.svg';
 import AWSLogo from 'icons/logo-aws.inline.svg';
 import CengnLogo from 'icons/logo-cengn.inline.svg';
 import CosmonicLogo from 'icons/logo-cosmonic.inline.svg';
@@ -17,6 +18,7 @@ import DigitalOceanLogo from 'icons/logo-digital-ocean.inline.svg';
 import GitlabLogo from 'icons/logo-gitlab.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
 import MasmovilLogo from 'icons/logo-masmovil.inline.svg';
+import PalarkLogo from 'icons/logo-palark.inline.svg';
 import SandPLogo from 'icons/logo-s&p.inline.svg';
 import SeznamCZLogo from 'icons/logo-seznam.inline.svg';
 import SkyLogo from 'icons/logo-sky.inline.svg';
@@ -92,6 +94,8 @@ import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  ascend: AscendLogo,
+  palark: PalarkLogo,
   isovalent: IsovalentLogo,
   spherity: SpherityLogo,
   schubergPhilis: SchubergPhilisLogo,
