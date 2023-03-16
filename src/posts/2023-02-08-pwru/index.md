@@ -12,7 +12,9 @@ tags:
 ---
 
 *February 8th, 2023*  
-*Author: Ben Jarvis, Quantum*
+*Authors: Martynas Pumputis and Bill Mulligan, Isovalent*
+
+_This story comes from an open source pwru user_
 
 [pwru](https://github.com/cilium/pwru) is an [eBPF](https://ebpf.io/)-based tool for tracing network packets in the Linux kernel with advanced filtering capabilities. It allows fine-grained introspection of kernel state to facilitate debugging network connectivity issues that are difficult to impossible to solve with traditional tools like iptables TRACE or tcpdump. In this blog, I’ll walk through how pwru solved a networking mystery without having to know everything beforehand.
 
