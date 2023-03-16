@@ -3,7 +3,7 @@ path: '/blog/2023/02/08/packet-where-are-you'
 date: '2023-02-08T17:00:00.000Z'
 title: 'Going from Packet Where Aren’t You to pwru'
 isFeatured: false
-ogImage: 
+ogImage: 1.png
 ogSummary: "Learn how pwru provides end-to-end insight to find the networking culprit even when you don't know it exists"
 categories:
   - Community
