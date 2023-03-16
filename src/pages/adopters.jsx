@@ -92,6 +92,8 @@ const {
   frsca,
   rafay,
   hetzner,
+  ascend,
+  palark,
 } = caseStudiesData;
 
 const hero = {
@@ -133,6 +135,8 @@ const userCommunity1 = {
     mobilab,
     skybet,
     form3,
+    ascend,
+    palark,
   ],
 };
 

@@ -14,6 +14,28 @@ export default {
       },
     ],
   },
+  palark: {
+    iconName: 'palark',
+    text: 'Palark uses Cilium as the CNI for the customer infrastructure that they manage',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://blog.palark.com/why-cilium-for-kubernetes-networking/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  ascend: {
+    iconName: 'ascend',
+    text: 'Ascend uses Cilium as their one CNI across multiple cloud providers',
+    links: [
+      {
+        linkText: 'Read User Story',
+        linkUrl: 'https://www.cncf.io/case-studies/ascend/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   sandp: {
     iconName: 'sandp',
     text: 'S&P Global uses Cilium as its CNI',
