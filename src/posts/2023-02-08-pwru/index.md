@@ -1,6 +1,6 @@
 ---
-path: '/blog/2023/02/08/packet-where-are-you'
-date: '2023-02-08T17:00:00.000Z'
+path: '/blog/2023/03/22/packet-where-are-you'
+date: '2023-03-22T17:00:00.000Z'
 title: 'Going from Packet Where Aren’t You to pwru'
 isFeatured: false
 ogImage: 1.png
