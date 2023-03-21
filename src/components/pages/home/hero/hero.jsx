@@ -8,7 +8,7 @@ import illustration from './images/hero-illustration.svg';
 
 const title = 'eBPF-based Networking, Observability, Security';
 const description =
-  'Cilium is an open source, cloud native solution for providing, security and observing network connectivity between workloads, fueled by the revolutionary Kernel technology eBPF';
+  'Cilium is an open source, cloud native solution for providing, securing, and observing network connectivity between workloads, fueled by the revolutionary Kernel technology eBPF';
 
 const Hero = () => (
   <section className="overflow-hidden bg-gray-4 pt-5 pb-0 md:pt-16 md:pb-20 lg:pt-28 lg:pb-36">
