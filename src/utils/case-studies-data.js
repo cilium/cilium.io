@@ -356,8 +356,13 @@ export default {
     text: "Cilium is the CNI for Cosmonic's Nomad based PaaS",
     links: [
       {
-        linkText: 'Read User Story',
+        linkText: 'User Story',
         linkUrl: 'https://cilium.io/blog/2023/01/18/cosmonic-user-story/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video',
+        linkUrl: 'https://www.youtube.com/watch?v=DSkf9Y06-lE',
         linkTarget: '_blank',
       },
     ],
