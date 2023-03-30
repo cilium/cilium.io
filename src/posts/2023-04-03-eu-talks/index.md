@@ -17,7 +17,9 @@ tags:
 
 *Author: Bill Mulligan, Isovalent*
 
-KubeCon + CloudNativeCon EU 2023 is right around the corner and it is promising to be a hive of activity around Cilium (all of those tulips won’t pollinate themselves). The first ever [CiliumCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/) is happening with talks from users like Bloomberg, New York Times, and Robinhood. Tickets are already completely sold out, but there will be a livestream. Head to the [project meeting](https://docs.google.com/document/d/18DjEz8MzvhWkz7Y7ghWYW3Km_wCmmaZ4Z4iurwFgnYk/edit#) to meet the maintainers and discuss the future of the project. If day one hasn’t already tired you out, there will be 7 other talks about Cilium to catch when the main conference kicks off on Wednesday!
+KubeCon + CloudNativeCon EU 2023 is right around the corner and it is promising to be a hive of activity around Cilium (all of those tulips won’t pollinate themselves). The first ever [CiliumCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/) is happening with talks from users like Bloomberg, New York Times, and Robinhood. Tickets are already completely sold out, but there will be a livestream. You will also be able to join the conversation in the Cilium slack by jumping in the [#ciliumcon channel](https://cilium.slack.com/archives/C0510801E4V).
+
+Head to the [project meeting](https://docs.google.com/document/d/18DjEz8MzvhWkz7Y7ghWYW3Km_wCmmaZ4Z4iurwFgnYk/edit#) to meet the maintainers and discuss the future of the project. If day one hasn’t already tired you out, there will be 7 other talks about Cilium to catch when the main conference kicks off on Wednesday!
 
 The talks cover networking (and networking gone wrong), deep dives into security observability with Tetragon, and end user stories from people putting Cilium into production. If that isn’t enough, there will also be a Cilium booth in the Project Pavillion where you can get all of your questions answered. Let’s dive into each of the talks below.
 
