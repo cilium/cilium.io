@@ -13,7 +13,7 @@ tags:
   - KubeCon
 ---
 
-![Cilium Talks at KubeCon](talkseu.png)
+![Cilium Talks at KubeCon](talkseu.png) 
 
 *Author: Bill Mulligan, Isovalent*
 
