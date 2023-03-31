@@ -17,9 +17,11 @@ tags:
 
 *Author: Bill Mulligan, Isovalent*
 
-KubeCon + CloudNativeCon EU 2023 is right around the corner and it is promising to be a hive of activity around Cilium (all of those tulips won’t pollinate themselves). The first ever [CiliumCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/) is happening with talks from users like Bloomberg, New York Times, and Robinhood. Tickets are already completely sold out, but there will be a livestream. You will also be able to join the conversation in the Cilium slack by jumping in the [#ciliumcon channel](https://cilium.slack.com/archives/C0510801E4V).
+KubeCon + CloudNativeCon EU 2023 is right around the corner and it is promising to be a hive of activity around Cilium (all of those tulips won’t pollinate themselves). The first ever [CiliumCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/) is happening on the Tuesday morning, with talks from users like Bloomberg, New York Times, and Robinhood. Tickets are already completely sold out, but there will be a livestream. You will also be able to join the conversation in the Cilium slack by jumping in the [#ciliumcon channel](https://cilium.slack.com/archives/C0510801E4V).
 
-Head to the [project meeting](https://docs.google.com/document/d/18DjEz8MzvhWkz7Y7ghWYW3Km_wCmmaZ4Z4iurwFgnYk/edit#) to meet the maintainers and discuss the future of the project. If day one hasn’t already tired you out, there will be 7 other talks about Cilium to catch when the main conference kicks off on Wednesday!
+Head to the [project meeting](https://docs.google.com/document/d/18DjEz8MzvhWkz7Y7ghWYW3Km_wCmmaZ4Z4iurwFgnYk/edit#) on Tuesday afternoon to meet the maintainers and discuss the future of the project. 
+
+If that action-packed first day hasn’t already tired you out, there will be 7 other talks about Cilium to catch when the main conference kicks off on Wednesday!
 
 The talks cover networking (and networking gone wrong), deep dives into security observability with Tetragon, and end user stories from people putting Cilium into production. If that isn’t enough, there will also be a Cilium booth in the Project Pavillion where you can get all of your questions answered. Let’s dive into each of the talks below.
 
@@ -35,7 +37,7 @@ Tuesday, April 18 • 09:15 - 09:20
 
 Microsoft is thrilled to announce investments we are making to fuse power of Azure Virtual Network stack with Cilium’s eBPF capabilities in close partnership with Isovalent. Cilium in Azure will provide highly efficient load-balancing, extensive network security features, and rich observability integrated well along with robust and scalable Azure CNI IP management and native Azure networking routing, to give the most performant and best-in-class container networking platform available in the cloud.
 
-[Some Assembly Required: IKEA Private Cloud, Cloud Native Networking - Karsten Nielsen, IKEA Retail\](https://sched.co/1Jo6F)
+[Some Assembly Required: IKEA Private Cloud, Cloud Native Networking - Karsten Nielsen, IKEA Retail](https://sched.co/1Jo6F)
 
 Tuesday, April 18 • 09:50 - 10:15
 
