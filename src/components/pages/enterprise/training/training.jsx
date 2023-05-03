@@ -3,9 +3,9 @@ import React from 'react';
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import LinuxfoundationLogo from 'icons/LF-Training-logo-color.inline.svg';
 import AcendLogo from 'icons/logo-acend.inline.svg';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
-import LinuxfoundationLogo from 'icons/LF-Training-logo-color.svg;
 
 const title = 'Training';
 const description =
@@ -14,6 +14,7 @@ const description =
 const logos = {
   acend: AcendLogo,
   isovalent: IsovalentLogo,
+  linuxfoundation: LinuxfoundationLogo,
 };
 
 const items = [
@@ -38,8 +39,7 @@ const items = [
   {
     logoName: 'linuxfoundation',
     title: 'Introduction to Cilium (LFS146x)',
-    description:
-      'Introductory course from the Linux Foundation on how to get started with Cilium',
+    description: 'Introductory course from the Linux Foundation on how to get started with Cilium',
     buttonText: 'Enroll Today',
     buttonLink: 'https://training.linuxfoundation.org/training/introduction-to-cilium-lfs146x/',
     buttonTarget: '_blank',
