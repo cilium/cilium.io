@@ -46,7 +46,7 @@ const list = [
       {
         icon: ObservabilityIcon,
         title: 'Advanced Self Service Observability',
-        description: `When troubleshooting connectivity between applications in an environment like Kubernetes. Tradional tools limit their inspection to the IP and TCP layers. Cilium uses eBPF to accelerate getting data in and out of L7 proxies such as Envoy, while gathering process context at the kernel layer. Enabling efficient visibility into applications and protocols like HTTP, gRPC, and Kafka. This data is available via Cilium’s Hubble flow UI, CLI, a service map UI, and Prometheus-compatible flow metrics. TLS-interception enables visibility into HTTPS traffic.`,
+        description: `When troubleshooting connectivity between applications in an environment like Kubernetes, traditional tools limit their inspection to the IP and TCP layers. Cilium uses eBPF to accelerate getting data in and out of L7 proxies such as Envoy, while gathering process context at the kernel layer. Enabling efficient visibility into applications and protocols like HTTP, gRPC, and Kafka. This data is available via Cilium’s Hubble flow UI, CLI, a service map UI, and Prometheus-compatible flow metrics. TLS-interception enables visibility into HTTPS traffic.`,
       },
       {
         icon: MetricsIcon,
