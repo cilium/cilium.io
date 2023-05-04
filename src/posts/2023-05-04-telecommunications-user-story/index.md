@@ -1,7 +1,7 @@
 ---
 path: '/blog/2023/05/04/telecommunications-user-story'
 date: '2023-05-04T10:00:00.000Z'
-title: 'Cilium User Story: Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev Teams) with Cilium'
+title: 'Cilium User Story: Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev Teams)'
 isPopular: false
 isFeatured: true
 ogImage: User-story-telecommunications.png
