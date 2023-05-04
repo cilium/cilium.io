@@ -4,7 +4,7 @@ date: '2023-05-04T10:00:00.000Z'
 title: 'Cilium User Story: Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev Teams) with Cilium'
 isPopular: false
 isFeatured: true
-ogImage: User-story-telecommunications.jpeg
+ogImage: User-story-telecommunications.png
 ogSummary: 'Learn how a telecommunication company used Cilium to satisfy business zero-trust networking requirements'
 categories:
   - Community
@@ -12,7 +12,7 @@ tags:
   - Cilium
 ---
 
-![](User-story-telecommunications.jpeg)
+![](User-story-telecommunications.png)
 
 _May 4th, 2023_
 
