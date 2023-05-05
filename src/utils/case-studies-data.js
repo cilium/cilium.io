@@ -333,6 +333,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=1LXKafeuTPo',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Blog',
+        linkUrl: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
+        linkTarget: '_blank',
+      },
     ],
   },
   datadog: {
