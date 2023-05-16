@@ -77,8 +77,8 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: 'gatsby-starter-default',
-      short_name: 'starter',
+      name: 'cilium.io',
+      short_name: 'cilium',
       start_url: '/',
       display: 'minimal-ui',
       icon: 'src/images/favicon.png', // This path is relative to the root of the site.
@@ -215,6 +215,7 @@ const plugins = [
       sv: 6,
     },
   },
+  'gatsby-plugin-remove-serviceworker',
   // this (optional) plugin enables Progressive Web App + Offline functionality
   // To learn more, visit: https://gatsby.dev/offline
   // `gatsby-plugin-offline`,

@@ -39,6 +39,7 @@
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-mdx": "^3.20.0",
     "gatsby-plugin-netlify": "^5.0.1",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sitemap": "^5.24.0",
     "gatsby-remark-copy-linked-files": "^5.24.0",
     "gatsby-remark-images": "^6.24.0",
