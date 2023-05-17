@@ -10,7 +10,7 @@ import GradeIcon from './images/grade.inline.svg';
 import SupportIcon from './images/support.inline.svg';
 
 const enterprise = {
-  title: 'Isovalent Cilium Enterprise',
+  title: 'Isovalent Enterprise for Cilium',
   description: 'Enterprise Distribution maintained by the creators of Cilium.',
   linkUrl: 'https://bit.ly/3hOKaXj',
   linkTarget: '_blank',
