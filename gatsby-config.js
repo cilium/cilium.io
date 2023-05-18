@@ -77,7 +77,7 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: 'cilium.io',
+      // name: 'cilium.io',
       // short_name: 'cilium',
       start_url: '/',
       display: 'minimal-ui',
