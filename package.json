@@ -30,7 +30,7 @@
     "algoliasearch": "^4.14.2",
     "classnames": "^2.3.2",
     "framer-motion": "^6.5.1",
-    "gatsby": "^4.24.0",
+    "gatsby": "^4.25.7",
     "gatsby-plugin-algolia-search": "^0.5.7",
     "gatsby-plugin-canonical-urls": "^4.24.0",
     "gatsby-plugin-feed": "^4.24.0",
