@@ -34,10 +34,15 @@ import AccuKnoxLogo from './images/accuknox.inline.svg';
 import AcossLogo from './images/acoss.inline.svg';
 import ArangoDbLogo from './images/arangodb.inline.svg';
 import AyedoLogo from './images/ayedo.inline.svg';
+import AzureLogo from './images/azure.inline.svg';
+import BloombergLogo from './images/bloomberg.inline.svg';
 import BytedanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
+import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
+import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
+import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
@@ -47,12 +52,15 @@ import Form3Logo from './images/form3.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
+import IkeaLogo from './images/ikea.inline.svg';
 import ImmerokLogo from './images/immerok.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
 import InnoqLogo from './images/innoq.inline.svg';
 import IsovalentLogo from './images/isovalent.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
+import KiloLogo from './images/kilo.inline.svg';
 import KryptosLogo from './images/kryptos.inline.svg';
+import KubehetznerLogo from './images/kube-hetzner.inline.svg';
 import KubeOvnLogo from './images/kube-ovn.inline.svg';
 import KubermaticLogo from './images/kubermatic.inline.svg';
 import KubesphereLogo from './images/kubesphere.inline.svg';
@@ -64,16 +72,21 @@ import MobilabLogo from './images/mobilab.inline.svg';
 import MuxLogo from './images/mux.inline.svg';
 import MyFitnessPalLogo from './images/myfitnesspal.inline.svg';
 import NexxiotLogo from './images/nexxiot.inline.svg';
+import NineLogo from './images/nine.inline.svg';
 import NorthflankLogo from './images/northflank.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
 import PlaidLogo from './images/plaid.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
+import PolarSignalsLogo from './images/polarsignals.inline.svg';
+import PolverioLogo from './images/polverio.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
+import ProtonLogo from './images/proton.inline.svg';
 import RadioFranceLogo from './images/radiofrance.inline.svg';
 import RafayLogo from './images/rafay.inline.svg';
 import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
+import RobinhoodLogo from './images/robinhood.inline.svg';
 import SapLogo from './images/sap.inline.svg';
 import SapianLogo from './images/sapian.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
@@ -94,6 +107,19 @@ import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  kubehetzner: KubehetznerLogo,
+  cistec: CistecLogo,
+  proton: ProtonLogo,
+  clickhouse: ClickHouseLogo,
+  daimlertruck: DaimlerTruckLogo,
+  polarsignals: PolarSignalsLogo,
+  polverio: PolverioLogo,
+  kilo: KiloLogo,
+  nine: NineLogo,
+  robinhood: RobinhoodLogo,
+  ikea: IkeaLogo,
+  azure: AzureLogo,
+  bloomberg: BloombergLogo,
   ascend: AscendLogo,
   palark: PalarkLogo,
   isovalent: IsovalentLogo,
@@ -235,10 +261,10 @@ const UserCommunity = ({
                 dangerouslySetInnerHTML={{ __html: text }}
               />
               {links && (
-                <div className="mt-auto space-x-6 border-t border-gray-3 pt-4 leading-none">
+                <div className="mt-auto space-x-4 border-t border-gray-3 pt-4 leading-none">
                   {links.map(({ linkUrl, linkText, linkTarget }, index) => (
                     <Link
-                      className="relative before:absolute before:top-1/2 before:-left-3.5 before:inline-block before:h-1 before:w-1 before:-translate-y-1/2 before:rounded-full before:bg-gray-5 first:before:hidden"
+                      className="relative before:absolute before:top-1/2 before:-left-2.5 before:inline-block before:h-1 before:w-1 before:-translate-y-1/2 before:rounded-full before:bg-gray-5 first:before:hidden"
                       key={index}
                       type="text"
                       theme="primary"
