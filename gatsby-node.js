@@ -9,7 +9,7 @@ const BLOG_POSTS_PER_PAGE = 9;
 const slugifyCategory = (item) => (item === '*' ? 'blog/' : `blog/categories/${slugify(item)}/`);
 
 const EVENTS_PER_PAGE = 8;
-const slugifyEventCategory = (item) =>
+const slugifyEventType = (item) =>
   item === '*' ? 'events/' : `events/categories/${slugify(item)}/`;
 
 // Create Blog Posts
@@ -66,7 +66,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
     },
   } = await graphql(`
     {
-      allCategories: allMdx {
+      allCategories: allMdx(filter: { fileAbsolutePath: { regex: "/posts/" } }) {
         group(field: frontmatter___categories) {
           fieldValue
         }
@@ -153,18 +153,18 @@ async function createEventsPage({ graphql, actions, reporter }) {
   const {
     data: {
       featuredEventEdges: { nodes: featuredEvent },
-      allCategories: { group: allCategories },
+      allTypes: { group: allTypes },
     },
   } = await graphql(`
     {
-      allCategories: allMdx {
-        group(field: frontmatter___categories) {
+      allTypes: allMdx(filter: { fileAbsolutePath: { regex: "/content/events/" } }) {
+        group(field: frontmatter___type) {
           fieldValue
         }
       }
       featuredEventEdges: allMdx(
         filter: {
-          fileAbsolutePath: { regex: "content/events/" }
+          fileAbsolutePath: { regex: "/content/events/" }
           fields: { isFeatured: { eq: true } }
         }
       ) {
@@ -178,25 +178,25 @@ async function createEventsPage({ graphql, actions, reporter }) {
   if (featuredEvent?.length > 1) {
     const featuredEvents = featuredEvent.map((event) => event.fileAbsolutePath);
     reporter.panicOnBuild(
-      `There must be the only one featured event. Please, check "isFeatured" fields in your eventss. ${featuredEvents}`,
+      `There must be the only one featured event. Please, check "isFeatured" fields in your events. ${featuredEvents}`,
       new Error('Too much featured events')
     );
   }
 
-  const categories = ['*'].concat(allCategories.map((category) => category.fieldValue));
+  const types = ['*'].concat(allTypes.map((type) => type.fieldValue));
 
-  // Create category pages
+  // Create type pages
   await Promise.all(
-    categories.map(async (category) =>
+    types.map(async (type) =>
       graphql(
         `
-          query CategoryPostsQuery($tag: String!, $draftFilter: [Boolean]!) {
+          query TypePostsQuery($tag: String!, $draftFilter: [Boolean]!) {
             allMdx(
               filter: {
                 fileAbsolutePath: { regex: "/content/events/" }
                 fields: {
                   isFeatured: { eq: false }
-                  categories: { glob: $tag }
+                  type: { glob: $tag }
                   draft: { in: $draftFilter }
                 }
               }
@@ -210,12 +210,12 @@ async function createEventsPage({ graphql, actions, reporter }) {
             }
           }
         `,
-        { tag: category, draftFilter: DRAFT_FILTER }
+        { tag: type, draftFilter: DRAFT_FILTER }
       ).then((result) => {
         if (result.errors) throw result.errors;
-        const posts = result.data.allMdx.edges;
-        const numPages = Math.ceil(posts.length / EVENTS_PER_PAGE);
-        const pathBase = slugifyEventCategory(category);
+        const events = result.data.allMdx.edges;
+        const numPages = Math.ceil(events.length / EVENTS_PER_PAGE);
+        const pathBase = slugifyEventType(type);
 
         Array.from({ length: numPages }).forEach((_, i) => {
           const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
@@ -227,8 +227,8 @@ async function createEventsPage({ graphql, actions, reporter }) {
               skip: i * EVENTS_PER_PAGE,
               numPages,
               currentPage: i + 1,
-              currentCategory: category,
-              categories,
+              currentType: type,
+              types,
               // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
               draftFilter: DRAFT_FILTER,
               slug: path,
@@ -243,6 +243,7 @@ async function createEventsPage({ graphql, actions, reporter }) {
 exports.createPages = async (options) => {
   await createBlogPages(options);
   await createBlogPosts(options);
+  await createEventsPage(options);
 };
 
 exports.onCreateNode = ({ node, actions }) => {
@@ -278,6 +279,11 @@ exports.onCreateNode = ({ node, actions }) => {
       node,
       name: 'externalUrl',
       value: node.frontmatter.externalUrl || '',
+    });
+    createNodeField({
+      node,
+      name: 'type',
+      value: node.frontmatter.type || Array.of('*'),
     });
   }
 };

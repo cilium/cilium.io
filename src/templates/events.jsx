@@ -1,18 +1,87 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+import { graphql } from 'gatsby';
 import React from 'react';
 
-import EventList from 'components/pages/events/event-list';
-import Hero from 'components/pages/events/hero';
+import FeaturedEvent from 'components/pages/events/featured-event';
 import SEO from 'components/shared/seo';
 import MainLayout from 'layouts/main';
 
-const EventsPage = ({ pageContext: { featuredEvents, postEvents, totalCount } }) => (
-  <MainLayout>
-    <Hero items={featuredEvents} />
-    <EventList allEvents={postEvents} totalCount={totalCount} />
-  </MainLayout>
-);
+const EventsPage = (props) => {
+  const {
+    data: {
+      allEvents: { nodes: allEvents },
+      featuredPostEdges: { nodes: featuredEvents },
+    },
+    pageContext: { types, currentType, currentPage, numPages },
+    location: { pathname },
+  } = props;
+  const isEventPage = pathname.startsWith('/events');
+
+  const isTypePage = pathname.includes('type');
+
+  return (
+    <MainLayout>{!isTypePage && <FeaturedEvent featuredStory={featuredEvents?.[0]} />}</MainLayout>
+  );
+};
 
 export default EventsPage;
 
 export const Head = ({ location: { pathname } }) => <SEO pathname={pathname} />;
+
+export const blogPostsQuery = graphql`
+  query blogPostsQuery($skip: Int!, $limit: Int!, $currentType: String!, $draftFilter: [Boolean]!) {
+    allEvents: allMdx(
+      filter: {
+        fileAbsolutePath: { regex: "/content/events/" }
+        fields: {
+          type: { glob: $currentType }
+          isFeatured: { eq: false }
+          draft: { in: $draftFilter }
+        }
+      }
+      sort: { order: DESC, fields: frontmatter___date }
+      limit: $limit
+      skip: $skip
+    ) {
+      nodes {
+        frontmatter {
+          date(locale: "en", formatString: "MMM DD, yyyy")
+          title
+          ogSummary
+          externalUrl
+          type
+          ogImage {
+            childImageSharp {
+              gatsbyImageData(width: 550)
+            }
+          }
+        }
+      }
+    }
+
+    featuredPostEdges: allMdx(
+      filter: {
+        fileAbsolutePath: { regex: "/content/events/" }
+        fields: { isFeatured: { eq: true } }
+      }
+    ) {
+      nodes {
+        frontmatter {
+          date(locale: "en", formatString: "MMM DD, yyyy")
+          type
+          place
+          title
+          ogSummary
+          externalUrl
+          ogImage {
+            childImageSharp {
+              gatsbyImageData(width: 735)
+            }
+          }
+        }
+        fileAbsolutePath
+      }
+    }
+  }
+`;
