@@ -8,6 +8,10 @@ const DRAFT_FILTER = process.env.NODE_ENV === 'production' ? [false] : [true, fa
 const BLOG_POSTS_PER_PAGE = 9;
 const slugifyCategory = (item) => (item === '*' ? 'blog/' : `blog/categories/${slugify(item)}/`);
 
+const EVENTS_PER_PAGE = 8;
+const slugifyEventCategory = (item) =>
+  item === '*' ? 'events/' : `events/categories/${slugify(item)}/`;
+
 // Create Blog Posts
 async function createBlogPosts({ graphql, actions }) {
   const {
@@ -127,6 +131,100 @@ async function createBlogPages({ graphql, actions, reporter }) {
             context: {
               limit: BLOG_POSTS_PER_PAGE,
               skip: i * BLOG_POSTS_PER_PAGE,
+              numPages,
+              currentPage: i + 1,
+              currentCategory: category,
+              categories,
+              // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
+              draftFilter: DRAFT_FILTER,
+              slug: path,
+            },
+          });
+        });
+      })
+    )
+  );
+}
+
+// Create Events Page
+async function createEventsPage({ graphql, actions, reporter }) {
+  const { createPage } = actions;
+
+  const {
+    data: {
+      featuredEventEdges: { nodes: featuredEvent },
+      allCategories: { group: allCategories },
+    },
+  } = await graphql(`
+    {
+      allCategories: allMdx {
+        group(field: frontmatter___categories) {
+          fieldValue
+        }
+      }
+      featuredEventEdges: allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "content/events/" }
+          fields: { isFeatured: { eq: true } }
+        }
+      ) {
+        nodes {
+          fileAbsolutePath
+        }
+      }
+    }
+  `);
+
+  if (featuredEvent?.length > 1) {
+    const featuredEvents = featuredEvent.map((event) => event.fileAbsolutePath);
+    reporter.panicOnBuild(
+      `There must be the only one featured event. Please, check "isFeatured" fields in your eventss. ${featuredEvents}`,
+      new Error('Too much featured events')
+    );
+  }
+
+  const categories = ['*'].concat(allCategories.map((category) => category.fieldValue));
+
+  // Create category pages
+  await Promise.all(
+    categories.map(async (category) =>
+      graphql(
+        `
+          query CategoryPostsQuery($tag: String!, $draftFilter: [Boolean]!) {
+            allMdx(
+              filter: {
+                fileAbsolutePath: { regex: "/content/events/" }
+                fields: {
+                  isFeatured: { eq: false }
+                  categories: { glob: $tag }
+                  draft: { in: $draftFilter }
+                }
+              }
+              limit: 1000
+            ) {
+              edges {
+                node {
+                  id
+                }
+              }
+            }
+          }
+        `,
+        { tag: category, draftFilter: DRAFT_FILTER }
+      ).then((result) => {
+        if (result.errors) throw result.errors;
+        const posts = result.data.allMdx.edges;
+        const numPages = Math.ceil(posts.length / EVENTS_PER_PAGE);
+        const pathBase = slugifyEventCategory(category);
+
+        Array.from({ length: numPages }).forEach((_, i) => {
+          const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
+          createPage({
+            path,
+            component: Path.resolve('./src/templates/events.jsx'),
+            context: {
+              limit: EVENTS_PER_PAGE,
+              skip: i * EVENTS_PER_PAGE,
               numPages,
               currentPage: i + 1,
               currentCategory: category,
