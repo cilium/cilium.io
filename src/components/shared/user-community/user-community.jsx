@@ -102,12 +102,14 @@ import SproutfiLogo from './images/sproutfi.inline.svg';
 import SuperorbitalLogo from './images/superorbital.inline.svg';
 import TSILogo from './images/t-systems.inline.svg';
 import TailorBrandsLogo from './images/tailor-brands.inline.svg';
+import TietoevryLogo from './images/tietoevry.inline.svg';
 import UngleichLogo from './images/ungleich.inline.svg';
 import UnitedCloudLogo from './images/unitedcloud.inline.svg';
 import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  tietoevry: TietoevryLogo,
   unitedcloud: UnitedCloudLogo,
   kubehetzner: KubehetznerLogo,
   cistec: CistecLogo,

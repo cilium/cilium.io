@@ -494,6 +494,17 @@ export default {
       },
     ],
   },
+  tietoevry: {
+    iconName: 'tietoevry',
+    text: 'Tietoevry uses Cilium and Hubble across multiple platforms',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://isovalent.com/blog/post/tietoevry-with-isovalent-cilium-enterprise/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   kubesphere: {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',
