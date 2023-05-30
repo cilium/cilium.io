@@ -470,18 +470,6 @@ export default {
       },
     ],
   },
-  ikea: {
-    iconName: 'ikea',
-    text: 'IKEA IT AB uses Cilium for their self-hosted bare-metal private cloud',
-    links: [
-      {
-        linkText: 'Watch video',
-        linkUrl:
-          'https://www.youtube.com/watch?v=mRbsXkdWUNU&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=4',
-        linkTarget: '_blank',
-      },
-    ],
-  },
   robinhood: {
     iconName: 'robinhood',
     text: 'Robinhood uses Cilium for Kubernetes overlay networking',
