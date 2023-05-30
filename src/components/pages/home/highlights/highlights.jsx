@@ -4,20 +4,118 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
 import AuditIcon from './images/audit.inline.svg';
+import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
+import BGPIcon from './images/bgp.inline.svg';
 import ConnectivityIcon from './images/connectivity.inline.svg';
+import EgressGatewayIcon from './images/egress-gateway.inline..svg';
 import EncryptionIcon from './images/encryption.inline.svg';
 import MetricsIcon from './images/metrics.inline.svg';
 import NativeSupportIcon from './images/native-support.inline.svg';
 import NetworkPolicyIcon from './images/network-policy.inline.svg';
 import ObservabilityIcon from './images/observability.inline.svg';
 import ScalableKubernetesIcon from './images/scalable-kubernetes.inline.svg';
+import ServiceMesh from './images/service-mesh.inline.svg';
 import VisibilityIcon from './images/visibility.inline.svg';
-import Item from './item/item';
+import ItemCard from './item/item-card';
 
 const list = [
   {
     title: 'Networking',
     items: [
+      {
+        icon: ScalableKubernetesIcon,
+        title: 'High Performance Networking (CNI)',
+      },
+      {
+        icon: NativeSupportIcon,
+        title: 'Layer 4 Load Balancer',
+      },
+      {
+        icon: ConnectivityIcon,
+        title: 'Cluster Mesh',
+      },
+      {
+        icon: BandWidthIcon,
+        title: 'Bandwidth and Latency Optimization',
+      },
+      {
+        icon: BGPIcon,
+        title: 'BGP',
+      },
+      {
+        icon: EgressGatewayIcon,
+        title: 'Egress Gateway',
+      },
+      {
+        icon: ServiceMesh,
+        title: 'Service Mesh',
+      },
+    ],
+  },
+
+  {
+    title: 'Observability',
+    items: [
+      {
+        icon: VisibilityIcon,
+        title: 'Identity-aware Visibility',
+      },
+      {
+        icon: ObservabilityIcon,
+        title: 'Advanced Self Service Observability',
+      },
+      {
+        icon: VisibilityIcon,
+        title: 'Identity-aware Visibility',
+      },
+      {
+        icon: ObservabilityIcon,
+        title: 'Advanced Self Service Observability',
+      },
+      {
+        icon: MetricsIcon,
+        title: 'Network Metrics + Policy Troubleshooting',
+      },
+      {
+        icon: NativeSupportIcon,
+        title: 'Service Load Balancing',
+      },
+      {
+        icon: ScalableKubernetesIcon,
+        title: 'Scalable Kubernetes CNI',
+      },
+      {
+        icon: ConnectivityIcon,
+        title: 'Multi-cluster Connectivity',
+      },
+    ],
+  },
+  {
+    title: 'Security',
+    items: [
+      {
+        icon: EncryptionIcon,
+        title: 'Transparent Encryption',
+      },
+
+      {
+        icon: AuditIcon,
+        title: 'Security Forensics + Audit',
+      },
+      {
+        icon: EncryptionIcon,
+        title: 'Transparent Encryption',
+      },
+
+      {
+        icon: AuditIcon,
+        title: 'Security Forensics + Audit',
+      },
+
+      {
+        icon: NetworkPolicyIcon,
+        title: 'Advanced Network Policy',
+      },
       {
         icon: NativeSupportIcon,
         title: 'Service Load Balancing',
@@ -35,61 +133,21 @@ const list = [
       },
     ],
   },
-  {
-    title: 'Observability',
-    items: [
-      {
-        icon: VisibilityIcon,
-        title: 'Identity-aware Visibility',
-        description: `Modern distributed systems require rich context to enable observability. However, the highly dynamic nature of Kubernetes reduces the value of traditional visibility tools. Because Cilium leverages eBPF for a native understanding of Kubernetes label identity (for pods) and DNS-aware identity (for external workloads), and rich context at the system call and application layer. Cilium provides the right level of information to troubleshoot application and connectivity issues. Cilium’s Hubble framework exposes this via API, CLI, and a graphical UI.`,
-      },
-      {
-        icon: ObservabilityIcon,
-        title: 'Advanced Self Service Observability',
-        description: `When troubleshooting connectivity between applications in an environment like Kubernetes, traditional tools limit their inspection to the IP and TCP layers. Cilium uses eBPF to accelerate getting data in and out of L7 proxies such as Envoy, while gathering process context at the kernel layer. Enabling efficient visibility into applications and protocols like HTTP, gRPC, and Kafka. This data is available via Cilium’s Hubble flow UI, CLI, a service map UI, and Prometheus-compatible flow metrics. TLS-interception enables visibility into HTTPS traffic.`,
-      },
-      {
-        icon: MetricsIcon,
-        title: 'Network Metrics + Policy Troubleshooting',
-        description: `Building on rich identity, Cilium provides Prometheus compatible metrics for L3/L4 and L7 network flow data and exposes context like which application in a pod made these connections. This enables teams to detect and investigate network and application behavior and faults. Both flow and metrics data include rich information about what traffic has been allowed or denied by network policies, simplifying policy troubleshooting.`,
-      },
-    ],
-  },
-  {
-    title: 'Security',
-    items: [
-      {
-        icon: EncryptionIcon,
-        title: 'Transparent Encryption',
-        description: `Securing data in flight is an increasingly important requirement in security sensitive environments. Cilium’s transparent encryption capabilities use the highly efficient IPsec capabilities built into the Linux kernel to automatically encrypt communications between all workloads within, or between, Kubernetes clusters. This mechanism is simple: it requires only a single configuration setting in Cilium and no application changes. It is also efficient, with no side-car or other application layer proxying required.`,
-      },
-
-      {
-        icon: AuditIcon,
-        title: 'Security Forensics + Audit',
-        description: `IPs and ports are nearly meaningless for network security forensics and audit, given that identity in a Kubernetes cluster is highly dynamic. The identity-aware network flow logs and process context from Cilium’s Hubble can be stored to enable long-term forensics of network connectivity to identify attacks and subsequent lateral movement. Cilium’s rich context awareness, optionally combined with TLS-termination enables security visibility even over secure https connections.`,
-      },
-
-      {
-        icon: NetworkPolicyIcon,
-        title: 'Advanced Network Policy',
-        description: `Cilium implements basic Kubernetes Network Policy (e.g. Label + CIDR matching) but also uses its identity-aware and application aware visibility to enable both DNS-aware policies (e.g. allow to *.google.com) and application aware policies (e.g. allow HTTP GET /foo). Cilium also supports cluster-wide network policy, and host-layer firewalling. Get started here or watch a video to learn more.`,
-      },
-    ],
-  },
 ];
 
 const Highlights = () => (
-  <section className="mt-10 md:mt-20 lg:mt-32">
-    <Container className="grid grid-cols-[minmax(95%,max-content)] gap-4 sm:grid-cols-none md:gap-6 lg:grid-cols-3 lg:gap-8">
+  <section className="mt-12">
+    <Container>
       {list.map(({ title, items }, index) => (
-        <div key={index}>
-          <Heading tag="h2" size="sm">
+        <div key={index} className="md:mb-16">
+          <Heading className="py-6 text-center" tag="h2" size="sm">
             {title}
           </Heading>
-          <ul className="mt-6 grid grid-cols-1 gap-4 md:gap-6 lg:mt-9 lg:auto-rows-[130px] lg:gap-8 xl:auto-rows-fr">
+          <ul className="block gap-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3">
             {items.map((item, index) => (
-              <Item {...item} key={index} />
+              <div key={index} className="mb-4 rounded-lg border bg-white shadow-sm md:mb-0">
+                <ItemCard {...item} />
+              </div>
             ))}
           </ul>
         </div>
