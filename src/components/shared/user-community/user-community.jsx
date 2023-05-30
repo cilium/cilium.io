@@ -52,7 +52,6 @@ import Form3Logo from './images/form3.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
-import IkeaLogo from './images/ikea-logo.inline.svg';
 import ImmerokLogo from './images/immerok.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
 import InnoqLogo from './images/innoq.inline.svg';
@@ -121,7 +120,6 @@ const icons = {
   kilo: KiloLogo,
   nine: NineLogo,
   robinhood: RobinhoodLogo,
-  ikea: IkeaLogo,
   azure: AzureLogo,
   bloomberg: BloombergLogo,
   ascend: AscendLogo,
