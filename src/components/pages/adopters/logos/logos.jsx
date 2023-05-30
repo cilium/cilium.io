@@ -39,10 +39,8 @@ import Rke2Logo from './images/rke2.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SovereignLogo from './images/sovereign.inline.svg';
 import TencentCloudLogo from './images/tencent-cloud.inline.svg';
-import UnitedCloudLogo from './images/unitedcloud.inline.svg';
 
 const logos = {
-  unitedcloud: UnitedCloudLogo,
   aws: AWSLogo,
   constellation: ConstellationLogo,
   tencentCloud: TencentCloudLogo,

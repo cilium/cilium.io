@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  unitedcloud,
   planetscale,
   nine,
   kubehetzner,
@@ -166,6 +167,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    unitedcloud,
     frsca,
     rafay,
     innoq,
@@ -255,7 +257,6 @@ const logos1 = {
     'exoscale',
     'appuio',
     'hetzner',
-    'unitedcloud',
     'azure',
   ],
   spaceXSize: 'sm',

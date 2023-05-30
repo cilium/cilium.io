@@ -313,8 +313,14 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video',
+        linkText: 'Video 1',
         linkUrl: 'https://www.youtube.com/watch?v=sg-F_R-ZVNc',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video 2',
+        linkUrl:
+          'https://www.youtube.com/watch?v=mRbsXkdWUNU&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=4',
         linkTarget: '_blank',
       },
     ],
@@ -443,7 +449,7 @@ export default {
   },
   bloomberg: {
     iconName: 'bloomberg',
-    text: 'Text for Bloomberg',
+    text: 'Bloomberg leverages Cilium to construct data sandboxes that restrict users from distributing data outside the sandbox',
     links: [
       {
         linkText: 'Watch video',
@@ -454,7 +460,7 @@ export default {
   },
   azure: {
     iconName: 'azure',
-    text: 'Text for Azure',
+    text: 'Microsoft chooses Cilium for Azure networking',
     links: [
       {
         linkText: 'Watch video',
@@ -723,5 +729,9 @@ export default {
   kubehetzner: {
     iconName: 'kubehetzner',
     text: '<b>Kube-Hetzner</b> uses Cilium as a possible CNI in its cluster deployment on Hetzner Cloud',
+  },
+  unitedcloud: {
+    iconName: 'unitedcloud',
+    text: '<b>United Cloud</b> is using Cilium for all non-production and production clusters (on-premises)',
   },
 };
