@@ -6,7 +6,7 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import ExternalLinkIcon from 'icons/external-link.inline.svg';
 
-import TypeLabel from './type-label';
+import TypeLabel from '../type-label';
 
 const FeaturedStory = ({
   className,

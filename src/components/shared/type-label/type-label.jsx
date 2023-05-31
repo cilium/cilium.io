@@ -17,7 +17,7 @@ const Label = ({ type, className }) => (
 );
 
 Label.propTypes = {
-  type: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['Meetup', 'Webinar', 'Conference']).isRequired,
   className: PropTypes.string,
 };
 

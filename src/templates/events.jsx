@@ -18,11 +18,9 @@ const EventsPage = (props) => {
     location: { pathname },
   } = props;
 
-  const isTypePage = pathname.includes('type');
-
   return (
     <MainLayout>
-      {!isTypePage && <FeaturedEvent featuredStory={featuredEvents?.[0]} />}
+      <FeaturedEvent featuredStory={featuredEvents?.[0]} />
       <EventsBoard
         types={types}
         events={events}

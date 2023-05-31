@@ -3,11 +3,10 @@ import React, { useEffect } from 'react';
 
 import Container from 'components/shared/container';
 import Filters from 'components/shared/filters';
-import Heading from 'components/shared/heading';
+
+import EventList from './event-list';
 
 const EventsBoard = ({ types, events, currentType, currentPage, numPages }) => {
-  const blockTitle = currentType === '*' ? 'All events' : currentType;
-
   const scrollTo = () => {
     const element = document.getElementById('filters');
     const offset = -50;
@@ -23,12 +22,10 @@ const EventsBoard = ({ types, events, currentType, currentPage, numPages }) => {
   }, [currentPage]);
 
   return (
-    <section className="mt-10 md:mt-20 lg:mt-28">
-      <Container>
-        <Heading tag="h2">{blockTitle}</Heading>
-        <Filters id="filters" filters={types} currentFilter={currentType} type="event" />
-      </Container>
-    </section>
+    <Container>
+      <Filters id="filters" filters={types} currentFilter={currentType} type="event" />
+      <EventList events={events} />
+    </Container>
   );
 };
 

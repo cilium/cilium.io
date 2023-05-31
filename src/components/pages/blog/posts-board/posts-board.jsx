@@ -6,7 +6,6 @@ import Filters from 'components/shared/filters';
 import Heading from 'components/shared/heading';
 
 import BlogPostsList from './blog-posts-list';
-import Categories from './categories';
 import Pagination from './pagination';
 
 const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
