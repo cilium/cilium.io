@@ -1,7 +1,7 @@
 ---
 date: '2023-05-24T15:56:00.000Z'
 title: 'An inside look at the new Intro to Cilium course with course creator, Jef Spaleta!'
-ogImage: ogimage.jpg
+ogImage: ogimage.png
 ogSummary: 'Hear about Cilium directly from Jef Spaleta, the creator of the new Intro to Cilium course'
 categories:
   - Community
