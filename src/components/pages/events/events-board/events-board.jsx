@@ -31,10 +31,9 @@ const EventsBoard = ({ types, events, currentType, currentPage, numPages }) => {
 
 EventsBoard.propTypes = {
   types: PropTypes.arrayOf(PropTypes.string).isRequired,
-  posts: PropTypes.arrayOf(
+  events: PropTypes.arrayOf(
     PropTypes.shape({
       frontmatter: PropTypes.shape({
-        path: PropTypes.string,
         ogImage: PropTypes.shape({
           childImageSharp: PropTypes.shape({
             gatsbyImageData: PropTypes.shape(),
@@ -43,7 +42,8 @@ EventsBoard.propTypes = {
         date: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         ogSummary: PropTypes.string,
-        categories: PropTypes.arrayOf(PropTypes.string),
+        place: PropTypes.string.isRequired,
+        type: PropTypes.oneOf(['Webinar', 'Meetup', 'Conference']).isRequired,
       }),
     })
   ).isRequired,

@@ -7,52 +7,35 @@ import Link from 'components/shared/link';
 import TypeLabel from 'components/shared/type-label';
 import useElementRect from 'utils/use-element-rect';
 
-import CiliumLogo from './images/cilium-logo.inline.svg';
+import placeholderIllustration from './images/placeholder.svg';
 
-const coverStyles = {
-  base: 'shrink-0',
-  lg: 'sm:max-w-[512px]',
-  md: 'min-h-[168px] sm:max-h-[168px] max-w-full',
-  sm: 'min-h-[107px] sm:max-h-[107px] sm:max-w-[198px]',
-};
-
-const titleStyles = {
-  lg: 'text-2xl lg:text-3xl font-semibold',
-  md: 'md:text-lg font-bold',
-  sm: 'md:text-lg font-bold',
-};
-
-const EventCover = ({ ogImage, title, coverClassNames }) => {
+const EventCover = ({ ogImage, title }) => {
   const [rect, placeholder] = useElementRect();
   const { width = 0 } = rect ?? {};
-  const placeholderHeight = width / 2;
+  const placeholderHeight = width / 2.1;
 
   let content = null;
   if (ogImage) {
     content = (
       <GatsbyImage
-        className={coverClassNames}
-        imgClassName="self-center rounded-lg"
+        imgClassName="self-center rounded-t-lg"
         image={getImage(ogImage)}
         objectFit="contain"
         alt={title}
         loading="lazy"
       />
     );
+  } else {
+    content = (
+      <div
+        className="flex w-full items-center justify-center rounded-t-lg bg-gray-4"
+        ref={placeholder}
+        style={{ height: placeholderHeight }}
+      >
+        <img className="h-full w-full py-2.5" src={placeholderIllustration} alt="" aria-hidden />
+      </div>
+    );
   }
-
-  content = (
-    <div
-      className={classNames(
-        'flex w-full items-center justify-center rounded-lg bg-gray-4',
-        coverClassNames
-      )}
-      ref={placeholder}
-      style={{ height: placeholderHeight }}
-    >
-      <CiliumLogo aria-label="Cilium logo" />
-    </div>
-  );
 
   return content;
 };
@@ -64,57 +47,32 @@ const BlogPostCard = ({
   ogSummary: summary,
   type,
   externalUrl,
-  size,
+  place,
   className,
-  isLandscapeView,
-}) => {
-  const coverClassNames = classNames(
-    coverStyles.base,
-    coverStyles[size],
-    isLandscapeView && 'self-center'
-  );
-  return (
-    <Link
-      to={externalUrl}
-      className={classNames(
-        'group flex rounded-lg border border-gray-3 p-5 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
-        isLandscapeView
-          ? 'flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-7'
-          : 'flex-col space-y-7',
-        size === 'lg' && 'lg:p-8',
-        className
-      )}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <EventCover ogImage={ogImage} title={title} coverClassNames={coverClassNames} />
-      <article className="flex grow flex-col">
-        <span className="text-sm font-medium leading-none text-gray-1">{date}</span>
-        <h3
-          className={classNames(
-            'mt-3 leading-normal transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:leading-normal lg:leading-normal',
-            titleStyles[size]
-          )}
-        >
-          {title}
-        </h3>
-        {!isLandscapeView && (
-          <>
-            <p
-              className={classNames(
-                'mt-2 mb-4 leading-relaxed line-clamp-5',
-                size === 'lg' && 'md:text-lg'
-              )}
-            >
-              {summary}
-            </p>
-            <TypeLabel type={type} className="mt-auto" />
-          </>
-        )}
-      </article>
-    </Link>
-  );
-};
+}) => (
+  <Link
+    to={externalUrl}
+    className={classNames(
+      'group flex flex-col rounded-lg border-2 border-gray-6 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
+      className
+    )}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <EventCover ogImage={ogImage} title={title} />
+    <article className="flex grow flex-col p-5 md:p-7 xl:p-8">
+      <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium leading-none text-gray-1">
+        <time>{date}</time>
+        <span>{place}</span>
+      </div>
+      <h3 className="mt-3 text-xl font-bold leading-snug transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-22">
+        {title}
+      </h3>
+      <p className="mt-2 mb-4 text-base leading-normal text-black/60 line-clamp-5">{summary}</p>
+      <TypeLabel type={type} className="mt-auto" />
+    </article>
+  </Link>
+);
 
 BlogPostCard.propTypes = {
   ogImage: PropTypes.shape({
@@ -127,21 +85,15 @@ BlogPostCard.propTypes = {
   title: PropTypes.string.isRequired,
   ogSummary: PropTypes.string,
   type: PropTypes.oneOf(['Meetup', 'Webinar', 'Conference']).isRequired,
-  size: PropTypes.oneOf(Object.keys(titleStyles)),
+  place: PropTypes.string.isRequired,
   className: PropTypes.string,
-  isLandscapeView: PropTypes.bool,
 };
 
 BlogPostCard.defaultProps = {
   ogImage: null,
-  path: null,
-  ogImageUrl: null,
   externalUrl: null,
   ogSummary: null,
-  categories: null,
-  size: Object.keys(titleStyles)[1],
   className: null,
-  isLandscapeView: false,
 };
 
 export default BlogPostCard;

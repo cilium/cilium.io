@@ -15,7 +15,6 @@ const EventsPage = (props) => {
       featuredPostEdges: { nodes: featuredEvents },
     },
     pageContext: { types, currentType, currentPage, numPages },
-    location: { pathname },
   } = props;
 
   return (
@@ -58,6 +57,7 @@ export const blogPostsQuery = graphql`
           ogSummary
           externalUrl
           type
+          place
           ogImage {
             childImageSharp {
               gatsbyImageData(width: 550)
