@@ -5,7 +5,6 @@ title: 'How to supercharge Red Hat OpenShift with eBPF using Cilium'
 ogSummary: 'How to use eBPF and Cilium on your Red Hat OpenShift Environment'
 externalUrl: 'https://www.youtube.com/watch?v=F-9NCiQ_G-k'
 ogImage: ogImage.jpg
-type:
-  - Webinar
+type: Webinar
 isFeatured: false
 ---

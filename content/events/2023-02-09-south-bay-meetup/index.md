@@ -4,7 +4,6 @@ title: 'What’s New with Cilium & eBPF South Bay Meetup'
 ogSummary: 'Join team Isovalent for a meetup full of presentations and demos around what’s new with Cilium & eBPF.'
 externalUrl: 'https://isovalent.com/whats-new-with-cilium-ebpf-south-bay-meetup/'
 ogImage: ogImage.jpg
-type:
-  - Meetup
+type: Meetup
 isFeatured: false
 ---

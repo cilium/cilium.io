@@ -6,6 +6,8 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import ExternalLinkIcon from 'icons/external-link.inline.svg';
 
+import TypeLabel from './type-label';
+
 const FeaturedStory = ({
   className,
   title,
@@ -15,6 +17,7 @@ const FeaturedStory = ({
   ogSummary: summary,
   path,
   categories,
+  type,
   externalUrl,
   place,
 }) => {
@@ -68,7 +71,8 @@ const FeaturedStory = ({
                 {category}
               </span>
             ))}
-            {url && (
+            {type && <TypeLabel type={type} />}
+            {!type && url && (
               <div className="inline-flex h-8 items-center rounded bg-additional-4 bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider text-primary-1">
                 <span>External</span>
                 <ExternalLinkIcon className="ml-1" />
@@ -96,6 +100,7 @@ FeaturedStory.propTypes = {
   path: PropTypes.string,
   externalUrl: PropTypes.string,
   place: PropTypes.string,
+  type: PropTypes.oneOf(['Meetup', 'Webinar', 'Conference']),
 };
 
 FeaturedStory.defaultProps = {
@@ -106,6 +111,7 @@ FeaturedStory.defaultProps = {
   externalUrl: null,
   categories: null,
   place: null,
+  type: null,
 };
 
 export default FeaturedStory;

@@ -183,7 +183,7 @@ async function createEventsPage({ graphql, actions, reporter }) {
     );
   }
 
-  const types = ['*'].concat(allTypes.map((type) => type.fieldValue));
+  const types = allTypes.reduce((acc, type) => [...acc, type.fieldValue], ['*']);
 
   // Create type pages
   await Promise.all(
@@ -283,7 +283,7 @@ exports.onCreateNode = ({ node, actions }) => {
     createNodeField({
       node,
       name: 'type',
-      value: node.frontmatter.type || Array.of('*'),
+      value: node.frontmatter.type || '',
     });
   }
 };
