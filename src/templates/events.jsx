@@ -3,6 +3,7 @@
 import { graphql } from 'gatsby';
 import React from 'react';
 
+import EventsBoard from 'components/pages/events/events-board';
 import FeaturedEvent from 'components/pages/events/featured-event';
 import SEO from 'components/shared/seo';
 import MainLayout from 'layouts/main';
@@ -10,18 +11,26 @@ import MainLayout from 'layouts/main';
 const EventsPage = (props) => {
   const {
     data: {
-      allEvents: { nodes: allEvents },
+      allEvents: { nodes: events },
       featuredPostEdges: { nodes: featuredEvents },
     },
     pageContext: { types, currentType, currentPage, numPages },
     location: { pathname },
   } = props;
-  const isEventPage = pathname.startsWith('/events');
 
   const isTypePage = pathname.includes('type');
 
   return (
-    <MainLayout>{!isTypePage && <FeaturedEvent featuredStory={featuredEvents?.[0]} />}</MainLayout>
+    <MainLayout>
+      {!isTypePage && <FeaturedEvent featuredStory={featuredEvents?.[0]} />}
+      <EventsBoard
+        types={types}
+        events={events}
+        currentType={currentType}
+        currentPage={currentPage}
+        numPages={numPages}
+      />
+    </MainLayout>
   );
 };
 

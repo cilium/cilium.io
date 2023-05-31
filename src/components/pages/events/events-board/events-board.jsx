@@ -5,12 +5,8 @@ import Container from 'components/shared/container';
 import Filters from 'components/shared/filters';
 import Heading from 'components/shared/heading';
 
-import BlogPostsList from './blog-posts-list';
-import Categories from './categories';
-import Pagination from './pagination';
-
-const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
-  const blockTitle = currentCategory === '*' ? 'All posts' : currentCategory;
+const EventsBoard = ({ types, events, currentType, currentPage, numPages }) => {
+  const blockTitle = currentType === '*' ? 'All events' : currentType;
 
   const scrollTo = () => {
     const element = document.getElementById('filters');
@@ -30,20 +26,14 @@ const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages 
     <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{blockTitle}</Heading>
-        <Filters id="filters" filters={categories} currentFilter={currentCategory} type="blog" />
-        <BlogPostsList posts={posts} />
-        <Pagination
-          currentPage={currentPage}
-          numPages={numPages}
-          currentCategory={currentCategory}
-        />
+        <Filters id="filters" filters={types} currentFilter={currentType} type="event" />
       </Container>
     </section>
   );
 };
 
-PostsBoard.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.string).isRequired,
+EventsBoard.propTypes = {
+  types: PropTypes.arrayOf(PropTypes.string).isRequired,
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       frontmatter: PropTypes.shape({
@@ -60,9 +50,9 @@ PostsBoard.propTypes = {
       }),
     })
   ).isRequired,
-  currentCategory: PropTypes.string.isRequired,
+  currentType: PropTypes.oneOf(['*', 'Webinar', 'Meetup', 'Conference']).isRequired,
   currentPage: PropTypes.number.isRequired,
   numPages: PropTypes.number.isRequired,
 };
 
-export default PostsBoard;
+export default EventsBoard;

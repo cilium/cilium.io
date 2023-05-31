@@ -3,7 +3,7 @@ import React from 'react';
 
 import Link from 'components/shared/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
-import blogFilterToSlug from 'utils/blog-filter-to-slug';
+import { blogFilterToSlug } from 'utils/filter-to-slug';
 
 const Pagination = ({ currentPage, numPages, currentCategory }) => {
   const currentPath = blogFilterToSlug(currentCategory);
@@ -13,10 +13,10 @@ const Pagination = ({ currentPage, numPages, currentCategory }) => {
   const nextPage = currentPath + (currentPage + 1).toString();
   return (
     numPages > 1 && (
-      <div className="flex pt-8 mt-10 border-t border-gray-3">
+      <div className="mt-10 flex border-t border-gray-3 pt-8">
         {!isFirst && (
           <Link
-            className="flex mr-auto text-sm space-x-2.5 text-primary-1 tracking-wider items-center uppercase leading-none font-bold transition-colors duration-200 hover:text-gray-1"
+            className="mr-auto flex items-center space-x-2.5 text-sm font-bold uppercase leading-none tracking-wider text-primary-1 transition-colors duration-200 hover:text-gray-1"
             to={prevPage}
           >
             <ArrowIcon className="rotate-180" />
@@ -25,7 +25,7 @@ const Pagination = ({ currentPage, numPages, currentCategory }) => {
         )}
         {!isLast && (
           <Link
-            className="flex text-sm ml-auto space-x-2.5  text-primary-1 tracking-wider items-center uppercase leading-none font-bold transition-colors duration-200 hover:text-gray-1"
+            className="ml-auto flex items-center space-x-2.5  text-sm font-bold uppercase leading-none tracking-wider text-primary-1 transition-colors duration-200 hover:text-gray-1"
             to={nextPage}
           >
             <span>Next</span>
