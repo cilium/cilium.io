@@ -1,11 +1,11 @@
 ---
 date: '2023-05-27T15:56:00.000Z'
-title: 'Race condition between kube-proxy and cilium'
+title: 'Race condition between Kube-proxy and Cilium'
 ogImage: ogimage.jpg
-ogSummary: 'Microsoft announce the general availability of Isivalent Cilium enterprise on the Azure marketplace'
+ogSummary: 'Deep dive into an investigation where a race condition incident occured between Kube-proxy and Cilium'
 categories:
   - Community
-externalUrl: 'https://azure.microsoft.com/en-us/updates/general-availability-isovalent-cilium-enterprise-through-azure-marketplace/'
+externalUrl: 'https://blog.zhouhaibing.com/posts/race-condition-between-kube-proxy-and-cilium/ '
 tags:
   - Cilium
 ---
