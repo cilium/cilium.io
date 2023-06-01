@@ -4,5 +4,5 @@ export function blogFilterToSlug(item) {
 }
 
 export function eventFilterToSlug(item) {
-  return item === '*' ? '/event/' : `/event/${item.toLowerCase().replace(/\s/g, '-')}/`;
+  return item === '*' ? '/events/' : `/events/type/${item.toLowerCase().replace(/\s/g, '-')}/`;
 }

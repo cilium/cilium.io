@@ -3,23 +3,27 @@ import React, { useEffect } from 'react';
 
 import Container from 'components/shared/container';
 import Filters from 'components/shared/filters';
+import Heading from 'components/shared/heading';
 
 import EventList from './event-list';
 
-const EventsBoard = ({ types, events, currentType, currentPage, numPages }) => {
+const EventsBoard = ({ types, events, currentType, currentPage, numPages, isTypePage }) => {
   const scrollTo = () => {
     const element = document.getElementById('filters');
-    const offset = -50;
-    const y = element.getBoundingClientRect().top + window.pageYOffset + offset;
-
-    window.scrollTo({ top: y });
+    if (element) {
+      const offset = -50;
+      const elementTop = element.getBoundingClientRect().top;
+      const elementOffset = window.pageYOffset + elementTop + offset;
+      window.scrollTo({
+        top: elementOffset,
+      });
+    }
   };
-
   useEffect(() => {
-    if (currentPage > 1) {
+    if (isTypePage || currentPage > 1) {
       scrollTo();
     }
-  }, [currentPage]);
+  }, [isTypePage, currentPage]);
 
   return (
     <Container>
@@ -50,6 +54,7 @@ EventsBoard.propTypes = {
   currentType: PropTypes.oneOf(['*', 'Webinar', 'Meetup', 'Conference']).isRequired,
   currentPage: PropTypes.number.isRequired,
   numPages: PropTypes.number.isRequired,
+  isTypePage: PropTypes.bool.isRequired,
 };
 
 export default EventsBoard;

@@ -1,27 +1,24 @@
 import classNames from 'classnames';
 import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
-import React, { useCallback } from 'react';
+import React from 'react';
 
 import { blogFilterToSlug, eventFilterToSlug } from 'utils/filter-to-slug';
 
 const Filters = ({ id, filters, currentFilter, type }) => {
-  const handleFilterClick = useCallback(
-    (filter) => (event) => {
-      event.preventDefault();
-      let href = '';
-      if (type === 'blog') {
-        href = blogFilterToSlug(filter);
-      }
-      if (type === 'event') {
-        href = eventFilterToSlug(filter);
-      }
-      navigate(href, {
-        state: { preventScroll: true },
-      });
-    },
-    [type]
-  );
+  const handleFilterClick = (filter) => (event) => {
+    event.preventDefault();
+    let href = '';
+    if (type === 'blog') {
+      href = blogFilterToSlug(filter);
+    }
+    if (type === 'event') {
+      href = eventFilterToSlug(filter);
+    }
+    navigate(href, {
+      state: { preventScroll: true },
+    });
+  };
 
   return (
     <div

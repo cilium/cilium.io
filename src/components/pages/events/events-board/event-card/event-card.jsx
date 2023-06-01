@@ -61,7 +61,7 @@ const BlogPostCard = ({
   >
     <EventCover ogImage={ogImage} title={title} />
     <article className="flex grow flex-col p-5 md:p-7 xl:p-8">
-      <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium leading-none text-gray-1">
+      <div className="flex flex-col gap-y-2 text-sm font-medium leading-none text-gray-1">
         <time>{date}</time>
         <span>{place}</span>
       </div>

@@ -9,8 +9,7 @@ const BLOG_POSTS_PER_PAGE = 9;
 const slugifyCategory = (item) => (item === '*' ? 'blog/' : `blog/categories/${slugify(item)}/`);
 
 const EVENTS_PER_PAGE = 8;
-const slugifyEventType = (item) =>
-  item === '*' ? 'events/' : `events/categories/${slugify(item)}/`;
+const slugifyEventType = (item) => (item === '*' ? 'events/' : `events/type/${slugify(item)}/`);
 
 // Create Blog Posts
 async function createBlogPosts({ graphql, actions }) {

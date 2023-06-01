@@ -15,7 +15,10 @@ const EventsPage = (props) => {
       featuredPostEdges: { nodes: featuredEvents },
     },
     pageContext: { types, currentType, currentPage, numPages },
+    location: { pathname },
   } = props;
+
+  const isTypePage = pathname.includes('type');
 
   return (
     <MainLayout>
@@ -26,6 +29,7 @@ const EventsPage = (props) => {
         currentType={currentType}
         currentPage={currentPage}
         numPages={numPages}
+        isTypePage={isTypePage}
       />
     </MainLayout>
   );
