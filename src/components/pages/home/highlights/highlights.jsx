@@ -25,30 +25,37 @@ const list = [
       {
         icon: ScalableKubernetesIcon,
         title: 'High Performance Networking (CNI)',
+        path: 'cni',
       },
       {
         icon: NativeSupportIcon,
         title: 'Layer 4 Load Balancer',
+        path: 'load-balancer',
       },
       {
         icon: ConnectivityIcon,
         title: 'Cluster Mesh',
+        path: 'cluster-mesh',
       },
       {
         icon: BandWidthIcon,
         title: 'Bandwidth and Latency Optimization',
+        path: 'bandwidth-optimization',
       },
       {
         icon: BGPIcon,
         title: 'BGP',
+        path: 'bgp',
       },
       {
         icon: EgressGatewayIcon,
         title: 'Egress Gateway',
+        path: 'egress-gateway',
       },
       {
         icon: ServiceMesh,
         title: 'Service Mesh',
+        path: 'service-mesh',
       },
     ],
   },

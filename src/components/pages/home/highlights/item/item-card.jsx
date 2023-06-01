@@ -7,7 +7,7 @@ import ArrowIcon from 'icons/arrow.inline.svg';
 
 import ScalableKubernetesIcon from '../images/scalable-kubernetes.inline.svg';
 
-const ItemCard = ({ title }) => (
+const ItemCard = ({ title, path }) => (
   <div className="flex h-[210px] flex-col justify-around px-6">
     <div className="flex items-center">
       <ScalableKubernetesIcon />
@@ -15,7 +15,10 @@ const ItemCard = ({ title }) => (
         {title}
       </Heading>
     </div>
-    <Link to="item-page" className="mb-5 flex items-center gap-3 font-semibold text-[#3B82F6]">
+    <Link
+      to={`use-cases/${path}`}
+      className="mb-5 flex items-center gap-3 font-semibold text-[#3B82F6]"
+    >
       Learn More
       <span>
         <ArrowIcon />
@@ -26,6 +29,7 @@ const ItemCard = ({ title }) => (
 
 ItemCard.propTypes = {
   title: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
 };
 
 export default ItemCard;
