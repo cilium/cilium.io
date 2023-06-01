@@ -20,7 +20,7 @@ const EventCover = ({ ogImage, title }) => {
       <GatsbyImage
         imgClassName="self-center rounded-t-lg"
         image={getImage(ogImage)}
-        objectFit="contain"
+        objectFit="cover"
         alt={title}
         loading="lazy"
       />

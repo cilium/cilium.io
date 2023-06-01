@@ -10,7 +10,12 @@ const CardWithCta = () => (
     <h3 className="px-4 text-center text-22 font-bold leading-snug md:px-10">
       Join eCHO livestream - eBPF & Cilium Office Hours- every Friday!
     </h3>
-    <Button theme="primary-1" className="mt-6">
+    <Button
+      className="mt-6"
+      to="https://www.youtube.com/channel/UCJFUxkVQTBJh3LD1wYBWvuQ"
+      theme="primary-1"
+      target="_blank"
+    >
       Join Now
     </Button>
   </div>
