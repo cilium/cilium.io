@@ -495,7 +495,7 @@ export default {
   },
   clickhouse: {
     iconName: 'clickhouse',
-    text: 'ClickHouse uses Cilium as CNI for AWS Kubernetes environments',
+    text: 'ClickHouse uses Cilium and Hubble across multiple clouds',
     links: [
       {
         linkText: 'Read Case Study',
