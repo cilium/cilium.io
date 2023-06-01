@@ -43,6 +43,7 @@ module.exports = {
         },
         additional: {
           1: '#EB4748',
+          2: '#EBF5FF',
           3: '#00877C',
           4: '#D6EBFF',
         },
