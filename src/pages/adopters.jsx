@@ -119,6 +119,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    clickhouse,
     tietoevry,
     bloomberg,
     azure,
@@ -225,7 +226,6 @@ const userCommunity2 = {
     polverio,
     polarsignals,
     daimlertruck,
-    clickhouse,
     proton,
     cistec,
     kubehetzner,

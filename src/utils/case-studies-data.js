@@ -493,6 +493,17 @@ export default {
       },
     ],
   },
+  clickhouse: {
+    iconName: 'clickhouse',
+    text: 'ClickHouse uses Cilium and Hubble across multiple clouds',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/clickhouse/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   kubesphere: {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',
@@ -712,10 +723,6 @@ export default {
   daimlertruck: {
     iconName: 'daimlertruck',
     text: '<b>Daimler Truck</b> is maintaining an AKS k8s cluster as a shared resource for DevOps crews and is using Cilium as the default CNI',
-  },
-  clickhouse: {
-    iconName: 'clickhouse',
-    text: '<b>ClickHouse</b> uses Cilium as CNI for AWS Kubernetes environments',
   },
   proton: {
     iconName: 'proton',
