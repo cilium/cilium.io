@@ -4,9 +4,9 @@ import React, { useEffect } from 'react';
 import Container from 'components/shared/container';
 import Filters from 'components/shared/filters';
 import Heading from 'components/shared/heading';
+import Pagination from 'components/shared/pagination';
 
 import BlogPostsList from './blog-posts-list';
-import Pagination from './pagination';
 
 const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
   const blockTitle = currentCategory === '*' ? 'All posts' : currentCategory;
@@ -34,7 +34,8 @@ const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages 
         <Pagination
           currentPage={currentPage}
           numPages={numPages}
-          currentCategory={currentCategory}
+          currentItem={currentCategory}
+          type="blog"
         />
       </Container>
     </section>

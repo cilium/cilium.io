@@ -3,10 +3,10 @@ import React from 'react';
 
 import Link from 'components/shared/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
-import { blogFilterToSlug } from 'utils/filter-to-slug';
+import filterToSlug from 'utils/filter-to-slug';
 
-const Pagination = ({ currentPage, numPages, currentCategory }) => {
-  const currentPath = blogFilterToSlug(currentCategory);
+const Pagination = ({ currentPage, numPages, currentItem, type }) => {
+  const currentPath = filterToSlug(currentItem, type);
   const isFirst = currentPage === 1;
   const isLast = currentPage === numPages;
   const prevPage = currentPage - 1 === 1 ? currentPath : currentPath + (currentPage - 1).toString();
@@ -38,9 +38,10 @@ const Pagination = ({ currentPage, numPages, currentCategory }) => {
 };
 
 Pagination.propTypes = {
-  currentCategory: PropTypes.string.isRequired,
+  currentItem: PropTypes.string.isRequired,
   currentPage: PropTypes.number.isRequired,
   numPages: PropTypes.number.isRequired,
+  type: PropTypes.oneOf(['events', 'blog']).isRequired,
 };
 
 export default Pagination;

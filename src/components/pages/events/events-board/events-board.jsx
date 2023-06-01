@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 import Container from 'components/shared/container';
 import Filters from 'components/shared/filters';
-import Heading from 'components/shared/heading';
+import Pagination from 'components/shared/pagination';
 
 import EventList from './event-list';
 
@@ -27,8 +27,14 @@ const EventsBoard = ({ types, events, currentType, currentPage, numPages, isType
 
   return (
     <Container>
-      <Filters id="filters" filters={types} currentFilter={currentType} type="event" />
+      <Filters id="filters" filters={types} currentFilter={currentType} type="events" />
       <EventList events={events} />
+      <Pagination
+        currentPage={currentPage}
+        numPages={numPages}
+        currentItem={currentType}
+        type="events"
+      />
     </Container>
   );
 };

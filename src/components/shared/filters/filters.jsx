@@ -3,18 +3,12 @@ import { navigate } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import { blogFilterToSlug, eventFilterToSlug } from 'utils/filter-to-slug';
+import filterToSlug from 'utils/filter-to-slug';
 
 const Filters = ({ id, filters, currentFilter, type }) => {
   const handleFilterClick = (filter) => (event) => {
     event.preventDefault();
-    let href = '';
-    if (type === 'blog') {
-      href = blogFilterToSlug(filter);
-    }
-    if (type === 'event') {
-      href = eventFilterToSlug(filter);
-    }
+    const href = filterToSlug(filter, type);
     navigate(href, {
       state: { preventScroll: true },
     });
@@ -49,7 +43,7 @@ const Filters = ({ id, filters, currentFilter, type }) => {
 Filters.propTypes = {
   filters: PropTypes.arrayOf(PropTypes.string).isRequired,
   currentFilter: PropTypes.string.isRequired,
-  type: PropTypes.oneOf(['event', 'blog']).isRequired,
+  type: PropTypes.oneOf(['events', 'blog']).isRequired,
   id: PropTypes.string.isRequired,
 };
 

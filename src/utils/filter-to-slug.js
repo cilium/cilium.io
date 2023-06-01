@@ -1,8 +1,20 @@
 // helper function that performs filter-to-slug transformation
-export function blogFilterToSlug(item) {
-  return item === '*' ? '/blog/' : `/blog/categories/${item.toLowerCase().replace(/\s/g, '-')}/`;
-}
+export default function filterToSlug(item, type) {
+  let route = '';
 
-export function eventFilterToSlug(item) {
-  return item === '*' ? '/events/' : `/events/type/${item.toLowerCase().replace(/\s/g, '-')}/`;
+  switch (type) {
+    case 'blog':
+      route = 'categories';
+      break;
+    case 'events':
+      route = 'type';
+      break;
+    default:
+      break;
+  }
+
+  const slug =
+    item === '*' ? `/${type}/` : `/${type}/${route}/${item.toLowerCase().replace(/\s/g, '-')}/`;
+
+  return slug;
 }
