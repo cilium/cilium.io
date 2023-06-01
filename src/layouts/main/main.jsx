@@ -25,6 +25,7 @@ const navigation = [
   {
     name: 'News and media',
     childItems: [
+      { icon: AdoptersIcon, name: 'Events', href: '/events' },
       { icon: BlogIcon, name: 'Blog', href: '/blog' },
       {
         icon: BrandingIcon,
