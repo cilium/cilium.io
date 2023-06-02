@@ -6,6 +6,7 @@ import Heading from 'components/shared/heading';
 import LinuxfoundationLogo from 'icons/LF-Training-logo-color.inline.svg';
 import AcendLogo from 'icons/logo-acend.inline.svg';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
+import SoloioLogo from 'icons/logo-soloio.inline.svg';
 
 const title = 'Training';
 const description =
@@ -15,6 +16,7 @@ const logos = {
   acend: AcendLogo,
   isovalent: IsovalentLogo,
   linuxfoundation: LinuxfoundationLogo,
+  soloio: SoloioLogo
 };
 
 const items = [
@@ -42,6 +44,14 @@ const items = [
     description: 'Introductory course from the Linux Foundation on how to get started with Cilium',
     buttonText: 'Enroll Today',
     buttonLink: 'https://training.linuxfoundation.org/training/introduction-to-cilium-lfs146x/',
+    buttonTarget: '_blank',
+  },
+  {
+    logoName: 'soloio',
+    title: 'Introduction to Cilium',
+    description: 'In this workshop, you will learn the essential skills to deploy the Cilium CNI on a test Kubernetes cluster, gather metrics and enforce network policies.',
+    buttonText: 'Get Started',
+    buttonLink: 'https://academy.solo.io/introduction-to-cilium-with-fundamentals-for-cilium-certification',
     buttonTarget: '_blank',
   },
 ];
