@@ -34,7 +34,12 @@ const ItemPage = () => {
                     How can I implement efficient L4 load balancing with low overhead and cost?
                   </h3>
                   <p>
-                    Configuring and managing load balancing into your cluster can be challenging due to the complexity involved in setting up connectivity and synchronization between the clusters and the outside world. Traditional hardware load balancers can be very costly while software load balancers may not provide the performance you need. External-to-Pod (North-South) LB also typically requires additional tooling, adding more complexity, cost, and overhead.
+                    Configuring and managing load balancing into your cluster can be challenging due
+                    to the complexity involved in setting up connectivity and synchronization
+                    between the clusters and the outside world. Traditional hardware load balancers
+                    can be very costly while software load balancers may not provide the performance
+                    you need. External-to-Pod (North-South) LB also typically requires additional
+                    tooling, adding more complexity, cost, and overhead.
                   </p>
                 </div>
                 <div className="relative lg:basis-2/4">
@@ -52,9 +57,18 @@ const ItemPage = () => {
           <div className="container mx-auto w-10/12">
             <div className="block items-center gap-8 md:flex">
               <div className="pb-4 md:basis-[55%] md:pb-0 lg:basis-2/4">
-                <h3 className="mb-4 text-xl font-bold ">XDP and eBPF powered scalable Load Balancing and Ingress</h3>
+                <h3 className="mb-4 text-xl font-bold ">
+                  XDP and eBPF powered scalable Load Balancing and Ingress
+                </h3>
                 <p>
-                  Cilium can attract traffic with BGP and accelerate it leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing. Cilium and eBPF operate at the kernel layer. With this level of context intelligent decisions can be made about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance. Cilium Standalone load balancer offers a high-performance LB, providing huge throughput gains at a reduced CPU overhead.
+                  Cilium can attract traffic with BGP and accelerate it leveraging XDP and eBPF.
+                  Together these technologies provide a very robust and secure implementation of
+                  Load Balancing. Cilium and eBPF operate at the kernel layer. With this level of
+                  context intelligent decisions can be made about how to connect different workloads
+                  whether on the same node or between clusters. With eBPF and XDP Cilium enables
+                  significant improvements in latency and performance. Cilium Standalone load
+                  balancer offers a high-performance LB, providing huge throughput gains at a
+                  reduced CPU overhead.
                 </p>
               </div>
               <div className="lg:basis-2/4">
@@ -76,9 +90,15 @@ const ItemPage = () => {
           <div className="container mx-auto w-10/12">
             <div className="block items-center gap-8 md:flex">
               <div className="pb-4 md:basis-[55%] md:pb-0 lg:basis-2/4">
-                <h3 className="mb-4 text-xl font-bold ">Cilium Standalone Layer 4 Load Balancer XDP</h3>
+                <h3 className="mb-4 text-xl font-bold ">
+                  Cilium Standalone Layer 4 Load Balancer XDP
+                </h3>
                 <p>
-                Cilium's high performance, robust load balancing implementation is tuned for the scale and churn of cloud native environments. You can replace expensive legacy boxes in your network with Cilium as a standalone load balancer. This unlocks the potential of DSR and Maglev for handling north/south traffic in on-premises environments without requiring Kubernetes to manage the network border.
+                  Cilium's high performance, robust load balancing implementation is tuned for the
+                  scale and churn of cloud native environments. You can replace expensive legacy
+                  boxes in your network with Cilium as a standalone load balancer. This unlocks the
+                  potential of DSR and Maglev for handling north/south traffic in on-premises
+                  environments without requiring Kubernetes to manage the network border.
                 </p>
               </div>
               <div className="lg:basis-2/4">
@@ -98,7 +118,9 @@ const ItemPage = () => {
         </div>
         <div className="mt-12 mb-12">
           <div className="container mx-auto w-10/12">
-            <h3 className="mb-8 text-center text-xl font-bold">Who’s using Cilium for Layer 4 Load Balancing?</h3>
+            <h3 className="mb-8 text-center text-xl font-bold">
+              Who’s using Cilium for Layer 4 Load Balancing?
+            </h3>
             <div className="flex flex-col gap-8 md:gap-12">
               <div
                 className="block gap-4 rounded-[10px] bg-white  px-6 py-8 sm:items-center  md:flex md:px-12"
@@ -125,9 +147,18 @@ const ItemPage = () => {
                 </div>
 
                 <div className="w-full  text-center">
-                  <p className="mb-5 font-bold">Efficiently handling production traffic with Cilium Standalone Layer 4 Load Balancer XDP</p>
+                  <p className="mb-5 font-bold">
+                    Efficiently handling production traffic with Cilium Standalone Layer 4 Load
+                    Balancer XDP
+                  </p>
                   <p>
-                    Seznam previously used a multiple tier setup - ECMP routing as the first tier + IPVS as the second tier (L4 load balancer (L4LB)) + Envoy proxy as the third tier (L7 load balancer). They experienced increased traffic during COVID and needed a way to utilize hardware efficiently. Using  L4LB XDP consumed only half of a single CPU compared to 2x18 CPUs when IPVS was handling the traffic. By switching to L4LB XDP at the driver layer, Seznam was able to save 36 CPUs while doubling throughput.
+                    Seznam previously used a multiple tier setup - ECMP routing as the first tier +
+                    IPVS as the second tier (L4 load balancer (L4LB)) + Envoy proxy as the third
+                    tier (L7 load balancer). They experienced increased traffic during COVID and
+                    needed a way to utilize hardware efficiently. Using L4LB XDP consumed only half
+                    of a single CPU compared to 2x18 CPUs when IPVS was handling the traffic. By
+                    switching to L4LB XDP at the driver layer, Seznam was able to save 36 CPUs while
+                    doubling throughput.
                   </p>
                 </div>
               </div>
@@ -157,11 +188,16 @@ const ItemPage = () => {
 
                 <div className="w-full  text-center">
                   <p className="mb-5 font-bold">
-                  Software L4 Load Balancing for Kubernetes Services at Yahoo
+                    Software L4 Load Balancing for Kubernetes Services at Yahoo
                   </p>
                   <p>
                     <q>
-                    Yahoo needed a way to solve LB APIs not being optimized for dynamic updates, the absence of autoscaling, and a severe performance degradation with large number of cluster services. Switching to Cilium L4 LB powered by XDP provided Yahoo with performance on par with hardware LBs, ability to hook into Kubernetes to dynamically configure backends, support for direct return mode, high availability, and resiliency through Maglev consistent hashing.
+                      Yahoo needed a way to solve LB APIs not being optimized for dynamic updates,
+                      the absence of autoscaling, and a severe performance degradation with large
+                      number of cluster services. Switching to Cilium L4 LB powered by XDP provided
+                      Yahoo with performance on par with hardware LBs, ability to hook into
+                      Kubernetes to dynamically configure backends, support for direct return mode,
+                      high availability, and resiliency through Maglev consistent hashing.
                     </q>
                   </p>
                 </div>
