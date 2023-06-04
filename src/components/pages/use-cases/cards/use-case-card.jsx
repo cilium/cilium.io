@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+const customShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)';
+
 const UseCaseCard = ({ headingText, testimonials }) => {
   <div className="mt-12 mb-12">
     <div className="container mx-auto w-10/12">
