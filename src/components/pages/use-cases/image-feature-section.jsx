@@ -1,8 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const ImageFeatureSection = ({ title, description, imageSrc, imageAlt, imageRight }) => (
-  <div className="bg-white py-16">
+const ImageFeatureSection = ({
+  title,
+  description,
+  imageSrc,
+  imageAlt,
+  imageRight,
+  whiteBackground,
+}) => (
+  <div className={`py-16 ${whiteBackground ? 'bg-white' : ''}`}>
     <div className="container mx-auto w-10/12">
       <div className="block items-center gap-8 md:flex">
         {!imageRight && (
@@ -26,6 +33,7 @@ const ImageFeatureSection = ({ title, description, imageSrc, imageAlt, imageRigh
 
 ImageFeatureSection.defaultProps = {
   imageRight: true,
+  whiteBackground: false,
 };
 
 ImageFeatureSection.propTypes = {
@@ -34,6 +42,7 @@ ImageFeatureSection.propTypes = {
   imageSrc: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
   imageRight: PropTypes.bool,
+  whiteBackground: PropTypes.bool,
 };
 
 export default ImageFeatureSection;
