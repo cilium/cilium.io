@@ -1,9 +1,6 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
-// import ScalableKubernetesIcon from 'components/pages/home/highlights/images/scalable-kubernetes.inline.svg';
 import JoinUsCard from 'components/pages/use-cases/cards';
-import Link from 'components/shared/link/link';
 import SezamLogo from 'icons/logo-seznam.inline.svg';
 import YahooLogo from 'icons/logo-yahoo.inline.svg';
 import DetectiveBeeImage from 'images/pages/usecase/detective-bee.png';

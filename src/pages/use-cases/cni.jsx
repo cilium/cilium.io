@@ -30,7 +30,7 @@ const ItemPage = () => {
             <div>
               <div className="block items-center gap-8 md:flex">
                 <div className="pb-4 md:basis-[55%] md:pb-0 lg:basis-2/4">
-                  <h3 className="my-4 max-w-2xl text-xl font-bold md:my-8">
+                  <h3 className="my-4 text-xl font-bold md:my-8">
                     How can I have scalable and consistent networking across clouds?
                   </h3>
                   <p>
