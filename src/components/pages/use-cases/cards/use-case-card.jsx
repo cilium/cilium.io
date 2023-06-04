@@ -35,7 +35,14 @@ const UseCaseCard = ({ heading, testimonials }) => (
 
             <div className="w-full  text-center">
               <p className="mb-5 font-bold">{testimonial.title}</p>
-              <p>{testimonial.description}</p>
+              {testimonial.quote ? (
+                <q>
+                  <p>{testimonial.description}</p>
+                </q>
+              ) : (
+                <p>{testimonial.description}</p>
+              )}
+              {testimonial.person && <p>{testimonial.person}</p>}
             </div>
           </div>
         ))}
@@ -43,6 +50,10 @@ const UseCaseCard = ({ heading, testimonials }) => (
     </div>
   </div>
 );
+
+UseCaseCard.defaultProps = {
+  quote: false,
+};
 
 UseCaseCard.proptypes = {
   heading: PropTypes.string.isRequired,
@@ -53,6 +64,8 @@ UseCaseCard.proptypes = {
       CTAtext: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
+      quote: PropTypes.bool,
+      person: PropTypes.string,
     })
   ).isRequired,
 };
