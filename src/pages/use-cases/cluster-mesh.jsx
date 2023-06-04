@@ -1,7 +1,5 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
-// import ScalableKubernetesIcon from 'components/pages/home/highlights/images/scalable-kubernetes.inline.svg';
 import JoinUsCard from 'components/pages/use-cases/cards';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import Form3Logo from 'icons/logo-form3.inline.svg';
@@ -25,16 +23,17 @@ const ItemPage = () => {
               <span className=" my-3 inline-block rounded-[5px] bg-[#6b91c7]/30 py-1 px-12 font-bold text-[#6B91C7]">
                 Networking
               </span>
-              <h2 className="text-4xl font-bold">Cluster Mesh</h2>
+              <h2 className="text-4xl font-bold">Bandwidth and Latency Optimization</h2>
               <small className="font-semibold text-[#8E98AC]">
-                Unleashing the Power of Multi-Cluster Networking with Cilium ClusterMesh
+                Simple and intuitive network performance optimization
               </small>
             </div>
             <div>
               <div className="block items-center gap-8 md:flex">
                 <div className="pb-4 md:basis-[55%] md:pb-0 lg:basis-2/4">
                   <h3 className="my-4 max-w-2xl text-xl font-bold md:my-8">
-                    Seamless connectivity for multiple Kubernetes clusters
+                    Offering latency and throughput improvements while controlling pod network
+                    contention
                   </h3>
                   <p>
                     Multi-cluster kubernetes setups are often adopted for reasons like fault
@@ -257,7 +256,9 @@ const ItemPage = () => {
                 </div>
 
                 <div className="w-full  text-center">
-                  <p className="mb-5 font-bold">Building ClickHouse Cloud From Scratch in a Year</p>
+                  <p className="mb-5 font-bold">
+                    Building ClickHouseLogo Cloud From Scratch in a Year
+                  </p>
                   <p>
                     We use Cilium because it uses eBPF and provides high throughput, lower latency,
                     and less resource consumption, especially when the number of services is large.

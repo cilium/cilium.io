@@ -1,4 +1,3 @@
-import { navigate } from 'gatsby';
 import React from 'react';
 
 const customShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)';
