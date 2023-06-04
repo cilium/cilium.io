@@ -25,11 +25,11 @@ const ItemPage = () => {
               </small>
             </div>
             <div>
+              <h3 className="my-4 max-w-2xl text-xl font-bold md:my-8">
+                How can I implement efficient L4 load balancing with low overhead and cost?
+              </h3>
               <div className="block items-center gap-8 md:flex">
                 <div className="pb-4 md:basis-[55%] md:pb-0 lg:basis-2/4">
-                  <h3 className="my-4 max-w-2xl text-xl font-bold md:my-8">
-                    How can I implement efficient L4 load balancing with low overhead and cost?
-                  </h3>
                   <p>
                     Configuring and managing load balancing into your cluster can be challenging due
                     to the complexity involved in setting up connectivity and synchronization
