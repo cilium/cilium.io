@@ -10,9 +10,9 @@ import Form3Logo from 'icons/logo-form3.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
 import AstronautBee from 'images/pages/usecase/astronaut-bee.png';
 import ClusterMeshImage1 from 'images/pages/usecase/clustermesh-1.png';
+import ClusterMeshImage2 from 'images/pages/usecase/clustermesh-2.webp';
+import ClusterMeshImage3 from 'images/pages/usecase/clustermesh-3.webp';
 import ClusterMeshImage4 from 'images/pages/usecase/clustermesh-4.png';
-import ClusterMeshImage2 from 'images/pages/usecase/clutsermesh-2.png';
-import ClusterMeshImage3 from 'images/pages/usecase/clutsermesh-3.png';
 import MainLayout from 'layouts/main/main';
 
 const introContent = {
@@ -23,6 +23,7 @@ const introContent = {
   description:
     'Multi-cluster kubernetes setups are often adopted for reasons like fault isolation, scalability, and geographical distribution. This approach can lead to networking complexities. Traditional networking models, in this context, struggle with service discovery, network segmentation, policy enforcement, and load balancing across clusters. Additionally, managing security protocols and policies across multiple environments can be a challenging endeavor due to the distributed nature of services.',
   imageSrc: AstronautBee,
+  imageAlt: 'Astronaut Bee',
 };
 
 const sectionContent1 = {

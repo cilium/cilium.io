@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const IntroSection = ({ category, title, tagline, subHeading, description, imageSrc }) => (
+const IntroSection = ({
+  category,
+  title,
+  tagline,
+  subHeading,
+  description,
+  imageSrc,
+  imageAlt,
+}) => (
   <div className="pt-8 pb-16">
     <div className="container mx-auto w-10/12">
       <div>
@@ -17,12 +25,8 @@ const IntroSection = ({ category, title, tagline, subHeading, description, image
             <h3 className="my-4 max-w-2xl text-xl font-bold md:my-8">{subHeading}</h3>
             <p>{description}</p>
           </div>
-          <div className="relative lg:basis-2/4">
-            <img
-              className="hidden max-h-[300px] md:block lg:absolute lg:top-2/4 lg:left-2/4 lg:-translate-y-1/2 lg:-translate-x-1/2 lg:overflow-hidden"
-              src={imageSrc}
-              alt="astronaut bee"
-            />
+          <div className="inline-block lg:basis-2/4">
+            <img className="mx-auto max-h-[350px]" src={imageSrc} alt={imageAlt} />
           </div>
         </div>
       </div>
@@ -37,6 +41,7 @@ IntroSection.propTypes = {
   subHeading: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string.isRequired,
 };
 
 export default IntroSection;

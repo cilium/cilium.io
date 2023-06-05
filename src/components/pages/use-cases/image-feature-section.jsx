@@ -13,7 +13,7 @@ const ImageFeatureSection = ({
     <div className="container mx-auto w-10/12">
       <div className="block items-center gap-8 md:flex">
         {!imageRight && (
-          <div className="lg:basis-2/4">
+          <div className="inline-block lg:basis-2/4">
             <img src={imageSrc} alt={imageAlt} />
           </div>
         )}
@@ -22,7 +22,7 @@ const ImageFeatureSection = ({
           <p>{description}</p>
         </div>
         {imageRight && (
-          <div className="lg:basis-2/4">
+          <div className="inline-block lg:basis-2/4">
             <img src={imageSrc} alt={imageAlt} />
           </div>
         )}
