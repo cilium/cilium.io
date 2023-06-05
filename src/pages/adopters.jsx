@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  eficode,
   tietoevry,
   unitedcloud,
   planetscale,
@@ -119,6 +120,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    eficode,
     clickhouse,
     tietoevry,
     bloomberg,

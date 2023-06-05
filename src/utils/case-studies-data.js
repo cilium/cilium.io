@@ -504,6 +504,17 @@ export default {
       },
     ],
   },
+  eficode: {
+    iconName: 'eficode',
+    text: 'Eficode uses Cilium and Hubble as the default networking and observability solution for their customers',
+    links: [
+      {
+        linkText: 'Watch Video',
+        linkUrl: 'https://youtu.be/RdAO_Kxe6tE?t=509',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   kubesphere: {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',
