@@ -9,6 +9,7 @@ import BGPIcon from './images/bgp.inline.svg';
 import ConnectivityIcon from './images/connectivity.inline.svg';
 import EgressGatewayIcon from './images/egress-gateway.inline..svg';
 import EncryptionIcon from './images/encryption.inline.svg';
+import KubeProxyIcon from './images/kubeproxy.inline.svg';
 import MetricsIcon from './images/metrics.inline.svg';
 import NativeSupportIcon from './images/native-support.inline.svg';
 import NetworkPolicyIcon from './images/network-policy.inline.svg';
@@ -41,6 +42,11 @@ const list = [
         icon: BandWidthIcon,
         title: 'Bandwidth and Latency Optimization',
         path: 'bandwidth-optimization',
+      },
+      {
+        icon: KubeProxyIcon,
+        title: 'Kube-proxy Replacement',
+        path: 'kube-proxy',
       },
       {
         icon: BGPIcon,
