@@ -23,7 +23,7 @@ const ImageFeatureSection = ({
         </div>
         {imageRight && (
           <div className="inline-block lg:basis-2/4">
-            <img src={imageSrc} alt={imageAlt} />
+            <img className="max-h-[400px]" src={imageSrc} alt={imageAlt} />
           </div>
         )}
       </div>

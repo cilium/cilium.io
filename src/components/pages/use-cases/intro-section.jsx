@@ -25,7 +25,7 @@ const IntroSection = ({
             <h3 className="my-4 max-w-2xl text-xl font-bold capitalize md:my-8">{subHeading}</h3>
             <p>{description}</p>
           </div>
-          <div className="inline-block lg:basis-2/4">
+          <div className="inline-block max-h-[350px] lg:basis-2/4">
             <img className="mx-auto max-h-[350px]" src={imageSrc} alt={imageAlt} />
           </div>
         </div>
