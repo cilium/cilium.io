@@ -92,7 +92,7 @@ const list = [
       {
         icon: ObservabilityIcon,
         title: 'Advanced Network Protocol Visibility',
-        path: 'network-visibility',
+        path: 'protocol-visibility',
       },
     ],
   },
