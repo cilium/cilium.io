@@ -96,46 +96,25 @@ const list = [
       },
     ],
   },
+
   {
     title: 'Security',
     items: [
       {
         icon: EncryptionIcon,
         title: 'Transparent Encryption',
+        path: 'transparent-encryption',
       },
 
       {
         icon: AuditIcon,
-        title: 'Security Forensics + Audit',
+        title: 'Runtime Enforcement',
+        path: 'runtime-enforcement',
       },
       {
         icon: EncryptionIcon,
-        title: 'Transparent Encryption',
-      },
-
-      {
-        icon: AuditIcon,
-        title: 'Security Forensics + Audit',
-      },
-
-      {
-        icon: NetworkPolicyIcon,
-        title: 'Advanced Network Policy',
-      },
-      {
-        icon: NativeSupportIcon,
-        title: 'Service Load Balancing',
-        description: `<p>Kubernetes doesn't come with an implementation of Load Balancing. This is usually left as an exercise for your cloud provider or in private cloud environments an exercise for your networking team. Cilium can attract this traffic with BGP and accelerate leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing.</p><p>Cilium and eBPF operate at the kernel layer. With this level of context we can make intelligent decisions about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance and eliminates the need for kube-proxy entirely.</p>`,
-      },
-      {
-        icon: ScalableKubernetesIcon,
-        title: 'Scalable Kubernetes CNI',
-        description: `Cilium’s control and data plane has been built from the ground up for large-scale and highly dynamic cloud native environments where 100s and even 1000s of containers are created and destroyed within seconds. Cilium’s control plane is highly optimized, running in Kubernetes clusters of up to 5K nodes and 100K pods. Cilium’s data plane uses eBPF for efficient load-balancing and incremental updates, avoiding the pitfalls of large iptables rulesets. Cilium is fully IPv6-aware.`,
-      },
-      {
-        icon: ConnectivityIcon,
-        title: 'Multi-cluster Connectivity',
-        description: `With standard Kubernetes networking each cluster is an island, requiring proxies to connect workloads across clusters for the purposes of migration, disaster-recovery, or geographic locality. Cilium Cluster Mesh creates a single zone of connectivity for load-balancing, observability and security between nodes across multiple clusters, enabling simple, high-performance cross-cluster connectivity.`,
+        title: 'Network Policy',
+        path: 'network-policy',
       },
     ],
   },
