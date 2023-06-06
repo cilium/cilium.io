@@ -1,18 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
-import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
-import Form3Logo from 'icons/logo-form3.inline.svg';
-import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
-import AstronautBee from 'images/pages/usecase/astronaut-bee.png';
-import ClusterMeshImage2 from 'images/pages/usecase/clustermesh-2.webp';
-import ClusterMeshImage3 from 'images/pages/usecase/clustermesh-3.webp';
-import ClusterMeshImage4 from 'images/pages/usecase/clustermesh-4.png';
-import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.webp';
 import MainLayout from 'layouts/main/main';
 
 const introContent = {
