@@ -9,6 +9,8 @@ const IntroSection = ({
   description,
   imageSrc,
   imageAlt,
+  videoSrc,
+  isImage,
 }) => (
   <div className="pt-8 pb-16">
     <div className="container mx-auto w-10/12">
@@ -26,13 +28,30 @@ const IntroSection = ({
             <p>{description}</p>
           </div>
           <div className="inline-block max-h-[350px] lg:basis-2/4">
-            <img className="mx-auto max-h-[350px]" src={imageSrc} alt={imageAlt} />
+            {isImage ? (
+              <img className="mx-auto max-h-[350px]" src={imageSrc} alt={imageAlt} />
+            ) : (
+              <iframe
+                className="h-[300px] w-full"
+                width="560"
+                height="315"
+                src={videoSrc}
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            )}
           </div>
         </div>
       </div>
     </div>
   </div>
 );
+
+IntroSection.defaultProps = {
+  videoSrc: '',
+  isImage: true,
+};
 
 IntroSection.propTypes = {
   category: PropTypes.string.isRequired,
@@ -42,6 +61,8 @@ IntroSection.propTypes = {
   description: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
+  isImage: PropTypes.string,
+  videoSrc: PropTypes.string,
 };
 
 export default IntroSection;

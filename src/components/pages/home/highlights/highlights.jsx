@@ -63,6 +63,11 @@ const list = [
         title: 'Service Mesh',
         path: 'service-mesh',
       },
+      {
+        icon: ServiceMesh,
+        title: 'Gateway API',
+        path: 'gateway-api',
+      },
     ],
   },
 
