@@ -76,35 +76,23 @@ const list = [
     items: [
       {
         icon: VisibilityIcon,
-        title: 'Identity-aware Visibility',
+        title: 'Service Map',
+        path: 'service-map',
       },
       {
         icon: ObservabilityIcon,
-        title: 'Advanced Self Service Observability',
+        title: 'Metrics & Tracing Export',
+        path: 'metrics-export',
       },
       {
         icon: VisibilityIcon,
-        title: 'Identity-aware Visibility',
+        title: 'Identity-aware L3/L4/DNS Network Flow Logs',
+        path: 'network-flow-logs',
       },
       {
         icon: ObservabilityIcon,
-        title: 'Advanced Self Service Observability',
-      },
-      {
-        icon: MetricsIcon,
-        title: 'Network Metrics + Policy Troubleshooting',
-      },
-      {
-        icon: NativeSupportIcon,
-        title: 'Service Load Balancing',
-      },
-      {
-        icon: ScalableKubernetesIcon,
-        title: 'Scalable Kubernetes CNI',
-      },
-      {
-        icon: ConnectivityIcon,
-        title: 'Multi-cluster Connectivity',
+        title: 'Advanced Network Protocol Visibility',
+        path: 'network-visibility',
       },
     ],
   },
