@@ -16,6 +16,7 @@ const introContent = {
   description:
     'Gateway API addresses the limitations of the Kubernetes Ingress API, which has traditionally been used to route traffic into Kubernetes clusters. While the Ingress API supports basic routing based on path and host rules, it lacks support for advanced routing features, only supports HTTP and HTTPS traffic, doesn’t separate out user/operator concerns, and can lead to inconsistencies due to vendor-specific annotations. Gateway API overcomes these constraints, providing a more robust, extensible, and role-oriented approach to traffic engineering.​',
   imageSrc: GatewayImage1,
+  imageAlt: 'cilium gateway api illustration',
 };
 
 const sectionContent1 = {
