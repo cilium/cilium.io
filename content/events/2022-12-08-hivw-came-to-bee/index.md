@@ -1,6 +1,6 @@
 ---
 date: '2022-12-08T11:00:00.000Z'
-location:
+region: Online
 place: Online
 title: 'How the Hive came to Bee - Cilium as an eBPF use case'
 ogSummary: 'The final part of the series is presented by Joe Stringer (Cilium maintainer)'
