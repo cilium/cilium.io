@@ -105,16 +105,16 @@ const list = [
         title: 'Transparent Encryption',
         path: 'transparent-encryption',
       },
+      {
+        icon: EncryptionIcon,
+        title: 'Network Policy',
+        path: 'network-policy',
+      },
 
       {
         icon: AuditIcon,
         title: 'Runtime Enforcement',
         path: 'runtime-enforcement',
-      },
-      {
-        icon: EncryptionIcon,
-        title: 'Network Policy',
-        path: 'network-policy',
       },
     ],
   },
