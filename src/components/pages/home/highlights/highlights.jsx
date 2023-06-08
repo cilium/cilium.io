@@ -7,16 +7,18 @@ import AuditIcon from './images/audit.inline.svg';
 import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
 import BGPIcon from './images/bgp.inline.svg';
 import ConnectivityIcon from './images/connectivity.inline.svg';
-import EgressGatewayIcon from './images/egress-gateway.inline..svg';
+import EgressGatewayIcon from './images/egress-gateway.inline.svg';
 import EncryptionIcon from './images/encryption.inline.svg';
 import KubeProxyIcon from './images/kubeproxy.inline.svg';
-import MetricsIcon from './images/metrics.inline.svg';
+import MetricsIcon from './images/metrics-export.inline.svg';
 import NativeSupportIcon from './images/native-support.inline.svg';
+import NetworkFlowLogs from './images/network-flow.inline.svg';
 import NetworkPolicyIcon from './images/network-policy.inline.svg';
-import ObservabilityIcon from './images/observability.inline.svg';
+import AdvancedProtocolVisibilityIcon from './images/protocol-visibility.inline.svg';
+import RuntimeEnforcementIcon from './images/runtime-enforcement.inline.svg';
 import ScalableKubernetesIcon from './images/scalable-kubernetes.inline.svg';
-import ServiceMesh from './images/service-mesh.inline.svg';
-import VisibilityIcon from './images/visibility.inline.svg';
+import ServiceMapIcon from './images/service-map.inline.svg';
+import ServiceMeshIcon from './images/service-mesh.inline.svg';
 import ItemCard from './item/item-card';
 
 const list = [
@@ -59,12 +61,12 @@ const list = [
         path: 'egress-gateway',
       },
       {
-        icon: ServiceMesh,
+        icon: ServiceMeshIcon,
         title: 'Service Mesh',
         path: 'service-mesh',
       },
       {
-        icon: ServiceMesh,
+        icon: AuditIcon,
         title: 'Gateway API',
         path: 'gateway-api',
       },
@@ -75,22 +77,22 @@ const list = [
     title: 'Observability',
     items: [
       {
-        icon: VisibilityIcon,
+        icon: ServiceMapIcon,
         title: 'Service Map',
         path: 'service-map',
       },
       {
-        icon: ObservabilityIcon,
+        icon: MetricsIcon,
         title: 'Metrics & Tracing Export',
         path: 'metrics-export',
       },
       {
-        icon: VisibilityIcon,
+        icon: NetworkFlowLogs,
         title: 'Identity-aware L3/L4/DNS Network Flow Logs',
         path: 'network-flow-logs',
       },
       {
-        icon: ObservabilityIcon,
+        icon: AdvancedProtocolVisibilityIcon,
         title: 'Advanced Network Protocol Visibility',
         path: 'protocol-visibility',
       },
@@ -106,13 +108,13 @@ const list = [
         path: 'transparent-encryption',
       },
       {
-        icon: EncryptionIcon,
+        icon: NetworkPolicyIcon,
         title: 'Network Policy',
         path: 'network-policy',
       },
 
       {
-        icon: AuditIcon,
+        icon: RuntimeEnforcementIcon,
         title: 'Runtime Enforcement',
         path: 'runtime-enforcement',
       },

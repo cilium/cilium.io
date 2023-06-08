@@ -5,12 +5,10 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
 
-import ScalableKubernetesIcon from '../images/scalable-kubernetes.inline.svg';
-
-const ItemCard = ({ title, path }) => (
+const ItemCard = ({ icon: Icon, title, path }) => (
   <div className="flex h-[210px] flex-col justify-around px-6">
     <div className="flex items-center">
-      <ScalableKubernetesIcon />
+      <Icon />
       <Heading className="mx-4 text-left" size="3xs" tag="h3">
         {title}
       </Heading>
@@ -28,6 +26,7 @@ const ItemCard = ({ title, path }) => (
 );
 
 ItemCard.propTypes = {
+  icon: PropTypes.any.isRequired,
   title: PropTypes.string.isRequired,
   path: PropTypes.string.isRequired,
 };
