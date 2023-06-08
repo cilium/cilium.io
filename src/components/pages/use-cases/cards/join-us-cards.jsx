@@ -3,7 +3,7 @@ import React from 'react';
 const customShadow = '0px 4px 4px rgba(0, 0, 0, 0.25)';
 
 const JoinUsCard = () => (
-  <div className="pt-0 pb-12 md:pb-24 md:pt-8">
+  <div className="my-2 pt-0 pb-12 md:pb-24 md:pt-8">
     <div className="container mx-auto w-10/12">
       <h3 className="mb-8 text-center text-xl font-bold">Want to Learn More?</h3>
       <div className="flex flex-col flex-wrap gap-8 md:grid md:grid-cols-2 md:gap-8 lg:grid lg:grid-cols-3 lg:gap-16">
