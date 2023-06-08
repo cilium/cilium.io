@@ -61,7 +61,7 @@ const testimonials = [
   },
 ];
 
-const ClusterMeshPage = () => (
+const NetworkFlowLogs = () => (
   <MainLayout>
     <section className="bg-[#F6F7F8]">
       <IntroSection {...introContent} />
@@ -76,4 +76,4 @@ const ClusterMeshPage = () => (
   </MainLayout>
 );
 
-export default ClusterMeshPage;
+export default NetworkFlowLogs;

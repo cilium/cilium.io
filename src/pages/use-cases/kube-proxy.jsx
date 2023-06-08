@@ -67,7 +67,7 @@ const testimonials = [
   },
 ];
 
-const ClusterMeshPage = () => (
+const KubeProxyReplacementPage = () => (
   <MainLayout>
     <section className="bg-[#F6F7F8]">
       <IntroSection {...introContent} />
@@ -83,4 +83,4 @@ const ClusterMeshPage = () => (
   </MainLayout>
 );
 
-export default ClusterMeshPage;
+export default KubeProxyReplacementPage;

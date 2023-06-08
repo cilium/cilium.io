@@ -70,7 +70,7 @@ const testimonials = [
   },
 ];
 
-const ClusterMeshPage = () => (
+const MetricsExportPage = () => (
   <MainLayout>
     <section className="bg-[#F6F7F8]">
       <IntroSection {...introContent} />
@@ -86,4 +86,4 @@ const ClusterMeshPage = () => (
   </MainLayout>
 );
 
-export default ClusterMeshPage;
+export default MetricsExportPage;

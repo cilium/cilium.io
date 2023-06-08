@@ -48,7 +48,7 @@ const sectionContent4 = {
   videoSrc: 'https://www.youtube.com/embed/WhVyZZ_QkVA',
 };
 
-const ClusterMeshPage = () => (
+const ServiceMeshPage = () => (
   <MainLayout>
     <section className="bg-[#F6F7F8]">
       <IntroSection {...introContent} />
@@ -61,4 +61,4 @@ const ClusterMeshPage = () => (
   </MainLayout>
 );
 
-export default ClusterMeshPage;
+export default ServiceMeshPage;

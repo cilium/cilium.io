@@ -43,7 +43,7 @@ const sectionContent3 = {
   videoSrc: 'https://www.youtube.com/embed/48ej2qIP92Y',
 };
 
-const ClusterMeshPage = () => (
+const GatewayAPIPage = () => (
   <MainLayout>
     <section className="bg-[#F6F7F8]">
       <IntroSection {...introContent} />
@@ -55,4 +55,4 @@ const ClusterMeshPage = () => (
   </MainLayout>
 );
 
-export default ClusterMeshPage;
+export default GatewayAPIPage;

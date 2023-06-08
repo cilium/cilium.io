@@ -2,7 +2,6 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
@@ -48,7 +47,7 @@ const testimonials = [
   },
 ];
 
-const ClusterMeshPage = () => (
+const TransparentEncryptionPage = () => (
   <MainLayout>
     <section className="bg-[#F6F7F8]">
       <IntroSection {...introContent} />
@@ -62,4 +61,4 @@ const ClusterMeshPage = () => (
   </MainLayout>
 );
 
-export default ClusterMeshPage;
+export default TransparentEncryptionPage;
