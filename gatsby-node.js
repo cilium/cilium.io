@@ -1,15 +1,13 @@
 const fetch = require(`node-fetch`);
 const Path = require('path');
 
+const { EVENT_REGEX, EVENTS_BASE_PATH } = require('./src/utils/events');
 const { slugify } = require('./src/utils/slugify');
 
 const DRAFT_FILTER = process.env.NODE_ENV === 'production' ? [false] : [true, false];
 
 const BLOG_POSTS_PER_PAGE = 9;
 const slugifyCategory = (item) => (item === '*' ? 'blog/' : `blog/categories/${slugify(item)}/`);
-
-const EVENTS_PER_PAGE = 8;
-const slugifyEventType = (item) => (item === '*' ? 'events/' : `events/type/${slugify(item)}/`);
 
 // Create Blog Posts
 async function createBlogPosts({ graphql, actions }) {
@@ -146,97 +144,115 @@ async function createBlogPages({ graphql, actions, reporter }) {
 }
 
 // Create Events Page
-async function createEventsPage({ graphql, actions, reporter }) {
+async function createEventsPage({ graphql, actions }) {
   const { createPage } = actions;
 
-  const {
-    data: {
-      featuredEventEdges: { nodes: featuredEvent },
-      allTypes: { group: allTypes },
-    },
-  } = await graphql(`
-    {
-      allTypes: allMdx(filter: { fileAbsolutePath: { regex: "/content/events/" } }) {
-        group(field: frontmatter___type) {
-          fieldValue
+  const result = await graphql(
+    `
+      query ($draftFilter: [Boolean]!, $eventRegex: String!) {
+        allMdx(
+          filter: {
+            fileAbsolutePath: { regex: $eventRegex }
+            fields: { draft: { in: $draftFilter } }
+          }
+        ) {
+          totalCount
         }
-      }
-      featuredEventEdges: allMdx(
-        filter: {
-          fileAbsolutePath: { regex: "/content/events/" }
-          fields: { isFeatured: { eq: true } }
+        allTypes: allMdx(filter: { fileAbsolutePath: { regex: $eventRegex } }) {
+          group(field: frontmatter___type) {
+            fieldValue
+          }
         }
-      ) {
-        nodes {
-          fileAbsolutePath
+        allRegions: allMdx(filter: { fileAbsolutePath: { regex: $eventRegex } }) {
+          group(field: frontmatter___region) {
+            fieldValue
+          }
         }
-      }
-    }
-  `);
-
-  if (featuredEvent?.length > 1) {
-    const featuredEvents = featuredEvent.map((event) => event.fileAbsolutePath);
-    reporter.panicOnBuild(
-      `There must be the only one featured event. Please, check "isFeatured" fields in your events. ${featuredEvents}`,
-      new Error('Too much featured events')
-    );
-  }
-
-  const types = allTypes.reduce((acc, type) => [...acc, type.fieldValue], ['*']);
-
-  // Create type pages
-  await Promise.all(
-    types.map(async (type) =>
-      graphql(
-        `
-          query TypePostsQuery($tag: String!, $draftFilter: [Boolean]!) {
-            allMdx(
-              filter: {
-                fileAbsolutePath: { regex: "/content/events/" }
-                fields: {
-                  isFeatured: { eq: false }
-                  type: { glob: $tag }
-                  draft: { in: $draftFilter }
+        allPosts: allMdx(
+          filter: {
+            fileAbsolutePath: { regex: $eventRegex }
+            fields: { draft: { in: $draftFilter }, isFeatured: { eq: true } }
+          }
+          sort: { fields: frontmatter___date, order: DESC }
+        ) {
+          nodes {
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              region
+              place
+              type
+              title
+              ogSummary
+              externalUrl
+              ogImage {
+                childImageSharp {
+                  gatsbyImageData(width: 733)
                 }
-              }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  id
-                }
+                publicURL
               }
             }
           }
-        `,
-        { tag: type, draftFilter: DRAFT_FILTER }
-      ).then((result) => {
-        if (result.errors) throw result.errors;
-        const events = result.data.allMdx.edges;
-        const numPages = Math.ceil(events.length / EVENTS_PER_PAGE);
-        const pathBase = slugifyEventType(type);
-
-        Array.from({ length: numPages }).forEach((_, i) => {
-          const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
-          createPage({
-            path,
-            component: Path.resolve('./src/templates/events.jsx'),
-            context: {
-              limit: EVENTS_PER_PAGE,
-              skip: i * EVENTS_PER_PAGE,
-              numPages,
-              currentPage: i + 1,
-              currentType: type,
-              types,
-              // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
-              draftFilter: DRAFT_FILTER,
-              slug: path,
-            },
-          });
-        });
-      })
-    )
+        }
+        featuredPost: allMdx(
+          filter: {
+            fileAbsolutePath: { regex: $eventRegex }
+            fields: { draft: { in: $draftFilter }, isFeatured: { eq: true } }
+          }
+          limit: 1
+        ) {
+          nodes {
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              region
+              place
+              type
+              title
+              ogSummary
+              externalUrl
+              ogImage {
+                childImageSharp {
+                  gatsbyImageData(width: 967)
+                }
+                publicURL
+              }
+            }
+          }
+        }
+      }
+    `,
+    { draftFilter: DRAFT_FILTER, eventRegex: EVENT_REGEX }
   );
+
+  if (result.errors) throw new Error(result.errors);
+
+  const { totalCount } = result.data.allMdx;
+  const {
+    featuredPost: { nodes: featuredPost },
+    allPosts: { nodes: allEvents },
+    allTypes: { group: allTypes },
+    allRegions: { group: allRegions },
+  } = result.data;
+
+  function getFrontmatterData(items) {
+    return items.map((item) => ({ ...item.frontmatter }));
+  }
+
+  const postEvents = getFrontmatterData(allEvents);
+  const featuredEvent = featuredPost[0].frontmatter;
+  const types = allTypes.reduce((acc, type) => [...acc, type.fieldValue], ['*']);
+  const regions = allRegions.reduce((acc, type) => [...acc, type.fieldValue], ['*']);
+
+  createPage({
+    path: EVENTS_BASE_PATH,
+    component: Path.resolve('./src/templates/events.jsx'),
+    context: {
+      featuredEvent,
+      postEvents,
+      totalCount,
+      types,
+      regions,
+    },
+  });
 }
 
 exports.createPages = async (options) => {
@@ -283,6 +299,11 @@ exports.onCreateNode = ({ node, actions }) => {
       node,
       name: 'type',
       value: node.frontmatter.type || '',
+    });
+    createNodeField({
+      node,
+      name: 'region',
+      value: node.frontmatter.region || '',
     });
   }
 };

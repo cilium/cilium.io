@@ -11,27 +11,21 @@ import MainLayout from 'layouts/main';
 
 const EventsPage = (props) => {
   const {
-    data: {
-      allEvents: { nodes: events },
-      featuredPostEdges: { nodes: featuredEvents },
-    },
-    pageContext: { types, currentType, currentPage, numPages },
+    pageContext: { featuredEvent, postEvents, totalCount, types, regions },
     location: { pathname },
   } = props;
 
-  const isTypePage = pathname.includes('type');
-
   return (
     <MainLayout>
-      <FeaturedEvent featuredStory={featuredEvents?.[0]} />
-      <EventsBoard
+      <FeaturedEvent featuredStory={featuredEvent} />
+      {/* <EventsBoard
         types={types}
-        events={events}
+        events={postEvents}
         currentType={currentType}
         currentPage={currentPage}
         numPages={numPages}
         isTypePage={isTypePage}
-      />
+      /> */}
       <EventsSubscribe />
     </MainLayout>
   );
@@ -40,61 +34,3 @@ const EventsPage = (props) => {
 export default EventsPage;
 
 export const Head = ({ location: { pathname } }) => <SEO pathname={pathname} />;
-
-export const blogPostsQuery = graphql`
-  query blogPostsQuery($skip: Int!, $limit: Int!, $currentType: String!, $draftFilter: [Boolean]!) {
-    allEvents: allMdx(
-      filter: {
-        fileAbsolutePath: { regex: "/content/events/" }
-        fields: {
-          type: { glob: $currentType }
-          isFeatured: { eq: false }
-          draft: { in: $draftFilter }
-        }
-      }
-      sort: { order: DESC, fields: frontmatter___date }
-      limit: $limit
-      skip: $skip
-    ) {
-      nodes {
-        frontmatter {
-          date(locale: "en", formatString: "MMM DD, yyyy")
-          title
-          ogSummary
-          externalUrl
-          type
-          place
-          ogImage {
-            childImageSharp {
-              gatsbyImageData(width: 550)
-            }
-          }
-        }
-      }
-    }
-
-    featuredPostEdges: allMdx(
-      filter: {
-        fileAbsolutePath: { regex: "/content/events/" }
-        fields: { isFeatured: { eq: true } }
-      }
-    ) {
-      nodes {
-        frontmatter {
-          date(locale: "en", formatString: "MMM DD, yyyy")
-          type
-          place
-          title
-          ogSummary
-          externalUrl
-          ogImage {
-            childImageSharp {
-              gatsbyImageData(width: 735)
-            }
-          }
-        }
-        fileAbsolutePath
-      }
-    }
-  }
-`;

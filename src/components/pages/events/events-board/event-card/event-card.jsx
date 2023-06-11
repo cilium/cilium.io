@@ -5,7 +5,7 @@ import React from 'react';
 
 import Link from 'components/shared/link';
 import TypeLabel from 'components/shared/type-label';
-import useElementRect from 'utils/use-element-rect';
+import useElementRect from 'hooks/use-element-rect';
 
 import placeholderIllustration from './images/placeholder.svg';
 
