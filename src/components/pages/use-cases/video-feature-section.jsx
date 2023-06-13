@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const VideoFeatureSection = ({ title, description, videoSrc, whiteBackground }) => (
+const VideoFeatureSection = ({ title, description, videoSrc, whiteBackground, videoLeft }) => (
   <div className={`py-16 ${whiteBackground ? 'bg-white' : ''}`}>
     <div className="container mx-auto w-10/12">
-      <div className="block items-center gap-8 md:flex">
+      <div className={`block items-center gap-8 md:flex ${videoLeft && 'flex-row-reverse'}`}>
         <div className="pb-4 md:basis-[55%] md:pb-0 lg:basis-2/4">
           <h3 className="mb-4 text-xl font-bold ">{title}</h3>
           <p>{description}</p>
@@ -27,12 +27,14 @@ const VideoFeatureSection = ({ title, description, videoSrc, whiteBackground }) 
 
 VideoFeatureSection.defaultProps = {
   whiteBackground: false,
+  videoLeft: false,
 };
 
 VideoFeatureSection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   videoSrc: PropTypes.string.isRequired,
+  videoLeft: PropTypes.bool,
   whiteBackground: PropTypes.bool,
 };
 
