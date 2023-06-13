@@ -5,6 +5,9 @@ import DropdownSelect from './dropdown-select';
 
 const Filters = ({ eventFilters, activeFilters, handleFilters }) => {
   const [type, region] = eventFilters;
+  const { type: types, region: regions } = activeFilters;
+  const isTypesSelected = types.length > 0;
+  const isRegionsSelected = regions.length > 0;
 
   return (
     <div
@@ -13,11 +16,13 @@ const Filters = ({ eventFilters, activeFilters, handleFilters }) => {
     >
       <DropdownSelect
         {...type}
+        isSelected={isTypesSelected}
         values={activeFilters[type.label]}
         onSelect={(newValues) => handleFilters(type, newValues)}
       />
       <DropdownSelect
         {...region}
+        isSelected={isRegionsSelected}
         values={activeFilters[region.label]}
         onSelect={(newValues) => handleFilters(region, newValues)}
       />

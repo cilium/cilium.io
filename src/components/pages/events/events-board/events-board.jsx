@@ -8,14 +8,11 @@ import { EVENT_PER_PAGE } from 'utils/events';
 import CardWithCta from './card-with-cta';
 import EventCard from './event-card';
 import Filters from './filters';
-// import Pagination from './pagination';
+import Pagination from './pagination';
 
 const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [activeFilters, setActiveFilters] = useState(initialFilters);
-
-  // TODO: Delete this
-  console.log(activeFilters);
 
   const handleFilters = useCallback(
     (filter, newValues) => {
@@ -55,6 +52,9 @@ const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
           </Fragment>
         ))}
       </div>
+      {pageCount > 1 && (
+        <Pagination totalCount={totalCount} pageCount={pageCount} callback={setItemOffset} />
+      )}
     </Container>
   );
 };

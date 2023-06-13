@@ -7,7 +7,7 @@ import ChevronIcon from 'icons/chevron.inline.svg';
 
 import Checkbox from './checkbox';
 
-const DropdownSelect = ({ name, items, values, onSelect, className }) => {
+const DropdownSelect = ({ name, items, values, onSelect, isSelected, className }) => {
   const dropdownRef = useRef(null);
   const buttonRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ const DropdownSelect = ({ name, items, values, onSelect, className }) => {
       <button
         className={clsx(
           'border-gray-90 hover:border-gray-40 group flex w-full items-center justify-between rounded-md border py-4 px-5 transition-colors duration-200 [@media(min-width:550px)]:w-60',
-          isOpen && 'border-primary-1'
+          (isOpen || isSelected) && 'border-primary-1'
         )}
         type="button"
         ref={buttonRef}
@@ -83,6 +83,7 @@ DropdownSelect.propTypes = {
   className: PropTypes.string,
   name: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string.isRequired })).isRequired,
+  isSelected: PropTypes.bool.isRequired,
   values: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
 };
