@@ -4,12 +4,13 @@ import JoinUsCard from 'components/pages/use-cases/cards';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.webp';
 import MainLayout from 'layouts/main/main';
 
 const introContent = {
   title: 'Cilium Service Mesh',
   category: 'Networking',
-  tagline: 'Adding Reliability, Observability, and Security Features Uniformly Across All Services',
+  tagline: 'Revolutionizing Networking and Simplify Operations',
   subHeading: 'Performance Meets Simplicity',
   description:
     'Traditional service meshes, despite their benefits, can present significant challenges. These include the complexity and error-prone nature of IP and port-based network policies, performance overhead due to their proxy-based architecture, limited granularity in visibility of service-to-service communication, interoperability issues with existing infrastructure, scalability challenges as the number of services and traffic volumes increase, and operational and resource overhead.',
@@ -46,6 +47,7 @@ const sectionContent4 = {
   description:
     'With Cilium Service Mesh, users now have the choice to run a service mesh with sidecars or without them, based on their specific requirements and constraints. This flexibility reduces the complexity and overhead impact of sidecars.',
   videoSrc: 'https://www.youtube.com/embed/WhVyZZ_QkVA',
+  whiteBackground: true,
 };
 
 const ServiceMeshPage = () => (
