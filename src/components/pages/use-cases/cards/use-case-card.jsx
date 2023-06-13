@@ -51,11 +51,9 @@ const UseCaseCard = ({ heading, testimonials }) => (
   </div>
 );
 
-UseCaseCard.defaultProps = {
-  quote: false,
-};
+UseCaseCard.defaultProps = {};
 
-UseCaseCard.proptypes = {
+UseCaseCard.propTypes = {
   heading: PropTypes.string.isRequired,
   testimonials: PropTypes.arrayOf(
     PropTypes.shape({
