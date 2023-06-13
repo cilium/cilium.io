@@ -19,7 +19,7 @@ const IntroSection = ({
           {category}
         </span>
         <h2 className="text-4xl font-bold capitalize">{title}</h2>
-        <small className="font-semibold text-[#8E98AC]">{tagline}</small>
+        <small className="font-semibold  text-[#8E98AC]">{tagline}</small>
       </div>
       <div>
         <div className="block items-center gap-8 md:flex">
