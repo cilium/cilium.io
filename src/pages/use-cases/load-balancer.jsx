@@ -25,6 +25,7 @@ const sectionContent1 = {
   description:
     'Cilium can attract traffic with BGP and accelerate it leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing. Cilium and eBPF operate at the kernel layer. With this level of context intelligent decisions can be made about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance. Cilium Standalone load balancer offers a high-performance LB, providing huge throughput gains at a reduced CPU overhead.',
   videoSrc: 'https://www.youtube.com/embed/OIyPm6K4ooY',
+  whiteBackground: true,
 };
 
 const sectionContent2 = {
