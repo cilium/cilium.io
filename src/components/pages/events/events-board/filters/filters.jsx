@@ -9,7 +9,7 @@ const Filters = ({ eventFilters, activeFilters, handleFilters }) => {
   return (
     <div
       id="categories"
-      className="container mt-14 flex gap-x-7 [@media(max-width:550px)]:flex-col [@media(max-width:550px)]:space-y-5 [@media(max-width:550px)]:space-x-0 "
+      className="mt-8 flex gap-x-7 md:mt-14 [@media(max-width:550px)]:flex-col [@media(max-width:550px)]:space-y-5 [@media(max-width:550px)]:space-x-0 "
     >
       <DropdownSelect
         {...type}

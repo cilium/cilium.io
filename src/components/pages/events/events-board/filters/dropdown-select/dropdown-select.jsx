@@ -2,9 +2,10 @@ import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
 
-import Checkbox from 'components/shared/checkbox';
 import useClickOutside from 'hooks/use-click-outside';
 import ChevronIcon from 'icons/chevron.inline.svg';
+
+import Checkbox from './checkbox';
 
 const DropdownSelect = ({ name, items, values, onSelect, className }) => {
   const dropdownRef = useRef(null);
@@ -30,38 +31,34 @@ const DropdownSelect = ({ name, items, values, onSelect, className }) => {
   useClickOutside([dropdownRef, buttonRef], handleDropdownOutsideClick);
 
   return (
-    <div className={clsx('relative z-10', className)}>
+    <div className={clsx('relative', className)}>
       <button
-        className="border-gray-90 hover:border-gray-40 group flex w-60 items-center justify-between rounded-md border py-4 px-5 transition-colors duration-200 [@media(max-width:550px)]:w-full"
+        className={clsx(
+          'border-gray-90 hover:border-gray-40 group flex w-full items-center justify-between rounded-md border py-4 px-5 transition-colors duration-200 [@media(min-width:550px)]:w-60',
+          isOpen && 'border-primary-1'
+        )}
         type="button"
         ref={buttonRef}
         onClick={handleOpen}
       >
-        <span
-          className={clsx(
-            'font-sans text-base leading-none',
-            isOpen && '!text-black',
-            !!values.length && '!font-medium !tracking-normal !text-black'
-          )}
-        >
+        <span className={clsx('font-sans text-base leading-none', isOpen && '!text-black')}>
           {name}
         </span>
         <ChevronIcon
           className={clsx(
-            'text-gray-40 mt-1 h-auto w-2.5 shrink-0 rotate-90 transition-[transform,color] duration-200 group-hover:text-black',
-            isOpen && 'rotate-270',
-            (isOpen || !!values.length) && '!text-black'
+            'text-gray-40 mt-1 h-auto w-2 shrink-0 transition-[transform,color] duration-200 group-hover:text-black',
+            isOpen ? '-rotate-90' : 'rotate-90'
           )}
         />
       </button>
       <div
         className={clsx(
-          'border-gray-90 drop-shadow-book hover:drop-shadow-book absolute top-16 left-0 w-[270px] rounded border bg-white transition-[opacity,visibility] duration-200 [@media(max-width:550px)]:w-full',
+          'border-gray-90 absolute top-16 left-0 w-[270px] rounded border bg-white shadow-card transition-[opacity,visibility] duration-200 [@media(max-width:550px)]:w-full',
           isOpen ? 'visible z-10 opacity-100' : 'invisible -z-10 opacity-0'
         )}
         ref={dropdownRef}
       >
-        <nav className="flex items-start justify-between p-3 md:px-4 md:py-5">
+        <nav className="relative z-10 flex items-start justify-between p-3 md:px-4 md:py-5">
           <ul className="flex flex-col">
             {items.map(({ name }, index) => (
               <li className="flex items-center space-x-2.5 pt-2.5 first:pt-0 md:pt-3" key={index}>
