@@ -14,7 +14,7 @@ const ItemCard = ({ icon: Icon, title, path }) => (
       </Heading>
     </div>
     <Link
-      to={`use-cases/${path}`}
+      to={`/use-cases/${path}`}
       className="mb-5 flex items-center gap-3 font-semibold text-[#3B82F6]"
     >
       Learn More
