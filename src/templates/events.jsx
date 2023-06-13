@@ -11,21 +11,19 @@ import MainLayout from 'layouts/main';
 
 const EventsPage = (props) => {
   const {
-    pageContext: { featuredEvent, postEvents, totalCount, types, regions },
+    pageContext: { featuredEvent, postEvents, totalCount, eventFilters, initialFilters },
     location: { pathname },
   } = props;
 
   return (
     <MainLayout>
       <FeaturedEvent featuredStory={featuredEvent} />
-      {/* <EventsBoard
-        types={types}
+      <EventsBoard
         events={postEvents}
-        currentType={currentType}
-        currentPage={currentPage}
-        numPages={numPages}
-        isTypePage={isTypePage}
-      /> */}
+        eventFilters={eventFilters}
+        initialFilters={initialFilters}
+        totalCount={totalCount}
+      />
       <EventsSubscribe />
     </MainLayout>
   );

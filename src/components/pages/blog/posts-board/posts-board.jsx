@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
 import Container from 'components/shared/container';
-import Filters from 'components/shared/filters';
 import Heading from 'components/shared/heading';
-import Pagination from 'components/shared/pagination';
 
 import BlogPostsList from './blog-posts-list';
+import Filters from './filters';
+import Pagination from './pagination';
 
 const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
   const blockTitle = currentCategory === '*' ? 'All posts' : currentCategory;

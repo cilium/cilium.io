@@ -1,6 +1,7 @@
 const fetch = require(`node-fetch`);
 const Path = require('path');
 
+const { createEventFilters, getInitialFilters } = require('./src/utils/event-filters');
 const { EVENT_REGEX, EVENTS_BASE_PATH } = require('./src/utils/events');
 const { slugify } = require('./src/utils/slugify');
 
@@ -171,7 +172,7 @@ async function createEventsPage({ graphql, actions }) {
         allPosts: allMdx(
           filter: {
             fileAbsolutePath: { regex: $eventRegex }
-            fields: { draft: { in: $draftFilter }, isFeatured: { eq: true } }
+            fields: { draft: { in: $draftFilter }, isFeatured: { eq: false } }
           }
           sort: { fields: frontmatter___date, order: DESC }
         ) {
@@ -186,9 +187,8 @@ async function createEventsPage({ graphql, actions }) {
               externalUrl
               ogImage {
                 childImageSharp {
-                  gatsbyImageData(width: 733)
+                  gatsbyImageData(width: 550)
                 }
-                publicURL
               }
             }
           }
@@ -211,9 +211,8 @@ async function createEventsPage({ graphql, actions }) {
               externalUrl
               ogImage {
                 childImageSharp {
-                  gatsbyImageData(width: 967)
+                  gatsbyImageData(width: 735)
                 }
-                publicURL
               }
             }
           }
@@ -239,8 +238,10 @@ async function createEventsPage({ graphql, actions }) {
 
   const postEvents = getFrontmatterData(allEvents);
   const featuredEvent = featuredPost[0].frontmatter;
-  const types = allTypes.reduce((acc, type) => [...acc, type.fieldValue], ['*']);
-  const regions = allRegions.reduce((acc, type) => [...acc, type.fieldValue], ['*']);
+  const types = allTypes.reduce((acc, type) => [...acc, type.fieldValue], []);
+  const regions = allRegions.reduce((acc, type) => [...acc, type.fieldValue], []);
+  const eventFilters = createEventFilters(types, regions);
+  const initialFilters = getInitialFilters(eventFilters);
 
   createPage({
     path: EVENTS_BASE_PATH,
@@ -249,8 +250,8 @@ async function createEventsPage({ graphql, actions }) {
       featuredEvent,
       postEvents,
       totalCount,
-      types,
-      regions,
+      eventFilters,
+      initialFilters,
     },
   });
 }
