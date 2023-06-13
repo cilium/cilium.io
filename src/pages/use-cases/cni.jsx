@@ -94,7 +94,7 @@ const ClusterMeshPage = () => (
       <ImageFeatureSection {...sectionContent3} />
       <VideoFeatureSection {...sectionContent4} />
       <UseCaseCard
-        heading="Who’s using Cilium forHigh Performance Cloud Native Networking(CNI)"
+        heading="Who’s using Cilium for High Performance Cloud Native Networking(CNI)"
         testimonials={testimonials}
       />
       <JoinUsCard />
