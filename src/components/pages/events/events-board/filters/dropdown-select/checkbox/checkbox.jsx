@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Checkbox = React.forwardRef((props, ref) => {
-  const { className, id, label, defaultChecked, ...otherProps } = props;
+  const { className, id, label, checked, ...otherProps } = props;
 
   return (
     <div className={classNames('checkbox', className)}>
@@ -11,7 +11,7 @@ const Checkbox = React.forwardRef((props, ref) => {
         className="checkbox__input_event"
         type="checkbox"
         id={id}
-        defaultChecked={defaultChecked}
+        checked={checked}
         ref={ref}
         {...otherProps}
       />
@@ -24,7 +24,7 @@ const Checkbox = React.forwardRef((props, ref) => {
 
 Checkbox.defaultProps = {
   className: null,
-  defaultChecked: false,
+  checked: false,
   error: null,
 };
 
@@ -32,7 +32,7 @@ Checkbox.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  defaultChecked: PropTypes.bool,
+  checked: PropTypes.bool,
   error: PropTypes.bool,
 };
 

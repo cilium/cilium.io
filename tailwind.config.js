@@ -47,6 +47,9 @@ module.exports = {
           3: '#00877C',
           4: '#D6EBFF',
           5: '#FFFAEB',
+          blue: '#0A61C2',
+          green: '#007A70',
+          red: '#C43131',
         },
       },
       boxShadow: {

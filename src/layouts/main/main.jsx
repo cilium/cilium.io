@@ -12,7 +12,7 @@ import GetStartedIcon from 'icons/get-started.inline.svg';
 import NewsletterIcon from 'icons/newsletter.inline.svg';
 
 const navigation = [
-  { icon: AdoptersIcon, name: 'Users', href: '/adopters' },
+  { name: 'Users', href: '/adopters' },
   { name: 'Enterprise', href: '/enterprise' },
   {
     name: 'Learn',

@@ -2,14 +2,14 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-function BlogAuthor({ header, bio, theme }) {
+const BlogAuthor = ({ header, bio, theme }) => {
   const isPrimary = theme === 'primary';
   return (
     <div
       className={classNames(
         isPrimary
-          ? 'flex flex-col pt-8 mt-8 border-t md:flex-row md:space-x-20 lg:space-x-28 xl:space-x-40 border-gray-3'
-          : 'p-6 md:p-8 bg-gray-4 border border-gray-3 rounded-lg'
+          ? 'mt-8 flex flex-col border-t border-gray-3 pt-8 md:flex-row md:space-x-20 lg:space-x-28 xl:space-x-40'
+          : 'rounded-lg border border-gray-3 bg-gray-4 p-6 md:p-8'
       )}
     >
       <div className={classNames(isPrimary ? 'shrink-0' : 'inline')}>
@@ -21,18 +21,18 @@ function BlogAuthor({ header, bio, theme }) {
           dangerouslySetInnerHTML={{ __html: header }}
         />
         {isPrimary && (
-          <span className="block mt-1 leading-none text-gray-1 lg:text-lg">Author</span>
+          <span className="mt-1 block leading-none text-gray-1 lg:text-lg">Author</span>
         )}
       </div>
       <span
         className={classNames(
-          isPrimary ? 'my-6 md:!mt-0 text-lg leading-normal lg:text-xl lg:leading-normal' : 'inline'
+          isPrimary ? 'my-6 text-lg leading-normal md:!mt-0 lg:text-xl lg:leading-normal' : 'inline'
         )}
         dangerouslySetInnerHTML={{ __html: bio }}
       />
     </div>
   );
-}
+};
 
 BlogAuthor.propTypes = {
   header: PropTypes.string.isRequired,

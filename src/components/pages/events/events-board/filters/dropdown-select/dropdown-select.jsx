@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
 
@@ -31,30 +31,35 @@ const DropdownSelect = ({ name, items, values, onSelect, isSelected, className }
   useClickOutside([dropdownRef, buttonRef], handleDropdownOutsideClick);
 
   return (
-    <div className={clsx('relative', className)}>
+    <div className={classNames('relative', className)}>
       <button
-        className={clsx(
-          'border-gray-90 hover:border-gray-40 group flex w-full items-center justify-between rounded-md border py-4 px-5 transition-colors duration-200 [@media(min-width:550px)]:w-60',
+        className={classNames(
+          'group flex w-full items-center justify-between rounded-md border border-gray-3 py-4 px-5 transition-colors duration-200 hover:border-primary-1 [@media(min-width:550px)]:w-60',
           (isOpen || isSelected) && 'border-primary-1'
         )}
         type="button"
         ref={buttonRef}
         onClick={handleOpen}
       >
-        <span className={clsx('font-sans text-base leading-none', isOpen && '!text-black')}>
+        <span
+          className={classNames(
+            'font-sans text-base leading-none text-gray-7',
+            isOpen && '!text-black'
+          )}
+        >
           {name}
         </span>
         <ChevronIcon
-          className={clsx(
+          className={classNames(
             'text-gray-40 mt-1 h-auto w-2 shrink-0 transition-[transform,color] duration-200 group-hover:text-black',
             isOpen ? '-rotate-90' : 'rotate-90'
           )}
         />
       </button>
       <div
-        className={clsx(
-          'border-gray-90 absolute top-16 left-0 w-[270px] rounded border bg-white shadow-card transition-[opacity,visibility] duration-200 [@media(max-width:550px)]:w-full',
-          isOpen ? 'visible z-10 opacity-100' : 'invisible -z-10 opacity-0'
+        className={classNames(
+          'absolute top-16 left-0 w-full rounded border border-gray-3 bg-white shadow-card transition-[opacity,visibility] duration-200 [@media(min-width:550px)]:w-[270px]',
+          isOpen ? 'visible z-10 opacity-100' : 'invisible opacity-0'
         )}
         ref={dropdownRef}
       >
@@ -84,7 +89,7 @@ DropdownSelect.propTypes = {
   name: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string.isRequired })).isRequired,
   isSelected: PropTypes.bool.isRequired,
-  values: PropTypes.array.isRequired,
+  values: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
   onSelect: PropTypes.func.isRequired,
 };
 

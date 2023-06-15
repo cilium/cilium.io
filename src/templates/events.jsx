@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { graphql } from 'gatsby';
 import React from 'react';
 
 import EventsBoard from 'components/pages/events/events-board';
@@ -12,7 +10,6 @@ import MainLayout from 'layouts/main';
 const EventsPage = (props) => {
   const {
     pageContext: { featuredEvent, postEvents, totalCount, eventFilters, initialFilters },
-    location: { pathname },
   } = props;
 
   return (

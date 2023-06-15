@@ -10,10 +10,7 @@ const Filters = ({ eventFilters, activeFilters, handleFilters }) => {
   const isRegionsSelected = regions.length > 0;
 
   return (
-    <div
-      id="categories"
-      className="mt-8 flex gap-x-7 md:mt-14 [@media(max-width:550px)]:flex-col [@media(max-width:550px)]:space-y-5 [@media(max-width:550px)]:space-x-0 "
-    >
+    <div className="mt-8 flex gap-x-7 md:mt-14 [@media(max-width:550px)]:flex-col [@media(max-width:550px)]:space-y-5 [@media(max-width:550px)]:space-x-0">
       <DropdownSelect
         {...type}
         isSelected={isTypesSelected}
@@ -37,7 +34,10 @@ Filters.propTypes = {
       items: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string.isRequired })).isRequired,
     })
   ).isRequired,
-  activeFilters: PropTypes.object.isRequired,
+  activeFilters: PropTypes.shape({
+    type: PropTypes.arrayOf(PropTypes.string).isRequired,
+    region: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
   handleFilters: PropTypes.func.isRequired,
 };
 

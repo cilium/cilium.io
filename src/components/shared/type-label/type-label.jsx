@@ -6,9 +6,9 @@ const Label = ({ type, className }) => (
   <span
     className={classNames(
       'w-fit rounded p-2.5 text-xs font-bold uppercase leading-none tracking-wider',
-      { 'bg-additional-3/10 text-additional-3': type === 'Meetup' },
-      { 'bg-additional-1/10 text-additional-1': type === 'Webinar' },
-      { 'bg-primary-1/10 text-primary-1': type === 'Conference' },
+      { 'bg-additional-green/10 text-additional-green': type === 'Meetup' },
+      { 'bg-additional-red/10 text-additional-red': type === 'Webinar' },
+      { 'bg-additional-blue/10 text-additional-blue': type === 'Conference' },
       className
     )}
   >
