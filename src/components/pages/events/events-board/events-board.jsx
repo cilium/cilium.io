@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { Fragment, useState, useCallback, useMemo, useEffect } from 'react';
+import React, { Fragment, useState, useCallback, useMemo } from 'react';
 
 import Container from 'components/shared/container';
 import useFilteredEvents from 'hooks/use-filtered-events';
