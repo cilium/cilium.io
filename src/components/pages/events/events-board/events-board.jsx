@@ -21,6 +21,7 @@ const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
         [filter.label]: newValues,
       };
       setActiveFilters(newFilters);
+      setItemOffset(0);
     },
     [activeFilters]
   );
@@ -37,7 +38,7 @@ const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
   );
 
   const endOffset = itemOffset + EVENT_PER_PAGE;
-  const filteredEvents = useFilteredEvents(events, activeFilters, itemOffset, endOffset);
+  const filteredEvents = useFilteredEvents(events, activeFilters);
   const currentEvents = filteredEvents.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(filteredEvents.length / EVENT_PER_PAGE);
 
@@ -60,8 +61,21 @@ const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
 };
 
 EventsBoard.propTypes = {
-  types: PropTypes.arrayOf(PropTypes.string).isRequired,
-  regions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  eventFilters: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      items: PropTypes.arrayOf(
+        PropTypes.shape({
+          name: PropTypes.string.isRequired,
+        })
+      ).isRequired,
+    })
+  ).isRequired,
+  initialFilters: PropTypes.shape({
+    type: PropTypes.arrayOf(PropTypes.string),
+    region: PropTypes.arrayOf(PropTypes.string),
+  }).isRequired,
   totalCount: PropTypes.number.isRequired,
   events: PropTypes.arrayOf(
     PropTypes.shape({
