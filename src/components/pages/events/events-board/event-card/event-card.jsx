@@ -7,7 +7,9 @@ import Link from 'components/shared/link';
 import TypeLabel from 'components/shared/type-label';
 import useElementRect from 'hooks/use-element-rect';
 
+import PlaceIcon from './images/place.inline.svg';
 import placeholderIllustration from './images/placeholder.svg';
+import TimeIcon from './images/time.inline.svg';
 
 const EventCover = ({ ogImage, title }) => {
   const [rect, placeholder] = useElementRect();
@@ -54,9 +56,17 @@ const EventCard = ({
   >
     <EventCover ogImage={ogImage} title={title} />
     <article className="flex grow flex-col p-5 md:p-7 xl:p-8">
-      <div className="flex flex-col gap-y-2 text-sm font-medium leading-none text-gray-1">
-        <time>{date}</time>
-        <span>{place}</span>
+      <div className="flex flex-wrap gap-2.5 gap-x-3 text-sm font-medium leading-none text-gray-1">
+        <div className="inline-flex items-center gap-x-1.5">
+          <TimeIcon className="w-3 shrink-0 text-gray-1" />
+          <time className="text-sm font-normal leading-none" dateTime={date}>
+            {date}
+          </time>
+        </div>
+        <div className="flex items-center gap-x-1.5">
+          <PlaceIcon className="w-3 shrink-0 text-gray-1" />
+          <span className="text-sm font-normal leading-none">{place}</span>
+        </div>
       </div>
       <h3 className="mt-3 text-xl font-bold leading-snug transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-22">
         {title}

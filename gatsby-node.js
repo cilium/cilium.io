@@ -178,7 +178,7 @@ async function createEventsPage({ graphql, actions }) {
         ) {
           nodes {
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              date(formatString: "MMM DD, YYYY")
               region
               place
               type

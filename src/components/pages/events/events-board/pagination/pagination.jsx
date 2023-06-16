@@ -7,9 +7,9 @@ import { EVENT_PER_PAGE } from 'utils/events';
 import ChevronIcon from './images/chevron.inline.svg';
 
 const pageLinkAndBreakLinkClassName =
-  'flex justify-center items-center focus:border-transparent font-medium w-7 h-7 rounded-full text-black transition-colors hover:bg-hover-1 duration-200 mx-2.5';
+  'flex justify-center items-center font-medium w-7 h-7 rounded-full text-black transition-colors hover:bg-additional-4 duration-200 mx-2.5';
 const previousAndNextLinkClassName =
-  'flex items-center space-x-2 transition-colors duration-200 font-semibold leading-none hover:text-hover-1';
+  'flex items-center space-x-2 transition-colors duration-200 font-semibold leading-none hover:text-additional-4';
 
 const Pagination = ({ pageCount, totalCount, callback }) => {
   const handlePageChange = ({ selected }) => {
