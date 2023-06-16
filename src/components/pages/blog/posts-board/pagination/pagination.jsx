@@ -3,7 +3,7 @@ import React from 'react';
 
 import Link from 'components/shared/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
-import filterToSlug from 'utils/filter-to-slug';
+import filterToSlug from 'utils/blog-filter-to-slug';
 
 const Pagination = ({ currentPage, numPages, currentItem, type }) => {
   const currentPath = filterToSlug(currentItem, type);

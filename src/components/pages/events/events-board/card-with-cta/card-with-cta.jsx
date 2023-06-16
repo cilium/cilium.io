@@ -15,6 +15,7 @@ const CardWithCta = () => (
       to="https://www.youtube.com/channel/UCJFUxkVQTBJh3LD1wYBWvuQ"
       theme="primary-1"
       target="_blank"
+      rel="noopener noreferrer"
     >
       Join Now
     </Button>

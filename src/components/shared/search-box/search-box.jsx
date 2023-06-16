@@ -18,7 +18,7 @@ const SearchBox = ({ indices, className }) => {
     []
   );
 
-  useClickOutside(rootRef, () => setFocus(false));
+  useClickOutside([rootRef], () => setFocus(false));
   const shouldShowResult = !!query?.length && hasFocus;
   return (
     <div

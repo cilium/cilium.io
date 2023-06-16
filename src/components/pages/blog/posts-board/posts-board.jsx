@@ -5,14 +5,14 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
 import BlogPostsList from './blog-posts-list';
-import Filters from './filters';
+import Categories from './categories';
 import Pagination from './pagination';
 
 const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
   const blockTitle = currentCategory === '*' ? 'All posts' : currentCategory;
 
   const scrollTo = () => {
-    const element = document.getElementById('filters');
+    const element = document.getElementById('categories');
     const offset = -50;
     const y = element.getBoundingClientRect().top + window.pageYOffset + offset;
 
@@ -29,7 +29,7 @@ const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages 
     <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{blockTitle}</Heading>
-        <Filters id="filters" filters={categories} currentFilter={currentCategory} type="blog" />
+        <Categories id="categories" categories={categories} currentCategory={currentCategory} />
         <BlogPostsList posts={posts} />
         <Pagination
           currentPage={currentPage}

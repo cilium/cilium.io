@@ -1,7 +1,7 @@
 const fetch = require(`node-fetch`);
 const Path = require('path');
 
-const { createEventFilters, getInitialFilters } = require('./src/utils/event-filters');
+const { createEventFilters } = require('./src/utils/event-filters');
 const { EVENT_REGEX, EVENTS_BASE_PATH } = require('./src/utils/events');
 const { slugify } = require('./src/utils/slugify');
 
@@ -198,6 +198,7 @@ async function createEventsPage({ graphql, actions }) {
             fileAbsolutePath: { regex: $eventRegex }
             fields: { draft: { in: $draftFilter }, isFeatured: { eq: true } }
           }
+          sort: { fields: frontmatter___date, order: DESC }
           limit: 1
         ) {
           nodes {
@@ -232,11 +233,16 @@ async function createEventsPage({ graphql, actions }) {
     allRegions: { group: allRegions },
   } = result.data;
 
-  function getFrontmatterData(items) {
-    return items.map((item) => ({ ...item.frontmatter }));
+  function getInitialFilters(allFilters) {
+    return allFilters.reduce((acc, { label }) => {
+      if (!acc[label]) {
+        acc[label] = [];
+      }
+      return acc;
+    }, {});
   }
 
-  const postEvents = getFrontmatterData(allEvents);
+  const postEvents = allEvents.map((event) => ({ ...event.frontmatter }));
   const featuredEvent = featuredPost[0].frontmatter;
   const types = allTypes.reduce((acc, type) => [...acc, type.fieldValue], []);
   const regions = allRegions.reduce((acc, type) => [...acc, type.fieldValue], []);

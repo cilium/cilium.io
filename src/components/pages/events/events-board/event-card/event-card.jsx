@@ -14,30 +14,23 @@ const EventCover = ({ ogImage, title }) => {
   const { width = 0 } = rect ?? {};
   const placeholderHeight = width / 2.1;
 
-  let content = null;
-  if (ogImage) {
-    content = (
-      <GatsbyImage
-        imgClassName="self-center rounded-t-lg"
-        image={getImage(ogImage)}
-        objectFit="cover"
-        alt={title}
-        loading="lazy"
-      />
-    );
-  } else {
-    content = (
-      <div
-        className="flex w-full items-center justify-center rounded-t-lg bg-gray-4"
-        ref={placeholder}
-        style={{ height: placeholderHeight }}
-      >
-        <img className="h-full w-full py-2.5" src={placeholderIllustration} alt="" aria-hidden />
-      </div>
-    );
-  }
-
-  return content;
+  return ogImage ? (
+    <GatsbyImage
+      imgClassName="self-center rounded-t-lg"
+      image={getImage(ogImage)}
+      objectFit="cover"
+      alt={title}
+      loading="lazy"
+    />
+  ) : (
+    <div
+      className="flex w-full items-center justify-center rounded-t-lg bg-gray-4"
+      ref={placeholder}
+      style={{ height: placeholderHeight }}
+    >
+      <img className="h-full w-full py-2.5" src={placeholderIllustration} alt="" aria-hidden />
+    </div>
+  );
 };
 
 const BlogPostCard = ({

@@ -16,12 +16,18 @@ const EventsSubscribe = () => (
         <img
           className="absolute left-0 top-1/2 hidden h-[280px] w-auto -translate-y-1/2 md:block"
           src={leftIllustration}
+          width=""
+          height={280}
+          loading="lazy"
           alt=""
           aria-hidden
         />
         <img
           className="absolute right-0 top-1/2 hidden h-[280px] w-auto -translate-y-1/2 md:block"
           src={rightIllustration}
+          loading="lazy"
+          width=""
+          height={280}
           alt=""
           aria-hidden
         />
