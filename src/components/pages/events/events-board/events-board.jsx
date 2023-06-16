@@ -14,29 +14,6 @@ const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
   const [itemOffset, setItemOffset] = useState(0);
   const [activeFilters, setActiveFilters] = useState(initialFilters);
 
-  const handleFilters = useCallback(
-    (filter, newValues) => {
-      const newFilters = {
-        ...activeFilters,
-        [filter.label]: newValues,
-      };
-      setActiveFilters(newFilters);
-      setItemOffset(0);
-    },
-    [activeFilters]
-  );
-
-  const memoizedFilterDropdowns = useMemo(
-    () => (
-      <Filters
-        eventFilters={eventFilters}
-        activeFilters={activeFilters}
-        handleFilters={handleFilters}
-      />
-    ),
-    [eventFilters, activeFilters, handleFilters]
-  );
-
   const endOffset = itemOffset + EVENT_PER_PAGE;
   const filteredEvents = useFilteredEvents(events, activeFilters);
   const currentEvents = filteredEvents.slice(itemOffset, endOffset);
@@ -44,7 +21,12 @@ const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
 
   return (
     <Container>
-      {memoizedFilterDropdowns}
+      <Filters
+        eventFilters={eventFilters}
+        activeFilters={activeFilters}
+        setItemOffset={setItemOffset}
+        setActiveFilters={setActiveFilters}
+      />
       <div className="mt-6 grid gap-6 sm:grid-cols-2 md:gap-7 lg:mt-11 lg:grid-cols-3 xl:gap-8">
         {currentEvents.map((event, index) => (
           <Fragment key={index}>

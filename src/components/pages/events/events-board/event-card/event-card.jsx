@@ -33,7 +33,7 @@ const EventCover = ({ ogImage, title }) => {
   );
 };
 
-const BlogPostCard = ({
+const EventCard = ({
   ogImage,
   date,
   title,
@@ -67,7 +67,7 @@ const BlogPostCard = ({
   </Link>
 );
 
-BlogPostCard.propTypes = {
+EventCard.propTypes = {
   ogImage: PropTypes.shape({
     childImageSharp: PropTypes.shape({
       gatsbyImageData: PropTypes.shape(),
@@ -82,11 +82,11 @@ BlogPostCard.propTypes = {
   className: PropTypes.string,
 };
 
-BlogPostCard.defaultProps = {
+EventCard.defaultProps = {
   ogImage: null,
   externalUrl: null,
   ogSummary: null,
   className: null,
 };
 
-export default BlogPostCard;
+export default EventCard;
