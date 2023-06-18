@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, { useCallback } from 'react';
+import React from 'react';
 
 import DropdownSelect from './dropdown-select';
 
@@ -9,17 +9,10 @@ const Filters = ({ eventFilters, activeFilters, setActiveFilters, setItemOffset 
   const isTypesSelected = types.length > 0;
   const isRegionsSelected = regions.length > 0;
 
-  const handleFilters = useCallback(
-    (filter, newValues) => {
-      const newFilters = {
-        ...activeFilters,
-        [filter.label]: newValues,
-      };
-      setActiveFilters(newFilters);
-      setItemOffset(0);
-    },
-    [activeFilters, setItemOffset, setActiveFilters]
-  );
+  const handleFilters = (filter, newValues) => {
+    setActiveFilters((prev) => ({ ...prev, [filter.label]: newValues }));
+    setItemOffset(0);
+  };
 
   return (
     <div className="mt-8 flex gap-x-7 md:mt-14 [@media(max-width:550px)]:flex-col [@media(max-width:550px)]:space-y-5 [@media(max-width:550px)]:space-x-0">

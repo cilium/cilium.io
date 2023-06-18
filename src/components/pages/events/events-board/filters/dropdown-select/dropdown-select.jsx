@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useRef, useState, useCallback } from 'react';
+import React, { useRef, useState } from 'react';
 
 import useClickOutside from 'hooks/use-click-outside';
 import ChevronIcon from 'icons/chevron.inline.svg';
@@ -12,16 +12,13 @@ const DropdownSelect = ({ name, items, values, onSelect, isSelected, className }
   const buttonRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleSelect = useCallback(
-    (state, value) => {
-      if (state) {
-        onSelect([...values, value]);
-      } else {
-        onSelect(values.filter((currentValue) => currentValue !== value));
-      }
-    },
-    [onSelect, values]
-  );
+  const handleSelect = (state, value) => {
+    if (state) {
+      onSelect([...values, value]);
+    } else {
+      onSelect(values.filter((currentValue) => currentValue !== value));
+    }
+  };
 
   const handleDropdownOutsideClick = () => {
     setIsOpen(false);
@@ -100,4 +97,4 @@ DropdownSelect.defaultProps = {
   className: null,
 };
 
-export default React.memo(DropdownSelect);
+export default DropdownSelect;
