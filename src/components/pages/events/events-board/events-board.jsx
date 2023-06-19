@@ -10,13 +10,20 @@ import EventCard from './event-card';
 import Filters from './filters';
 import Pagination from './pagination';
 
+const cardWithCtaIndex = 4;
+
 const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
-  const [itemOffset, setItemOffset] = useState(0);
+  const [eventPositionStart, setEventPositionStart] = useState(0);
   const [activeFilters, setActiveFilters] = useState(initialFilters);
 
-  const endOffset = itemOffset + EVENT_PER_PAGE;
+  const handleFilters = (filter, newValues) => {
+    setActiveFilters((prev) => ({ ...prev, [filter.label]: newValues }));
+    setEventPositionStart(0);
+  };
+
+  const eventPositionEnd = eventPositionStart + EVENT_PER_PAGE;
   const filteredEvents = useFilteredEvents(events, activeFilters);
-  const currentEvents = filteredEvents.slice(itemOffset, endOffset);
+  const currentEvents = filteredEvents.slice(eventPositionStart, eventPositionEnd);
   const pageCount = Math.ceil(filteredEvents.length / EVENT_PER_PAGE);
 
   return (
@@ -24,19 +31,22 @@ const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
       <Filters
         eventFilters={eventFilters}
         activeFilters={activeFilters}
-        setItemOffset={setItemOffset}
-        setActiveFilters={setActiveFilters}
+        handleFilters={handleFilters}
       />
       <div className="mt-6 grid gap-6 sm:grid-cols-2 md:gap-7 lg:mt-11 lg:grid-cols-3 xl:gap-8">
         {currentEvents.map((event, index) => (
           <Fragment key={index}>
             <EventCard {...event} />
-            {index === 4 && <CardWithCta />}
+            {index === cardWithCtaIndex && <CardWithCta />}
           </Fragment>
         ))}
       </div>
       {pageCount > 1 && (
-        <Pagination totalCount={totalCount} pageCount={pageCount} callback={setItemOffset} />
+        <Pagination
+          totalCount={totalCount}
+          pageCount={pageCount}
+          callback={setEventPositionStart}
+        />
       )}
     </Container>
   );
