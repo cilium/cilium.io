@@ -6,9 +6,9 @@ import Heading from 'components/shared/heading/heading';
 const EmptyState = () => (
   <Container className="mt-20 mb-14 max-w-[500px]">
     <Heading size="xs" tag="h4" className="text-center">
-      No events were found.
+      No events match your filters.
       <br />
-      Please change the filtering options
+      Try adjusting them for more results.
     </Heading>
   </Container>
 );
