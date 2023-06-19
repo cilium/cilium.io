@@ -79,7 +79,7 @@ const GetHelp = () => {
       />
       <CiliumStory />
       <EventBox />
-      {/* <Faq /> */}
+      <Faq />
       <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
     </MainLayout>
   );
