@@ -4,7 +4,6 @@ import React from 'react';
 
 import CiliumStory from 'components/pages/get-help/cilium-story';
 import EventBox from 'components/pages/get-help/event-box';
-// import Faq from 'components/pages/get-help/faq';
 import Cards from 'components/shared/cards';
 import Community from 'components/shared/community';
 import HeroWithImage from 'components/shared/hero-with-image';
@@ -79,7 +78,6 @@ const GetHelp = () => {
       />
       <CiliumStory />
       <EventBox />
-      <Faq />
       <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
     </MainLayout>
   );
