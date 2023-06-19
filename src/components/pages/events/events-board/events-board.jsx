@@ -6,6 +6,7 @@ import useFilteredEvents from 'hooks/use-filtered-events';
 import { EVENT_PER_PAGE } from 'utils/events';
 
 import CardWithCta from './card-with-cta';
+import EmptyState from './empty-state';
 import EventCard from './event-card';
 import Filters from './filters';
 import Pagination from './pagination';
@@ -33,14 +34,18 @@ const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
         activeFilters={activeFilters}
         handleFilters={handleFilters}
       />
-      <div className="mt-6 grid gap-6 sm:grid-cols-2 md:gap-7 lg:mt-11 lg:grid-cols-3 xl:gap-8">
-        {currentEvents.map((event, index) => (
-          <Fragment key={index}>
-            <EventCard {...event} />
-            {index === cardWithCtaIndex && <CardWithCta />}
-          </Fragment>
-        ))}
-      </div>
+      {currentEvents.length > 0 ? (
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 md:gap-7 lg:mt-11 lg:grid-cols-3 xl:gap-8">
+          {currentEvents.map((event, index) => (
+            <Fragment key={index}>
+              <EventCard {...event} />
+              {index === cardWithCtaIndex && <CardWithCta />}
+            </Fragment>
+          ))}
+        </div>
+      ) : (
+        <EmptyState />
+      )}
       {pageCount > 1 && (
         <Pagination
           totalCount={totalCount}
