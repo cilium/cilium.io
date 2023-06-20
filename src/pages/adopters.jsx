@@ -120,6 +120,8 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    kubermatic,
+    yahoo,
     eficode,
     clickhouse,
     tietoevry,
@@ -189,7 +191,6 @@ const userCommunity2 = {
     palantir,
     scaleway,
     sportradar,
-    yahoo,
     plaid,
     isovalent,
     schubergPhilis,
@@ -199,7 +200,6 @@ const userCommunity2 = {
     finleap,
     infomaniak,
     jumo,
-    kubermatic,
     liquidReply,
     myFitnessPal,
     mux,
