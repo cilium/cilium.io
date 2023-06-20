@@ -515,6 +515,29 @@ export default {
       },
     ],
   },
+  yahoo: {
+    iconName: 'yahoo',
+    text: '<b>Yahoo</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
+    links: [
+      {
+        linkText: 'Watch Video',
+        linkUrl: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  kubermatic: {
+    iconName: 'kubermatic',
+    text: '<b>Kubermatic</b> uses Cilium as the CNI for its Kubernetes installer and platform',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://www.kubermatic.com/blog/cilium-cni-integration-in-kubermatic-kubernetes-platform/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   kubesphere: {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',
@@ -530,10 +553,6 @@ export default {
   sportradar: {
     iconName: 'sportradar',
     text: '<b>Sportradar</b> is using Cilium as their main CNI plugin in AWS (using kops)',
-  },
-  yahoo: {
-    iconName: 'yahoo',
-    text: '<b>Yahoo</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
   },
   accuknox: {
     iconName: 'accuknox',
@@ -598,10 +617,6 @@ export default {
   kubeOvn: {
     iconName: 'kubeOvn',
     text: '<b>Kube-OVN</b> uses Cilium to enhance the CNI service performance, security and monitoring',
-  },
-  kubermatic: {
-    iconName: 'kubermatic',
-    text: '<b>Kubermatic</b> uses Cilium as the CNI for its Kubernetes installer and platform',
   },
   liquidReply: {
     iconName: 'liquidReply',
