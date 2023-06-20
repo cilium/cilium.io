@@ -34,7 +34,13 @@ const navigation = [
       { icon: NewsletterIcon, name: 'Newsletter', href: '/newsletter' },
     ],
   },
-  { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
+  { 
+    name: 'Documentation',
+    childItems: [
+      { name: 'Cilium', href: 'https://docs.cilium.io/en/stable/' },
+      { name: 'Tetragon', href: 'https://tetragon.cilium.io/docs/' },
+      { name: 'Network Policy', href: 'https://networkpolicy.io/' },
+    ],
 ];
 
 const MainLayout = ({ isBlogPage, children, theme, footerWithTopBorder }) => {
