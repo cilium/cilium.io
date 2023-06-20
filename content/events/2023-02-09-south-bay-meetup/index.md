@@ -8,4 +8,5 @@ externalUrl: 'https://isovalent.com/whats-new-with-cilium-ebpf-south-bay-meetup/
 ogImage: ogImage.jpg
 type: Meetup
 isFeatured: false
+draft: true
 ---
