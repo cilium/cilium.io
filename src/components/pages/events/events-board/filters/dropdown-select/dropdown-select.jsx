@@ -12,8 +12,8 @@ const DropdownSelect = ({ name, items, values, onSelect, isSelected, className }
   const buttonRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleSelect = (state, value) => {
-    if (state) {
+  const handleSelect = (isChecked, value) => {
+    if (isChecked) {
       onSelect([...values, value]);
     } else {
       onSelect(values.filter((currentValue) => currentValue !== value));

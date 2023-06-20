@@ -16,13 +16,16 @@ const Pagination = ({ pageCount, totalCount, callback }) => {
     const newOffSet = (selected * EVENT_PER_PAGE) % totalCount;
     callback(newOffSet);
 
+    /* Adding a timeout to ensure proper execution of scrolling in all browsers, 
+      specifically addressing an issue in Firefox where smooth scrolling was not 
+      consistently working on the last page of pagination. */
     setTimeout(() => {
       window.scrollTo({
         top: 0,
         left: 0,
         behavior: 'smooth',
       });
-    }, 20);
+    }, 0);
   };
 
   return (

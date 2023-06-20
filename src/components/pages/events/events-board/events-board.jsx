@@ -14,17 +14,17 @@ import Pagination from './pagination';
 const cardWithCtaIndex = 4;
 
 const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
-  const [eventPositionStart, setEventPositionStart] = useState(0);
+  const [eventPageStart, setEventPageStart] = useState(0);
   const [activeFilters, setActiveFilters] = useState(initialFilters);
 
   const handleFilters = (filter, newValues) => {
     setActiveFilters((prev) => ({ ...prev, [filter.label]: newValues }));
-    setEventPositionStart(0);
+    setEventPageStart(0);
   };
 
-  const eventPositionEnd = eventPositionStart + EVENT_PER_PAGE;
+  const eventPageEnd = eventPageStart + EVENT_PER_PAGE;
   const filteredEvents = useFilteredEvents(events, activeFilters);
-  const currentEvents = filteredEvents.slice(eventPositionStart, eventPositionEnd);
+  const currentEvents = filteredEvents.slice(eventPageStart, eventPageEnd);
   const pageCount = Math.ceil(filteredEvents.length / EVENT_PER_PAGE);
 
   return (
@@ -47,11 +47,7 @@ const EventsBoard = ({ eventFilters, events, totalCount, initialFilters }) => {
         <EmptyState />
       )}
       {pageCount > 1 && (
-        <Pagination
-          totalCount={totalCount}
-          pageCount={pageCount}
-          callback={setEventPositionStart}
-        />
+        <Pagination totalCount={totalCount} pageCount={pageCount} callback={setEventPageStart} />
       )}
     </Container>
   );
