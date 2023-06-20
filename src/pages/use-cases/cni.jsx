@@ -42,7 +42,7 @@ const sectionContent2 = {
 };
 
 const sectionContent3 = {
-  title: 'Security',
+  title: 'Network Security',
   description:
     "Cilium doesn't just excel in performance—it also brings robust security features. With identity-based security that goes beyond traditional IP address-based ACLs, Cilium provides fine-grained policy enforcement. This allows you to control who can talk to whom, reducing the attack surface and helping secure your cloud native applications.",
   imageSrc: CNIImage3,

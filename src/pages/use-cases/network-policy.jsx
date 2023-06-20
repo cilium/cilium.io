@@ -17,7 +17,7 @@ import MainLayout from 'layouts/main/main';
 const introContent = {
   title: 'Advanced Network Policy',
   category: 'Security',
-  tagline: 'Maintain Identity Based Policies Effectively at Scale',
+  tagline: 'Maintain identity based policies effectively at scale',
   subHeading: 'How can I implement granular security policies when IPs change quickly? ',
   description:
     "Kubernetes network policies provide an application-centric construct for defining security policies at L3/L4 level. One of the primary challenges is how to effectively enforce security policies when traditional IP rules don't apply. Modern systems often churn IPs dynamically making it difficult to rely entirely on TCP/UDP ports and IP addresses for scaling security policies. ",
@@ -72,7 +72,7 @@ const testimonials = [
     logo: <UtmostLogo />,
     title: 'Observability for a highly available multi cluster environment with Hubble',
     CTAtext: 'Read The Blog',
-    url: 'https://blog.utmost.co/zero-trust-security-at-utmost',
+    url: 'https://www.cncf.io/case-studies/utmost/',
     description:
       ' Utmost achieved Zero Trust Networking by replacing their existing CNI with Cilium to address networking, security, and visibility for container workloads. Utmost processes 1207 flows per second, each validated against a multitude of network policies to approve or deny access.',
   },

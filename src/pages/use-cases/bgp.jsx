@@ -5,6 +5,7 @@ import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import BGPImage1 from 'images/pages/usecase/bgp-1.png';
 import TravelBee from 'images/pages/usecase/travel-bee.png';
@@ -47,14 +48,14 @@ const testimonials = [
       'Trip.com chose a topology based on where workloads run. Bare-metal on-premises workloads use Direct routing via BGP using BIRD, while AWS workloads use AWS ENI routing mode via Cilium AWS ENI support. This topology provides native routing architecture in both the bare-metal and AWS environments with all its performance benefits. In addition, it provides a universal Kubernetes services and Network Policy model across all environments to minimize the differences between the bare-metal and cloud environments.',
   },
   {
-    title: 'How IKEA leverages cilium’s BGP ',
-    logo: '',
+    title: 'Leveraging Cilium’s BGP in Private Data Centers',
+    logo: <CiliumLogo />,
     CTAtext: 'Watch The Talk',
     url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
     description:
-      'We run all our Kubernetes nodes as routers that advertises k8s pods IP’s to our data center network. We run our nodes with 4 network interfaces in 2 pairs (ECMP). 1 pair for frontend application traffic, 1 pair for backend replication/data traffic. This provides us with flexibility, scalability, redundancy and global routable pod IPs.',
+      "We run all our Kubernetes nodes as routers that advertises Kubernetes pods IP's to our data center network. We run our nodes with 4 network interfaces in 2 pairs (ECMP). 1 pair for frontend application traffic, 1 pair for backend replication/data traffic. This provides us with flexibility, scalability, redundancy and global routable pod IPs.",
     quote: true,
-    person: 'Karsten Nielson - Senoir systems engineer, Ikea Retail',
+    person: 'Karsten Nielson - Senior Systems Engineer, Ikea Retail',
   },
 ];
 

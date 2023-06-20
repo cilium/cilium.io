@@ -13,7 +13,7 @@ import MainLayout from 'layouts/main/main';
 const introContent = {
   title: 'Runtime Enforcement',
   category: 'Security',
-  tagline: 'Prevent Threats and Enforce Policies in Real-time',
+  tagline: 'Prevent threats and enforce policies in real-time',
   subHeading:
     'Achieve threat prevention in cloud native environments while maintaining operational agility',
   description:

@@ -18,16 +18,16 @@ import MainLayout from 'layouts/main/main';
 const introContent = {
   title: 'Cluster Mesh',
   category: 'Networking',
-  tagline: 'Unleashing the Power of Multi-Cluster Networking with Cilium ClusterMesh',
+  tagline: 'Unleashing the power of multi-cluster networking with Cilium Cluster Mesh',
   subHeading: 'Seamless connectivity for multiple Kubernetes clusters',
   description:
-    'Multi-cluster kubernetes setups are often adopted for reasons like fault isolation, scalability, and geographical distribution. This approach can lead to networking complexities. Traditional networking models, in this context, struggle with service discovery, network segmentation, policy enforcement, and load balancing across clusters. Additionally, managing security protocols and policies across multiple environments can be a challenging endeavor due to the distributed nature of services.',
+    'Multi-cluster Kubernetes setups are often adopted for reasons like fault isolation, scalability, and geographical distribution. This approach can lead to networking complexities. Traditional networking models, in this context, struggle with service discovery, network segmentation, policy enforcement, and load balancing across clusters. Additionally, managing security protocols and policies across multiple environments can be a challenging endeavour due to the distributed nature of services.',
   imageSrc: AstronautBee,
   imageAlt: 'Astronaut Bee',
 };
 
 const sectionContent1 = {
-  title: 'ClusterMesh - Cilium’s multi-cluster Networking Implementation',
+  title: "Cluster Mesh - Cilium's Multi-Cluster Networking Implementation",
   description:
     'Cilium Cluster Mesh allows you to connect the networks of multiple clusters in such as way that pods in each cluster can discover and access services in all other clusters of the mesh, provided all the clusters run Cilium as their CNI. This allows effectively joining multiple clusters into a large unified network, regardless of the Kubernetes distribution or location each of them is running.',
   videoSrc: 'https://www.youtube.com/embed/1fsXtqg4Pkw',
@@ -36,7 +36,7 @@ const sectionContent1 = {
 const sectionContent2 = {
   title: 'High Availability and Fault Tolerance',
   description:
-    'ClusterMesh enhances your services high availability and fault tolerance. It supports the operation of Kubernetes clusters in multiple regions or availability zones. If resources become temporarily unavailable, are misconfigured in one cluster, or offline for upgrades, it enables failover to other clusters, ensuring your services remain accessible at all times.',
+    'Cluster Mesh enhances your services high availability and fault tolerance. It supports the operation of Kubernetes clusters in multiple regions or availability zones. If resources become temporarily unavailable, are misconfigured in one cluster, or offline for upgrades, it enables failover to other clusters, ensuring your services remain accessible at all times.',
   imageSrc: ClusterMeshImage1,
   imageAlt: 'multi-cluster illustration',
   whiteBackground: true,
@@ -45,7 +45,7 @@ const sectionContent2 = {
 const sectionContent3 = {
   title: 'Transparent Service Discovery',
   description:
-    'ClusterMesh automates service discovery across your Kubernetes clusters. Using standard Kubernetes services, it automatically merges services with identical names and namespaces across clusters into a global service. This means your applications can discover and interact with services, irrespective of the cluster they reside in, greatly simplifying cross-cluster communication.  ',
+    'Cluster Mesh automates service discovery across your Kubernetes clusters. Using standard Kubernetes services, it automatically merges services with identical names and namespaces across clusters into a global service. This means your applications can discover and interact with services, irrespective of the cluster they reside in, greatly simplifying cross-cluster communication.  ',
   imageSrc: ClusterMeshImage2,
   imageAlt: 'multi-cluster illustration',
   imageRight: false,
@@ -54,14 +54,14 @@ const sectionContent3 = {
 const sectionContent4 = {
   title: 'Effortless Pod IP Routing',
   description:
-    'ClusterMesh is able to handle Pod IP routing across multiple Kubernetes clusters at native performance. By using either tunneling or direct-routing, it circumvents the need for any gateways or proxies. This allows your pods to communicate across clusters seamlessly, enhancing the overall efficiency of your microservice architecture.  ',
+    'Cluster Mesh is able to handle Pod IP routing across multiple Kubernetes clusters at native performance. By using either tunneling or direct-routing, it circumvents the need for any gateways or proxies. This allows your pods to communicate across clusters seamlessly, enhancing the overall efficiency of your microservice architecture.  ',
   videoSrc: 'https://www.youtube.com/embed/VBOONHW65NU',
 };
 
 const sectionContent5 = {
   title: 'Shared Services Across Clusters',
   description:
-    'ClusterMesh enables sharing of services such as secrets management, logging, monitoring, or DNS between all clusters. This reduces operational overhead, simplifies management, and maintains isolation between tenant clusters.',
+    'Cluster Mesh enables sharing of services such as secrets management, logging, monitoring, or DNS between all clusters. This reduces operational overhead, simplifies management, and maintains isolation between tenant clusters.',
   imageSrc: ClusterMeshImage3,
   imageAlt: 'shared services in multi-cluster illustration',
   whiteBackground: true,
@@ -71,7 +71,7 @@ const sectionContent5 = {
 const sectionContent6 = {
   title: 'Uniform Network Policy Enforcement',
   description:
-    "ClusterMesh extends Cilium's Layer 3-7 network policy enforcement to all clusters in the mesh. It standardizes the application of network policies, ensuring a consistent security approach across your entire Kubernetes deployment, irrespective of the number of clusters involved.",
+    "Cluster Mesh extends Cilium's Layer 3-7 network policy enforcement to all clusters in the mesh. It standardizes the application of network policies, ensuring a consistent security approach across your entire Kubernetes deployment, irrespective of the number of clusters involved.",
   imageSrc: ClusterMeshImage4,
   imageAlt: 'multi-cluster Uniform Network Policy Enforcement',
 };
@@ -83,7 +83,7 @@ const testimonials = [
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
     description:
-      'We have payment services deployed on GCP, Azure, and AWS on their managed Kubernetes offerings. Due to regulatory requirements, we also have FPS services deployed on bare metal Kubernetes clusters across two data centers clustered using Cilium ClusterMesh. Our engineers only need to support and understand only one technology. Cilium is the company standard for networking and security, it has allowed us to secure our environment and gives us the possibility to merge our cloud services in the future.',
+      'We have payment services deployed on GCP, Azure, and AWS on their managed Kubernetes offerings. Due to regulatory requirements, we also have FPS services deployed on bare metal Kubernetes clusters across two data centers clustered using Cilium Cluster Mesh. Our engineers only need to support and understand only one technology. Cilium is the company standard for networking and security, it has allowed us to secure our environment and gives us the possibility to merge our cloud services in the future.',
     quote: true,
     person: 'Adelina Simion -  Technology Evangelist, Form3',
   },
@@ -93,7 +93,9 @@ const testimonials = [
     CTAtext: 'Read The Blog Post',
     url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
     description:
-      'We use Cilium because it uses eBPF and provides high throughput, lower latency, and less resource consumption, especially when the number of services is large. It also works well across all three major cloud providers, including Google GKE and Azure AKS, which was a critical factor in our choice.',
+      'We didn’t plan to use ClusterMesh in the beginning, but we later realized that we have another great feature that we leverage for Ingress.',
+    qoute: true,
+    person: 'Timur Solodovnikov, SRE, ClickHouse',
   },
   {
     logo: <WildLifeLogo />,

@@ -12,7 +12,7 @@ import MainLayout from 'layouts/main/main';
 const introContent = {
   title: 'Layer 4 Load Balancer',
   category: 'Networking',
-  tagline: 'High Performance Load Balancing with Low Overhead ',
+  tagline: 'High performance load balancing with low overhead',
   subHeading: 'How can I implement efficient L4 load balancing with low overhead and cost?',
   description:
     'Configuring and managing load balancing into your cluster can be challenging due to the complexity involved in setting up connectivity and synchronization between the clusters and the outside world. Traditional hardware load balancers can be very costly while software load balancers may not provide the performance you need. External-to-Pod (North-South) LB also typically requires additional tooling, adding more complexity, cost, and overhead. ',
@@ -23,7 +23,7 @@ const introContent = {
 const sectionContent1 = {
   title: 'XDP and eBPF powered scalable Load Balancing and Ingress',
   description:
-    'Cilium can attract traffic with BGP and accelerate it leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing. Cilium and eBPF operate at the kernel layer. With this level of context intelligent decisions can be made about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance. Cilium Standalone load balancer offers a high-performance LB, providing huge throughput gains at a reduced CPU overhead.',
+    "Cilium can attract traffic with BGP and accelerate it leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing. Cilium and eBPF operate at the kernel layer. With this level of context intelligent decisions can be made about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance. Cilium's standalone load balancer offers a high-performance LB, providing huge throughput gains at a reduced CPU overhead.",
   videoSrc: 'https://www.youtube.com/embed/OIyPm6K4ooY',
   whiteBackground: true,
 };
@@ -49,7 +49,7 @@ const testimonials = [
     title: 'Software L4 Load Balancing for Kubernetes Services at Yahoo',
     logo: <YahooLogo />,
     CTAtext: 'Watch the Talk',
-    url: 'https://www.kubermatic.com/blog/cilium-cni-integration-in-kubermatic-kubernetes-platform/',
+    url: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
     description:
       'Yahoo needed a way to solve LB APIs not being optimized for dynamic updates, the absence of autoscaling, and a severe performance degradation with large number of cluster services. Switching to Cilium L4 LB powered by XDP provided Yahoo with performance on par with hardware LBs, ability to hook into Kubernetes to dynamically configure backends, support for direct return mode, high availability, and resiliency through Maglev consistent hashing.',
   },

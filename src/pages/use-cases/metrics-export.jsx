@@ -15,7 +15,7 @@ import MainLayout from 'layouts/main/main';
 const introContent = {
   title: 'Metrics & Tracing Export',
   category: 'Observability',
-  tagline: 'Valuable Insights for Troubleshooting, Optimization, and Performance Monitoring',
+  tagline: 'Valuable insights for troubleshooting, optimization, and performance monitoring',
   subHeading:
     'Monitor and analyze the performance and behavior of your Cilium-managed Kubernetes environment',
   description:
@@ -27,12 +27,12 @@ const introContent = {
 const sectionContent1 = {
   title: 'Metrics and Tracing With Cilium ',
   description:
-    "Cilium's Metrics and Tracing export feature provides a seamless and integrated solution empowering users to monitor, analyze, and optimize their Kubernetes environments with ease. By leveraging the power of Prometheus metrics or OpenTelemetry, combined with Hubble's network behavior insights, Cilium enables users to gain deep visibility into their applications and network while simplifying the setup and configuration process. Cilium also integrates with various tracing systems, such as Jaeger, Zipkin, and OpenTelemetry, to provide distributed tracing capabilities. Cilium is optimized to handle high data volumes without compromising on performance.",
+    "Cilium's Metrics and Tracing export feature provides a seamless and integrated solution empowering users to monitor, analyze, and optimize their Kubernetes environments with ease. By leveraging the power of Prometheus metrics, combined with Hubble's network behavior insights, Cilium enables users to gain deep visibility into their applications and network while simplifying the setup and configuration process. Cilium also integrates with various tracing systems, such as Jaeger, Zipkin, and OpenTelemetry, to provide distributed tracing capabilities. Cilium is optimized to handle high data volumes without compromising on performance.",
   videoSrc: 'https://www.youtube.com/embed/_xBF277SF8o',
 };
 
 const sectionContent2 = {
-  title: 'Comprehensive & Rich Set of Metrics',
+  title: 'Comprehensive and Rich Set of Metrics',
   description:
     'Cilium captures a plethora of metrics, including latency, request rates, and error rates for your applications. These metrics are exported in a standardized Prometheus format, which can be easily integrated with your existing monitoring and visualization tools, enabling you to track your network performance in real-time.',
   imageSrc: MetricsImage1,
