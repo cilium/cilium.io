@@ -77,6 +77,19 @@ const EventCard = ({
   </Link>
 );
 
+EventCover.propTypes = {
+  ogImage: PropTypes.shape({
+    childImageSharp: PropTypes.shape({
+      gatsbyImageData: PropTypes.shape(),
+    }),
+  }),
+  title: PropTypes.string.isRequired,
+};
+
+EventCover.defaultProps = {
+  ogImage: null,
+};
+
 EventCard.propTypes = {
   ogImage: PropTypes.shape({
     childImageSharp: PropTypes.shape({

@@ -16,11 +16,13 @@ const Pagination = ({ pageCount, totalCount, callback }) => {
     const newOffSet = (selected * EVENT_PER_PAGE) % totalCount;
     callback(newOffSet);
 
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth',
-    });
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }, 20);
   };
 
   return (
