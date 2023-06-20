@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  eficode,
   tietoevry,
   unitedcloud,
   planetscale,
@@ -119,6 +120,10 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    kubermatic,
+    yahoo,
+    eficode,
+    clickhouse,
     tietoevry,
     bloomberg,
     azure,
@@ -186,7 +191,6 @@ const userCommunity2 = {
     palantir,
     scaleway,
     sportradar,
-    yahoo,
     plaid,
     isovalent,
     schubergPhilis,
@@ -196,7 +200,6 @@ const userCommunity2 = {
     finleap,
     infomaniak,
     jumo,
-    kubermatic,
     liquidReply,
     myFitnessPal,
     mux,
@@ -225,7 +228,6 @@ const userCommunity2 = {
     polverio,
     polarsignals,
     daimlertruck,
-    clickhouse,
     proton,
     cistec,
     kubehetzner,

@@ -493,6 +493,51 @@ export default {
       },
     ],
   },
+  clickhouse: {
+    iconName: 'clickhouse',
+    text: 'ClickHouse uses Cilium and Hubble across multiple clouds',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/clickhouse/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  eficode: {
+    iconName: 'eficode',
+    text: 'Eficode uses Cilium and Hubble as the default networking and observability solution for their customers',
+    links: [
+      {
+        linkText: 'Watch Video',
+        linkUrl: 'https://youtu.be/RdAO_Kxe6tE?t=509',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  yahoo: {
+    iconName: 'yahoo',
+    text: '<b>Yahoo</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
+    links: [
+      {
+        linkText: 'Watch Video',
+        linkUrl: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  kubermatic: {
+    iconName: 'kubermatic',
+    text: '<b>Kubermatic</b> uses Cilium as the CNI for its Kubernetes installer and platform',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://www.kubermatic.com/blog/cilium-cni-integration-in-kubermatic-kubernetes-platform/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   kubesphere: {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',
@@ -508,10 +553,6 @@ export default {
   sportradar: {
     iconName: 'sportradar',
     text: '<b>Sportradar</b> is using Cilium as their main CNI plugin in AWS (using kops)',
-  },
-  yahoo: {
-    iconName: 'yahoo',
-    text: '<b>Yahoo</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
   },
   accuknox: {
     iconName: 'accuknox',
@@ -576,10 +617,6 @@ export default {
   kubeOvn: {
     iconName: 'kubeOvn',
     text: '<b>Kube-OVN</b> uses Cilium to enhance the CNI service performance, security and monitoring',
-  },
-  kubermatic: {
-    iconName: 'kubermatic',
-    text: '<b>Kubermatic</b> uses Cilium as the CNI for its Kubernetes installer and platform',
   },
   liquidReply: {
     iconName: 'liquidReply',
@@ -712,10 +749,6 @@ export default {
   daimlertruck: {
     iconName: 'daimlertruck',
     text: '<b>Daimler Truck</b> is maintaining an AKS k8s cluster as a shared resource for DevOps crews and is using Cilium as the default CNI',
-  },
-  clickhouse: {
-    iconName: 'clickhouse',
-    text: '<b>ClickHouse</b> uses Cilium as CNI for AWS Kubernetes environments',
   },
   proton: {
     iconName: 'proton',

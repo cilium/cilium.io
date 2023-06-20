@@ -245,9 +245,9 @@ if (process.env.CONTEXT === 'production') {
 module.exports = {
   trailingSlash: 'always',
   siteMetadata: {
-    siteTitle: 'Cilium - Linux Native, API-Aware Networking and Security for Containers', // <title>
+    siteTitle: 'Cilium - Cloud Native, eBPF-based Networking, Observability, and Security', // <title>
     siteDescription:
-      'Linux-Native, API-Aware Networking and Security for Containers. Open source project, Fork me on Github',
+      'Cloud Native, eBPF-based Networking, Observability, and Security',
     // pathPrefix: "",
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',
