@@ -64,6 +64,22 @@ const Link = ({
     );
   }
 
+  if (to.startsWith('#')) {
+    return (
+      <a
+        className={className}
+        onClick={() => {
+          smoothScroll(to);
+        }}
+        {...otherProps}
+        aria-hidden="true"
+      >
+        {content}
+        {arrow}
+      </a>
+    );
+  }
+
   return (
     <a className={className} href={to} {...otherProps}>
       {content}

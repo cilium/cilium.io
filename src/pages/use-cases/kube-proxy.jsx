@@ -11,6 +11,8 @@ import ElectricianBee from 'images/pages/usecase/electrician-bee.png';
 import KubeProxyImage1 from 'images/pages/usecase/kubeproxy-1.webp';
 import KubeProxyImage2 from 'images/pages/usecase/kubeproxy-2.png';
 import MainLayout from 'layouts/main/main';
+import CiliumLogo from 'icons/logo-cilium.inline.svg';
+
 
 const introContent = {
   title: 'Kube-proxy Replacement',
@@ -64,6 +66,14 @@ const testimonials = [
     url: 'https://www.kubermatic.com/blog/cilium-cni-integration-in-kubermatic-kubernetes-platform/',
     description:
       'We use Cilium because it uses eBPF and provides high throughput, lower latency, and less resource consumption, especially when the number of services is large. It also works well across all three major cloud providers, including Google GKE and Azure AKS, which was a critical factor in our choice.',
+  },
+  {
+    title: 'Why is the kernel community replacing iptables with BPF?',
+    logo: <CiliumLogo />,
+    CTAtext: 'Read The Blog Post',
+    url: 'https://cilium.io/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables/',
+    description:
+      'Read the history of iptables in the kernel and the advantages of replacing it with eBPF',
   },
 ];
 

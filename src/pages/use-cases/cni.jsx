@@ -12,6 +12,8 @@ import CNIImage1 from 'images/pages/usecase/cni-1.png';
 import CNIImage2 from 'images/pages/usecase/cni-2.png';
 import CNIImage3 from 'images/pages/usecase/cni-3.png';
 import MainLayout from 'layouts/main/main';
+import CiliumLogo from 'icons/logo-cilium.inline.svg';
+
 
 const introContent = {
   title: 'High Performance Cloud Native Networking (CNI)',
@@ -81,6 +83,15 @@ const testimonials = [
     url: 'https://isovalent.com/blog/post/azure-cni-cilium/',
     description:
       'Azure CNI Powered by Cilium combines the robust control plane of Azure CNI with the dataplane of Cilium to provide high-performance networking and security. Azure CNI Powered by Cilium is able to provide functionality equivalent to existing Azure CNI and Azure CNI Overlay plugins, offering faster service routing, more efficient network policy enforcement, better observability of cluster traffic, and support for larger clusters with increased numbers of nodes, pods, and services.',
+    CTAtext: 'Read The Blog Post',
+  },
+
+  {
+    logo: <CiliumLogo />,
+    title: 'CNI Benchmark: Understanding Cilium Network Performance',
+    url: 'https://cilium.io/blog/2021/05/11/cni-benchmark/',
+    description:
+      'This blog explores the performance characteristics of Cilium based on extensive benchmarks across throughput, eBPF host-routing, latency, flamegraphs, rate of new connections, and the cost of encryption.',
     CTAtext: 'Read The Blog Post',
   },
 ];

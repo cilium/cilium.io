@@ -45,6 +45,7 @@ import CogniteLogo from './images/cognite.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
+import EficodeLogo from './images/eficode.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
@@ -108,6 +109,7 @@ import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  eficode: EficodeLogo,
   tietoevry: TietoevryLogo,
   unitedcloud: UnitedCloudLogo,
   kubehetzner: KubehetznerLogo,
