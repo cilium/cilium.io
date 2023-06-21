@@ -12,6 +12,7 @@ import GetStartedIcon from 'icons/get-started.inline.svg';
 import NewsletterIcon from 'icons/newsletter.inline.svg';
 
 const navigation = [
+  { icon: AdoptersIcon, name: 'Use cases', href: '#use-cases' },
   { icon: AdoptersIcon, name: 'Users', href: '/adopters' },
   { name: 'Enterprise', href: '/enterprise' },
   {
