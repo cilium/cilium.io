@@ -62,12 +62,6 @@ const testimonials = [
     description:
       'Rafay Leverages Cilium for Visibility via Prometheus metrics and Hubble to deliver the automation developers and operations want with the right level of standardization, control, and governance platform teams need. ',
   },
-  {
-    title: 'Metrics with Datadog Integration for Prometheus metrics',
-    logo: <SproutfiLogo />,
-    description:
-      'Sproutfi provides its customers with the tools, inspiration and support to become better investors. Leveraging Datadog Integration for Prometheus metrics, Sproutfi is able support its offering.',
-  },
 ];
 
 const MetricsExportPage = () => (

@@ -27,7 +27,7 @@ const introContent = {
 };
 
 const sectionContent1 = {
-  title: 'Cluster Mesh - Cilium’s Multi-Cluster Networking Implementation',
+  title: "Cluster Mesh - Cilium's Multi-Cluster Networking Implementation",
   description:
     'Cilium Cluster Mesh allows you to connect the networks of multiple clusters in such as way that pods in each cluster can discover and access services in all other clusters of the mesh, provided all the clusters run Cilium as their CNI. This allows effectively joining multiple clusters into a large unified network, regardless of the Kubernetes distribution or location each of them is running.',
   videoSrc: 'https://www.youtube.com/embed/1fsXtqg4Pkw',
@@ -71,7 +71,7 @@ const sectionContent5 = {
 const sectionContent6 = {
   title: 'Uniform Network Policy Enforcement',
   description:
-    "ClusterMesh extends Cilium's Layer 3-7 network policy enforcement to all clusters in the mesh. It standardizes the application of network policies, ensuring a consistent security approach across your entire Kubernetes deployment, irrespective of the number of clusters involved.",
+    "Cluster Mesh extends Cilium's Layer 3-7 network policy enforcement to all clusters in the mesh. It standardizes the application of network policies, ensuring a consistent security approach across your entire Kubernetes deployment, irrespective of the number of clusters involved.",
   imageSrc: ClusterMeshImage4,
   imageAlt: 'multi-cluster Uniform Network Policy Enforcement',
 };
@@ -83,7 +83,7 @@ const testimonials = [
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
     description:
-      'We have payment services deployed on GCP, Azure, and AWS on their managed Kubernetes offerings. Due to regulatory requirements, we also have FPS services deployed on bare metal Kubernetes clusters across two data centers clustered using Cilium ClusterMesh. Our engineers only need to support and understand only one technology. Cilium is the company standard for networking and security, it has allowed us to secure our environment and gives us the possibility to merge our cloud services in the future.',
+      'We have payment services deployed on GCP, Azure, and AWS on their managed Kubernetes offerings. Due to regulatory requirements, we also have FPS services deployed on bare metal Kubernetes clusters across two data centers clustered using Cilium Cluster Mesh. Our engineers only need to support and understand only one technology. Cilium is the company standard for networking and security, it has allowed us to secure our environment and gives us the possibility to merge our cloud services in the future.',
     quote: true,
     person: 'Adelina Simion -  Technology Evangelist, Form3',
   },
@@ -93,9 +93,9 @@ const testimonials = [
     CTAtext: 'Read The Blog Post',
     url: 'https://www.cncf.io/case-studies/clickhouse/',
     description:
-      'We didn’t plan to use [ClusterMesh](https://cilium.io/blog/2019/03/12/clustermesh) in the beginning, but we later realized that we have another great feature that we leverage for Ingress.',
+      'We didn’t plan to use ClusterMesh in the beginning, but we later realized that we have another great feature that we leverage for Ingress.',
     quote: true,
-    person: 'Timur Solodovnikov - SRE, ClickHouse',
+    person: 'Timur Solodovnikov, SRE, ClickHouse',
   },
   {
     logo: <WildLifeLogo />,

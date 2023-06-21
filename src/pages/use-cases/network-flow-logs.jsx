@@ -23,7 +23,7 @@ const introContent = {
 };
 
 const sectionContent1 = {
-  title: 'Real Time Visibility for Network Flows',
+  title: 'Real time visibility for Network Flows',
   description:
     'By providing real-time visibility into network flows with enhanced metadata, including identity-based information about Kubernetes workloads, Cilium simplifies the process of monitoring and troubleshooting network traffic in Kubernetes clusters. This makes it easier to trace traffic back to specific workloads, simplifying the process of monitoring, troubleshooting, and addressing network issues, and enabling operators to quickly identify and respond to security incidents.  ',
   videoSrc: 'https://www.youtube.com/embed/hD2iJUyIXQw',

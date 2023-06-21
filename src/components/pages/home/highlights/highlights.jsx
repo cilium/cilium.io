@@ -123,7 +123,7 @@ const list = [
 ];
 
 const Highlights = () => (
-  <section className="mt-12">
+  <section className="mt-12" id="use-cases">
     <Container>
       {list.map(({ title, items }, index) => (
         <div key={index} className="md:mb-16">

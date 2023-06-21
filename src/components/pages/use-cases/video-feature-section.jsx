@@ -6,7 +6,7 @@ const VideoFeatureSection = ({ title, description, videoSrc, whiteBackground, vi
     <div className="container mx-auto w-10/12">
       <div className={`block items-center gap-8 md:flex ${videoLeft && 'flex-row-reverse'}`}>
         <div className="pb-4 md:basis-[55%] md:pb-0 lg:basis-2/4">
-          <h3 className="mb-4 text-xl font-bold ">{title}</h3>
+          <h3 className="mb-4 text-xl font-bold capitalize">{title}</h3>
           <p>{description}</p>
         </div>
         <div className="lg:basis-2/4">
