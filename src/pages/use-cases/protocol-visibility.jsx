@@ -5,6 +5,7 @@ import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import PalantirLogo from 'icons/logo-palantir.inline.svg';
 import NewBee from 'images/pages/usecase/new-bee.png';
 import ProtocolImage1 from 'images/pages/usecase/protocol-1.png';
@@ -48,7 +49,8 @@ const testimonials = [
       'One area Palantir gets a lot of mileage from Cilium is observing DNS traffic. In the words of Vlad Ungureanu, a Backend Software Developer at Palantir. “With Cilium, we can get 3600 traceability of network calls associated with a Kubernetes pod. In the past, we were able to observe network flows just at the edge, now we can observe network flows at the host level.”    ',
   },
   {
-    title: 'A more consumable network infrastructure with Cilium',
+    title: 'A more consumable network infrastructure with Cilium at Ikea',
+    logo: <CiliumLogo />,
     CTAtext: 'Watch The Talk',
     url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
     description:
