@@ -94,7 +94,7 @@ const testimonials = [
     url: 'https://www.cncf.io/case-studies/clickhouse/',
     description:
       'We didn’t plan to use ClusterMesh in the beginning, but we later realized that we have another great feature that we leverage for Ingress.',
-    qoute: true,
+    quote: true,
     person: 'Timur Solodovnikov, SRE, ClickHouse',
   },
   {
