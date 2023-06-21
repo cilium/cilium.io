@@ -24,7 +24,7 @@ const introContent = {
 };
 
 const sectionContent1 = {
-  title: 'Optimal Bandwith Management with Cilium’s Bandwidth Manager',
+  title: 'Optimal Bandwidth Management with Cilium’s Bandwidth Manager',
   description:
     'Cilium’s Bandwidth Manager allows rate-limiting per Pod with just one line of YAML. Compared to other alternatives, the Bandwidth Manager provides a 4x reduction in latency, ensuring a smooth network experience and isn’t detrimental to performances and is designed for multi-queue and multi-core NICs. ',
   imageSrc: BandWidthImage2,
