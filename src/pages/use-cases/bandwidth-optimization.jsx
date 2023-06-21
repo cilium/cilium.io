@@ -67,7 +67,7 @@ const BandwidthLatencyPage = () => (
       <ImageFeatureSection {...sectionContent2} />
       <VideoFeatureSection {...sectionContent3} />
       <UseCaseCard
-        heading="Learn More About CIlium’s New Big TCP feature"
+        heading="Learn More About Cilium’s Big TCP Feature"
         testimonials={testimonials}
       />
       <JoinUsCard />

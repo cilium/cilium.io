@@ -91,10 +91,10 @@ const testimonials = [
     title: 'Building ClickHouse Cloud From Scratch in a Year',
     logo: <ClickHouseLogo />,
     CTAtext: 'Read The Blog Post',
-    url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
+    url: 'https://www.cncf.io/case-studies/clickhouse/',
     description:
       'We didn’t plan to use ClusterMesh in the beginning, but we later realized that we have another great feature that we leverage for Ingress.',
-    qoute: true,
+    quote: true,
     person: 'Timur Solodovnikov, SRE, ClickHouse',
   },
   {
