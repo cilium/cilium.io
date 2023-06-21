@@ -44,6 +44,10 @@ In order to be listed as a [Cilium Training Partner](https://cilium.io/enterpris
 * The provided Cilium training will be reviewed by a Cilium committer to assess quality, accuracy, and completeness.
 * Have a landing page that includes information on your Cilium training.
 
+## Listing Cilium Events
+
+Please see the [Event Guidelines](https://github.com/cilium/cilium.io/blob/main/Events-Guidelines.md).
+
 ## Documentation
 
 The source for the Cilium docs is hosted in the main [cilium/cilium](https://github.com/cilium/cilium) repository. 
