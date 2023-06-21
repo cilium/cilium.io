@@ -15,10 +15,10 @@ import MainLayout from 'layouts/main/main';
 const introContent = {
   title: 'Egress Gateway',
   category: 'Networking',
-  tagline: 'Enhancing Network Security and Traffic Control Exiting Kubernetes Environments',
+  tagline: 'Enhancing network security and traffic control exiting Kubernetes environments',
   subHeading: 'Integrating Unpredictable IPs',
   description:
-    'Pods typically have ever-changing IP addresses In Kubernetes environments. Even if masquerading is used to mitigate this, the IP addresses of nodes can also change frequently. Egress gateways provide a way to route all outbound traffic from certain pods through a specific node with a predictable IP address. This predictable IP can be useful for scenarios where the traffic destination requires a known source IP, for instance, when working with legacy systems or firewall rules.',
+    'Pods typically have ever-changing IP addresses in Kubernetes environments. Even if masquerading is used to mitigate this, the IP addresses of nodes can also change frequently. Egress gateways provide a way to route all outbound traffic from certain pods through a specific node with a predictable IP address. This predictable IP can be useful for scenarios where the traffic destination requires a known source IP, for instance, when working with legacy systems or firewall rules.',
   imageSrc: BeeKeeperBee,
   imageAlt: 'Astronaut Bee',
 };

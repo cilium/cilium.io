@@ -24,7 +24,7 @@ const introContent = {
 };
 
 const sectionContent1 = {
-  title: 'Kubernetes Without kube-proxy',
+  title: 'Kubernetes Without Kube-Proxy',
   description:
     'Cilium’s control and data plane has been built from the ground up for large-scale and highly dynamic cloud native environments where 100s and even 1000s of containers are created and destroyed within seconds. Cilium’s control plane is highly optimized, running in Kubernetes clusters of up to 5K nodes and 100K pods. Cilium’s data plane uses eBPF for efficient load-balancing and incremental updates, avoiding the pitfalls of large IPtables rulesets.',
   videoSrc: 'https://www.youtube.com/embed/bIRwSIwNHC0',

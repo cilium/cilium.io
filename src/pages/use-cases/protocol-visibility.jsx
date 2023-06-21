@@ -54,7 +54,7 @@ const testimonials = [
     description:
       "Ikea picked Cilium for its networking stack because they had the requirement of using open source and needed a solution that was easy to scale out, debug, and integrate with legacy systems. “We wanted to get out of the classical networking challenges where you're always pointing fingers at someone else. It's the networking team to blame, or the firewall, or DNS. We wanted a more consumable networking infrastructure with a cloud-like development experience on-prem in order to unlock development teams.",
     quote: true,
-    person: 'Karsten Nielson - Senior systems engineer, Ikea Retail',
+    person: 'Karsten Nielson - Senior Systems Engineer, Ikea Retail',
   },
 ];
 

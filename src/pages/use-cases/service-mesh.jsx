@@ -10,7 +10,7 @@ import MainLayout from 'layouts/main/main';
 const introContent = {
   title: 'Cilium Service Mesh',
   category: 'Networking',
-  tagline: 'Revolutionizing Networking and Simplify Operations',
+  tagline: 'Revolutionizing networking and simplify operations',
   subHeading: 'Performance Meets Simplicity',
   description:
     'Traditional service meshes, despite their benefits, can present significant challenges. These include the complexity and error-prone nature of IP and port-based network policies, performance overhead due to their proxy-based architecture, limited granularity in visibility of service-to-service communication, interoperability issues with existing infrastructure, scalability challenges as the number of services and traffic volumes increase, and operational and resource overhead.',

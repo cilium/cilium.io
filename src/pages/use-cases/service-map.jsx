@@ -14,7 +14,7 @@ import MainLayout from 'layouts/main/main';
 const introContent = {
   title: 'Service Map',
   category: 'Observability',
-  tagline: 'Detailed Visibility into the Communication and Behavior of your Workloads',
+  tagline: 'Detailed visibility into the communication and behavior of your workloads',
   subHeading:
     'How can I gain detailed visibility into the communication and behavior of my workloads?',
   description:
@@ -24,7 +24,7 @@ const introContent = {
 };
 
 const sectionContent1 = {
-  title: 'Hubble - eBPF powered Network, Service & Security Observability for Kubernetes',
+  title: 'Hubble - eBPF powered Network, Service, and Security Observability for Kubernetes',
   description:
     'Hubble provides a range of monitoring capabilities, including service dependencies and communication maps, network monitoring, application monitoring, and security observability. By relying on eBPF, all visibility is programmable and allows for a dynamic approach that minimizes overhead while providing deep and detailed visibility.',
   videoSrc: 'https://www.youtube.com/embed/8WCbGSCyDSo',
@@ -48,7 +48,7 @@ const testimonials = [
     description:
       'Capital One leverages Cilium in its internal PaaS to provide network visibility for teams in a multi-tenant Kubernetes cluster  “We do hundreds of deployments per day and we have clusters that have thousands of pods. This stack has allowed to provide less friction to more teams while using modern technology to meet our security and regulatory requirements.”',
     quote: true,
-    person: 'Bradley Whitfield - Platform engineer, Capital One',
+    person: 'Bradley Whitfield - Platform Engineer, Capital One',
   },
   {
     title: 'Saving Cost and Accelerating Insights with Hubble',

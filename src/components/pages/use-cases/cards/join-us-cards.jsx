@@ -11,17 +11,17 @@ const JoinUsCard = () => (
           className="rounded-[10px] bg-white p-6 text-center"
           style={{ boxShadow: `${customShadow}` }}
         >
-          <p className="font-bold">Join the Cilium community</p>
+          <p className="font-bold">Join the Cilium Slack</p>
           <p className="mx-auto h-[180px] w-full max-w-[320px] pt-4 pb-6">
             Cilium is an open source project that anyone in the community can use, improve, and
-            enjoy. We'd love you to join us! Find out what's happening and get involved.
+            enjoy. We'd love you to join us on Slack! Find out what's happening and get involved.
           </p>
           <a href="https://cilium.herokuapp.com/" target="_blank" rel="noopener noreferrer">
             <button
               type="button"
               className="rounded-[10px] bg-[#0080FF] py-2 px-6 text-center font-bold text-white"
             >
-              Join the community
+              Join the Slack
             </button>
           </a>
         </div>
@@ -53,7 +53,7 @@ const JoinUsCard = () => (
             Get help with Cilium through Slack, Github, training, support, and FAQs. The community
             can also help you tell or promote your story around Cilium.
           </p>
-          <a href="https://cilium.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://cilium.io/get-help/" target="_blank" rel="noopener noreferrer">
             <button
               type="button"
               className="rounded-[10px] bg-[#0080FF] py-2 px-6 text-center font-bold text-white"
