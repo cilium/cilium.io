@@ -7,5 +7,5 @@ ogSummary: 'You’ll hear from end users who will share their experiences, and f
 ogImage: ogImage.jpg
 externalUrl: 'https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/'
 type: Conference
-isFeatured: true
+isFeatured: false
 ---
