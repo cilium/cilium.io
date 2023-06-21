@@ -11,7 +11,7 @@ const JoinUsCard = () => (
           className="rounded-[10px] bg-white p-6 text-center"
           style={{ boxShadow: `${customShadow}` }}
         >
-          <p className="font-bold">Join the Cilium community</p>
+          <p className="font-bold">Join the Cilium Slack</p>
           <p className="mx-auto h-[180px] w-full max-w-[320px] pt-4 pb-6">
             Cilium is an open source project that anyone in the community can use, improve, and
             enjoy. We&apos;d love you to join us on Slack! Find out what&apos;s happening and get

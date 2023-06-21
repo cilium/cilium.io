@@ -51,7 +51,7 @@ const testimonials = [
     title: 'Leveraging Cilium’s BGP in Private Data Centers',
     logo: <CiliumLogo />,
     CTAtext: 'Watch The Talk',
-    url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
+    url: 'https://www.youtube.com/watch?v=sg-F_R-ZVNc',
     description:
       "We run all our Kubernetes nodes as routers that advertises Kubernetes pods IP's to our data center network. We run our nodes with 4 network interfaces in 2 pairs (ECMP). 1 pair for frontend application traffic, 1 pair for backend replication/data traffic. This provides us with flexibility, scalability, redundancy and global routable pod IPs.",
     quote: true,
