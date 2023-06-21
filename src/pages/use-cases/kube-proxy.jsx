@@ -13,6 +13,7 @@ import KubeProxyImage2 from 'images/pages/usecase/kubeproxy-2.png';
 import MainLayout from 'layouts/main/main';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 
+
 const introContent = {
   title: 'Kube-proxy Replacement',
   category: 'Networking',

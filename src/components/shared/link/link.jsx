@@ -38,13 +38,22 @@ const Link = ({
   );
 
   const smoothScroll = (to) => {
-    const elementId = to.slice(1);
+    const elementId = to.slice(2);
     const section = document.getElementById(elementId);
     section.scrollIntoView({ behavior: 'smooth' });
   };
 
   const content = type === 'arrow' ? <span>{children}</span> : children;
   const arrow = type === 'arrow' && <ArrowIcon className="ml-2.5" />;
+
+  if (to.startsWith('/#')) {
+    return (
+      <a className={className} href={to} {...otherProps} aria-hidden="true">
+        {content}
+        {arrow}
+      </a>
+    );
+  }
 
   if (to.startsWith('/')) {
     return (
