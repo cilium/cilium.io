@@ -84,6 +84,7 @@ const testimonials = [
       'Azure CNI Powered by Cilium combines the robust control plane of Azure CNI with the dataplane of Cilium to provide high-performance networking and security. Azure CNI Powered by Cilium is able to provide functionality equivalent to existing Azure CNI and Azure CNI Overlay plugins, offering faster service routing, more efficient network policy enforcement, better observability of cluster traffic, and support for larger clusters with increased numbers of nodes, pods, and services.',
     CTAtext: 'Read The Blog Post',
   },
+
   {
     logo: <CiliumLogo />,
     title: 'CNI Benchmark: Understanding Cilium Network Performance',
