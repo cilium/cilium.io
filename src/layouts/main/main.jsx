@@ -35,7 +35,7 @@ const navigation = [
     ],
   },
   {
-    name: 'Documentation',
+    name: 'Docs',
     childItems: [
       { name: 'Cilium', href: 'https://docs.cilium.io/en/stable/' },
       { name: 'Tetragon', href: 'https://tetragon.cilium.io/docs/' },
