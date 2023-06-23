@@ -4,7 +4,7 @@ date: '2023-04-03T17:00:00.000Z'
 title: 'Cilium Talks at KubeCon EU 2023'
 isPopular: true
 isFeatured: false
-ogImage: ogImage.jpg
+ogImage: talkseu.png
 ogSummary: 'Find all the Cilium talk at KubeCon EU 2023'
 categories:
   - Community
@@ -13,7 +13,7 @@ tags:
   - KubeCon
 ---
 
-![Cilium Talks at KubeCon](ogImage.jpg)
+![Cilium Talks at KubeCon](talkseu.png)
 
 _Author: Bill Mulligan, Isovalent_
 

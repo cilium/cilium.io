@@ -187,7 +187,7 @@ async function createEventsPage({ graphql, actions }) {
               externalUrl
               ogImage {
                 childImageSharp {
-                  gatsbyImageData(width: 550)
+                  gatsbyImageData(width: 601)
                 }
               }
             }

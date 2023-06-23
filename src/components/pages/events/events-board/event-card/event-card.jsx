@@ -15,10 +15,10 @@ const EventCover = ({ ogImage, title }) => {
   const [rect, placeholder] = useElementRect();
   const { width = 0 } = rect ?? {};
   const placeholderHeight = width / 2.1;
-
+  console.log(ogImage);
   return ogImage ? (
     <GatsbyImage
-      imgClassName="self-center rounded-t-lg"
+      imgClassName="self-center rounded-t-lg h-full max-h-[261px] sm:max-h-[221px] lg:max-h-[180px]"
       image={getImage(ogImage)}
       objectFit="cover"
       alt={title}
