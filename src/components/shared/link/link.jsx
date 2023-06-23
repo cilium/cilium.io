@@ -21,7 +21,15 @@ const themeClassNames = {
   },
 };
 
-const Link = ({ className: additionalClassName, to, type, theme, children, ...otherProps }) => {
+const Link = ({
+  className: additionalClassName,
+  to,
+  type,
+  theme,
+  smooth,
+  children,
+  ...otherProps
+}) => {
   const className = classNames(
     type && theme && commonClassNames,
     themeClassNames[type]?.common,
@@ -29,8 +37,23 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
     additionalClassName
   );
 
+  const smoothScroll = (to) => {
+    const elementId = to.slice(2);
+    const section = document.getElementById(elementId);
+    section.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const content = type === 'arrow' ? <span>{children}</span> : children;
   const arrow = type === 'arrow' && <ArrowIcon className="ml-2.5" />;
+
+  if (to.startsWith('/#')) {
+    return (
+      <a className={className} href={to} {...otherProps} aria-hidden="true">
+        {content}
+        {arrow}
+      </a>
+    );
+  }
 
   if (to.startsWith('/')) {
     return (
@@ -38,6 +61,22 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
         {content}
         {arrow}
       </GatsbyLink>
+    );
+  }
+
+  if (to.startsWith('#')) {
+    return (
+      <a
+        className={className}
+        onClick={() => {
+          smoothScroll(to);
+        }}
+        {...otherProps}
+        aria-hidden="true"
+      >
+        {content}
+        {arrow}
+      </a>
     );
   }
 
@@ -52,6 +91,7 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
 Link.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string.isRequired,
+  smooth: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.keys(themeClassNames)),
   theme: PropTypes.oneOf(
     [

@@ -1,0 +1,17 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40 40L22.2929 22.2929C22.1054 22.1054 22 21.851 22 21.5858V13" stroke="#D1D7E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 40L27 40" stroke="#D1D7E0" stroke-width="2" stroke-linecap="round"/>
+<path d="M55 40H70" stroke="#D1D7E0" stroke-width="2" stroke-linecap="round"/>
+<path d="M40 40L22.2929 57.7071C22.1054 57.8946 22 58.149 22 58.4142V67" stroke="#D1D7E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="5" cy="5" r="5" transform="matrix(1 0 0 -1 17 18)" fill="#D6EBFF" stroke="#0073E6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="22" cy="67" r="5" fill="#FFF5D6" stroke="#FFBF00" stroke-width="2"/>
+<circle cx="10" cy="40" r="5" fill="white" stroke="#A7B1BE" stroke-width="2"/>
+<circle cx="70" cy="40" r="5" fill="white" stroke="#A7B1BE" stroke-width="2"/>
+<path d="M40 40L57.7071 22.2929C57.8946 22.1054 58 21.851 58 21.5858V13" stroke="#D1D7E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 40L57.7071 57.7071C57.8946 57.8946 58 58.149 58 58.4142V67" stroke="#D1D7E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="58" cy="13" r="5" transform="rotate(180 58 13)" fill="#FBDADA" stroke="#EB4748" stroke-width="2"/>
+<circle cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 63 62)" fill="#D6EBFF" stroke="#0073E6" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="40" cy="40" r="14" fill="#D6FFFC" stroke="#00877C" stroke-width="2" stroke-linejoin="round"/>
+<path d="M45.6594 44.9991C47.1056 43.621 48 41.718 48 39.6161C48 35.4098 44.4183 32 40 32C35.5817 32 32 35.4098 32 39.6161C32 41.7185 32.8948 43.6219 34.3416 45" stroke="#00877C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M46.225 32.0069C46.6859 31.6642 47.3284 31.7113 47.7346 32.1174V32.1174C48.1408 32.5236 48.1878 33.1661 47.8451 33.627L42.0351 41.4419C41.0918 42.7108 39.2418 42.8461 38.1238 41.7282V41.7282C37.0059 40.6102 37.1413 38.7603 38.4101 37.817L46.225 32.0069Z" fill="#00877C"/>
+</svg>
