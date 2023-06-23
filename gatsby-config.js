@@ -77,8 +77,8 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: 'gatsby-starter-default',
-      short_name: 'starter',
+      // name: 'cilium.io',
+      // short_name: 'cilium',
       start_url: '/',
       display: 'minimal-ui',
       icon: 'src/images/favicon.png', // This path is relative to the root of the site.
@@ -238,9 +238,8 @@ if (process.env.CONTEXT === 'production') {
 module.exports = {
   trailingSlash: 'always',
   siteMetadata: {
-    siteTitle: 'Cilium - Linux Native, API-Aware Networking and Security for Containers', // <title>
-    siteDescription:
-      'Linux-Native, API-Aware Networking and Security for Containers. Open source project, Fork me on Github',
+    siteTitle: 'Cilium - Cloud Native, eBPF-based Networking, Observability, and Security', // <title>
+    siteDescription: 'Cloud Native, eBPF-based Networking, Observability, and Security',
     // pathPrefix: "",
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',

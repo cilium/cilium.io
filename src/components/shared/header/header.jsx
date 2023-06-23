@@ -126,7 +126,7 @@ Header.propTypes = {
           name: PropTypes.string.isRequired,
           href: PropTypes.string,
           target: PropTypes.string,
-          icon: PropTypes.func.isRequired,
+          icon: PropTypes.func,
         })
       ),
     })

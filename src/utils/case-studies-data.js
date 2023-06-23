@@ -313,8 +313,14 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video',
+        linkText: 'Video 1',
         linkUrl: 'https://www.youtube.com/watch?v=sg-F_R-ZVNc',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video 2',
+        linkUrl:
+          'https://www.youtube.com/watch?v=mRbsXkdWUNU&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=4',
         linkTarget: '_blank',
       },
     ],
@@ -333,6 +339,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=1LXKafeuTPo',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Blog',
+        linkUrl: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
+        linkTarget: '_blank',
+      },
     ],
   },
   datadog: {
@@ -340,12 +351,18 @@ export default {
     text: 'Datadog is using Cilium in AWS (self-hosted k8s)',
     links: [
       {
-        linkText: 'Video',
+        linkText: 'Video 1',
         linkUrl: 'https://www.youtube.com/watch?v=6mTVuZUHLBg',
         linkTarget: '_blank',
       },
       {
-        linkText: 'User story',
+        linkText: 'Video 2',
+        linkUrl:
+          'https://www.youtube.com/watch?v=YK7GyEJdJGo&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=7',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Story',
         linkUrl: 'https://www.cncf.io/case-studies/datadog/',
         linkTarget: '_blank',
       },
@@ -418,8 +435,106 @@ export default {
     text: 'The New York Times uses Cilium on EKS for multi-region multi-tenant shared clusters',
     links: [
       {
-        linkText: 'Read user story',
+        linkText: 'Story',
         linkUrl: 'https://cilium.io/blog/2022/10/13/publishing-user-story/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video',
+        linkUrl:
+          'https://www.youtube.com/watch?v=9FDpMNvPrCw&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=5',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  bloomberg: {
+    iconName: 'bloomberg',
+    text: 'Bloomberg leverages Cilium to construct data sandboxes that restrict users from distributing data outside the sandbox',
+    links: [
+      {
+        linkText: 'Watch video',
+        linkUrl: 'https://www.youtube.com/watch?v=8fiYVyISyz4/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  azure: {
+    iconName: 'azure',
+    text: 'Microsoft chooses Cilium for Azure networking',
+    links: [
+      {
+        linkText: 'Watch video',
+        linkUrl:
+          'https://www.youtube.com/watch?v=y3z6s-CTtU0&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=2',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  robinhood: {
+    iconName: 'robinhood',
+    text: 'Robinhood uses Cilium for Kubernetes overlay networking',
+    links: [
+      {
+        linkText: 'Watch video',
+        linkUrl:
+          'https://www.youtube.com/watch?v=qdr9XQ6h5zs&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=8',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  tietoevry: {
+    iconName: 'tietoevry',
+    text: 'Tietoevry uses Cilium and Hubble across multiple platforms',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://isovalent.com/blog/post/tietoevry-with-isovalent-cilium-enterprise/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  clickhouse: {
+    iconName: 'clickhouse',
+    text: 'ClickHouse uses Cilium and Hubble across multiple clouds',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/clickhouse/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  eficode: {
+    iconName: 'eficode',
+    text: 'Eficode uses Cilium and Hubble as the default networking and observability solution for their customers',
+    links: [
+      {
+        linkText: 'Watch Video',
+        linkUrl: 'https://youtu.be/RdAO_Kxe6tE?t=509',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  yahoo: {
+    iconName: 'yahoo',
+    text: '<b>Yahoo</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
+    links: [
+      {
+        linkText: 'Watch Video',
+        linkUrl: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  kubermatic: {
+    iconName: 'kubermatic',
+    text: '<b>Kubermatic</b> uses Cilium as the CNI for its Kubernetes installer and platform',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://www.kubermatic.com/blog/cilium-cni-integration-in-kubermatic-kubernetes-platform/',
+        linkTarget: '_blank',
       },
     ],
   },
@@ -438,10 +553,6 @@ export default {
   sportradar: {
     iconName: 'sportradar',
     text: '<b>Sportradar</b> is using Cilium as their main CNI plugin in AWS (using kops)',
-  },
-  yahoo: {
-    iconName: 'yahoo',
-    text: '<b>Yahoo</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
   },
   accuknox: {
     iconName: 'accuknox',
@@ -506,10 +617,6 @@ export default {
   kubeOvn: {
     iconName: 'kubeOvn',
     text: '<b>Kube-OVN</b> uses Cilium to enhance the CNI service performance, security and monitoring',
-  },
-  kubermatic: {
-    iconName: 'kubermatic',
-    text: '<b>Kubermatic</b> uses Cilium as the CNI for its Kubernetes installer and platform',
   },
   liquidReply: {
     iconName: 'liquidReply',
@@ -622,5 +729,41 @@ export default {
   ungleich: {
     iconName: 'ungleich',
     text: '<b>ungleich</b> uses Cilium for IPv6-only Kubernetes deployments',
+  },
+  nine: {
+    iconName: 'nine',
+    text: '<b>Nine</b> uses Cilium on all Nine Kubernetes Engine clusters',
+  },
+  kilo: {
+    iconName: 'kilo',
+    text: 'Cilium is a supported CNI for <b>Kilo</b>. When used together, Cilium + Kilo create a full mesh via WireGuard for Kubernetes in edge environments',
+  },
+  polverio: {
+    iconName: 'polverio',
+    text: '<b>Polverio</b> KubeLift is a single-node Kubernetes distribution optimized for Azure, using Cilium as the CNI',
+  },
+  polarsignals: {
+    iconName: 'polarsignals',
+    text: '<b>Polar Signals</b> uses Cilium as the CNI on its GKE data plane v2 based clusters',
+  },
+  daimlertruck: {
+    iconName: 'daimlertruck',
+    text: '<b>Daimler Truck</b> is maintaining an AKS k8s cluster as a shared resource for DevOps crews and is using Cilium as the default CNI',
+  },
+  proton: {
+    iconName: 'proton',
+    text: '<b>Proton</b> is using Cilium as their CNI for all their Kubernetes clusters',
+  },
+  cistec: {
+    iconName: 'cistec',
+    text: '<b>Cistec</b> is a clinical information system provider and uses Cilium as the CNI plugin',
+  },
+  kubehetzner: {
+    iconName: 'kubehetzner',
+    text: '<b>Kube-Hetzner</b> uses Cilium as a possible CNI in its cluster deployment on Hetzner Cloud',
+  },
+  unitedcloud: {
+    iconName: 'unitedcloud',
+    text: '<b>United Cloud</b> is using Cilium for all non-production and production clusters (on-premises)',
   },
 };
