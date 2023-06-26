@@ -13,7 +13,6 @@ import NewsletterIcon from 'icons/newsletter.inline.svg';
 
 const navigation = [
   { name: 'Users', href: '/adopters' },
-  { name: 'Enterprise', href: '/enterprise' },
   {
     name: 'Learn',
     childItems: [
@@ -42,6 +41,7 @@ const navigation = [
       { name: 'Network Policy', href: 'https://networkpolicy.io/' },
     ],
   },
+  { name: 'Enterprise', href: '/enterprise' },
 ];
 
 const MainLayout = ({ isBlogPage, children, theme, footerWithTopBorder }) => {
