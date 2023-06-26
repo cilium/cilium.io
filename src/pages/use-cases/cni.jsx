@@ -7,13 +7,12 @@ import IntroSection from 'components/pages/use-cases/intro-section';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import AWSLogo from 'icons/logo-aws.inline.svg';
 import AzureLogo from 'icons/logo-azure.inline.svg';
+import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
 import CNIImage1 from 'images/pages/usecase/cni-1.png';
 import CNIImage2 from 'images/pages/usecase/cni-2.png';
 import CNIImage3 from 'images/pages/usecase/cni-3.png';
 import MainLayout from 'layouts/main/main';
-import CiliumLogo from 'icons/logo-cilium.inline.svg';
-
 
 const introContent = {
   title: 'High Performance Cloud Native Networking (CNI)',

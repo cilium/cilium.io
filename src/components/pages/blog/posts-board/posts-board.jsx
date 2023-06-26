@@ -34,7 +34,8 @@ const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages 
         <Pagination
           currentPage={currentPage}
           numPages={numPages}
-          currentCategory={currentCategory}
+          currentItem={currentCategory}
+          type="blog"
         />
       </Container>
     </section>

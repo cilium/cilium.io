@@ -1,10 +1,11 @@
-## Introduction
+# Introduction
 
 This document highlights the events page guidelines for use on the Cilium project's website.
 
 ## Objectives
 
 The objectives of adding events to the Cilium project's website is to raise awareness of physical and virtual events that:
+
 - Share project news, roadmap updates, news releases, and user stories
 - Educate on project updates
 - Share information on Cilium how-tos, demos, etc that are valuable to the community

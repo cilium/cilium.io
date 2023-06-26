@@ -1,6 +1,8 @@
 const fetch = require(`node-fetch`);
 const Path = require('path');
 
+const { createEventFilters } = require('./src/utils/event-filters');
+const { EVENT_REGEX, EVENTS_BASE_PATH } = require('./src/utils/events');
 const { slugify } = require('./src/utils/slugify');
 
 const DRAFT_FILTER = process.env.NODE_ENV === 'production' ? [false] : [true, false];
@@ -62,7 +64,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
     },
   } = await graphql(`
     {
-      allCategories: allMdx {
+      allCategories: allMdx(filter: { fileAbsolutePath: { regex: "/posts/" } }) {
         group(field: frontmatter___categories) {
           fieldValue
         }
@@ -142,9 +144,128 @@ async function createBlogPages({ graphql, actions, reporter }) {
   );
 }
 
+// Create Events Page
+async function createEventsPage({ graphql, actions }) {
+  const { createPage } = actions;
+
+  const result = await graphql(
+    `
+      query ($draftFilter: [Boolean]!, $eventRegex: String!) {
+        allMdx(
+          filter: {
+            fileAbsolutePath: { regex: $eventRegex }
+            fields: { draft: { in: $draftFilter } }
+          }
+        ) {
+          totalCount
+        }
+        allTypes: allMdx(filter: { fileAbsolutePath: { regex: $eventRegex } }) {
+          group(field: frontmatter___type) {
+            fieldValue
+          }
+        }
+        allRegions: allMdx(filter: { fileAbsolutePath: { regex: $eventRegex } }) {
+          group(field: frontmatter___region) {
+            fieldValue
+          }
+        }
+        allPosts: allMdx(
+          filter: {
+            fileAbsolutePath: { regex: $eventRegex }
+            fields: { draft: { in: $draftFilter }, isFeatured: { eq: false } }
+          }
+          sort: { fields: frontmatter___date, order: DESC }
+        ) {
+          nodes {
+            frontmatter {
+              date(formatString: "MMM DD, YYYY")
+              region
+              place
+              type
+              title
+              ogSummary
+              externalUrl
+              ogImage {
+                childImageSharp {
+                  gatsbyImageData(width: 601)
+                }
+              }
+            }
+          }
+        }
+        featuredPost: allMdx(
+          filter: {
+            fileAbsolutePath: { regex: $eventRegex }
+            fields: { draft: { in: $draftFilter }, isFeatured: { eq: true } }
+          }
+          sort: { fields: frontmatter___date, order: DESC }
+          limit: 1
+        ) {
+          nodes {
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              region
+              place
+              type
+              title
+              ogSummary
+              externalUrl
+              ogImage {
+                childImageSharp {
+                  gatsbyImageData(width: 735)
+                }
+              }
+            }
+          }
+        }
+      }
+    `,
+    { draftFilter: DRAFT_FILTER, eventRegex: EVENT_REGEX }
+  );
+
+  if (result.errors) throw new Error(result.errors);
+
+  const { totalCount } = result.data.allMdx;
+  const {
+    featuredPost: { nodes: featuredPost },
+    allPosts: { nodes: allEvents },
+    allTypes: { group: allTypes },
+    allRegions: { group: allRegions },
+  } = result.data;
+
+  function getInitialFilters(allFilters) {
+    return allFilters.reduce((acc, { label }) => {
+      if (!acc[label]) {
+        acc[label] = [];
+      }
+      return acc;
+    }, {});
+  }
+
+  const postEvents = allEvents.map((event) => ({ ...event.frontmatter }));
+  const featuredEvent = featuredPost[0].frontmatter;
+  const types = allTypes.reduce((acc, type) => [...acc, type.fieldValue], []);
+  const regions = allRegions.reduce((acc, type) => [...acc, type.fieldValue], []);
+  const eventFilters = createEventFilters(types, regions);
+  const initialFilters = getInitialFilters(eventFilters);
+
+  createPage({
+    path: EVENTS_BASE_PATH,
+    component: Path.resolve('./src/templates/events.jsx'),
+    context: {
+      featuredEvent,
+      postEvents,
+      totalCount,
+      eventFilters,
+      initialFilters,
+    },
+  });
+}
+
 exports.createPages = async (options) => {
   await createBlogPages(options);
   await createBlogPosts(options);
+  await createEventsPage(options);
 };
 
 exports.onCreateNode = ({ node, actions }) => {
@@ -180,6 +301,16 @@ exports.onCreateNode = ({ node, actions }) => {
       node,
       name: 'externalUrl',
       value: node.frontmatter.externalUrl || '',
+    });
+    createNodeField({
+      node,
+      name: 'type',
+      value: node.frontmatter.type || '',
+    });
+    createNodeField({
+      node,
+      name: 'region',
+      value: node.frontmatter.region || '',
     });
   }
 };

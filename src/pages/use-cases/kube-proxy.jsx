@@ -5,14 +5,13 @@ import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import KubermaticLogo from 'icons/logo-kubermatic.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
 import ElectricianBee from 'images/pages/usecase/electrician-bee.png';
 import KubeProxyImage1 from 'images/pages/usecase/kubeproxy-1.webp';
 import KubeProxyImage2 from 'images/pages/usecase/kubeproxy-2.png';
 import MainLayout from 'layouts/main/main';
-import CiliumLogo from 'icons/logo-cilium.inline.svg';
-
 
 const introContent = {
   title: 'Kube-proxy Replacement',
