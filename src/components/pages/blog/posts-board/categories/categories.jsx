@@ -19,7 +19,7 @@ const Categories = ({ id, categories, currentCategory }) => {
   return (
     <div
       id={id}
-      className="flex px-4 mt-6 -mx-4 overflow-x-auto gap-x-3.5 xl:flex-wrap xl:overflow-visible md:px-6 lg:px-10 xl:px-0 md:-mx-6 lg:-mx-10 xl:mx-0 no-scrollbar lg:gap-x-5 md:mt-10 lg:mt-14"
+      className="no-scrollbar -mx-4 mt-6 flex gap-x-3.5 overflow-x-auto px-4 md:-mx-6 md:mt-10 md:px-6 lg:-mx-10 lg:mt-14 lg:gap-x-5 lg:px-10 xl:mx-0 xl:flex-wrap xl:overflow-visible xl:px-0"
     >
       {categories.map((category) => {
         const isActiveElement = currentCategory === category;
@@ -27,8 +27,8 @@ const Categories = ({ id, categories, currentCategory }) => {
         return (
           <button
             className={classNames(
-              'py-2 font-medium whitespace-nowrap rounded border-2 border-transparent leading-none transition-colors duration-200 hover:border-primary-1 hover:text-primary-1',
-              isActiveElement ? ' text-white bg-primary-1 border-primary-1 hover:text-white' : '',
+              'whitespace-nowrap rounded border-2 border-transparent py-2 font-medium leading-none transition-colors duration-200 hover:border-primary-1 hover:text-primary-1',
+              isActiveElement ? ' border-primary-1 bg-primary-1 text-white hover:text-white' : '',
               isCategoryAll ? 'px-4 md:px-6 lg:px-10' : 'px-3'
             )}
             type="button"

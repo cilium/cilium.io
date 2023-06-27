@@ -8,4 +8,4 @@
 @import './flat-breaks';
 @import './remove-autocomplete-styles';
 
-@import '../components/shared/checkbox/checkbox.css';
+@import './checkbox.css';

@@ -1,1 +1,3 @@
-export { default } from './categories';
+import Categories from './categories';
+
+export default Categories;

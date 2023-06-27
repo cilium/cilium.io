@@ -19,6 +19,13 @@ const plugins = [
     },
   },
   {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `events`,
+      path: `${__dirname}/content/events`,
+    },
+  },
+  {
     resolve: `gatsby-plugin-mdx`,
     options: {
       extensions: [`.mdx`, `.md`],

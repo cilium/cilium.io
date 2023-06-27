@@ -6,6 +6,8 @@ import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import ExternalLinkIcon from 'icons/external-link.inline.svg';
 
+import TypeLabel from '../type-label';
+
 const FeaturedStory = ({
   className,
   title,
@@ -15,7 +17,9 @@ const FeaturedStory = ({
   ogSummary: summary,
   path,
   categories,
+  type,
   externalUrl,
+  place,
 }) => {
   const url = externalUrl !== '' && externalUrl;
   const coverUrl = ogImageUrl !== '' && ogImageUrl;
@@ -46,7 +50,14 @@ const FeaturedStory = ({
           )}
         </div>
         <div className="flex flex-1 flex-col">
-          <span className="font-medium leading-none text-gray-1">{date}</span>
+          <div className="flex flex-col gap-x-0 gap-y-2 lg:flex-row lg:gap-x-5 lg:gap-y-0 ">
+            <time className="whitespace-nowrap font-medium leading-none text-gray-1">{date}</time>
+            {place && (
+              <span className="relative whitespace-nowrap font-medium leading-none text-gray-1 before:absolute before:top-1/2 before:-left-3 before:hidden before:h-1 before:w-1 before:-translate-y-1/2 before:rounded-full before:bg-gray-1 lg:before:inline-block">
+                {place}
+              </span>
+            )}
+          </div>
           <Heading className="mt-4 line-clamp-3 group-hover:text-primary-1" tag="h3" size="md">
             {title}
           </Heading>
@@ -60,7 +71,8 @@ const FeaturedStory = ({
                 {category}
               </span>
             ))}
-            {url && (
+            {type && <TypeLabel type={type} />}
+            {!type && url && (
               <div className="inline-flex h-8 items-center rounded bg-additional-4 bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider text-primary-1">
                 <span>External</span>
                 <ExternalLinkIcon className="ml-1" />
@@ -87,6 +99,8 @@ FeaturedStory.propTypes = {
   ogImageUrl: PropTypes.string,
   path: PropTypes.string,
   externalUrl: PropTypes.string,
+  place: PropTypes.string,
+  type: PropTypes.oneOf(['Meetup', 'Webinar', 'Conference']),
 };
 
 FeaturedStory.defaultProps = {
@@ -96,6 +110,8 @@ FeaturedStory.defaultProps = {
   ogImageUrl: null,
   externalUrl: null,
   categories: null,
+  place: null,
+  type: null,
 };
 
 export default FeaturedStory;

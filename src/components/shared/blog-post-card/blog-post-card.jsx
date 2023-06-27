@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Link from 'components/shared/link';
+import useElementRect from 'hooks/use-element-rect';
 import ExternalLinkIcon from 'icons/external-link.inline.svg';
-import useElementRect from 'utils/use-element-rect';
 
 import CiliumLogo from './images/cilium-logo.inline.svg';
 

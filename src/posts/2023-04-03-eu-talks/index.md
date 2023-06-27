@@ -5,7 +5,7 @@ title: 'Cilium Talks at KubeCon EU 2023'
 isPopular: true
 isFeatured: false
 ogImage: talkseu.png
-ogSummary: "Find all the Cilium talk at KubeCon EU 2023"
+ogSummary: 'Find all the Cilium talk at KubeCon EU 2023'
 categories:
   - Community
 tags:
@@ -13,13 +13,13 @@ tags:
   - KubeCon
 ---
 
-![Cilium Talks at KubeCon](talkseu.png) 
+![Cilium Talks at KubeCon](talkseu.png)
 
-*Author: Bill Mulligan, Isovalent*
+_Author: Bill Mulligan, Isovalent_
 
 KubeCon + CloudNativeCon EU 2023 is right around the corner and it is promising to be a hive of activity around Cilium (all of those tulips won’t pollinate themselves). The first ever [CiliumCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/) is happening on the Tuesday morning, with talks from users like Bloomberg, New York Times, and Robinhood. Tickets are already completely sold out, but there will be a livestream. You will also be able to join the conversation in the Cilium slack by jumping in the [#ciliumcon channel](https://cilium.slack.com/archives/C0510801E4V).
 
-Head to the [project meeting](https://docs.google.com/document/d/18DjEz8MzvhWkz7Y7ghWYW3Km_wCmmaZ4Z4iurwFgnYk/edit#) on Tuesday afternoon to meet the maintainers and discuss the future of the project. 
+Head to the [project meeting](https://docs.google.com/document/d/18DjEz8MzvhWkz7Y7ghWYW3Km_wCmmaZ4Z4iurwFgnYk/edit#) on Tuesday afternoon to meet the maintainers and discuss the future of the project.
 
 If that action-packed first day hasn’t already tired you out, there will be 7 other talks about Cilium to catch when the main conference kicks off on Wednesday!
 
@@ -79,7 +79,7 @@ In this talk, we’ll share Robinhood’s war stories from running Cilium in a h
 
 Tuesday, April 18 • 16:50 - 17:15
 
-eBPF’s promise of zero-instrumentation observability with low performance overhead sounds like a dream and is driving wide adoption in observability tooling. At the same time, as a relatively low-level technology it is often poorly understood or even feared. To bridge this gap, we will dive into how eBPF serves the observability field. Anna will start by introducing eBPF features that let us achieve observability with no code changes. Next, she will examine at a few distinct eBPF use cases in open source tools: * getting insights from granular system events (e.g. Tetragon) * continuous profiling (e.g. Pixie) * distributed tracing auto-instrumentation (OpenTelemetry) Peeking at both eBPF code and user interfaces will help us understand the potential of the technology. Finally, Anna will discuss the limits of using eBPF for observability and how it plays together with other frameworks. The audience will walk away understanding what works and what doesn’t when using eBPF for observability.
+eBPF’s promise of zero-instrumentation observability with low performance overhead sounds like a dream and is driving wide adoption in observability tooling. At the same time, as a relatively low-level technology it is often poorly understood or even feared. To bridge this gap, we will dive into how eBPF serves the observability field. Anna will start by introducing eBPF features that let us achieve observability with no code changes. Next, she will examine at a few distinct eBPF use cases in open source tools: _ getting insights from granular system events (e.g. Tetragon) _ continuous profiling (e.g. Pixie) \* distributed tracing auto-instrumentation (OpenTelemetry) Peeking at both eBPF code and user interfaces will help us understand the potential of the technology. Finally, Anna will discuss the limits of using eBPF for observability and how it plays together with other frameworks. The audience will walk away understanding what works and what doesn’t when using eBPF for observability.
 
 [Cilium Project Meeting](https://sched.co/1JWRk)
 

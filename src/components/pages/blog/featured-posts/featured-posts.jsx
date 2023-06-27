@@ -2,9 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container';
+import FeaturedStory from 'components/shared/featured-story';
 import PopularPosts from 'components/shared/popular-posts';
-
-import FeaturedStory from './featured-story';
 
 const FeaturedPosts = ({ featuredStory }) => (
   <section className="mt-6 md:mt-10 lg:mt-16">

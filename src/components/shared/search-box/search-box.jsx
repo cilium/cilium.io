@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, { useRef, useState, useMemo } from 'react';
 import { InstantSearch } from 'react-instantsearch-dom';
 
-import useClickOutside from 'utils/use-click-outside';
+import useClickOutside from 'hooks/use-click-outside';
 
 import SearchInput from './search-input';
 import SearchResult from './search-result';
@@ -18,7 +18,7 @@ const SearchBox = ({ indices, className }) => {
     []
   );
 
-  useClickOutside(rootRef, () => setFocus(false));
+  useClickOutside([rootRef], () => setFocus(false));
   const shouldShowResult = !!query?.length && hasFocus;
   return (
     <div
