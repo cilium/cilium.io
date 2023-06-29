@@ -246,8 +246,7 @@ module.exports = {
   trailingSlash: 'always',
   siteMetadata: {
     siteTitle: 'Cilium - Cloud Native, eBPF-based Networking, Observability, and Security', // <title>
-    siteDescription:
-      'Cloud Native, eBPF-based Networking, Observability, and Security',
+    siteDescription: 'Cloud Native, eBPF-based Networking, Observability, and Security',
     // pathPrefix: "",
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',

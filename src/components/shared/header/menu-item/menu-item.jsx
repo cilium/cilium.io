@@ -29,7 +29,7 @@ const MenuItem = ({ name, href, target, childItems }) => {
                   target={target || null}
                   rel={target ? 'noopener noreferrer' : null}
                 >
-                  <Icon className="shrink-0" />
+                  {Icon && <Icon className="shrink-0" />}
                   <span>{name}</span>
                 </Link>
               </li>

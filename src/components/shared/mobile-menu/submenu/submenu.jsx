@@ -27,7 +27,7 @@ const Submenu = ({ isOpen, childItems }) => (
           target={target || null}
           rel={target ? 'noopener noreferrer' : null}
         >
-          <Icon className="shrink-0" />
+          {Icon && <Icon className="shrink-0" />}
           <span className="flex-grow">{name}</span>
         </Link>
       </li>
@@ -42,7 +42,7 @@ Submenu.propTypes = {
       name: PropTypes.string.isRequired,
       href: PropTypes.string,
       target: PropTypes.string,
-      icon: PropTypes.func.isRequired,
+      icon: PropTypes.func,
     })
   ).isRequired,
 };

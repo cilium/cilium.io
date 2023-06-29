@@ -1,6 +1,6 @@
 ---
 date: '2023-04-20T17:00:00.000Z'
-title: "How Ikea, The New York Times and Bloomberg use open source for cloud native networking and security"
+title: 'How Ikea, The New York Times and Bloomberg use open source for cloud native networking and security'
 ogImage: ogimage.png
 ogSummary: 'Coverage of CiliumCon'
 categories:

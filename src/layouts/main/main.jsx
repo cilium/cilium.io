@@ -13,7 +13,6 @@ import NewsletterIcon from 'icons/newsletter.inline.svg';
 
 const navigation = [
   { name: 'Users', href: '/adopters' },
-  { name: 'Enterprise', href: '/enterprise' },
   {
     name: 'Learn',
     childItems: [
@@ -35,7 +34,15 @@ const navigation = [
       { icon: NewsletterIcon, name: 'Newsletter', href: '/newsletter' },
     ],
   },
-  { name: 'Documentation', href: 'https://docs.cilium.io/en/stable/' },
+  {
+    name: 'Docs',
+    childItems: [
+      { name: 'Cilium', href: 'https://docs.cilium.io/en/stable/' },
+      { name: 'Tetragon', href: 'https://tetragon.cilium.io/docs/' },
+      { name: 'Network Policy', href: 'https://networkpolicy.io/' },
+    ],
+  },
+  { name: 'Enterprise', href: '/enterprise' },
 ];
 
 const MainLayout = ({ isBlogPage, children, theme, footerWithTopBorder }) => {
