@@ -88,15 +88,15 @@ While the IPv4 limitation can be easily solved later, the PodCIDR must be static
 
 As stated earlier, we only use native routing on GCP and rely on vxlan for AWS and Azure. This is because GCP is the only of the three which implements IPAM in a way in which the PodCIDR is disjoint from the NodeCIDR. This allows us to filter traffic based on the subnet.
 
-Implementing strict mode support for AWS and Azure with poses some challenges. When using native routing, Pod IPs are usually allocated out of the same subnet as Node IPs. Therefore, we cannot filter by subnet, as it would also disrupt Node-to-Node communication. 
+Implementing strict mode support for AWS and Azure poses some challenges. When using native routing, Pod IPs are usually allocated out of the same subnet as Node IPs. Therefore, we cannot filter by subnet, as it would also disrupt Node-to-Node communication. 
 
 We can combine our CIDR-based filter with the IPCache to regain Node-to-Node communication. If a packet matches the filter, we can look up the destination's identity in the IPCache. If the destination is a Node, we allow the packet to leave the Node.
 
-This solution comes with a caveat: The Node could have been terminated, and its IP re-used as a Pod IP while the IP is still associated with the Node in the IPCache. Luckily, this attack is very hard to pull off. An attacker would need to control many different variables. Furthermore, mechanisms such as a cooldown period between IP re-usage should prevent this from happening by chance. 
+This solution has a caveat: The Node could have been terminated, and its IP re-used as a Pod IP while the IP is still associated with the Node in the IPCache. Luckily, this attack is very hard to pull off. An attacker would need to control many different variables. Furthermore, mechanisms such as a cooldown period between IP re-usage should prevent this from happening by chance. 
 
-Similarly, when using VXLAN there exists multiple IPs associated with the Node which are inside the PodCIDR such as the `CiliumInternalIP`. This IP is used for e.g., routing traffic originating from one Node to a Pod on another Node. Therefore, we have to employ the same exception again by using the IPCache.
+Similarly, when using VXLAN, multiple IPs are associated with the Node inside the PodCIDR, such as the `CiliumInternalIP`. This IP is used for, e.g., routing traffic originating from one Node to a Pod on another Node. Therefore, we must again employ the same exception by using the IPCache.
 
-Enabling strict mode is still beneficial on AWS and Azure. Also, it is possible that the upcoming Node-to-Node encryption feature allows us to get rid of the exception.
+Enabling strict mode is still beneficial on AWS and Azure. Also, the upcoming Node-to-Node encryption feature allows us to eliminate the exception.
 
 ### The strict mode solution (implementation phase)
 
