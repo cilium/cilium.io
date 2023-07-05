@@ -72,7 +72,7 @@ In summary, when network traffic is sent to newly created Kubernetes Pods, a sho
 
 ### The strict mode solution (planning phase)
 
-Now that we [have a test case](https://github.com/edgelesssys/cilium/blob/5da5882754569e118e713532b89dc4ca89ab76fd/test/k8s/datapath_configuration.go#L387), we can begin to develop a solution. We call it the strict mode.
+Now that we [have a test case](https://github.com/cilium/cilium/blob/5da5882754569e118e713532b89dc4ca89ab76fd/test/k8s/datapath_configuration.go#L387), we can begin to develop a solution. We call it the strict mode.
 
 With Constellation, we are uniquely positioned to control the whole underlying stack, including the Kubernetes and Cilium bootstrapping process. Therefore, we can automatically deploy and configure Cilium with our strict mode.
 
