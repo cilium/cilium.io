@@ -37,27 +37,27 @@ As with every security product, we need to strike a balance between security and
 - B)      Making the default secure
 - C)      Minimizing any chance of misconfiguration
 
-Cilium strikes that fine balance very well by making transparent network encryption easy to use. If you’re using the Cilium CLI, it’s just passing another command line flag during installation. Unfortunately, with the latest release, there is still a [known issue](https://docs.cilium.io/en/v1.13/security/network/encryption/#known-issues-and-workarounds) with the effectiveness of said encryption. In essence, to give the guarantee that all Pod-to-Pod traffic is encrypted, the admin would need to disable all Pod-to-Internet communication. While this solution works well in scenarios where a knowledgeable admin can securely configure the needed network policies, we wanted a secure out-of-the-box experience. We first need a deeper understanding of the problem to propose a solution.
+Cilium strikes that fine balance very well by making transparent network encryption easy to use. If you’re using the Cilium CLI, it’s just passing another command line flag during installation. Unfortunately, with the latest release, there is still a [known issue](https://docs.cilium.io/en/v1.13/security/network/encryption/#known-issues-and-workarounds) with the effectiveness of said encryption. In essence, to give the guarantee that all Pod-to-Pod traffic is encrypted, the admin would need to disable all Pod-to-Internet communication. While this solution works well in scenarios where a knowledgeable admin can securely configure the needed network policies, we want a secure out-of-the-box experience. Before coming up with a solution, we first need a deeper understanding of the problem.
 
 ### The consistency problem
 
 As stated in the GitHub issue description, both the identity-based policy enforcement and encryption rely on an [eBPF map](https://docs.kernel.org/bpf/maps.html) called IPCache to reason about the source and destination identity of packets. If the IPCache indicates that a destination IP is associated with a Kubernetes Pod, the packet is re-routed through the WireGuard interface. This interface then takes care of encapsulating and encrypting the packet and sending it to the Pod's Node.
 
-> Since WireGuard always needs to encapsulate, there is not much gained by using [native routing](https://docs.cilium.io/en/v1.13/network/concepts/routing/#native-routing). Luckily, running Cilium in tunneling mode [does not encapsulate WireGuard traffic twice](https://docs.cilium.io/en/v1.13/security/network/encryption-wireguard/).
+> Since WireGuard encapsulates the packets, there is not much gained by using [native routing](https://docs.cilium.io/en/v1.13/network/concepts/routing/#native-routing). Luckily, running Cilium in tunneling mode [does not encapsulate WireGuard traffic twice](https://docs.cilium.io/en/v1.13/security/network/encryption-wireguard/).
 
 The IPCache eBPF map is only eventually updated with new endpoints. To reproduce the issue, we need to introduce artificial delay somewhere along the path from the new endpoint creation to the IPCache update.
 
 The flow from a new endpoint (e.g., Pod) to a new IPCache entry on a remote Node is as follows:
 
 1. Endpoint is created
-2. Cilium-agent creates a new CiliumEndpoint CRD
+2. Cilium-agent creates a new CiliumEndpoint custom resource
 3. Cilium-operator merges CiliumEndpoints with the same identity to one CiliumEndpointSlice
 4. Cilium-agent watches and consumes all CiliumEndpointSlices
 5. Cilium-agent writes a new entry in IPCache
 
 From this flow, it is obvious that the IPCache is only eventually consistent, and we should be able to reproduce the issue by disabling the Cilium operator.
 
-To deterministically reproduce the issue, we can adapt the WireGuard integration test in [`test/k8s/datapath_configuration.go`](https://github.com/edgelesssys/cilium/blob/d465085df155502267589f782801c63f3d08dd40/test/k8s/datapath_configuration.go#L545).  In this test, the execution is explicitly halted until the endpoint has propagated:
+We can verify that this reproduces the issue by adapting the WireGuard integration test in [`test/k8s/datapath_configuration.go`](https://github.com/edgelesssys/cilium/blob/d465085df155502267589f782801c63f3d08dd40/test/k8s/datapath_configuration.go#L545).  In this test, the execution is explicitly halted until the endpoint has propagated:
 
 ```golang
 // Due to IPCache update delays, it can take up to a few seconds
@@ -66,83 +66,89 @@ To deterministically reproduce the issue, we can adapt the WireGuard integration
 // IPs to be present on both nodes before performing the test
 ```
 
-Using this test, we scale the Cilium-operator deployment to 0 before deploying the test daemonset. If we now remove the check for the updated WireGuard peers mentioned above, the tests fail since the new endpoints can’t properly propagate to the IPCache and unencrypted traffic is leaked.
+Using this test, we scale the Cilium-operator deployment to 0 before deploying the test DaemonSet. If we now remove the check for the updated WireGuard peers mentioned above, the tests fail since the new endpoints can’t properly propagate to the IPCache and unencrypted traffic is leaked.
 
 In summary, when network traffic is sent to newly created Kubernetes Pods, a short delay in the propagation of routing information can lead to Cilium sending that traffic unencrypted over the wire.
 
 ### The strict mode solution (planning phase)
 
-Now that we [have a test case](https://github.com/edgelesssys/cilium/blob/d465085df155502267589f782801c63f3d08dd40/test/k8s/datapath_configuration.go#L631), we can begin to develop a solution. We call it the strict mode.
+Now that we [have a test case](https://github.com/edgelesssys/cilium/blob/5da5882754569e118e713532b89dc4ca89ab76fd/test/k8s/datapath_configuration.go#L387), we can begin to develop a solution. We call it the strict mode.
 
 With Constellation, we are uniquely positioned to control the whole underlying stack, including the Kubernetes and Cilium bootstrapping process. Therefore, we can automatically deploy and configure Cilium with our strict mode.
 
 We define the following constraints for our strict mode:
 
-- IPv4 only (Pod network commonly IPv4 only)
+- IPv4 only (Pod network still commonly IPv4 only)
 - PodCIDR must be known beforehand
 - Both vxlan (used for AWS/Azure) and native routing (used for GCP) must be supported
 
-While the IPv4 limitation can be easily solved later, the PodCIDR must be static and known before deploying Cilium. Support for a dynamic PodCIDR is a complex feature to implement because of the same eventual consistency problems we are trying to solve in the first place. Since we support Cilium’s tunneling and direct routing capabilities, the strict mode must also work with both. Note that the test we adapted already covers both scenarios.
+While the IPv4 limitation can be easily solved later, the PodCIDR must be static and known before deploying Cilium. Support for a dynamic PodCIDR is a complex feature to implement because of the same eventual consistency problems we are trying to solve in the first place. Since we support Cilium’s tunneling and native routing capabilities, the strict mode must also work with both. Note that the test we adapted already covers both scenarios.
 
-### Direct routing
+### The exception
 
-As stated earlier, we only use direct routing on GCP and rely on vxlan for AWS and Azure. This is because GCP is the only of the three which implements IPAM in a way in which the PodCIDR is disjoint from the NodeCIDR.
+As stated earlier, we only use native routing on GCP and rely on vxlan for AWS and Azure. This is because GCP is the only of the three which implements IPAM in a way in which the PodCIDR is disjoint from the NodeCIDR. This allows us to filter traffic based on the subnet.
 
-Implementing strict mode support for AWS and Azure with direct routing poses some challenges. When using direct routing, Pod IPs are usually allocated out of the same subnet as Node IPs. Therefore, we cannot filter by subnet, which would also disrupt Node-to-Node communication. We can combine our CIDR-based filter with the IPCache to regain Node-to-Node communication. If a packet matches the filter, we can look up the destination's identity in the IPCache. If the destination is a Node, we allow the packet to leave the Node.
+Implementing strict mode support for AWS and Azure with poses some challenges. When using native routing, Pod IPs are usually allocated out of the same subnet as Node IPs. Therefore, we cannot filter by subnet, as it would also disrupt Node-to-Node communication. 
 
-This solution comes with a caveat: The Node could have been terminated, and its IP re-used as a Pod IP while the IP is still associated with the Node in the IPCache. Luckily, this attack is very hard to pull off. An attacker would need to control many different variables. Furthermore, mechanisms such as a cooldown period between IP re-usage should prevent this from happening by chance. Enabling strict mode is still beneficial if you have to use direct routing on AWS and Azure. If you want to play it safe, you should only use direct routing on GCP and switch to vxlan everywhere else.
+We can combine our CIDR-based filter with the IPCache to regain Node-to-Node communication. If a packet matches the filter, we can look up the destination's identity in the IPCache. If the destination is a Node, we allow the packet to leave the Node.
+
+This solution comes with a caveat: The Node could have been terminated, and its IP re-used as a Pod IP while the IP is still associated with the Node in the IPCache. Luckily, this attack is very hard to pull off. An attacker would need to control many different variables. Furthermore, mechanisms such as a cooldown period between IP re-usage should prevent this from happening by chance. 
+
+Similarly, when using VXLAN there exists multiple IPs associated with the Node which are inside the PodCIDR such as the `CiliumInternalIP`. This IP is used for e.g., routing traffic originating from one Node to a Pod on another Node. Therefore, we have to employ the same exception again by using the IPCache.
+
+Enabling strict mode is still beneficial on AWS and Azure. Also, it is possible that the upcoming Node-to-Node encryption feature allows us to get rid of the exception.
 
 ### The strict mode solution (implementation phase)
 
-The Cilium community was very kind and helpful with our problem. They were quick to respond and helped us with the implementation of the strict mode. In the discussions with the Cilium maintainers, they suggested a location [in the datapath](https://docs.cilium.io/en/v1.13/network/ebpf/lifeofapacket/#life-of-a-packet) where we should add our [IP-based filter](https://github.com/cilium/cilium/pull/21856/files#diff-f1851842acdc4e195dcd1b102c3c2597c293c1bfd04dc7e1bca8e02050102915R110). After some trial and error; we finally found the correct spots in `bpf/bpf_host.c` and [`bpf/lib/encap.h`](https://github.com/cilium/cilium/pull/21856/files#diff-ff0cc41af3fc733a268ec48f09df41cc2bf321f9191d8df1722b6d195e88e193R1495), which made our code pass the test. For the eBPF connoisseurs, we’ve listed the actual packet filter code below. If you’re unsure what you see there, it filters packets based on IPv4 subnets. What? We never said it’s rocket science.
+The Cilium community was very kind and helpful with our problem. They were quick to respond and helped us with the implementation of the strict mode. In the discussions with the Cilium maintainers, they suggested a location [in the datapath](https://docs.cilium.io/en/v1.13/network/ebpf/lifeofapacket/#life-of-a-packet) where we should add our [IP-based filter](https://github.com/cilium/cilium/pull/21856/files#diff-f1851842acdc4e195dcd1b102c3c2597c293c1bfd04dc7e1bca8e02050102915R110). After some trial and error; we finally found the correct spots in [`bpf/bpf_host.c`](https://github.com/cilium/cilium/pull/21856/files#diff-ff0cc41af3fc733a268ec48f09df41cc2bf321f9191d8df1722b6d195e88e193R1495) and [`bpf/overlay. c`](https://github.com/cilium/cilium/pull/21856/files#diff-01b3b17d448a4cf12c8ce37729576da934f2c3ed8801216b33d4e13a39299193R684), which made our code pass the test. For the eBPF connoisseurs, we’ve listed the actual packet filter code below. If you’re unsure what you see there, it filters packets based on IPv4 subnets. What? We never said it’s rocket science.
 
 ```c
 /* strict_allow checks whether the packet is allowed to pass through the strict mode. */
 static __always_inline bool
 strict_allow(struct __ctx_buff *ctx) {
-	struct remote_endpoint_info __maybe_unused *dest_info, __maybe_unused *src_info;
-	bool __maybe_unused in_strict_cidr = false;
-	void *data, *data_end;
+ struct remote_endpoint_info __maybe_unused *dest_info, __maybe_unused *src_info;
+ bool __maybe_unused in_strict_cidr = false;
+ void *data, *data_end;
 #ifdef ENABLE_IPV4
-	struct iphdr *ip4;
+ struct iphdr *ip4;
 #endif
-	__u16 proto = 0;
+ __u16 proto = 0;
 
-	if (!validate_ethertype(ctx, &proto))
-		return true;
+ if (!validate_ethertype(ctx, &proto))
+  return true;
 
-	switch (proto) {
+ switch (proto) {
 #ifdef ENABLE_IPV4
-	case bpf_htons(ETH_P_IP):
-		if (!revalidate_data(ctx, &data, &data_end, &ip4))
-			return true;
+ case bpf_htons(ETH_P_IP):
+  if (!revalidate_data(ctx, &data, &data_end, &ip4))
+   return true;
 
-		/* Allow traffic that is sent from the node:
-		 * (1) When encapsulation is used and the destination is a remote pod.
-		 * (2) When the destination is a remote-node.
-		 */
-		if (ip4->saddr == IPV4_GATEWAY || ip4->saddr == IPV4_ENCRYPT_IFACE)
-			return true;
+  /* Allow traffic that is sent from the node:
+   * (1) When encapsulation is used and the destination is a remote pod.
+   * (2) When the destination is a remote-node.
+   */
+  if (ip4->saddr == IPV4_GATEWAY || ip4->saddr == IPV4_ENCRYPT_IFACE)
+   return true;
 
-		in_strict_cidr = ipv4_is_in_subnet(ip4->daddr,
-						   STRICT_IPV4_NET,
-						   STRICT_IPV4_NET_SIZE);
-		in_strict_cidr &= ipv4_is_in_subnet(ip4->saddr,
-						    STRICT_IPV4_NET,
-						    STRICT_IPV4_NET_SIZE);
+  in_strict_cidr = ipv4_is_in_subnet(ip4->daddr,
+         STRICT_IPV4_NET,
+         STRICT_IPV4_NET_SIZE);
+  in_strict_cidr &= ipv4_is_in_subnet(ip4->saddr,
+          STRICT_IPV4_NET,
+          STRICT_IPV4_NET_SIZE);
 
 #if defined(TUNNEL_MODE) || defined(STRICT_IPV4_OVERLAPPING_CIDR)
-		/* Allow pod to remote-node communication */
-		dest_info = lookup_ip4_remote_endpoint(ip4->daddr, 0);
-		if (dest_info && dest_info->sec_identity &&
-		    identity_is_node(dest_info->sec_identity))
-			return true;
+  /* Allow pod to remote-node communication */
+  dest_info = lookup_ip4_remote_endpoint(ip4->daddr, 0);
+  if (dest_info && dest_info->sec_identity &&
+      identity_is_node(dest_info->sec_identity))
+   return true;
 #endif /* TUNNEL_MODE || STRICT_IPV4_OVERLAPPING_CIDR */
-		return !in_strict_cidr;
+  return !in_strict_cidr;
 #endif /* ENABLE_IPV4 */
-	default:
-		return true;
-	}
+ default:
+  return true;
+ }
 }
 ```
 
@@ -158,5 +164,5 @@ We’ve seen how Cilium helps Constellation protect data in transit as one of th
 
 Let us know if you found our deep dive insightful and if you want to learn more about Constellation and Cilium. For example, protecting the Kubernetes API-Server-to-Node communication or integrating Cilium’s Node-to-Node encryption mode into Constellation. In the meantime, you can find everything about Constellation on [GitHub](https://github.com/edgelesssys/constellation) and in our [docs](https://docs.edgeless.systems/constellation).
 
-Thanks to [@pchaigno](https://github.com/pchaigno), [@brb](https://github.com/brb), and [@gandro](https://github.com/gandro) from Cilium for the helpful hints and discussions.
+Thanks to [@benschlueter](https://github.com/benschlueter) for the joint work. Thanks to [@pchaigno](https://github.com/pchaigno), [@brb](https://github.com/brb), and [@gandro](https://github.com/gandro) from Cilium for the helpful hints and discussions.
 Thanks to [@xmulligan](https://github.com/xmulligan) for reviewing and helping with the blog post.
