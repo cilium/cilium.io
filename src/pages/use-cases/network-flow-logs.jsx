@@ -4,6 +4,7 @@ import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
@@ -61,19 +62,25 @@ const testimonials = [
   },
 ];
 
-const NetworkFlowLogs = () => (
-  <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <UseCaseCard
-        heading="Who’s using Cilium’s for Network Flow logs?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
-  </MainLayout>
-);
+const NetworkFlowLogsPage = () => {
+  const pageTitle = introContent.title;
+  return (
+    <>
+      <PageTitle title={pageTitle} />
+      <MainLayout>
+        <section className="bg-[#F6F7F8]">
+          <IntroSection {...introContent} />
+          <VideoFeatureSection {...sectionContent1} />
+          <ImageFeatureSection {...sectionContent2} />
+          <UseCaseCard
+            heading="Who’s using Cilium’s for Network Flow logs?"
+            testimonials={testimonials}
+          />
+          <JoinUsCard />
+        </section>
+      </MainLayout>
+    </>
+  );
+};
 
-export default NetworkFlowLogs;
+export default NetworkFlowLogsPage;

@@ -4,6 +4,7 @@ import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
@@ -59,16 +60,22 @@ const testimonials = [
   },
 ];
 
-const BGPPage = () => (
-  <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <ImageFeatureSection {...sectionContent1} />
-      <VideoFeatureSection {...sectionContent2} />
-      <UseCaseCard heading="Who’s using Cilium’s BGP ?" testimonials={testimonials} />
-      <JoinUsCard />
-    </section>
-  </MainLayout>
-);
+const BGPPage = () => {
+  const pageTitle = introContent.title;
+  return (
+    <>
+      <PageTitle title={pageTitle} />
+      <MainLayout>
+        <section className="bg-[#F6F7F8]">
+          <IntroSection {...introContent} />
+          <ImageFeatureSection {...sectionContent1} />
+          <VideoFeatureSection {...sectionContent2} />
+          <UseCaseCard heading="Who’s using Cilium’s BGP ?" testimonials={testimonials} />
+          <JoinUsCard />
+        </section>
+      </MainLayout>
+    </>
+  );
+};
 
 export default BGPPage;

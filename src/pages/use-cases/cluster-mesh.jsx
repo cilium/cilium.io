@@ -4,6 +4,7 @@ import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import Form3Logo from 'icons/logo-form3.inline.svg';
@@ -109,23 +110,29 @@ const testimonials = [
   },
 ];
 
-const ClusterMeshPage = () => (
-  <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <ImageFeatureSection {...sectionContent3} />
-      <VideoFeatureSection {...sectionContent4} />
-      <ImageFeatureSection {...sectionContent5} />
-      <ImageFeatureSection {...sectionContent6} />
-      <UseCaseCard
-        heading="Who’s using Cilium for Multi Cluster networking?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
-  </MainLayout>
-);
+const ClusterMeshPage = () => {
+  const pageTitle = introContent.title;
+  return (
+    <>
+      <PageTitle title={pageTitle} />
+      <MainLayout>
+        <section className="bg-[#F6F7F8]">
+          <IntroSection {...introContent} />
+          <VideoFeatureSection {...sectionContent1} />
+          <ImageFeatureSection {...sectionContent2} />
+          <ImageFeatureSection {...sectionContent3} />
+          <VideoFeatureSection {...sectionContent4} />
+          <ImageFeatureSection {...sectionContent5} />
+          <ImageFeatureSection {...sectionContent6} />
+          <UseCaseCard
+            heading="Who’s using Cilium for Multi Cluster networking?"
+            testimonials={testimonials}
+          />
+          <JoinUsCard />
+        </section>
+      </MainLayout>
+    </>
+  );
+};
 
 export default ClusterMeshPage;

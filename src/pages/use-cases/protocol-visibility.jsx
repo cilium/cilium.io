@@ -4,6 +4,7 @@ import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import PalantirLogo from 'icons/logo-palantir.inline.svg';
@@ -60,19 +61,25 @@ const testimonials = [
   },
 ];
 
-const ProtocolVisibilityPage = () => (
-  <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <ImageFeatureSection {...sectionContent1} />
-      <VideoFeatureSection {...sectionContent2} />
-      <UseCaseCard
-        heading="Who’s using Cilium’s for Advanced Network Protocol Visibility?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
-  </MainLayout>
-);
+const ProtocolVisibilityPage = () => {
+  const pageTitle = introContent.title;
+  return (
+    <>
+      <PageTitle title={pageTitle} />
+      <MainLayout>
+        <section className="bg-[#F6F7F8]">
+          <IntroSection {...introContent} />
+          <ImageFeatureSection {...sectionContent1} />
+          <VideoFeatureSection {...sectionContent2} />
+          <UseCaseCard
+            heading="Who’s using Cilium’s for Advanced Network Protocol Visibility?"
+            testimonials={testimonials}
+          />
+          <JoinUsCard />
+        </section>
+      </MainLayout>
+    </>
+  );
+};
 
 export default ProtocolVisibilityPage;

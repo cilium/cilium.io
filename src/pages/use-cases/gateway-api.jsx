@@ -3,6 +3,7 @@ import React from 'react';
 import JoinUsCard from 'components/pages/use-cases/cards';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import GatewayImage1 from 'images/pages/usecase/gateway-1.webp';
 import GatewayImage2 from 'images/pages/usecase/gateway-2.png';
@@ -43,16 +44,22 @@ const sectionContent3 = {
   videoSrc: 'https://www.youtube.com/embed/48ej2qIP92Y',
 };
 
-const GatewayAPIPage = () => (
-  <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <VideoFeatureSection {...sectionContent3} />
-      <JoinUsCard />
-    </section>
-  </MainLayout>
-);
+const GatewayAPIPage = () => {
+  const pageTitle = introContent.title;
+  return (
+    <>
+      <PageTitle title={pageTitle} />
+      <MainLayout>
+        <section className="bg-[#F6F7F8]">
+          <IntroSection {...introContent} />
+          <VideoFeatureSection {...sectionContent1} />
+          <ImageFeatureSection {...sectionContent2} />
+          <VideoFeatureSection {...sectionContent3} />
+          <JoinUsCard />
+        </section>
+      </MainLayout>
+    </>
+  );
+};
 
 export default GatewayAPIPage;

@@ -3,6 +3,7 @@ import React from 'react';
 import JoinUsCard from 'components/pages/use-cases/cards';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.webp';
 import MainLayout from 'layouts/main/main';
@@ -50,17 +51,23 @@ const sectionContent4 = {
   whiteBackground: true,
 };
 
-const ServiceMeshPage = () => (
-  <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <VideoFeatureSection {...sectionContent3} />
-      <VideoFeatureSection {...sectionContent4} />
-      <JoinUsCard />
-    </section>
-  </MainLayout>
-);
+const ServiceMeshPage = () => {
+  const pageTitle = introContent.title;
+  return (
+    <>
+      <PageTitle title={pageTitle} />
+      <MainLayout>
+        <section className="bg-[#F6F7F8]">
+          <IntroSection {...introContent} />
+          <VideoFeatureSection {...sectionContent1} />
+          <ImageFeatureSection {...sectionContent2} />
+          <VideoFeatureSection {...sectionContent3} />
+          <VideoFeatureSection {...sectionContent4} />
+          <JoinUsCard />
+        </section>
+      </MainLayout>
+    </>
+  );
+};
 
 export default ServiceMeshPage;
