@@ -4,11 +4,9 @@ import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import GrafanaLogo from 'icons/logo-grafana.inline.svg';
 import RafayLogo from 'icons/logo-rafay.inline.svg';
-import SproutfiLogo from 'icons/logo-sproutfi.inline.svg';
 import ExcelBee from 'images/pages/usecase/excel-bee.png';
 import MetricsImage1 from 'images/pages/usecase/metrics-1.png';
 import MainLayout from 'layouts/main/main';
@@ -65,26 +63,22 @@ const testimonials = [
   },
 ];
 
-const MetricsExportPage = () => {
-  const pageTitle = introContent.title;
-  return (
-    <>
-      <PageTitle title={pageTitle} />
-      <MainLayout>
-        <section className="bg-[#F6F7F8]">
-          <IntroSection {...introContent} />
-          <VideoFeatureSection {...sectionContent1} />
-          <ImageFeatureSection {...sectionContent2} />
-          <VideoFeatureSection {...sectionContent3} />
-          <UseCaseCard
-            heading="Who’s using Cilium for Metrics and Tracing Export?"
-            testimonials={testimonials}
-          />
-          <JoinUsCard />
-        </section>
-      </MainLayout>
-    </>
-  );
-};
+const MetricsExportPage = () => (
+  <MainLayout>
+    <section className="bg-[#F6F7F8]">
+      <IntroSection {...introContent} />
+      <VideoFeatureSection {...sectionContent1} />
+      <ImageFeatureSection {...sectionContent2} />
+      <VideoFeatureSection {...sectionContent3} />
+      <UseCaseCard
+        heading="Who’s using Cilium for Metrics and Tracing Export?"
+        testimonials={testimonials}
+      />
+      <JoinUsCard />
+    </section>
+  </MainLayout>
+);
 
 export default MetricsExportPage;
+
+export const Head = () => <title>{introContent.title}</title>;

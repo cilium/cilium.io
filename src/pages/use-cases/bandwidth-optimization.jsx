@@ -4,7 +4,6 @@ import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 import BandWidthImage1 from 'images/pages/usecase/bandwidth-1.png';
@@ -60,26 +59,22 @@ const testimonials = [
   },
 ];
 
-const BandwidthLatencyPage = () => {
-  const pageTitle = introContent.title;
-  return (
-    <>
-      <PageTitle title={pageTitle} />
-      <MainLayout>
-        <section className="bg-[#F6F7F8]">
-          <IntroSection {...introContent} />
-          <ImageFeatureSection {...sectionContent1} />
-          <ImageFeatureSection {...sectionContent2} />
-          <VideoFeatureSection {...sectionContent3} />
-          <UseCaseCard
-            heading="Learn More About Cilium’s Big TCP Feature"
-            testimonials={testimonials}
-          />
-          <JoinUsCard />
-        </section>
-      </MainLayout>
-    </>
-  );
-};
+const BandwidthLatencyPage = () => (
+  <MainLayout>
+    <section className="bg-[#F6F7F8]">
+      <IntroSection {...introContent} />
+      <ImageFeatureSection {...sectionContent1} />
+      <ImageFeatureSection {...sectionContent2} />
+      <VideoFeatureSection {...sectionContent3} />
+      <UseCaseCard
+        heading="Learn More About Cilium’s Big TCP Feature"
+        testimonials={testimonials}
+      />
+      <JoinUsCard />
+    </section>
+  </MainLayout>
+);
 
 export default BandwidthLatencyPage;
+
+export const Head = () => <title>{introContent.title}</title>;

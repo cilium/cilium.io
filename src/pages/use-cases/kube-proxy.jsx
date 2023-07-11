@@ -1,10 +1,10 @@
+import PageTitle from 'components/pages/use-cases/page-title';
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import KubermaticLogo from 'icons/logo-kubermatic.inline.svg';
@@ -77,26 +77,22 @@ const testimonials = [
   },
 ];
 
-const KubeProxyReplacementPage = () => {
-  const pageTitle = introContent.title;
-  return (
-    <>
-      <PageTitle title={pageTitle} />
-      <MainLayout>
-        <section className="bg-[#F6F7F8]">
-          <IntroSection {...introContent} />
-          <VideoFeatureSection {...sectionContent1} />
-          <ImageFeatureSection {...sectionContent2} />
-          <ImageFeatureSection {...sectionContent3} />
-          <UseCaseCard
-            heading="Who’s using Cilium’s kube-proxy replacement?"
-            testimonials={testimonials}
-          />
-          <JoinUsCard />
-        </section>
-      </MainLayout>
-    </>
-  );
-};
+const KubeProxyReplacementPage = () => (
+  <MainLayout>
+    <section className="bg-[#F6F7F8]">
+      <IntroSection {...introContent} />
+      <VideoFeatureSection {...sectionContent1} />
+      <ImageFeatureSection {...sectionContent2} />
+      <ImageFeatureSection {...sectionContent3} />
+      <UseCaseCard
+        heading="Who’s using Cilium’s kube-proxy replacement?"
+        testimonials={testimonials}
+      />
+      <JoinUsCard />
+    </section>
+  </MainLayout>
+);
 
 export default KubeProxyReplacementPage;
+
+export const Head = () => <title>{introContent.title}</title>;

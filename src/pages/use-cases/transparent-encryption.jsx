@@ -3,7 +3,6 @@ import React from 'react';
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import CosmonicLogo from 'icons/logo-cosmonic.inline.svg';
@@ -48,24 +47,20 @@ const testimonials = [
   },
 ];
 
-const TransparentEncryptionPage = () => {
-  const pageTitle = introContent.title;
-  return (
-    <>
-      <PageTitle title={pageTitle} />
-      <MainLayout>
-        <section className="bg-[#F6F7F8]">
-          <IntroSection {...introContent} />
-          <VideoFeatureSection {...sectionContent1} />
-          <UseCaseCard
-            heading="Who’s using Cilium’s Transparent Encryption?"
-            testimonials={testimonials}
-          />
-          <JoinUsCard />
-        </section>
-      </MainLayout>
-    </>
-  );
-};
+const TransparentEncryptionPage = () => (
+  <MainLayout>
+    <section className="bg-[#F6F7F8]">
+      <IntroSection {...introContent} />
+      <VideoFeatureSection {...sectionContent1} />
+      <UseCaseCard
+        heading="Who’s using Cilium’s Transparent Encryption?"
+        testimonials={testimonials}
+      />
+      <JoinUsCard />
+    </section>
+  </MainLayout>
+);
 
 export default TransparentEncryptionPage;
+
+export const Head = () => <title>{introContent.title}</title>;

@@ -4,7 +4,6 @@ import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import PageTitle from 'components/pages/use-cases/page-title';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
@@ -87,28 +86,24 @@ const testimonials = [
   },
 ];
 
-const NetworkPolicyPage = () => {
-  const pageTitle = introContent.title;
-  return (
-    <>
-      <PageTitle title={pageTitle} />
-      <MainLayout>
-        <section className="bg-[#F6F7F8]">
-          <IntroSection {...introContent} />
-          <VideoFeatureSection {...sectionContent1} />
-          <ImageFeatureSection {...sectionContent2} />
-          <ImageFeatureSection {...sectionContent3} />
-          <ImageFeatureSection {...sectionContent4} />
-          <ImageFeatureSection {...sectionContent5} />
-          <UseCaseCard
-            heading="Who’s using  Cilium’s Advanced Network Policy?"
-            testimonials={testimonials}
-          />
-          <JoinUsCard />
-        </section>
-      </MainLayout>
-    </>
-  );
-};
+const NetworkPolicyPage = () => (
+  <MainLayout>
+    <section className="bg-[#F6F7F8]">
+      <IntroSection {...introContent} />
+      <VideoFeatureSection {...sectionContent1} />
+      <ImageFeatureSection {...sectionContent2} />
+      <ImageFeatureSection {...sectionContent3} />
+      <ImageFeatureSection {...sectionContent4} />
+      <ImageFeatureSection {...sectionContent5} />
+      <UseCaseCard
+        heading="Who’s using  Cilium’s Advanced Network Policy?"
+        testimonials={testimonials}
+      />
+      <JoinUsCard />
+    </section>
+  </MainLayout>
+);
 
 export default NetworkPolicyPage;
+
+export const Head = () => <title>{introContent.title}</title>;
