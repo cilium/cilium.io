@@ -1,4 +1,3 @@
-import PageTitle from 'components/pages/use-cases/page-title';
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
