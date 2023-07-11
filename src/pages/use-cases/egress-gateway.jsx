@@ -8,7 +8,6 @@ import VideoFeatureSection from 'components/pages/use-cases/video-feature-sectio
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import BeeKeeperBee from 'images/pages/usecase/beekeeper-bee.png';
 import EgressImage1 from 'images/pages/usecase/egress-1.webp';
-import EgressImage2 from 'images/pages/usecase/egress-2.gif';
 import EgressImage3 from 'images/pages/usecase/egress-3.png';
 import MainLayout from 'layouts/main/main';
 
@@ -59,7 +58,7 @@ const testimonials = [
   },
 ];
 
-const ClusterMeshPage = () => (
+const egressPage = () => (
   <MainLayout>
     <section className="bg-[#F6F7F8]">
       <IntroSection {...introContent} />
@@ -72,4 +71,6 @@ const ClusterMeshPage = () => (
   </MainLayout>
 );
 
-export default ClusterMeshPage;
+export default egressPage;
+
+export const Head = () => <title>{introContent.title}</title>;

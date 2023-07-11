@@ -64,3 +64,5 @@ const ServiceMeshPage = () => (
 );
 
 export default ServiceMeshPage;
+
+export const Head = () => <title>{introContent.title}</title>;

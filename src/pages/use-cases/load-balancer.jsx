@@ -71,3 +71,5 @@ const KubeProxyReplacementPage = () => (
 );
 
 export default KubeProxyReplacementPage;
+
+export const Head = () => <title>{introContent.title}</title>;

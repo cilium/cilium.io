@@ -75,3 +75,5 @@ const ServiceMapPage = () => (
 );
 
 export default ServiceMapPage;
+
+export const Head = () => <title>{introContent.title}</title>;

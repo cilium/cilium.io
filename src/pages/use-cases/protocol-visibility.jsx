@@ -76,3 +76,5 @@ const ProtocolVisibilityPage = () => (
 );
 
 export default ProtocolVisibilityPage;
+
+export const Head = () => <title>{introContent.title}</title>;

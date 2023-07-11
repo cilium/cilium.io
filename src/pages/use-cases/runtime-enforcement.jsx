@@ -66,3 +66,5 @@ const RuntimeEnforcementPage = () => (
 );
 
 export default RuntimeEnforcementPage;
+
+export const Head = () => <title>{introContent.title}</title>;

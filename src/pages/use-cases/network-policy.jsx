@@ -99,10 +99,11 @@ const NetworkPolicyPage = () => (
         heading="Who’s using  Cilium’s Advanced Network Policy?"
         testimonials={testimonials}
       />
-
       <JoinUsCard />
     </section>
   </MainLayout>
 );
 
 export default NetworkPolicyPage;
+
+export const Head = () => <title>{introContent.title}</title>;

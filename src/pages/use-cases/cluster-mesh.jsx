@@ -129,3 +129,5 @@ const ClusterMeshPage = () => (
 );
 
 export default ClusterMeshPage;
+
+export const Head = () => <title>{introContent.title}</title>;

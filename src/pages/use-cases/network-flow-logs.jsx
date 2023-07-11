@@ -61,7 +61,7 @@ const testimonials = [
   },
 ];
 
-const NetworkFlowLogs = () => (
+const NetworkFlowLogsPage = () => (
   <MainLayout>
     <section className="bg-[#F6F7F8]">
       <IntroSection {...introContent} />
@@ -76,4 +76,6 @@ const NetworkFlowLogs = () => (
   </MainLayout>
 );
 
-export default NetworkFlowLogs;
+export default NetworkFlowLogsPage;
+
+export const Head = () => <title>{introContent.title}</title>;

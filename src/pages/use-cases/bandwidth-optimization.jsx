@@ -76,3 +76,5 @@ const BandwidthLatencyPage = () => (
 );
 
 export default BandwidthLatencyPage;
+
+export const Head = () => <title>{introContent.title}</title>;

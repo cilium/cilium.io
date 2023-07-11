@@ -62,3 +62,5 @@ const TransparentEncryptionPage = () => (
 );
 
 export default TransparentEncryptionPage;
+
+export const Head = () => <title>{introContent.title}</title>;

@@ -7,7 +7,6 @@ import IntroSection from 'components/pages/use-cases/intro-section';
 import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import GrafanaLogo from 'icons/logo-grafana.inline.svg';
 import RafayLogo from 'icons/logo-rafay.inline.svg';
-import SproutfiLogo from 'icons/logo-sproutfi.inline.svg';
 import ExcelBee from 'images/pages/usecase/excel-bee.png';
 import MetricsImage1 from 'images/pages/usecase/metrics-1.png';
 import MainLayout from 'layouts/main/main';
@@ -81,3 +80,5 @@ const MetricsExportPage = () => (
 );
 
 export default MetricsExportPage;
+
+export const Head = () => <title>{introContent.title}</title>;

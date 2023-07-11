@@ -72,3 +72,5 @@ const BGPPage = () => (
 );
 
 export default BGPPage;
+
+export const Head = () => <title>{introContent.title}</title>;

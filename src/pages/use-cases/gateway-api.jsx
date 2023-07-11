@@ -56,3 +56,5 @@ const GatewayAPIPage = () => (
 );
 
 export default GatewayAPIPage;
+
+export const Head = () => <title>{introContent.title}</title>;
