@@ -4,6 +4,7 @@ date: '2022-11-0310-17T17:00:00.000Z'
 title: 'Securing Constellation’s Kubernetes data in transit - network encryption with Cilium'
 ogImage: header-img.png
 ogSummary: "Learn how Constellation uses Cilium to secure Kuberentes networking"
+isPopular: true
 categories:
   - Technology
 tags:
@@ -12,7 +13,7 @@ tags:
 
 ![Header Image](header-img.png)
 
-*November 3rd, 2022*
+*July 20th, 2023*
 *Author: Leonard Cohnen & Moritz Eckert, Edgeless Systems*
 
 [Constellation](https://github.com/edgelesssys/constellation) is a Kubernetes engine that aims to provide the best possible data security by shielding your entire Kubernetes cluster from the underlying cloud infrastructure. Everything inside a cluster is always encrypted, including at runtime in memory. For this, Constellation leverages a technology called [confidential computing](https://content.edgeless.systems/hubfs/Confidential%20Computing%20Whitepaper.pdf).
@@ -84,7 +85,7 @@ We define the following constraints for our strict mode:
 
 While the IPv4 limitation can be easily solved later, the PodCIDR must be static and known before deploying Cilium. Support for a dynamic PodCIDR is a complex feature to implement because of the same eventual consistency problems we are trying to solve in the first place. Since we support Cilium’s tunneling and native routing capabilities, the strict mode must also work with both. Note that the test we adapted already covers both scenarios.
 
-### The exception
+### The caveat of using vxlan on AWS and Azure
 
 As stated earlier, we only use native routing on GCP and rely on vxlan for AWS and Azure. This is because GCP is the only of the three which implements IPAM in a way in which the PodCIDR is disjoint from the NodeCIDR. This allows us to filter traffic based on the subnet.
 
