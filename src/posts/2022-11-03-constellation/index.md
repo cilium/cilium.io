@@ -1,6 +1,6 @@
 ---
 path: '/blog/2022/10/17/constellation-network-encryption'
-date: '2022-11-0310-17T17:00:00.000Z'
+date: '2023-07-20-17T17:00:00.000Z'
 title: 'Securing Constellation’s Kubernetes data in transit - network encryption with Cilium'
 ogImage: header-img.png
 ogSummary: "Learn how Constellation uses Cilium to secure Kuberentes networking"
