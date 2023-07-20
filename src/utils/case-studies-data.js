@@ -538,6 +538,29 @@ export default {
       },
     ],
   },
+  trendyol: {
+    iconName: 'trendyol',
+    text: 'Trendyol uses Cilium as the default CNI for its Kubernetes Clusters',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://medium.com/trendyol-tech/trendyols-cilium-transformation-ff064ff79fce',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+
+  edgelessSystems: {
+    iconName: 'edgelessSystems',
+    text: '<b>Edgeless Systems</b> uses Cilium as the CNI for their Kubernetes Distribution',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://cilium.io/blog/2022/10/17/constellation-network-encryption/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   kubesphere: {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',
@@ -706,10 +729,7 @@ export default {
     iconName: 'tailorBrands',
     text: '<b>Tailor Brands</b> uses Cilium in their EKS clusters',
   },
-  edgelessSystems: {
-    iconName: 'edgelessSystems',
-    text: '<b>Edgeless Systems</b> uses Cilium as the CNI for their Kubernetes Distribution',
-  },
+
   giantSwarm: {
     iconName: 'giantSwarm',
     text: '<b>Giant Swarm</b> uses Cilium as the CNI in their Cluster API based managed Kubernetes service',
