@@ -28,10 +28,10 @@ const CtaCard = ({ title, description, buttonText, buttonUrl, buttonTarget, clas
         aria-hidden
       />
       <div className="relative h-full w-full px-6 pt-12 pb-6 xs:pb-0 lg:px-10 xl:px-12">
-        <Heading tag="h3" size="xs" asHTML>
+        <Heading className="!text-xl lg:text-22 xl:text-2xl" tag="h3" asHTML>
           {title}
         </Heading>
-        <p className="mt-2.5 text-lg leading-normal">{description}</p>
+        <p className="mt-2.5 text-base leading-normal xl:text-lg">{description}</p>
         <Button
           className="mt-6 h-12 items-center !text-lg"
           theme="primary-1"
