@@ -8,9 +8,9 @@ import illustration from './images/cta-background.svg';
 
 const CtaCard = ({ title, description, buttonText, buttonUrl, buttonTarget, className }) => (
   <section className={className}>
-    <div className="relative min-h-[280px] w-full rounded-lg bg-additional-light-green">
+    <div className="relative h-full min-h-[280px] w-full rounded-lg bg-additional-light-green">
       <img
-        className="absolute left-0 top-1/2 hidden h-[280px] w-auto -translate-y-1/2 md:block"
+        className="absolute left-0 top-1/2 hidden h-full w-auto -translate-y-1/2 md:block"
         src={illustration}
         width={324}
         height={280}
@@ -19,7 +19,7 @@ const CtaCard = ({ title, description, buttonText, buttonUrl, buttonTarget, clas
         aria-hidden
       />
       <img
-        className="absolute right-0 top-1/2 hidden h-[280px] w-auto -translate-y-1/2 rotate-180 md:block"
+        className="absolute right-0 top-1/2 hidden h-full w-auto -translate-y-1/2 rotate-180 md:block"
         src={illustration}
         loading="lazy"
         width={324}
