@@ -26,7 +26,7 @@ const ErrorMessage = ({ serverError, error }) => {
   return <span className="absolute top-[calc(100%+0.5rem)] text-additional-1">{errMsg}</span>;
 };
 
-const SubscribeForm = ({ className }) => {
+const SubscribeForm = ({ className, inputClassName, buttonClassName, divClassName }) => {
   const {
     register,
     handleSubmit,
@@ -62,7 +62,7 @@ const SubscribeForm = ({ className }) => {
 
   return (
     <LazyMotion features={domAnimation}>
-      <div className="relative min-h-[160px]">
+      <div className={classNames('relative min-h-[160px]', divClassName)}>
         <m.form
           className={classNames('relative mx-auto flex flex-col space-y-3 xs:space-y-0', className)}
           animate={{
@@ -78,7 +78,8 @@ const SubscribeForm = ({ className }) => {
               'remove-autocomplete-styles w-full appearance-none rounded border py-3 pl-6 pr-6 leading-normal shadow-input transition-colors duration-200 xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44',
               'outline-none hover:border-gray-2 focus:border-primary-1',
               (errors?.email?.message || errorMessage) &&
-                'border-additional-1 hover:border-additional-1 focus:border-additional-1'
+                'border-additional-1 hover:border-additional-1 focus:border-additional-1',
+              inputClassName
             )}
             type="email"
             name="email"
@@ -93,7 +94,10 @@ const SubscribeForm = ({ className }) => {
           />
           <ErrorMessage serverError={errorMessage} error={errors?.email?.message} />
           <Button
-            className="right-3 top-1/2 h-12 items-center !text-lg xs:absolute xs:h-auto xs:-translate-y-1/2 lg:px-7"
+            className={classNames(
+              'right-3 top-1/2 h-12 items-center !text-lg xs:absolute xs:h-auto xs:-translate-y-1/2 lg:px-7',
+              buttonClassName
+            )}
             theme="primary-1"
             type="submit"
             loading={isLoading}
@@ -131,10 +135,16 @@ const SubscribeForm = ({ className }) => {
 
 SubscribeForm.propTypes = {
   className: PropTypes.string,
+  inputClassName: PropTypes.string,
+  buttonClassName: PropTypes.string,
+  divClassName: PropTypes.string,
 };
 
 SubscribeForm.defaultProps = {
   className: null,
+  inputClassName: null,
+  buttonClassName: null,
+  divClassName: null,
 };
 
 export default SubscribeForm;

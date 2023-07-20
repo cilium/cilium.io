@@ -1,42 +1,34 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
-import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import SubscribeForm from 'components/shared/subscribe-form';
 
-import leftIllustration from './images/subscribe-background-left.svg';
-import rightIllustration from './images/subscribe-background-right.svg';
-
-const title = 'Subscribe to the eCHO News';
-
-const EventsSubscribe = () => (
-  <section className="border-b border-gray-3 pt-10 pb-16 text-center md:pt-14 md:pb-20 lg:pt-16 lg:pb-28">
-    <Container>
-      <div className="relative min-h-[280px] w-full rounded-lg bg-additional-2">
-        <img
-          className="absolute left-0 top-1/2 hidden h-[280px] w-auto -translate-y-1/2 md:block"
-          src={leftIllustration}
-          width={324}
-          height={280}
-          loading="lazy"
-          alt=""
-          aria-hidden
-        />
-        <img
-          className="absolute right-0 top-1/2 hidden h-[280px] w-auto -translate-y-1/2 md:block"
-          src={rightIllustration}
-          loading="lazy"
-          width={324}
-          height={280}
-          alt=""
-          aria-hidden
-        />
-        <div className="relative h-full w-full px-6 pt-12">
-          <Heading tag="h2">{title}</Heading>
-          <SubscribeForm className="mt-8 max-w-[656px]" />
-        </div>
-      </div>
-    </Container>
+const EventsSubscribe = ({ title, description, className }) => (
+  <section className={className}>
+    <div className="min-h-[280px] w-full rounded-lg bg-additional-2 px-6 pt-8 pb-6 xs:pb-0 lg:px-10 lg:pt-12 xl:px-12">
+      <Heading tag="h3" className="!text-xl lg:text-22 xl:text-2xl" asHTML>
+        {title}
+      </Heading>
+      <p className="mt-2.5 text-base leading-normal xl:text-lg">{description}</p>
+      <SubscribeForm
+        className="mt-6 max-w-[600px]"
+        inputClassName="!py-2.5"
+        buttonClassName="right-0 py-4"
+        divClassName="md:!min-h-[105px]"
+      />
+    </div>
   </section>
 );
+
+EventsSubscribe.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+
+EventsSubscribe.defaultProps = {
+  className: null,
+};
+
 export default EventsSubscribe;

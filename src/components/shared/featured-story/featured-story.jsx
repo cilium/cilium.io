@@ -31,7 +31,7 @@ const FeaturedStory = ({
         target={url ? '_blank' : ''}
         rel={url ? 'noopener noreferrer' : ''}
       >
-        <div className="flex flex-1 items-center rounded-2xl border border-gray-3 transition group-hover:border-transparent group-hover:shadow-tertiary md:max-w-[592px] xl:flex-none">
+        <div className="flex flex-1 items-center rounded-2xl border border-gray-3 transition duration-200 group-hover:border-transparent group-hover:shadow-tertiary md:max-w-[592px] xl:flex-none">
           {ogImage && (
             <GatsbyImage
               imgClassName="rounded-2xl"
@@ -58,7 +58,11 @@ const FeaturedStory = ({
               </span>
             )}
           </div>
-          <Heading className="mt-4 line-clamp-3 group-hover:text-primary-1" tag="h3" size="md">
+          <Heading
+            className="mt-4 transition-colors duration-200 line-clamp-3 group-hover:text-primary-1"
+            tag="h3"
+            size="md"
+          >
             {title}
           </Heading>
           <p className="my-5 line-clamp-4 md:text-lg md:leading-relaxed">{summary}</p>

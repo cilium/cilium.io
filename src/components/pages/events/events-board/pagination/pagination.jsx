@@ -30,7 +30,7 @@ const Pagination = ({ pageCount, totalCount, callback }) => {
 
   return (
     <ReactPaginate
-      containerClassName="container flex justify-center items-center pt-16 sm:pt-12 text-sm"
+      containerClassName="flex justify-center items-center pt-16 sm:pt-12 text-sm"
       pageLinkClassName={pageLinkAndBreakLinkClassName}
       breakLinkClassName={pageLinkAndBreakLinkClassName}
       activeLinkClassName="pointer-events-none bg-additional-4"
