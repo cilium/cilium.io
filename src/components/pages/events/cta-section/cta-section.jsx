@@ -15,15 +15,20 @@ const cta = {
   buttonTarget: '_blank',
 };
 
+const form = {
+  title: 'Industry insights you won’t delete.<br/>Delivered to your inbox weekly.',
+  description: 'Subscribe to bi-weekly eCHO News',
+};
+
 const CtaSection = () => (
   <section className="border-b border-gray-3 pt-10 pb-16 text-center md:pt-14 md:pb-20 lg:pt-16 lg:pb-28">
     <Container>
       <Heading tag="h2" className="pb-8 lg:pb-12">
         {title}
       </Heading>
-      <div className="grid grid-cols-2 gap-y-8 lg:gap-y-0 lg:gap-x-8">
-        <EventsSubscribe className="col-span-full lg:col-span-1" />
-        <CtaCard {...cta} className="col-span-full lg:col-span-1" />
+      <div className="grid grid-cols-2 gap-y-8 xl:gap-y-0 xl:gap-x-8">
+        <EventsSubscribe {...form} className="col-span-full xl:col-span-1" />
+        <CtaCard {...cta} className="col-span-full xl:col-span-1" />
       </div>
     </Container>
   </section>
