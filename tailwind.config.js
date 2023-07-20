@@ -50,6 +50,7 @@ module.exports = {
           blue: '#0A61C2',
           green: '#007A70',
           red: '#C43131',
+          'light-green': '#EFFBFA',
         },
       },
       boxShadow: {
