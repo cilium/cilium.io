@@ -12,7 +12,7 @@ const title = 'Get Hands-On With Cilium';
 const HandsOn = () => {
   const { imageIllustration1 } = useStaticQuery(graphql`
     query {
-      imageIllustration1: file(relativePath: { eq: "pages/get-started/hands-on/thomasgraf.png" }) {
+      imageIllustration1: file(relativePath: { eq: "pages/get-started/hands-on/bee.png" }) {
         childImageSharp {
           gatsbyImageData(width: 92, quality: 95)
         }
@@ -29,7 +29,7 @@ const HandsOn = () => {
         gatsbyImageWidth: 92,
       },
       name: 'Weekly Interactive Cilium<br/>Introduction and Live Q&A',
-      text: 'With Thomas Graf, Cilium Co-Creator',
+      text: 'With a Cilium and eBPF expert',
       buttons: [
         {
           url: 'https://calendly.com/cilium-events/cilium-introduction',

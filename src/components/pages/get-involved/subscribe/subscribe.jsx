@@ -13,7 +13,7 @@ const Subscribe = () => (
     <Container>
       <Heading tag="h2">{title}</Heading>
       <p className="mt-2.5">{description}</p>
-      <SubscribeForm className="max-w-[656px]" />
+      <SubscribeForm className="mt-10 max-w-[656px]" />
     </Container>
   </section>
 );
