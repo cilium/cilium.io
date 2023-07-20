@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  trendyol,
   eficode,
   tietoevry,
   unitedcloud,
@@ -120,6 +121,8 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    edgelessSystems,
+    trendyol,
     kubermatic,
     yahoo,
     eficode,
@@ -216,7 +219,6 @@ const userCommunity2 = {
     kubeOvn,
     kryptos,
     superorbital,
-    edgelessSystems,
     giantSwarm,
     immerok,
     magicLeap,
