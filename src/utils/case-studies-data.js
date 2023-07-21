@@ -552,7 +552,7 @@ export default {
 
   edgelessSystems: {
     iconName: 'edgelessSystems',
-    text: '<b>Edgeless Systems</b> uses Cilium as the CNI for their Kubernetes Distribution',
+    text: 'Edgeless Systems use Cilium as the CNI for their Kubernetes Distribution',
     links: [
       {
         linkText: 'Read Blog',
@@ -561,14 +561,34 @@ export default {
       },
     ],
   },
+  palantir: {
+    iconName: 'palantir',
+    text: 'Palantir uses Cilium as their main CNI plugin in all major cloud providers (self hosted k8s)',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://blog.palantir.com/hardening-palantirs-kubernetes-infrastructure-with-cilium-1c40d4c7ef0',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  testifysec: {
+    iconName: 'testifysec',
+    text: 'TestifySec uses Tetragon to provide detailed eBPF traces of a build step in their supply chain security framework',
+    links: [
+      {
+        linkText: 'Watch Video',
+        linkUrl: 'https://www.youtube.com/watch?v=zCznRGlsYvo',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   kubesphere: {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',
   },
-  palantir: {
-    iconName: 'palantir',
-    text: '<b>Palantir</b> is using Cilium as their main CNI plugin in AWS (self hosted k8s)',
-  },
+
   scaleway: {
     iconName: 'scaleway',
     text: '<b>Scaleway</b> uses Cilium as the default CNI for Kubernetes Kapsule',

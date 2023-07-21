@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  testifysec,
   trendyol,
   eficode,
   tietoevry,
@@ -121,6 +122,8 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    testifysec,
+    palantir,
     edgelessSystems,
     trendyol,
     kubermatic,
@@ -191,7 +194,6 @@ const userCommunity2 = {
     civo,
     kubesphere,
     elasticpath,
-    palantir,
     scaleway,
     sportradar,
     plaid,
