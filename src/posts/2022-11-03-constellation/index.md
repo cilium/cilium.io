@@ -18,7 +18,7 @@ tags:
 
 [Constellation](https://github.com/edgelesssys/constellation) is a Kubernetes engine that aims to provide the best possible data security by shielding your entire Kubernetes cluster from the underlying cloud infrastructure. Everything inside a cluster is always encrypted, including at runtime in memory. For this, Constellation leverages a technology called [confidential computing](https://content.edgeless.systems/hubfs/Confidential%20Computing%20Whitepaper.pdf).
 
-For network encryption, Constellation uses Cilium. This blog dives into why we chose Cilium, how we integrated it, and what we learned along the way. We’ll dive into the technical challenges and difficulties we encountered and how we overcame these. If you’re all into Kubernetes networking, eBPF, and Cilium, this should be for you. If not, don’t worry, we’ll highlight the important takeaways, and you’ll learn a thing or two about the inner workings of Cilium on the way.
+For network encryption, Constellation uses Cilium. This blog dives into why we chose Cilium, how we integrated it, and what we learned along the way. We’ll dive into the technical challenges and difficulties we encountered and how we overcame these. If you’re all into Kubernetes networking, eBPF, and Cilium, this should be for you. If not, don’t worry, we’ll highlight the important takeaways, and you’ll learn a thing or two about the inner workings of Cilium.
 
 ## Encryption vs. access
 
