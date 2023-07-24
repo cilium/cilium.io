@@ -317,7 +317,7 @@ exports.onCreateNode = ({ node, actions }) => {
 
 async function getHubspotEmails({ actions: { createNode }, createContentDigest }) {
   const getObjects = async () => {
-    if (process.env.NODE_ENV === 'production' && process.env.HUBSPOT_ACCESS_TOKEN) {
+    if (process.env.NODE_ENV === 'development' && process.env.HUBSPOT_ACCESS_TOKEN) {
       let hubspotEmailsData;
       try {
         const hubspotEmails = await fetch(
@@ -351,15 +351,17 @@ async function getHubspotEmails({ actions: { createNode }, createContentDigest }
 
   const objects = await getObjects();
 
-  createNode({
-    objects,
-    id: `hubspot-email-data`,
-    parent: null,
-    children: [],
-    internal: {
-      type: `HubspotEmails`,
-      contentDigest: createContentDigest(objects),
-    },
+  objects.forEach((object, i) => {
+    createNode({
+      ...object,
+      id: `hubspot-email-${i}`,
+      parent: null,
+      children: [],
+      internal: {
+        type: `HubspotEmail`,
+        contentDigest: createContentDigest(object),
+      },
+    });
   });
 }
 
@@ -414,10 +416,7 @@ exports.sourceNodes = async (options) => {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
-    type HubspotEmails implements Node {
-      objects: [HubspotEmailsObject]
-    }
-    type HubspotEmailsObject {
+    type HubspotEmail implements Node {
       name: String
       publishDate: String
       isPublished: Boolean
