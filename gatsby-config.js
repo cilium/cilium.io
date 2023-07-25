@@ -208,7 +208,7 @@ const plugins = [
         {
           serialize: ({ query: { allHubspotEmail } }) =>
             allHubspotEmail.nodes.map(({ name, publishDate, publishedUrl }) => {
-              const date = new Date(publishDate).toUTCString();
+              const date = new Date(Number(publishDate)).toUTCString();
               return {
                 title: name,
                 date,
