@@ -207,12 +207,15 @@ const plugins = [
         },
         {
           serialize: ({ query: { allHubspotEmail } }) =>
-            allHubspotEmail.nodes.map(({ name, publishDate, publishedUrl }) => ({
-              title: name,
-              pubDate: publishDate,
-              url: publishedUrl,
-              guid: publishedUrl,
-            })),
+            allHubspotEmail.nodes.map(({ name, publishDate, publishedUrl }) => {
+              const date = new Date(publishDate * 1000).toUTCString();
+              return {
+                title: name,
+                date,
+                url: publishedUrl,
+                guid: publishedUrl,
+              };
+            }),
           query: `
           {
             allHubspotEmail(sort: { fields: publishDate, order: DESC }) {
