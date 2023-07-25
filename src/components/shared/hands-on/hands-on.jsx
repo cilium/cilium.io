@@ -28,7 +28,7 @@ const HandsOn = () => {
         gatsbyImage: imageIllustration1,
         gatsbyImageWidth: 92,
       },
-      name: 'Weekly Interactive Cilium<br/>Introduction and Live Q&A',
+      name: 'Interactive Cilium<br/>Introduction and Live Q&A',
       text: 'With a Cilium and eBPF expert',
       buttons: [
         {
