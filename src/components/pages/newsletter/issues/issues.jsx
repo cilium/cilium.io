@@ -9,6 +9,8 @@ import CalendarIcon from 'icons/calendar.inline.svg';
 import getMonthAndDay from 'utils/get-month-and-day';
 import getYear from 'utils/get-year';
 
+import RSSIcon from './images/rss.inline.svg';
+
 const Issues = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -49,9 +51,14 @@ const Issues = () => {
           .reverse()
           .map(([year, issues], index) => (
             <div className="mt-10 first:mt-0 md:mt-20 lg:mt-24" key={index}>
-              <Heading tag="h3" size="md">
-                {year}
-              </Heading>
+              <div className="flex w-full items-center justify-between">
+                <Heading tag="h3" size="md">
+                  {year}
+                </Heading>
+                <Link to="/newsletter/rss.xml">
+                  <RSSIcon className="h-6 w-6 shrink-0  hover:text-primary-1" />
+                </Link>
+              </div>
               <div className="mt-8 grid grid-cols-1 gap-6 xs:grid-cols-2 sm:gap-8 md:mt-10 md:grid-cols-3 lg:mt-12 lg:grid-cols-4">
                 {issues.map(({ title, date, publishedUrl }, index) => (
                   <Link
