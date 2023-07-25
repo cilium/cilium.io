@@ -317,7 +317,7 @@ exports.onCreateNode = ({ node, actions }) => {
 
 async function getHubspotEmails({ actions: { createNode }, createContentDigest }) {
   const getObjects = async () => {
-    if (process.env.NODE_ENV === 'development' && process.env.HUBSPOT_ACCESS_TOKEN) {
+    if (process.env.NODE_ENV === 'production' && process.env.HUBSPOT_ACCESS_TOKEN) {
       let hubspotEmailsData;
       try {
         const hubspotEmails = await fetch(
