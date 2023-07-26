@@ -27,7 +27,7 @@ const Hero = ({ className, title, description, illustration, theme, size }) => (
   >
     <Container className="grid gap-y-6 lg:grid-cols-2 xl:gap-x-8">
       <div className={classNames('flex-1', sizeClassName[size].content)}>
-        <Heading className=" leading-tight lg:leading-tight xl:leading-tight" tag="h1" size="lg">
+        <Heading className="leading-tight lg:leading-tight xl:leading-tight" tag="h1" size="lg">
           {title}
         </Heading>
         <div
