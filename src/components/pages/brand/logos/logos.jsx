@@ -43,11 +43,11 @@ const Logos = () => (
   <section className="relative bg-white pt-16 md:pt-24 lg:pt-28">
     <Container>
       <div className="flex flex-col items-start space-y-10 border-b border-gray-3 pb-10 lg:flex-row lg:justify-between lg:space-y-0">
-        <div className="flex flex-col space-y-2.5">
+        <div className="ite flex flex-col space-y-2.5">
           <Heading tag="h2" size="md">
             Cilium Logo
           </Heading>
-          <p className="flat-breaks lg:flat-none xl:flat-breaks">
+          <p className="flat-breaks lg:flat-none xl:flat-breaks pr-0 lg:pr-16">
             Our logo is in the shape of a honeycomb to represent the Cilium hive. <br /> Please use
             use it correctly and help us grow the community.
           </p>
