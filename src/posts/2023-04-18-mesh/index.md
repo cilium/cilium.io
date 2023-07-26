@@ -5,7 +5,7 @@ ogImage: ogimage.webp
 isPopular: true
 ogSummary: 'Cilium Mesh is a new universal networking layer to connect workloads and machines across cloud, on-prem, and edge'
 categories:
-  - Release
+  - Technology
 externalUrl: 'https://isovalent.com/blog/post/introducing-cilium-mesh/'
 tags:
   - Cilium
