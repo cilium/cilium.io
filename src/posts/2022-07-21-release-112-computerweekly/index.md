@@ -4,7 +4,7 @@ title: 'Cilium speeds sidecar-optioned cloud-native networking'
 ogImage: ogimage.png
 ogSummary: 'Cilium Service Mesh lets enterprises chose the best option for themselves'
 categories:
-  - Release
+  - Technology
 externalUrl: 'https://www.computerweekly.com/blog/Open-Source-Insider/Cilium-speeds-sidecar-optioned-cloud-native-networking'
 tags:
   - Cilium
