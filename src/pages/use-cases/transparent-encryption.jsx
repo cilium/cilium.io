@@ -49,7 +49,7 @@ const testimonials = [
 
 const TransparentEncryptionPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
+    <section>
       <IntroSection {...introContent} />
       <VideoFeatureSection {...sectionContent1} />
       <UseCaseCard

@@ -97,7 +97,7 @@ const testimonials = [
 
 const CniPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
+    <section>
       <IntroSection {...introContent} />
       <ImageFeatureSection {...sectionContent1} />
       <ImageFeatureSection {...sectionContent2} />

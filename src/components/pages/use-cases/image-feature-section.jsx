@@ -1,5 +1,9 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import Container from 'components/shared/container';
+import Heading from 'components/shared/heading';
 
 const ImageFeatureSection = ({
   title,
@@ -7,42 +11,60 @@ const ImageFeatureSection = ({
   imageSrc,
   imageAlt,
   imageRight,
+  videoSrc,
   whiteBackground,
 }) => (
-  <div className={`py-16 ${whiteBackground ? 'bg-white' : ''}`}>
-    <div className="container mx-auto w-10/12">
-      <div className="block items-center gap-8 md:flex">
-        {!imageRight && (
-          <div className="inline-block lg:basis-2/4">
-            <img src={imageSrc} alt={imageAlt} />
-          </div>
+  <section className={classNames(whiteBackground && 'bg-gray-4')}>
+    <Container className="grid grid-cols-12 gap-y-6 gap-x-6 py-10 md:py-20 lg:py-28 lg:pb-[138px] xl:gap-x-8">
+      <div className={classNames('col-span-full lg:col-span-6', !imageRight && 'lg:col-start-7')}>
+        <Heading
+          className="mb-5 leading-tight lg:leading-tight xl:leading-tight"
+          tag="h3"
+          size="md"
+        >
+          {title}
+        </Heading>
+        <p className="text-lg leading-normal">{description}</p>
+      </div>
+      <div
+        className={classNames(
+          'col-span-full col-start-1 pt-6 md:col-span-8 md:col-start-3 lg:col-span-6 lg:pt-14',
+          !imageRight && 'lg:col-start-1 lg:row-start-1'
         )}
-        <div className="pb-4 md:basis-[55%] md:pb-0 lg:basis-2/4">
-          <h3 className="mb-4 text-xl font-bold capitalize">{title}</h3>
-          <p>{description}</p>
-        </div>
-        {imageRight && (
-          <div className="inline-block lg:basis-2/4">
-            <img className="max-h-[400px]" src={imageSrc} alt={imageAlt} />
-          </div>
+      >
+        {imageSrc && <img className="max-g-full lg:max-h-[350px]" src={imageSrc} alt={imageAlt} />}
+        {videoSrc && (
+          <iframe
+            className="w-full"
+            width="560"
+            height="315"
+            src={videoSrc}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
         )}
       </div>
-    </div>
-  </div>
+    </Container>
+  </section>
 );
 
 ImageFeatureSection.defaultProps = {
   imageRight: true,
   whiteBackground: false,
+  videoSrc: null,
+  imageSrc: null,
+  imageAlt: null,
 };
 
 ImageFeatureSection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  imageSrc: PropTypes.string.isRequired,
-  imageAlt: PropTypes.string.isRequired,
+  imageSrc: PropTypes.string,
+  imageAlt: PropTypes.string,
   imageRight: PropTypes.bool,
   whiteBackground: PropTypes.bool,
+  videoSrc: PropTypes.string,
 };
 
 export default ImageFeatureSection;

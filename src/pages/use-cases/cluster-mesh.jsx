@@ -111,7 +111,7 @@ const testimonials = [
 
 const ClusterMeshPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
+    <section>
       <IntroSection {...introContent} />
       <VideoFeatureSection {...sectionContent1} />
       <ImageFeatureSection {...sectionContent2} />

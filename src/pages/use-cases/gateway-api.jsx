@@ -45,7 +45,7 @@ const sectionContent3 = {
 
 const GatewayAPIPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
+    <section>
       <IntroSection {...introContent} />
       <VideoFeatureSection {...sectionContent1} />
       <ImageFeatureSection {...sectionContent2} />
