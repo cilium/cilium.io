@@ -4,7 +4,7 @@ title: 'Tetragon - eBPF-based Security Observability & Runtime Enforcement'
 ogImage: ogimage.png
 ogSummary: 'Isovalent open sources Tetgragon for eBPF based security'
 categories:
-  - Release
+  - Technology
 externalUrl: 'https://isovalent.com/blog/post/2022-05-16-tetragon'
 tags:
   - Cilium
