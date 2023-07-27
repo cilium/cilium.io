@@ -2,9 +2,8 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
 import RuntimeEnforcementImage1 from 'images/pages/usecase/runtime-1.png';
 import TetragonBee from 'images/pages/usecase/tetragon-bee.png';
@@ -52,16 +51,14 @@ const testimonials = [
 
 const RuntimeEnforcementPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <UseCaseCard
-        heading="Who’s using  Cilium’s Tetragon for Security Observability and Runtime Enforcement?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <UseCaseCard
+      heading="Who’s using  Cilium’s Tetragon for Security Observability and Runtime Enforcement?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 

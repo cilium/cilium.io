@@ -1,9 +1,8 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import GatewayImage1 from 'images/pages/usecase/gateway-1.webp';
 import GatewayImage2 from 'images/pages/usecase/gateway-2.png';
 import MainLayout from 'layouts/main/main';
@@ -45,13 +44,11 @@ const sectionContent3 = {
 
 const GatewayAPIPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <VideoFeatureSection {...sectionContent3} />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <JoinUsCard />
   </MainLayout>
 );
 

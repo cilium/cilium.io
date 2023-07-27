@@ -2,9 +2,8 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import NetworkPolicyImage1 from 'images/pages/usecase/network-1.png';
@@ -88,19 +87,17 @@ const testimonials = [
 
 const NetworkPolicyPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <ImageFeatureSection {...sectionContent3} />
-      <ImageFeatureSection {...sectionContent4} />
-      <ImageFeatureSection {...sectionContent5} />
-      <UseCaseCard
-        heading="Who’s using  Cilium’s Advanced Network Policy?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <FeatureSection {...sectionContent4} />
+    <FeatureSection {...sectionContent5} />
+    <UseCaseCard
+      heading="Who’s using  Cilium’s Advanced Network Policy?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 

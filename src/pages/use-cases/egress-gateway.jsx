@@ -2,9 +2,8 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import BeeKeeperBee from 'images/pages/usecase/beekeeper-bee.png';
 import EgressImage1 from 'images/pages/usecase/egress-1.webp';
@@ -60,14 +59,12 @@ const testimonials = [
 
 const egressPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <ImageFeatureSection {...sectionContent3} />
-      <UseCaseCard heading="Who’s using Cilium’s  Egress Gateway?" testimonials={testimonials} />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <UseCaseCard heading="Who’s using Cilium’s  Egress Gateway?" testimonials={testimonials} />
+    <JoinUsCard />
   </MainLayout>
 );
 

@@ -2,9 +2,8 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import Form3Logo from 'icons/logo-form3.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
@@ -111,20 +110,18 @@ const testimonials = [
 
 const ClusterMeshPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <ImageFeatureSection {...sectionContent3} />
-      <VideoFeatureSection {...sectionContent4} />
-      <ImageFeatureSection {...sectionContent5} />
-      <ImageFeatureSection {...sectionContent6} />
-      <UseCaseCard
-        heading="Who’s using Cilium for Multi Cluster networking?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <FeatureSection {...sectionContent4} />
+    <FeatureSection {...sectionContent5} />
+    <FeatureSection {...sectionContent6} />
+    <UseCaseCard
+      heading="Who’s using Cilium for Multi Cluster networking?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 

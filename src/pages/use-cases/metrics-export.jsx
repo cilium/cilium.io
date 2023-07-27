@@ -2,9 +2,8 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import GrafanaLogo from 'icons/logo-grafana.inline.svg';
 import RafayLogo from 'icons/logo-rafay.inline.svg';
 import ExcelBee from 'images/pages/usecase/excel-bee.png';
@@ -65,17 +64,15 @@ const testimonials = [
 
 const MetricsExportPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <VideoFeatureSection {...sectionContent3} />
-      <UseCaseCard
-        heading="Who’s using Cilium for Metrics and Tracing Export?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <UseCaseCard
+      heading="Who’s using Cilium for Metrics and Tracing Export?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 

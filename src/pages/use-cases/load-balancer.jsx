@@ -2,8 +2,8 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import YahooLogo from 'icons/logo-yahoo.inline.svg';
 import DetectiveBeeImage from 'images/pages/usecase/detective-bee.png';
@@ -57,16 +57,14 @@ const testimonials = [
 
 const KubeProxyReplacementPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <VideoFeatureSection {...sectionContent2} />
-      <UseCaseCard
-        heading="Who’s using Cilium for Layer 4 Load Balancing?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <UseCaseCard
+      heading="Who’s using Cilium for Layer 4 Load Balancing?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 

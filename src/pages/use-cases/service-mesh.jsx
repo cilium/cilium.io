@@ -1,9 +1,8 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.webp';
 import MainLayout from 'layouts/main/main';
 
@@ -52,14 +51,12 @@ const sectionContent4 = {
 
 const ServiceMeshPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <VideoFeatureSection {...sectionContent3} />
-      <VideoFeatureSection {...sectionContent4} />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <FeatureSection {...sectionContent4} />
+    <JoinUsCard />
   </MainLayout>
 );
 

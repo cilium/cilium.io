@@ -2,9 +2,8 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 import BandWidthImage1 from 'images/pages/usecase/bandwidth-1.png';
 import BandWidthImage2 from 'images/pages/usecase/bandwidth-2.webp';
@@ -61,17 +60,12 @@ const testimonials = [
 
 const BandwidthLatencyPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <ImageFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <VideoFeatureSection {...sectionContent3} />
-      <UseCaseCard
-        heading="Learn More About Cilium’s Big TCP Feature"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <UseCaseCard heading="Learn More About Cilium’s Big TCP Feature" testimonials={testimonials} />
+    <JoinUsCard />
   </MainLayout>
 );
 

@@ -2,9 +2,8 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import BGPImage1 from 'images/pages/usecase/bgp-1.png';
@@ -61,13 +60,11 @@ const testimonials = [
 
 const BGPPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <ImageFeatureSection {...sectionContent1} />
-      <VideoFeatureSection {...sectionContent2} />
-      <UseCaseCard heading="Who’s using Cilium’s BGP ?" testimonials={testimonials} />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <UseCaseCard heading="Who’s using Cilium’s BGP ?" testimonials={testimonials} />
+    <JoinUsCard />
   </MainLayout>
 );
 

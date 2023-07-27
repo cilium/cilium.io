@@ -2,8 +2,8 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import CosmonicLogo from 'icons/logo-cosmonic.inline.svg';
 import JeediBee from 'images/pages/usecase/jedi-bee.png';
@@ -49,15 +49,13 @@ const testimonials = [
 
 const TransparentEncryptionPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <UseCaseCard
-        heading="Who’s using Cilium’s Transparent Encryption?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <UseCaseCard
+      heading="Who’s using Cilium’s Transparent Encryption?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 

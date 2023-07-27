@@ -5,7 +5,7 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
-const ImageFeatureSection = ({
+const FeatureSection = ({
   title,
   description,
   imageSrc,
@@ -28,11 +28,11 @@ const ImageFeatureSection = ({
       </div>
       <div
         className={classNames(
-          'col-span-full col-start-1 pt-6 md:col-span-8 md:col-start-3 lg:col-span-6 lg:pt-14',
+          'col-span-full col-start-1 pt-6 md:col-span-8 md:col-start-3 lg:col-span-6 lg:pt-0',
           !imageRight && 'lg:col-start-1 lg:row-start-1'
         )}
       >
-        {imageSrc && <img className="max-g-full lg:max-h-[350px]" src={imageSrc} alt={imageAlt} />}
+        {imageSrc && <img className="max-h-full lg:max-h-[350px]" src={imageSrc} alt={imageAlt} />}
         {videoSrc && (
           <iframe
             className="w-full"
@@ -49,7 +49,7 @@ const ImageFeatureSection = ({
   </section>
 );
 
-ImageFeatureSection.defaultProps = {
+FeatureSection.defaultProps = {
   imageRight: true,
   whiteBackground: false,
   videoSrc: null,
@@ -57,7 +57,7 @@ ImageFeatureSection.defaultProps = {
   imageAlt: null,
 };
 
-ImageFeatureSection.propTypes = {
+FeatureSection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageSrc: PropTypes.string,
@@ -67,4 +67,4 @@ ImageFeatureSection.propTypes = {
   videoSrc: PropTypes.string,
 };
 
-export default ImageFeatureSection;
+export default FeatureSection;

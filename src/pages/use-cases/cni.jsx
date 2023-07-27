@@ -2,9 +2,8 @@ import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
 import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
 import AWSLogo from 'icons/logo-aws.inline.svg';
 import AzureLogo from 'icons/logo-azure.inline.svg';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
@@ -97,18 +96,16 @@ const testimonials = [
 
 const CniPage = () => (
   <MainLayout>
-    <section>
-      <IntroSection {...introContent} />
-      <ImageFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <ImageFeatureSection {...sectionContent3} />
-      <VideoFeatureSection {...sectionContent4} />
-      <UseCaseCard
-        heading="Who’s using Cilium for High Performance Cloud Native Networking(CNI)"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <IntroSection {...introContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <FeatureSection {...sectionContent4} />
+    <UseCaseCard
+      heading="Who’s using Cilium for High Performance Cloud Native Networking(CNI)"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 
