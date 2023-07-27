@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
@@ -13,7 +13,7 @@ import NetworkPolicyImage4 from 'images/pages/usecase/network-4.png';
 import SecurityBee from 'images/pages/usecase/security-bee.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Advanced Network Policy',
   category: 'Security',
   tagline: 'Maintain identity based policies effectively at scale',
@@ -87,7 +87,7 @@ const testimonials = [
 
 const NetworkPolicyPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
@@ -103,4 +103,4 @@ const NetworkPolicyPage = () => (
 
 export default NetworkPolicyPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

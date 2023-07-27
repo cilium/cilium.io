@@ -1,12 +1,12 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.webp';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Cilium Service Mesh',
   category: 'Networking',
   tagline: 'Revolutionizing networking and simplify operations',
@@ -51,7 +51,7 @@ const sectionContent4 = {
 
 const ServiceMeshPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
@@ -62,4 +62,4 @@ const ServiceMeshPage = () => (
 
 export default ServiceMeshPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

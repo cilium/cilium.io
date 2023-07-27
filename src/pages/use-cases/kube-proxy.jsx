@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
@@ -12,7 +12,7 @@ import KubeProxyImage1 from 'images/pages/usecase/kubeproxy-1.webp';
 import KubeProxyImage2 from 'images/pages/usecase/kubeproxy-2.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Kube-proxy Replacement',
   category: 'Networking',
   tagline: 'Enhanced networking speed and efficiency for your Kubernetes clusters',
@@ -77,7 +77,7 @@ const testimonials = [
 
 const KubeProxyReplacementPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
@@ -91,4 +91,4 @@ const KubeProxyReplacementPage = () => (
 
 export default KubeProxyReplacementPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

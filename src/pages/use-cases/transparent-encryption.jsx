@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
@@ -9,7 +9,7 @@ import CosmonicLogo from 'icons/logo-cosmonic.inline.svg';
 import JeediBee from 'images/pages/usecase/jedi-bee.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Transparent Encryption',
   category: 'Security',
   tagline: 'Encryption without operational headache ',
@@ -49,7 +49,7 @@ const testimonials = [
 
 const TransparentEncryptionPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <UseCaseCard
       heading="Who’s using Cilium’s Transparent Encryption?"
@@ -61,4 +61,4 @@ const TransparentEncryptionPage = () => (
 
 export default TransparentEncryptionPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

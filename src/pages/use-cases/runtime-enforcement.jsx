@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
@@ -9,7 +9,7 @@ import RuntimeEnforcementImage1 from 'images/pages/usecase/runtime-1.png';
 import TetragonBee from 'images/pages/usecase/tetragon-bee.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Runtime Enforcement',
   category: 'Security',
   tagline: 'Prevent threats and enforce policies in real-time',
@@ -51,7 +51,7 @@ const testimonials = [
 
 const RuntimeEnforcementPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <UseCaseCard
@@ -64,4 +64,4 @@ const RuntimeEnforcementPage = () => (
 
 export default RuntimeEnforcementPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

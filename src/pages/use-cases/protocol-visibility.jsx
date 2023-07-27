@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
@@ -10,7 +10,7 @@ import NewBee from 'images/pages/usecase/new-bee.png';
 import ProtocolImage1 from 'images/pages/usecase/protocol-1.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Advanced Network Protocol Visibility',
   category: 'Observability',
   tagline: 'Insights into workload communication at the protocol level',
@@ -61,7 +61,7 @@ const testimonials = [
 
 const ProtocolVisibilityPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <UseCaseCard
@@ -74,4 +74,4 @@ const ProtocolVisibilityPage = () => (
 
 export default ProtocolVisibilityPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

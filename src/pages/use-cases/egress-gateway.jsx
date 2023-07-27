@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
@@ -10,7 +10,7 @@ import EgressImage1 from 'images/pages/usecase/egress-1.webp';
 import EgressImage3 from 'images/pages/usecase/egress-3.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Egress Gateway',
   category: 'Networking',
   tagline: 'Enhancing network security and traffic control exiting Kubernetes environments',
@@ -59,7 +59,7 @@ const testimonials = [
 
 const egressPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
@@ -70,4 +70,4 @@ const egressPage = () => (
 
 export default egressPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

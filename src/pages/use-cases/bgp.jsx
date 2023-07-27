@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
@@ -10,7 +10,7 @@ import BGPImage1 from 'images/pages/usecase/bgp-1.png';
 import TravelBee from 'images/pages/usecase/travel-bee.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'BGP',
   category: 'Networking',
   tagline: 'Harness the infinite potential of Border Gateway Protocol (BGP) with Cilium',
@@ -60,7 +60,7 @@ const testimonials = [
 
 const BGPPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <UseCaseCard heading="Who’s using Cilium’s BGP ?" testimonials={testimonials} />
@@ -70,4 +70,4 @@ const BGPPage = () => (
 
 export default BGPPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

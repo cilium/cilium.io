@@ -6,7 +6,7 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Label from 'components/shared/type-label';
 
-const IntroSection = ({
+const Hero = ({
   category,
   title,
   tagline,
@@ -62,13 +62,13 @@ const IntroSection = ({
   </section>
 );
 
-IntroSection.defaultProps = {
+Hero.defaultProps = {
   videoSrc: null,
   imageSrc: null,
   imageAlt: null,
 };
 
-IntroSection.propTypes = {
+Hero.propTypes = {
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   tagline: PropTypes.string.isRequired,
@@ -79,4 +79,4 @@ IntroSection.propTypes = {
   videoSrc: PropTypes.string,
 };
 
-export default IntroSection;
+export default Hero;

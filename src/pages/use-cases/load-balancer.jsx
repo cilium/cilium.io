@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
@@ -9,7 +9,7 @@ import YahooLogo from 'icons/logo-yahoo.inline.svg';
 import DetectiveBeeImage from 'images/pages/usecase/detective-bee.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Layer 4 Load Balancer',
   category: 'Networking',
   tagline: 'High performance load balancing with low overhead',
@@ -57,7 +57,7 @@ const testimonials = [
 
 const KubeProxyReplacementPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <UseCaseCard
@@ -70,4 +70,4 @@ const KubeProxyReplacementPage = () => (
 
 export default KubeProxyReplacementPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

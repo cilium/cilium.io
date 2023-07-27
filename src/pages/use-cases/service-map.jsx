@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
@@ -10,7 +10,7 @@ import KubernetesBee from 'images/pages/usecase/k8s-bee.png';
 import ServiceMapImage1 from 'images/pages/usecase/servicemap-1.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Service Map',
   category: 'Observability',
   tagline: 'Detailed visibility into the communication and behavior of your workloads',
@@ -63,7 +63,7 @@ const testimonials = [
 
 const ServiceMapPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <UseCaseCard heading="Who’s using Cilium’s Hubble?" testimonials={testimonials} />
@@ -73,4 +73,4 @@ const ServiceMapPage = () => (
 
 export default ServiceMapPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

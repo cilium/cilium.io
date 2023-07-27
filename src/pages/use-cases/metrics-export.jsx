@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import GrafanaLogo from 'icons/logo-grafana.inline.svg';
@@ -10,7 +10,7 @@ import ExcelBee from 'images/pages/usecase/excel-bee.png';
 import MetricsImage1 from 'images/pages/usecase/metrics-1.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Metrics & Tracing Export',
   category: 'Observability',
   tagline: 'Valuable insights for troubleshooting, optimization, and performance monitoring',
@@ -64,7 +64,7 @@ const testimonials = [
 
 const MetricsExportPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
@@ -78,4 +78,4 @@ const MetricsExportPage = () => (
 
 export default MetricsExportPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

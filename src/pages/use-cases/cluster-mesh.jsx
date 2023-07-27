@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
@@ -14,7 +14,7 @@ import ClusterMeshImage3 from 'images/pages/usecase/clustermesh-3.webp';
 import ClusterMeshImage4 from 'images/pages/usecase/clustermesh-4.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Cluster Mesh',
   category: 'Networking',
   tagline: 'Unleashing the power of multi-cluster networking with Cilium Cluster Mesh',
@@ -110,7 +110,7 @@ const testimonials = [
 
 const ClusterMeshPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
@@ -127,4 +127,4 @@ const ClusterMeshPage = () => (
 
 export default ClusterMeshPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
@@ -10,7 +10,7 @@ import BandWidthImage2 from 'images/pages/usecase/bandwidth-2.webp';
 import BandWidthImage3 from 'images/pages/usecase/bandwidth-3.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Bandwidth and Latency Optimization  ',
   category: 'Networking',
   tagline: 'Simple and intuitive network performance optimization',
@@ -60,7 +60,7 @@ const testimonials = [
 
 const BandwidthLatencyPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
@@ -71,4 +71,4 @@ const BandwidthLatencyPage = () => (
 
 export default BandwidthLatencyPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import AWSLogo from 'icons/logo-aws.inline.svg';
@@ -13,7 +13,7 @@ import CNIImage2 from 'images/pages/usecase/cni-2.png';
 import CNIImage3 from 'images/pages/usecase/cni-3.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'High Performance Cloud Native Networking (CNI)',
   category: 'Networking',
   tagline: 'Enhance the speed and efficiency of your Kubernetes and cloud native networks',
@@ -96,7 +96,7 @@ const testimonials = [
 
 const CniPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
@@ -111,4 +111,4 @@ const CniPage = () => (
 
 export default CniPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;

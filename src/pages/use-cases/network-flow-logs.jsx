@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
+import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
@@ -10,7 +10,7 @@ import AuditBee from 'images/pages/usecase/audit-bee.png';
 import FlowImage1 from 'images/pages/usecase/flow-1.webp';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Identity-aware L3/L4/DNS Network Flow Logs',
   category: 'Observability',
   tagline: 'Holistic view of your network traffic',
@@ -62,7 +62,7 @@ const testimonials = [
 
 const NetworkFlowLogsPage = () => (
   <MainLayout>
-    <IntroSection {...introContent} />
+    <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <UseCaseCard
@@ -75,4 +75,4 @@ const NetworkFlowLogsPage = () => (
 
 export default NetworkFlowLogsPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+export const Head = () => <title>{heroContent.title}</title>;
