@@ -34,7 +34,7 @@ const sectionContent2 = {
     'Cilium enhances network flow logs with additional information about the identity of the Kubernetes workloads generating or receiving the traffic. This identity information is based on the Kubernetes labels and annotations assigned to the workloads, as well as any other metadata that can be retrieved from the Kubernetes API server.',
   imageSrc: FlowImage1,
   imageAlt: 'cilium metrics and tracing with grafana illustration',
-  whiteBackground: true,
+  imageRight: false,
 };
 
 const testimonials = [
@@ -64,7 +64,7 @@ const NetworkFlowLogsPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
-    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent2} className="pt-0 md:pt-0 lg:pt-0" />
     <UseCaseCard
       heading="Who’s using Cilium’s for Network Flow logs?"
       testimonials={testimonials}

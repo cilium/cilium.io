@@ -28,7 +28,6 @@ const sectionContent1 = {
   imageSrc: ProtocolImage1,
   imageAlt: 'hubble insights illustration',
   imageRight: false,
-  whiteBackground: true,
 };
 
 const sectionContent2 = {
@@ -63,7 +62,7 @@ const ProtocolVisibilityPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
-    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent2} className="pt-0 md:pt-0 lg:pt-0" />
     <UseCaseCard
       heading="Who’s using Cilium’s for Advanced Network Protocol Visibility?"
       testimonials={testimonials}

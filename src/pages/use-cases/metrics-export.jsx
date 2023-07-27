@@ -36,6 +36,7 @@ const sectionContent2 = {
   imageSrc: MetricsImage1,
   imageAlt: 'cilium metrics and tracing with grafana illustration',
   whiteBackground: true,
+  imageRight: false,
 };
 
 const sectionContent3 = {

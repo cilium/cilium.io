@@ -35,22 +35,24 @@ const items = [
 ];
 
 const JoinUsCard = ({ className }) => (
-  <Container
-    className={classNames('flex flex-col items-center pt-10 pb-10 md:pb-20 lg:pb-28', className)}
-  >
-    <Heading
-      className="mb-8 max-w-full text-center leading-tight lg:mb-12 lg:max-w-[70%] lg:leading-tight xl:leading-tight"
-      tag="h2"
-      size="md"
+  <section className="bg-gray-4">
+    <Container
+      className={classNames('flex flex-col items-center pb-10 md:pb-20 lg:pb-28', className)}
     >
-      Want to Learn More?
-    </Heading>
-    <div className="flex flex-col flex-wrap gap-8 md:grid md:grid-cols-2 md:gap-8 lg:grid lg:grid-cols-3">
-      {items.map((item, index) => (
-        <Card {...item} key={item.title + index} />
-      ))}
-    </div>
-  </Container>
+      <Heading
+        className="mb-8 max-w-full text-center leading-tight lg:mb-12 lg:max-w-[70%] lg:leading-tight xl:leading-tight"
+        tag="h2"
+        size="md"
+      >
+        Want to Learn More?
+      </Heading>
+      <div className="flex flex-col flex-wrap gap-8 md:grid md:grid-cols-2 md:gap-8 lg:grid lg:grid-cols-3">
+        {items.map((item, index) => (
+          <Card {...item} key={item.title + index} />
+        ))}
+      </div>
+    </Container>
+  </section>
 );
 
 JoinUsCard.propTypes = {

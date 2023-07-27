@@ -30,6 +30,7 @@ const sectionContent1 = {
     'Cilium’s control and data plane has been built from the ground up for large-scale and highly dynamic cloud native environments where 100s and even 1000s of containers are created and destroyed within seconds. Cilium’s control plane is highly optimized, running in Kubernetes clusters with 1,000s of nodes and 100K pods. Cilium’s data plane uses eBPF for efficient load-balancing and incremental updates, avoiding the pitfalls of large iptables rulesets. ',
   imageSrc: CNIImage1,
   imageAlt: 'cilium cni illustration',
+  whiteBackground: true,
 };
 
 const sectionContent2 = {
@@ -38,7 +39,6 @@ const sectionContent2 = {
     "Cilium is built to scale. Whether you're running a few nodes or managing a cluster with thousands, Cilium can handle it. Cilium’s eBPF-powered networking is optimized for large scale operations. This means you can grow your operations without worrying about the network becoming a bottleneck.",
   imageSrc: CNIImage2,
   imageAlt: 'cilium scalability illustration',
-  whiteBackground: true,
 };
 
 const sectionContent3 = {
@@ -48,6 +48,7 @@ const sectionContent3 = {
   imageSrc: CNIImage3,
   imageAlt: ' illustration',
   imageRight: false,
+  whiteBackground: true,
 };
 
 const sectionContent4 = {
@@ -55,7 +56,6 @@ const sectionContent4 = {
   description:
     'Cilium integrates seamlessly with Kubernetes, providing networking and security through a CNI plugin. Cilium has been tested, validated, and optimized across multiple clouds and Kubernetes distributions. All major cloud providers have already standardized on Cilium for cloud native networking and security needs with Kubernetes. Managed Kubernetes offerings from Google Cloud, AWS, Azure, Alibaba, DigitalOcean, and several smaller platforms like Civo, Linode, etc, leverage Cilium for their CNI.',
   videoSrc: 'https://www.youtube.com/embed/80OYrzS1dCA',
-  whiteBackground: true,
 };
 
 const testimonials = [
@@ -97,7 +97,7 @@ const testimonials = [
 const CniPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
-    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent1} className="pt-0 md:pt-0 lg:pt-0" />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
     <FeatureSection {...sectionContent4} />

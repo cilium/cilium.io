@@ -13,9 +13,15 @@ const FeatureSection = ({
   imageRight,
   videoSrc,
   whiteBackground,
+  className,
 }) => (
   <section className={classNames(whiteBackground && 'bg-gray-4')}>
-    <Container className="grid grid-cols-12 gap-y-6 gap-x-6 py-10 md:py-20 lg:py-28 lg:pb-[138px] xl:gap-x-8">
+    <Container
+      className={classNames(
+        'grid grid-cols-12 gap-y-6 gap-x-6 py-10 md:py-20 lg:py-28 lg:pb-[138px] xl:gap-x-8',
+        className
+      )}
+    >
       <div
         className={classNames(
           'col-span-full lg:col-span-6 ',
@@ -54,14 +60,6 @@ const FeatureSection = ({
   </section>
 );
 
-FeatureSection.defaultProps = {
-  imageRight: true,
-  whiteBackground: false,
-  videoSrc: null,
-  imageSrc: null,
-  imageAlt: null,
-};
-
 FeatureSection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
@@ -70,6 +68,16 @@ FeatureSection.propTypes = {
   imageRight: PropTypes.bool,
   whiteBackground: PropTypes.bool,
   videoSrc: PropTypes.string,
+  className: PropTypes.string,
+};
+
+FeatureSection.defaultProps = {
+  imageRight: true,
+  whiteBackground: false,
+  videoSrc: null,
+  imageSrc: null,
+  imageAlt: null,
+  className: null,
 };
 
 export default FeatureSection;

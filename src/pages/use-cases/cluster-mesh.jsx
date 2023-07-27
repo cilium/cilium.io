@@ -30,6 +30,7 @@ const sectionContent1 = {
   description:
     'Cilium Cluster Mesh allows you to connect the networks of multiple clusters in such as way that pods in each cluster can discover and access services in all other clusters of the mesh, provided all the clusters run Cilium as their CNI. This allows effectively joining multiple clusters into a large unified network, regardless of the Kubernetes distribution or location each of them is running.',
   videoSrc: 'https://www.youtube.com/embed/1fsXtqg4Pkw',
+  whiteBackground: true,
 };
 
 const sectionContent2 = {
@@ -38,7 +39,6 @@ const sectionContent2 = {
     'Cluster Mesh enhances your services high availability and fault tolerance. It supports the operation of Kubernetes clusters in multiple regions or availability zones. If resources become temporarily unavailable, are misconfigured in one cluster, or offline for upgrades, it enables failover to other clusters, ensuring your services remain accessible at all times.',
   imageSrc: ClusterMeshImage1,
   imageAlt: 'multi-cluster illustration',
-  whiteBackground: true,
 };
 
 const sectionContent3 = {
@@ -55,6 +55,7 @@ const sectionContent4 = {
   description:
     'Cluster Mesh is able to handle Pod IP routing across multiple Kubernetes clusters at native performance. By using either tunneling or direct-routing, it circumvents the need for any gateways or proxies. This allows your pods to communicate across clusters seamlessly, enhancing the overall efficiency of your microservice architecture.  ',
   videoSrc: 'https://www.youtube.com/embed/VBOONHW65NU',
+  whiteBackground: true,
 };
 
 const sectionContent5 = {
@@ -63,7 +64,6 @@ const sectionContent5 = {
     'Cluster Mesh enables sharing of services such as secrets management, logging, monitoring, or DNS between all clusters. This reduces operational overhead, simplifies management, and maintains isolation between tenant clusters.',
   imageSrc: ClusterMeshImage3,
   imageAlt: 'shared services in multi-cluster illustration',
-  whiteBackground: true,
   imageRight: false,
 };
 
@@ -111,7 +111,7 @@ const testimonials = [
 const ClusterMeshPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
-    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent1} className="pt-0 md:pt-0 lg:pt-0" />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
     <FeatureSection {...sectionContent4} />

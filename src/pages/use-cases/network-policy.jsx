@@ -28,6 +28,7 @@ const sectionContent1 = {
   description:
     'Cilium implements Kubernetes Network Policies for L3/L4 level and extends with L7 policies for fine grained API-level security for common protocols such as HTTP, Kafka, gRPC, etc. For example, the endpoint with label role=frontend can only perform the REST API call GET /userdata/[0-9]+, all other API interactions with role=backend are restricted. ',
   videoSrc: 'https://www.youtube.com/embed/yikVhGM2ye8',
+  whiteBackground: true,
 };
 
 const sectionContent2 = {
@@ -36,7 +37,6 @@ const sectionContent2 = {
     'Cilium decouples security from network addressing using workload identity derived from labels and metadata, allowing for more flexible and efficient scaling without constant security rule updates. ',
   imageSrc: NetworkPolicyImage1,
   imageAlt: 'identities with cilium',
-  whiteBackground: true,
   imageRight: false,
 };
 
@@ -54,7 +54,6 @@ const sectionContent4 = {
     "Cluster Mesh, Cilium's multi-cluster implementation features Network policy enforcement spanning multiple clusters. The same policy enforcement you are familiar with from a single cluster simply expands and works across multiple clusters. ",
   imageSrc: NetworkPolicyImage3,
   imageAlt: 'cilium multi cluster illustration',
-  whiteBackground: true,
   imageRight: false,
 };
 
@@ -88,11 +87,11 @@ const testimonials = [
 const NetworkPolicyPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
-    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent1} className="pt-0 md:pt-0 lg:pt-0" />
     <FeatureSection {...sectionContent2} />
-    <FeatureSection {...sectionContent3} />
-    <FeatureSection {...sectionContent4} />
-    <FeatureSection {...sectionContent5} />
+    <FeatureSection {...sectionContent3} className="pt-10 md:pt-10 lg:pt-10" />
+    <FeatureSection {...sectionContent4} className="pt-10 md:pt-10 lg:pt-10" />
+    <FeatureSection {...sectionContent5} className="pt-10 md:pt-10 lg:pt-10" />
     <UseCaseCard
       heading="Who’s using  Cilium’s Advanced Network Policy?"
       testimonials={testimonials}

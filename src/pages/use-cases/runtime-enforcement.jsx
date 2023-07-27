@@ -34,7 +34,6 @@ const sectionContent2 = {
     'Tetragon is Kubernetes-aware, meaning it recognizes Kubernetes identities like namespaces and pods. This enables security event detection that can be tailored to individual workloads. Using eBPF, Tetragon can access the Linux kernel state and combine it with Kubernetes awareness and user policy to generate rules that are enforced by the kernel in real-time. This allows for capabilities like process namespace and capabilities annotation and enforcement, process file descriptor to filename association, and socket to process control.',
   imageSrc: RuntimeEnforcementImage1,
   imageAlt: 'identities with cilium',
-  whiteBackground: true,
   imageRight: false,
 };
 
@@ -53,7 +52,7 @@ const RuntimeEnforcementPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
-    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent2} className="pt-0 md:pt-0 lg:pt-0" />
     <UseCaseCard
       heading="Who’s using  Cilium’s Tetragon for Security Observability and Runtime Enforcement?"
       testimonials={testimonials}
