@@ -458,7 +458,7 @@ export default {
       },
       {
         linkText: 'User Story',
-        linkUrl: 'https://www.cncf.io/case-studies/bloomberg-2/?linkId=226868517',
+        linkUrl: 'https://www.cncf.io/case-studies/bloomberg-2/',
         linkTarget: '_blank',
       },
     ],
