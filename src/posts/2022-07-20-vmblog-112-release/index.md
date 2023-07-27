@@ -4,7 +4,7 @@ title: 'VMblog Expert Interview: Isovalent on the Launch of Cilium Service Mesh'
 ogImage: ogimage.png
 ogSummary: 'Hear Liz Rice give the inside scoop on Cilium Service Mesh'
 categories:
-  - Release
+  - Technology
 externalUrl: 'https://vmblog.com/archive/2022/07/20/vmblog-expert-interview-isovalent-on-the-launch-of-cilium-service-mesh.aspx#.YtgbN-xByrN'
 tags:
   - Cilium

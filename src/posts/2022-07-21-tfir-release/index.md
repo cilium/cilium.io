@@ -4,7 +4,7 @@ title: 'Cilium 1.12 Adds Cilium Service Mesh And Other New Features For Enterpri
 ogImage: ogimage.jpg
 ogSummary: 'Cilium 1.12 is now available'
 categories:
-  - Release
+  - Technology
 externalUrl: 'https://www.tfir.io/cilium-1-12-adds-cilium-service-mesh-and-other-new-features-for-enterprise-kubernetes/'
 tags:
   - Cilium

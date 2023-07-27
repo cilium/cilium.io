@@ -4,7 +4,7 @@ title: 'Cilium Service Mesh: A new bridge back to the kernel for cloud-native in
 ogImage: ogimage.png
 ogSummary: 'Cilium Service Mesh is released in 1.12'
 categories:
-  - Release
+  - Technology
 externalUrl: 'https://www.techrepublic.com/article/cilium-service-mesh/'
 tags:
   - Cilium
