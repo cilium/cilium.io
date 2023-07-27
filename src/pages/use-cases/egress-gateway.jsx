@@ -4,6 +4,7 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import BeeKeeperBee from 'images/pages/usecase/beekeeper-bee.png';
 import EgressImage1 from 'images/pages/usecase/egress-1.webp';
@@ -70,4 +71,12 @@ const egressPage = () => (
 
 export default egressPage;
 
-export const Head = () => <title>{heroContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

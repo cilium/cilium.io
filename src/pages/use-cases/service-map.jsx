@@ -4,6 +4,7 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import CapitalOneLogo from 'icons/logo-capitalone.inline.svg';
 import KubernetesBee from 'images/pages/usecase/k8s-bee.png';
@@ -73,4 +74,12 @@ const ServiceMapPage = () => (
 
 export default ServiceMapPage;
 
-export const Head = () => <title>{heroContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

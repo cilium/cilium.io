@@ -4,6 +4,7 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
 import RuntimeEnforcementImage1 from 'images/pages/usecase/runtime-1.png';
 import TetragonBee from 'images/pages/usecase/tetragon-bee.png';
@@ -63,4 +64,12 @@ const RuntimeEnforcementPage = () => (
 
 export default RuntimeEnforcementPage;
 
-export const Head = () => <title>{heroContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

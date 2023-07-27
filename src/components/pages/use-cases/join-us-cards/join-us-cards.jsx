@@ -29,8 +29,7 @@ const items = [
     description:
       'Get help with Cilium through Slack, Github, training, support, and FAQs. The community can also help you tell or promote your story around Cilium.',
     buttonText: 'Get Help',
-    buttonLink: 'https://cilium.io/get-help/',
-    buttonTarget: '_blank',
+    buttonLink: '/get-help/',
   },
 ];
 

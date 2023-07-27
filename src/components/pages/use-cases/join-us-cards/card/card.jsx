@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Heading from 'components/shared/heading';
+import Link from 'components/shared/link';
 
 const Card = ({ title, description, buttonText, buttonLink, buttonTarget, className }) => (
   <section
@@ -15,8 +16,8 @@ const Card = ({ title, description, buttonText, buttonLink, buttonTarget, classN
       {title}
     </Heading>
     <p className="mt-4 mb-6 w-full" dangerouslySetInnerHTML={{ __html: description }} />
-    <a
-      href={buttonLink}
+    <Link
+      to={buttonLink}
       target={buttonTarget}
       rel="noopener noreferrer"
       className="mx-auto mt-auto"
@@ -27,7 +28,7 @@ const Card = ({ title, description, buttonText, buttonLink, buttonTarget, classN
       >
         {buttonText}
       </button>
-    </a>
+    </Link>
   </section>
 );
 

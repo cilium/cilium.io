@@ -43,7 +43,15 @@ const FeatureSection = ({
           !imageRight && 'lg:col-start-1 lg:row-start-1'
         )}
       >
-        {imageSrc && <img className="max-h-full lg:max-h-[350px]" src={imageSrc} alt={imageAlt} />}
+        {imageSrc && (
+          <img
+            className="max-h-full lg:max-h-[350px]"
+            width={592}
+            height={350}
+            src={imageSrc}
+            alt={imageAlt}
+          />
+        )}
         {videoSrc && (
           <iframe
             className="w-full"

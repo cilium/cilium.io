@@ -4,6 +4,7 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import YahooLogo from 'icons/logo-yahoo.inline.svg';
 import DetectiveBeeImage from 'images/pages/usecase/detective-bee.png';
@@ -70,4 +71,12 @@ const KubeProxyReplacementPage = () => (
 
 export default KubeProxyReplacementPage;
 
-export const Head = () => <title>{heroContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

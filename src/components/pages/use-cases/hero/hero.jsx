@@ -44,12 +44,20 @@ const Hero = ({
             imageSrc && 'place-self-center '
           )}
         >
-          {imageSrc && <img className="max-h-[350px]" src={imageSrc} alt={imageAlt} />}
+          {imageSrc && (
+            <img
+              className="max-h-[350px]"
+              // width={592}
+              height={350}
+              src={imageSrc}
+              alt={imageAlt}
+            />
+          )}
           {videoSrc && (
             <iframe
               className="w-full"
-              width="560"
-              height="315"
+              width={560}
+              height={315}
               src={videoSrc}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

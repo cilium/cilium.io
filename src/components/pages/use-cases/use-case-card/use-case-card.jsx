@@ -3,6 +3,7 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import Link from 'components/shared/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
 
 import quotes from './images/quotes.svg';
@@ -18,9 +19,8 @@ const UseCaseCard = ({ heading, testimonials }) => (
         {heading}
       </Heading>
       <ul className="flex flex-col gap-y-8 md:gap-y-10">
-        {testimonials.map(({ logo, url, CTAtext, description, title, quote, person }, index) => {
-          const Logo = logo;
-          return (
+        {testimonials.map(
+          ({ logo: Logo, url, CTAtext, description, title, quote, person }, index) => (
             <li
               className="flex flex-col gap-0 rounded-lg bg-white px-6 py-8 shadow-primary sm:items-center md:flex-row md:gap-4 md:px-12"
               key={title + index}
@@ -29,15 +29,15 @@ const UseCaseCard = ({ heading, testimonials }) => (
                 <div className="flex flex-col items-center gap-6">
                   <Logo />
                   {url && (
-                    <a
-                      href={url}
+                    <Link
+                      to={url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 font-semibold text-primary-1"
                     >
                       {CTAtext}
                       <ArrowIcon />
-                    </a>
+                    </Link>
                   )}
                 </div>
                 <div className="my-8 h-[1px] w-full bg-[#6B91C7] md:h-[140px] md:w-[1px]" />
@@ -66,8 +66,8 @@ const UseCaseCard = ({ heading, testimonials }) => (
                 {person && <p className="mt-5 font-semibold">{person}</p>}
               </div>
             </li>
-          );
-        })}
+          )
+        )}
       </ul>
     </Container>
   </section>

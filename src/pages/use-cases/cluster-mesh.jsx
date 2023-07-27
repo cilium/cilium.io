@@ -4,6 +4,7 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import Form3Logo from 'icons/logo-form3.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
@@ -127,4 +128,12 @@ const ClusterMeshPage = () => (
 
 export default ClusterMeshPage;
 
-export const Head = () => <title>{heroContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

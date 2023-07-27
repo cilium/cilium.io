@@ -4,6 +4,7 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 import BandWidthImage1 from 'images/pages/usecase/bandwidth-1.png';
 import BandWidthImage2 from 'images/pages/usecase/bandwidth-2.webp';
@@ -71,4 +72,12 @@ const BandwidthLatencyPage = () => (
 
 export default BandwidthLatencyPage;
 
-export const Head = () => <title>{heroContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

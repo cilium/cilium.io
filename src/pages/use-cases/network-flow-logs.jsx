@@ -4,6 +4,7 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import AuditBee from 'images/pages/usecase/audit-bee.png';
@@ -75,4 +76,12 @@ const NetworkFlowLogsPage = () => (
 
 export default NetworkFlowLogsPage;
 
-export const Head = () => <title>{heroContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};
