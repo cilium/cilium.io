@@ -6,7 +6,7 @@ import Heading from 'components/shared/heading';
 import ArrowIcon from 'icons/arrow.inline.svg';
 
 const UseCaseCard = ({ heading, testimonials }) => (
-  <Container className="flex flex-col items-center py-10 md:py-20 lg:py-28 lg:pb-[138px]">
+  <Container className="flex flex-col items-center py-10 md:py-20 lg:py-28">
     <Heading
       className="mb-8 max-w-full text-center leading-tight lg:mb-12 lg:max-w-[70%] lg:leading-tight xl:leading-tight"
       tag="h2"

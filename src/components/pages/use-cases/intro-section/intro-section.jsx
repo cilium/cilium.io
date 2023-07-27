@@ -38,7 +38,12 @@ const IntroSection = ({
         <p className="text-lg leading-normal">{description}</p>
       </div>
       {(imageSrc || videoSrc) && (
-        <div className="col-span-full col-start-1 place-self-center pt-6 md:col-span-8 md:col-start-3 lg:col-span-6 lg:pt-14">
+        <div
+          className={classNames(
+            'col-span-full col-start-1 pt-6 md:col-span-8 md:col-start-3 lg:col-span-6 lg:pt-14',
+            imageSrc && 'place-self-center '
+          )}
+        >
           {imageSrc && <img className="max-h-[350px]" src={imageSrc} alt={imageAlt} />}
           {videoSrc && (
             <iframe

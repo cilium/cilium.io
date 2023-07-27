@@ -1,8 +1,8 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
 import RuntimeEnforcementImage1 from 'images/pages/usecase/runtime-1.png';

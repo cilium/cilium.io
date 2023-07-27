@@ -1,8 +1,8 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import CosmonicLogo from 'icons/logo-cosmonic.inline.svg';
