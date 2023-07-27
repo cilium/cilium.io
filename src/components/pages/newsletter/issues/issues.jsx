@@ -11,9 +11,9 @@ import getYear from 'utils/get-year';
 
 const Issues = () => {
   const data = useStaticQuery(graphql`
-    query hubspotEmailsQuery {
-      hubspotEmails {
-        objects {
+    query {
+      allHubspotEmail(sort: { fields: publishDate, order: DESC }) {
+        nodes {
           name
           publishDate
           publishedUrl
@@ -22,7 +22,7 @@ const Issues = () => {
     }
   `);
 
-  const items = data.hubspotEmails.objects.filter((item) => item.name.match(/^eCHO news \d{1,3}$/));
+  const items = data.allHubspotEmail.nodes.filter((item) => item.name.match(/^eCHO news \d{1,3}$/));
 
   items.forEach((item) => {
     item.year = getYear(Number(item.publishDate));
