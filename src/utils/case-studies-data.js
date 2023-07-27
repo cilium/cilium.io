@@ -452,8 +452,13 @@ export default {
     text: 'Bloomberg leverages Cilium to construct data sandboxes that restrict users from distributing data outside the sandbox',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Video',
         linkUrl: 'https://www.youtube.com/watch?v=8fiYVyISyz4/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'User Story',
+        linkUrl: 'https://www.cncf.io/case-studies/bloomberg-2/',
         linkTarget: '_blank',
       },
     ],
