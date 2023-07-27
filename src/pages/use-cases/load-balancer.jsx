@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import YahooLogo from 'icons/logo-yahoo.inline.svg';
 import DetectiveBeeImage from 'images/pages/usecase/detective-bee.png';
@@ -37,7 +37,7 @@ const sectionContent2 = {
 
 const testimonials = [
   {
-    logo: <SeznamLogo />,
+    logo: SeznamLogo,
     title:
       'Efficiently handling production traffic with Cilium Standalone Layer 4 Load Balancer XDP',
     CTAtext: 'Read The Blog Post',
@@ -47,7 +47,7 @@ const testimonials = [
   },
   {
     title: 'Software L4 Load Balancing for Kubernetes Services at Yahoo',
-    logo: <YahooLogo />,
+    logo: YahooLogo,
     CTAtext: 'Watch the Talk',
     url: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
     description:

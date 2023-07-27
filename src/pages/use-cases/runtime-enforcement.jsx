@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
 import RuntimeEnforcementImage1 from 'images/pages/usecase/runtime-1.png';
 import TetragonBee from 'images/pages/usecase/tetragon-bee.png';
@@ -40,7 +40,7 @@ const sectionContent2 = {
 
 const testimonials = [
   {
-    logo: <FRSCALogo />,
+    logo: FRSCALogo,
     CTAtext: 'Check Out The Project',
     title: 'Integrating Tetragon  for Secured Build Pipelines',
     url: 'https://buildsec.github.io/frsca/',

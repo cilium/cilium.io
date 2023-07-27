@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import KubermaticLogo from 'icons/logo-kubermatic.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
@@ -50,7 +50,7 @@ const sectionContent3 = {
 
 const testimonials = [
   {
-    logo: <PostFinanceLogo />,
+    logo: PostFinanceLogo,
     title: 'Post Finance picks Isovalent Cilium for Cloud Native Networking',
     CTAtext: 'Read The Case Study',
     url: 'https://isovalent.com/data/isovalent-case-study-postfinance.pdf',
@@ -59,7 +59,7 @@ const testimonials = [
   },
   {
     title: 'Service Load-Balancing Without Kube-Proxy on Kubermatic',
-    logo: <KubermaticLogo />,
+    logo: KubermaticLogo,
     CTAtext: 'Read The Blog Post',
     url: 'https://www.kubermatic.com/blog/cilium-cni-integration-in-kubermatic-kubernetes-platform/',
     description:
@@ -67,7 +67,7 @@ const testimonials = [
   },
   {
     title: 'Why is the kernel community replacing iptables with BPF?',
-    logo: <CiliumLogo />,
+    logo: CiliumLogo,
     CTAtext: 'Read The Blog Post',
     url: 'https://cilium.io/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables/',
     description:

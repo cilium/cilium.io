@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import Form3Logo from 'icons/logo-form3.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
@@ -77,7 +77,7 @@ const sectionContent6 = {
 
 const testimonials = [
   {
-    logo: <Form3Logo />,
+    logo: Form3Logo,
     title: 'Multi-cluster networking with Cilium at Form3',
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
@@ -88,7 +88,7 @@ const testimonials = [
   },
   {
     title: 'Building ClickHouse Cloud From Scratch in a Year',
-    logo: <ClickHouseLogo />,
+    logo: ClickHouseLogo,
     CTAtext: 'Read The Blog Post',
     url: 'https://www.cncf.io/case-studies/clickhouse/',
     description:
@@ -97,7 +97,7 @@ const testimonials = [
     person: 'Timur Solodovnikov, SRE, ClickHouse',
   },
   {
-    logo: <WildLifeLogo />,
+    logo: WildLifeLogo,
     title: 'How Wildlife Studios built a Global Multi Cluster Gaming Infrastructure with Cilium',
     url: 'https://cilium.io/blog/2020/09/03/wildlife-studios-multi-cluster-gaming-platform/',
     description:

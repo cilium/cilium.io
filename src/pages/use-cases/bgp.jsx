@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import BGPImage1 from 'images/pages/usecase/bgp-1.png';
@@ -39,7 +39,7 @@ const sectionContent2 = {
 
 const testimonials = [
   {
-    logo: <TripLogo />,
+    logo: TripLogo,
     title: "Trip.com's Hybrid Cloud Approach with Cilium for Workload Routing",
     CTAtext: 'Read The Blog Post',
     url: 'https://cilium.io/blog/2020/02/05/how-trip-com-uses-cilium/',
@@ -48,7 +48,7 @@ const testimonials = [
   },
   {
     title: 'Leveraging Cilium’s BGP in Private Data Centers',
-    logo: <CiliumLogo />,
+    logo: CiliumLogo,
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/watch?v=sg-F_R-ZVNc',
     description:

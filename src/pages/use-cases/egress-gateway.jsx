@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import BeeKeeperBee from 'images/pages/usecase/beekeeper-bee.png';
 import EgressImage1 from 'images/pages/usecase/egress-1.webp';
@@ -48,7 +48,7 @@ const sectionContent3 = {
 
 const testimonials = [
   {
-    logo: <CiliumLogo />,
+    logo: CiliumLogo,
     title: 'Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev Teams)',
     CTAtext: 'Read The Blog Post',
     url: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',

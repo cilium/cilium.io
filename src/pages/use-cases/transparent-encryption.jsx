@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import CosmonicLogo from 'icons/logo-cosmonic.inline.svg';
 import JeediBee from 'images/pages/usecase/jedi-bee.png';
@@ -30,7 +30,7 @@ const sectionContent1 = {
 
 const testimonials = [
   {
-    logo: <AscendLogo />,
+    logo: AscendLogo,
     title: 'Achieving HIPPA compliance with Cilium’s transparent encryption',
     CTAtext: 'Read The Case Study',
     url: 'https://www.cncf.io/case-studies/ascend/',
@@ -38,7 +38,7 @@ const testimonials = [
       'Ascend switched to using Cilium as their solution for data encryption and has since experienced significant improvements. With Cilium, Ascend was able to simplify the encryption process, eliminating the need for and mitiagting issues with certificate-init-containers and application based encryption. This transition has allowed Ascend to achieve seamless data encryption and maintain HIPAA compliance with ease.',
   },
   {
-    logo: <CosmonicLogo />,
+    logo: CosmonicLogo,
     title: 'Seamless Network Security and Privacy with Cilium',
     CTAtext: 'Read The Blog Post',
     url: 'https://cilium.io/blog/2023/01/18/cosmonic-user-story/',

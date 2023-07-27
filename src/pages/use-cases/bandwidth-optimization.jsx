@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 import BandWidthImage1 from 'images/pages/usecase/bandwidth-1.png';
 import BandWidthImage2 from 'images/pages/usecase/bandwidth-2.webp';
@@ -49,7 +49,7 @@ const sectionContent3 = {
 
 const testimonials = [
   {
-    logo: <IsovalentLogo />,
+    logo: IsovalentLogo,
     title: 'BIG Performances with BIG TCP on Cilium',
     CTAtext: 'Read The Blog Post',
     url: 'https://isovalent.com/blog/post/big-tcp-on-cilium/',

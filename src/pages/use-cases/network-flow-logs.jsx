@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import AuditBee from 'images/pages/usecase/audit-bee.png';
@@ -39,7 +39,7 @@ const sectionContent2 = {
 
 const testimonials = [
   {
-    logo: <NewYorkTimesLogo />,
+    logo: NewYorkTimesLogo,
     title: 'Observability for a highly available multi cluster environment with Hubble',
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/embed/9FDpMNvPrCw',
@@ -49,7 +49,7 @@ const testimonials = [
     person: 'Ahmed Bebars - Software engineer, The New York Times',
   },
   {
-    logo: <BloombergLogo />,
+    logo: BloombergLogo,
     title: 'Building Data Sandboxes at Bloomberg',
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/embed/8fiYVyISyz4',

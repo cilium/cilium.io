@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import GrafanaLogo from 'icons/logo-grafana.inline.svg';
 import RafayLogo from 'icons/logo-rafay.inline.svg';
 import ExcelBee from 'images/pages/usecase/excel-bee.png';
@@ -47,7 +47,7 @@ const sectionContent3 = {
 
 const testimonials = [
   {
-    logo: <GrafanaLogo />,
+    logo: GrafanaLogo,
     title: 'eBPF-powered observability for Kubernetes and cloud native infrastructure',
     CTAtext: 'Read The Blog Post',
     url: 'https://grafana.com/blog/2022/10/24/grafana-and-cilium-deep-ebpf-powered-observability-for-kubernetes-and-cloud-native-infrastructure/',
@@ -56,7 +56,7 @@ const testimonials = [
   },
   {
     title: 'Cilium-powered Enterprise Kubernetes Management for Platform Teams',
-    logo: <RafayLogo />,
+    logo: RafayLogo,
     description:
       'Rafay Leverages Cilium for Visibility via Prometheus metrics and Hubble to deliver the automation developers and operations want with the right level of standardization, control, and governance platform teams need. ',
   },

@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import NetworkPolicyImage1 from 'images/pages/usecase/network-1.png';
@@ -68,7 +68,7 @@ const sectionContent5 = {
 
 const testimonials = [
   {
-    logo: <UtmostLogo />,
+    logo: UtmostLogo,
     title: 'Observability for a highly available multi cluster environment with Hubble',
     CTAtext: 'Read The Case Study',
     url: 'https://www.cncf.io/case-studies/utmost/',
@@ -76,7 +76,7 @@ const testimonials = [
       ' Utmost achieved Zero Trust Networking by replacing their existing CNI with Cilium to address networking, security, and visibility for container workloads. Utmost processes 1207 flows per second, each validated against a multitude of network policies to approve or deny access.',
   },
   {
-    logo: <ClickHouseLogo />,
+    logo: ClickHouseLogo,
     title: 'How ClickHouse is Using Cilium to Implement Efficient Network Policies',
     CTAtext: 'Read The Case Study',
     url: 'https://www.cncf.io/case-studies/clickhouse/',

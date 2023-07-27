@@ -16,7 +16,12 @@ const FeatureSection = ({
 }) => (
   <section className={classNames(whiteBackground && 'bg-gray-4')}>
     <Container className="grid grid-cols-12 gap-y-6 gap-x-6 py-10 md:py-20 lg:py-28 lg:pb-[138px] xl:gap-x-8">
-      <div className={classNames('col-span-full lg:col-span-6', !imageRight && 'lg:col-start-7')}>
+      <div
+        className={classNames(
+          'col-span-full lg:col-span-6 ',
+          !imageRight ? 'pl-0 lg:col-start-7 lg:pl-5' : 'pr-0 lg:pr-5'
+        )}
+      >
         <Heading
           className="mb-5 leading-tight lg:leading-tight xl:leading-tight"
           tag="h3"

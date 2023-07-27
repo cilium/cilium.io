@@ -1,9 +1,9 @@
 import React from 'react';
 
 import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import IntroSection from 'components/pages/use-cases/intro-section';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import AWSLogo from 'icons/logo-aws.inline.svg';
 import AzureLogo from 'icons/logo-azure.inline.svg';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
@@ -60,7 +60,7 @@ const sectionContent4 = {
 
 const testimonials = [
   {
-    logo: <AWSLogo />,
+    logo: AWSLogo,
     title: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
     CTAtext: 'Read The Blog Post',
     url: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/',
@@ -69,14 +69,14 @@ const testimonials = [
   },
   {
     title: 'Cilium in Anthos and Google Kubernetes Engine (GKE) as Dataplane V2',
-    logo: <GoogleLogo />,
+    logo: GoogleLogo,
     CTAtext: 'Read The Blog Post',
     url: 'https://cilium.io/blog/2020/08/19/google-chooses-cilium-for-gke-networking/',
     description:
       "Cilium is a key component in Anthos and Google Kubernetes Engine (GKE) as Dataplane V2. It provides advanced networking, security, and performance capabilities. With Cilium's integration with eBPF technology, Anthos and GKE users benefit from dynamic security, high-performance networking, load balancing, encryption, and robust network security features. Cilium serves as the underlying solution for efficient communication and enhanced security in Kubernetes workloads on these platforms.",
   },
   {
-    logo: <AzureLogo />,
+    logo: AzureLogo,
     title: 'Azure CNI Powered by Cilium in Azure Kubernetes Service',
     url: 'https://isovalent.com/blog/post/azure-cni-cilium/',
     description:
@@ -85,7 +85,7 @@ const testimonials = [
   },
 
   {
-    logo: <CiliumLogo />,
+    logo: CiliumLogo,
     title: 'CNI Benchmark: Understanding Cilium Network Performance',
     url: 'https://cilium.io/blog/2021/05/11/cni-benchmark/',
     description:
