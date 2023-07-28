@@ -14,7 +14,7 @@ const Cover = ({ ogImage, title }) => {
 
   return ogImage ? (
     <GatsbyImage
-      imgClassName="self-center rounded-t-lg h-full max-h-[261px] sm:max-h-[221px] lg:max-h-[180px]"
+      imgClassName="self-center h-full max-h-[261px] sm:max-h-[221px] lg:max-h-[180px]"
       image={getImage(ogImage)}
       objectFit="cover"
       alt={title}
@@ -22,7 +22,7 @@ const Cover = ({ ogImage, title }) => {
     />
   ) : (
     <div
-      className="flex w-full items-center justify-center rounded-t-lg bg-gray-4"
+      className="flex w-full items-center justify-center bg-gray-4"
       ref={placeholder}
       style={{ height: placeholderHeight }}
     >
@@ -43,7 +43,7 @@ const Card = ({
   <Link
     to={externalUrl}
     className={classNames(
-      'group flex flex-col rounded-lg border-2 border-gray-6 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
+      'group flex flex-col overflow-hidden rounded-lg border-2 border-gray-6 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
       className
     )}
     target="_blank"
