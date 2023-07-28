@@ -37,6 +37,7 @@ module.exports = {
           5: '#D1D7E0',
           6: '#F0F2F4',
           7: '#34373B',
+          94: '#EEEFF1',
         },
         hover: {
           1: '#3399FF',
