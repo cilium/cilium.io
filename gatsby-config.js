@@ -212,6 +212,31 @@ const plugins = [
           title:
             'Cilium - The latest articles covering eBPF-based Networking, Observability, and Security',
         },
+        {
+          serialize: ({ query: { allHubspotEmail } }) =>
+            allHubspotEmail.nodes.map(({ name, publishDate, publishedUrl }) => {
+              const date = new Date(Number(publishDate)).toUTCString();
+              return {
+                title: name,
+                date,
+                url: publishedUrl,
+                guid: publishedUrl,
+              };
+            }),
+          query: `
+          {
+            allHubspotEmail(sort: { fields: publishDate, order: DESC }) {
+              nodes {
+                name
+                publishDate
+                publishedUrl
+              }
+            }
+          }
+          `,
+          output: '/newsletter/rss.xml',
+          title: 'Cilium Newsletter - bi-weekly wrap up of all things eBPF and Cilium',
+        },
       ],
     },
   },

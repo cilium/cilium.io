@@ -2,9 +2,11 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import Link from 'components/shared/link/link';
 import SubscribeForm from 'components/shared/subscribe-form';
 
 import backgroundSvg from './images/background.svg';
+import RSSIcon from './images/rss.inline.svg';
 
 const title = 'Subscribe to bi-weekly eCHO News';
 const description =
@@ -23,7 +25,14 @@ const Hero = () => (
         {title}
       </Heading>
       <p className="mx-auto mt-5 max-w-2xl lg:max-w-[820px]">{description}</p>
-      <SubscribeForm className="mt-10 max-w-[614px] md:mt-12 lg:mt-16" />
+      <SubscribeForm
+        className="mt-10 max-w-[614px] md:mt-12 lg:mt-16"
+        divClassName="min-h-[160px] xs:min-h-[110px]"
+      />
+      <Link className="mx-auto flex w-fit items-center gap-x-1.5" to="/newsletter/rss.xml">
+        <RSSIcon className="h-3.5 w-3.5 shrink-0 text-primary-1" />
+        <span className="pb-0.5 text-base hover:text-primary-1">Subscribe to RSS feed</span>
+      </Link>
     </Container>
   </section>
 );
