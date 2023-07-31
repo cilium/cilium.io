@@ -96,7 +96,7 @@ const Logos = () => (
           })}
         </div>
       </div>
-      <div className="mt-10 flex flex-col items-center md:mt-20 lg:mt-28 lg:flex-row lg:space-x-36 xl:mt-48">
+      <div className="mt-20 flex flex-col items-center lg:mt-28 lg:flex-row lg:space-x-36 xl:mt-48">
         <div className="flex flex-col space-y-2.5">
           <Heading tag="h2" size="lg">
             Full logo

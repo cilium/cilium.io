@@ -23,7 +23,7 @@ const buttonIconClassNames = {
 const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
   const isSmallSize = size === 'sm';
   return (
-    <li className="flex flex-col rounded-xl shadow-card">
+    <li className="flex h-full w-full max-w-[650px] flex-col place-self-center rounded-xl shadow-card">
       {imageData ? (
         <div className="relative self-center">
           <img
