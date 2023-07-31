@@ -1,17 +1,17 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import BGPImage1 from 'images/pages/usecase/bgp-1.png';
 import TravelBee from 'images/pages/usecase/travel-bee.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'BGP',
   category: 'Networking',
   tagline: 'Harness the infinite potential of Border Gateway Protocol (BGP) with Cilium',
@@ -40,7 +40,7 @@ const sectionContent2 = {
 
 const testimonials = [
   {
-    logo: <TripLogo />,
+    logo: TripLogo,
     title: "Trip.com's Hybrid Cloud Approach with Cilium for Workload Routing",
     CTAtext: 'Read The Blog Post',
     url: 'https://cilium.io/blog/2020/02/05/how-trip-com-uses-cilium/',
@@ -49,7 +49,7 @@ const testimonials = [
   },
   {
     title: 'Leveraging Cilium’s BGP in Private Data Centers',
-    logo: <CiliumLogo />,
+    logo: CiliumLogo,
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/watch?v=sg-F_R-ZVNc',
     description:
@@ -61,16 +61,22 @@ const testimonials = [
 
 const BGPPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <ImageFeatureSection {...sectionContent1} />
-      <VideoFeatureSection {...sectionContent2} />
-      <UseCaseCard heading="Who’s using Cilium’s BGP ?" testimonials={testimonials} />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <UseCaseCard heading="Who’s using Cilium’s BGP ?" testimonials={testimonials} />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default BGPPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

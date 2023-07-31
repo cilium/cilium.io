@@ -1,14 +1,14 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import SEO from 'components/shared/seo';
 import GatewayImage1 from 'images/pages/usecase/gateway-1.webp';
 import GatewayImage2 from 'images/pages/usecase/gateway-2.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Gateway API ',
   category: 'Networking',
   tagline: 'Robust Kubernetes Ingress for traffic management',
@@ -45,16 +45,22 @@ const sectionContent3 = {
 
 const GatewayAPIPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <VideoFeatureSection {...sectionContent3} />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <JoinUsCard className="pt-10 md:pt-20 lg:pt-28" />
   </MainLayout>
 );
 
 export default GatewayAPIPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

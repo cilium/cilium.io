@@ -1,10 +1,10 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import KubermaticLogo from 'icons/logo-kubermatic.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
@@ -13,7 +13,7 @@ import KubeProxyImage1 from 'images/pages/usecase/kubeproxy-1.webp';
 import KubeProxyImage2 from 'images/pages/usecase/kubeproxy-2.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Kube-proxy Replacement',
   category: 'Networking',
   tagline: 'Enhanced networking speed and efficiency for your Kubernetes clusters',
@@ -51,7 +51,7 @@ const sectionContent3 = {
 
 const testimonials = [
   {
-    logo: <PostFinanceLogo />,
+    logo: PostFinanceLogo,
     title: 'Post Finance picks Isovalent Cilium for Cloud Native Networking',
     CTAtext: 'Read The Case Study',
     url: 'https://isovalent.com/data/isovalent-case-study-postfinance.pdf',
@@ -60,7 +60,7 @@ const testimonials = [
   },
   {
     title: 'Service Load-Balancing Without Kube-Proxy on Kubermatic',
-    logo: <KubermaticLogo />,
+    logo: KubermaticLogo,
     CTAtext: 'Read The Blog Post',
     url: 'https://www.kubermatic.com/blog/cilium-cni-integration-in-kubermatic-kubernetes-platform/',
     description:
@@ -68,7 +68,7 @@ const testimonials = [
   },
   {
     title: 'Why is the kernel community replacing iptables with BPF?',
-    logo: <CiliumLogo />,
+    logo: CiliumLogo,
     CTAtext: 'Read The Blog Post',
     url: 'https://cilium.io/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables/',
     description:
@@ -78,20 +78,26 @@ const testimonials = [
 
 const KubeProxyReplacementPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <ImageFeatureSection {...sectionContent3} />
-      <UseCaseCard
-        heading="Who’s using Cilium’s kube-proxy replacement?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <UseCaseCard
+      heading="Who’s using Cilium’s kube-proxy replacement?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default KubeProxyReplacementPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

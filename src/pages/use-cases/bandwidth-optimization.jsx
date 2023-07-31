@@ -1,17 +1,17 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 import BandWidthImage1 from 'images/pages/usecase/bandwidth-1.png';
 import BandWidthImage2 from 'images/pages/usecase/bandwidth-2.webp';
 import BandWidthImage3 from 'images/pages/usecase/bandwidth-3.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Bandwidth and Latency Optimization  ',
   category: 'Networking',
   tagline: 'Simple and intuitive network performance optimization',
@@ -37,7 +37,6 @@ const sectionContent2 = {
     'Cilium supports BBR, a congestion control algorithm developed by Google, making it the first platform to do so. Google observed up to 2,700x improvement in throughput when testing BBR, making it a valuable addition for optimizing network performance. Cilium’s BBR provides exceptional improvements in throughput and latency for external-facing applications, offering consumers a delightful user experience',
   imageSrc: BandWidthImage3,
   imageAlt: 'Cilium bandwidth manager illustration',
-  whiteBackground: true,
   imageRight: false,
 };
 
@@ -46,11 +45,12 @@ const sectionContent3 = {
   description:
     "Cilium BIG TCP allows for larger packets than the traditional 64KB limit by leveraging IPv6's Hop-by-Hop header, which can specify payload lengths up to 512KB. This is particularly useful for organizations building networks capable of 100Gbps and beyond. BIG TCP does not require modifying the MTU on network devices, making it easier to implement than Jumbo Frames. With BIG TCP, Cilium offers enhanced network performance for nodes, enabling users to extract as much performance as possible from the network.",
   videoSrc: 'https://www.youtube.com/embed/Kvdh78TURck',
+  whiteBackground: true,
 };
 
 const testimonials = [
   {
-    logo: <IsovalentLogo />,
+    logo: IsovalentLogo,
     title: 'BIG Performances with BIG TCP on Cilium',
     CTAtext: 'Read The Blog Post',
     url: 'https://isovalent.com/blog/post/big-tcp-on-cilium/',
@@ -61,20 +61,23 @@ const testimonials = [
 
 const BandwidthLatencyPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <ImageFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <VideoFeatureSection {...sectionContent3} />
-      <UseCaseCard
-        heading="Learn More About Cilium’s Big TCP Feature"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} className="pt-0 md:pt-0 lg:pt-0" />
+    <FeatureSection {...sectionContent3} className="pb-10 md:pb-10 lg:pb-10" />
+    <UseCaseCard heading="Learn More About Cilium’s Big TCP Feature" testimonials={testimonials} />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default BandwidthLatencyPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

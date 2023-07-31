@@ -59,7 +59,7 @@ const items = [
 ];
 
 const Training = () => (
-  <section className="py-10 md:py-20 lg:py-28" id="trainings">
+  <section className="py-16 md:py-20 lg:py-28" id="trainings">
     <Container>
       <Heading className="text-center" tag="h2">
         {title}
@@ -68,7 +68,7 @@ const Training = () => (
         className="with-link-primary mx-auto mt-4 max-w-[592px] text-center text-lg"
         dangerouslySetInnerHTML={{ __html: description }}
       />
-      <div className="mt-12 flex flex-col space-y-8 md:flex-row md:justify-between md:space-y-0 md:space-x-8">
+      <div className="mt-12 grid grid-cols-1  gap-y-8 gap-x-0 gap-x-0 md:grid-cols-2 md:gap-x-8">
         {items.map(
           (
             { logoName, title, description, buttonText, buttonLink, buttonTarget, buttonDisabled },
@@ -78,7 +78,7 @@ const Training = () => (
 
             return (
               <div
-                className="relative mx-auto flex max-w-[592px] basis-1/2 flex-col rounded-xl bg-white p-4 shadow-card sm:p-6 md:p-8"
+                className="flex flex-col items-start rounded-xl bg-white p-4 shadow-card sm:p-6 md:p-8"
                 key={index}
               >
                 <Logo className="h-9" />

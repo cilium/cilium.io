@@ -1,10 +1,10 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import AWSLogo from 'icons/logo-aws.inline.svg';
 import AzureLogo from 'icons/logo-azure.inline.svg';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
@@ -14,7 +14,7 @@ import CNIImage2 from 'images/pages/usecase/cni-2.png';
 import CNIImage3 from 'images/pages/usecase/cni-3.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'High Performance Cloud Native Networking (CNI)',
   category: 'Networking',
   tagline: 'Enhance the speed and efficiency of your Kubernetes and cloud native networks',
@@ -31,6 +31,7 @@ const sectionContent1 = {
     'Cilium’s control and data plane has been built from the ground up for large-scale and highly dynamic cloud native environments where 100s and even 1000s of containers are created and destroyed within seconds. Cilium’s control plane is highly optimized, running in Kubernetes clusters with 1,000s of nodes and 100K pods. Cilium’s data plane uses eBPF for efficient load-balancing and incremental updates, avoiding the pitfalls of large iptables rulesets. ',
   imageSrc: CNIImage1,
   imageAlt: 'cilium cni illustration',
+  whiteBackground: true,
 };
 
 const sectionContent2 = {
@@ -39,7 +40,6 @@ const sectionContent2 = {
     "Cilium is built to scale. Whether you're running a few nodes or managing a cluster with thousands, Cilium can handle it. Cilium’s eBPF-powered networking is optimized for large scale operations. This means you can grow your operations without worrying about the network becoming a bottleneck.",
   imageSrc: CNIImage2,
   imageAlt: 'cilium scalability illustration',
-  whiteBackground: true,
 };
 
 const sectionContent3 = {
@@ -49,6 +49,7 @@ const sectionContent3 = {
   imageSrc: CNIImage3,
   imageAlt: ' illustration',
   imageRight: false,
+  whiteBackground: true,
 };
 
 const sectionContent4 = {
@@ -56,12 +57,11 @@ const sectionContent4 = {
   description:
     'Cilium integrates seamlessly with Kubernetes, providing networking and security through a CNI plugin. Cilium has been tested, validated, and optimized across multiple clouds and Kubernetes distributions. All major cloud providers have already standardized on Cilium for cloud native networking and security needs with Kubernetes. Managed Kubernetes offerings from Google Cloud, AWS, Azure, Alibaba, DigitalOcean, and several smaller platforms like Civo, Linode, etc, leverage Cilium for their CNI.',
   videoSrc: 'https://www.youtube.com/embed/80OYrzS1dCA',
-  whiteBackground: true,
 };
 
 const testimonials = [
   {
-    logo: <AWSLogo />,
+    logo: AWSLogo,
     title: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
     CTAtext: 'Read The Blog Post',
     url: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/',
@@ -70,14 +70,14 @@ const testimonials = [
   },
   {
     title: 'Cilium in Anthos and Google Kubernetes Engine (GKE) as Dataplane V2',
-    logo: <GoogleLogo />,
+    logo: GoogleLogo,
     CTAtext: 'Read The Blog Post',
     url: 'https://cilium.io/blog/2020/08/19/google-chooses-cilium-for-gke-networking/',
     description:
       "Cilium is a key component in Anthos and Google Kubernetes Engine (GKE) as Dataplane V2. It provides advanced networking, security, and performance capabilities. With Cilium's integration with eBPF technology, Anthos and GKE users benefit from dynamic security, high-performance networking, load balancing, encryption, and robust network security features. Cilium serves as the underlying solution for efficient communication and enhanced security in Kubernetes workloads on these platforms.",
   },
   {
-    logo: <AzureLogo />,
+    logo: AzureLogo,
     title: 'Azure CNI Powered by Cilium in Azure Kubernetes Service',
     url: 'https://isovalent.com/blog/post/azure-cni-cilium/',
     description:
@@ -86,7 +86,7 @@ const testimonials = [
   },
 
   {
-    logo: <CiliumLogo />,
+    logo: CiliumLogo,
     title: 'CNI Benchmark: Understanding Cilium Network Performance',
     url: 'https://cilium.io/blog/2021/05/11/cni-benchmark/',
     description:
@@ -97,21 +97,27 @@ const testimonials = [
 
 const CniPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <ImageFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <ImageFeatureSection {...sectionContent3} />
-      <VideoFeatureSection {...sectionContent4} />
-      <UseCaseCard
-        heading="Who’s using Cilium for High Performance Cloud Native Networking(CNI)"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} className="pt-0 md:pt-0 lg:pt-0" />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <FeatureSection {...sectionContent4} />
+    <UseCaseCard
+      heading="Who’s using Cilium for High Performance Cloud Native Networking(CNI)"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default CniPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};
