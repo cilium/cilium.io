@@ -130,7 +130,7 @@ const Highlights = () => (
           <Heading className="pb-10 pt-20 md:pb-14 md:pt-28" tag="h2" size="sm">
             {title}
           </Heading>
-          <ul className="grid grid-cols-1 gap-6 md:auto-rows-fr md:grid-cols-2 md:gap-8 lg:grid lg:auto-rows-fr lg:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-6 md:auto-rows-fr md:grid-cols-2 md:gap-8 lg:grid lg:auto-rows-fr lg:grid-cols-4">
             {items.map((item, index) => (
               <ItemCard {...item} key={item.title + index} />
             ))}

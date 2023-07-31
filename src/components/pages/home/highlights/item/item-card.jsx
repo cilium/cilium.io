@@ -12,7 +12,7 @@ const ItemCard = ({ icon: Icon, title, path }) => (
   >
     <Icon className="h-16 w-16" />
     <Heading
-      className="mt-5 max-w-full !text-lg font-medium leading-normal group-hover:text-primary-1 lg:max-w-[70%]"
+      className="mt-5 max-w-full !text-lg font-medium leading-normal group-hover:text-primary-1"
       size="3xs"
       tag="h3"
     >
