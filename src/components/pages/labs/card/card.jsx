@@ -74,11 +74,12 @@ Cover.propTypes = {
       gatsbyImageData: PropTypes.shape(),
     }),
   }),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
 
 Cover.defaultProps = {
   ogImage: null,
+  title: null,
 };
 
 Card.propTypes = {
