@@ -56,7 +56,7 @@ const RelatedProjects = () => {
   `);
   const images = { image1, image2, image3 };
   return (
-    <section className="mt-10 md:mt-20 lg:mt-32">
+    <section className="mt-20 md:mt-20 lg:mt-32">
       <Container>
         <Heading className="text-center" tag="h2">
           {title}

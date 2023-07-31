@@ -2,7 +2,8 @@ const fetch = require(`node-fetch`);
 const Path = require('path');
 
 const { createEventFilters } = require('./src/utils/event-filters');
-const { EVENT_REGEX, EVENTS_BASE_PATH } = require('./src/utils/events');
+const { EVENT_REGEX } = require('./src/utils/events');
+const { EVENTS_BASE_PATH } = require('./src/utils/routes');
 const { slugify } = require('./src/utils/slugify');
 
 const DRAFT_FILTER = process.env.NODE_ENV === 'production' ? [false] : [true, false];

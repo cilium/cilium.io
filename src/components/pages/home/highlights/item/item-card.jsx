@@ -3,26 +3,22 @@ import React from 'react';
 
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link/link';
-import ArrowIcon from 'icons/arrow.inline.svg';
+import { USE_CASE_BASE_PATH } from 'utils/routes';
 
 const ItemCard = ({ icon: Icon, title, path }) => (
-  <div className="flex h-[210px] flex-col justify-around px-6">
-    <div className="flex items-center">
-      <Icon />
-      <Heading className="mx-4 text-left" size="3xs" tag="h3">
-        {title}
-      </Heading>
-    </div>
-    <Link
-      to={`/use-cases/${path}`}
-      className="mb-5 flex items-center gap-3 font-semibold text-[#3B82F6]"
+  <Link
+    to={USE_CASE_BASE_PATH + path}
+    className="group flex h-full flex-col rounded-lg border bg-white p-4 transition-all duration-200 hover:shadow-input md:p-6"
+  >
+    <Icon className="h-16 w-16" />
+    <Heading
+      className="mt-5 max-w-full !text-lg font-medium leading-normal group-hover:text-primary-1 lg:max-w-[70%]"
+      size="3xs"
+      tag="h3"
     >
-      Learn More
-      <span>
-        <ArrowIcon />
-      </span>
-    </Link>
-  </div>
+      {title}
+    </Heading>
+  </Link>
 );
 
 ItemCard.propTypes = {

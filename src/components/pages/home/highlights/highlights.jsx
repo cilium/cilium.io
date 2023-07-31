@@ -123,18 +123,16 @@ const list = [
 ];
 
 const Highlights = () => (
-  <section className="mt-12" id="use-cases">
+  <section className="mb-20 md:mb-0" id="use-cases">
     <Container>
       {list.map(({ title, items }, index) => (
-        <div key={index} className="md:mb-16">
-          <Heading className="py-6 text-center" tag="h2" size="sm">
+        <div key={index}>
+          <Heading className="pb-10 pt-20 md:pb-14 md:pt-28" tag="h2" size="sm">
             {title}
           </Heading>
-          <ul className="block gap-8 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-6 md:auto-rows-fr md:grid-cols-2 md:gap-8 lg:grid lg:auto-rows-fr lg:grid-cols-3">
             {items.map((item, index) => (
-              <div key={index} className="mb-4 rounded-lg border bg-white shadow-sm md:mb-0">
-                <ItemCard {...item} />
-              </div>
+              <ItemCard {...item} key={item.title + index} />
             ))}
           </ul>
         </div>
