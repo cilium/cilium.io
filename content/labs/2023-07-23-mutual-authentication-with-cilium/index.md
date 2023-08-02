@@ -1,5 +1,5 @@
 ---
-date: '2023-07-23T11:00:00.000Z'
+date: '2023-07-23T10:00:00.000Z'
 externalUrl: 'https://isovalent.com/labs/mutual-authentication-with-cilium/'
 ogImage: cover.jpg
 categories:

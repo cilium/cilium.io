@@ -1,5 +1,5 @@
 ---
-date: '2023-07-23T11:00:00.000Z'
+date: '2023-07-23T12:00:00.000Z'
 externalUrl: 'https://isovalent.com/labs/cilium-loadbalancer-ipam-and-l2-service-announcement/'
 ogImage: cover.jpg
 categories:
