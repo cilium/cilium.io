@@ -5,7 +5,7 @@ ogImage: cover.jpg
 categories:
   - Getting Started
 place: Online
-title: 'Solo.io Academy: Introduction to Cilium'
+title: 'Introduction to Cilium'
 ogSummary: 'Cilium is an open source software for providing, securing and observing network connectivity between container workloads - cloud native, and fueled by the revolutionary Kernel technology eBPF.'
 draft: false
 ---
