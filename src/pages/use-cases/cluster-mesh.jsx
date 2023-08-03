@@ -1,10 +1,10 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import Form3Logo from 'icons/logo-form3.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
@@ -15,7 +15,7 @@ import ClusterMeshImage3 from 'images/pages/usecase/clustermesh-3.webp';
 import ClusterMeshImage4 from 'images/pages/usecase/clustermesh-4.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Cluster Mesh',
   category: 'Networking',
   tagline: 'Unleashing the power of multi-cluster networking with Cilium Cluster Mesh',
@@ -31,6 +31,7 @@ const sectionContent1 = {
   description:
     'Cilium Cluster Mesh allows you to connect the networks of multiple clusters in such as way that pods in each cluster can discover and access services in all other clusters of the mesh, provided all the clusters run Cilium as their CNI. This allows effectively joining multiple clusters into a large unified network, regardless of the Kubernetes distribution or location each of them is running.',
   videoSrc: 'https://www.youtube.com/embed/1fsXtqg4Pkw',
+  whiteBackground: true,
 };
 
 const sectionContent2 = {
@@ -39,7 +40,6 @@ const sectionContent2 = {
     'Cluster Mesh enhances your services high availability and fault tolerance. It supports the operation of Kubernetes clusters in multiple regions or availability zones. If resources become temporarily unavailable, are misconfigured in one cluster, or offline for upgrades, it enables failover to other clusters, ensuring your services remain accessible at all times.',
   imageSrc: ClusterMeshImage1,
   imageAlt: 'multi-cluster illustration',
-  whiteBackground: true,
 };
 
 const sectionContent3 = {
@@ -56,6 +56,7 @@ const sectionContent4 = {
   description:
     'Cluster Mesh is able to handle Pod IP routing across multiple Kubernetes clusters at native performance. By using either tunneling or direct-routing, it circumvents the need for any gateways or proxies. This allows your pods to communicate across clusters seamlessly, enhancing the overall efficiency of your microservice architecture.  ',
   videoSrc: 'https://www.youtube.com/embed/VBOONHW65NU',
+  whiteBackground: true,
 };
 
 const sectionContent5 = {
@@ -64,7 +65,6 @@ const sectionContent5 = {
     'Cluster Mesh enables sharing of services such as secrets management, logging, monitoring, or DNS between all clusters. This reduces operational overhead, simplifies management, and maintains isolation between tenant clusters.',
   imageSrc: ClusterMeshImage3,
   imageAlt: 'shared services in multi-cluster illustration',
-  whiteBackground: true,
   imageRight: false,
 };
 
@@ -78,7 +78,7 @@ const sectionContent6 = {
 
 const testimonials = [
   {
-    logo: <Form3Logo />,
+    logo: Form3Logo,
     title: 'Multi-cluster networking with Cilium at Form3',
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
@@ -89,7 +89,7 @@ const testimonials = [
   },
   {
     title: 'Building ClickHouse Cloud From Scratch in a Year',
-    logo: <ClickHouseLogo />,
+    logo: ClickHouseLogo,
     CTAtext: 'Read The Blog Post',
     url: 'https://www.cncf.io/case-studies/clickhouse/',
     description:
@@ -98,7 +98,7 @@ const testimonials = [
     person: 'Timur Solodovnikov, SRE, ClickHouse',
   },
   {
-    logo: <WildLifeLogo />,
+    logo: WildLifeLogo,
     title: 'How Wildlife Studios built a Global Multi Cluster Gaming Infrastructure with Cilium',
     url: 'https://cilium.io/blog/2020/09/03/wildlife-studios-multi-cluster-gaming-platform/',
     description:
@@ -111,23 +111,29 @@ const testimonials = [
 
 const ClusterMeshPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <ImageFeatureSection {...sectionContent3} />
-      <VideoFeatureSection {...sectionContent4} />
-      <ImageFeatureSection {...sectionContent5} />
-      <ImageFeatureSection {...sectionContent6} />
-      <UseCaseCard
-        heading="Who’s using Cilium for Multi Cluster networking?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} className="pt-0 md:pt-0 lg:pt-0" />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
+    <FeatureSection {...sectionContent4} />
+    <FeatureSection {...sectionContent5} />
+    <FeatureSection {...sectionContent6} />
+    <UseCaseCard
+      heading="Who’s using Cilium for Multi Cluster networking?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default ClusterMeshPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

@@ -1,17 +1,17 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import CapitalOneLogo from 'icons/logo-capitalone.inline.svg';
 import KubernetesBee from 'images/pages/usecase/k8s-bee.png';
 import ServiceMapImage1 from 'images/pages/usecase/servicemap-1.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Service Map',
   category: 'Observability',
   tagline: 'Detailed visibility into the communication and behavior of your workloads',
@@ -41,7 +41,7 @@ const sectionContent2 = {
 
 const testimonials = [
   {
-    logo: <CapitalOneLogo />,
+    logo: CapitalOneLogo,
     title: 'Building a Secure and Maintainable PaaS',
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w',
@@ -52,7 +52,7 @@ const testimonials = [
   },
   {
     title: 'Saving Cost and Accelerating Insights with Hubble',
-    logo: <AscendLogo />,
+    logo: AscendLogo,
     CTAtext: 'Read The Blog Post',
     url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
     description:
@@ -64,16 +64,22 @@ const testimonials = [
 
 const ServiceMapPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <UseCaseCard heading="Who’s using Cilium’s Hubble?" testimonials={testimonials} />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} />
+    <UseCaseCard heading="Who’s using Cilium’s Hubble?" testimonials={testimonials} />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default ServiceMapPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

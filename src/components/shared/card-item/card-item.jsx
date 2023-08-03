@@ -23,7 +23,7 @@ const buttonIconClassNames = {
 const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
   const isSmallSize = size === 'sm';
   return (
-    <li className="flex flex-col rounded-xl shadow-card">
+    <li className="flex h-full w-full max-w-[650px] flex-col place-self-center rounded-xl shadow-card">
       {imageData ? (
         <div className="relative self-center">
           <img
@@ -69,7 +69,7 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
         />
         <div
           className={classNames(
-            'mt-auto flex flex-col items-center justify-center space-y-3 xs:flex-row xs:space-y-0 xs:space-x-3 xl:space-x-5',
+            'mt-auto flex flex-col items-center justify-center space-y-3 pt-5 xs:flex-row xs:space-y-0 xs:space-x-3 md:pt-0 xl:space-x-5',
             isSmallSize
               ? 'lg:flex-col lg:space-x-0 lg:space-y-4 xl:flex-row xl:space-y-0'
               : 'md:flex-col md:space-x-0 md:space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4'
@@ -82,7 +82,7 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
                   url={url}
                   rootElement={isSSR && document.querySelector('#___gatsby')}
                   className={classNames(
-                    'inline-flex cursor-pointer justify-center whitespace-nowrap rounded text-base font-bold !leading-none transition-colors duration-200 disabled:cursor-auto',
+                    'inline-flex w-full cursor-pointer justify-center whitespace-nowrap rounded text-base font-bold !leading-none transition-colors duration-200 disabled:cursor-auto sm:w-fit md:w-full lg:w-full xl:w-fit',
                     isSmallSize
                       ? 'py-2.5 px-3.5 text-base'
                       : 'py-2.5 px-3.5 md:py-3 md:px-5 lg:py-4 lg:px-6 lg:text-lg',
@@ -94,7 +94,7 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
                 />
               ) : (
                 <Button
-                  className="border-2"
+                  className="w-full border-2 sm:w-fit md:w-full lg:w-full xl:w-fit"
                   to={url}
                   target={target || null}
                   rel={target ? 'noopener noreferrer' : null}

@@ -1,16 +1,16 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
 import RuntimeEnforcementImage1 from 'images/pages/usecase/runtime-1.png';
 import TetragonBee from 'images/pages/usecase/tetragon-bee.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Runtime Enforcement',
   category: 'Security',
   tagline: 'Prevent threats and enforce policies in real-time',
@@ -35,13 +35,12 @@ const sectionContent2 = {
     'Tetragon is Kubernetes-aware, meaning it recognizes Kubernetes identities like namespaces and pods. This enables security event detection that can be tailored to individual workloads. Using eBPF, Tetragon can access the Linux kernel state and combine it with Kubernetes awareness and user policy to generate rules that are enforced by the kernel in real-time. This allows for capabilities like process namespace and capabilities annotation and enforcement, process file descriptor to filename association, and socket to process control.',
   imageSrc: RuntimeEnforcementImage1,
   imageAlt: 'identities with cilium',
-  whiteBackground: true,
   imageRight: false,
 };
 
 const testimonials = [
   {
-    logo: <FRSCALogo />,
+    logo: FRSCALogo,
     CTAtext: 'Check Out The Project',
     title: 'Integrating Tetragon  for Secured Build Pipelines',
     url: 'https://buildsec.github.io/frsca/',
@@ -52,19 +51,25 @@ const testimonials = [
 
 const RuntimeEnforcementPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <UseCaseCard
-        heading="Who’s using  Cilium’s Tetragon for Security Observability and Runtime Enforcement?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} className="pt-0 md:pt-0 lg:pt-0" />
+    <UseCaseCard
+      heading="Who’s using  Cilium’s Tetragon for Security Observability and Runtime Enforcement?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default RuntimeEnforcementPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

@@ -1,13 +1,13 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import SEO from 'components/shared/seo';
 import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.webp';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Cilium Service Mesh',
   category: 'Networking',
   tagline: 'Revolutionizing networking and simplify operations',
@@ -31,7 +31,6 @@ const sectionContent2 = {
     'At the heart of Cilium is eBPF, a revolutionary technology built into the Linux kernel. With eBPF, Cilium delivers lightning-fast, efficient, and scalable networking. This bypasses the performance drawbacks of traditional proxies, enabling direct and efficient communication between your services.',
   imageSrc: ServiceMeshImage1,
   imageAlt: 'eBPF powered service mesh illustration',
-  whiteBackground: true,
   imageRight: false,
 };
 
@@ -40,6 +39,7 @@ const sectionContent3 = {
   description:
     'Cilium Service Mesh gives users the choice of control plane options for the ideal balance of complexity and richness, from simpler options such as Ingress and Gateway API to richer options with Istio, to the full power of Envoy via the Envoy CRD.',
   videoSrc: 'https://www.youtube.com/embed/mpwTkm53YTY',
+  whiteBackground: true,
 };
 
 const sectionContent4 = {
@@ -48,21 +48,28 @@ const sectionContent4 = {
     'With Cilium Service Mesh, users now have the choice to run a service mesh with sidecars or without them, based on their specific requirements and constraints. This flexibility reduces the complexity and overhead impact of sidecars.',
   videoSrc: 'https://www.youtube.com/embed/WhVyZZ_QkVA',
   whiteBackground: true,
+  imageRight: false,
 };
 
 const ServiceMeshPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <VideoFeatureSection {...sectionContent3} />
-      <VideoFeatureSection {...sectionContent4} />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} className="pb-16 md:pb-16 lg:pb-16" />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} className="pb-16 md:pb-16 lg:pb-16" />
+    <FeatureSection {...sectionContent4} />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default ServiceMeshPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

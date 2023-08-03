@@ -1,15 +1,16 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import CosmonicLogo from 'icons/logo-cosmonic.inline.svg';
 import JeediBee from 'images/pages/usecase/jedi-bee.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Transparent Encryption',
   category: 'Security',
   tagline: 'Encryption without operational headache ',
@@ -25,12 +26,11 @@ const sectionContent1 = {
   description:
     'Cilium provides a straightforward solution for enabling the encryption of all node-to-node traffic with just one switch, no application changes or additional proxies. Cilium features automatic key rotation with overlapping keys, efficient datapath encryption through in-kernel IPsec or WireGuard, and can encrypt all traffic, including non-standard traffic like UDP. Simply configuring all nodes across all clusters with a common key and all communication between nodes is automatically encrypted.  ',
   videoSrc: 'https://www.youtube.com/embed/RAmJXsMeACU',
-  whiteBackground: true,
 };
 
 const testimonials = [
   {
-    logo: <AscendLogo />,
+    logo: AscendLogo,
     title: 'Achieving HIPPA compliance with Cilium’s transparent encryption',
     CTAtext: 'Read The Case Study',
     url: 'https://www.cncf.io/case-studies/ascend/',
@@ -38,7 +38,7 @@ const testimonials = [
       'Ascend switched to using Cilium as their solution for data encryption and has since experienced significant improvements. With Cilium, Ascend was able to simplify the encryption process, eliminating the need for and mitiagting issues with certificate-init-containers and application based encryption. This transition has allowed Ascend to achieve seamless data encryption and maintain HIPAA compliance with ease.',
   },
   {
-    logo: <CosmonicLogo />,
+    logo: CosmonicLogo,
     title: 'Seamless Network Security and Privacy with Cilium',
     CTAtext: 'Read The Blog Post',
     url: 'https://cilium.io/blog/2023/01/18/cosmonic-user-story/',
@@ -49,18 +49,24 @@ const testimonials = [
 
 const TransparentEncryptionPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <UseCaseCard
-        heading="Who’s using Cilium’s Transparent Encryption?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} />
+    <UseCaseCard
+      heading="Who’s using Cilium’s Transparent Encryption?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default TransparentEncryptionPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

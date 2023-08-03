@@ -56,16 +56,16 @@ const RelatedProjects = () => {
   `);
   const images = { image1, image2, image3 };
   return (
-    <section className="mt-10 md:mt-20 lg:mt-32">
+    <section className="mt-20 md:mt-20 lg:mt-32">
       <Container>
         <Heading className="text-center" tag="h2">
           {title}
         </Heading>
-        <div className="mt-6 grid grid-cols-1 gap-6 gap-y-8 md:mt-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:mt-14 lg:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-6 gap-y-10 md:mt-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:mt-14 lg:grid-cols-3">
           {items.map(({ imageName, title, text, linkUrl, linkText, linkTarget }, index) => {
             const image = images[imageName];
             return (
-              <div key={index}>
+              <div className="h-full w-full max-w-[650px] place-self-center" key={index}>
                 <GatsbyImage
                   className="h-auto w-full"
                   objectFit="contain"

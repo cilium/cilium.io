@@ -1,10 +1,10 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import NetworkPolicyImage1 from 'images/pages/usecase/network-1.png';
@@ -14,7 +14,7 @@ import NetworkPolicyImage4 from 'images/pages/usecase/network-4.png';
 import SecurityBee from 'images/pages/usecase/security-bee.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Advanced Network Policy',
   category: 'Security',
   tagline: 'Maintain identity based policies effectively at scale',
@@ -29,6 +29,7 @@ const sectionContent1 = {
   description:
     'Cilium implements Kubernetes Network Policies for L3/L4 level and extends with L7 policies for fine grained API-level security for common protocols such as HTTP, Kafka, gRPC, etc. For example, the endpoint with label role=frontend can only perform the REST API call GET /userdata/[0-9]+, all other API interactions with role=backend are restricted. ',
   videoSrc: 'https://www.youtube.com/embed/yikVhGM2ye8',
+  whiteBackground: true,
 };
 
 const sectionContent2 = {
@@ -37,7 +38,6 @@ const sectionContent2 = {
     'Cilium decouples security from network addressing using workload identity derived from labels and metadata, allowing for more flexible and efficient scaling without constant security rule updates. ',
   imageSrc: NetworkPolicyImage1,
   imageAlt: 'identities with cilium',
-  whiteBackground: true,
   imageRight: false,
 };
 
@@ -55,7 +55,6 @@ const sectionContent4 = {
     "Cluster Mesh, Cilium's multi-cluster implementation features Network policy enforcement spanning multiple clusters. The same policy enforcement you are familiar with from a single cluster simply expands and works across multiple clusters. ",
   imageSrc: NetworkPolicyImage3,
   imageAlt: 'cilium multi cluster illustration',
-  whiteBackground: true,
   imageRight: false,
 };
 
@@ -69,7 +68,7 @@ const sectionContent5 = {
 
 const testimonials = [
   {
-    logo: <UtmostLogo />,
+    logo: UtmostLogo,
     title: 'Observability for a highly available multi cluster environment with Hubble',
     CTAtext: 'Read The Case Study',
     url: 'https://www.cncf.io/case-studies/utmost/',
@@ -77,7 +76,7 @@ const testimonials = [
       ' Utmost achieved Zero Trust Networking by replacing their existing CNI with Cilium to address networking, security, and visibility for container workloads. Utmost processes 1207 flows per second, each validated against a multitude of network policies to approve or deny access.',
   },
   {
-    logo: <ClickHouseLogo />,
+    logo: ClickHouseLogo,
     title: 'How ClickHouse is Using Cilium to Implement Efficient Network Policies',
     CTAtext: 'Read The Case Study',
     url: 'https://www.cncf.io/case-studies/clickhouse/',
@@ -88,22 +87,28 @@ const testimonials = [
 
 const NetworkPolicyPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <ImageFeatureSection {...sectionContent2} />
-      <ImageFeatureSection {...sectionContent3} />
-      <ImageFeatureSection {...sectionContent4} />
-      <ImageFeatureSection {...sectionContent5} />
-      <UseCaseCard
-        heading="Who’s using  Cilium’s Advanced Network Policy?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} className="pt-0 md:pt-0 lg:pt-0" />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} className="pt-10 md:pt-10 lg:pt-10" />
+    <FeatureSection {...sectionContent4} className="pt-10 md:pt-10 lg:pt-10" />
+    <FeatureSection {...sectionContent5} className="pt-10 md:pt-10 lg:pt-10" />
+    <UseCaseCard
+      heading="Who’s using  Cilium’s Advanced Network Policy?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default NetworkPolicyPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

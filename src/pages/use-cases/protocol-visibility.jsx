@@ -1,17 +1,17 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import ImageFeatureSection from 'components/pages/use-cases/image-feature-section';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import PalantirLogo from 'icons/logo-palantir.inline.svg';
 import NewBee from 'images/pages/usecase/new-bee.png';
 import ProtocolImage1 from 'images/pages/usecase/protocol-1.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Advanced Network Protocol Visibility',
   category: 'Observability',
   tagline: 'Insights into workload communication at the protocol level',
@@ -29,7 +29,6 @@ const sectionContent1 = {
   imageSrc: ProtocolImage1,
   imageAlt: 'hubble insights illustration',
   imageRight: false,
-  whiteBackground: true,
 };
 
 const sectionContent2 = {
@@ -41,7 +40,7 @@ const sectionContent2 = {
 
 const testimonials = [
   {
-    logo: <PalantirLogo />,
+    logo: PalantirLogo,
     title: 'Enhanced observability with Hubble',
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/watch?v=3K5WJ_h5PhI&t=40s',
@@ -50,7 +49,7 @@ const testimonials = [
   },
   {
     title: 'A more consumable network infrastructure with Cilium at Ikea',
-    logo: <CiliumLogo />,
+    logo: CiliumLogo,
     CTAtext: 'Watch The Talk',
     url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
     description:
@@ -62,19 +61,25 @@ const testimonials = [
 
 const ProtocolVisibilityPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <ImageFeatureSection {...sectionContent1} />
-      <VideoFeatureSection {...sectionContent2} />
-      <UseCaseCard
-        heading="Who’s using Cilium’s for Advanced Network Protocol Visibility?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} className="pt-0 md:pt-0 lg:pt-0" />
+    <UseCaseCard
+      heading="Who’s using Cilium’s for Advanced Network Protocol Visibility?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default ProtocolVisibilityPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

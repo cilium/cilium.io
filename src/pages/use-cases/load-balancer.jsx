@@ -1,15 +1,16 @@
 import React from 'react';
 
-import JoinUsCard from 'components/pages/use-cases/cards';
-import UseCaseCard from 'components/pages/use-cases/cards/use-case-card';
-import IntroSection from 'components/pages/use-cases/intro-section';
-import VideoFeatureSection from 'components/pages/use-cases/video-feature-section';
+import FeatureSection from 'components/pages/use-cases/feature-section';
+import Hero from 'components/pages/use-cases/hero';
+import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import SEO from 'components/shared/seo';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import YahooLogo from 'icons/logo-yahoo.inline.svg';
 import DetectiveBeeImage from 'images/pages/usecase/detective-bee.png';
 import MainLayout from 'layouts/main/main';
 
-const introContent = {
+const heroContent = {
   title: 'Layer 4 Load Balancer',
   category: 'Networking',
   tagline: 'High performance load balancing with low overhead',
@@ -25,7 +26,6 @@ const sectionContent1 = {
   description:
     "Cilium can attract traffic with BGP and accelerate it leveraging XDP and eBPF. Together these technologies provide a very robust and secure implementation of Load Balancing. Cilium and eBPF operate at the kernel layer. With this level of context intelligent decisions can be made about how to connect different workloads whether on the same node or between clusters. With eBPF and XDP Cilium enables significant improvements in latency and performance. Cilium's standalone load balancer offers a high-performance LB, providing huge throughput gains at a reduced CPU overhead.",
   videoSrc: 'https://www.youtube.com/embed/OIyPm6K4ooY',
-  whiteBackground: true,
 };
 
 const sectionContent2 = {
@@ -33,11 +33,12 @@ const sectionContent2 = {
   description:
     "Cilium's high performance, robust load balancing implementation is tuned for the scale and churn of cloud native environments. You can replace expensive legacy boxes in your network with Cilium as a standalone load balancer. This unlocks the potential of DSR and Maglev for handling north/south traffic in on-premises environments without requiring Kubernetes to manage the network border.",
   videoSrc: 'https://www.youtube.com/embed/xwjZF3alO7g',
+  whiteBackground: true,
 };
 
 const testimonials = [
   {
-    logo: <SeznamLogo />,
+    logo: SeznamLogo,
     title:
       'Efficiently handling production traffic with Cilium Standalone Layer 4 Load Balancer XDP',
     CTAtext: 'Read The Blog Post',
@@ -47,7 +48,7 @@ const testimonials = [
   },
   {
     title: 'Software L4 Load Balancing for Kubernetes Services at Yahoo',
-    logo: <YahooLogo />,
+    logo: YahooLogo,
     CTAtext: 'Watch the Talk',
     url: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
     description:
@@ -57,19 +58,25 @@ const testimonials = [
 
 const KubeProxyReplacementPage = () => (
   <MainLayout>
-    <section className="bg-[#F6F7F8]">
-      <IntroSection {...introContent} />
-      <VideoFeatureSection {...sectionContent1} />
-      <VideoFeatureSection {...sectionContent2} />
-      <UseCaseCard
-        heading="Who’s using Cilium for Layer 4 Load Balancing?"
-        testimonials={testimonials}
-      />
-      <JoinUsCard />
-    </section>
+    <Hero {...heroContent} />
+    <FeatureSection {...sectionContent1} />
+    <FeatureSection {...sectionContent2} className="pb-10 md:pb-10 lg:pb-10" />
+    <UseCaseCard
+      heading="Who’s using Cilium for Layer 4 Load Balancing?"
+      testimonials={testimonials}
+    />
+    <JoinUsCard />
   </MainLayout>
 );
 
 export default KubeProxyReplacementPage;
 
-export const Head = () => <title>{introContent.title}</title>;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.title,
+    description: heroContent.tagline,
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};
