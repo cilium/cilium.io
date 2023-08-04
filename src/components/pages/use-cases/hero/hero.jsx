@@ -4,7 +4,23 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import Label from 'components/shared/type-label';
+
+const Label = ({ category }) => (
+  <span
+    className={classNames(
+      'w-fit rounded py-2 px-2.5 text-sm font-semibold uppercase leading-none tracking-wider',
+      {
+        'bg-additional-green/10 text-additional-green': category === 'Networking',
+      },
+      { 'bg-additional-red/10 text-additional-red': category === 'Security' },
+      {
+        'bg-additional-blue/10 text-additional-blue': category === 'Observability',
+      }
+    )}
+  >
+    {category}
+  </span>
+);
 
 const Hero = ({
   category,
@@ -23,11 +39,11 @@ const Hero = ({
           imageSrc || videoSrc ? 'col-span-full lg:col-span-6' : 'col-span-full lg:col-span-8'
         )}
       >
-        <Label type={category}>{category}</Label>
+        <Label category={category} />
         <Heading
-          className="mt-5 mb-3 leading-tight lg:leading-tight xl:leading-tight"
+          className="mt-5 mb-3 leading-tight lg:leading-tight xl:!text-44 xl:leading-tight"
           tag="h1"
-          size="lg"
+          size="md"
         >
           {title}
         </Heading>
