@@ -41,22 +41,26 @@ const Hero = ({
       >
         <Label category={category} />
         <Heading
-          className="mt-5 mb-3 leading-tight lg:leading-tight xl:!text-44 xl:leading-tight"
+          className="mt-2.5 mb-3 leading-tight lg:leading-tight xl:!text-44 xl:leading-tight"
           tag="h1"
           size="md"
         >
           {title}
         </Heading>
-        <small className="text-base font-medium text-gray-1">{tagline}</small>
-        <Heading className="my-5" tag="h2" size="xs">
+        <small className="text-xl leading-normal ">{tagline}</small>
+        <Heading
+          className="mt-5 mb-2 border-t border-gray-3 pt-5 font-semibold"
+          tag="h2"
+          size="3xs"
+        >
           {subHeading}
         </Heading>
-        <p className="text-lg leading-normal">{description}</p>
+        <p className="text-base leading-normal">{description}</p>
       </div>
       {(imageSrc || videoSrc) && (
         <div
           className={classNames(
-            'col-span-full col-start-1 pt-6 md:col-span-8 md:col-start-3 lg:col-span-6 lg:pt-14',
+            'col-span-full col-start-1 pt-6 pl-0 md:col-span-8 md:col-start-3 lg:col-span-6 lg:pt-8 lg:pl-8',
             imageSrc && 'place-self-center '
           )}
         >
