@@ -42,7 +42,7 @@ const JoinUsCard = ({ className }) => (
       className={classNames('flex flex-col items-center pb-10 md:pb-20 lg:pb-28', className)}
     >
       <Heading
-        className="mb-8 max-w-full text-center leading-tight lg:mb-14 lg:max-w-[70%] lg:leading-tight xl:leading-tight"
+        className="mb-12 max-w-full text-center leading-tight lg:mb-14 lg:max-w-[70%] lg:leading-tight xl:leading-tight"
         tag="h2"
         size="md"
       >

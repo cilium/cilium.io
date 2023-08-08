@@ -21,7 +21,7 @@ const Card = ({ icon, title, description, buttonText, buttonLink, buttonTarget, 
   return (
     <article
       className={classNames(
-        'flex flex-col rounded-[10px] bg-white px-6 py-8 shadow-primary',
+        'flex flex-col rounded-xl bg-white px-6 py-8 shadow-primary',
         className
       )}
     >
