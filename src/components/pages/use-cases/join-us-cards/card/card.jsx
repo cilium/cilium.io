@@ -5,34 +5,47 @@ import React from 'react';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 
-const Card = ({ title, description, buttonText, buttonLink, buttonTarget, className }) => (
-  <section
-    className={classNames(
-      'flex flex-col rounded-[10px] bg-white px-6 py-8 shadow-primary',
-      className
-    )}
-  >
-    <Heading className="text-center leading-tight" tag="h4" size="xs">
-      {title}
-    </Heading>
-    <p className="mt-4 mb-6 w-full" dangerouslySetInnerHTML={{ __html: description }} />
-    <Link
-      to={buttonLink}
-      target={buttonTarget}
-      rel="noopener noreferrer"
-      className="mx-auto mt-auto"
+import DocumentationIcon from './images/documentation.inline.svg';
+import HelpIcon from './images/help.inline.svg';
+import SlackIcon from './images/slack-with-back.inline.svg';
+
+const iconList = {
+  documentation: DocumentationIcon,
+  help: HelpIcon,
+  slack: SlackIcon,
+};
+
+const Card = ({ icon, title, description, buttonText, buttonLink, buttonTarget, className }) => {
+  const Icon = iconList[icon];
+
+  return (
+    <article
+      className={classNames(
+        'flex flex-col rounded-[10px] bg-white px-6 py-8 shadow-primary',
+        className
+      )}
     >
-      <button
-        type="button"
-        className="rounded-lg bg-primary-1 py-2 px-6 text-center font-bold text-white"
+      <Icon className="h-10 w-10  lg:h-16 lg:w-16" />
+      <Heading className="mt-5 leading-tight" tag="h4" size="xs">
+        {title}
+      </Heading>
+      <p className="mt-2.5 w-full pb-6" dangerouslySetInnerHTML={{ __html: description }} />
+      <Link
+        to={buttonLink}
+        target={buttonTarget}
+        type="text"
+        theme="primary"
+        rel="noopener noreferrer"
+        className="mt-auto border-t border-gray-3 pt-6"
       >
         {buttonText}
-      </button>
-    </Link>
-  </section>
-);
+      </Link>
+    </article>
+  );
+};
 
 Card.propTypes = {
+  icon: PropTypes.oneOf(['slack', 'documentation', 'help']).isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   buttonText: PropTypes.string.isRequired,

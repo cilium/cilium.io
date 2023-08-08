@@ -9,6 +9,7 @@ import Card from './card';
 
 const items = [
   {
+    icon: 'slack',
     title: 'Join the Cilium Slack',
     description:
       'Cilium is an open source project that anyone in the community can use, improve, and enjoy. We&apos;d love you to join us on Slack! Find out what&apos;s happening and get involved.',
@@ -17,6 +18,7 @@ const items = [
     buttonTarget: '_blank',
   },
   {
+    icon: 'documentation',
     title: 'Read the Documentation',
     description:
       'Cilium has extensive documentation that covers its features and use cases. The docs also features tutorials for common user stories.',
@@ -25,6 +27,7 @@ const items = [
     buttonTarget: '_blank',
   },
   {
+    icon: 'help',
     title: 'Get Help',
     description:
       'Get help with Cilium through Slack, Github, training, support, and FAQs. The community can also help you tell or promote your story around Cilium.',
@@ -39,7 +42,7 @@ const JoinUsCard = ({ className }) => (
       className={classNames('flex flex-col items-center pb-10 md:pb-20 lg:pb-28', className)}
     >
       <Heading
-        className="mb-8 max-w-full text-center leading-tight lg:mb-12 lg:max-w-[70%] lg:leading-tight xl:leading-tight"
+        className="mb-8 max-w-full text-center leading-tight lg:mb-14 lg:max-w-[70%] lg:leading-tight xl:leading-tight"
         tag="h2"
         size="md"
       >
