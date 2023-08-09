@@ -31,7 +31,7 @@ const sectionContent1 = {
     'Cilium’s control and data plane has been built from the ground up for large-scale and highly dynamic cloud native environments where 100s and even 1000s of containers are created and destroyed within seconds. Cilium’s control plane is highly optimized, running in Kubernetes clusters with 1,000s of nodes and 100K pods. Cilium’s data plane uses eBPF for efficient load-balancing and incremental updates, avoiding the pitfalls of large iptables rulesets. ',
   imageSrc: CNIImage1,
   imageAlt: 'cilium cni illustration',
-  whiteBackground: true,
+  imageRight: false,
 };
 
 const sectionContent2 = {
@@ -49,7 +49,6 @@ const sectionContent3 = {
   imageSrc: CNIImage3,
   imageAlt: ' illustration',
   imageRight: false,
-  whiteBackground: true,
 };
 
 const sectionContent4 = {
@@ -98,7 +97,7 @@ const testimonials = [
 const CniPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
-    <FeatureSection {...sectionContent1} className="pt-0 md:pt-0 lg:pt-0" />
+    <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
     <FeatureSection {...sectionContent4} />

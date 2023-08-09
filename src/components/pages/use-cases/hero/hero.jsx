@@ -32,7 +32,7 @@ const Hero = ({
   imageAlt,
   videoSrc,
 }) => (
-  <section className="bg-gray-4">
+  <section className="mb-10 bg-gray-4 md:mb-20 lg:mb-28">
     <Container className="grid grid-cols-12 gap-y-6 gap-x-6 pt-5 pb-10 md:pt-16 md:pb-20 lg:pb-[138px] xl:gap-x-8">
       <div
         className={classNames(

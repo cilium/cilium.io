@@ -33,7 +33,7 @@ const sectionContent2 = {
   description:
     "Cilium's high performance, robust load balancing implementation is tuned for the scale and churn of cloud native environments. You can replace expensive legacy boxes in your network with Cilium as a standalone load balancer. This unlocks the potential of DSR and Maglev for handling north/south traffic in on-premises environments without requiring Kubernetes to manage the network border.",
   videoSrc: 'https://www.youtube.com/embed/xwjZF3alO7g',
-  whiteBackground: true,
+  imageRight: false,
 };
 
 const testimonials = [
@@ -60,7 +60,7 @@ const KubeProxyReplacementPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
-    <FeatureSection {...sectionContent2} className="pb-10 md:pb-10 lg:pb-10" />
+    <FeatureSection {...sectionContent2} />
     <UseCaseCard
       heading="Who’s using Cilium for Layer 4 Load Balancing?"
       testimonials={testimonials}

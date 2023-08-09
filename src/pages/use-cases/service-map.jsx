@@ -36,7 +36,6 @@ const sectionContent2 = {
     'Simply looking at `kubectl get pods` does not indicate dependencies between each service or external APIs or databases. Hubble offers effortless automatic discovery of service dependencies within Kubernetes Clusters at L3/L4 and L7 levels. This allows for user-friendly visualization and filtering of dataflows as a Service Map, enabling easy management of service dependencies.  ',
   imageSrc: ServiceMapImage1,
   imageAlt: 'multi-cluster illustration',
-  whiteBackground: true,
 };
 
 const testimonials = [
