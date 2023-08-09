@@ -56,7 +56,7 @@ const ServiceMeshPage = () => (
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
     <FeatureSection {...sectionContent4} />
-    <JoinUsCard />
+    <JoinUsCard className="pt-10 md:pt-20 lg:pt-28" />
   </MainLayout>
 );
 
