@@ -9,7 +9,7 @@ import quotes from './images/quotes.svg';
 
 const UseCaseCard = ({ heading, testimonials }) => (
   <section className="bg-gray-4">
-    <Container className="flex flex-col items-center py-10 md:py-20 lg:py-28">
+    <Container className="flex flex-col items-center pb-12 pt-10 md:py-20 lg:py-28">
       <Heading
         className="mb-12 max-w-full text-center leading-tight lg:mb-14 lg:max-w-[70%] lg:leading-tight xl:leading-tight"
         tag="h2"
