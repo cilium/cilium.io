@@ -2,7 +2,7 @@
 path: '/blog/2023/04/03/cilium-kubecon-eu-2023-talks'
 date: '2023-04-03T17:00:00.000Z'
 title: 'Cilium Talks at KubeCon EU 2023'
-isPopular: true
+isPopular: false
 isFeatured: false
 ogImage: talkseu.png
 ogSummary: 'Find all the Cilium talk at KubeCon EU 2023'
