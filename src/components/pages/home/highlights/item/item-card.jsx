@@ -18,7 +18,7 @@ const ItemCard = ({ icon: Icon, title, path }) => (
       tag="h3"
     >
       {title}
-      <ArrowIcon className=" ml-2 hidden shrink-0 xs:inline-block" />
+      <ArrowIcon className="ml-2 hidden shrink-0 xs:inline-block" />
     </Heading>
   </Link>
 );
