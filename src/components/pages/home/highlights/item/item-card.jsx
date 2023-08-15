@@ -3,6 +3,7 @@ import React from 'react';
 
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link/link';
+import ArrowIcon from 'icons/arrow.inline.svg';
 import { USE_CASE_BASE_PATH } from 'utils/routes';
 
 const ItemCard = ({ icon: Icon, title, path }) => (
@@ -12,11 +13,12 @@ const ItemCard = ({ icon: Icon, title, path }) => (
   >
     <Icon className="h-16 w-16" />
     <Heading
-      className="max-w-full !text-lg font-medium leading-normal transition-colors duration-200 group-hover:text-primary-1"
+      className="inline-block w-fit gap-x-2 !text-lg font-medium leading-normal transition-colors duration-200 group-hover:text-primary-1"
       size="3xs"
       tag="h3"
     >
       {title}
+      <ArrowIcon className=" ml-2 hidden shrink-0 xs:inline-block" />
     </Heading>
   </Link>
 );
