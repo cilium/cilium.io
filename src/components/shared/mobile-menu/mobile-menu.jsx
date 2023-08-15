@@ -38,7 +38,7 @@ const overlayVariants = {
   },
 };
 
-const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage }) => {
+const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage, handleCloseClick }) => {
   const controls = useAnimation();
 
   useEffect(() => {
@@ -81,7 +81,7 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage }) => {
       >
         <ul className="flex h-full flex-grow flex-col divide-y divide-gray-3 overflow-x-hidden overflow-y-scroll px-4 md:px-6 lg:px-10">
           {navigation.map((item, index) => (
-            <MenuItem {...item} key={index} />
+            <MenuItem {...item} key={index} handleCloseClick={handleCloseClick} />
           ))}
         </ul>
         <div
@@ -127,6 +127,7 @@ MobileMenu.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   handleOverlay: PropTypes.func.isRequired,
   isBlogPage: PropTypes.bool,
+  handleCloseClick: PropTypes.func.isRequired,
 };
 
 MobileMenu.defaultProps = {

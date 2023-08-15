@@ -28,7 +28,7 @@ const themeClassNames = {
 const Header = ({
   showSearchBox,
   isMobileMenuOpen,
-  onBurgerClick,
+  handleCloseClick,
   navigation,
   theme,
   handleOverlay,
@@ -46,13 +46,13 @@ const Header = ({
           className="relative flex w-full items-center justify-between space-x-6 sm:h-10"
           aria-label="Global"
         >
-          <div className="flex w-full shrink-0 items-center justify-between lg:w-auto">
+          <div className="flex w-full shrink-0 items-center justify-between [@media(min-width:1100px)]:w-auto">
             <div className="flex items-center">
               <Link to="/">
                 <span className="sr-only">Cilium</span>
                 <Logo />
               </Link>
-              <div className="hidden items-center lg:inline-flex">
+              <div className="hidden items-center [@media(min-width:1100px)]:inline-flex">
                 <GithubStars
                   className={classNames(
                     'ml-4 bg-white lg:ml-8',
@@ -82,14 +82,14 @@ const Header = ({
                 </Button>
               </div>
             </div>
-            <div className="flex items-center lg:hidden">
+            <div className="flex items-center [@media(min-width:1100px)]:hidden">
               {showSearchBox && !isMobileMenuOpen && (
                 <SearchBox className="mr-4 hidden sm:flex" indices={searchIndices} />
               )}
-              <Burger isToggled={isMobileMenuOpen} onClick={onBurgerClick} />
+              <Burger isToggled={isMobileMenuOpen} onClick={handleCloseClick} />
             </div>
           </div>
-          <div className="hidden w-full space-x-5 lg:flex lg:items-center lg:justify-end lg:space-x-7">
+          <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1100px)]:flex">
             {showSearchBox && <SearchBox indices={searchIndices} />}
             <ul className="flex items-center lg:space-x-6 xl:space-x-8 2xl:space-x-11">
               {navigation.map((item, index) => (
@@ -105,6 +105,7 @@ const Header = ({
       navigation={navigation}
       isOpen={isMobileMenuOpen}
       handleOverlay={handleOverlay}
+      handleCloseClick={handleCloseClick}
     />
     {showSearchBox && <SearchBox className="mx-4 flex sm:hidden" indices={searchIndices} />}
   </div>
@@ -115,7 +116,7 @@ Header.propTypes = {
   showSearchBox: PropTypes.bool,
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
   isMobileMenuOpen: PropTypes.bool.isRequired,
-  onBurgerClick: PropTypes.func.isRequired,
+  handleCloseClick: PropTypes.func.isRequired,
   navigation: PropTypes.arrayOf(
     PropTypes.exact({
       name: PropTypes.string.isRequired,
