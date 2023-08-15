@@ -35,7 +35,6 @@ const sectionContent2 = {
     "The egress gateway allows fine-grained control over which pods' traffic should be routed through the gateway node. This is done by applying egress gateway policies that use label selectors to target specific pods. This selective routing can help in implementing security policies, achieving network isolation, and managing network costs.",
   imageSrc: EgressImage1,
   imageAlt: 'selective traffic for egress gateway illustration',
-  whiteBackground: true,
   imageRight: false,
 };
 

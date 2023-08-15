@@ -36,7 +36,6 @@ const sectionContent2 = {
     'Cilium captures a plethora of metrics, including latency, request rates, and error rates for your applications. These metrics are exported in a standardized Prometheus format, which can be easily integrated with your existing monitoring and visualization tools, enabling you to track your network performance in real-time.',
   imageSrc: MetricsImage1,
   imageAlt: 'cilium metrics and tracing with grafana illustration',
-  whiteBackground: true,
   imageRight: false,
 };
 

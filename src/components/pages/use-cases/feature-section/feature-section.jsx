@@ -12,20 +12,20 @@ const FeatureSection = ({
   imageAlt,
   imageRight,
   videoSrc,
-  whiteBackground,
+  withBackground,
   className,
 }) => (
-  <section className={classNames(whiteBackground && 'bg-gray-4')}>
+  <section className={classNames(withBackground && 'bg-gray-4')}>
     <Container
       className={classNames(
-        'grid grid-cols-12 gap-y-6 gap-x-6 py-10 md:py-20 lg:py-28 lg:pb-[138px] xl:gap-x-8',
+        'grid grid-cols-12 gap-y-6 gap-x-6 pb-10 md:pb-20 lg:pb-28 xl:gap-x-8 xl:pb-32',
         className
       )}
     >
       <div
         className={classNames(
-          'col-span-full lg:col-span-6 ',
-          !imageRight ? 'pl-0 lg:col-start-7 lg:pl-5' : 'pr-0 lg:pr-5'
+          'col-span-full lg:col-span-5',
+          !imageRight ? 'lg:col-start-8' : 'lg:col-start-1'
         )}
       >
         <Heading
@@ -39,13 +39,15 @@ const FeatureSection = ({
       </div>
       <div
         className={classNames(
-          'col-span-full col-start-1 pt-6 md:col-span-8 md:col-start-3 lg:col-span-6 lg:pt-0',
-          !imageRight && 'lg:col-start-1 lg:row-start-1'
+          'col-span-full col-start-1 pt-6 md:col-span-8 md:col-start-3 lg:col-span-7 lg:pt-0',
+          !imageRight
+            ? 'pr-0 lg:col-start-1 lg:row-start-1 lg:pr-10 xl:pr-[72px]'
+            : 'pl-0 lg:pl-10 xl:pl-[72px]'
         )}
       >
         {imageSrc && (
           <img
-            className="max-h-full lg:max-h-[350px]"
+            className="max-h-full w-full lg:max-h-[350px]"
             width={592}
             height={350}
             src={imageSrc}
@@ -74,14 +76,14 @@ FeatureSection.propTypes = {
   imageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
   imageRight: PropTypes.bool,
-  whiteBackground: PropTypes.bool,
+  withBackground: PropTypes.bool,
   videoSrc: PropTypes.string,
   className: PropTypes.string,
 };
 
 FeatureSection.defaultProps = {
   imageRight: true,
-  whiteBackground: false,
+  withBackground: false,
   videoSrc: null,
   imageSrc: null,
   imageAlt: null,

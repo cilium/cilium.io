@@ -11,7 +11,7 @@ const submenuVariants = {
   visible: { opacity: 1, height: 'auto', marginTop: '24px' },
 };
 
-const Submenu = ({ isOpen, childItems }) => (
+const Submenu = ({ isOpen, childItems, handleCloseClick }) => (
   <m.ul
     className="space-y-[18px] overflow-hidden"
     initial="hidden"
@@ -26,6 +26,7 @@ const Submenu = ({ isOpen, childItems }) => (
           to={href}
           target={target || null}
           rel={target ? 'noopener noreferrer' : null}
+          onClick={handleCloseClick}
         >
           {Icon && <Icon className="shrink-0" />}
           <span className="flex-grow">{name}</span>
@@ -37,6 +38,7 @@ const Submenu = ({ isOpen, childItems }) => (
 
 Submenu.propTypes = {
   isOpen: PropTypes.bool.isRequired,
+  handleCloseClick: PropTypes.func.isRequired,
   childItems: PropTypes.arrayOf(
     PropTypes.exact({
       name: PropTypes.string.isRequired,

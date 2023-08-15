@@ -53,7 +53,7 @@ const RuntimeEnforcementPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
-    <FeatureSection {...sectionContent2} className="pt-0 md:pt-0 lg:pt-0" />
+    <FeatureSection {...sectionContent2} />
     <UseCaseCard
       heading="Who’s using  Cilium’s Tetragon for Security Observability and Runtime Enforcement?"
       testimonials={testimonials}
