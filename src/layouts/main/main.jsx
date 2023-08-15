@@ -14,6 +14,14 @@ import NewsletterIcon from 'icons/newsletter.inline.svg';
 const navigation = [
   { name: 'Users', href: '/adopters' },
   {
+    name: 'Use Cases',
+    childItems: [
+      { name: 'Networking', href: '/#networking' },
+      { name: 'Observability', href: '/#observability' },
+      { name: 'Security', href: '/#security' },
+    ],
+  },
+  {
     name: 'Learn',
     childItems: [
       { icon: GetStartedIcon, name: 'Get Started', href: '/get-started' },

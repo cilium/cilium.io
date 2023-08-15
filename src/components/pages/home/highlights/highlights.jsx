@@ -126,7 +126,7 @@ const Highlights = () => (
   <section className="mb-20 md:mb-0" id="use-cases">
     <Container>
       {list.map(({ title, items }, index) => (
-        <div key={index}>
+        <div key={index} id={title.toLowerCase()}>
           <Heading className="pb-10 pt-20 md:pb-14 md:pt-28" tag="h2" size="sm">
             {title}
           </Heading>
