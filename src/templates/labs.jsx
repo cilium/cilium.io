@@ -47,8 +47,9 @@ export default LabsPage;
 
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
-    title: 'Labs — Cilium',
-    description: 'The latest articles covering eBPF-based Networking, Observability, and Security',
+    title: 'Labs about Cilium',
+    description:
+      'Learn how Cilium, Hubble, and Tetragon are used for networking, observability, and Security',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

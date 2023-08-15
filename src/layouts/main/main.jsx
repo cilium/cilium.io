@@ -17,6 +17,7 @@ const navigation = [
   {
     name: 'Learn',
     childItems: [
+      { icon: LabsIcon, name: 'Labs', href: '/labs' },
       { icon: GetStartedIcon, name: 'Get Started', href: '/get-started' },
       { icon: GetInvolvedIcon, name: 'Get Involved', href: '/get-involved' },
       { icon: GetHelpIcon, name: 'Get Help', href: '/get-help' },
@@ -25,7 +26,6 @@ const navigation = [
   {
     name: 'News and media',
     childItems: [
-      { icon: LabsIcon, name: 'Labs', href: '/labs' },
       { icon: AdoptersIcon, name: 'Events', href: '/events' },
       { icon: BlogIcon, name: 'Blog', href: '/blog' },
       {
