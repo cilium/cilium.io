@@ -393,6 +393,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=w6S6baRHHu8',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://www.cncf.io/case-studies/meltwater/',
+        linkTarget: '_blank',
+      },
     ],
   },
   utmost: {
