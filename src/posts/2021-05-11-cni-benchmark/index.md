@@ -479,7 +479,7 @@ The difference in latency is much more significant than the consumed CPU:
 
 <a name="env"></a>
 
-# Performance Impact of a Sidecar
+# Performance Impact of Sidecars on a Service Mesh
 
 Besides avoiding the sheer amount of proxies that need to be run in a sidecar model, a significant advantage of a sidecar-free model is that we can avoid the requirement to run two proxies in between any connection. This is made possible by using Cilium at the network/node level to encrypt and authenticate or use the upcoming new mTLS model which separates the authentication from the transport. More details in this blog [Next-Generation Mutual Authentication with Cilium Service Mesh](https://isovalent.com/blog/post/2022-05-03-servicemesh-security/)
 
