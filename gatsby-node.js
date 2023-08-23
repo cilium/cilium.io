@@ -348,6 +348,7 @@ async function createLabsPage({ graphql, actions }) {
                       title
                       ogSummary
                       externalUrl
+                      from
                       ogImage {
                         childImageSharp {
                           gatsbyImageData(width: 601)

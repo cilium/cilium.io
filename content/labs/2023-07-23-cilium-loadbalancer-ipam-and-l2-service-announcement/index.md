@@ -14,4 +14,5 @@ When you deploy a L2 Announcement Policy, Cilium will start responding to ARP re
 Typically, this would have required a tool like MetalLB but Cilium now natively supports this functionality.
 Try it in this new lab!'
 draft: false
+from: 'Isovalent'
 ---

@@ -10,4 +10,5 @@ ogSummary: 'BGP support was initially introduced in Cilium 1.10 and subsequent i
 Improvements are continuing in Cilium 1.14 with the introduction of BGP timers, eBGP multihop and BGP Graceful restart!
 In this lab, the user will learn about both these new features and how they can simplify their network connectivity operations.'
 draft: false
+from: 'Isovalent'
 ---

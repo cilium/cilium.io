@@ -10,4 +10,5 @@ ogSummary: 'One of the most important thing when running applications in an envi
 However, for many organizations it can be challenging to update existing applications to provide the observability you need. With Cilium, you can use the Hubble Layer 7 visibility functionality to get Prometheus metrics for your application without having to modify it at all.
 In this lab you will learn how Cilium can provide metrics for an existing application with and without tracing functionality, and how you can use Grafana dashboards provided by Cilium to gain insight into how your application is behaving.'
 draft: false
+from: 'Isovalent'
 ---

@@ -10,4 +10,5 @@ ogSummary: 'In this short lab, you will learn about Gateway API, a new Kubernete
 Gateway API addresses some the Ingress limitations by providing an extensible, role-based and generic model to configure advanced L7 traffic routing capabilities into a Kubernetes cluster.
 In this lab, you will learn how you can use the Cilium Gateway API functionality to route HTTP and HTTPS traffic into your Kubernetes-hosted application.'
 draft: false
+from: 'Isovalent'
 ---

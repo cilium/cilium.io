@@ -10,4 +10,5 @@ ogSummary: 'Migrating to Cilium from another CNI is a very common task. But how 
 With the use of the new Cilium CRD CiliumNodeConfig, running clusters can be migrated on a node-by-node basis, without disrupting existing traffic or requiring a complete cluster outage or rebuild.
 In this lab, you will migrate your cluster from an existing CNI to Cilium. While we use Flannel in this simple lab, you can leverage the same approach for other CNIs.'
 draft: false
+from: 'Isovalent'
 ---

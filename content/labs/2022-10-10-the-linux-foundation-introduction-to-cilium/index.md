@@ -8,4 +8,5 @@ place: Online
 title: 'Introduction to Cilium'
 ogSummary: 'Get a practical introduction to using Cilium as the networking plug-in for Kubernetes, including installation, observability with Hubble, securing network connections, and multi-cluster support - all based on eBPF for scalability, performance, and security.'
 draft: false
+from: 'edX'
 ---

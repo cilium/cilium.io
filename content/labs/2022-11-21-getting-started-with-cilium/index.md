@@ -11,4 +11,5 @@ At the foundation of Cilium is a new Linux kernel technology called eBPF, which 
 Because eBPF runs inside the Linux kernel, Cilium security policies can be applied and updated without any changes to the application code or container configuration.
 In this track, we provide you a fully fledged Cilium installation on a small cluster, together with a few challenges to solve. See yourself how Cilium works, and how it can help you securing your moon-sized battlestation in a “Star Wars”-inspired challenge.'
 draft: false
+from: 'Isovalent'
 ---

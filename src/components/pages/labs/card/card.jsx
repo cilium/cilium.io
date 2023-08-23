@@ -32,41 +32,56 @@ const Cover = ({ ogImage, title }) => {
 };
 
 const Card = ({
+  titleTag: Tag,
   title,
   ogSummary: summary,
   externalUrl,
   place,
   categories,
   ogImage,
+  from,
   className,
-}) => (
-  <Link
-    to={externalUrl}
-    className={classNames(
-      'group flex flex-col overflow-hidden rounded-lg border-2 border-gray-6 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
-      className
-    )}
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <Cover ogImage={ogImage} title={title} />
-    <article className="flex grow flex-col p-5 text-left md:p-7 xl:p-8">
-      <div className="flex flex-wrap items-center justify-start space-x-1.5 text-sm font-medium leading-none text-gray-1">
-        {categories.map((item, index) => (
-          <Fragment key={index}>
-            <span className="text-sm font-normal leading-none">{item}</span>
-            <span className="h-1 w-1 rounded-full bg-gray-3" />
-          </Fragment>
-        ))}
-        <span className="text-sm font-normal leading-none">{place}</span>
-      </div>
-      <h3 className="mt-3 text-xl font-bold leading-snug transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-22">
-        {title}
-      </h3>
-      <p className="mt-2 text-base leading-normal text-black/60 line-clamp-4">{summary}</p>
-    </article>
-  </Link>
-);
+}) => {
+  const items = [...categories];
+
+  if (place) items.push(place);
+  if (from) items.push(`From <strong>${from}</strong>`);
+
+  return (
+    <Link
+      to={externalUrl}
+      className={classNames(
+        'group flex flex-col overflow-hidden rounded-lg border-2 border-gray-6 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
+        className
+      )}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Cover ogImage={ogImage} title={title} />
+      <article className="flex grow flex-col p-5 text-left md:p-7 xl:p-8">
+        {items.length && (
+          <div className="mb-3 flex flex-wrap items-center justify-start text-sm font-medium leading-none text-gray-1">
+            {items.map((item, index) => (
+              <Fragment key={index}>
+                <span
+                  className="mr-1.5 text-sm font-normal leading-none"
+                  dangerouslySetInnerHTML={{ __html: item }}
+                />
+                {index < items.length - 1 && (
+                  <span className="mr-1.5 h-1 w-1 rounded-full bg-gray-3" />
+                )}
+              </Fragment>
+            ))}
+          </div>
+        )}
+        <Tag className="text-xl font-bold leading-snug transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-22">
+          {title}
+        </Tag>
+        <p className="mt-2 text-base leading-normal text-black/60 line-clamp-4">{summary}</p>
+      </article>
+    </Link>
+  );
+};
 
 Cover.propTypes = {
   ogImage: PropTypes.shape({
@@ -83,6 +98,7 @@ Cover.defaultProps = {
 };
 
 Card.propTypes = {
+  titleTag: PropTypes.string,
   ogImage: PropTypes.shape({
     childImageSharp: PropTypes.shape({
       gatsbyImageData: PropTypes.shape(),
@@ -90,15 +106,19 @@ Card.propTypes = {
   }),
   externalUrl: PropTypes.string.isRequired,
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
-  place: PropTypes.string.isRequired,
+  place: PropTypes.string,
   title: PropTypes.string.isRequired,
+  from: PropTypes.string,
   ogSummary: PropTypes.string,
   className: PropTypes.string,
 };
 
 Card.defaultProps = {
+  titleTag: 'h3',
   ogImage: null,
   ogSummary: null,
+  place: null,
+  from: null,
   className: null,
 };
 

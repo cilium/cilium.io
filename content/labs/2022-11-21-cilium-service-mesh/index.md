@@ -9,4 +9,5 @@ title: 'Cilium Ingress Controller'
 ogSummary: 'You already know that Cilium accelerates networking, and provides security and observability in Kubernetes, using the power of eBPF. Now Cilium is bringing those eBPF strengths to the world of Service Mesh. Cilium Service Mesh features eBPF-powered connectivity, traffic management, security and observability.
 In this lab, you will learn how you can use Cilium to deploy Ingress resources to dynamically configure the Envoy proxy provided with the Cilium agent. And all of the above without any Envoy sidecar injection into your pods!'
 draft: false
+from: 'Isovalent'
 ---

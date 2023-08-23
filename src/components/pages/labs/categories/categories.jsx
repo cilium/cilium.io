@@ -20,7 +20,7 @@ const Categories = ({ id, categories, currentCategory }) => {
   return (
     <div
       id={id}
-      className="no-scrollbar -mx-4 mt-6 flex justify-start gap-x-3.5 overflow-x-auto px-4 md:-mx-6 md:mt-10 md:justify-center md:px-6 lg:-mx-10 lg:gap-x-5 lg:px-10 xl:mx-0 xl:flex-wrap xl:overflow-visible xl:px-0"
+      className="no-scrollbar -mx-4 mt-6 flex justify-start gap-x-3.5 overflow-x-auto px-4 md:-mx-6 md:mt-12 md:justify-center md:px-6 lg:-mx-10 lg:gap-x-5 lg:px-10 xl:mx-0 xl:flex-wrap xl:overflow-visible xl:px-0"
     >
       {categories.map((category) => {
         const isActiveElement = currentCategory === category;

@@ -11,4 +11,5 @@ From its inception, we looked at delivering an optimal effortless user experienc
 The result is simple: add 2 lines of YAML to your Cilium Network Policy, and that’s it – your workload communication is now secured with a mutual TLS handshake.
 Try it in this new Star Wars-inspired lab!'
 draft: false
+from: 'Isovalent'
 ---

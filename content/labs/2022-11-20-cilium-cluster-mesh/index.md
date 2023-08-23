@@ -12,4 +12,5 @@ Cilium Cluster Mesh allows you to connect the networks of multiple clusters in s
 This allows to effectively join multiple clusters into a large unified network, regardless of the Kubernetes distribution each of them is running.
 In this lab, we will see how to set up Cilium Cluster Mesh, and the benefits from such an architecture.'
 draft: false
+from: 'Isovalent'
 ---

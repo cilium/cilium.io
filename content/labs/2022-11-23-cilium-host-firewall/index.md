@@ -13,4 +13,5 @@ What if we could apply the Kubernetes Network Policy operating model to our host
 In this lab, we will install SSH on the nodes of a Kind cluster, then create Cluster-wide Network Policies to regulate how the nodes can be accessed using SSH.
 The Control Plane node will be used as a bastion to access the other nodes in the cluster.'
 draft: false
+from: 'Isovalent'
 ---

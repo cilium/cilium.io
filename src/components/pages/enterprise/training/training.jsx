@@ -68,7 +68,7 @@ const Training = () => (
         className="with-link-primary mx-auto mt-4 max-w-[592px] text-center text-lg"
         dangerouslySetInnerHTML={{ __html: description }}
       />
-      <div className="mt-12 grid grid-cols-1  gap-y-8 gap-x-0 gap-x-0 md:grid-cols-2 md:gap-x-8">
+      <div className="mt-12 grid grid-cols-1 gap-y-8 gap-x-0 md:grid-cols-2 md:gap-x-8">
         {items.map(
           (
             { logoName, title, description, buttonText, buttonLink, buttonTarget, buttonDisabled },

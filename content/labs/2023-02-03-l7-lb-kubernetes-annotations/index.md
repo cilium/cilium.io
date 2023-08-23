@@ -9,4 +9,5 @@ title: 'L7 Load-Balancing with Kubernetes Services + Annotations'
 ogSummary: 'Kubernetes does not natively support gRPC Load Balancing out of the box.
 Learn how to use Cilium’s embedded Envoy proxy to achieve load-balancing for L7 services, with a simple annotation.'
 draft: false
+from: 'Isovalent'
 ---
