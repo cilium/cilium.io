@@ -35,7 +35,6 @@ const sectionContent2 = {
   description:
     "Cilium's BGP support is designed to be simple and easy to integrate with your existing networking infrastructure. Wherever your application is running, Cilium can ensure efficient BGP routing for all your workloads. Many network infrastructures already use BGP for routing. By leveraging BGP, Cilium can  seamlessly integrate with existing infrastructure, allowing Kubernetes pods to communicate with other parts of the network.",
   videoSrc: 'https://www.youtube.com/embed/Nzh2jc6qW6Y',
-  whiteBackground: true,
 };
 
 const testimonials = [

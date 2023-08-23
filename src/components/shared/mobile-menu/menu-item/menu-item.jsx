@@ -6,7 +6,7 @@ import Link from 'components/shared/link';
 
 import Submenu from '../submenu';
 
-const MenuItem = ({ name, href, target, childItems }) => {
+const MenuItem = ({ name, href, target, childItems, handleCloseClick }) => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
   const toggleSubmenu = () => {
@@ -47,7 +47,13 @@ const MenuItem = ({ name, href, target, childItems }) => {
           </div>
         )}
       </div>
-      {childItems && <Submenu childItems={childItems} isOpen={isSubmenuOpen} />}
+      {childItems && (
+        <Submenu
+          childItems={childItems}
+          isOpen={isSubmenuOpen}
+          handleCloseClick={handleCloseClick}
+        />
+      )}
     </li>
   );
 };
@@ -56,6 +62,7 @@ MenuItem.propTypes = {
   name: PropTypes.string.isRequired,
   href: PropTypes.string,
   target: PropTypes.string,
+  handleCloseClick: PropTypes.func.isRequired,
   childItems: PropTypes.arrayOf(
     PropTypes.exact({
       name: PropTypes.string.isRequired,

@@ -4,7 +4,23 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
-import Label from 'components/shared/type-label';
+
+const Label = ({ category }) => (
+  <span
+    className={classNames(
+      'w-fit rounded py-2 px-2.5 text-sm font-semibold uppercase leading-none tracking-wider',
+      {
+        'bg-additional-green/10 text-additional-green': category === 'Networking',
+      },
+      { 'bg-additional-red/10 text-additional-red': category === 'Security' },
+      {
+        'bg-additional-blue/10 text-additional-blue': category === 'Observability',
+      }
+    )}
+  >
+    {category}
+  </span>
+);
 
 const Hero = ({
   category,
@@ -16,31 +32,35 @@ const Hero = ({
   imageAlt,
   videoSrc,
 }) => (
-  <section className="bg-gray-4">
+  <section className="mb-10 bg-gray-4 md:mb-20 lg:mb-28">
     <Container className="grid grid-cols-12 gap-y-6 gap-x-6 pt-5 pb-10 md:pt-16 md:pb-20 lg:pb-[138px] xl:gap-x-8">
       <div
         className={classNames(
           imageSrc || videoSrc ? 'col-span-full lg:col-span-6' : 'col-span-full lg:col-span-8'
         )}
       >
-        <Label type={category}>{category}</Label>
+        <Label category={category} />
         <Heading
-          className="mt-5 mb-3 leading-tight lg:leading-tight xl:leading-tight"
+          className="mt-2.5 mb-3 leading-tight lg:leading-tight xl:!text-44 xl:leading-tight"
           tag="h1"
-          size="lg"
+          size="md"
         >
           {title}
         </Heading>
-        <small className="text-base font-medium text-gray-1">{tagline}</small>
-        <Heading className="my-5" tag="h2" size="xs">
+        <small className="text-xl leading-normal ">{tagline}</small>
+        <Heading
+          className="mt-5 mb-2 border-t border-gray-3 pt-5 font-semibold"
+          tag="h2"
+          size="3xs"
+        >
           {subHeading}
         </Heading>
-        <p className="text-lg leading-normal">{description}</p>
+        <p className="text-base leading-normal">{description}</p>
       </div>
       {(imageSrc || videoSrc) && (
         <div
           className={classNames(
-            'col-span-full col-start-1 pt-6 md:col-span-8 md:col-start-3 lg:col-span-6 lg:pt-14',
+            'col-span-full col-start-1 pt-6 pl-0 md:col-span-8 md:col-start-3 lg:col-span-6 lg:pt-8 lg:pl-8',
             imageSrc && 'place-self-center '
           )}
         >

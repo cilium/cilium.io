@@ -45,7 +45,6 @@ const sectionContent3 = {
   description:
     "Cilium BIG TCP allows for larger packets than the traditional 64KB limit by leveraging IPv6's Hop-by-Hop header, which can specify payload lengths up to 512KB. This is particularly useful for organizations building networks capable of 100Gbps and beyond. BIG TCP does not require modifying the MTU on network devices, making it easier to implement than Jumbo Frames. With BIG TCP, Cilium offers enhanced network performance for nodes, enabling users to extract as much performance as possible from the network.",
   videoSrc: 'https://www.youtube.com/embed/Kvdh78TURck',
-  whiteBackground: true,
 };
 
 const testimonials = [
@@ -63,8 +62,8 @@ const BandwidthLatencyPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
-    <FeatureSection {...sectionContent2} className="pt-0 md:pt-0 lg:pt-0" />
-    <FeatureSection {...sectionContent3} className="pb-10 md:pb-10 lg:pb-10" />
+    <FeatureSection {...sectionContent2} />
+    <FeatureSection {...sectionContent3} />
     <UseCaseCard heading="Learn More About Cilium’s Big TCP Feature" testimonials={testimonials} />
     <JoinUsCard />
   </MainLayout>

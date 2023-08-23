@@ -39,7 +39,6 @@ const sectionContent3 = {
   description:
     'Cilium Service Mesh gives users the choice of control plane options for the ideal balance of complexity and richness, from simpler options such as Ingress and Gateway API to richer options with Istio, to the full power of Envoy via the Envoy CRD.',
   videoSrc: 'https://www.youtube.com/embed/mpwTkm53YTY',
-  whiteBackground: true,
 };
 
 const sectionContent4 = {
@@ -47,18 +46,17 @@ const sectionContent4 = {
   description:
     'With Cilium Service Mesh, users now have the choice to run a service mesh with sidecars or without them, based on their specific requirements and constraints. This flexibility reduces the complexity and overhead impact of sidecars.',
   videoSrc: 'https://www.youtube.com/embed/WhVyZZ_QkVA',
-  whiteBackground: true,
   imageRight: false,
 };
 
 const ServiceMeshPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
-    <FeatureSection {...sectionContent1} className="pb-16 md:pb-16 lg:pb-16" />
+    <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
-    <FeatureSection {...sectionContent3} className="pb-16 md:pb-16 lg:pb-16" />
+    <FeatureSection {...sectionContent3} />
     <FeatureSection {...sectionContent4} />
-    <JoinUsCard />
+    <JoinUsCard className="pt-10 md:pt-20 lg:pt-28" />
   </MainLayout>
 );
 

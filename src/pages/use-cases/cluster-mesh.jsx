@@ -31,7 +31,6 @@ const sectionContent1 = {
   description:
     'Cilium Cluster Mesh allows you to connect the networks of multiple clusters in such as way that pods in each cluster can discover and access services in all other clusters of the mesh, provided all the clusters run Cilium as their CNI. This allows effectively joining multiple clusters into a large unified network, regardless of the Kubernetes distribution or location each of them is running.',
   videoSrc: 'https://www.youtube.com/embed/1fsXtqg4Pkw',
-  whiteBackground: true,
 };
 
 const sectionContent2 = {
@@ -56,7 +55,6 @@ const sectionContent4 = {
   description:
     'Cluster Mesh is able to handle Pod IP routing across multiple Kubernetes clusters at native performance. By using either tunneling or direct-routing, it circumvents the need for any gateways or proxies. This allows your pods to communicate across clusters seamlessly, enhancing the overall efficiency of your microservice architecture.  ',
   videoSrc: 'https://www.youtube.com/embed/VBOONHW65NU',
-  whiteBackground: true,
 };
 
 const sectionContent5 = {
@@ -112,7 +110,7 @@ const testimonials = [
 const ClusterMeshPage = () => (
   <MainLayout>
     <Hero {...heroContent} />
-    <FeatureSection {...sectionContent1} className="pt-0 md:pt-0 lg:pt-0" />
+    <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
     <FeatureSection {...sectionContent4} />

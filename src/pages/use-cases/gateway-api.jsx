@@ -32,7 +32,6 @@ const sectionContent2 = {
     'Cilium’s Gateway API implementation was designed with different operational roles in mind, such as Infrastructure Providers, Cluster Operators, and Application Developers. By decomposing the Ingress API into several Gateway API objects, different personas can be assigned the appropriate access and privileges according to their responsibilities. This means that, for example, application developers would be allowed to create Route objects in a specified namespace, but would not be able to modify the Gateway configuration or edit Route objects in other namespaces.​',
   imageSrc: GatewayImage2,
   imageAlt: 'cilium gateway API TLS termination illustration',
-  whiteBackground: true,
   imageRight: false,
 };
 

@@ -15,6 +15,14 @@ import NewsletterIcon from 'icons/newsletter.inline.svg';
 const navigation = [
   { name: 'Users', href: '/adopters' },
   {
+    name: 'Use Cases',
+    childItems: [
+      { name: 'Networking', href: '/#networking' },
+      { name: 'Observability', href: '/#observability' },
+      { name: 'Security', href: '/#security' },
+    ],
+  },
+  {
     name: 'Learn',
     childItems: [
       { icon: LabsIcon, name: 'Labs', href: '/labs' },
@@ -50,7 +58,7 @@ const navigation = [
 const MainLayout = ({ isBlogPage, children, theme, footerWithTopBorder }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleHeaderBurgerClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const handleCloseClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const handleOverlay = () => setIsMobileMenuOpen(false);
   return (
     <>
@@ -60,7 +68,7 @@ const MainLayout = ({ isBlogPage, children, theme, footerWithTopBorder }) => {
         theme={theme}
         isMobileMenuOpen={isMobileMenuOpen}
         handleOverlay={handleOverlay}
-        onBurgerClick={handleHeaderBurgerClick}
+        handleCloseClick={handleCloseClick}
       />
       <main>{children}</main>
       <Footer withTopBorder={footerWithTopBorder} />

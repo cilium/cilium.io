@@ -389,8 +389,13 @@ export default {
     text: 'Meltwater is using Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Video',
         linkUrl: 'https://www.youtube.com/watch?v=w6S6baRHHu8',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'User Story',
+        linkUrl: 'https://www.cncf.io/case-studies/meltwater/',
         linkTarget: '_blank',
       },
     ],

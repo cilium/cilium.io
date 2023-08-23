@@ -21,6 +21,7 @@ module.exports = {
         '4xl': [defaultTheme.fontSize['4xl'][0], defaultTheme.lineHeight.tight],
         '5xl': [defaultTheme.fontSize['5xl'][0], defaultTheme.lineHeight.tight],
         22: 22,
+        44: 44,
       },
       colors: {
         white: '#ffffff',

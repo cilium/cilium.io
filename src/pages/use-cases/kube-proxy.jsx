@@ -37,7 +37,6 @@ const sectionContent2 = {
     'If you already have kube-proxy running as a DaemonSet, transitioning to Cilium is a breeze. Replacing kube-proxy with Cilium is a straightforward process, as Cilium provides a Kubernetes-native implementation that is fully compatible with the Kubernetes API. Existing Kubernetes applications and configurations can continue to work seamlessly with Cilium. ',
   imageSrc: KubeProxyImage1,
   imageAlt: 'kube proxy illustration',
-  whiteBackground: true,
 };
 
 const sectionContent3 = {
