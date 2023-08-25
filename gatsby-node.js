@@ -344,7 +344,6 @@ async function createLabsPage({ graphql, actions }) {
                     frontmatter {
                       date(formatString: "MMM DD, YYYY")
                       categories
-                      place
                       title
                       ogSummary
                       externalUrl
