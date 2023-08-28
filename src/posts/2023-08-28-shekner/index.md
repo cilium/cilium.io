@@ -5,7 +5,7 @@ title: 'How the IT for Land Business of DB Schenker Migrated from Calico to Cili
 isPopular: false
 isFeatured: false
 ogImage: only-cilium.png
-ogSummary: 'Learn how DB Schneker migrated their Kubernetes platfrom CNI from Calico to Cilium'
+ogSummary: 'Learn how DB Schneker migrated their Kubernetes platform CNI from Calico to Cilium'
 categories:
   - Community
   - Technology
