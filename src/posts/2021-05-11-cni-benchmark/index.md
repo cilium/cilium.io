@@ -28,6 +28,8 @@ import authors from 'utils/author-data';
 
 # Understanding Cilium Network Performance
 
+(Updated as of 28th August 2023 with Performance Impact of Sidecars on CNI's)
+
 Hello 👋
 
 As more crucial workloads are being migrated to Kubernetes, network performance
@@ -477,7 +479,7 @@ The difference in latency is much more significant than the consumed CPU:
 
 ![](images/bench_wireguard_ipsec_tcp_rr_1_process_cpu.png)
 
-<a name="env"></a>
+<a name="sidecar"></a>
 
 # Performance Impact of a Sidecar
 
@@ -487,7 +489,7 @@ Besides avoiding the sheer amount of proxies that need to be run in a sidecar mo
 
 Reducing the number of proxies in the network path and choosing the type of Envoy filter has a significant impact on performance.  The above benchmark illustrates the latency cost of HTTP processing with a single Envoy proxy running the Cilium Envoy filter (brown) compared to a two-sidecar Envoy model running the Istio Envoy filter (blue). Yellow is the baseline latency with no proxy with no HTTP processing performed.
 
-<a name="sidecar"></a>
+<a name="env"></a>
 
 # Test Environment
 
