@@ -335,7 +335,7 @@ async function createLabsPage({ graphql, actions }) {
                   fileAbsolutePath: { regex: $labsRegex }
                   fields: { categories: { glob: $tag }, draft: { in: $draftFilter } }
                 }
-                sort: { fields: frontmatter___date, order: DESC }
+                sort: { fields: frontmatter___title, order: ASC }
                 limit: $limit
                 skip: $skip
               ) {
@@ -441,6 +441,11 @@ exports.onCreateNode = ({ node, actions }) => {
       node,
       name: 'region',
       value: node.frontmatter.region || '',
+    });
+    createNodeField({
+      node,
+      name: 'title',
+      value: node.frontmatter.title || '',
     });
   }
 };
