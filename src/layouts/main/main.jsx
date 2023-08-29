@@ -25,7 +25,7 @@ const navigation = [
   {
     name: 'Learn',
     childItems: [
-      { icon: LabsIcon, name: 'Labs', href: '/labs' },
+      { icon: LabsIcon, name: 'Labs', href: '/labs/categories/getting-started/' },
       { icon: GetStartedIcon, name: 'Get Started', href: '/get-started' },
       { icon: GetInvolvedIcon, name: 'Get Involved', href: '/get-involved' },
       { icon: GetHelpIcon, name: 'Get Help', href: '/get-help' },
