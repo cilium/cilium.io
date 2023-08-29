@@ -28,8 +28,6 @@ import authors from 'utils/author-data';
 
 # Understanding Cilium Network Performance
 
-(Updated as of 28th August 2023 with Performance Impact of Sidecars on CNI's)
-
 Hello 👋
 
 As more crucial workloads are being migrated to Kubernetes, network performance
@@ -478,16 +476,6 @@ overall, none of the configurations consume a considerable amount of total CPU.
 The difference in latency is much more significant than the consumed CPU:
 
 ![](images/bench_wireguard_ipsec_tcp_rr_1_process_cpu.png)
-
-<a name="sidecar"></a>
-
-# Performance Impact of a Sidecar
-
-Besides avoiding the sheer amount of proxies that need to be run in a sidecar model, a significant advantage of a sidecar-free model is that we can avoid the requirement to run two proxies in between any connection. This is made possible by using Cilium at the network/node level to encrypt and authenticate or use the upcoming new mTLS model which separates the authentication from the transport. More details in this blog [Next-Generation Mutual Authentication with Cilium Service Mesh](https://isovalent.com/blog/post/2022-05-03-servicemesh-security/)
-
-![](images/performance_impact_sidecar.png)
-
-Reducing the number of proxies in the network path and choosing the type of Envoy filter has a significant impact on performance.  The above benchmark illustrates the latency cost of HTTP processing with a single Envoy proxy running the Cilium Envoy filter (brown) compared to a two-sidecar Envoy model running the Istio Envoy filter (blue). Yellow is the baseline latency with no proxy with no HTTP processing performed.
 
 <a name="env"></a>
 
