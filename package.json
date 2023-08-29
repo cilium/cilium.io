@@ -45,7 +45,7 @@
     "gatsby-remark-prismjs": "^6.24.0",
     "gatsby-remark-responsive-iframe": "^5.24.0",
     "gatsby-remark-video": "^1.2.5",
-    "prettier-plugin-tailwindcss": "^0.1.13",
+    "prettier-plugin-tailwindcss": "^0.5.3",
     "prismjs": "^1.29.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
@@ -64,7 +64,7 @@
     "autoprefixer": "^10.4.15",
     "eslint": "^8.48.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.28.1",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
@@ -83,7 +83,7 @@
     "node-fetch": "^2.6.7",
     "postcss": "^8.4.28",
     "postcss-import": "^14.1.0",
-    "prettier": "^2.7.1",
+    "prettier": "^3.0.3",
     "tailwindcss": "^3.3.3"
   },
   "keywords": [
