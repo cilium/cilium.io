@@ -56,7 +56,7 @@
     "react-paginate": "^8.2.0",
     "react-share": "^4.4.1",
     "react-use": "^17.4.0",
-    "yup": "^0.32.11"
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
