@@ -1,7 +1,7 @@
 ---
-path: '/blog/2023/08/28/db-schenker-migration-to-cilium'
-date: '2023-08-28T12:12:00.000Z'
-title: 'How the IT for Land Business of DB Schenker Migrated from Calico to Cilium'
+path: '/blog/2023/09/07/db-schenker-migration-to-cilium'
+date: '2023-09-07T12:12:00.000Z'
+title: 'How DB Schenker Migrated from Calico to Cilium'
 isPopular: false
 isFeatured: false
 ogImage: only-cilium.png
@@ -20,7 +20,7 @@ _Author: Amir Kheirkhahan, BD Schneker_
 
 ## History behind the Migration to Cilium
 
-In the past, the land business of [DB Schenker](https://www.dbschenker.com/de-de) used Calico as a Container Network Interface ([CNI](https://www.cni.dev/)) for in-Kubernetes-Cluster communication, like pod-to-pod communication. Recently our team had the chance to participate in the 2023 [KubeCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/) in Amsterdam, where we learned a lot about [eBPF](https://ebpf.io/) and especially [Cilium](https://cilium.io/), which was an important driver for us to question our CNI strategy.
+In the past, the IT unit for the land transportation business of [DB Schenker](https://www.dbschenker.com/de-de) used Calico as a Container Network Interface ([CNI](https://www.cni.dev/)) for in-Kubernetes-Cluster communication, like pod-to-pod communication. Recently our team had the chance to participate in the 2023 [KubeCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/) in Amsterdam, where we learned a lot about [eBPF](https://ebpf.io/) and especially [Cilium](https://cilium.io/), which was an important driver for us to question our CNI strategy.
 
 Although Calico offers eBPF as well and leverages some important features of it, Cilium was built natively on top of eBPF. In parallel we saw wide adoption in the market and a very feature rich tooling and ecosystem around Cilium, like [Tetragon](https://github.com/cilium/tetragon) for security observability and [Hubble](https://github.com/cilium/hubble) for network visibility. All of these factors together made the decision clear that we needed to migrate to Cilium to prepare our platform for the next steps in our cloud native journey.
 
@@ -42,7 +42,7 @@ Another important consideration was the kube-proxy replacement feature. When a n
 
 Finally, we also needed to think about our Kafka clusters. We run Kafka inside our Kubernetes environment by using the [strimzi](https://strimzi.io/) chart which includes very sensitive and important data. To ensure the stability of Kafka, we needed  to prevent losing the cluster state or running into a Kafka leader election issue.
 
-To get a better understanding of our infrastructure, I’ll shortly point out some tooling and approaches which we use within DB Schenker. We use self-managed Kubernetes clusters on AWS where the worker and controller nodes are running independently on separate VMs. The worker nodes run on a mix of spot and on-demand instances. The base Images are built by Packer and Ansible and the whole infrastructure setup is managed by Terraform. To meet IT Security requirements, every day we throw away a set of our worker and controller nodes. We also have automated processes to rotate all our nodes. We do this by starting a new node and waiting until it is ready, then we move all workloads running on the old node away from it before terminating the old node in AWS as well as in Kubernetes.  These steps are repeated for each of our worker pools.
+To get a better understanding of our infrastructure, I’ll shortly point out some tooling and approaches which we use within DB Schenker. We use self-managed Kubernetes clusters on AWS where the worker and controller nodes are running independently on separate VMs. The worker nodes run on a mix of spot and on-demand instances. The base Images are built by Packer and Ansible and the whole infrastructure setup is managed by Terraform. To meet IT Security requirements, every day we throw away a set of our worker and controller nodes. We also have automated processes to rotate all our nodes. We do this by starting a new node and waiting until it is ready, then we drain the old node and move all workloads away from it before terminating the old node in AWS as well as in Kubernetes. These steps are repeated for each of our worker pools.
 
 For monitoring and measuring connectivity between nodes we leverage [Goldpinger](https://github.com/bloomberg/goldpinger) and for Kafka monitoring we leverage [strimzi canary](https://github.com/strimzi/strimzi-canary), which is a component of the [strimzi kafka operator.](https://github.com/strimzi/strimzi-kafka-operator)
 
@@ -159,7 +159,7 @@ Now it is the time to install Cilium where the configuration looks like this:
 
   tunnel: vxlan
 
-  tunnelPort: 8472
+  tunnelPort: 8473
 
 # (Optional) to resolve the sonobuoy test
 
@@ -300,7 +300,7 @@ If you check the Cilium status, you will see all nodes are managed by the Cilium
 
 ### Step 8- Post migration steps 
 
-As the [official documentation](https://docs.cilium.io/en/stable/installation/k8s-install-migration/#post-migration) suggested, we do some post migration steps, like restarting the unmanaged pods by cilium operator, enforcing NetworkPolicy, and disabling eBPF host routing which could cause short interruption.
+As the [official documentation](https://docs.cilium.io/en/stable/installation/k8s-install-migration/#post-migration) suggested, we do some post migration steps, like restarting the unmanaged pods by cilium operator, enforcing NetworkPolicy, and enabling eBPF host routing which could cause short interruption.
 
 ```yaml
    bpf:
