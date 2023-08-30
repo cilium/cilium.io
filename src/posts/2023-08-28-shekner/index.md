@@ -2,7 +2,7 @@
 path: '/blog/2023/09/07/db-schenker-migration-to-cilium'
 date: '2023-09-07T12:12:00.000Z'
 title: 'How DB Schenker Migrated from Calico to Cilium'
-isPopular: false
+isPopular: true
 isFeatured: false
 ogImage: after-removing-calico-resources.png
 ogSummary: 'Learn how DB Schneker migrated their Kubernetes platform CNI from Calico to Cilium'
