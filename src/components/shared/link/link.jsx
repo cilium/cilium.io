@@ -21,15 +21,7 @@ const themeClassNames = {
   },
 };
 
-const Link = ({
-  className: additionalClassName,
-  to,
-  type,
-  theme,
-  smooth,
-  children,
-  ...otherProps
-}) => {
+const Link = ({ className: additionalClassName, to, type, theme, children, ...otherProps }) => {
   const className = classNames(
     type && theme && commonClassNames,
     themeClassNames[type]?.common,
@@ -91,7 +83,6 @@ const Link = ({
 Link.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string.isRequired,
-  smooth: PropTypes.string.isRequired,
   type: PropTypes.oneOf(Object.keys(themeClassNames)),
   theme: PropTypes.oneOf(
     [
