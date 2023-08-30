@@ -13,7 +13,7 @@ tags:
   - Cilium
 ---
 
-_Author: Amir Kheirkhahan, DB Schneker_
+_Author: Amir Kheirkhahan, DB Schenker_
 
 ![After removing calico resources](after-removing-calico-resources.png)
 
