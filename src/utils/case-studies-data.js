@@ -589,6 +589,10 @@ export default {
       },
     ],
   },
+  twilio: {
+    iconName: 'twilio',
+    text: '<b>Twilio Segment</b>  is using Cilium across their Kubernetes based compute platform',
+  },
   kubesphere: {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',

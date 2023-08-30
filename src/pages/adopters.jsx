@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  twilio,
   testifysec,
   trendyol,
   eficode,
@@ -178,6 +179,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    twilio,
     unitedcloud,
     frsca,
     rafay,
