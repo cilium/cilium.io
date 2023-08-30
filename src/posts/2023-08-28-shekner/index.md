@@ -1,6 +1,6 @@
 ---
-path: '/blog/2023/09/07/db-schenker-migration-to-cilium'
-date: '2023-09-07T12:12:00.000Z'
+path: '/blog/2023/08/28/db-schenker-migration-to-cilium'
+date: '2023-08-28T12:12:00.000Z'
 title: 'How DB Schenker Migrated from Calico to Cilium'
 isPopular: false
 isFeatured: false
@@ -13,7 +13,6 @@ tags:
   - Cilium
 ---
 
-_August 28th, 2023_
 _Author: Amir Kheirkhahan, DB Schneker_
 
 ![only Cilium](only-cilium.png)
@@ -48,53 +47,37 @@ For monitoring and measuring connectivity between nodes we leverage [Goldpinger]
 
 The overview of the migration is as follows and we will go through these steps in the next section:
 
-Existing Nodes with Calico CNI
-
 ![existing nodes with Calico](existing-nodes-with-calico.png)
 
-<div align="center" style="font-style:italic">fig. 1</div>
-
-After Cilium Installation on exisiting Nodes, Cilium has still no CNI ownership
+<div align="center" style="font-style:italic">Figure 1. Existing Nodes with Calico CNI</div>
 
 ![After Cilium installation](after-cilium-installation.png)
 
-<div align="center" style="font-style:italic">fig. 2</div>
-
-After Starting the rotation, Node C starts with both CNIs and Cilium has CNI ownership. Node C currently has Cilium configurations in place which is discussed later at step 1 of migration
+<div align="center" style="font-style:italic">Figure 2. After Cilium Installation on exisiting Nodes, Cilium has still no CNI ownership</div>
 
 ![After Starting the Rotation](after-starting-the-rotation.png)
 
-<div align="center" style="font-style:italic">fig. 3</div>
-
-Draining the older worker node (here Node A) and re-schdule the pods on the new Node.
+<div align="center" style="font-style:italic">Figure 3. After Starting the rotation, Node C starts with both CNIs and Cilium has CNI ownership. Node C currently has Cilium configurations in place which is discussed later at step 1 of migration</div>
 
 ![Draining the oldest worker node](draining-the-oldest-worker-node.png)
 
-<div align="center" style="font-style:italic">fig. 4</div>
-
-Node A is removed from the LoadBalancer so that it no longer receives traffic, and then terminated. Node A is fully replaced by Node C
+<div align="center" style="font-style:italic">Figure 4. Draining the older worker node (here Node A) and re-schdule the pods on the new Node</div>
 
 ![Node A fully replaced](node-a-fully-replaced.png)
 
-<div align="center" style="font-style:italic">fig. 5</div>
-
-After the full rotation of both Nodes, both CNIs should be running on new nodes with Cilium leading.
+<div align="center" style="font-style:italic">Figure 5. Node A is removed from the LoadBalancer so that it no longer receives traffic, and then terminated. Node A is fully replaced by Node C</div>
 
 ![After the Full rotation](after-the-full-rotation.png)
 
-<div align="center" style="font-style:italic">fig. 6</div>
-
-After removing Calico resources and clean up the lables, the new nodes have only Cilium installed on it.
+<div align="center" style="font-style:italic">Figure 6. After the full rotation of both Nodes, both CNIs should be running on new nodes with Cilium leading</div>
 
 ![After removing calico resources](after-removing-calico-resources.png)
 
-<div align="center" style="font-style:italic">fig. 7</div>
-
-At the end, only Cilium is running on all nodes.
+<div align="center" style="font-style:italic">Figure. 7. After removing Calico resources and clean up the lables, the new nodes have only Cilium installed on it</div>
 
 ![only-cilium](only-cilium.png)
 
-<div align="center" style="font-style:italic">fig. 8</div>
+<div align="center" style="font-style:italic">Figure 8. At the end, only Cilium is running on all nodes.</div>
 
 ## Live migration
 
@@ -248,7 +231,7 @@ We can start Cilium’s installation at this step using the Helm deployment or a
 
 ![Goldpinger UI](goldpinger-ui.png)
 
-<div align="center" style="font-style:italic">fig. 9 - Goldpinger UI after Cilium installation</div>
+<div align="center" style="font-style:italic">Figure 9. Goldpinger UI after Cilium installation</div>
 
 It turns out that this outage can be avoided altogether: when you install Cilium on a node, it creates a new network interface called `cilium\_host`. If Calico decides to use that interface as its default interface, Calico node routing will start failing. For this reason, Calico needs to be configured to ignore the `cilium\_host` interface. This could be done with the [skipInterface setting on the Tigera operator](https://docs.tigera.io/calico/latest/reference/configure-calico-node#skip-interfaceinterface-regex). See the Cilium docs [update](https://github.com/cilium/cilium/pull/27666) for more information.
 
