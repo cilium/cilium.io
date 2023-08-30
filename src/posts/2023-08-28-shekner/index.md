@@ -4,7 +4,7 @@ date: '2023-08-28T12:12:00.000Z'
 title: 'How DB Schenker Migrated from Calico to Cilium'
 isPopular: false
 isFeatured: false
-ogImage: only-cilium.png
+ogImage: after-removing-calico-resources.png
 ogSummary: 'Learn how DB Schneker migrated their Kubernetes platform CNI from Calico to Cilium'
 categories:
   - Community
@@ -15,7 +15,7 @@ tags:
 
 _Author: Amir Kheirkhahan, DB Schneker_
 
-![only Cilium](only-cilium.png)
+![After removing calico resources](after-removing-calico-resources.png)
 
 ## History behind the Migration to Cilium
 
