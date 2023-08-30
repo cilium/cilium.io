@@ -53,7 +53,7 @@ Please see the [Event Guidelines](https://github.com/cilium/cilium.io/blob/main/
 In order to be listed on the [Cilium Labs Page](https://cilium.io/labs), the following requirements must be met:
 
 - The PR adding the lab needs to be approved by a Cilium Committer
-- The lab should focus on the open source project
+- The lab must focus on the open source project
 - The lab must be solely about the Cilium project and/or related sub-projects
 - The lab must put the project in a positive light
 
