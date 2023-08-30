@@ -1,7 +1,7 @@
 const indexName = process.env.GATSBY_ALGOLIA_INDEX_NAME;
 
 const pageQuery = `{
-  pages: allMdx(filter: {fileAbsolutePath: {regex: "/posts/"}}) {
+  pages: allMdx(filter: { internal: { contentFilePath: {regex: "/posts/"}}}) {
     edges {
       node {
         id

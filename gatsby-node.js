@@ -19,10 +19,9 @@ async function createBlogPosts({ graphql, actions }) {
     },
   } = await graphql(`
     query BlogPosts {
-      allMdx(filter: { fileAbsolutePath: { regex: "/src/posts/" } }) {
+      allMdx(filter: { internal: { contentFilePath: { regex: "/src/posts/" } } }) {
         nodes {
           id
-          fileAbsolutePath
           frontmatter {
             path
           }
@@ -65,23 +64,36 @@ async function createBlogPages({ graphql, actions, reporter }) {
     },
   } = await graphql(`
     {
-      allCategories: allMdx(filter: { fileAbsolutePath: { regex: "/posts/" } }) {
-        group(field: frontmatter___categories) {
+      allCategories: allMdx(filter: { internal: { contentFilePath: { regex: "/posts/" } } }) {
+        group(field: { frontmatter: { categories: SELECT } }) {
           fieldValue
+        }
+        nodes {
+          frontmatter {
+            categories
+          }
         }
       }
       featuredPostEdges: allMdx(
-        filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isFeatured: { eq: true } } }
+        filter: {
+          internal: { contentFilePath: { regex: "/posts/" } }
+          frontmatter: { isFeatured: { eq: true } }
+        }
       ) {
         nodes {
-          fileAbsolutePath
+          frontmatter {
+            isFeatured
+          }
+          internal {
+            contentFilePath
+          }
         }
       }
     }
   `);
 
   if (featuredPost?.length > 1) {
-    const featuredPosts = featuredPost.map((post) => post.fileAbsolutePath);
+    const featuredPosts = featuredPost.map((post) => post.isFeatured);
     reporter.panicOnBuild(
       `There must be the only one featured post. Please, check "isFeatured" fields in your posts. ${featuredPosts}`,
       new Error('Too much featured posts')
@@ -98,7 +110,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
           query CategoryPostsQuery($tag: String!, $draftFilter: [Boolean]!) {
             allMdx(
               filter: {
-                fileAbsolutePath: { regex: "/posts/" }
+                internal: { contentFilePath: { regex: "/posts/" } }
                 fields: {
                   isFeatured: { eq: false }
                   categories: { glob: $tag }
@@ -154,25 +166,25 @@ async function createEventsPage({ graphql, actions }) {
       query ($draftFilter: [Boolean]!, $eventRegex: String!) {
         allMdx(
           filter: {
-            fileAbsolutePath: { regex: $eventRegex }
+            internal: { contentFilePath: { regex: $eventRegex } }
             fields: { draft: { in: $draftFilter } }
           }
         ) {
           totalCount
         }
-        allTypes: allMdx(filter: { fileAbsolutePath: { regex: $eventRegex } }) {
-          group(field: frontmatter___type) {
+        allTypes: allMdx(filter: { internal: { contentFilePath: { regex: $eventRegex } } }) {
+          group(field: { frontmatter: { type: SELECT } }) {
             fieldValue
           }
         }
-        allRegions: allMdx(filter: { fileAbsolutePath: { regex: $eventRegex } }) {
-          group(field: frontmatter___region) {
+        allRegions: allMdx(filter: { internal: { contentFilePath: { regex: $eventRegex } } }) {
+          group(field: { frontmatter: { region: SELECT } }) {
             fieldValue
           }
         }
         allPosts: allMdx(
           filter: {
-            fileAbsolutePath: { regex: $eventRegex }
+            internal: { contentFilePath: { regex: $eventRegex } }
             fields: { draft: { in: $draftFilter }, isFeatured: { eq: false } }
           }
           sort: { frontmatter: { date: DESC } }
@@ -196,7 +208,7 @@ async function createEventsPage({ graphql, actions }) {
         }
         featuredPost: allMdx(
           filter: {
-            fileAbsolutePath: { regex: $eventRegex }
+            internal: { contentFilePath: { regex: $eventRegex } }
             fields: { draft: { in: $draftFilter }, isFeatured: { eq: true } }
           }
           sort: { frontmatter: { date: DESC } }

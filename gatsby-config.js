@@ -184,7 +184,7 @@ const plugins = [
           query: `
             {
               allMdx(
-                filter: {fileAbsolutePath: { regex: "/posts/" }, fields: {draft: {eq: false}} }
+                filter: {internal: { contentFilePath: { regex: "/posts/" } }, fields: {draft: {eq: false}} }
                 limit: 20
                 sort: { frontmatter: { date: DESC } },
               ) {
