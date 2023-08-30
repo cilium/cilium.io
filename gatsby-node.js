@@ -175,7 +175,7 @@ async function createEventsPage({ graphql, actions }) {
             fileAbsolutePath: { regex: $eventRegex }
             fields: { draft: { in: $draftFilter }, isFeatured: { eq: false } }
           }
-          sort: { fields: frontmatter___date, order: DESC }
+          sort: { frontmatter: { date: DESC } }
         ) {
           nodes {
             frontmatter {
@@ -199,7 +199,7 @@ async function createEventsPage({ graphql, actions }) {
             fileAbsolutePath: { regex: $eventRegex }
             fields: { draft: { in: $draftFilter }, isFeatured: { eq: true } }
           }
-          sort: { fields: frontmatter___date, order: DESC }
+          sort: { frontmatter: { date: DESC } }
           limit: 1
         ) {
           nodes {

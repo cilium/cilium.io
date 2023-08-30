@@ -98,7 +98,7 @@ export const blogPostsQuery = graphql`
           draft: { in: $draftFilter }
         }
       }
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: { frontmatter: { date: DESC } }
       limit: $limit
       skip: $skip
     ) {

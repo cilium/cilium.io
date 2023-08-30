@@ -186,7 +186,7 @@ const plugins = [
               allMdx(
                 filter: {fileAbsolutePath: { regex: "/posts/" }, fields: {draft: {eq: false}} }
                 limit: 20
-                sort: { order: DESC, fields: [frontmatter___date] },
+                sort: { frontmatter: { date: DESC } },
               ) {
                 nodes {
                   html
@@ -218,7 +218,7 @@ const plugins = [
             }),
           query: `
           {
-            allHubspotEmail(sort: { fields: publishDate, order: DESC }) {
+            allHubspotEmail(sort: { publishDate: DESC }) {
               nodes {
                 name
                 publishDate
