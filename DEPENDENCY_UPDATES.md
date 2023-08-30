@@ -7,7 +7,7 @@ This is a reference on how to perform a safe dependencies update. It consists of
 Version of npm and the node on which the project runs
 
 ```json
-"node": "^16.15.0",
+"node": "^18.0.0",
 "npm": "^8.3.x"
 ```
 
