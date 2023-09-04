@@ -41,7 +41,7 @@ Another important consideration was the kube-proxy replacement feature. When a n
 
 Finally, we also needed to think about our Kafka clusters. We run Kafka inside our Kubernetes environment by using the [strimzi](https://strimzi.io/) chart which includes very sensitive and important data. To ensure the stability of Kafka, we needed  to prevent losing the cluster state or running into a Kafka leader election issue.
 
-To get a better understanding of our infrastructure, I’ll shortly point out some tooling and approaches which we use within DB Schenker. We use self-managed Kubernetes clusters on AWS where the worker and controller nodes are running independently on separate VMs. The worker nodes run on a mix of spot and on-demand instances. The base Images are built by Packer and Ansible and the whole infrastructure setup is managed by Terraform. To meet IT Security requirements, every day we throw away a set of our worker and controller nodes. We also have automated processes to rotate all our nodes. We do this by starting a new node and waiting until it is ready, then we drain the old node and move all workloads away from it before terminating the old node in AWS as well as in Kubernetes. These steps are repeated for each of our worker pools.
+To get a better understanding of our infrastructure, I’ll shortly point out some tooling and approaches which we use within DB Schenker. We use self-managed Kubernetes clusters on AWS where the worker and controller nodes are running independently on separate VMs. The worker nodes run on a mix of spot and on-demand instances. The base Images are built by Packer and Ansible and the whole infrastructure setup is managed by Terraform. To meet IT Security requirements, every day we throw away a set of our worker and controller nodes. We also have automated processes to rotate all our nodes. We do this by starting a new node and waiting until it is ready, then we drain the old node and move all workloads away from it before terminating the old node in our cloud provider as well as in Kubernetes. These steps are repeated for each of our worker pools.
 
 For monitoring and measuring connectivity between nodes we leverage [Goldpinger](https://github.com/bloomberg/goldpinger) and for Kafka monitoring we leverage [strimzi canary](https://github.com/strimzi/strimzi-canary), which is a component of the [strimzi kafka operator.](https://github.com/strimzi/strimzi-kafka-operator)
 
@@ -73,7 +73,7 @@ The overview of the migration is as follows and we will go through these steps i
 
 ![After removing calico resources](after-removing-calico-resources.png)
 
-<div align="center" style="font-style:italic">Figure. 7. After removing Calico resources and clean up the lables, the new nodes have only Cilium installed on it</div>
+<div align="center" style="font-style:italic">Figure. 7. After removing Calico resources and clean up the labels, the new nodes have only Cilium installed on it</div>
 
 ![only-cilium](only-cilium.png)
 
@@ -85,14 +85,14 @@ The overview of the migration is as follows and we will go through these steps i
 
 Before starting the migration, we need to make sure that we have proper back-ups of the workloads. In the Kubernetes context, the most important piece is to keep etcd backedup in a safe place, like an AWS S3 Bucket. In case the migration fails, we have a backup in place to perform a disaster recovery to the state before the migration.
 
-The next thing that should be prepared is building the migration image (AMI in AWS context). Some of the important changes are:
+The next thing that should be prepared is building the migration base image. Some of the important changes are:
 
 - Add the label `"io.cilium.migration/cilium-default=true"` to all newly created nodes.  As soon as a new node is launched and has this label, the predefined Cilium config will be applied to this node. These predefined configs are declared in the [CiliumNodeConfig](https://docs.cilium.io/en/latest/configuration/per-node-config/#ciliumnodeconfig-objects) object.
 
 - Add the Taint `"node.cilium.io/agent-not-ready=:NoSchedule.` to all newly created nodes. This prevents a race condition between the CNIs that are now running in parallel on the new nodes. Since Calico is sometimes faster in starting, the node gets marked as ready and newly scheduled pods on the node get IP addresses assigned by Calico. With the taint, Cilium is able to start up properly and then take over assignment of IPs.
   For more information refer to [official Cilium documentation.](https://docs.cilium.io/en/latest/installation/taints)
 
-You should make your changes ready for deployment after Cilium installation. In our case, we built a new AMI with these changes and kept them ready to deploy. We used Terraform for deploying the infrastructure in AWS and in this context, we rolled out the new images right after the Cilium installation. With that all new nodes have this label and taint and Cilium is the leading CNI on those nodes.
+You should make your changes ready for deployment after Cilium installation. In our case, we built a new AMI with these changes and kept them ready to deploy. We used Terraform for deploying the infrastructure in our cloud environment and in this context, we rolled out the new images right after the Cilium installation. With that all new nodes have this label and taint and Cilium is the leading CNI on those nodes.
 
 ### Step 2- Scale down the important applications like Strimzi Kafka
 
@@ -168,7 +168,7 @@ Now it is the time to install Cilium where the configuration looks like this:
 
   kubeProxyReplacement: disabled  
 
-# change the tunnel port, If you have already calico with VXLAN
+# Use Cilium suggested tunnel port 8473
 
   tunnel: vxlan
 
@@ -268,7 +268,7 @@ Now if you check the status of Cilium, you will still see that no pods are manag
 
 ### Step 5- Scale up Kafka
 
-Now you can scale up Kafka’s underlying worker pools to the previous numbers in AWS. New nodes should have both CNIs running, but Cilium will take over leadership. After that you can start Kafka applications again. First start Zookeeper and wait for it to be ready and then start the Kafka brokers.
+Now you can scale up Kafka’s underlying worker pools to the previous numbers in your cloud provider. New nodes should have both CNIs running, but Cilium will take over leadership. After that you can start Kafka applications again. First start Zookeeper and wait for it to be ready and then start the Kafka brokers.
 
 ```bash
     kubectl scale statefulset -n kafka kafka-zookeeper --replicas 5
@@ -330,4 +330,4 @@ We now have all new nodes only with Cilium as the CNI. We removed Calico resourc
 
 ## Conclusion
 
-This blog post walked through how we migrated from Cilium to Calico using the new `CiliumNodeConfig` feature. Overall, we found the process to be smooth and are excited for the possibility that switching to Cilium will unlock for our platform.
+This blog post walked through how we migrated from Calico to Cilium using the new `CiliumNodeConfig` feature. Overall, we found the process to be smooth and are excited for the possibility that switching to Cilium will unlock for our platform.
