@@ -29,30 +29,32 @@ Simple access to a bare metal resources was intriguing so we gave it a shot. Pro
 
 All it took was to add the simple `Jenkinsfile` below:
 
-    pipeline {
-        agent {
-            label 'vagrant'
-        }
-        options {
-            timeout(time: 30, unit: 'MINUTES')
-        }
-        stages {
-            stage('Build') {
-                environment {
-                    MEMORY = '4096'
-                    RUN_TEST_SUITE = '1'
-                }
-                steps {
-                    sh './contrib/vagrant/start.sh'
-                }
+```
+pipeline {
+    agent {
+        label 'vagrant'
+    }
+    options {
+        timeout(time: 30, unit: 'MINUTES')
+    }
+    stages {
+        stage('Build') {
+            environment {
+                MEMORY = '4096'
+                RUN_TEST_SUITE = '1'
             }
-        }
-        post {
-            always {
-                sh 'vagrant destroy -f'
+            steps {
+                sh './contrib/vagrant/start.sh'
             }
         }
     }
+    post {
+        always {
+            sh 'vagrant destroy -f'
+        }
+    }
+}
+```
 
 For us, using a bare metal cloud had two keep benefits:
 

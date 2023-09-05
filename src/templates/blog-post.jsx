@@ -12,17 +12,24 @@ import MainLayout from '../layouts/main';
 const BlogPostPage = (props) => {
   const {
     data: { mdx: postData },
+    children,
     location: { pathname },
   } = props;
   const {
-    body: html,
     frontmatter: { path, title, date, tags, ogSummary },
   } = postData;
   const isBlogPage = pathname.startsWith('/blog');
 
   return (
     <MainLayout isBlogPage={isBlogPage}>
-      <Content path={path} html={html} date={date} title={title} tags={tags} summary={ogSummary} />
+      <Content
+        path={path}
+        content={children}
+        date={date}
+        title={title}
+        tags={tags}
+        summary={ogSummary}
+      />
       <PopularPosts className="my-10 md:my-20 lg:my-28" />
     </MainLayout>
   );

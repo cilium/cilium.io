@@ -21,8 +21,7 @@ observability in Kubernetes, using the power of eBPF. Now Cilium is bringing
 those eBPF strengths to the world of Service Mesh. Cilium Service Mesh features
 eBPF-powered connectivity, traffic management, security and observability, and
 we’re inviting you to be amongst the first to try out these new capabilities as
-part of the [Cilium Service Mesh Beta
-Program](https://forms.gle/j9fwhAC6HnHRJQKeA).
+part of the [Cilium Service Mesh Beta Program](https://forms.gle/j9fwhAC6HnHRJQKeA).
 
 # What does Cilium bring to Service Mesh?
 

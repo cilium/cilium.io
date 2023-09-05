@@ -28,29 +28,34 @@ async function createBlogPosts({ graphql, actions }) {
           fields {
             draft
           }
+          internal {
+            contentFilePath
+          }
         }
       }
     }
   `);
 
-  blogPosts.forEach((file) => {
-    // skip page creation if post has `draft` flag
-    if (process.env.NODE_ENV === 'production' && file.fields.draft) {
-      return;
+  blogPosts.forEach(
+    ({ id, frontmatter: { path }, internal: { contentFilePath }, fields: { draft } }) => {
+      // skip page creation if post has `draft` flag
+      if (process.env.NODE_ENV === 'production' && draft) {
+        return;
+      }
+
+      if (!path) {
+        return;
+      }
+
+      const postTemplate = Path.resolve('./src/templates/blog-post.jsx');
+
+      actions.createPage({
+        path,
+        component: `${postTemplate}?__contentFilePath=${contentFilePath}`,
+        context: { id },
+      });
     }
-
-    const { path } = file.frontmatter;
-
-    if (!path) {
-      return;
-    }
-
-    actions.createPage({
-      path,
-      component: Path.resolve('./src/templates/blog-post.jsx'),
-      context: { id: file.id },
-    });
-  });
+  );
 }
 
 // Create Blog Pages
@@ -80,12 +85,15 @@ async function createBlogPages({ graphql, actions, reporter }) {
           frontmatter: { isFeatured: { eq: true } }
         }
       ) {
-        nodes {
-          frontmatter {
-            isFeatured
-          }
-          internal {
-            contentFilePath
+        edges {
+          node {
+            id
+            frontmatter {
+              isFeatured
+            }
+            internal {
+              contentFilePath
+            }
           }
         }
       }
@@ -93,7 +101,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
   `);
 
   if (featuredPost?.length > 1) {
-    const featuredPosts = featuredPost.map((post) => post.isFeatured);
+    const featuredPosts = featuredPost.map(({ frontmatter: { isFeatured } }) => isFeatured);
     reporter.panicOnBuild(
       `There must be the only one featured post. Please, check "isFeatured" fields in your posts. ${featuredPosts}`,
       new Error('Too much featured posts')

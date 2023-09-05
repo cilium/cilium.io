@@ -28,7 +28,7 @@ Over the past years, we have learned a lot about the common challenges while wor
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/_ebbAeYT2z8?controls=0&autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<div style="padding-top: 30px;">
+<div style={{ paddingTop: '30px' }}>
 
 The <a href="https://editor.cilium.io" target="_blank">Kubernetes NetworkPolicy Editor</a> helps you build, visualize, and understand Kubernetes NetworkPolicies.
 
@@ -42,8 +42,9 @@ The <a href="https://editor.cilium.io" target="_blank">Kubernetes NetworkPolicy 
 
 </div>
 
-<p style=" margin-top: 40px; font-size: 120%; font-weight: bold; text-align: center;">
-  <a href="https://editor.cilium.io" style=" padding: 8px 12px; color: white; text-align: center; background: #0a53a5; border-radius: 4px;" target="_blank">Try Network Policy Editor</a>
+<p style={{ marginTop: '40px', fontSize: '120%', fontWeight: 'bold', textAlign: 'center' }}>
+  <a href="https://editor.cilium.io" style={{ padding: '8px 12px', color: 'white', textAlign: 'center', background: '#0a53a5', borderRadius: '4px' }}
+ target="_blank">Try Network Policy Editor</a>
 </p>
 
 ## How exactly does editor.cilium.io help?
@@ -54,7 +55,7 @@ To make this more concrete, let’s explore five common gotchas we see trip up t
 
 Consider a scenario where we want a centralized Prometheus instance running in a `monitoring` namespace to be able to scrape metrics from a Redis Pod running in the `default` namespace. Take a look at the following network policy, which is applied in the `default` namespace. It allows Pods with label `app=prometheus` to scrape metrics from Pods with label `app=redis`:
 
-<div style="display: grid; grid-template-columns: 2fr 3fr; grid-gap: 2rem;">
+<div style={{ display: 'grid', gridTemplateColumns: '2fr 3fr', gridGap: '2rem' }}>
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -91,7 +92,7 @@ How do you do this right?
 
 It is common that workloads must be locked down to limit external access (i.e. “egress” default deny). If you want to prevent your application from sending traffic anywhere except to Pods in the same namespace, you might create the following policy:
 
-<div style="display: grid; grid-template-columns: 2fr 3fr; grid-gap: 2rem; align-items: start; padding-bottom: 20px;">
+<div style={{ display: 'grid', gridTemplateColumns: '2fr 3fr', gridGap: '2rem', alignItems: 'start', paddingBottom: '20px' }}>
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -130,7 +131,7 @@ So how do you solve this?
 
 If you come from a traditional Networking background, it might be tempting to use a /32 CIDR rule to allow traffic to the IP address of a Pod as shown in the output of `kubectl describe pod`. For example:
 
-<div style="display: grid; grid-template-columns: 2fr 3fr; grid-gap: 2rem; align-items: start; padding-bottom: 20px;">
+<div style={{ display: 'grid', gridTemplateColumns: '2fr 3fr', gridGap: '2rem', alignItems: 'start', paddingBottom: '20px' }}>
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -159,7 +160,7 @@ However, Pod IPs are ephemeral and unpredictable, and depending on a network plu
 
 Let's take a look at another egress policy example, that seeks to allow Pods with label `app=foo` to establish egress connections to an external VM with IP `192.168.1.22` on port `443`.
 
-<div style="display: grid; grid-template-columns: 2fr 3fr; grid-gap: 2rem; align-items: start; padding-bottom: 20px;">
+<div style={{ display: 'grid', gridTemplateColumns: '2fr 3fr', gridGap: '2rem', alignItems: 'start', paddingBottom: '20px' }}>
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -192,7 +193,7 @@ How do you prevent these mistakes?
 
 In Network Policy, empty curly braces (i.e., “{}”) can have a different meaning in different contexts, leading to a lot of confusion. We’ll use this last example as a quiz. What is the difference between these two similar looking network policy rules that both leverage “{}”? Take a guess, then look at each rule in the Network Policy Editor below to see if you were right.
 
-<div style="display: grid; grid-template-columns: 2fr 3fr; grid-gap: 2rem; padding-bottom: 20px;">
+<div style={{ display: 'grid', gridTemplateColumns: '2fr 3fr', gridGap: '2rem', paddingBottom: '20px' }}>
 
 ```yaml
 ingress:

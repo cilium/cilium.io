@@ -88,8 +88,7 @@ based on Go. Because eBPF runs inside the Linux kernel, all Cilium
 functionality can be applied without any changes to the application code or
 container configuration.
 
-See the section **[Introduction to
-Cilium](https://cilium.readthedocs.io/en/stable/intro/)** for a more detailed general
+See the section **[Introduction to Cilium](https://cilium.readthedocs.io/en/stable/intro/)** for a more detailed general
 introduction to Cilium.
 
 # New [USERS.md](https://github.com/cilium/cilium/blob/master/USERS.md) file: Who is using Cilium?
@@ -159,8 +158,7 @@ service names.
 
 ![Hubble UI Service Map](servicemap.png)
 
-Hubble UI enables zero-effort automatic discovery of the service dependency graph for Kubernetes Clusters at L3/L4 and even L7, allowing user-friendly visualization and filtering of
-those dataflows as a Service Map. First presented during [the Hubble announcement](/blog/2019/11/19/announcing-hubble), we provided users with a preview release docker image, allowing everyone to try [Hubble Service Map in a Minikube](https://github.com/cilium/hubble/blob/master/tutorials/deploy-hubble-servicemap/README.md) while working on open sourcing the code itself.
+Hubble UI enables zero-effort automatic discovery of the service dependency graph for Kubernetes Clusters at L3/L4 and even L7, allowing user-friendly visualization and filtering of those dataflows as a Service Map. First presented during [the Hubble announcement](/blog/2019/11/19/announcing-hubble), we provided users with a preview release docker image, allowing everyone to try [Hubble Service Map in a Minikube](https://github.com/cilium/hubble/blob/master/tutorials/deploy-hubble-servicemap/README.md) while working on open sourcing the code itself.
 
 We are happy to announce, Hubble UI code is now open sourced and available under Cilium's GitHub organization: [https://github.com/cilium/hubble-ui](https://github.com/cilium/hubble-ui)
 
@@ -238,8 +236,7 @@ replacement implements handling of Kubernetes services of type `ClusterIP`,
 
 Kube-proxy replacement in eBPF has many benefits when compared to the vanilla
 kube-proxy of Kubernetes, such as better performance, reliability and
-debuggability. See **[Kubernetes without
-kube-proxy](https://docs.cilium.io/en/stable/gettingstarted/kubeproxy-free/)**
+debuggability. See **[Kubernetes without kube-proxy](https://docs.cilium.io/en/stable/gettingstarted/kubeproxy-free/)**
 for a quick-start guide and advanced configuration options. In addition, see
 [Kubecon US 2019] and [FOSDEM 2020] for implementation details and performance
 benchmarks.
@@ -254,10 +251,6 @@ data path optimizations.
 Check out our **[2 minute Cilium demo](http://www.youtube.com/watch?v=bIRwSIwNHC0&t=110)**
 on running Kubernetes without kube-proxy and netfilter/iptables being compiled
 out of the kernel:
-
-<center>
-<div
-  style=" max-width: 640px; height: 304.54px; cursor: pointer; background: url('/2020-02-10-cilium-17-demo-preview.png') #fff no-repeat; background-size: contain;" onclick="this.innerHTML=`<iframe width='640px' height='304.54px' src='https://www.youtube.com/embed/bIRwSIwNHC0?start=113&modestbranding=1&autoplay=1' frameborder='0' allow='accelerometer; autohide; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>`"></div></center>
 
 ## Direct Server Return
 
@@ -442,8 +435,7 @@ from the eBPF data path to the user space `cilium-agent` process has been conver
 previous CGo implementation to a faster, more efficient implementation with the help of the new
 library.
 
-There are various other eBPF libraries in the wild, for example, [libbpf](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/lib/bpf)
-or [libbcc](https://github.com/iovisor/bcc/blob/master/src/cc/libbcc.pc.in). While the former
+There are various other eBPF libraries in the wild, for example, [libbpf](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/tools/lib/bpf) or [libbcc](https://github.com/iovisor/bcc/blob/master/src/cc/libbcc.pc.in). While the former
 represents the canonical implementation, lives in the Linux kernel tree and is suited for
 C/C++-based applications, it cannot be used in pure Go context. Similarly, that is the case
 for the latter which has a focus on tracing, wraps libbpf and even LLVM's eBPF backend. Other
@@ -472,8 +464,7 @@ In order to have better scalability for a large number of endpoints backed by
 a service, Kubernetes 1.16 has introduced [EndpointSlice](https://kubernetes.io/docs/concepts/services-networking/endpoint-slices/).
 Since Kubernetes 1.17 this API has been marked as beta and enabled by default.
 Although the API endpoint is enabled by default, the controller that manages
-Endpoint Slices is not and one needs to follow the guide [here](https://kubernetes.io/docs/tasks/administer-cluster/enabling-endpointslices/#enabling-endpointslices)
-to enable that controller and make use of this new type.
+Endpoint Slices is not and one needs to follow the guide [here](https://kubernetes.io/docs/tasks/administer-cluster/enabling-endpointslices/#enabling-endpointslices) to enable that controller and make use of this new type.
 
 Cilium 1.7 introduces a new flag, `enable-k8s-endpoint-slice`, which is enabled
 by default and will automatically detect if Endpoint Slices are available in the

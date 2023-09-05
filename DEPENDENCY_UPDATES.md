@@ -102,12 +102,3 @@ Add information if you're having trouble updating any dependencies, this could b
   - **Last stable version:** `2.6.7`
 
   We are not able to import it with require() in gatsby-config.js file.
-
-### [@mdx-js/mdx](https://github.com/mdx-js/mdx)
-
-- **Issue found on:** 29 August, 2023
-
-  - **Problematic version:** `2.3.0`
-  - **Last stable version:** `1.6.22`
-
-  Doesn't work with CommonJS in gatsby-plugin-mdx/utils/mdx.js file.

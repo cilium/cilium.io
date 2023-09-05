@@ -1,5 +1,4 @@
 import { MDXProvider } from '@mdx-js/react';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 
@@ -13,7 +12,7 @@ import SocialShare from './social-share';
 const Wrapper = ({ children }) => <div className="prose md:prose-lg !max-w-none">{children}</div>;
 // eslint-disable-next-line react/jsx-no-useless-fragment
 const components = { wrapper: Wrapper, BlogAuthor, undefined: (props) => <Fragment {...props} /> };
-const Content = ({ date, title, summary, html, path, tags }) => {
+const Content = ({ date, title, summary, content, path, tags }) => {
   const postUrl = `${process.env.GATSBY_DEFAULT_SITE_URL}${path}`;
   return (
     <article className="relative mt-6 md:mt-10 lg:mt-16">
@@ -30,9 +29,7 @@ const Content = ({ date, title, summary, html, path, tags }) => {
           <Heading className="mt-4 mb-10 lg:mb-16" size="lg" tag="h1">
             {title}
           </Heading>
-          <MDXProvider components={components}>
-            <MDXRenderer>{html}</MDXRenderer>
-          </MDXProvider>
+          <MDXProvider components={components}>{content}</MDXProvider>
         </div>
       </Container>
     </article>
@@ -42,7 +39,7 @@ Content.propTypes = {
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   summary: PropTypes.string,
-  html: PropTypes.string.isRequired,
+  content: PropTypes.object.isRequired,
   path: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string),
 };

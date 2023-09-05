@@ -16,26 +16,32 @@ In celebration of today's date, May 4th, we are posting our Star Wars demo of Ci
 
 <iframe src="//www.youtube.com/embed/ilKlmTDdFgk?list=PLkA60AVN3hh_nihZ1mh6cO3n-uMdF7UlV&amp;t=350&amp;wmode=opaque&amp;enablejsapi=1" height="480" width="854" scrolling="no" frameborder="0" allowfullscreen=""></iframe>
 
-    # A long time ago, in a container cluster far, far away....
-    #
-    # It is a period of civil war. The Empire has adopted
-    # microservices and continuous delivery, despite this,
-    # Rebel spaceships, striking from a hidden cluster, have
-    # won their first victory against the evil Galactic Empire.
-    #
-    # During the battle, Rebel spies managed to steal the
-    # swagger API specification to the Empire's ultimate weapon,
-    # the deathstar.
+```
+# A long time ago, in a container cluster far, far away....
+#
+# It is a period of civil war. The Empire has adopted
+# microservices and continuous delivery, despite this,
+# Rebel spaceships, striking from a hidden cluster, have
+# won their first victory against the evil Galactic Empire.
+#
+# During the battle, Rebel spies managed to steal the
+# swagger API specification to the Empire's ultimate weapon,
+# the deathstar.
+```
 
 This first step creates a Docker network which the empire and rebel alliance can use to attach their containers to. It is of driver and IPAM type _cilium_ which implies that Cilium is in charge of both address management and providing networking whenever a container is attached to the network.
 
-    $ docker network create --ipv6 --subnet ::1/112 --driver cilium --ipam-driver cilium space
-    c712f2b0d915825bf16b45705f76d7bf5cb947159b9753edd1bfcf6c56749ca1
+```
+$ docker network create --ipv6 --subnet ::1/112 --driver cilium --ipam-driver cilium space
+c712f2b0d915825bf16b45705f76d7bf5cb947159b9753edd1bfcf6c56749ca1
+```
 
 The empire starts constructing the deathstar by starting a container named _deathstar_ in the network _cilium_ with the label _id.empire.deathstar_. This label indicate that the container is a deathstar beloning to the empire.
 
-    $ docker run -dt --net=space --name deathstar -l id.empire.deathstar cilium/starwars
-    f55bacd444d0c552488650916183f045bdabcf9eb8d2771654f707bbbb986d60
+```
+$ docker run -dt --net=space --name deathstar -l id.empire.deathstar cilium/starwars
+f55bacd444d0c552488650916183f045bdabcf9eb8d2771654f707bbbb986d60
+```
 
 The empire now wants to allow spaceship containers to launch and land at the deathstar. The spaceships have to use the deathstar's REST API to request landing permissions. This requires a network policy to allow for this communication. Cilium follows a whitelist policy model which means that if policy enforcement is enabled, all communication must be explicitly allowed, all other communication is prohibited.
 
@@ -62,38 +68,46 @@ The policy above will allow spaceships to communicate to the deathstar by allowi
 
 The empire can import this policy...
 
-    $ cilium policy import sw_policy_l4.json
+```
+$ cilium policy import sw_policy_l4.json
+```
 
 ... and then test the connectivity by starting a spaceship container with the label `id.spaceship` and have it land on the deathstar after requesting landing permission:
 
-    $ docker run -dt --net=space --name ship1 -l id.spaceship tgraf/netperf
-    919cce790ef4344080aa0fd3ecf7435cb773c0a813b5dc6dce12c5e93f5c1102
+```
+$ docker run -dt --net=space --name ship1 -l id.spaceship tgraf/netperf
+919cce790ef4344080aa0fd3ecf7435cb773c0a813b5dc6dce12c5e93f5c1102
 
-    $ docker exec -i ship1 curl -si -XPOST http://deathstar/v1/request-landing
-    HTTP/1.1 200 OK
-    Content-Type: text/plain
-    Date: Fri, 28 Apr 2017 15:18:02 GMT
-    Content-Length: 12
+$ docker exec -i ship1 curl -si -XPOST http://deathstar/v1/request-landing
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Date: Fri, 28 Apr 2017 15:18:02 GMT
+Content-Length: 12
 
-    Ship landed
+Ship landed
+```
 
 ---
 
 In the meantime.... The rebel alliance has noticed that the empire has started to construct a deathstar. They send out an X-Wing to scout and explore the situation:
 
-    $ docker run -dt --net=space --name xwing -l id.spaceship tgraf/netperf
-    0a87e2677eae25118a10c24c903e3b7a0efca4a70157996f72d8f29b731cfc76
+```
+$ docker run -dt --net=space --name xwing -l id.spaceship tgraf/netperf
+0a87e2677eae25118a10c24c903e3b7a0efca4a70157996f72d8f29b731cfc76
+```
 
 The X-wing spaceship flies up to the deathstar and starts probing it with his radar:
 
-    $ docker exec -i xwing ping -c 2 deathstar
-    PING deathstar (10.15.116.202): 56 data bytes
-    64 bytes from 10.15.116.202: seq=0 ttl=64 time=0.170 ms
-    64 bytes from 10.15.116.202: seq=1 ttl=64 time=0.087 ms
+```
+$ docker exec -i xwing ping -c 2 deathstar
+PING deathstar (10.15.116.202): 56 data bytes
+64 bytes from 10.15.116.202: seq=0 ttl=64 time=0.170 ms
+64 bytes from 10.15.116.202: seq=1 ttl=64 time=0.087 ms
 
-    --- deathstar ping statistics ---
-    2 packets transmitted, 2 packets received, 0% packet loss
-    round-trip min/avg/max = 0.087/0.128/0.170 ms
+--- deathstar ping statistics ---
+2 packets transmitted, 2 packets received, 0% packet loss
+round-trip min/avg/max = 0.087/0.128/0.170 ms
+```
 
 Why does the deathstar respond to the X-Wing? The X-Wing is a spaceship as well and thus has the label `id.spaceship` set which is covered by the network policy loaded by the empire.
 

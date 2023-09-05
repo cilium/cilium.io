@@ -52,15 +52,14 @@ For Alibaba, it looks something like this:
 
 ![](eni.png)
 
-<div align="center" style="font-size: 8pt;">
+<div align="center" style={{fontSize: "8pt"}}>
 (Source: https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590)
 </div>
 
 In order to implement this model, the CNI layer has to interact with the Cloud
 APIs to set up ENIs as needed for pods. For this purpose, Alibaba has built the
 [Terway CNI plugin](https://github.com/AliyunContainerService/terway) plugin. Check
-out [Alibaba's original blog
-post](https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590)
+out [Alibaba's original blog post](https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590)
 to learn about the internals of Terway CNI plugin and some of the challenges
 they faced. This post specifically focuses on IPVLAN and how eBPF is used improve
 the scalability of Kubernetes services and Network Policy.
@@ -84,7 +83,7 @@ this [pull request](https://github.com/cilium/cilium/pull/10251).
 
 ![Shared ENI IPVLAN architecture](shared_eni.png)
 
-<div align="center" style="font-size: 8pt;">
+<div align="center" style={{fontSize: "8pt"}}>
 (Source: https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590)
 </div>
 
@@ -94,7 +93,7 @@ network.
 
 ![ENI + IPVLAN performance results](eni_performance.png)
 
-<div align="center" style="font-size: 8pt;">
+<div align="center" style={{fontSize: "8pt"}}>
 (Source: https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590)
 </div>
 
@@ -110,7 +109,7 @@ scalability of this solution is severely limited.
 
 ![Kubernetes services w/ iptables scalability](iptables_scalability.png)
 
-<div align="center" style="font-size: 8pt;">
+<div align="center" style={{fontSize: "8pt"}}>
 (Source: https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590)
 </div>
 
@@ -129,7 +128,7 @@ performance compared to kube-proxy in both iptables and IPVS mode:
 
 ![Kubernetes services implementation](ebpf_service_performance.png)
 
-<div align="center" style="font-size: 8pt;">
+<div align="center" style={{fontSize: "8pt"}}>
 (Source: https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590)
 </div>
 
@@ -141,7 +140,7 @@ NetworkPolicy can benefit from using eBPF as well.
 
 ![](ebpf_optimization.png)
 
-<div align="center" style="font-size: 8pt;">
+<div align="center" style={{fontSize: "8pt"}}>
 (Source: https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590)
 </div>
 
@@ -154,7 +153,7 @@ provide the eBPF-based Kubernetes Services and Network Policy implementation.
 
 ![](network_policy_ebpf_arch.png)
 
-<div align="center" style="font-size: 8pt;">
+<div align="center" style={{fontSize: "8pt"}}>
 (Source: https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590)
 </div>
 

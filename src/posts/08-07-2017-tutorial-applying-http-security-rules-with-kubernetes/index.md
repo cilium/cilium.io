@@ -23,41 +23,49 @@ This step by step guide shows how to apply HTTP security rules in three easy ste
 
 We start out with a standard Kubernetes cluster with three worker nodes:
 
-    $ kubectl get nodes
-    NAME      STATUS    AGE
-    worker0   Ready     115d
-    worker1   Ready     115d
-    worker2   Ready     115d
+```
+$ kubectl get nodes
+NAME      STATUS    AGE
+worker0   Ready     115d
+worker1   Ready     115d
+worker2   Ready     115d
+```
 
 Cilium is [deployed as DaemonSet](http://docs.cilium.io/en/stable/gettingstarted/#getting-started-using-kubernetes):
 
-    $ kubectl -n kube-system get pods
-    NAME                                    READY     STATUS    RESTARTS   AGE
-    cilium-0srz0                            1/1       Running   0          10h
-    cilium-153hp                            1/1       Running   0          10h
-    cilium-5pk5c                            1/1       Running   2          10h
-    cilium-consul-0kf04                     1/1       Running   1          17h
+```
+$ kubectl -n kube-system get pods
+NAME                                    READY     STATUS    RESTARTS   AGE
+cilium-0srz0                            1/1       Running   0          10h
+cilium-153hp                            1/1       Running   0          10h
+cilium-5pk5c                            1/1       Running   2          10h
+cilium-consul-0kf04                     1/1       Running   1          17h
+```
 
-We deploy a simple demo application in the form of Kubernetes deployments. This will create three deployments: app1, app2, and app3\. It will also make app1 available via a service app1-service.
+We deploy a simple demo application in the form of Kubernetes deployments. This will create three deployments: app1, app2, and app3'\'. It will also make app1 available via a service app1-service.
 
-    $ kubectl create -f https://raw.githubusercontent.com/cilium/cilium/master/examples/minikube/demo.yaml
-    service "app1-service" created
-    deployment "app1" created
-    deployment "app2" created
-    deployment "app3" created
+```
+$ kubectl create -f https://raw.githubusercontent.com/cilium/cilium/master/examples/minikube/demo.yaml
+service "app1-service" created
+deployment "app1" created
+deployment "app2" created
+deployment "app3" created
+```
 
 We can now check the status of these deployments:
 
-    $ kubectl get pods
-       NAME                       READY     STATUS              RESTARTS   AGE
-       po/app1-2741898079-66lz0   0/1       ContainerCreating   0          40s
-       po/app1-2741898079-jwfmk   1/1       Running             0          40s
-       po/app2-2889674625-wxs08   0/1       ContainerCreating   0          40s
-       po/app3-3000954754-fbqtz   0/1       ContainerCreating   0          40s
+```
+$ kubectl get pods
+    NAME                       READY     STATUS              RESTARTS   AGE
+    po/app1-2741898079-66lz0   0/1       ContainerCreating   0          40s
+    po/app1-2741898079-jwfmk   1/1       Running             0          40s
+    po/app2-2889674625-wxs08   0/1       ContainerCreating   0          40s
+    po/app3-3000954754-fbqtz   0/1       ContainerCreating   0          40s
+```
 
 ### Step 2: Create L7/HTTP security policy
 
-We want to define a Layer7 (HTTP) policy to protect app1\. app1 has two API endpoints which can be called: `GET /public` and `GET /private`. We want to continue allowing `GET /public` but prohibit all calls to `GET /private`. The following policy achieves this:
+We want to define a Layer7 (HTTP) policy to protect app1'\'. app1 has two API endpoints which can be called: `GET /public` and `GET /private`. We want to continue allowing `GET /public` but prohibit all calls to `GET /private`. The following policy achieves this:
 
 ```yaml
 apiVersion: 'cilium.io/v1'
@@ -85,19 +93,25 @@ spec:
 
 We can now import this Layer 7 (HTTP) policy using `kubectl`:
 
-    $ kubectl create -f https://raw.githubusercontent.com/cilium/cilium/master/examples/minikube/l3_l4_l7_policy.yaml
+```
+$ kubectl create -f https://raw.githubusercontent.com/cilium/cilium/master/examples/minikube/l3_l4_l7_policy.yaml
+```
 
 ### Step 3: Test the policy
 
 `app1` is now protected. While we can still access `app1/public` from `app2`...
 
-    $ kubectl exec $APP2_POD -- curl -s http://${SVC_IP}/public
-    { 'val': 'this is public' }
+```
+$ kubectl exec $APP2_POD -- curl -s http://$\{SVC_IP\}/public
+\{ 'val': 'this is public' \}
+```
 
 ... and we can no longer access `app1/private`.
 
-    $ kubectl exec $APP2_POD -- curl -s http://${SVC_IP}/private
-    Access denied
+```
+$ kubectl exec $APP2_POD -- curl -s http://$\{SVC_IP\}/private
+Access denied
+```
 
 ### Next Steps
 

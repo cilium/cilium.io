@@ -29,6 +29,13 @@ const plugins = [
     resolve: `gatsby-plugin-mdx`,
     options: {
       extensions: [`.mdx`, `.md`],
+      mdxOptions: {
+        remarkPlugins: [
+          // Add GitHub Flavored Markdown (GFM) support
+          // eslint-disable-next-line global-require
+          require('remark-gfm'),
+        ],
+      },
       gatsbyRemarkPlugins: [
         'gatsby-remark-copy-linked-files',
         {
@@ -189,7 +196,7 @@ const plugins = [
                 sort: { frontmatter: { date: DESC } },
               ) {
                 nodes {
-                  html
+                  children
                   excerpt
                   frontmatter {
                     title

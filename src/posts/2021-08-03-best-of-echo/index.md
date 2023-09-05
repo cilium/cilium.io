@@ -17,8 +17,7 @@ moments."
 
 ---
 
-[eBPF and Cilium Office
-Hours](https://www.youtube.com/playlist?list=PLDg_GiBbAx-mY3VFLPbLHcxo6wUjejAOC)
+[eBPF and Cilium Office Hours](https://www.youtube.com/playlist?list=PLDg_GiBbAx-mY3VFLPbLHcxo6wUjejAOC)
 (also known as eCHO) is a weekly YouTube livestream, hosted by Liz Rice and Duffie Cooley, about the world of
 eBPF, Cilium and related projects. Most weeks we welcome a guest to show us what
 they have been working on and share their insights. In place of this week's live episode (while we
@@ -61,9 +60,7 @@ implementation, to a demo that makes the theory concrete.
 
 ## It's always DNS
 
-You know how whenever something goes wrong "it's always DNS"? [Laurent Bernaille
-from Datadog shared some war stories](https://youtu.be/mo0RIJZypbQ?t=168) that illustrated some of the
-unexpectedly wide range of ways in which DNS can indeed be the cause of failure.
+You know how whenever something goes wrong "it's always DNS"? [Laurent Bernaille from Datadog shared some war stories](https://youtu.be/mo0RIJZypbQ?t=168) that illustrated some of the unexpectedly wide range of ways in which DNS can indeed be the cause of failure.
 
 <div><iframe width="560" height="315" src="https://www.youtube.com/embed/mo0RIJZypbQ?start=168" title="It's always DNS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
@@ -89,8 +86,7 @@ kube-proxy replacement.
 
 If you want to learn about some of the networking capabilities that Cilium
 provides, check out the great explanations that Joe Stringer provides in episode
-6 about features added in Cilium 1.10. For example, this episode covers what we mean by an [Egress IP Gateway](https://youtu.be/y5xcvr_fgxc?t=463), or [BGP Service
-Announcement](https://youtu.be/y5xcvr_fgxc?t=924).
+6 about features added in Cilium 1.10. For example, this episode covers what we mean by an [Egress IP Gateway](https://youtu.be/y5xcvr_fgxc?t=463), or [BGP Service Announcement](https://youtu.be/y5xcvr_fgxc?t=924).
 
 <div><iframe width="560" height="315" src="https://www.youtube.com/embed/y5xcvr_fgxc" title="Cilium 1.10 features" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
