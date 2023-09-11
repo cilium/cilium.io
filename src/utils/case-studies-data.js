@@ -594,6 +594,28 @@ export default {
       },
     ],
   },
+  dbschenker: {
+    iconName: 'dbschenker',
+    text: 'DB Schenker uses Cilium as the default CNI in self-managed Kubernetes clusters running in AWS',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://cilium.io/blog/2023/09/07/db-schenker-migration-to-cilium/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  dbraincloud: {
+    iconName: 'dbraincloud',
+    text: 'dBrain Cloud uses Cilium as a CNI in their Kubernetes platform',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://habr.com/ru/companies/dbraincloud/articles/759244/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   twilio: {
     iconName: 'twilio',
     text: '<b>Twilio Segment</b>  is using Cilium across their Kubernetes based compute platform',
