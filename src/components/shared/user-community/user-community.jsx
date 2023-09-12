@@ -43,6 +43,8 @@ import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
+import DbraincloudLogo from './images/dbraincloud.inline.svg';
+import DbschenkerLogo from './images/dbschenker.inline.svg';
 import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
@@ -112,6 +114,8 @@ import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  dbraincloud: DbraincloudLogo,
+  dbschenker: DbschenkerLogo,
   twilio: TwilioLogo,
   testifysec: TestifysecLogo,
   trendyol: TrendyolLogo,

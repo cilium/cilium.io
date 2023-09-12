@@ -10,6 +10,8 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  dbraincloud,
+  dbschenker,
   twilio,
   testifysec,
   trendyol,
@@ -123,6 +125,8 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    dbraincloud,
+    dbschenker,
     testifysec,
     palantir,
     edgelessSystems,
