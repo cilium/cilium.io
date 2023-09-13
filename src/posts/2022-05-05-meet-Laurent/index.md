@@ -2,7 +2,7 @@
 path: '/blog/2022/05/05/meet-maintainer-laurent-bernaille'
 date: '2022-05-05T17:00:00.000Z'
 title: 'Meet the Maintainer - Laurent Bernaille'
-isPopular: true
+isPopular: false
 isFeatured: false
 ogImage: laurent.jpeg
 ogSummary: 'Learn more about Laurent and how he got involved in Cilium'
@@ -15,7 +15,7 @@ tags:
 
 ![Laurent Bernaille](laurent.jpeg)
 
-_May 05th, 2022_  
+_May 05th, 2022_
 _Interviewed by: Bill Mulligan, Isovalent_
 
 **How did you first get into technology?**
