@@ -1,5 +1,5 @@
 ---
-date: '2023-10-02T11:36:00.000Z'
+date: '2023-09-02T11:36:00.000Z'
 title: 'Cilium: Support for ENI Prefix Delegation in an EKS cluster'
 ogImage: ogimage.webp
 ogSummary: 'Learn how to enable Cilium on an EKS cluster, first without Prefix Delegation, then with it, to scale up pod IP allocations beyond instance limits'
