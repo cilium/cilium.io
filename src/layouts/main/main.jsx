@@ -22,6 +22,20 @@ const navigation = [
     ],
   },
   {
+    name: 'Industries',
+    childItems: [
+      { name: 'Financial Services', href: '/financial-services' },
+      { name: 'Media and Entertainment', href: '/media-entertainment' },
+      { name: 'Cloud Providers', href: '/cloud-providers' },
+      { name: 'SaaS, Software and DBaaS', href: '/software' },
+      { name: 'Telcos and Data Center Operators', href: '/telcos' },
+      { name: 'E-commerce', href: '/e-commerce' },
+      { name: 'Consulting', href: '/consulting' },
+      { name: 'Cyber Security', href: '/cyber-security' },
+    ],
+  },
+
+  {
     name: 'Learn',
     childItems: [
       { icon: GetStartedIcon, name: 'Get Started', href: '/get-started' },
