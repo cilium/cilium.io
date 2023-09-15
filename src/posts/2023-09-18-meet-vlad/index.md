@@ -1,6 +1,6 @@
 ---
-path: '/blog/2023/09/13/meet-maintainer-vlad-ungureanu'
-date: '2023-09-13T17:00:00.000Z'
+path: '/blog/2023/09/18/meet-maintainer-vlad-ungureanu'
+date: '2023-09-18T17:00:00.000Z'
 title: 'Meet the Maintainer - Vlad Ungureanu'
 isPopular: false
 isFeatured: false
