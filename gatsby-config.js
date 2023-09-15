@@ -195,7 +195,6 @@ const plugins = [
                 sort: { frontmatter: { date: DESC } },
               ) {
                 nodes {
-                  children
                   excerpt
                   frontmatter {
                     title
