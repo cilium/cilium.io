@@ -8,7 +8,7 @@ const Banner = () => (
     <Heading className="text-white" tag="h2" size="sm">
       Want to add your lab to the list? Submit a PR here
     </Heading>
-    <Button to="https://github.com/cilium/cilium.io/pulls" theme="primary-1" target="_blank">
+    <Button to="https://github.com/cilium/cilium.io/blob/main/CONTRIBUTING.md#listing-labs" theme="primary-1" target="_blank">
       Submit a PR
     </Button>
   </div>
