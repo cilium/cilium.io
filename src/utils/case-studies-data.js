@@ -210,6 +210,10 @@ export default {
         linkTarget: '_blank',
       },
       {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/trip-com-group/',
+      },
+      {
         linkText: 'Video',
         linkUrl: 'https://www.youtube.com/watch?v=NIsU4I950l4',
         linkTarget: '_blank',

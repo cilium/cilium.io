@@ -269,7 +269,7 @@ const UserCommunity = ({
                 dangerouslySetInnerHTML={{ __html: text }}
               />
               {links && (
-                <div className="mt-auto space-x-4 space-y-2 border-t border-gray-3 pt-4 leading-none">
+                <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-3 pt-4 leading-none">
                   {links.map(({ linkUrl, linkText, linkTarget }, index) => (
                     <Link
                       className="relative before:absolute before:top-1/2 before:-left-2.5 before:inline-block before:h-1 before:w-1 before:-translate-y-1/2 before:rounded-full before:bg-gray-5 first:before:hidden"
