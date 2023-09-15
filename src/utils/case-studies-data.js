@@ -201,6 +201,10 @@ export default {
     text: 'Trip.com uses Cilium both on premise and in AWS',
     links: [
       {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/trip-com-group/',
+      },
+      {
         linkText: 'Blog 1',
         linkUrl: 'https://cilium.io/blog/2020/02/05/how-trip-com-uses-cilium/',
       },
