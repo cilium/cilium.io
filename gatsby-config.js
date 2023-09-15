@@ -185,7 +185,6 @@ const plugins = [
                 date,
                 url,
                 guid: url,
-                custom_elements: [{ 'content:encoded': html }],
               };
             }),
           query: `
