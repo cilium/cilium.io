@@ -272,7 +272,7 @@ const UserCommunity = ({
                 <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-3 pt-4 leading-none">
                   {links.map(({ linkUrl, linkText, linkTarget }, index) => (
                     <Link
-                      className="relative before:absolute before:top-1/2 before:-left-2.5 before:inline-block before:h-1 before:w-1 before:-translate-y-1/2 before:rounded-full before:bg-gray-5 first:before:hidden"
+                      className="relative after:absolute after:top-1/2 after:-right-2.5 after:inline-block after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-5 last:after:hidden"
                       key={index}
                       type="text"
                       theme="primary"
