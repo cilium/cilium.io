@@ -24,7 +24,7 @@ const navigation = [
   {
     name: 'Industries',
     childItems: [
-      { name: 'Financial Services', href: '/financial-services' },
+      { name: 'Financial Services', href: '/industries/financial-services' },
       { name: 'Media and Entertainment', href: '/media-entertainment' },
       { name: 'Cloud Providers', href: '/cloud-providers' },
       { name: 'SaaS, Software and DBaaS', href: '/software' },
