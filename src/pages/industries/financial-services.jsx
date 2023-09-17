@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
+import BulletsCard from 'components/pages/industries/BulletsCard';
 import React from 'react';
 
+import GlobalLeaders from 'components/pages/industries/adopter-resources/adopter-resources';
 import CompanyLogos from 'components/pages/industries/adopters-logo/adopters-logo';
 import CompanyStats from 'components/pages/industries/adopters-stats/adopters-stats';
-import BulletsCard from 'components/pages/industries/BulletsCard';
 import Community from 'components/pages/industries/Community';
 import VideoCard from 'components/pages/industries/featured-talks/featured-talks';
-import GlobalLeaders from 'components/pages/industries/GlobalLeaders';
 import MainSection from 'components/pages/industries/hero/hero';
 import postfinanceImage from 'components/pages/industries/img/postfinance.png';
 import CiliumSolutions from 'components/pages/industries/industry-usecase/industry-usecase';
