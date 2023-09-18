@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-const AdoptersResources = ({ heading, resources }) => (
-  <div>
+import Container from 'components/shared/container/container';
+
+const ResourcesCard = ({ heading, resources }) => (
+  <Container>
     <h3 className="mb-10 text-center text-[36px] font-bold">{heading}</h3>
     <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
       {resources.map((resource, index) => (
@@ -12,7 +14,6 @@ const AdoptersResources = ({ heading, resources }) => (
           className="rounded-xl bg-white p-[28px]  text-center  lg:flex lg:w-[384px] lg:flex-col lg:justify-between"
         >
           <img src={resource.imgSrc} alt={resource.alt} />
-
           <h3 className="mt-16 mb-6 text-xl font-bold">{resource.title}</h3>
           <p className="mb-16">{resource.description}</p>
 
@@ -41,14 +42,15 @@ const AdoptersResources = ({ heading, resources }) => (
         </div>
       ))}
     </div>
-  </div>
+  </Container>
 );
 
-AdoptersResources.propTypes = {
+ResourcesCard.propTypes = {
   heading: PropTypes.string.isRequired,
   resources: PropTypes.arrayOf(
     PropTypes.shape({
       imageSrc: PropTypes.string.isRequired,
+      imageAlt: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
@@ -56,4 +58,4 @@ AdoptersResources.propTypes = {
   ).isRequired,
 };
 
-export default AdoptersResources;
+export default ResourcesCard;

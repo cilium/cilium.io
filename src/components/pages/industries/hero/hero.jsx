@@ -1,48 +1,19 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container/container';
 
-import bloombergImage from './img/bloomberg.png';
-
-const Hero = () => {
-  const companyDetails = [
-    {
-      imgSrc: bloombergImage,
-      intro:
-        'Bloomberg successfully enhanced the security and access control of its BQuant Enterprise workloads through the implementation of robust network security measures.',
-      details:
-        'We started by looking at some other tools, and we first used [the cloud provider CNI]. But we found that Cilium, with its host-based policies and its ability to replace what we had out of the box, was really valuable.',
-      profileName: 'Anne Zepecki',
-      role: 'Team Lead for the BQuant Enterprise Identity Management team',
-    },
-  ];
-  return (
-    <Container className="bg-[#F6F7F8] pb-[147px]">
+const Hero = ({ children, heading, texts }) => (
+  <section className="bg-[#F6F7F8] lg:pb-24">
+    <Container>
       <div className="items-center justify-between lg:flex">
         <div>
-          <h2 className="py-10 text-3xl font-bold lg:pb-[86px] lg:pt-[95px] lg:text-4xl">
-            Financial Services
-          </h2>
+          <h2 className="py-10 text-3xl font-bold lg:text-4xl">{heading}</h2>
           <div className="items-start justify-start gap-[103px] lg:flex">
             <div className="flex flex-col gap-6 lg:flex lg:w-[610px] lg:flex-col lg:gap-6">
-              <p>
-                Regulatory oversight is a hallmark of the financial industry. Cilium’s detailed
-                traffic monitoring and logging mechanisms assist institutions in maintaining clear
-                audit trails, ensuring regulatory compliance are met and forensic investigations are
-                facilitated.
-              </p>
-              <p>
-                The world of fintech revolves around APIs – from mobile banking apps to complex
-                trading platforms. Cilium's API-aware network security ensures that these critical
-                gateways can be fortified, understanding and guarding against any malicious patterns
-                in API calls.
-              </p>
-              <p>
-                With Cilium, financial services can achieve improved observability, maintain
-                security controls, and weave in security governance for Kubernetes environments in
-                On-prem/Hybrid/Multi-Cloud environments including
-                AKS/EKS/GCP/OpenShift/Rancher/SUSE, etc.
-              </p>
+              {texts.map((text, index) => (
+                <p key={index}>{text}</p>
+              ))}
             </div>
 
             <figure>
@@ -56,12 +27,14 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      {children}
     </Container>
-  );
+  </section>
+);
+Hero.propTypes = {
+  heading: PropTypes.string.isRequired,
+  texts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  children: PropTypes.node.isRequired,
 };
 
 export default Hero;
-
-{
-  /* <CompanyTestimonial companyDetails={companyDetails} /> */
-}

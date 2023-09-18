@@ -44,7 +44,7 @@ const Link = ({
   };
 
   const content = type === 'arrow' ? <span>{children}</span> : children;
-  const arrow = type === 'arrow' && <ArrowIcon className="ml-2.5" />;
+  const arrow = type === 'arrow' && <ArrowIcon className="ml-2.5 text-center" />;
 
   if (to.startsWith('/#')) {
     return (
