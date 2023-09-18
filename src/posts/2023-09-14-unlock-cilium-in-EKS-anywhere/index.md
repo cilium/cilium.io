@@ -7,5 +7,5 @@ categories:
   - Technology
 externalUrl: 'https://isovalent.com/blog/post/unlock-cilium-in-eks-anywhere/'
 tags:
-  - Technology
+  - Community
 ---

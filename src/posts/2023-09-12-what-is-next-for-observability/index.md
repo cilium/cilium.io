@@ -7,5 +7,5 @@ categories:
   - Technology
 externalUrl: 'https://www.infoworld.com/article/3706048/what-s-next-for-observability.html'
 tags:
-  - Technology
+  - Community
 ---
