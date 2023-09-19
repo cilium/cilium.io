@@ -9,6 +9,7 @@ import BrandingIcon from 'icons/branding.inline.svg';
 import GetHelpIcon from 'icons/get-help.inline.svg';
 import GetInvolvedIcon from 'icons/get-involved.inline.svg';
 import GetStartedIcon from 'icons/get-started.inline.svg';
+import LabsIcon from 'icons/labs.inline.svg';
 import NewsletterIcon from 'icons/newsletter.inline.svg';
 
 const navigation = [
@@ -24,6 +25,7 @@ const navigation = [
   {
     name: 'Learn',
     childItems: [
+      { icon: LabsIcon, name: 'Labs', href: '/labs/categories/getting-started/' },
       { icon: GetStartedIcon, name: 'Get Started', href: '/get-started' },
       { icon: GetInvolvedIcon, name: 'Get Involved', href: '/get-involved' },
       { icon: GetHelpIcon, name: 'Get Help', href: '/get-help' },

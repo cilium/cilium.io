@@ -6,16 +6,16 @@ import React from 'react';
 import Link from 'components/shared/link';
 import TypeLabel from 'components/shared/type-label';
 import useElementRect from 'hooks/use-element-rect';
+import placeholderIllustration from 'images/placeholder.svg';
 
 import PlaceIcon from './images/place.inline.svg';
-import placeholderIllustration from './images/placeholder.svg';
 import TimeIcon from './images/time.inline.svg';
 
 const EventCover = ({ ogImage, title }) => {
   const [rect, placeholder] = useElementRect();
   const { width = 0 } = rect ?? {};
   const placeholderHeight = width / 2.1;
-  console.log(ogImage);
+
   return ogImage ? (
     <GatsbyImage
       imgClassName="self-center rounded-t-lg h-full max-h-[261px] sm:max-h-[221px] lg:max-h-[180px]"
