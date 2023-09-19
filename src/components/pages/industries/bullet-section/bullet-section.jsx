@@ -13,7 +13,7 @@ const BulletSection = ({ heading, text }) => (
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 45 51"
             fill="none"
-            className="hidden lg:h-10 lg:w-10"
+            className="hidden lg:inline-block lg:h-10 lg:w-10"
           >
             <path
               d="M22.5 0L44.5836 12.75V38.25L22.5 51L0.416351 38.25V12.75L22.5 0Z"
