@@ -209,6 +209,10 @@ export default {
         linkUrl: 'https://cilium.io/blog/2020/02/05/how-trip-com-uses-cilium/',
       },
       {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/trip-com-group/',
+      },
+      {
         linkText: 'Blog 2',
         linkUrl: 'https://arthurchiao.art/blog/trip-first-step-towards-cloud-native-security/',
         linkTarget: '_blank',
