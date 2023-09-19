@@ -3,7 +3,7 @@ import React from 'react';
 
 import Container from 'components/shared/container/container';
 
-const Hero = ({ children, heading, texts, imageSrc }) => (
+const Hero = ({ children, heading, texts, imageSrc, imageAlt }) => (
   <section className="bg-[#F6F7F8] lg:pb-24">
     <Container>
       <div className="items-center justify-between lg:flex">
@@ -17,8 +17,7 @@ const Hero = ({ children, heading, texts, imageSrc }) => (
             </div>
 
             <figure>
-              {/* Added a negative margin because of extra padding within default image */}
-              <img src={imageSrc} alt="" className="h-[470px] w-[470px] lg:-mt-16" />
+              <img src={imageSrc} alt={imageAlt} className="h-[470px] w-[470px] lg:-mt-16" />
             </figure>
           </div>
         </div>
@@ -30,6 +29,7 @@ const Hero = ({ children, heading, texts, imageSrc }) => (
 Hero.propTypes = {
   heading: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
+  imageAlt: PropTypes.string.isRequired,
   texts: PropTypes.arrayOf(PropTypes.string).isRequired,
   children: PropTypes.node.isRequired,
 };

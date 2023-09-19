@@ -29,6 +29,7 @@ const heroContent = {
     'With Cilium, financial services can achieve improved observability, maintain security controls, and weave in security governance for Kubernetes environments in On-prem/Hybrid/Multi-Cloud environments including AKS/EKS/GCP/OpenShift/Rancher/SUSE, etc.',
   ],
   imageSrc: ExecelBee,
+  imageAlt: 'isovalent excel bee',
 };
 
 const bloombergTestimonial = {
@@ -158,7 +159,7 @@ const FinancialServices = () => (
       <Testimonial {...bloombergTestimonial} />
     </Hero>
     <BulletSection {...bulletSection1} />
-    <Stats {...postfinanceStats} />
+    <Stats className="mb-16" {...postfinanceStats} />
     <FeaturedTalks heading="Featured talks" talks={financialTalks} />
     <ResourcesCard
       heading="Join Global Finance Leaders in the  Cloud Native Networking Revolution "

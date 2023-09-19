@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import Container from 'components/shared/container/container';
 import Link from 'components/shared/link/link';
 
 const IndustryUseCases = ({ heading, usecases }) => (
-  <>
+  <Container>
     <h2 className="text-center text-[36px] font-bold lg:my-20">{heading}</h2>
     <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
       {usecases.map(({ icon: Icon, description, title, url }, index) => (
@@ -19,8 +20,7 @@ const IndustryUseCases = ({ heading, usecases }) => (
           <h3 className="text-xl font-bold lg:mt-6">{title}</h3>
           <p className="lg:my-8 lg:h-[120px]">{description}</p>
 
-          {/* Link each item with a link tag here */}
-          <div className="mx-auto pt-9 text-center">
+          <div className=" pt-9 ">
             <Link to={url} className="font-bold uppercase text-[#0073E5]">
               <span className="flex items-center gap-2 ">
                 <span>Learn more</span>
@@ -46,10 +46,8 @@ const IndustryUseCases = ({ heading, usecases }) => (
         </div>
       ))}
     </div>
-  </>
+  </Container>
 );
-
-// IndustryUseCases.defaultProps = {};
 
 IndustryUseCases.propTypes = {
   heading: PropTypes.string.isRequired,
