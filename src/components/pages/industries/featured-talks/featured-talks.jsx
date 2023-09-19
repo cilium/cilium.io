@@ -3,10 +3,10 @@ import React from 'react';
 
 import Container from 'components/shared/container/container';
 
-const FeaturedTalks = ({ talks }) => (
+const FeaturedTalks = ({ heading = 'Featured talks', talks }) => (
   <div className="featured-talks bg-[#F6F7F8] py-12">
     <Container>
-      <h3 className="text-center text-[36px] font-bold lg:mb-[64px]">Featured talks</h3>
+      <h3 className="text-center text-[36px] font-bold lg:mb-[64px]">{heading}</h3>
 
       <div className="flex flex-col gap-8 text-center md:text-center lg:flex-row lg:text-left">
         {talks.map((talk, index) => (
@@ -14,10 +14,10 @@ const FeaturedTalks = ({ talks }) => (
             <iframe
               style={{ borderRadius: '12px', display: 'block', margin: 'auto', width: '100%' }}
               width="384"
+              className="w-full"
               height="216"
               src={talks.videoSrc}
               title="YouTube video player"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             />
@@ -33,6 +33,7 @@ const FeaturedTalks = ({ talks }) => (
 FeaturedTalks.defaultProps = {};
 
 FeaturedTalks.propTypes = {
+  heading: PropTypes.string.isRequired,
   talks: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,

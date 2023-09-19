@@ -13,15 +13,17 @@ const ResourcesCard = ({ heading, resources }) => (
           key={index}
           className="rounded-xl bg-white p-[28px]  text-center  lg:flex lg:w-[384px] lg:flex-col lg:justify-between"
         >
-          <img src={resource.imgSrc} alt={resource.alt} />
+          <img
+            src={resource.imageSrc}
+            alt={resource.imageAlt}
+            className="max-h-full w-full rounded"
+          />
           <h3 className="mt-16 mb-6 text-xl font-bold">{resource.title}</h3>
           <p className="mb-16">{resource.description}</p>
 
-          {/* Link each resource with a link tag here */}
-          <a href="www.wwwww" className="mx-auto text-center font-bold uppercase text-[#0073E5]">
+          <a href={resource.url} className="mx-auto text-center font-bold uppercase text-[#0073E5]">
             <span className="flex items-center gap-2 ">
-              <span>Learn more</span>
-
+              <span>{resource.CTAtext && 'Learn More'}</span>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -52,6 +54,7 @@ ResourcesCard.propTypes = {
       imageSrc: PropTypes.string.isRequired,
       imageAlt: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
+      CTAtext: PropTypes.string,
       url: PropTypes.string.isRequired,
       description: PropTypes.string.isRequired,
     })
