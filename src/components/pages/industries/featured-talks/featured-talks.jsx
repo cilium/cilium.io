@@ -1,18 +1,18 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container/container';
 
-const FeaturedTalks = ({ heading = 'Featured talks', talks }) => (
-  <div className="featured-talks bg-[#F6F7F8] py-12">
+const FeaturedTalks = ({ heading = 'Featured talks', talks, className }) => (
+  <div className={classNames(className, 'featured-talks bg-[#F6F7F8] py-12')}>
     <Container>
-      <h3 className="text-center text-[36px] font-bold lg:mb-[64px]">{heading}</h3>
-
+      <h3 className="text-center text-3xl font-bold lg:mb-[64px]">{heading}</h3>
       <div className="flex flex-col gap-8 text-center md:text-center lg:flex-row  lg:text-left">
         {talks.map((talk, index) => (
           <div key={index} className="basis-1/3">
             <iframe
-              src="https://www.youtube.com/embed/Kvdh78TURck"
+              src={talk.videoSrc}
               title="YouTube video player"
               className="mx-auto block h-48 w-full rounded-lg"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -28,10 +28,13 @@ const FeaturedTalks = ({ heading = 'Featured talks', talks }) => (
   </div>
 );
 
-FeaturedTalks.defaultProps = {};
+FeaturedTalks.defaultProps = {
+  className: '',
+};
 
 FeaturedTalks.propTypes = {
   heading: PropTypes.string.isRequired,
+  className: PropTypes.string,
   talks: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,

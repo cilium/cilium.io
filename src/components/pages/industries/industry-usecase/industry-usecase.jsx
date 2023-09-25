@@ -3,10 +3,11 @@ import React from 'react';
 
 import Container from 'components/shared/container/container';
 import Link from 'components/shared/link/link';
+import ArrowIcon from 'icons/arrow.inline.svg';
 
 const IndustryUseCases = ({ heading, usecases }) => (
   <Container>
-    <h2 className="text-center text-[36px] font-bold lg:my-20">{heading}</h2>
+    <h2 className="text-center text-3xl font-bold lg:my-20">{heading}</h2>
     <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
       {usecases.map(({ icon: Icon, description, title, url }, index) => (
         <div
@@ -18,27 +19,15 @@ const IndustryUseCases = ({ heading, usecases }) => (
             <Icon />
           </div>
           <h3 className="text-xl font-bold lg:mt-6">{title}</h3>
-          <p className="lg:my-8 lg:h-[120px]">{description}</p>
+          <p className="text-base lg:my-8 lg:h-[120px]">{description}</p>
 
           <div className=" pt-9 ">
-            <Link to={url} className="font-bold uppercase text-[#0073E5]">
+            <Link to={url} className="font-bold uppercase text-primary-1 hover:text-gray-1">
               <span className="flex items-center gap-2 ">
                 <span>Learn more</span>
 
                 <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="12"
-                    viewBox="0 0 20 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M0.884277 6H17.5816M17.5816 6L12.3637 1M17.5816 6L12.3637 11"
-                      stroke="#0073E6"
-                      strokeWidth="2"
-                    />
-                  </svg>
+                  <ArrowIcon />
                 </span>
               </span>
             </Link>

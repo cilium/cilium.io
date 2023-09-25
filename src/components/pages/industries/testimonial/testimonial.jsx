@@ -2,11 +2,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container/container';
+import Link from 'components/shared/link/link';
+import ArrowIcon from 'icons/arrow.inline.svg';
 
 const AdopterTestimonial = ({
   description,
   quotedText,
   withPerson,
+  CTAtext,
   name,
   role,
   logo: Logo,
@@ -23,32 +26,20 @@ const AdopterTestimonial = ({
             <span>
               <Logo className="w-32 lg:w-32" />
             </span>
-            <p className=" w-full max-w-none ">{description}</p>
-            <a
-              href={url}
+            <p className=" w-full max-w-none text-sm ">{description}</p>
+            <Link
+              to={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden font-bold uppercase text-[#0073E5] lg:inline-block"
+              className="hidden  text-sm font-semibold uppercase text-primary-1 hover:text-gray-1 lg:inline-block"
             >
               <span className="flex items-center gap-2">
-                <span>Learn more</span>
+                <span>{CTAtext}</span>
                 <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="12"
-                    viewBox="0 0 20 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M0.884277 6H17.5816M17.5816 6L12.3637 1M17.5816 6L12.3637 11"
-                      stroke="#0073E6"
-                      strokeWidth="2"
-                    />
-                  </svg>
+                  <ArrowIcon className="ml-1 hidden shrink-0 xs:inline-block" />
                 </span>
               </span>
-            </a>
+            </Link>
           </div>
           <div className="h-[1px] w-full bg-[#A7B1BE] lg:block lg:h-[180px] lg:w-[1px]" />
         </div>
@@ -68,38 +59,26 @@ const AdopterTestimonial = ({
               fill="#6C7993"
             />
           </svg>
-          <p>{quotedText}</p>
+          <p className="text-sm">{quotedText}</p>
           {withPerson && (
             <p>
-              <span className="font-bold">{name}</span>,{' '}
-              <span className="text-[#6C7993]">{role}</span>
+              <span className="text-sm font-bold">{name}</span>,{' '}
+              <span className="text-sm text-[#6C7993]">{role}</span>
             </p>
           )}
-          <a
-            href={url}
+          <Link
+            to={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold uppercase text-[#0073E5] lg:hidden"
+            className="text-sm font-semibold uppercase text-primary-1 hover:text-gray-1 lg:hidden"
           >
             <span className="flex items-center justify-center gap-2">
-              <span>Learn more</span>
+              <span>{CTAtext}</span>
               <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="12"
-                  viewBox="0 0 20 12"
-                  fill="none"
-                >
-                  <path
-                    d="M0.884277 6H17.5816M17.5816 6L12.3637 1M17.5816 6L12.3637 11"
-                    stroke="#0073E6"
-                    strokeWidth="2"
-                  />
-                </svg>
+                <ArrowIcon className="ml-1 hidden shrink-0 xs:inline-block" />
               </span>
             </span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -109,11 +88,20 @@ const AdopterTestimonial = ({
 AdopterTestimonial.propTypes = {
   description: PropTypes.string.isRequired,
   quotedText: PropTypes.string.isRequired,
-  withPerson: PropTypes.Boolean,
+  CTAtext: PropTypes.string,
+  withPerson: PropTypes.bool,
   name: PropTypes.string,
   logo: PropTypes.string,
   role: PropTypes.string,
-  url: PropTypes.string,
+  url: PropTypes.string.isRequired,
+};
+
+AdopterTestimonial.defaultProps = {
+  CTAtext: 'Learn More',
+  withPerson: true,
+  name: '',
+  logo: '',
+  role: '',
 };
 
 export default AdopterTestimonial;

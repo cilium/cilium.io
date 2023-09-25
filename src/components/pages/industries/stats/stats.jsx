@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-// import classNames from 'classnames';
 
+// import classNames from 'classnames';
 import Container from 'components/shared/container/container';
+import ArrowIcon from 'icons/arrow.inline.svg';
 
 const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
   const gridStyle = {
@@ -18,32 +19,25 @@ const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
   ];
 
   return (
-    <Container>
+    <Container className={className}>
       <div
         style={{ boxShadow: '0px 1px 8px 0px rgba(20, 26, 31, 0.20)' }}
-        className="rounded-xl bg-white p-6 lg:h-[264px] lg:max-h-52 lg:pl-[29px] lg:pr-[50px] lg:pt-[24px] lg:pb-[46px]"
+        className="rounded-xl bg-white p-6"
       >
         <div className=" lg:flex lg:items-center lg:gap-[29px]">
           <div className="m-auto text-center lg:text-left">
-            <Logo className="lg:h-20 lg:w-32" />
-            <p className="text-center lg:w-[285px]  lg:text-left">{description}</p>
-            <a href={url} className="hidden font-bold uppercase text-[#0073E5] lg:inline-block">
+            <Logo className="h-20 w-32" />
+            <p className="pb-3 text-center lg:w-[285px] lg:text-left lg:text-sm">{description}</p>
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden text-sm font-bold uppercase text-primary-1 hover:text-gray-1 lg:inline-block"
+            >
               <span className="flex items-center gap-2">
                 <span>{CTAtext}</span>
                 <span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="12"
-                    viewBox="0 0 20 12"
-                    fill="none"
-                  >
-                    <path
-                      d="M0.884277 6H17.5816M17.5816 6L12.3637 1M17.5816 6L12.3637 11"
-                      stroke="#0073E6"
-                      strokeWidth="2"
-                    />
-                  </svg>
+                  <ArrowIcon className="ml-1 hidden shrink-0 xs:inline-block" />
                 </span>
               </span>
             </a>
@@ -58,7 +52,7 @@ const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
                 <div
                   key={index}
                   style={gridChild}
-                  className="flex basis-1/3 items-center justify-center lg:h-[200px]  lg:border-l lg:border-[#E0E5EB]"
+                  className="flex basis-1/3 items-center justify-center lg:h-[150px]  lg:border-l lg:border-[#E0E5EB]"
                 >
                   <div className="flex flex-col items-center text-center lg:gap-8">
                     <h1 className="text-md font-bold lg:text-xl">{stat.heading}</h1>
@@ -68,23 +62,16 @@ const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
               );
             })}
           </div>
-          <a href={url} className="inline-block font-bold uppercase text-[#0073E5] lg:hidden">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block font-bold uppercase text-[#0073E5] lg:hidden"
+          >
             <span className="flex items-center gap-2">
               <span>{CTAtext}</span>
               <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="12"
-                  viewBox="0 0 20 12"
-                  fill="none"
-                >
-                  <path
-                    d="M0.884277 6H17.5816M17.5816 6L12.3637 1M17.5816 6L12.3637 11"
-                    stroke="#0073E6"
-                    strokeWidth="2"
-                  />
-                </svg>
+                <ArrowIcon className="ml-1 hidden shrink-0 xs:inline-block" />
               </span>
             </span>
           </a>

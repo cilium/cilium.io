@@ -39,6 +39,7 @@ const bloombergTestimonial = {
     'We started by looking at some other tools, and we first used [the cloud provider CNI]. But we found that Cilium, with its host-based policies and its ability to replace what we had out of the box, was really valuable.',
   withPerson: true,
   name: 'Anne Zepecki',
+  CTAtext: 'read the case study',
   role: 'Team Lead for the BQuant Enterprise Identity Management team',
   url: 'https://www.cncf.io/case-studies/bloomberg-2/',
   logo: BloombergLogo,
@@ -76,6 +77,11 @@ const postfinanceStats = {
 
 const bulletSection1 = {
   heading: 'Converging  Compliance, Security, and Modern Networking',
+  text: 'Cilium, integrated with Hubble Timescape and Tetragon, offers a unified solution that cohesively addresses each critical element of compliance, observability, security, and modern networking. With Hubble Timescape, financial institutions gain a "time machine" for observability data, enabling them to perform deep dives into historical network flows for real-time and retrospective analysis. This capability is invaluable for compliance monitoring and forensic investigations, effectively closing the loop between what is required by regulators and what is technically feasible. Cilium also excels in security, providing multi-layered network visibility from L3/L4 to L7 and cloud-native security analysis, ensuring that data in transit meets stringent compliance standards such as FIPS and PCIDSS.',
+};
+
+const bulletSection2 = {
+  heading: 'Weave Compliance and Security Throughout the DevOps process.',
   text: 'Free your Security and Operations Teams from manual checks—Cilium ensures your traffic is encrypted to the highest standards, aligning SNIs with destination DNS names and vetting certificates for trusted origins. Go beyond traditional measures by embedding compliance and security directly into your DevOps flow. From Open Banking and GDPR to PCI-DSS and ATM security, Cilium keeps you ahead of industry regulations. Embrace Kubernetes confidently, infusing your application and network lifecycle with cutting-edge policies and eliminating potential technical debts. ',
 };
 
@@ -158,12 +164,14 @@ const FinancialServices = () => (
     <Hero {...heroContent}>
       <Testimonial {...bloombergTestimonial} />
     </Hero>
-    <BulletSection {...bulletSection1} />
+    <BulletSection {...bulletSection1} className="my-8" bulletColor="additional-purple" />
+    <BulletSection {...bulletSection2} />
     <Stats className="mb-16" {...postfinanceStats} />
-    <FeaturedTalks heading="Featured talks" talks={financialTalks} />
+    <FeaturedTalks heading="Featured talks" talks={financialTalks} className="mt-8" />
     <ResourcesCard
       heading="Join Global Finance Leaders in the  Cloud Native Networking Revolution "
       resources={financialResources}
+      className="mt-8"
     />
     <IndustryUseCases
       heading="Cilium’s Solutions for Financial Services"

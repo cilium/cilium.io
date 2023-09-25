@@ -2,10 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container/container';
+import Link from 'components/shared/link/link';
+import ArrowIcon from 'icons/arrow.inline.svg';
 
-const ResourcesCard = ({ heading, resources }) => (
-  <Container>
-    <h3 className="mb-10 text-center text-[36px] font-bold">{heading}</h3>
+const ResourcesCard = ({ heading, resources, className }) => (
+  <Container className={className}>
+    <h3 className="mb-10 text-center text-3xl font-bold">{heading}</h3>
     <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
       {resources.map((resource, index) => (
         <div
@@ -18,29 +20,24 @@ const ResourcesCard = ({ heading, resources }) => (
             alt={resource.imageAlt}
             className="max-h-full w-full rounded"
           />
-          <h3 className="mt-16 mb-6 text-xl font-bold">{resource.title}</h3>
-          <p className="mb-16">{resource.description}</p>
+          <h3 className="mt-16 mb-6 text-xl font-bold leading-snug transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-22">
+            {resource.title}
+          </h3>
+          <p className="mb-16 text-base">{resource.description}</p>
 
-          <a href={resource.url} className="mx-auto text-center font-bold uppercase text-[#0073E5]">
+          <Link
+            to={resource.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto text-center text-sm font-bold uppercase text-primary-1 hover:text-gray-1"
+          >
             <span className="flex items-center gap-2 ">
               <span>{resource.CTAtext && 'Learn More'}</span>
               <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="12"
-                  viewBox="0 0 20 12"
-                  fill="none"
-                >
-                  <path
-                    d="M0.884277 6H17.5816M17.5816 6L12.3637 1M17.5816 6L12.3637 11"
-                    stroke="#0073E6"
-                    strokeWidth="2"
-                  />
-                </svg>
+                <ArrowIcon />
               </span>
             </span>
-          </a>
+          </Link>
         </div>
       ))}
     </div>
@@ -49,6 +46,7 @@ const ResourcesCard = ({ heading, resources }) => (
 
 ResourcesCard.propTypes = {
   heading: PropTypes.string.isRequired,
+  className: PropTypes.string,
   resources: PropTypes.arrayOf(
     PropTypes.shape({
       imageSrc: PropTypes.string.isRequired,
@@ -59,6 +57,10 @@ ResourcesCard.propTypes = {
       description: PropTypes.string.isRequired,
     })
   ).isRequired,
+};
+
+ResourcesCard.defaultProps = {
+  className: '',
 };
 
 export default ResourcesCard;
