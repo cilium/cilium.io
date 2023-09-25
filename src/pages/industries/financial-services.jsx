@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 
+import AdoptersLogo from 'components/pages/industries/adopters-logo/adopters-logo';
 import BulletSection from 'components/pages/industries/bullet-section';
 import FeaturedTalks from 'components/pages/industries/featured-talks';
 import Hero from 'components/pages/industries/hero';
@@ -17,6 +18,11 @@ import MainLayout from 'layouts/main';
 
 import CapitalOnefficeImage from './images/capitaloneoffice.png';
 import EncryptionIcon from './images/encryption.inline.svg';
+import GrayedBloombergLogo from './images/logos/bloomberg.svg';
+import GrayedCapitaloneLogo from './images/logos/capitalone.svg';
+import GrayedForm3Logo from './images/logos/form3.svg';
+import GrayedPostfinanceLogo from './images/logos/postfinance.svg';
+import GrayedRobinhoodLogo from './images/logos/robinhood.svg';
 import NetworkPolicyIcon from './images/network-policy.inline.svg';
 import PostFinanceOfficeImage from './images/postfinanceoffice.png';
 import RobinhoodOfficeImage from './images/robinhoodoffice.png';
@@ -159,6 +165,14 @@ const financialResources = [
   },
 ];
 
+const companyLogos = [
+  GrayedCapitaloneLogo,
+  GrayedPostfinanceLogo,
+  GrayedRobinhoodLogo,
+  GrayedBloombergLogo,
+  GrayedForm3Logo,
+];
+
 const FinancialServices = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent}>
@@ -168,6 +182,7 @@ const FinancialServices = () => (
     <BulletSection {...bulletSection2} />
     <Stats className="mb-16" {...postfinanceStats} />
     <FeaturedTalks heading="Featured talks" talks={financialTalks} className="mt-8" />
+    <AdoptersLogo logos={companyLogos} className="my-16" />
     <ResourcesCard
       heading="Join Global Finance Leaders in the  Cloud Native Networking Revolution "
       resources={financialResources}

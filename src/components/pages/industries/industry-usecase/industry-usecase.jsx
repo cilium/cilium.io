@@ -22,7 +22,7 @@ const IndustryUseCases = ({ heading, usecases }) => (
           <p className="text-base lg:my-8 lg:h-[120px]">{description}</p>
 
           <div className=" pt-9 ">
-            <Link to={url} className="font-bold uppercase text-primary-1 hover:text-gray-1">
+            <Link to={url} className="text-sm font-bold uppercase text-primary-1 hover:text-gray-1">
               <span className="flex items-center gap-2 ">
                 <span>Learn more</span>
 

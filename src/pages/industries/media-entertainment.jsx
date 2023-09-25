@@ -53,6 +53,8 @@ const seznamTestimonial = {
   name: 'Ondrej Blazek',
   role: 'Infrastructure Engineer, Seznam.com',
 };
+
+const companyLogos = [];
 const MediaEntertainment = () => (
   <MainLayout>
     <Hero {...heroContent}>
@@ -61,6 +63,7 @@ const MediaEntertainment = () => (
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
     <AdopterTestimonial {...seznamTestimonial} />
+    <AdoptersLogo />
   </MainLayout>
 );
 
