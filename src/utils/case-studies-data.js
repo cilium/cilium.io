@@ -370,8 +370,13 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Story',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/datadog/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://opensource.datadoghq.com/projects/cilium/',
         linkTarget: '_blank',
       },
     ],
