@@ -3,6 +3,7 @@ import React from 'react';
 import AdoptersLogo from 'components/pages/industries/adopters-logo/adopters-logo';
 import BulletSection from 'components/pages/industries/bullet-section';
 import Hero from 'components/pages/industries/hero';
+import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
@@ -11,11 +12,13 @@ import MediaImage1 from 'images/pages/industries/media-1.png';
 import PublicSPeakingBee from 'images/pages/industries/public-speaking-bee.png';
 import MainLayout from 'layouts/main';
 
+import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
 import GrayedByteDanceLogo from './images/logos/bytedance.svg';
 import GrayedNewYorkTimesLogo from './images/logos/newyork.svg';
 import GrayedSeznamLogo from './images/logos/seznam.svg';
 import GrayedSkyBetLogo from './images/logos/skybet.svg';
 import GrayedSportRadarLogo from './images/logos/sportradar.svg';
+import NativeSupportIcon from './images/native-support.inline.svg';
 import NewyorkTimeOfficeImage from './images/newyorkoffice.jpg';
 import SeznamOfficeImage from './images/seznamoffice.jpg';
 import YahooOfficeImage from './images/yahoooffice.png';
@@ -107,6 +110,24 @@ const companyLogos = [
   GrayedSeznamLogo,
   GrayedSportRadarLogo,
 ];
+
+const mediaUsecases = [
+  {
+    icon: NativeSupportIcon,
+    title: 'Load Balancing ',
+    description:
+      ' Leverage the Power of Cilium’s XDP Acceleration for High-Speed, Efficient Load Balancing in Your Kubernetes Cluster',
+    url: '/use-cases/load-balancer',
+  },
+  {
+    icon: BandWidthIcon,
+    title: 'Bandwidth and Latency Optimization',
+    description:
+      'Optimize TCP and UDP workload with rate limiting and fair queuing. Rely on our TCP congestion control algorithm automization ',
+    url: 'use-cases/bandwidth-optimization',
+  },
+];
+
 const MediaEntertainment = () => (
   <MainLayout>
     <Hero {...heroContent}>
@@ -119,6 +140,10 @@ const MediaEntertainment = () => (
     <ResourcesCard
       heading="See Real World Stories on Companies in the Media and Entertainment Industry"
       resources={mediaResources}
+    />
+    <IndustryUseCases
+      heading="Cilium’s Solutions for Media & Entertainment"
+      usecases={mediaUsecases}
     />
   </MainLayout>
 );
