@@ -16,6 +16,7 @@ import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
 import ExecelBee from 'images/pages/usecase/excel-bee.png';
 import MainLayout from 'layouts/main';
 
+import AuditIcon from './images/audit.inline.svg';
 import CapitalOnefficeImage from './images/capitaloneoffice.png';
 import EncryptionIcon from './images/encryption.inline.svg';
 import GrayedBloombergLogo from './images/logos/bloomberg.svg';
@@ -107,7 +108,7 @@ const financialUsecases = [
       'Maintain identity based policies effectively at scale with Cilium’s advanced network polices ',
   },
   {
-    icon: NetworkPolicyIcon,
+    icon: AuditIcon,
     title: 'Gateway API',
     url: '/use-cases/gateway-api',
     description:

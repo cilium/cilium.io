@@ -5,8 +5,16 @@ import React from 'react';
 import Container from 'components/shared/container/container';
 import HexIcon from 'icons/hex.inline.svg';
 
-// @todo remeber to pass bullet color as prop
-const BulletSection = ({ heading, text, className, bulletColor }) => (
+// @todo remember to pass bullet color as prop
+const BulletSection = ({
+  heading,
+  text,
+  className,
+  bulletColor,
+  withImage,
+  imageSrc,
+  imageAlt,
+}) => (
   <Container>
     <div className={classNames('py-10', className)}>
       <div className="lg:flex lg:items-start lg:gap-[42px]">
@@ -16,9 +24,12 @@ const BulletSection = ({ heading, text, className, bulletColor }) => (
             className="hidden  shrink-0  lg:inline-block lg:h-8 lg:w-8"
           />
         </span>
-        <div>
+        <div className="">
           <h2 className="text-2xl font-bold lg:pb-6">{heading}</h2>
-          <p>{text}</p>
+          <div className="items-center lg:flex lg:gap-12">
+            <p className="grow">{text}</p>
+            {withImage && <img className="w-1/2 grow" src={imageSrc} alt={imageAlt} />}
+          </div>
         </div>
       </div>
     </div>
@@ -30,11 +41,17 @@ BulletSection.propTypes = {
   text: PropTypes.string.isRequired,
   className: PropTypes.string,
   bulletColor: PropTypes.string,
+  imageSrc: PropTypes.string,
+  imageAlt: PropTypes.string,
+  withImage: PropTypes.bool,
 };
 
 BulletSection.defaultProps = {
   className: {},
   bulletColor: 'additional-blue',
+  withImage: false,
+  imageSrc: '',
+  imageAlt: '',
 };
 
 export default BulletSection;

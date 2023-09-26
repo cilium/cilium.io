@@ -3,17 +3,28 @@ import React from 'react';
 import AdoptersLogo from 'components/pages/industries/adopters-logo/adopters-logo';
 import BulletSection from 'components/pages/industries/bullet-section';
 import Hero from 'components/pages/industries/hero';
+import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
+import MediaImage1 from 'images/pages/industries/media-1.png';
 import PublicSPeakingBee from 'images/pages/industries/public-speaking-bee.png';
 import MainLayout from 'layouts/main';
+
+import GrayedByteDanceLogo from './images/logos/bytedance.svg';
+import GrayedNewYorkTimesLogo from './images/logos/newyork.svg';
+import GrayedSeznamLogo from './images/logos/seznam.svg';
+import GrayedSkyBetLogo from './images/logos/skybet.svg';
+import GrayedSportRadarLogo from './images/logos/sportradar.svg';
+import NewyorkTimeOfficeImage from './images/newyorkoffice.jpg';
+import SeznamOfficeImage from './images/seznamoffice.jpg';
+import YahooOfficeImage from './images/yahoooffice.png';
 
 const heroContent = {
   heading: 'Media and Entertainment',
   texts: [
     'The Media and Entertainment industry is navigating a digital transformation era with scalability, security, and latency challenges—traditional tooling struggles to handle rising consumer demands for high-quality, on-demand media. Security vulnerabilities can threaten valuable content and customer data, while latency issues undermine user experience. These challenges are compounded by rising operational costs and increasingly stringent regulatory environments.',
-    'Cilium is designed to provide high-performance, secure, and scalable networking and observability. It offers a wide range of features, helping companies in the media and entertainment industry deliver seamless experiences, reduce operational complexity, and secure their environment.',
+    'Cilium is designed to provide high-performance, secure, and scalable networking and observability. It offers a wide range of features, helping companies in the media and entertainment industry deliver seamless experiences, reduce operational complexity, and secure their environment. ',
   ],
   imageSrc: PublicSPeakingBee,
   imageAlt: 'isovalent public speaking bee',
@@ -35,6 +46,9 @@ const bulletSection1 = {
   heading:
     'Enhance Content Delivery and User Experience with Cilium’s Transparent Acceleration and  Load Balancing ',
   text: 'Streaming platforms and content delivery services need to scale rapidly to meet the ever-growing consumer demands for high-quality and on-demand media. Cilium offers intelligent load balancing, ensuring that the high volume of user requests typical for OTT platforms is distributed efficiently. This results in consistent and smooth streaming experiences for end-users By leveraging XDP (eXpress Data Path), Cilium optimizes the datapath, significantly reducing latency. For an industry that thrives on seamless content delivery, this is paramount.',
+  withImage: true,
+  imageSrc: MediaImage1,
+  imageAlt: 'cilium xdp',
 };
 
 const bulletSection2 = {
@@ -54,7 +68,45 @@ const seznamTestimonial = {
   role: 'Infrastructure Engineer, Seznam.com',
 };
 
-const companyLogos = [];
+const mediaResources = [
+  {
+    imageSrc: YahooOfficeImage,
+    imageAlt: 'yahoo office building',
+    title: 'Software L4 Load Balancing for Kubernetes Services at Yahoo',
+    CTAtext: 'Watch the Talk',
+    url: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
+    description:
+      'Yahoo improved load balancing performance and scalability by switching to Cilium L4 LB with XDP, achieving hardware-level efficiency and dynamic backend management.',
+  },
+
+  {
+    imageSrc: NewyorkTimeOfficeImage,
+    imageAlt: 'newyork times  office building',
+    title: 'Designing and Securing a Multi-Tenant Runtime Environment at the New York Times',
+    CTAtext: 'Watch the Talk',
+    url: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
+    description:
+      'Yahoo improved load balancing performance and scalability by switching to Cilium L4 LB with XDP, achieving hardware-level efficiency and dynamic backend management.',
+  },
+
+  {
+    imageSrc: SeznamOfficeImage,
+    imageAlt: 'newyork times  office building',
+    title: "From IPVS to L4LB XDP: Seznam.cz's Journey to Optimized Load Balancing",
+    CTAtext: 'Read The Blog Post',
+    url: 'https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/',
+    description:
+      "Seznam.cz, a Czech tech company, tested Cilium's Layer 4 Load Balancer XDP against their existing IPVS system and found significant CPU efficiency gains.",
+  },
+];
+
+const companyLogos = [
+  GrayedByteDanceLogo,
+  GrayedNewYorkTimesLogo,
+  GrayedSkyBetLogo,
+  GrayedSeznamLogo,
+  GrayedSportRadarLogo,
+];
 const MediaEntertainment = () => (
   <MainLayout>
     <Hero {...heroContent}>
@@ -63,13 +115,17 @@ const MediaEntertainment = () => (
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
     <AdopterTestimonial {...seznamTestimonial} />
-    <AdoptersLogo />
+    <AdoptersLogo className="my-16" logos={companyLogos} />
+    <ResourcesCard
+      heading="See Real World Stories on Companies in the Media and Entertainment Industry"
+      resources={mediaResources}
+    />
   </MainLayout>
 );
 
 export default MediaEntertainment;
 
-export const Head = ({ location: { pathname } }) => {
-  const pageMetadata = { ...seo, slug: pathname };
-  return <SEO data={pageMetadata} />;
-};
+// export const Head = ({ location: { pathname } }) => {
+//   const pageMetadata = { ...seo, slug: pathname };
+//   return <SEO data={pageMetadata} />;
+// };

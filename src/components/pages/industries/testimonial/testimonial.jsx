@@ -59,7 +59,7 @@ const AdopterTestimonial = ({
               fill="#6C7993"
             />
           </svg>
-          <p className="text-sm">{quotedText}</p>
+          <p className="px-4 text-sm">{quotedText}</p>
           {withPerson && (
             <p>
               <span className="text-sm font-bold">{name}</span>,{' '}
