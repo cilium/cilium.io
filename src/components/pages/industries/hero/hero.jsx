@@ -8,9 +8,11 @@ const Hero = ({ children, heading, texts, imageSrc, imageAlt }) => (
     <Container>
       <div className="items-center justify-between lg:flex">
         <div>
-          <h2 className="py-10 text-3xl font-bold lg:text-4xl">{heading}</h2>
+          <h2 className="mt-2.5 mb-3 py-10 text-3xl font-bold leading-tight lg:text-4xl lg:leading-tight xl:!text-44 xl:leading-tight">
+            {heading}
+          </h2>
           <div className="items-start justify-start gap-[103px] lg:flex">
-            <div className="flex flex-col gap-6 lg:flex lg:w-[610px] lg:flex-col lg:gap-6">
+            <div className="flex flex-col gap-6 text-base leading-normal lg:flex lg:w-[610px] lg:flex-col lg:gap-6">
               {texts.map((text, index) => (
                 <p key={index}>{text}</p>
               ))}

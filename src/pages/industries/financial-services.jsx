@@ -21,8 +21,11 @@ import CapitalOnefficeImage from './images/capitaloneoffice.png';
 import EncryptionIcon from './images/encryption.inline.svg';
 import GrayedBloombergLogo from './images/logos/bloomberg.svg';
 import GrayedCapitaloneLogo from './images/logos/capitalone.svg';
+import GrayedEt888Logo from './images/logos/et888.svg';
 import GrayedForm3Logo from './images/logos/form3.svg';
+import GrayedJumoLogo from './images/logos/jumo.svg';
 import GrayedPostfinanceLogo from './images/logos/postfinance.svg';
+import GrayedQwistLogo from './images/logos/qwist.svg';
 import GrayedRobinhoodLogo from './images/logos/robinhood.svg';
 import NetworkPolicyIcon from './images/network-policy.inline.svg';
 import PostFinanceOfficeImage from './images/postfinanceoffice.png';
@@ -84,7 +87,7 @@ const postfinanceStats = {
 
 const bulletSection1 = {
   heading: 'Converging  Compliance, Security, and Modern Networking',
-  text: 'Cilium, integrated with Hubble Timescape and Tetragon, offers a unified solution that cohesively addresses each critical element of compliance, observability, security, and modern networking. With Hubble Timescape, financial institutions gain a "time machine" for observability data, enabling them to perform deep dives into historical network flows for real-time and retrospective analysis. This capability is invaluable for compliance monitoring and forensic investigations, effectively closing the loop between what is required by regulators and what is technically feasible. Cilium also excels in security, providing multi-layered network visibility from L3/L4 to L7 and cloud-native security analysis, ensuring that data in transit meets stringent compliance standards such as FIPS and PCIDSS.',
+  text: 'Cilium, integrated with Hubble and Tetragon, offers a unified solution that cohesively addresses each critical element of compliance, observability, security, and modern networking. With Hubble and Tetragon, financial institutions gain complete network observability data, enabling them to perform deep dives into network flows for real-time analysis. This capability is invaluable for compliance monitoring and forensic investigations, effectively closing the loop between what is required by regulators and what is technically feasible. Cilium also excels in security, providing multi-layered network visibility from L3/L4 to L7 and cloud native security analysis, ensuring that data in transit meets stringent compliance standards such as FIPS and PCIDSS.',
 };
 
 const bulletSection2 = {
@@ -118,9 +121,10 @@ const financialUsecases = [
 
 const financialTalks = [
   {
-    title: "eBPF - The Capital Market's Perspective - Alex Mackenzie",
-    description: 'Alex Mackenzie, Tapestry Ventures',
-    videoSrc: 'https://www.youtube.com/embed/2jNCQwgy0fI',
+    title: "eBPF, a road to invisible network: S&P Global's Network Transformation Journey",
+    description:
+      'Guru Ramamoorthy talks on how S&P Global’s network engineers leveraged eBPF-based networking with Cilium to power their application.',
+    videoSrc: 'https://www.youtube.com/embed/6CZ_SSTqb4g',
   },
   {
     title: 'Cilium in Practice: Building Data Sandboxes at Bloomberg',
@@ -172,6 +176,9 @@ const companyLogos = [
   GrayedRobinhoodLogo,
   GrayedBloombergLogo,
   GrayedForm3Logo,
+  GrayedEt888Logo,
+  GrayedJumoLogo,
+  GrayedQwistLogo,
 ];
 
 const FinancialServices = () => (
@@ -183,7 +190,7 @@ const FinancialServices = () => (
     <BulletSection {...bulletSection2} />
     <Stats className="mb-16" {...postfinanceStats} />
     <FeaturedTalks heading="Featured talks" talks={financialTalks} className="mt-8" />
-    <AdoptersLogo logos={companyLogos} className="my-16" />
+    <AdoptersLogo logos={companyLogos} className="my-16 lg:grid lg:grid-cols-4" />
     <ResourcesCard
       heading="Join Global Finance Leaders in the  Cloud Native Networking Revolution "
       resources={financialResources}

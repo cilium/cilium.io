@@ -6,11 +6,9 @@ import Container from 'components/shared/container/container';
 
 const AdoptersLogo = ({ logos, className }) => (
   <Container>
-    <div
-      className={classNames(className, 'mx-auto text-center lg:grid lg:grid-cols-5 lg:gap-y-[8px]')}
-    >
+    <div className={classNames('mx-auto text-center lg:gap-y-[8px]', className)}>
       {logos.map((Logo, index) => (
-        <img src={Logo} alt="" key={index} className="max-h-[90px] max-w-[200px]" />
+        <img src={Logo} alt="adopter logos " key={index} className="max-h-[90px] max-w-[200px]" />
       ))}
     </div>
   </Container>
@@ -21,7 +19,7 @@ AdoptersLogo.propTypes = {
 };
 
 AdoptersLogo.defaultProps = {
-  className: '',
+  className: 'lg:grid lg:grid-cols-5',
 };
 
 export default AdoptersLogo;
