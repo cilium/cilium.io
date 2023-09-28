@@ -370,7 +370,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Story',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/datadog/',
         linkTarget: '_blank',
       },
