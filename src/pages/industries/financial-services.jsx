@@ -87,12 +87,16 @@ const postfinanceStats = {
 
 const bulletSection1 = {
   heading: 'Converging  Compliance, Security, and Modern Networking',
-  text: 'Cilium, integrated with Hubble and Tetragon, offers a unified solution that cohesively addresses each critical element of compliance, observability, security, and modern networking. With Hubble and Tetragon, financial institutions gain complete network observability data, enabling them to perform deep dives into network flows for real-time analysis. This capability is invaluable for compliance monitoring and forensic investigations, effectively closing the loop between what is required by regulators and what is technically feasible. Cilium also excels in security, providing multi-layered network visibility from L3/L4 to L7 and cloud native security analysis, ensuring that data in transit meets stringent compliance standards such as FIPS and PCIDSS.',
+  paragraphs: [
+    'Cilium, integrated with Hubble and Tetragon, offers a unified solution that cohesively addresses each critical element of compliance, observability, security, and modern networking. With Hubble and Tetragon, financial institutions gain complete network observability data, enabling them to perform deep dives into network flows for real-time analysis. This capability is invaluable for compliance monitoring and forensic investigations, effectively closing the loop between what is required by regulators and what is technically feasible. Cilium also excels in security, providing multi-layered network visibility from L3/L4 to L7 and cloud native security analysis, ensuring that data in transit meets stringent compliance standards such as FIPS and PCIDSS.',
+  ],
 };
 
 const bulletSection2 = {
   heading: 'Weave Compliance and Security Throughout the DevOps process.',
-  text: 'Free your Security and Operations Teams from manual checks—Cilium ensures your traffic is encrypted to the highest standards, aligning SNIs with destination DNS names and vetting certificates for trusted origins. Go beyond traditional measures by embedding compliance and security directly into your DevOps flow. From Open Banking and GDPR to PCI-DSS and ATM security, Cilium keeps you ahead of industry regulations. Embrace Kubernetes confidently, infusing your application and network lifecycle with cutting-edge policies and eliminating potential technical debts. ',
+  paragraphs: [
+    'Free your Security and Operations Teams from manual checks—Cilium ensures your traffic is encrypted to the highest standards, aligning SNIs with destination DNS names and vetting certificates for trusted origins. Go beyond traditional measures by embedding compliance and security directly into your DevOps flow. From Open Banking and GDPR to PCI-DSS and ATM security, Cilium keeps you ahead of industry regulations. Embrace Kubernetes confidently, infusing your application and network lifecycle with cutting-edge policies and eliminating potential technical debts. ',
+  ],
 };
 
 const financialUsecases = [

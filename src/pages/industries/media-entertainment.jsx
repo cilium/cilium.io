@@ -15,9 +15,12 @@ import MainLayout from 'layouts/main';
 import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
 import GrayedByteDanceLogo from './images/logos/bytedance.svg';
 import GrayedNewYorkTimesLogo from './images/logos/newyork.svg';
+import GrayedRadiofranceLogo from './images/logos/radiofrance.svg';
 import GrayedSeznamLogo from './images/logos/seznam.svg';
 import GrayedSkyBetLogo from './images/logos/skybet.svg';
 import GrayedSportRadarLogo from './images/logos/sportradar.svg';
+import GrayedWildLifeLogo from './images/logos/wildlife.svg';
+import GrayedYahooLogo from './images/logos/yahoo.svg';
 import NativeSupportIcon from './images/native-support.inline.svg';
 import NewyorkTimeOfficeImage from './images/newyorkoffice.jpg';
 import SeznamOfficeImage from './images/seznamoffice.jpg';
@@ -48,8 +51,11 @@ const newyorktimesTestimonial = {
 const bulletSection1 = {
   heading:
     'Enhance Content Delivery and User Experience with Cilium’s Transparent Acceleration and  Load Balancing ',
-  text: 'Streaming platforms and content delivery services need to scale rapidly to meet the ever-growing consumer demands for high-quality and on-demand media. Cilium offers intelligent load balancing, ensuring that the high volume of user requests typical for OTT platforms is distributed efficiently. This results in consistent and smooth streaming experiences for end-users By leveraging XDP (eXpress Data Path), Cilium optimizes the datapath, significantly reducing latency. For an industry that thrives on seamless content delivery, this is paramount.',
   withImage: true,
+  paragraphs: [
+    'Streaming platforms and content delivery services need to scale rapidly to meet the ever-growing consumer demands for high-quality and on-demand media. Cilium offers intelligent load balancing, ensuring that the high volume of user requests typical for OTT platforms are distributed efficiently. This results in consistent content and smooth streaming experiences for end users.',
+    'By leveraging technologies like XDP (eXpress Data Path), bandwidth manager, and BIG TCP, Cilium optimizes the datapath, significantly reducing latency. For an industry that thrives on seamless content delivery, this is paramount.',
+  ],
   imageSrc: MediaImage1,
   imageAlt: 'cilium xdp',
 };
@@ -109,6 +115,9 @@ const companyLogos = [
   GrayedSkyBetLogo,
   GrayedSeznamLogo,
   GrayedSportRadarLogo,
+  GrayedRadiofranceLogo,
+  GrayedWildLifeLogo,
+  GrayedYahooLogo,
 ];
 
 const mediaUsecases = [
@@ -136,7 +145,7 @@ const MediaEntertainment = () => (
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
     <AdopterTestimonial {...seznamTestimonial} />
-    <AdoptersLogo className="my-16" logos={companyLogos} />
+    <AdoptersLogo className="my-16 lg:grid lg:grid-cols-4" logos={companyLogos} />
     <ResourcesCard
       heading="See Real World Stories on Companies in the Media and Entertainment Industry"
       resources={mediaResources}
