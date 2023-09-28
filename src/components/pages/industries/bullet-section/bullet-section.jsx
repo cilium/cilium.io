@@ -18,12 +18,12 @@ const BulletSection = ({
   <Container>
     <div className={classNames('py-10', className)}>
       <div className="lg:flex lg:items-start lg:gap-[42px]">
-        <span className="text-primary-1">
+        {/* <span className="text-primary-1">
           <HexIcon
             fill="currentColor"
             className="hidden  shrink-0  lg:inline-block lg:h-8 lg:w-8"
           />
-        </span>
+        </span> */}
         <div className="">
           <h2 className="text-2xl font-bold lg:pb-6">{heading}</h2>
           <div className="items-center lg:flex lg:gap-12">
