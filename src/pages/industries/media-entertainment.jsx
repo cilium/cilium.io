@@ -62,7 +62,9 @@ const bulletSection1 = {
 
 const bulletSection2 = {
   heading: 'Robust Security, Scalability, and Flexibility at a Reduced Operational Overhead',
-  text: "In the media and entertainment industry, safeguarding proprietary content and user data is critical. Cilium, leveraging BPF, allows for efficient workload isolation, ensuring a breach in one segment doesn't jeopardize the entire ecosystem. As platforms expand, Cilium's adaptability meets changing network demands. Moreover, with Kubernetes as the go-to for containerized applications, Cilium's integration empowers companies to deploy and scale with unparalleled efficiency.",
+  paragraphs: [
+    "In the media and entertainment industry, safeguarding proprietary content and user data is critical. Cilium, leveraging BPF, allows for efficient workload isolation, ensuring a breach in one segment doesn't jeopardize the entire ecosystem. As platforms expand, Cilium's adaptability meets changing network demands. Moreover, with Kubernetes as the go-to for containerized applications, Cilium's integration empowers companies to deploy and scale with unparalleled efficiency.",
+  ],
 };
 
 const seznamTestimonial = {
