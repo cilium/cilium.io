@@ -33,11 +33,6 @@ const datadog = {
       linkUrl: 'https://www.youtube.com/watch?v=6mTVuZUHLBg&ab_channel=eBPFSummit',
       linkTarget: '_blank',
     },
-    {
-      linkText: 'Read blog',
-      linkUrl: 'https://opensource.datadoghq.com/projects/cilium/',
-      linkTarget: '_blank',
-    },
   ],
 };
 
