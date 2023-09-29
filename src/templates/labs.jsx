@@ -3,11 +3,11 @@ import React from 'react';
 
 import Banner from 'components/pages/labs/banner';
 import Card from 'components/pages/labs/card';
-import Categories from 'components/pages/labs/categories';
 import Pagination from 'components/pages/labs/pagination';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import SEO from 'components/shared/seo';
+import Tabs from 'components/shared/tabs';
 import MainLayout from 'layouts/main';
 
 const data = {
@@ -29,7 +29,15 @@ const LabsPage = (props) => {
             {data.title}
           </Heading>
           <p className="mt-4 w-full text-center text-lg text-black">{data.description}</p>
-          <Categories id="categories" categories={categories} currentCategory={currentCategory} />
+          <Tabs
+            id="categories"
+            type="labs"
+            defaultTabTitle="All labs"
+            items={categories}
+            active={currentCategory}
+            align="center"
+            className="mt-6 md:mt-12"
+          />
           <div className="mt-10 grid gap-6 sm:grid-cols-2 md:gap-7 lg:mt-20 lg:grid-cols-3 xl:gap-8">
             {labs.map(({ node: { frontmatter: lab } }, index) => (
               <Card {...lab} titleTag="h2" key={index} />

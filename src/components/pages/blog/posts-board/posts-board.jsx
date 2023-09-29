@@ -3,9 +3,9 @@ import React, { useEffect } from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import Tabs from 'components/shared/tabs';
 
 import BlogPostsList from './blog-posts-list';
-import Categories from './categories';
 import Pagination from './pagination';
 
 const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
@@ -29,7 +29,13 @@ const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages 
     <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
         <Heading tag="h2">{blockTitle}</Heading>
-        <Categories id="categories" categories={categories} currentCategory={currentCategory} />
+        <Tabs
+          id="categories"
+          type="blog"
+          items={categories}
+          active={currentCategory}
+          className="mt-6 md:mt-10 lg:mt-14"
+        />
         <BlogPostsList posts={posts} />
         <Pagination
           currentPage={currentPage}

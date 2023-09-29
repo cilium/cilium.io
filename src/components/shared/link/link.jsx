@@ -40,7 +40,7 @@ const Link = ({
   const smoothScroll = (to) => {
     const elementId = to.slice(2);
     const section = document.getElementById(elementId);
-    section.scrollIntoView({ behavior: 'smooth' });
+    section.scrollIntoView({ behavior: smooth });
   };
 
   const content = type === 'arrow' ? <span>{children}</span> : children;
@@ -91,7 +91,7 @@ const Link = ({
 Link.propTypes = {
   className: PropTypes.string,
   to: PropTypes.string.isRequired,
-  smooth: PropTypes.string.isRequired,
+  smooth: PropTypes.string,
   type: PropTypes.oneOf(Object.keys(themeClassNames)),
   theme: PropTypes.oneOf(
     [
@@ -105,6 +105,7 @@ Link.defaultProps = {
   className: null,
   type: null,
   theme: null,
+  smooth: 'smooth',
 };
 
 export default Link;
