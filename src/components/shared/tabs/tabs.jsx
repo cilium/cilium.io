@@ -14,7 +14,7 @@ const Tabs = ({ id, type, items, active, defaultTabTitle, align, className }) =>
   <div
     id={id}
     className={classNames(
-      'no-scrollbar flex flex-row overflow-x-auto xl:flex-wrap xl:overflow-visible',
+      'no-scrollbar -mx-4 flex flex-row overflow-x-auto px-4 md:-mx-6 md:px-6 lg:mx-0 lg:px-0 xl:flex-wrap xl:overflow-visible',
       alignStyles[align],
       className
     )}
