@@ -7,7 +7,7 @@ import filterToSlug from 'utils/filter-to-slug';
 
 const alignStyles = {
   left: 'justify-start',
-  center: 'justify-start md:justify-center',
+  center: 'justify-start sm:justify-center',
 };
 
 const Tabs = ({ id, type, items, active, defaultTabTitle, align, className }) => (
