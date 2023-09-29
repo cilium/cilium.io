@@ -14,8 +14,9 @@ const AdopterTestimonial = ({
   role,
   logo: Logo,
   url,
+  className,
 }) => (
-  <Container className="">
+  <Container className={className}>
     <div
       className="rounded-xl bg-white px-8 py-6"
       style={{ boxShadow: '0px 1px 8px 0px rgba(20, 26, 31, 0.20)' }}
@@ -90,6 +91,7 @@ AdopterTestimonial.propTypes = {
   quotedText: PropTypes.string.isRequired,
   CTAtext: PropTypes.string,
   withPerson: PropTypes.bool,
+  className: PropTypes.string,
   name: PropTypes.string,
   logo: PropTypes.string,
   role: PropTypes.string,
@@ -98,6 +100,7 @@ AdopterTestimonial.propTypes = {
 
 AdopterTestimonial.defaultProps = {
   CTAtext: 'Learn More',
+  className: '',
   withPerson: true,
   name: '',
   logo: '',

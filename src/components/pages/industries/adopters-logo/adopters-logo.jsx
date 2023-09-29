@@ -8,7 +8,7 @@ const AdoptersLogo = ({ logos, className }) => (
   <Container>
     <div className={classNames('mx-auto text-center lg:gap-y-[8px]', className)}>
       {logos.map((Logo, index) => (
-        <img src={Logo} alt="adopter logos " key={index} className="max-h-[90px] max-w-[200px]" />
+        <img src={Logo} alt="adopter logos" key={index} className="max-w-[200px] lg:max-h-[90px]" />
       ))}
     </div>
   </Container>

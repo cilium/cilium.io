@@ -1,10 +1,11 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container/container';
 
-const Hero = ({ children, heading, texts, imageSrc, imageAlt }) => (
-  <section className="bg-[#F6F7F8] lg:pb-24">
+const Hero = ({ children, heading, texts, imageSrc, imageAlt, imageStyle, className }) => (
+  <section className={classNames('bg-[#F6F7F8] lg:pb-24', className)}>
     <Container>
       <div className="items-center justify-between lg:flex">
         <div>
@@ -17,9 +18,8 @@ const Hero = ({ children, heading, texts, imageSrc, imageAlt }) => (
                 <p key={index}>{text}</p>
               ))}
             </div>
-
             <figure>
-              <img src={imageSrc} alt={imageAlt} className="h-[470px] w-[470px] lg:-mt-16" />
+              <img src={imageSrc} alt={imageAlt} className={classNames('lg:-mt-16', imageStyle)} />
             </figure>
           </div>
         </div>
@@ -32,8 +32,15 @@ Hero.propTypes = {
   heading: PropTypes.string.isRequired,
   imageSrc: PropTypes.string.isRequired,
   imageAlt: PropTypes.string.isRequired,
+  imageStyle: PropTypes.string,
+  className: PropTypes.string,
   texts: PropTypes.arrayOf(PropTypes.string).isRequired,
   children: PropTypes.node.isRequired,
+};
+
+Hero.defaultProps = {
+  imageStyle: 'lg:h-[470px] lg:w-[470px] lg:-mt-16',
+  className: '',
 };
 
 export default Hero;

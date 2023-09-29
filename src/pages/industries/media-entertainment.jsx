@@ -8,7 +8,8 @@ import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
-import MediaImage1 from 'images/pages/industries/media-1.png';
+import MediaImage1 from 'images/pages/industries/media-1.webp';
+import MediaImage2 from 'images/pages/industries/media-2.png';
 import PublicSPeakingBee from 'images/pages/industries/public-speaking-bee.png';
 import MainLayout from 'layouts/main';
 
@@ -22,8 +23,9 @@ import GrayedSportRadarLogo from './images/logos/sportradar.svg';
 import GrayedWildLifeLogo from './images/logos/wildlife.svg';
 import GrayedYahooLogo from './images/logos/yahoo.svg';
 import NativeSupportIcon from './images/native-support.inline.svg';
-import NewyorkTimeOfficeImage from './images/newyorkoffice.jpg';
-import SeznamOfficeImage from './images/seznamoffice.jpg';
+import NewyorkTimeOfficeImage from './images/newyorkoffice.png';
+import ServiceMapIcon from './images/service-map.inline.svg';
+import SkyOfficeImage from './images/skyoffice.png';
 import YahooOfficeImage from './images/yahoooffice.png';
 
 const heroContent = {
@@ -57,14 +59,18 @@ const bulletSection1 = {
     'By leveraging technologies like XDP (eXpress Data Path), bandwidth manager, and BIG TCP, Cilium optimizes the datapath, significantly reducing latency. For an industry that thrives on seamless content delivery, this is paramount.',
   ],
   imageSrc: MediaImage1,
-  imageAlt: 'cilium xdp',
+  imageAlt: 'cilium big tcp stats',
 };
 
 const bulletSection2 = {
   heading: 'Robust Security, Scalability, and Flexibility at a Reduced Operational Overhead',
   paragraphs: [
-    "In the media and entertainment industry, safeguarding proprietary content and user data is critical. Cilium, leveraging BPF, allows for efficient workload isolation, ensuring a breach in one segment doesn't jeopardize the entire ecosystem. As platforms expand, Cilium's adaptability meets changing network demands. Moreover, with Kubernetes as the go-to for containerized applications, Cilium's integration empowers companies to deploy and scale with unparalleled efficiency.",
+    'Safeguarding content and user data is vital in media and entertainment. Cilium enables efficient workload isolation, protecting the entire ecosystem from potential breaches. As platforms grow, Cilium adapts to shifting network needs. ',
+    "Cilium integrates with both traditional and cloud-native infrastructures. Companies like Cosmonic have extended Cilium beyond Kubernetes to platforms like Nomad. In scenarios where it is impossible to use Cilium as the Default CNI, Cilium's CNI chaining mode lets you utilize Cilium's features like Hubble for observability and Tetragon for security, ensuring organizations can benefit from Cilium regardless of their infrastructure choices.",
   ],
+  withImage: true,
+  imageSrc: MediaImage2,
+  imageAlt: 'cilium xdp',
 };
 
 const seznamTestimonial = {
@@ -101,13 +107,13 @@ const mediaResources = [
   },
 
   {
-    imageSrc: SeznamOfficeImage,
-    imageAlt: 'newyork times  office building',
-    title: "From IPVS to L4LB XDP: Seznam.cz's Journey to Optimized Load Balancing",
+    imageSrc: SkyOfficeImage,
+    imageAlt: 'sky group  office building',
+    title: 'Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev Teams)',
     CTAtext: 'Read The Blog Post',
-    url: 'https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/',
+    url: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
     description:
-      "Seznam.cz, a Czech tech company, tested Cilium's Layer 4 Load Balancer XDP against their existing IPVS system and found significant CPU efficiency gains.",
+      'Sky required a performant and secure solution to help them implement zero-trust network security and landed on leveraging additional features in Cilium as the answer.',
   },
 ];
 
@@ -135,18 +141,26 @@ const mediaUsecases = [
     title: 'Bandwidth and Latency Optimization',
     description:
       'Optimize TCP and UDP workload with rate limiting and fair queuing. Rely on our TCP congestion control algorithm automization ',
-    url: 'use-cases/bandwidth-optimization',
+    url: '/use-cases/bandwidth-optimization',
+  },
+
+  {
+    icon: ServiceMapIcon,
+    title: 'Service Map',
+    description:
+      'Enable platform teams to provide self-service portal to app teams to observe their own workloads, dependencies, and flows.',
+    url: '/use-cases/service-map',
   },
 ];
 
 const MediaEntertainment = () => (
   <MainLayout>
-    <Hero {...heroContent}>
+    <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
       <AdopterTestimonial {...newyorktimesTestimonial} />
     </Hero>
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
-    <AdopterTestimonial {...seznamTestimonial} />
+    <AdopterTestimonial {...seznamTestimonial} className="mt-8 pb-8" />
     <AdoptersLogo className="my-16 lg:grid lg:grid-cols-4" logos={companyLogos} />
     <ResourcesCard
       heading="See Real World Stories on Companies in the Media and Entertainment Industry"

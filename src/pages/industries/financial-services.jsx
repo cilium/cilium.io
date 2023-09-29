@@ -16,8 +16,8 @@ import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
 import ExecelBee from 'images/pages/usecase/excel-bee.png';
 import MainLayout from 'layouts/main';
 
-import AuditIcon from './images/audit.inline.svg';
 import CapitalOnefficeImage from './images/capitaloneoffice.png';
+import EgressGatewayIcon from './images/egress-gateway.inline.svg';
 import EncryptionIcon from './images/encryption.inline.svg';
 import GrayedBloombergLogo from './images/logos/bloomberg.svg';
 import GrayedCapitaloneLogo from './images/logos/capitalone.svg';
@@ -115,11 +115,11 @@ const financialUsecases = [
       'Maintain identity based policies effectively at scale with Cilium’s advanced network polices ',
   },
   {
-    icon: AuditIcon,
-    title: 'Gateway API',
-    url: '/use-cases/gateway-api',
+    icon: EgressGatewayIcon,
+    title: 'Egress Gateway',
+    url: '/use-cases/egress-gateway',
     description:
-      'Gateway API is the future of Kubernetes Ingress networking. The Cilium Gateway API supports use cases such as HTTP routing, traffic splitting/weighting, header modification, and TLS termination. ',
+      'Present a group of cloud native workloads from a stable IP address to integrate with traditional firewalls.',
   },
 ];
 
@@ -187,7 +187,7 @@ const companyLogos = [
 
 const FinancialServices = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent}>
+    <Hero {...heroContent} imageStyle="lg:h-[470px] lg:w-[470px] lg:-mt-16">
       <Testimonial {...bloombergTestimonial} />
     </Hero>
     <BulletSection {...bulletSection1} className="my-8" bulletColor="additional-purple" />

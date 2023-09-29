@@ -6,7 +6,7 @@ import Container from 'components/shared/container/container';
 
 const BulletSection = ({ heading, className, withImage, imageSrc, paragraphs, imageAlt }) => (
   <Container>
-    <div className={classNames('py-10', className)}>
+    <div className={classNames('py-8', className)}>
       <div className="lg:flex lg:items-start lg:gap-[42px]">
         <div className="">
           <h2 className="text-2xl font-bold lg:pb-6">{heading}</h2>
@@ -17,7 +17,7 @@ const BulletSection = ({ heading, className, withImage, imageSrc, paragraphs, im
               ))}
             </div>
 
-            {withImage && <img className="w-1/2 grow" src={imageSrc} alt={imageAlt} />}
+            {withImage && <img className="w-full lg:w-1/2 lg:grow" src={imageSrc} alt={imageAlt} />}
           </div>
         </div>
       </div>

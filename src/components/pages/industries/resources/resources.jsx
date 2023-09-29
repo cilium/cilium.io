@@ -27,9 +27,9 @@ const ResourcesCard = ({ heading, resources, className }) => (
             to={resource.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="mx-auto text-center text-sm font-bold uppercase text-primary-1 hover:text-gray-1"
+            className="mx-auto text-center"
           >
-            <span className="flex items-center gap-2 ">
+            <span className="flex items-center gap-2 text-sm font-bold uppercase text-primary-1  hover:text-gray-1 ">
               <span>{resource.CTAtext && 'Learn More'}</span>
               <span>
                 <ArrowIcon />
