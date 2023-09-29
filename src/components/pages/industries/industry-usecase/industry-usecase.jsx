@@ -7,7 +7,7 @@ import ArrowIcon from 'icons/arrow.inline.svg';
 
 const IndustryUseCases = ({ heading, usecases }) => (
   <Container>
-    <h2 className="text-center text-3xl font-bold lg:my-20">{heading}</h2>
+    <h2 className="my-20 text-center text-3xl font-bold">{heading}</h2>
     <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
       {usecases.map(({ icon: Icon, description, title, url }, index) => (
         <div

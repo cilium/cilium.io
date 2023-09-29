@@ -161,7 +161,7 @@ const MediaEntertainment = () => (
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
     <AdopterTestimonial {...seznamTestimonial} className="mt-8 pb-8" />
-    <AdoptersLogo className="my-16 lg:grid lg:grid-cols-4" logos={companyLogos} />
+    <AdoptersLogo className="my-16 grid grid-cols-4" logos={companyLogos} />
     <ResourcesCard
       heading="See Real World Stories on Companies in the Media and Entertainment Industry"
       resources={mediaResources}
