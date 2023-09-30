@@ -57,7 +57,7 @@ const tripStats = {
       subHeading: 'Hubble events per second',
     },
     {
-      heaidng: '3,000+',
+      heading: '3,000+',
       subHeading: 'Cilium network policy entries',
     },
   ],
@@ -180,7 +180,7 @@ const mediaUsecases = [
 const MediaEntertainmentPage = () => (
   <MainLayout>
     <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
-      <Stats {...tripStats} />
+      <Stats {...tripStats} className="py-8" />
     </Hero>
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
