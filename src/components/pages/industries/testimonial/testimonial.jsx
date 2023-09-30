@@ -24,8 +24,8 @@ const AdopterTestimonial = ({
       <div className="lg:flex">
         <div className="lg:flex lg:items-center lg:gap-6">
           <div className="lg:flex lg:flex-col lg:justify-between lg:gap-4">
-            <span>
-              <Logo className="w-32 lg:w-32" />
+            <span className="text-left">
+              <Logo className=" w-32 text-left lg:w-32" />
             </span>
             <p className=" w-full max-w-none text-sm ">{description}</p>
             <Link

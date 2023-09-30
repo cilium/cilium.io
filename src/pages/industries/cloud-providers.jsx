@@ -6,11 +6,12 @@ import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
+import AzureLogo from 'icons/logo-azure.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
+import AstronautBee from 'images/pages/industries/astronaut-bee.png';
 import MediaImage1 from 'images/pages/industries/media-1.webp';
 import MediaImage2 from 'images/pages/industries/media-2.png';
-import PublicSPeakingBee from 'images/pages/industries/public-speaking-bee.png';
 import MainLayout from 'layouts/main';
 
 import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
@@ -29,24 +30,24 @@ import SkyOfficeImage from './images/skyoffice.png';
 import YahooOfficeImage from './images/yahoooffice.png';
 
 const heroContent = {
-  heading: 'Media and Entertainment',
+  heading: 'Cloud Providers',
   texts: [
-    'The Media and Entertainment industry is navigating a digital transformation era with scalability, security, and latency challenges—traditional tooling struggles to handle rising consumer demands for high-quality, on-demand media. Security vulnerabilities can threaten valuable content and customer data, while latency issues undermine user experience. These challenges are compounded by rising operational costs and increasingly stringent regulatory environments.',
-    'Cilium is designed to provide high-performance, secure, and scalable networking and observability. It offers a wide range of features, helping companies in the media and entertainment industry deliver seamless experiences, reduce operational complexity, and secure their environment. ',
+    'Most Cloud Providers provide their custom CNIs, resulting in operational complexity for customers operating in multi-cloud environments. For example, the configuration and capabilities of the AWS VPC CNI, Azure CNI, and OpenShift SDN are significantly different. This fragmentation increases overhead in installing, operating, and troubleshooting network interfaces across these cloud environments. ',
+    'Cilium alleviates these issues by presenting a unified networking solution tailored for Kubernetes, compatible across various clouds. Not only does it simplify operations with a consistent Cilium workflow, but it also enhances cloud native network performance. Using eBPF, Cilium extends beyond Kubernetes basic networking capabilities, offering enhanced observability, security, and reduced latency. As a testament to its efficiency, major cloud providers are now adopting Cilium as the go-to standard for Kubernetes networking and security.',
   ],
-  imageSrc: PublicSPeakingBee,
-  imageAlt: 'isovalent public speaking bee',
+  imageSrc: AstronautBee,
+  imageAlt: 'astronaut public speaking bee',
 };
 
-const newyorktimesTestimonial = {
-  logo: NewYorkTimesLogo,
+const azureTestimonial = {
+  logo: AzureLogo,
   description:
-    'Cilium was a critical choice to increase networking performance while providing identity and application-aware security and visibility for cloud native workloads running on EKS at the New York Times.',
+    'Cilium combines with the existing control plane of Azure CNI to bring a high-performance eBPF-based dataplane with extensive security and observability capabilities to Azure Kubernetes Service (AKS)',
   quotedText:
-    'Perhaps the most important feature from Hubble UI is the network flow itself. If you look deeper into the flow you’ll see full deep rich information about every single packet traversed between different services. And that’s important so that we can build understanding of how traffic is flung between services.',
+    'Azure Kubernetes Service will now be deployed with Cilium open sourced data plane and natively integrated with Azure CNI. Microsoft will handle first-line support and collaborate with Isovalent on specific support issues to their deep knowledge of the technology.',
   withPerson: true,
-  name: 'Ahmed Bebars',
-  role: 'Software Engineer, Delivery Engineering, The New York Times',
+  name: 'Deepak Bansal',
+  role: ' CVP and Technical Fellow, Microsoft Azure',
   url: 'https://cilium.io/blog/2022/10/13/publishing-user-story/',
 };
 
@@ -156,7 +157,7 @@ const mediaUsecases = [
 const MediaEntertainmentPage = () => (
   <MainLayout>
     <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
-      <AdopterTestimonial {...newyorktimesTestimonial} />
+      <AdopterTestimonial {...azureTestimonial} />
     </Hero>
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />

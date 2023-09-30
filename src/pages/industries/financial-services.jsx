@@ -185,7 +185,7 @@ const companyLogos = [
   GrayedQwistLogo,
 ];
 
-const FinancialServices = () => (
+const FinancialServicesPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} imageStyle="lg:h-[470px] lg:w-[470px] lg:-mt-16">
       <Testimonial {...bloombergTestimonial} />
@@ -208,6 +208,6 @@ const FinancialServices = () => (
   </MainLayout>
 );
 
-export default FinancialServices;
+export default FinancialServicesPage;
 
 export const Head = ({ location: { pathname } }) => <SEO slug={pathname} />;
