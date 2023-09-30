@@ -5,13 +5,14 @@ import BulletSection from 'components/pages/industries/bullet-section';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import ResourcesCard from 'components/pages/industries/resources';
+import Stats from 'components/pages/industries/stats';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
-import AzureLogo from 'icons/logo-azure.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
-import AstronautBee from 'images/pages/industries/astronaut-bee.png';
+import TripLogo from 'icons/logo-trip.inline.svg';
 import MediaImage1 from 'images/pages/industries/media-1.webp';
 import MediaImage2 from 'images/pages/industries/media-2.png';
+import TravelBee from 'images/pages/industries/travel-bee.png';
 import MainLayout from 'layouts/main';
 
 import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
@@ -30,25 +31,47 @@ import SkyOfficeImage from './images/skyoffice.png';
 import YahooOfficeImage from './images/yahoooffice.png';
 
 const heroContent = {
-  heading: 'Cloud Providers',
+  heading: 'E-commerce',
   texts: [
-    'Most Cloud Providers provide their custom CNIs, resulting in operational complexity for customers operating in multi-cloud environments. For example, the configuration and capabilities of the AWS VPC CNI, Azure CNI, and OpenShift SDN are significantly different. This fragmentation increases overhead in installing, operating, and troubleshooting network interfaces across these cloud environments. ',
-    'Cilium alleviates these issues by presenting a unified networking solution tailored for Kubernetes, compatible across various clouds. Not only does it simplify operations with a consistent Cilium workflow, but it also enhances cloud native network performance. Using eBPF, Cilium extends beyond Kubernetes basic networking capabilities, offering enhanced observability, security, and reduced latency. As a testament to its efficiency, major cloud providers are now adopting Cilium as the go-to standard for Kubernetes networking and security.',
+    'E-commerce platforms have a unique set of networking needs— in most cases, a highly dynamic microservices architecture, exponential increases in user traffic, diverse geographic distribution, and stringent data security requirements.',
+    'Cilium addresses unique needs by offering exceptional networking, observability, and security features. By leveraging eBPF technology and seamless Kubernetes integration, Cilium enables easy deployment and management of microservices in a secure and scalable way. This powerful combination also simplifies the management of large Kubernetes deployments, aids in compliance with regulatory requirements, and provides deep visibility into network traffic.',
+    'Join the next wave of high-performance e-commerce platforms leveraging the advanced capabilities of eBPF with Cilium to build scalable and secure e-commerce experiences. Gain the edge in speed, security, and observability.',
   ],
-  imageSrc: AstronautBee,
-  imageAlt: 'astronaut public speaking bee',
+  imageSrc: TravelBee,
+  imageAlt: 'isovalent public speaking bee',
 };
 
-const azureTestimonial = {
-  logo: AzureLogo,
+const tripStats = {
+  logo: TripLogo,
+  url: 'https://www.cncf.io/case-studies/trip-com-group/',
   description:
-    'Cilium combines with the existing control plane of Azure CNI to bring a high-performance eBPF-based dataplane with extensive security and observability capabilities to Azure Kubernetes Service (AKS)',
-  quotedText:
-    'Azure Kubernetes Service will now be deployed with Cilium open sourced data plane and natively integrated with Azure CNI. Microsoft will handle first-line support and collaborate with Isovalent on specific support issues to their deep knowledge of the technology.',
+    'Trip.com operates in 200 countries and 40 languages, using both on-premise and cloud-based Kubernetes.',
+  CTAtext: 'READ THE CASE STUDY',
+  stats: [
+    {
+      heading: 'HYBRID CLOUD',
+      subHeading: 'With over 20,000 nodes',
+    },
+    {
+      heading: '200,000',
+      subHeading: 'Hubble events per second',
+    },
+    {
+      heaidng: '3,000+',
+      subHeading: 'Cilium network policy entries',
+    },
+  ],
+};
+
+const tripTestimonial = {
+  logo: TripLogo,
+  description:
+    'Trip.com operates in 200 countries and 40 languages, using both on-premise and cloud-based Kubernetes. ',
+  quotedText: '',
   withPerson: true,
-  name: 'Deepak Bansal',
-  role: ' CVP and Technical Fellow, Microsoft Azure',
-  url: 'https://www.youtube.com/watch?v=8it8Hm2F_GM',
+  name: 'Ahmed Bebars',
+  role: 'Software Engineer, Delivery Engineering, The New York Times',
+  url: 'https://cilium.io/blog/2022/10/13/publishing-user-story/',
 };
 
 const bulletSection1 = {
@@ -157,7 +180,7 @@ const mediaUsecases = [
 const MediaEntertainmentPage = () => (
   <MainLayout>
     <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
-      <AdopterTestimonial {...azureTestimonial} />
+      <Stats {...tripStats} />
     </Hero>
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />

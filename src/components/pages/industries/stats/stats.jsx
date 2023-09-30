@@ -7,7 +7,7 @@ import ArrowIcon from 'icons/arrow.inline.svg';
 
 const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
   const gridStyle = {
-    gridTemplateColumns: 'repeat(5, 1fr)',
+    gridTemplateColumns: `repeat(${stats.length}, 1fr)`,
     gridTemplateRows: '1fr',
   };
   const gridArea = [
