@@ -1,34 +1,31 @@
 import React from 'react';
 
 import AdoptersLogo from 'components/pages/industries/adopters-logo/adopters-logo';
-import BulletSection from 'components/pages/industries/bullet-section';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import ResourcesCard from 'components/pages/industries/resources';
 import Stats from 'components/pages/industries/stats';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
-import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
-import SeznamLogo from 'icons/logo-seznam.inline.svg';
+import DbSchenkerLogo from 'icons/logo-dbschenker.inline.svg';
+import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
-import MediaImage1 from 'images/pages/industries/media-1.webp';
-import MediaImage2 from 'images/pages/industries/media-2.png';
 import TravelBee from 'images/pages/industries/travel-bee.png';
 import MainLayout from 'layouts/main';
 
 import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
-import GrayedByteDanceLogo from './images/logos/bytedance.svg';
-import GrayedNewYorkTimesLogo from './images/logos/newyork.svg';
-import GrayedRadiofranceLogo from './images/logos/radiofrance.svg';
-import GrayedSeznamLogo from './images/logos/seznam.svg';
-import GrayedSkyBetLogo from './images/logos/skybet.svg';
-import GrayedSportRadarLogo from './images/logos/sportradar.svg';
-import GrayedWildLifeLogo from './images/logos/wildlife.svg';
-import GrayedYahooLogo from './images/logos/yahoo.svg';
-import NativeSupportIcon from './images/native-support.inline.svg';
-import NewyorkTimeOfficeImage from './images/newyorkoffice.png';
-import ServiceMapIcon from './images/service-map.inline.svg';
-import SkyOfficeImage from './images/skyoffice.png';
-import YahooOfficeImage from './images/yahoooffice.png';
+import IkeaOfficeImage from './images/ikeaoffice.png';
+import GrayedBackMarketLogo from './images/logos/backmarket.svg';
+import GrayedDbSchenkerLogo from './images/logos/dbschenker.svg';
+import GrayedElasticPathLogo from './images/logos/elasticpath.svg';
+import GrayedOverstockLogo from './images/logos/overstock.svg';
+import GrayedTailorBrandsLogo from './images/logos/tailorbrands.svg';
+import GrayedTrendyolLogo from './images/logos/trendyol.svg';
+import GrayedTripLogo from './images/logos/trip.svg';
+import GrayedUSwitchLogo from './images/logos/uswitch.svg';
+import ScalableKubernetesIcon from './images/scalable-kubernetes.inline.svg';
+import ServiceMeshIcon from './images/service-mesh.inline.svg';
+import TrendyolOfficeImage from './images/trendyoloffice.png';
+import TripOfficeImage from './images/tripoffice.png';
 
 const heroContent = {
   heading: 'E-commerce',
@@ -63,65 +60,45 @@ const tripStats = {
   ],
 };
 
-const tripTestimonial = {
-  logo: TripLogo,
+const trendyolTestimonial = {
   description:
-    'Trip.com operates in 200 countries and 40 languages, using both on-premise and cloud-based Kubernetes. ',
-  quotedText: '',
-  withPerson: true,
-  name: 'Ahmed Bebars',
-  role: 'Software Engineer, Delivery Engineering, The New York Times',
-  url: 'https://cilium.io/blog/2022/10/13/publishing-user-story/',
-};
-
-const bulletSection1 = {
-  heading:
-    'Enhance Content Delivery and User Experience with Cilium’s Transparent Acceleration and  Load Balancing ',
-  withImage: true,
-  paragraphs: [
-    'Streaming platforms and content delivery services need to scale rapidly to meet the ever-growing consumer demands for high-quality and on-demand media. Cilium offers intelligent load balancing, ensuring that the high volume of user requests typical for OTT platforms are distributed efficiently. This results in consistent content and smooth streaming experiences for end users.',
-    'By leveraging technologies like XDP (eXpress Data Path), bandwidth manager, and BIG TCP, Cilium optimizes the datapath, significantly reducing latency. For an industry that thrives on seamless content delivery, this is paramount.',
-  ],
-  imageSrc: MediaImage1,
-  imageAlt: 'cilium big tcp stats',
-};
-
-const bulletSection2 = {
-  heading: 'Robust Security, Scalability, and Flexibility at a Reduced Operational Overhead',
-  paragraphs: [
-    'Safeguarding content and user data is vital in media and entertainment. Cilium enables efficient workload isolation, protecting the entire ecosystem from potential breaches. As platforms grow, Cilium adapts to shifting network needs. ',
-    "Cilium integrates with both traditional and cloud-native infrastructures. Companies like Cosmonic have extended Cilium beyond Kubernetes to platforms like Nomad. In scenarios where it is impossible to use Cilium as the Default CNI, Cilium's CNI chaining mode lets you utilize Cilium's features like Hubble for observability and Tetragon for security, ensuring organizations can benefit from Cilium regardless of their infrastructure choices.",
-  ],
-  withImage: true,
-  imageSrc: MediaImage2,
-  imageAlt: 'cilium xdp',
-};
-
-const seznamTestimonial = {
-  logo: SeznamLogo,
-  url: 'https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/',
-  description:
-    "Seznam.cz tested Cilium's Standalone L4LB XDP as an alternative to their IPVS load balancer due to increasing traffic concerns.",
+    'Anticipating a further increase in the number of Kubernetes clusters and size of the clusters prompted Trendyol to seek Cilium as an alternative CNI solution.',
+  CTAtext: 'READ THE CASE STUDY',
   withPerson: true,
   quotedText:
-    "nder synthetic load tests, IPVS began dropping packets around 3Mpps, whereas L4LB XDP managed up to 14.8Mpps before experiencing issues. In real-world applications, L4LB XDP demonstrated significantly better efficiency, handling similar traffic rates as IPVS but using only half a CPU compared to IPVS's 2x18 CPUs. The results indicate L4LB XDP's superior performance and efficiency over IPVS.",
-  name: 'Ondrej Blazek',
-  role: 'Infrastructure Engineer, Seznam.com',
+    'We evaluated other CNIs, but Cilium stood out primarily due to its performance. When we started performance testing Cilium, we found that its performance remained steady, even as cluster traffic surged. As our scale increased, Cilium didn’t start degrading while other CNIs did.Cilium has leveled up Trendyol’s Kubernetes clusters. With its advanced capabilities, Cilium enabled us to solve our networking issues and outperformed all other CNIs. We have successfully increased our scalability, performance, security and visibility with Cilium',
+  name: 'Emin Aktas',
+  role: ' Platform Engineer, Trendyol',
+  url: 'https://www.cncf.io/case-studies/trendyol/',
+  logo: TrendyolLogo,
 };
 
-const mediaResources = [
+const dbSchenkerTestimonial = {
+  description:
+    'DB schenker Migrated to Cilium to prepare it platform for the next steps in their cloud native journey.',
+  CTAtext: 'READ THE BLOG POST',
+  withPerson: true,
+  quotedText:
+    'We saw wide adoption in the market and a very feature rich tooling and ecosystem around Cilium, like Tetragon for security observability and Hubble for network visibility. All of these factors together made the decision clear that we needed to migrate to Cilium to prepare our platform for the next steps in our cloud native journey.  ',
+  name: 'Amir Kheirkhahan',
+  role: 'DevOps Specialist, DB Schenker',
+  url: 'https://cilium.io/blog/2023/09/07/db-schenker-migration-to-cilium/',
+  logo: DbSchenkerLogo,
+};
+
+const commerceResources = [
   {
-    imageSrc: YahooOfficeImage,
-    imageAlt: 'yahoo office building',
-    title: 'Software L4 Load Balancing for Kubernetes Services at Yahoo',
-    CTAtext: 'Watch the Talk',
-    url: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
+    imageSrc: TrendyolOfficeImage,
+    imageAlt: 'holding a trenydol shipping box',
+    title: 'Unleashing the Power of Cilium CNI to Propel Trendyol’s Performance Up to 40%!',
+    CTAtext: 'Read the case study',
+    url: 'https://www.cncf.io/case-studies/trendyol/',
     description:
-      'Yahoo improved load balancing performance and scalability by switching to Cilium L4 LB with XDP, achieving hardware-level efficiency and dynamic backend management.',
+      'Recognizing the need to enhance their clusters and unlock new capabilities, Trendyol switched from flannel and implemented Cilium as the default CNI for the Kubernetes cluster resulting in an up to 40% increase in performance     ',
   },
 
   {
-    imageSrc: NewyorkTimeOfficeImage,
+    imageSrc: IkeaOfficeImage,
     imageAlt: 'newyork times  office building',
     title: 'Designing and Securing a Multi-Tenant Runtime Environment at the New York Times',
     CTAtext: 'Watch the Talk',
@@ -131,49 +108,50 @@ const mediaResources = [
   },
 
   {
-    imageSrc: SkyOfficeImage,
-    imageAlt: 'sky group  office building',
-    title: 'Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev Teams)',
+    imageSrc: TripOfficeImage,
+    imageAlt: 'trip.com office building',
+    title: 'How Trip.com Group switched to Cilium For Scalable and Cloud Native Networking',
     CTAtext: 'Read The Blog Post',
-    url: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
+    url: 'https://www.cncf.io/case-studies/trip-com-group/',
     description:
-      'Sky required a performant and secure solution to help them implement zero-trust network security and landed on leveraging additional features in Cilium as the answer.',
+      'Trip.com looked at several options to pick its next-generation networking platform. Cilium provided them with an extremely scalable and stable networking solution.',
   },
 ];
 
 const companyLogos = [
-  GrayedByteDanceLogo,
-  GrayedNewYorkTimesLogo,
-  GrayedSkyBetLogo,
-  GrayedSeznamLogo,
-  GrayedSportRadarLogo,
-  GrayedRadiofranceLogo,
-  GrayedWildLifeLogo,
-  GrayedYahooLogo,
+  GrayedTripLogo,
+  GrayedTrendyolLogo,
+  GrayedBackMarketLogo,
+  GrayedUSwitchLogo,
+  GrayedElasticPathLogo,
+  GrayedDbSchenkerLogo,
+  GrayedOverstockLogo,
+  GrayedTailorBrandsLogo,
 ];
 
-const mediaUsecases = [
-  {
-    icon: NativeSupportIcon,
-    title: 'Load Balancing ',
-    description:
-      ' Leverage the Power of Cilium’s XDP Acceleration for High-Speed, Efficient Load Balancing in Your Kubernetes Cluster',
-    url: '/use-cases/load-balancer',
-  },
+const commerceUsecases = [
   {
     icon: BandWidthIcon,
-    title: 'Bandwidth and Latency Optimization',
+    title: 'Bandwidth and Latency Management',
     description:
-      'Optimize TCP and UDP workload with rate limiting and fair queuing. Rely on our TCP congestion control algorithm automization ',
+      'Optimize your bandwidth and latency with rate limiting and fair queuing. Rely on our TCP congestion control algorithm automization.',
     url: '/use-cases/bandwidth-optimization',
   },
 
   {
-    icon: ServiceMapIcon,
-    title: 'Service Map',
+    icon: ServiceMeshIcon,
+    title: 'Service Mesh',
     description:
-      'Enable platform teams to provide self-service portal to app teams to observe their own workloads, dependencies, and flows.',
-    url: '/use-cases/service-map',
+      'Cilium redefines traditional service mesh frameworks by integrating the mesh layer directly into the kernel using eBPF',
+    url: '/use-cases/service-mesh',
+  },
+
+  {
+    icon: ScalableKubernetesIcon,
+    title: 'High Performance Networking (CNI)',
+    description:
+      'Enabling network operators to abstract and manage the cloud native network, including on-prem integration with BGP and overlay networking compatible with Cloud SDNs.',
+    url: '/use-cases/cni',
   },
 ];
 
@@ -182,24 +160,15 @@ const MediaEntertainmentPage = () => (
     <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
       <Stats {...tripStats} className="py-8" />
     </Hero>
-    <BulletSection {...bulletSection1} />
-    <BulletSection {...bulletSection2} />
-    <AdopterTestimonial {...seznamTestimonial} className="mt-8 pb-8" />
+    <AdopterTestimonial {...trendyolTestimonial} />
+    <AdopterTestimonial {...dbSchenkerTestimonial} />
     <AdoptersLogo className="my-16 grid grid-cols-4" logos={companyLogos} />
     <ResourcesCard
-      heading="See Real World Stories on Companies in the Media and Entertainment Industry"
-      resources={mediaResources}
+      heading="Leverage Cilium To Deliver Reliable, Fast, and Secure E-commerce Experience to  Users"
+      resources={commerceResources}
     />
-    <IndustryUseCases
-      heading="Cilium’s Solutions for Media & Entertainment"
-      usecases={mediaUsecases}
-    />
+    <IndustryUseCases heading="Cilium’s Solutions for E-commerce " usecases={commerceUsecases} />
   </MainLayout>
 );
 
 export default MediaEntertainmentPage;
-
-// export const Head = ({ location: { pathname } }) => {
-//   const pageMetadata = { ...seo, slug: pathname };
-//   return <SEO data={pageMetadata} />;
-// };
