@@ -30,7 +30,6 @@ import RuntimeEnforcementIcon from './images/runtime-enforcement.inline.svg';
 import RuntimeIcon from './images/runtime.inline.svg';
 import tetragonImage1 from './images/tetragon-illustration.png';
 
-
 const heroContent = {
   heading: 'Security',
   texts: [
@@ -79,11 +78,11 @@ const bulletSection1 = {
   imageAlt: '',
 };
 
-const bullectSection2 = {
+const bulletSection2 = {
   heading:
-    'Better Understand Security Breaches and Recover Quickly with Cilium’s Forensics Capabilities.',
+    'Ease Integration with Traditional Firewall Systems Using Cilium’s Static Egress Gateway',
   paragraphs: [
-    "Cilium's forensic capabilities prioritize quick and efficient issue investigation at the application level, while also enabling threat detection at the network level. By granting app owners multi-tenant access to network data flows, Cilium ensures deep insights into network flows, and provides easy-to-use tools for integration and analysis.",
+    "With Cilium's Static Egress Gateway, cloud-native workloads can be presented from stable IP addresses, easing integration with traditional firewall systems. This approach ensures that firewall requirements remain consistent even as workloads scale, fostering a bridge between cloud native and conventional environments. ",
   ],
   withImage: true,
   imageSrc: SecurityImage3,
@@ -156,7 +155,7 @@ const SecurityPage = () => (
       <img src={tetragonImage1} alt="" />
     </Container>
     <BulletSection {...bulletSection1} />
-    <BulletSection {...bullectSection2} />
+    <BulletSection {...bulletSection2} />
     <FeaturedTalks heading="Featured talks" talks={securityTalks} />
     <AdoptersLogo logos={securityAdopters} className="my-16 lg:grid lg:grid-cols-4" />
     <IndustryUseCases heading="Cilium’s Security Focused Use Cases" usecases={securityUsecases} />
