@@ -31,7 +31,7 @@ const navigation = [
       { name: 'Telcos and Data Center Operators', href: '/industries/telcos-datacenters' },
       { name: 'E-commerce', href: '/industries/e-commerce' },
       { name: 'Consulting', href: '/industries/consulting' },
-      { name: 'Cyber Security', href: '/industries/cyber-security' },
+      { name: 'Security', href: '/industries/security' },
     ],
   },
 

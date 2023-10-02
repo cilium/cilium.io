@@ -1,32 +1,17 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container/container';
 
-const cyberContent = [
-  {
-    title: 'Monitor Process Execution',
-    text: 'Observe the complete lifecycle of every process on your machine with Kubernetes context awareness',
-  },
-  {
-    title: 'Monitor Process Execution',
-    text: 'Observe the complete lifecycle of every process on your machine with Kubernetes context awareness',
-  },
-  {
-    title: 'Monitor Process Execution',
-    text: 'Observe the complete lifecycle of every process on your machine with Kubernetes context awareness',
-  },
-];
-
-const CyberSecurityCard = () => (
+const TetragonCard = ({ className, contents }) => (
   <div>
-    <Container>
+    <Container className={className}>
       <div className="flex flex-col gap-10 lg:flex lg:flex-row">
-        {cyberContent.map((content, index) => (
+        {contents.map(({ title, text, icon: Icon }, index) => (
           <div key={index} className="rounded  bg-white px-10 py-8 shadow-lg">
-            {/* Icon here not div */}
-            <div className="mx-auto mb-4 h-14 w-14 bg-[#D6F5D6]" />
-            <h3 className="py-5 font-bold">{content.title}</h3>
-            <p className="pb-6">{content.text}</p>
+            <Icon className="mx-auto mb-4 h-14 w-14" />
+            <h3 className="py-5 font-bold">{title}</h3>
+            <p className="pb-6">{text}</p>
           </div>
         ))}
       </div>
@@ -34,4 +19,19 @@ const CyberSecurityCard = () => (
   </div>
 );
 
-export default CyberSecurityCard;
+TetragonCard.propTypes = {
+  className: PropTypes.string,
+  contents: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+      icon: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};
+
+TetragonCard.defaultProps = {
+  className: '',
+};
+
+export default TetragonCard;

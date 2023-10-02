@@ -17,7 +17,9 @@ const BulletSection = ({ heading, className, withImage, imageSrc, paragraphs, im
               ))}
             </div>
 
-            {withImage && <img className="w-full lg:w-1/2 lg:grow" src={imageSrc} alt={imageAlt} />}
+            {withImage && (
+              <img className="w-full  lg:w-1/2 lg:grow" src={imageSrc} alt={imageAlt} />
+            )}
           </div>
         </div>
       </div>
