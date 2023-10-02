@@ -561,6 +561,11 @@ export default {
     text: 'Trendyol uses Cilium as the default CNI for its Kubernetes Clusters',
     links: [
       {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/trendyol/',
+        linkTarget: '_blank',
+      },
+      {
         linkText: 'Read Blog',
         linkUrl: 'https://medium.com/trendyol-tech/trendyols-cilium-transformation-ff064ff79fce',
         linkTarget: '_blank',
