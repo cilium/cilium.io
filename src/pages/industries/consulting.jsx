@@ -1,7 +1,31 @@
+import React from 'react';
+
+import AdoptersLogo from 'components/pages/industries/adopters-logo/adopters-logo';
 import BulletSection from 'components/pages/industries/bullet-section';
 import Hero from 'components/pages/industries/hero';
+import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
+import Community from 'components/shared/community';
+import EfficodeLogo from 'icons/logo-efficode.inline.svg';
+import PalarkLogo from 'icons/logo-palark.inline.svg';
+import ElectricianBee from 'images/pages/industries/electrician-bee.png';
 import MainLayout from 'layouts/main/main';
+
+import EficodeOfficeImage from './images/eficodeoffice.png';
+import GrayedAyedoLogo from './images/logos/ayedo.svg';
+import GrayedCengnLogo from './images/logos/cengn.svg';
+import GrayedCistecLogo from './images/logos/cistec.svg';
+import GrayedEficodeLogo from './images/logos/eficode.svg';
+import GrayedInnoqLogo from './images/logos/innoq.svg';
+import GrayedLiquidReplyLogo from './images/logos/liquid.svg';
+import GrayedMobilab from './images/logos/mobilab.svg';
+import GrayedNineNavigatorsLogo from './images/logos/nine.svg';
+import GrayedPalarkLogo from './images/logos/palark.svg';
+import GrayedSchubergLogo from './images/logos/schuberg.svg';
+import GrayedSuperOrbitalLogo from './images/logos/superorbital.svg';
+import GrayedTietoevryLogo from './images/logos/tietoevry.svg';
+import PalarkOfficeImage from './images/palarkoffice.png';
+import TieToevryOfficeImage from './images/tietoevryoffice.png';
 
 const heroContent = {
   heading: 'Consulting ',
@@ -9,24 +33,95 @@ const heroContent = {
     'Consultancy companies build and maintain software and infrastructure for diverse customers varying in size, industry, and technology stack. Customers typically have different requirements for fault tolerance, scalability, financial expenses, security, and more. As infrastructure stacks continue to evolve, consultancy firms need solutions that meet client expectations and also prepare their platforms for the future. ',
     'World-leading consulting companies are now turning to Cilium, leveraging its capabilities to deliver secure, high-performance, and observable cloud native solutions. By adopting Cilium, consultancies ensure streamlined operations across varied client environments and position themselves at the forefront of cloud native innovations, catering to clients ranging from startups, nationwide banks  and large enterprises.',
   ],
+  imageSrc: ElectricianBee,
+  imageAlt: 'isovalent electrician bee',
 };
 
 const efficodeTestimonial = {
   description:
     'Efficode is the leading DevOps consulting company in northern Europe, helping companies move to a cloud-native thinking in their operations and technology. ',
   withPerson: true,
-  qoutedText:
-    'Efficode is the leading DevOps consulting company in northern Europe, helping companies move to a cloud-native thinking in their operations and technology. ',
-  name: '',
-  role: '',
+  quotedText:
+    "As of today, we have our multi-cloud cluster running. We have nodes running in AWS, Azure, and virtual machines running on-prem, all part of the same cluster. So visibility is all through the same tool - Hubble, you can see it all. It is working quite well, and we're really happy with it.",
+  name: 'Andy Alfred',
+  role: 'Lead DevOps consultant, Efficode',
+  logo: EfficodeLogo,
+  CTAtext: 'Watch the talk',
+  url: 'https://www.youtube.com/watch?t=509&v=RdAO_Kxe6tE',
 };
+
+const palarkTestimonial = {
+  description:
+    'Palark leverages Cilium to design and maintain diverse infrastructure solutions for companies, catering to their unique needs across various industries, technologies, and deployment environments.',
+  withPerson: true,
+  quotedText:
+    'We couldn’t be held back by the existing limitations any longer and decided to find another CNI to use in our Kubernetes platform — one that could handle all the new challenges. After settling on our new networking infrastructure in production environments and evaluating its performance and new features, we are pleased with our decision to adopt Cilium as its benefits are evident.',
+  name: 'Anton Kuliashov',
+  role: 'Software Engineer, Palark',
+  logo: PalarkLogo,
+  CTAtext: 'READ THE BLOG POST',
+  url: 'https://blog.palark.com/why-cilium-for-kubernetes-networking/',
+};
+
+const consultingLogos = [
+  GrayedPalarkLogo,
+  GrayedTietoevryLogo,
+  GrayedMobilab,
+  GrayedCengnLogo,
+  GrayedCistecLogo,
+  GrayedEficodeLogo,
+  GrayedInnoqLogo,
+  GrayedLiquidReplyLogo,
+  GrayedNineNavigatorsLogo,
+  GrayedSchubergLogo,
+  GrayedAyedoLogo,
+  GrayedSuperOrbitalLogo,
+];
+
+const consultingResources = [
+  {
+    title: 'Cilium for Kubernetes networking: Why we use it and why we love it',
+    description:
+      'After years of relying on a simple solution, Palark faced a growing demand for advanced features backed by our customers’ needs. Cilium brought the networking in their K8s platform to the next level',
+    url: 'https://blog.palark.com/why-cilium-for-kubernetes-networking/',
+    imageSrc: PalarkOfficeImage,
+    imageAlt: 'palark office building',
+    CTAtext: 'Watch the Talk',
+  },
+
+  {
+    title: 'Reducing Kubernetes tool sprawl: Tietoevry uses Cilium and Hubble',
+    description: 'Reducing Kubernetes tool sprawl: Tietoevry uses Cilium and Hubble',
+    url: 'https://isovalent.com/blog/post/kubernetes-tool-sprawl/',
+    imageSrc: TieToevryOfficeImage,
+    imageAlt: 'tieotvry office building',
+    CTAtext: 'Watch the Talk',
+  },
+
+  {
+    title: 'Fostering a cloud native approach with Cilium',
+    description:
+      'Eficode uses Cilium on-prem and cloud across various client projects, including a nationwide European bank.',
+    url: 'https://www.youtube.com/watch?v=RdAO_Kxe6tE&t=509s',
+    imageSrc: EficodeOfficeImage,
+    imageAlt: 'eficode logo',
+    CTAtext: 'Watch the Talk',
+  },
+];
 
 const ConsultingPage = () => (
   <MainLayout>
-    <Hero {...heroContent}>
+    <Hero {...heroContent} imageStyle="lg:h-[360px] lg:w-[360px] mb-24">
       <AdopterTestimonial {...efficodeTestimonial} />
     </Hero>
+    <AdopterTestimonial {...palarkTestimonial} />
     <BulletSection />
+    <AdoptersLogo logos={consultingLogos} />
+    <ResourcesCard
+      heading="Meet Customer’s Increasing Demand for Better Security, Performance, and Observability with Cilium. "
+      resources={consultingResources}
+    />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 
