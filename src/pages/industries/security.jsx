@@ -1,10 +1,12 @@
 import React from 'react';
 
+import AdoptersLogo from 'components/pages/industries/adopters-logo/adopters-logo';
 import BulletSection from 'components/pages/industries/bullet-section';
 import SecurityCard from 'components/pages/industries/cards/security';
 import TetragonCard from 'components/pages/industries/cards/tetragon';
 import FeaturedTalks from 'components/pages/industries/featured-talks';
 import Hero from 'components/pages/industries/hero';
+import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import Container from 'components/shared/container/container';
 import SecurityImage2 from 'images/pages/industries/security-2.png';
 import SecurityImage3 from 'images/pages/industries/security-3.gif';
@@ -12,10 +14,22 @@ import SecurityBee from 'images/pages/industries/security-bee.png';
 import TetragonImage from 'images/pages/industries/tetragon.png';
 import MainLayout from 'layouts/main/main';
 
+import EncryptionIcon from './images/encryption.inline.svg';
 import EnforcementIcon from './images/enforcement.inline.svg';
+import GrayedEgdelessLogo from './images/logos/edgeless.svg';
+import GrayedF5Logo from './images/logos/f5.svg';
+import GrayedFRSCALogo from './images/logos/frsca.svg';
+import GrayedGdataLogo from './images/logos/gdata.svg';
+import GrayedKryptosLogo from './images/logos/kryptos.svg';
+import GrayedPalantirLogo from './images/logos/palantir.svg';
+import GrayedProtonLogo from './images/logos/proton.svg';
+import GrayedTestifyLogo from './images/logos/testify.svg';
+import NetworkPolicyIcon from './images/network-policy.inline.svg';
 import ProcessIcon from './images/process.inline.svg';
+import RuntimeEnforcementIcon from './images/runtime-enforcement.inline.svg';
 import RuntimeIcon from './images/runtime.inline.svg';
 import tetragonImage1 from './images/tetragon-illustration.png';
+
 
 const heroContent = {
   heading: 'Security',
@@ -96,6 +110,43 @@ const securityTalks = [
     videoSrc: 'https://www.youtube.com/embed/UBVTJ0LeXxc',
   },
 ];
+
+const securityAdopters = [
+  GrayedPalantirLogo,
+  GrayedEgdelessLogo,
+  GrayedGdataLogo,
+  GrayedFRSCALogo,
+  GrayedProtonLogo,
+  GrayedKryptosLogo,
+  GrayedTestifyLogo,
+  GrayedF5Logo,
+];
+
+const securityUsecases = [
+  {
+    icon: EncryptionIcon,
+    title: 'Transparent Encryption ',
+    url: '/use-cases/transparent-encryption',
+    description:
+      'Elevate compliance and lower risk with Cilium transparent encryption. With just one switch, no application changes, service meshes  or additional proxies',
+  },
+
+  {
+    icon: NetworkPolicyIcon,
+    title: 'Network Policy',
+    url: '/use-cases/network-policy',
+    description:
+      'Maintain identity based policies effectively at scale with Cilium’s advanced network polices.',
+  },
+  {
+    icon: RuntimeEnforcementIcon,
+    title: 'Runtime Enforcement',
+    url: '/use-cases/runtime-enforcement',
+    description:
+      'Prevent unauthorized access to your traffic at runtime to stop attacks on the OS level, preventing malicious actions.',
+  },
+];
+
 const SecurityPage = () => (
   <MainLayout>
     <Hero {...heroContent} imageStyle="lg:h-[395px] lg:w-[350px]" />
@@ -107,6 +158,8 @@ const SecurityPage = () => (
     <BulletSection {...bulletSection1} />
     <BulletSection {...bullectSection2} />
     <FeaturedTalks heading="Featured talks" talks={securityTalks} />
+    <AdoptersLogo logos={securityAdopters} className="my-16 lg:grid lg:grid-cols-4" />
+    <IndustryUseCases heading="Cilium’s Security Focused Use Cases" usecases={securityUsecases} />
   </MainLayout>
 );
 
