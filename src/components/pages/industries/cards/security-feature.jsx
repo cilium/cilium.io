@@ -17,7 +17,8 @@ const cyberContent = [
   },
 ];
 
-const CyberSecurityCard = () => (
+// eslint-disable-next-line import/prefer-default-export
+export const SecurityFeatureCard = () => (
   <div>
     <Container>
       <div className="flex flex-col gap-10 lg:flex lg:flex-row">
@@ -33,5 +34,3 @@ const CyberSecurityCard = () => (
     </Container>
   </div>
 );
-
-export default CyberSecurityCard;

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import AdoptersLogo from 'components/pages/industries/adopters-logo/adopters-logo';
+import { FeatureCard } from 'components/pages/industries/cards';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import ResourcesCard from 'components/pages/industries/resources';
@@ -14,7 +15,11 @@ import TravelBee from 'images/pages/industries/travel-bee.png';
 import MainLayout from 'layouts/main';
 
 import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
+import CloudIcon from './images/cloud.svg';
+import CodeIcon from './images/code.svg';
+import DbIcon from './images/db.svg';
 import IkeaOfficeImage from './images/ikeaoffice.png';
+import LockIcon from './images/lock.svg';
 import GrayedBackMarketLogo from './images/logos/backmarket.svg';
 import GrayedDbSchenkerLogo from './images/logos/dbschenker.svg';
 import GrayedElasticPathLogo from './images/logos/elasticpath.svg';
@@ -156,6 +161,38 @@ const commerceUsecases = [
   },
 ];
 
+const ciliumEcommerceFeatures = {
+  heading: 'What Does Cilium Offer the E-commerce Industry?',
+  subHeading:
+    'E-commerce platforms and teams can benefit from many of Cilium’s use cases, including:',
+  features: [
+    {
+      title: 'Microservices Architectures',
+      description:
+        'Cilium provides application-aware networking that enables microservices architectures to be easily deployed and managed in a secure and scalable way.',
+      icon: CodeIcon,
+    },
+    {
+      title: 'Multi-cluster and hybrid-cloud environments',
+      description:
+        'Cilium supports multi-cluster and hybrid cloud environments, allowing enterprises to easily connect and secure Kubernetes workloads across multiple clusters. ',
+      icon: CloudIcon,
+    },
+    {
+      title: 'Large-scale Kubernetes deployments',
+      description:
+        'Enterprises that have large-scale Kubernetes deployments with hundreds or thousands of nodes can benefit from the high-performance networking and observability features provided by Cilium.',
+      icon: DbIcon,
+    },
+    {
+      title: 'Compliance and regulatory requirements',
+      description:
+        'Enterprises that have large-scale Kubernetes deployments with hundreds or thousands of nodes can benefit from the high-performance networking and observability features provided by Cilium.',
+      icon: LockIcon,
+    },
+  ],
+};
+
 const MediaEntertainmentPage = () => (
   <MainLayout>
     <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
@@ -168,6 +205,7 @@ const MediaEntertainmentPage = () => (
       heading="Leverage Cilium To Deliver Reliable, Fast, and Secure E-commerce Experience to  Users"
       resources={commerceResources}
     />
+    <FeatureCard {...ciliumEcommerceFeatures} />
     <IndustryUseCases heading="Cilium’s Solutions for E-commerce " usecases={commerceUsecases} />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>

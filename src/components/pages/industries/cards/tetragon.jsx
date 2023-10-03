@@ -3,7 +3,8 @@ import React from 'react';
 
 import Container from 'components/shared/container/container';
 
-const TetragonCard = ({ className, contents }) => (
+// eslint-disable-next-line import/prefer-default-export
+export const TetragonCard = ({ className, contents }) => (
   <div>
     <Container className={className}>
       <div className="flex flex-col gap-10 lg:flex lg:flex-row">
@@ -33,5 +34,3 @@ TetragonCard.propTypes = {
 TetragonCard.defaultProps = {
   className: '',
 };
-
-export default TetragonCard;

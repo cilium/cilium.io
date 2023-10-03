@@ -3,7 +3,8 @@ import React from 'react';
 
 import Container from 'components/shared/container/container';
 
-const SecurityCard = ({ heading, description, imageSrc, imageAlt, className }) => (
+// eslint-disable-next-line import/prefer-default-export
+export const SecurityCard = ({ heading, description, imageSrc, imageAlt, className }) => (
   <div>
     <Container className={className}>
       <h2 className="text-3xl font-bold">{heading}</h2>
@@ -28,5 +29,3 @@ SecurityCard.propTypes = {
 SecurityCard.defaultProps = {
   className: '',
 };
-
-export default SecurityCard;

@@ -6,7 +6,7 @@ import Hero from 'components/pages/industries/hero';
 import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
-import EfficodeLogo from 'icons/logo-efficode.inline.svg';
+import EficodeLogo from 'icons/logo-efficode.inline.svg';
 import PalarkLogo from 'icons/logo-palark.inline.svg';
 import ElectricianBee from 'images/pages/industries/electrician-bee.png';
 import MainLayout from 'layouts/main/main';
@@ -37,7 +37,7 @@ const heroContent = {
   imageAlt: 'isovalent electrician bee',
 };
 
-const efficodeTestimonial = {
+const eficodeTestimonial = {
   description:
     'Eficode is the leading DevOps consulting company in northern Europe, helping companies move to a cloud-native thinking in their operations and technology. ',
   withPerson: true,
@@ -45,7 +45,7 @@ const efficodeTestimonial = {
     "As of today, we have our multi-cloud cluster running. We have nodes running in AWS, Azure, and virtual machines running on-prem, all part of the same cluster. So visibility is all through the same tool - Hubble, you can see it all. It is working quite well, and we're really happy with it.",
   name: 'Andy Alfred',
   role: 'Lead DevOps consultant, Efficode',
-  logo: EfficodeLogo,
+  logo: EficodeLogo,
   CTAtext: 'Watch the talk',
   url: 'https://www.youtube.com/watch?t=509&v=RdAO_Kxe6tE',
 };
@@ -112,7 +112,7 @@ const consultingResources = [
 const ConsultingPage = () => (
   <MainLayout>
     <Hero {...heroContent} imageStyle="lg:h-[360px] lg:w-[360px] mb-24">
-      <AdopterTestimonial {...efficodeTestimonial} />
+      <AdopterTestimonial {...eficodeTestimonial} />
     </Hero>
     <AdopterTestimonial {...palarkTestimonial} />
     <BulletSection />
