@@ -2,8 +2,8 @@ import React from 'react';
 
 import AdoptersLogo from 'components/pages/industries/adopters-logo/adopters-logo';
 import BulletSection from 'components/pages/industries/bullet-section';
-import SecurityCard from 'components/pages/industries/cards/security';
-import TetragonCard from 'components/pages/industries/cards/tetragon';
+import { SecurityCard } from 'components/pages/industries/cards/security';
+import { TetragonCard } from 'components/pages/industries/cards/tetragon';
 import FeaturedTalks from 'components/pages/industries/featured-talks';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
