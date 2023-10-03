@@ -4,7 +4,7 @@ title: 'Learn Cilium the Easy Way with the Cilium Learning Paths'
 ogImage: ogimage.webp
 ogSummary: 'Isovalent introduces the Cilium learning paths. A curated path for learning Cilium based on your skill level, whether you are a newcomer to Cilium or already comfortable with the cloud native platform'
 categories:
-  - How-To
+  - Community
 externalUrl: 'https://isovalent.com/blog/post/cilium-learning-path/'
 tags:
   - Community
