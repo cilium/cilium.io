@@ -81,6 +81,7 @@ import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
 import PlaidLogo from './images/plaid.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
+import PlusserverLogo from './images/plusserver.inline.svg';
 import PolarSignalsLogo from './images/polarsignals.inline.svg';
 import PolverioLogo from './images/polverio.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
@@ -114,6 +115,7 @@ import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  plusserver: PlusserverLogo,
   dbraincloud: DbraincloudLogo,
   dbschenker: DbschenkerLogo,
   twilio: TwilioLogo,
