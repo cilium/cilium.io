@@ -6,8 +6,8 @@ import Link from 'components/shared/link/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
 
 const IndustryUseCases = ({ heading, usecases }) => (
-  <Container>
-    <h2 className="my-20 text-center text-3xl font-bold">{heading}</h2>
+  <Container className="my-20">
+    <h2 className="pb-10 text-center text-3xl font-bold">{heading}</h2>
     <div className="flex flex-col gap-10 lg:flex-row lg:gap-20">
       {usecases.map(({ icon: Icon, description, title, url }, index) => (
         <div

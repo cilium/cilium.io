@@ -161,7 +161,7 @@ const commerceUsecases = [
   },
 ];
 
-const ciliumEcommerceFeatures = {
+const ecommerceFeatures = {
   heading: 'What Does Cilium Offer the E-commerce Industry?',
   subHeading:
     'E-commerce platforms and teams can benefit from many of Cilium’s use cases, including:',
@@ -198,14 +198,14 @@ const MediaEntertainmentPage = () => (
     <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
       <Stats {...tripStats} className="py-8" />
     </Hero>
+    <FeatureCard {...ecommerceFeatures} className="mt-12 mb-24" />
     <AdopterTestimonial {...trendyolTestimonial} />
-    <AdopterTestimonial {...dbSchenkerTestimonial} />
     <AdoptersLogo className="my-16 grid grid-cols-4" logos={companyLogos} />
+    <AdopterTestimonial {...dbSchenkerTestimonial} className="mb-24" />
     <ResourcesCard
       heading="Leverage Cilium To Deliver Reliable, Fast, and Secure E-commerce Experience to  Users"
       resources={commerceResources}
     />
-    <FeatureCard {...ciliumEcommerceFeatures} />
     <IndustryUseCases heading="Cilium’s Solutions for E-commerce " usecases={commerceUsecases} />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
