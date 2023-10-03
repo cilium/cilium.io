@@ -10,7 +10,7 @@ import IndustryUseCases from 'components/pages/industries/industry-usecase/indus
 import Community from 'components/shared/community';
 import Container from 'components/shared/container/container';
 import SecurityImage2 from 'images/pages/industries/security-2.png';
-import SecurityImage3 from 'images/pages/industries/security-3.gif';
+import SecurityImage3 from 'images/pages/industries/security-3.png';
 import SecurityBee from 'images/pages/industries/security-bee.png';
 import TetragonImage from 'images/pages/industries/tetragon.png';
 import MainLayout from 'layouts/main/main';
