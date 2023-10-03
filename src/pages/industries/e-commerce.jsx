@@ -6,6 +6,7 @@ import IndustryUseCases from 'components/pages/industries/industry-usecase/indus
 import ResourcesCard from 'components/pages/industries/resources';
 import Stats from 'components/pages/industries/stats';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
+import Community from 'components/shared/community';
 import DbSchenkerLogo from 'icons/logo-dbschenker.inline.svg';
 import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
@@ -168,6 +169,7 @@ const MediaEntertainmentPage = () => (
       resources={commerceResources}
     />
     <IndustryUseCases heading="Cilium’s Solutions for E-commerce " usecases={commerceUsecases} />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

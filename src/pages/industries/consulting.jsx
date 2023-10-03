@@ -39,7 +39,7 @@ const heroContent = {
 
 const efficodeTestimonial = {
   description:
-    'Efficode is the leading DevOps consulting company in northern Europe, helping companies move to a cloud-native thinking in their operations and technology. ',
+    'Eficode is the leading DevOps consulting company in northern Europe, helping companies move to a cloud-native thinking in their operations and technology. ',
   withPerson: true,
   quotedText:
     "As of today, we have our multi-cloud cluster running. We have nodes running in AWS, Azure, and virtual machines running on-prem, all part of the same cluster. So visibility is all through the same tool - Hubble, you can see it all. It is working quite well, and we're really happy with it.",

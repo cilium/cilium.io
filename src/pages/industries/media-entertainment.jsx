@@ -6,6 +6,7 @@ import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
+import Community from 'components/shared/community';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import MediaImage1 from 'images/pages/industries/media-1.webp';
@@ -170,6 +171,7 @@ const MediaEntertainmentPage = () => (
       heading="Cilium’s Solutions for Media & Entertainment"
       usecases={mediaUsecases}
     />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

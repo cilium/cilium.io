@@ -7,6 +7,7 @@ import TetragonCard from 'components/pages/industries/cards/tetragon';
 import FeaturedTalks from 'components/pages/industries/featured-talks';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
+import Community from 'components/shared/community';
 import Container from 'components/shared/container/container';
 import SecurityImage2 from 'images/pages/industries/security-2.png';
 import SecurityImage3 from 'images/pages/industries/security-3.gif';
@@ -159,6 +160,7 @@ const SecurityPage = () => (
     <FeaturedTalks heading="Featured talks" talks={securityTalks} />
     <AdoptersLogo logos={securityAdopters} className="my-16 lg:grid lg:grid-cols-4" />
     <IndustryUseCases heading="Cilium’s Security Focused Use Cases" usecases={securityUsecases} />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

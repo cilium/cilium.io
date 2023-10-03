@@ -7,6 +7,7 @@ import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
+import Community from 'components/shared/community';
 import BellLogo from 'icons/logo-bell.inline.svg';
 import BulldozerBee from 'images/pages/industries/bulldozer-bee.png';
 import TelcoImage1 from 'images/pages/industries/telco-1.webp';
@@ -165,6 +166,7 @@ const MediaEntertainmentPage = () => (
       heading="Cilium’s Solutions for Telco and Data Center Operators"
       usecases={telcoUsecases}
     />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 
