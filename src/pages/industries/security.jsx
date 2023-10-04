@@ -11,6 +11,7 @@ import Community from 'components/shared/community';
 import Container from 'components/shared/container/container';
 import SecurityImage2 from 'images/pages/industries/security-2.png';
 import SecurityImage3 from 'images/pages/industries/security-3.png';
+import SecurityImage4 from 'images/pages/industries/security-4.png';
 import SecurityBee from 'images/pages/industries/security-bee.png';
 import TetragonImage from 'images/pages/industries/tetragon.png';
 import MainLayout from 'layouts/main/main';
@@ -87,7 +88,19 @@ const bulletSection2 = {
   ],
   withImage: true,
   imageSrc: SecurityImage3,
-  imageAlt: '',
+  imageAlt: 'Cilium egress gateway illustration',
+};
+
+const bulletSection4 = {
+  heading:
+    'Bolster Security, Streamline Infrastructure, Reduce Complexity, and Improve Performance Simultaneously with Cilium’s Mutual TLS',
+  paragraphs: [
+    "Organizations are increasingly looking to bolster their security posture in a cloud-native environment. Cilium's sidecar-free mTLS-based authentication optimizes security and performance, ensuring that services authenticate each other's identities before communication occurs.",
+    'More than just authentication, Cilium extends the identity concept to processes, binaries, and execution contexts, allowing only specific binaries running in secure contexts to authenticate each other, thereby enhancing the overall security model.',
+  ],
+  withImage: true,
+  imageSrc: SecurityImage4,
+  imageAlt: "Cilium's mutual TLS illustration",
 };
 
 const securityTalks = [
@@ -155,6 +168,7 @@ const SecurityPage = () => (
     <Container className="my-12 py-12">
       <img src={tetragonImage1} alt="" />
     </Container>
+    <BulletSection {...bulletSection4} />
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
     <FeaturedTalks heading="Featured talks" talks={securityTalks} />
