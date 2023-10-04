@@ -93,7 +93,7 @@ const bulletSection2 = {
 
 const bulletSection4 = {
   heading:
-    'Bolster Security, Streamline Infrastructure, Reduce Complexity, and Improve Performance Simultaneously with Cilium’s Mutual TLS',
+    "Bolster Security, Streamline Infrastructure, Reduce Complexity Without Sacrificing Performance Using Cilium's Mutual TLS",
   paragraphs: [
     "Organizations are increasingly looking to bolster their security posture in a cloud-native environment. Cilium's sidecar-free mTLS-based authentication optimizes security and performance, ensuring that services authenticate each other's identities before communication occurs.",
     'More than just authentication, Cilium extends the identity concept to processes, binaries, and execution contexts, allowing only specific binaries running in secure contexts to authenticate each other, thereby enhancing the overall security model.',

@@ -8,6 +8,8 @@ import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import EficodeLogo from 'icons/logo-efficode.inline.svg';
 import PalarkLogo from 'icons/logo-palark.inline.svg';
+import ConsultingImage1 from 'images/pages/industries/consulting-1.png';
+import ConsultingImage2 from 'images/pages/industries/consulting-2.jpg';
 import ElectricianBee from 'images/pages/industries/electrician-bee.png';
 import MainLayout from 'layouts/main/main';
 
@@ -63,6 +65,29 @@ const palarkTestimonial = {
   url: 'https://blog.palark.com/why-cilium-for-kubernetes-networking/',
 };
 
+const bulletSection1 = {
+  heading: "Easily Integrate With Customer's  Infrastructure.",
+  paragraphs: [
+    "Consulting companies cater to various clients with different choices of infrastructures and cloud providers. Operating across different environments often results in additional operational and resource overhead. Cilium provides a consistent experience for operators across different environments. With Cilium's cluster mesh,  multiple clusters can be joined into a large unified network regardless of the Kubernetes distribution or location each is running. ",
+    "Cilium also reduces the number of tools operators have to deal with; for example, Cilium's load balancing can replace traditional hardware load balancers. Cilium's Layer 2 announcement can eliminate the need for extra tooling like MetalLB. Together, these features ensure that consulting companies can offer uniform, high-quality services regardless of their client's chosen infrastructure.",
+  ],
+  withImage: true,
+  imageSrc: ConsultingImage1,
+  imageAlt: 'cilium mesh architecture illustration',
+};
+
+const bulletSection2 = {
+  heading:
+    'Visibility Into Customers Infrastructure Across Clouds, Clusters, and Premises, Independent of The Underlying Platform',
+  paragraphs: [
+    'Cilium delivers comprehensive visibility across various platforms, whether on-premises, cloud, or clusters. This unified data plane approach allows for consistent monitoring across deployments, aiding in workload migration between clusters and simplifying the onboarding of new infrastructure providers.',
+    'Observability data from Cilium  is made available using modern standards such as Prometheus and can be visualized using powerful tools such as Grafana. Cilium also supports traditional standards such as sFLow and NetFlow.',
+  ],
+  withImage: true,
+  imageSrc: ConsultingImage2,
+  imageAlt: "cilium's hubble illlustation",
+};
+
 const consultingLogos = [
   GrayedPalarkLogo,
   GrayedTietoevryLogo,
@@ -114,9 +139,10 @@ const ConsultingPage = () => (
     <Hero {...heroContent} imageStyle="lg:h-[360px] lg:w-[360px] mb-24">
       <AdopterTestimonial {...eficodeTestimonial} />
     </Hero>
-    <AdopterTestimonial {...palarkTestimonial} />
-    <BulletSection />
-    <AdoptersLogo logos={consultingLogos} />
+    <BulletSection {...bulletSection1} />
+    <BulletSection {...bulletSection2} className="mb-8" />
+    <AdopterTestimonial {...palarkTestimonial} className="mb-8" />
+    <AdoptersLogo logos={consultingLogos} className="mt-20 mb-16 lg:grid lg:grid-cols-4" />
     <ResourcesCard
       heading="Meet Customer’s Increasing Demand for Better Security, Performance, and Observability with Cilium. "
       resources={consultingResources}

@@ -13,6 +13,7 @@ import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
+import FinanceImage1 from 'images/pages/industries/finance-1.png';
 import ExecelBee from 'images/pages/usecase/excel-bee.png';
 import MainLayout from 'layouts/main';
 
@@ -97,6 +98,17 @@ const bulletSection2 = {
   paragraphs: [
     'Free your Security and Operations Teams from manual checks—Cilium ensures your traffic is encrypted to the highest standards, aligning SNIs with destination DNS names and vetting certificates for trusted origins. Go beyond traditional measures by embedding compliance and security directly into your DevOps flow. From Open Banking and GDPR to PCI-DSS and ATM security, Cilium keeps you ahead of industry regulations. Embrace Kubernetes confidently, infusing your application and network lifecycle with cutting-edge policies and eliminating potential technical debts. ',
   ],
+};
+
+const bulletSection3 = {
+  heading: '“Always On” Workload Analysis for Continuous Compliance',
+  paragraphs: [
+    'Cilium ensures continuous compliance with standards like FIPS, PCIDSS, Fedramp, and SOC 2 by offering real-time monitoring and analysis of workload communication to identify non-compliant connections. It emphasizes encryption, traffic analysis, and full-stack monitoring without imposing performance constraints, ensuring confidentiality, integrity, and availability in regulated environments.    ',
+  ],
+
+  withImage: true,
+  imageSrc: FinanceImage1,
+  imageAlt: 'Cilium continous compliance image',
 };
 
 const financialUsecases = [
@@ -190,7 +202,8 @@ const FinancialServicesPage = () => (
     <Hero {...heroContent} imageStyle="lg:h-[470px] lg:w-[470px] lg:-mt-16">
       <Testimonial {...bloombergTestimonial} />
     </Hero>
-    <BulletSection {...bulletSection1} className="my-8" bulletColor="additional-purple" />
+    <BulletSection {...bulletSection1} className="mt-8" bulletColor="additional-purple" />
+    <BulletSection {...bulletSection3} />
     <BulletSection {...bulletSection2} />
     <Stats className="mb-16" {...postfinanceStats} />
     <FeaturedTalks heading="Featured talks" talks={financialTalks} className="mt-8" />
