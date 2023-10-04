@@ -142,7 +142,10 @@ const ConsultingPage = () => (
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} className="mb-8" />
     <AdopterTestimonial {...palarkTestimonial} className="mb-8" />
-    <AdoptersLogo logos={consultingLogos} className="mt-20 mb-16 lg:grid lg:grid-cols-4" />
+    <AdoptersLogo
+      logos={consultingLogos}
+      className="mt-20 mb-16 grid grid-cols-3 lg:grid lg:grid-cols-4"
+    />
     <ResourcesCard
       heading="Meet Customer’s Increasing Demand for Better Security, Performance, and Observability with Cilium. "
       resources={consultingResources}
