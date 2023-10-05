@@ -63,7 +63,7 @@ const AdopterTestimonial = ({
           <p className="px-4 text-sm">{quotedText}</p>
           {withPerson && (
             <p>
-              <span className="text-sm font-bold">{name}</span>,{' '}
+              <span className="text-sm font-bold">{name}</span> —{' '}
               <span className="text-sm text-[#6C7993]">{role}</span>
             </p>
           )}

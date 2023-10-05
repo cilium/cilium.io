@@ -117,10 +117,10 @@ const securityTalks = [
     videoSrc: 'https://www.youtube.com/embed/kTGU-Nc2Db0',
   },
   {
-    title: 'Securing the Superpowers: Who Loaded That EBPF Program?',
+    title: 'Mutual Authentication with Cilium',
     description:
-      "Design for eBPF auditing and security and use Tetragon's (an open source eBPF based security tool) to show an implementation.",
-    videoSrc: 'https://www.youtube.com/embed/UBVTJ0LeXxc',
+      "Cilium's Mutual TLS provides authentication, confidentiality and integrity to service-to-service communications.",
+    videoSrc: 'https://www.youtube.com/embed/tE9U1gNWzqs',
   },
 ];
 
