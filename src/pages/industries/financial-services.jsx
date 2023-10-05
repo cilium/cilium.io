@@ -207,7 +207,7 @@ const FinancialServicesPage = () => (
     <BulletSection {...bulletSection2} />
     <Stats className="mb-16" {...postfinanceStats} />
     <FeaturedTalks heading="Featured talks" talks={financialTalks} className="mt-8" />
-    <AdoptersLogo logos={companyLogos} className="my-16 lg:grid lg:grid-cols-4" />
+    <AdoptersLogo logos={companyLogos} className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4" />
     <ResourcesCard
       heading="Join Global Finance Leaders in the  Cloud Native Networking Revolution "
       resources={financialResources}

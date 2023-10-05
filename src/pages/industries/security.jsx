@@ -172,7 +172,10 @@ const SecurityPage = () => (
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
     <FeaturedTalks heading="Featured talks" talks={securityTalks} />
-    <AdoptersLogo logos={securityAdopters} className="my-16 lg:grid lg:grid-cols-4" />
+    <AdoptersLogo
+      logos={securityAdopters}
+      className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4"
+    />
     <IndustryUseCases heading="Cilium’s Security Focused Use Cases" usecases={securityUsecases} />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>

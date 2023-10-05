@@ -172,7 +172,10 @@ const MediaEntertainmentPage = () => (
     <AdopterTestimonial {...hertznerTestimonial} className="mt-8 pb-8" />
     <BulletSection {...bulletSection1} />
     <AdopterTestimonial {...googleTestimonial} className="my-8 pb-8" />
-    <AdoptersLogo logos={cloudAdoptersLogo} />
+    <AdoptersLogo
+      logos={cloudAdoptersLogo}
+      className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4"
+    />
     <FeaturedTalks talks={cloudTalks} />
     <ResourcesCard
       heading="Bring Your Favorite Cloud. One Solution, Every Cloud"
