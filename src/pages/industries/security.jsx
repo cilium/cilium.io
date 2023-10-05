@@ -37,7 +37,7 @@ const heroContent = {
   texts: [
     'For businesses at the forefront of cybersecurity and those for whom security is integral to their operations, the rise of cloud native applications presents immense opportunities and accompanying challenges. The dynamism of cloud native architectures, from microservices to containerization and distributed computing, demands a paradigm shift in securing these environments.',
     'Traditional security approaches struggle to adapt to the ephemeral and dynamic nature of cloud native applications. ',
-    'Cilium delivers robust cloud native security with features like zero trust security, transparent encryption, security observability, and runtime protection. Leveraging eBPF,  Cilium offers efficient observability across the entire application stack, integrates seamlessly with SIEM systems, and ensures compliance with standards like FIPS, FedRAMP, and SOC. Cilium aligns security practices with the realities of cloud native applications.',
+    'Cilium delivers robust cloud native security with features like zero trust security, transparent encryption, mutual TLS, security observability, and runtime protection. Leveraging eBPF,  Cilium offers efficient observability across the entire application stack, integrates seamlessly with SIEM systems, and ensures compliance with standards like FIPS, FedRAMP, and SOC. Cilium aligns security practices with the realities of cloud native applications.',
   ],
   imageSrc: SecurityBee,
   imageAlt: 'ebeedex security bee',
