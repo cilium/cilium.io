@@ -41,7 +41,7 @@ const heroContent = {
     'Join the next wave of high-performance e-commerce platforms leveraging the advanced capabilities of eBPF with Cilium to build scalable and secure e-commerce experiences. Gain the edge in speed, security, and observability.',
   ],
   imageSrc: TravelBee,
-  imageAlt: 'isovalent public speaking bee',
+  imageAlt: 'ebeedex public speaking bee',
 };
 
 const tripStats = {

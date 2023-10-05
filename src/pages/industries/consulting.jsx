@@ -36,7 +36,7 @@ const heroContent = {
     'World-leading consulting companies are now turning to Cilium, leveraging its capabilities to deliver secure, high-performance, and observable cloud native solutions. By adopting Cilium, consultancies ensure streamlined operations across varied client environments and position themselves at the forefront of cloud native innovations, catering to clients ranging from startups, nationwide banks  and large enterprises.',
   ],
   imageSrc: ElectricianBee,
-  imageAlt: 'isovalent electrician bee',
+  imageAlt: 'ebeedex electrician bee',
 };
 
 const eficodeTestimonial = {

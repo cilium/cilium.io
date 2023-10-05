@@ -40,7 +40,7 @@ const heroContent = {
     'Cilium delivers robust cloud native security with features like zero trust security, transparent encryption, security observability, and runtime protection. Leveraging eBPF,  Cilium offers efficient observability across the entire application stack, integrates seamlessly with SIEM systems, and ensures compliance with standards like FIPS, FedRAMP, and SOC. Cilium aligns security practices with the realities of cloud native applications.',
   ],
   imageSrc: SecurityBee,
-  imageAlt: 'isovalent security bee',
+  imageAlt: 'ebeedex security bee',
 };
 
 const tetragonContent = {

@@ -40,7 +40,7 @@ const heroContent = {
     'With Cilium, financial services can achieve improved observability, maintain security controls, and weave in security governance for Kubernetes environments in On-prem/Hybrid/Multi-Cloud environments including AKS/EKS/GCP/OpenShift/Rancher/SUSE, etc.',
   ],
   imageSrc: ExecelBee,
-  imageAlt: 'isovalent excel bee',
+  imageAlt: 'ebeedex excel bee',
 };
 
 const bloombergTestimonial = {

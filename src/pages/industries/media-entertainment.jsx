@@ -36,7 +36,7 @@ const heroContent = {
     'Cilium is designed to provide high-performance, secure, and scalable networking and observability. It offers a wide range of features, helping companies in the media and entertainment industry deliver seamless experiences, reduce operational complexity, and secure their environment. ',
   ],
   imageSrc: PublicSPeakingBee,
-  imageAlt: 'isovalent public speaking bee',
+  imageAlt: 'ebeedex public speaking bee',
 };
 
 const newyorktimesTestimonial = {
