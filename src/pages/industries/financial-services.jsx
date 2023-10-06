@@ -35,7 +35,7 @@ import RobinhoodOfficeImage from './images/robinhoodoffice.png';
 const heroContent = {
   heading: 'Financial Services ',
   texts: [
-    'Regulatory oversight is a hallmark of the financial industry. Cilium’s detailed traffic monitoring and logging mechanisms assist institutions in maintaining clear audit trails, ensuring regulatory compliance are met and forensic investigations are facilitated. ',
+    "Regulatory oversight is a fundamental aspect of the financial industry. Cilium's detailed traffic monitoring and logging mechanisms support institutions in establishing transparent audit trails, guaranteeing regulatory compliance, and conducting forensic investigations.",
     "The world of fintech revolves around APIs – from mobile banking apps to complex trading platforms. Cilium's API-aware network security ensures that these critical gateways can be fortified, understanding and guarding against any malicious patterns in API calls.",
     'With Cilium, financial services can achieve improved observability, maintain security controls, and weave in security governance for Kubernetes environments in On-prem/Hybrid/Multi-Cloud environments including AKS/EKS/GCP/OpenShift/Rancher/SUSE, etc.',
   ],
