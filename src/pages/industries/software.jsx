@@ -33,7 +33,7 @@ import GrayedPlanetscaleLogo from './images/logos/planetscale.svg';
 const heroContent = {
   heading: 'SaaS, Software, and  DBaaS',
   texts: [
-    "In today's fast-evolving software landscape, teams behind SaaS, standalone software, and DBaaS offerings grapple with networking, security, and scalability challenges. Traditional networking solutions often fail to support distributed systems' complex demands spanning multiple clusters and clouds. Furthermore, the rise of microservices intensifies the need for fine-grained security measures and deep visibility into intricate application communications.",
+    "In today's fast-evolving software landscape, teams behind SaaS, standalone software, and DBaaS offerings grapple with networking, security, and scalability challenges. Traditional networking solutions often fail to support distributed systems' complex demands spanning multiple clusters and clouds. Furthermore, the rise of microservices intensifies the need for fine-grained security measures and deep visibility into application communications.",
     'Cilium is purpose-built to secure and accelerate the delivery of cloud native applications. It leverages eBPF, a revolutionary Linux kernel technology, to provide API-aware networking and security with unparalleled granularity without compromising performance. With Cilium, SaaS, software, and DBaaS teams can establish infrastructure capable of scaling their products globally to reach customers wherever they may be. Cilium enables the creation of secure Kubernetes multi-tenant environments, empowering these companies to meet the challenges of modern software deployment head-on.',
   ],
   imageSrc: AuditBee,

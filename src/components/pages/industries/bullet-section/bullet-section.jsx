@@ -4,7 +4,15 @@ import React from 'react';
 
 import Container from 'components/shared/container/container';
 
-const BulletSection = ({ heading, className, withImage, imageSrc, paragraphs, imageAlt }) => (
+const BulletSection = ({
+  heading,
+  className,
+  withImage,
+  imageSrc,
+  paragraphs,
+  imageAlt,
+  imageStyle,
+}) => (
   <Container>
     <div className={classNames('py-8', className)}>
       <div className="lg:flex lg:items-start lg:gap-[42px]">
@@ -18,7 +26,11 @@ const BulletSection = ({ heading, className, withImage, imageSrc, paragraphs, im
             </div>
 
             {withImage && (
-              <img className="w-full  lg:w-1/2 lg:grow" src={imageSrc} alt={imageAlt} />
+              <img
+                className={classNames('"w-full  lg:w-1/2 lg:grow', imageStyle)}
+                src={imageSrc}
+                alt={imageAlt}
+              />
             )}
           </div>
         </div>
@@ -33,6 +45,7 @@ BulletSection.propTypes = {
   className: PropTypes.string,
   imageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
+  imageStyle: PropTypes.string,
   withImage: PropTypes.bool,
 };
 
@@ -41,6 +54,7 @@ BulletSection.defaultProps = {
   withImage: false,
   imageSrc: '',
   imageAlt: '',
+  imageStyle: '',
   paragraphs: [],
 };
 

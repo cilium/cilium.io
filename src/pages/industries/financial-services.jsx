@@ -14,6 +14,7 @@ import SEO from 'components/shared/seo';
 import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
 import FinanceImage1 from 'images/pages/industries/finance-1.png';
+import FinanceImage2 from 'images/pages/industries/finance-2.png';
 import ExecelBee from 'images/pages/usecase/excel-bee.png';
 import MainLayout from 'layouts/main';
 
@@ -35,9 +36,9 @@ import RobinhoodOfficeImage from './images/robinhoodoffice.png';
 const heroContent = {
   heading: 'Financial Services ',
   texts: [
-    "Regulatory oversight is a fundamental aspect of the financial industry. Cilium's detailed traffic monitoring and logging mechanisms support institutions in establishing transparent audit trails, guaranteeing regulatory compliance, and conducting forensic investigations.",
-    "The world of fintech revolves around APIs – from mobile banking apps to complex trading platforms. Cilium's API-aware network security ensures that these critical gateways can be fortified, understanding and guarding against any malicious patterns in API calls.",
-    'With Cilium, financial services can achieve improved observability, maintain security controls, and weave in security governance for Kubernetes environments in On-prem/Hybrid/Multi-Cloud environments including AKS/EKS/GCP/OpenShift/Rancher/SUSE, etc.',
+    "Regulatory oversight is a hallmark of the financial industry. Cilium's detailed traffic monitoring and logging mechanisms support institutions in establishing transparent audit trails, guaranteeing regulatory compliance, and conducting forensic investigations.",
+    "The world of fintech revolves around APIs – from mobile banking apps to trading platforms. Cilium's API-aware network security ensures that these critical APIs can be secured, empowering teams with the toolsets needed to understand and guard against malicious patterns in API calls. Cilium supports L7 policies (e.g., allow HTTP GET /foo) for fine-grained access control to shared API services running common cloud native protocols like HTTP, gRPC, Kafka, etc. Cilium also supports deny-based, cluster-wide, and host-layer firewall network policies.",
+    'With Cilium, financial services can achieve improved observability, maintain security controls, and weave compliance and security governance for Kubernetes environments directly into the DevOps process.',
   ],
   imageSrc: ExecelBee,
   imageAlt: 'ebeedex excel bee',
@@ -96,19 +97,22 @@ const bulletSection1 = {
 const bulletSection2 = {
   heading: 'Weave Compliance and Security Throughout the DevOps process.',
   paragraphs: [
-    'Free your Security and Operations Teams from manual checks—Cilium ensures your traffic is encrypted to the highest standards, aligning SNIs with destination DNS names and vetting certificates for trusted origins. Go beyond traditional measures by embedding compliance and security directly into your DevOps flow. From Open Banking and GDPR to PCI-DSS and ATM security, Cilium keeps you ahead of industry regulations. Embrace Kubernetes confidently, infusing your application and network lifecycle with cutting-edge policies and eliminating potential technical debts. ',
+    'Cilium empowers you to free your security and operations teams from the need to review each policy change manually. Cilium ensures that the appropriate TLS version and ciphers protect all traffic that needs to be encrypted, that the SNI matches the original destination DNS name, and that a trusted certificate authority signs the certificate received.',
   ],
+  withImage: true,
+  imageSrc: FinanceImage2,
+  imageAlt: 'cilium TLS keys and certificate illustration',
 };
 
 const bulletSection3 = {
   heading: '“Always On” Workload Analysis for Continuous Compliance',
   paragraphs: [
-    'Cilium ensures continuous compliance with standards like FIPS, PCIDSS, Fedramp, and SOC 2 by offering real-time monitoring and analysis of workload communication to identify non-compliant connections. It emphasizes encryption, traffic analysis, and full-stack monitoring without imposing performance constraints, ensuring confidentiality, integrity, and availability in regulated environments.    ',
+    'Cilium ensures continuous compliance with standards like FIPS, PCIDSS, Open Banking, Fedramp, and SOC 2 by offering real-time monitoring and analysis of workload communication to identify non-compliant connections. It emphasizes encryption, traffic analysis, and full-stack monitoring without imposing performance constraints, ensuring confidentiality, integrity, and availability in regulated environments.    ',
   ],
 
   withImage: true,
   imageSrc: FinanceImage1,
-  imageAlt: 'Cilium continous compliance image',
+  imageAlt: 'Cilium continuous compliance image',
 };
 
 const financialUsecases = [
@@ -199,12 +203,12 @@ const companyLogos = [
 
 const FinancialServicesPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="lg:h-[470px] lg:w-[470px] lg:-mt-16">
+    <Hero {...heroContent} imageStyle="lg:h-[470px] lg:w-[470px] lg:-mt-10 ">
       <Testimonial {...bloombergTestimonial} />
     </Hero>
-    <BulletSection {...bulletSection1} className="mt-8" bulletColor="additional-purple" />
-    <BulletSection {...bulletSection3} />
+    {/* <BulletSection {...bulletSection1} className="mt-8" bulletColor="additional-purple" /> */}
     <BulletSection {...bulletSection2} />
+    <BulletSection {...bulletSection3} />
     <Stats className="mb-16" {...postfinanceStats} />
     <FeaturedTalks heading="Featured talks" talks={financialTalks} className="mt-8" />
     <AdoptersLogo logos={companyLogos} className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4" />

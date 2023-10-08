@@ -37,7 +37,7 @@ const heroContent = {
   heading: 'E-commerce',
   texts: [
     'E-commerce platforms have a unique set of networking needs— in most cases, a highly dynamic microservices architecture, exponential increases in user traffic, diverse geographic distribution, and stringent data security requirements.',
-    'Cilium addresses unique needs by offering exceptional networking, observability, and security features. By leveraging eBPF technology and seamless Kubernetes integration, Cilium enables easy deployment and management of microservices in a secure and scalable way. This powerful combination also simplifies the management of large Kubernetes deployments, aids in compliance with regulatory requirements, and provides deep visibility into network traffic.',
+    "Cilium leverages eBPF, a new powerful  Linux kernel technology, to address these unique needs, offering high-performance cloud native-aware networking, observability, and security. E-commerce teams can scale globally and deliver better user experiences through a low-latency network path from Cilium's eBPF-optimized data plane. Cilium also provides a wide range of security and observability features that support E-commerce teams in implementing compliance frameworks such as FIPS, PCIDSS, GDPR, Fedramp, and SOC 2.",
     'Join the next wave of high-performance e-commerce platforms leveraging the advanced capabilities of eBPF with Cilium to build scalable and secure e-commerce experiences. Gain the edge in speed, security, and observability.',
   ],
   imageSrc: TravelBee,
@@ -187,7 +187,7 @@ const ecommerceFeatures = {
     {
       title: 'Compliance and regulatory requirements',
       description:
-        'Enterprises that have large-scale Kubernetes deployments with hundreds or thousands of nodes can benefit from the high-performance networking and observability features provided by Cilium.',
+        'Cilium provides advanced network policy enforcement and  transparent encryption making it easier  to comply with regulatory requirements such as FIPS, PCIDSS, GDPR, Fedramp, and SOC 2.',
       icon: LockIcon,
     },
   ],

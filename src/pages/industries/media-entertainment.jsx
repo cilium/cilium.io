@@ -81,7 +81,7 @@ const seznamTestimonial = {
     "Seznam.cz tested Cilium's Standalone L4LB XDP as an alternative to their IPVS load balancer due to increasing traffic concerns.",
   withPerson: true,
   quotedText:
-    "nder synthetic load tests, IPVS began dropping packets around 3Mpps, whereas L4LB XDP managed up to 14.8Mpps before experiencing issues. In real-world applications, L4LB XDP demonstrated significantly better efficiency, handling similar traffic rates as IPVS but using only half a CPU compared to IPVS's 2x18 CPUs. The results indicate L4LB XDP's superior performance and efficiency over IPVS.",
+    "Under synthetic load tests, IPVS began dropping packets around 3Mpps, whereas L4LB XDP managed up to 14.8Mpps before experiencing issues. In real-world applications, L4LB XDP demonstrated significantly better efficiency, handling similar traffic rates as IPVS but using only half a CPU compared to IPVS's 2x18 CPUs. The results indicate L4LB XDP's superior performance and efficiency over IPVS.",
   name: 'Ondrej Blazek',
   role: 'Infrastructure Engineer, Seznam.com',
 };

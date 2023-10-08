@@ -37,7 +37,7 @@ const heroContent = {
   texts: [
     'For businesses at the forefront of cybersecurity and those for whom security is integral to their operations, the rise of cloud native applications presents immense opportunities and accompanying challenges. The dynamism of cloud native architectures, from microservices to containerization and distributed computing, demands a paradigm shift in securing these environments.',
     'Traditional security approaches struggle to adapt to the ephemeral and dynamic nature of cloud native applications. ',
-    'Cilium delivers robust cloud native security with features like zero trust security, transparent encryption, mutual TLS, security observability, and runtime protection. Leveraging eBPF,  Cilium offers efficient observability across the entire application stack, integrates seamlessly with SIEM systems, and ensures compliance with standards like FIPS, FedRAMP, and SOC. Cilium aligns security practices with the realities of cloud native applications.',
+    'Cilium delivers robust cloud native security with features like zero trust security, transparent encryption, mutual TLS, security observability, and runtime protection. Leveraging eBPF, Cilium offers efficient observability across the entire application stack, integrates seamlessly with SIEM systems, and ensures compliance with standards like FIPS, FedRAMP, and SOC. Cilium aligns security practices with the realities of building, maintaining, and scaling cloud native applications.',
   ],
   imageSrc: SecurityBee,
   imageAlt: 'ebeedex security bee',
@@ -73,7 +73,7 @@ const bulletSection1 = {
   heading:
     'Better Understand Security Breaches and Recover Quickly with Cilium’s Forensics Capabilities.',
   paragraphs: [
-    "Cilium's forensic capabilities prioritize quick and efficient issue investigation at the application level, while also enabling threat detection at the network level. By granting app owners multi-tenant access to network data flows, Cilium ensures deep insights into network flows, and provides easy-to-use tools for integration and analysis.",
+    "Critical workloads that run in a Kubernetes environment require cloud native-aware tooling to perform efficient incident investigations and monitor key compliance requirements. Cilium's forensic capabilities enable SecOps teams and App owners to conduct security analysis with a native understanding of cloud native identities. Cilium provides a deep understanding of network flows from L3/L4 up to L7 and runtime visibility from OS to code executions in the pod.",
   ],
   withImage: true,
   imageSrc: SecurityImage2,
@@ -162,11 +162,11 @@ const securityUsecases = [
 
 const SecurityPage = () => (
   <MainLayout>
-    <Hero {...heroContent} imageStyle="lg:h-[395px] lg:w-[350px]" />
+    <Hero {...heroContent} imageStyle="lg:h-[390px] lg:w-[350px]" />
     <SecurityCard {...tetragonContent} className="py-12" />
     <TetragonCard contents={tetragonCardContents} />
     <Container className="my-12 py-12">
-      <img src={tetragonImage1} alt="" />
+      <img src={tetragonImage1} alt="tetragon architecture and features illustration" />
     </Container>
     <BulletSection {...bulletSection4} />
     <BulletSection {...bulletSection1} />
