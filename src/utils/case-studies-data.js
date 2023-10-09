@@ -637,7 +637,6 @@ export default {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',
   },
-
   scaleway: {
     iconName: 'scaleway',
     text: '<b>Scaleway</b> uses Cilium as the default CNI for Kubernetes Kapsule',
@@ -842,6 +841,10 @@ export default {
   proton: {
     iconName: 'proton',
     text: '<b>Proton</b> is using Cilium as their CNI for all their Kubernetes clusters',
+  },
+  plusserver: {
+    iconName: 'plusserver',
+    text: '<b>Plusserver</b> uses Cilium as a CNI in its managed Kubernetes clusters provided with Gardener Project across AWS and OpenStack ',
   },
   cistec: {
     iconName: 'cistec',
