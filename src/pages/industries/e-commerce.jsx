@@ -1,6 +1,7 @@
 import React from 'react';
 
 import AdoptersLogo from 'components/pages/industries/adopters-logo/adopters-logo';
+import BulletSection from 'components/pages/industries/bullet-section';
 import { FeatureCard } from 'components/pages/industries/cards';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
@@ -11,6 +12,7 @@ import Community from 'components/shared/community';
 import DbSchenkerLogo from 'icons/logo-dbschenker.inline.svg';
 import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
+import EcommerceImage1 from 'images/pages/industries/ecommerce-1.png';
 import TravelBee from 'images/pages/industries/travel-bee.png';
 import MainLayout from 'layouts/main';
 
@@ -64,6 +66,18 @@ const tripStats = {
       subHeading: 'Cilium network policy entries',
     },
   ],
+};
+
+const bullectSection1 = {
+  heading:
+    'Build Globally Distributed Services. Gain The Edge in Speed, Security, and Observability',
+  paragraphs: [
+    'E-commerce platforms with offerings spanning a wide geographic distribution often need to deploy their platforms close to their users to reduce latency. Cilium provides a wide range of features enabling e-commerce platforms to build infrastructure across multiple clouds, regions, availability zones, and geographic locations without sacrificing performance. Cilium Cluster Mesh effectively allows joining multiple clusters into a large unified network, regardless of the Kubernetes distribution or location each of them is running. Cilium also offers scalable and efficient load balancing and ingress, enabling maglev-supported load balancing on L3/L4 for N/S traffic and E/W, including DSR and transparent k8s ingress controllers.',
+    'With a Cilium-enabled infrastructure, E-commerce platforms can confidently expand their reach and offer fast, reliable, and globally accessible e-commerce experiences to their customers.',
+  ],
+  withImage: true,
+  imageSrc: EcommerceImage1,
+  imageAlt: 'cilium load balancing illustration',
 };
 
 const trendyolTestimonial = {
@@ -198,6 +212,7 @@ const MediaEntertainmentPage = () => (
     <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
       <Stats {...tripStats} className="py-8" />
     </Hero>
+    <BulletSection {...bullectSection1} />
     <FeatureCard {...ecommerceFeatures} className="mt-12 mb-24" />
     <AdopterTestimonial {...trendyolTestimonial} />
     <AdoptersLogo className="my-16 grid grid-cols-4" logos={companyLogos} />

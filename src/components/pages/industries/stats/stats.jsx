@@ -56,7 +56,7 @@ const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
                 >
                   <div className="flex flex-col items-center text-center lg:gap-8">
                     <h1 className="text-md font-bold lg:text-xl">{stat.heading}</h1>
-                    <h3 className="text-md ">{stat.subHeading}</h3>
+                    <h3 className="text-md p-1">{stat.subHeading}</h3>
                   </div>
                 </div>
               );

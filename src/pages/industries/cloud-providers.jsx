@@ -92,7 +92,7 @@ const bulletSection1 = {
 const bulletSection2 = {
   heading: "Hetzner Cloud's Adoption of Cilium for a Cloud Native Ingress Architecture",
   paragraphs: [
-    'Hetzner Cloud, a leading German public cloud provider, recently overhauled its ingress architecture to pursue modern and scalable cloud services. Hetzner was scouting for a Kubernetes-native solution with ECMP, firewall, IPv6, and DSR capabilities. Cilium emerged as the ideal choice. Before adopting Cilium, Hetzner ran tests deploying diverse Cilium configurations in a Kubernetes cluster to benchmark RPS and throughput and then checking the CPU usage as a metric to compare the tests. These tests showed Cilium provided a massive increase in both RPS and throughput while still reducing CPU usage. ',
+    'Hetzner Cloud, a leading German public cloud provider, recently overhauled its ingress architecture to pursue modern and scalable cloud services. Hetzner was scouting for a Kubernetes-native solution with ECMP, firewall, IPv6, and DSR capabilities. Cilium emerged as the ideal choice. Before adopting Cilium, Hetzner ran tests deploying different Cilium configurations in a Kubernetes cluster to benchmark RPS and throughput and then checking the CPU usage as a metric to compare the tests. These tests showed Cilium provided a massive increase in both RPS and throughput while still reducing CPU usage. ',
     "With Cilium's Kubernetes-native support, scalability, enhanced security, IPv6 compatibility, and efficiency with DSR, Cilium is a compelling choice for cloud providers. The results of Hetzner Cloud's performance tests highlight the value of adopting Cilium to elevate performance, security, and scalability in the cloud infrastructure landscape.",
   ],
 };
