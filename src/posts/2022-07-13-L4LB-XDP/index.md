@@ -75,7 +75,7 @@ WantedBy=multi-user.target
 
 ```
 
-and then we launched Cilium in load balancer only mode:
+and then we launched Cilium in load balancer only mode, below is our configuration from the (Cilium 1.10 version)[https://cilium.io/blog/2021/05/20/cilium-110#standalonelb]:
 
 ```
 systemctl start sys-fs-bpf.mount; docker run \
