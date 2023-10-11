@@ -2,7 +2,7 @@
 date: '2023-10-11T17:00:00.000Z'
 title: 'Cloud Native Computing Foundation Announces Cilium Graduation'
 ogImage: ogimage.png
-ogSummary: 'The Cloud Native Computing Foundation® (CNCF®), which builds sustainable ecosystems for cloud native software, announce the graduation of Cilium.'
+ogSummary: 'Cilium is the first graduated CNI and this highlights its evolution from a simple CNI to a complete networking, observability, and security solution'
 isFeatured: true
 categories:
   - Community
