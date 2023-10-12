@@ -6,9 +6,9 @@ import React from 'react';
 import Link from 'components/shared/link';
 import TypeLabel from 'components/shared/type-label';
 import useElementRect from 'hooks/use-element-rect';
+import placeholderIllustration from 'images/placeholder.svg';
 
 import PlaceIcon from './images/place.inline.svg';
-import placeholderIllustration from './images/placeholder.svg';
 import TimeIcon from './images/time.inline.svg';
 
 const EventCover = ({ ogImage, title }) => {
@@ -68,10 +68,10 @@ const EventCard = ({
           <span className="text-sm font-normal leading-none">{place}</span>
         </div>
       </div>
-      <h3 className="mt-3 text-xl font-bold leading-snug transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-22">
+      <h3 className="line-clamp-3 mt-3 text-xl font-bold leading-snug transition-colors duration-200 group-hover:text-primary-1 md:text-22">
         {title}
       </h3>
-      <p className="mt-2 mb-4 text-base leading-normal text-black/60 line-clamp-5">{summary}</p>
+      <p className="line-clamp-5 mt-2 mb-4 text-base leading-normal text-black/60">{summary}</p>
       <TypeLabel type={type} className="mt-auto" />
     </article>
   </Link>

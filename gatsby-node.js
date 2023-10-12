@@ -9,7 +9,8 @@ const { slugify } = require('./src/utils/slugify');
 const DRAFT_FILTER = process.env.NODE_ENV === 'production' ? [false] : [true, false];
 
 const BLOG_POSTS_PER_PAGE = 9;
-const slugifyCategory = (item) => (item === '*' ? 'blog/' : `blog/categories/${slugify(item)}/`);
+const slugifyCategory = (item, pagePath) =>
+  item === '*' ? `${pagePath}/` : `${pagePath}/categories/${slugify(item)}/`;
 
 // Create Blog Posts
 async function createBlogPosts({ graphql, actions }) {
@@ -140,7 +141,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
         if (result.errors) throw result.errors;
         const posts = result.data.allMdx.edges;
         const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
-        const pathBase = slugifyCategory(category);
+        const pathBase = slugifyCategory(category, 'blog');
 
         Array.from({ length: numPages }).forEach((_, i) => {
           const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
@@ -283,10 +284,138 @@ async function createEventsPage({ graphql, actions }) {
   });
 }
 
+// Create Labs Page
+async function createLabsPage({ graphql, actions }) {
+  const { createPage } = actions;
+
+  const LABS_BASE_TEMPLATE = './src/templates/labs.jsx';
+  const LABS_REGEX = '/content/labs/';
+  const LABS_PER_PAGE = 12;
+
+  const template = Path.resolve(LABS_BASE_TEMPLATE);
+
+  const result = await graphql(
+    `
+      query ($labsRegex: String!, $draftFilter: [Boolean]!) {
+        allMdx(
+          filter: {
+            fileAbsolutePath: { regex: $labsRegex }
+            fields: { draft: { in: $draftFilter } }
+          }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                categories
+              }
+            }
+          }
+        }
+        allCategories: allMdx(filter: { fileAbsolutePath: { regex: $labsRegex } }) {
+          group(field: frontmatter___categories) {
+            fieldValue
+          }
+        }
+      }
+    `,
+    { labsRegex: LABS_REGEX, draftFilter: DRAFT_FILTER }
+  );
+
+  if (result.errors) throw new Error(result.errors);
+
+  const {
+    allCategories: { group: allCategories },
+  } = result.data;
+
+  const categories = ['*'].concat(allCategories.map((category) => category.fieldValue));
+  const labList = result.data.allMdx.edges.map(({ node: { frontmatter: lab } }) => ({ ...lab }));
+
+  const promiseList = [];
+
+  categories.forEach((category) => {
+    const totalCount =
+      category === '*'
+        ? labList.length
+        : labList.filter(({ categories }) => categories.includes(category)).length;
+    const totalPageCount = Math.ceil(totalCount / LABS_PER_PAGE);
+
+    Array.from({ length: totalPageCount }).forEach((_, i) => {
+      promiseList.push(
+        graphql(
+          `
+            query CategoryLabsQuery(
+              $labsRegex: String!
+              $tag: String!
+              $draftFilter: [Boolean]!
+              $limit: Int!
+              $skip: Int!
+            ) {
+              allMdx(
+                filter: {
+                  fileAbsolutePath: { regex: $labsRegex }
+                  fields: { categories: { glob: $tag }, draft: { in: $draftFilter } }
+                }
+                sort: { fields: frontmatter___title, order: ASC }
+                limit: $limit
+                skip: $skip
+              ) {
+                edges {
+                  node {
+                    frontmatter {
+                      date(formatString: "MMM DD, YYYY")
+                      categories
+                      title
+                      ogSummary
+                      externalUrl
+                      from
+                      ogImage {
+                        childImageSharp {
+                          gatsbyImageData(width: 601)
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          `,
+          {
+            labsRegex: LABS_REGEX,
+            tag: category,
+            draftFilter: DRAFT_FILTER,
+            limit: LABS_PER_PAGE,
+            skip: i * LABS_PER_PAGE,
+          }
+        ).then((result) => {
+          if (result.errors) throw new Error(result.errors);
+          const labs = result.data.allMdx.edges;
+          const pathBase = slugifyCategory(category, 'labs');
+          const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
+
+          createPage({
+            path,
+            component: template,
+            context: {
+              labs,
+              categories,
+              currentCategory: category,
+              totalPageCount,
+              currentPage: i + 1,
+            },
+          });
+        })
+      );
+    });
+  });
+
+  await Promise.all(promiseList);
+}
+
 exports.createPages = async (options) => {
   await createBlogPages(options);
   await createBlogPosts(options);
   await createEventsPage(options);
+  await createLabsPage(options);
 };
 
 exports.onCreateNode = ({ node, actions }) => {
@@ -332,6 +461,11 @@ exports.onCreateNode = ({ node, actions }) => {
       node,
       name: 'region',
       value: node.frontmatter.region || '',
+    });
+    createNodeField({
+      node,
+      name: 'title',
+      value: node.frontmatter.title || '',
     });
   }
 };

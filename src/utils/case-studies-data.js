@@ -201,6 +201,10 @@ export default {
     text: 'Trip.com uses Cilium both on premise and in AWS',
     links: [
       {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/trip-com-group/',
+      },
+      {
         linkText: 'Blog 1',
         linkUrl: 'https://cilium.io/blog/2020/02/05/how-trip-com-uses-cilium/',
       },
@@ -362,7 +366,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Story',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/datadog/',
         linkTarget: '_blank',
       },
@@ -553,6 +557,11 @@ export default {
     text: 'Trendyol uses Cilium as the default CNI for its Kubernetes Clusters',
     links: [
       {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/trendyol/',
+        linkTarget: '_blank',
+      },
+      {
         linkText: 'Read Blog',
         linkUrl: 'https://medium.com/trendyol-tech/trendyols-cilium-transformation-ff064ff79fce',
         linkTarget: '_blank',
@@ -594,11 +603,36 @@ export default {
       },
     ],
   },
+  dbschenker: {
+    iconName: 'dbschenker',
+    text: 'DB Schenker uses Cilium as the default CNI in self-managed Kubernetes clusters running in AWS',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://cilium.io/blog/2023/09/07/db-schenker-migration-to-cilium/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  dbraincloud: {
+    iconName: 'dbraincloud',
+    text: 'dBrain Cloud uses Cilium as a CNI in their Kubernetes platform',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://habr.com/ru/companies/dbraincloud/articles/759244/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  twilio: {
+    iconName: 'twilio',
+    text: '<b>Twilio Segment</b>  is using Cilium across their Kubernetes based compute platform',
+  },
   kubesphere: {
     iconName: 'kubesphere',
     text: '<b>KubeKey</b> is an open-source lightweight tool for deploying Kubernetes clusters and addons',
   },
-
   scaleway: {
     iconName: 'scaleway',
     text: '<b>Scaleway</b> uses Cilium as the default CNI for Kubernetes Kapsule',
@@ -803,6 +837,10 @@ export default {
   proton: {
     iconName: 'proton',
     text: '<b>Proton</b> is using Cilium as their CNI for all their Kubernetes clusters',
+  },
+  plusserver: {
+    iconName: 'plusserver',
+    text: '<b>Plusserver</b> uses Cilium as a CNI in its managed Kubernetes clusters provided with Gardener Project across AWS and OpenStack ',
   },
   cistec: {
     iconName: 'cistec',

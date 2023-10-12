@@ -43,6 +43,8 @@ import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
+import DbraincloudLogo from './images/dbraincloud.inline.svg';
+import DbschenkerLogo from './images/dbschenker.inline.svg';
 import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
@@ -79,6 +81,7 @@ import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
 import PlaidLogo from './images/plaid.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
+import PlusserverLogo from './images/plusserver.inline.svg';
 import PolarSignalsLogo from './images/polarsignals.inline.svg';
 import PolverioLogo from './images/polverio.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
@@ -105,12 +108,17 @@ import TailorBrandsLogo from './images/tailor-brands.inline.svg';
 import TestifysecLogo from './images/testifysec.inline.svg';
 import TietoevryLogo from './images/tietoevry.inline.svg';
 import TrendyolLogo from './images/trendyol.inline.svg';
+import TwilioLogo from './images/twilio.inline.svg';
 import UngleichLogo from './images/ungleich.inline.svg';
 import UnitedCloudLogo from './images/unitedcloud.inline.svg';
 import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  plusserver: PlusserverLogo,
+  dbraincloud: DbraincloudLogo,
+  dbschenker: DbschenkerLogo,
+  twilio: TwilioLogo,
   testifysec: TestifysecLogo,
   trendyol: TrendyolLogo,
   eficode: EficodeLogo,
@@ -269,10 +277,10 @@ const UserCommunity = ({
                 dangerouslySetInnerHTML={{ __html: text }}
               />
               {links && (
-                <div className="mt-auto space-x-4 border-t border-gray-3 pt-4 leading-none">
+                <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-3 pt-4 leading-none">
                   {links.map(({ linkUrl, linkText, linkTarget }, index) => (
                     <Link
-                      className="relative before:absolute before:top-1/2 before:-left-2.5 before:inline-block before:h-1 before:w-1 before:-translate-y-1/2 before:rounded-full before:bg-gray-5 first:before:hidden"
+                      className="relative after:absolute after:top-1/2 after:-right-2.5 after:inline-block after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-5 last:after:hidden"
                       key={index}
                       type="text"
                       theme="primary"

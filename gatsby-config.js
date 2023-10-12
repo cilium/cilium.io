@@ -26,6 +26,13 @@ const plugins = [
     },
   },
   {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `labs`,
+      path: `${__dirname}/content/labs`,
+    },
+  },
+  {
     resolve: `gatsby-plugin-mdx`,
     options: {
       extensions: [`.mdx`, `.md`],

@@ -10,6 +10,10 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  plusserver,
+  dbraincloud,
+  dbschenker,
+  twilio,
   testifysec,
   trendyol,
   eficode,
@@ -122,6 +126,8 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    dbraincloud,
+    dbschenker,
     testifysec,
     palantir,
     edgelessSystems,
@@ -178,6 +184,8 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    plusserver,
+    twilio,
     unitedcloud,
     frsca,
     rafay,
