@@ -209,7 +209,7 @@ const SoftwarePage = () => (
     <FeaturedTalks heading="Featured Talks" talks={softwareTalks} />
     <ResourcesCard
       className="mt-10"
-      heading="Build on a Secure, Scalable and Modern Networking and Observability Stack"
+      heading="Build on a Secure, Scalable, and Modern Networking and Observability Stack"
       resources={softwareResources}
     />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
