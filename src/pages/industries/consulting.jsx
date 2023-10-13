@@ -68,7 +68,7 @@ const bulletSection2 = {
   heading:
     'Visibility Into Customers Infrastructure Across Clouds, Clusters, and Premises, Independent of The Underlying Platform',
   paragraphs: [
-    'Cilium delivers comprehensive visibility across various platforms, whether on-premises, cloud, or clusters. This unified data plane approach allows for consistent monitoring across deployments, aiding in workload migration between clusters and simplifying the onboarding of new infrastructure providers.',
+    "'Cilium's Hubble delivers comprehensive visibility across various platforms, whether on-premises, cloud, or clusters. This unified data plane approach allows for consistent monitoring across deployments, aiding in workload migration between clusters and simplifying the onboarding of new infrastructure providers.",
     'Observability data from Cilium  is made available using modern standards such as Prometheus and can be visualized using powerful tools such as Grafana. Cilium also supports traditional standards such as sFlow and NetFlow.',
   ],
   withImage: true,
@@ -104,7 +104,8 @@ const consultingResources = [
 
   {
     title: 'Reducing Kubernetes tool sprawl: Tietoevry uses Cilium and Hubble',
-    description: 'Reducing Kubernetes tool sprawl: Tietoevry uses Cilium and Hubble',
+    description:
+      'Tietroevry Industries reduced Kubernetes tool sprawl using Cilium, greatly simplifying its overall Kubernetes administration.',
     url: 'https://isovalent.com/blog/post/kubernetes-tool-sprawl/',
     imageSrc: TieToevryOfficeImage,
     imageAlt: 'tieotvry office building',

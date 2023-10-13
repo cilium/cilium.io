@@ -32,9 +32,7 @@ const azureTestimonial = {
   description:
     'Cilium combines with the existing control plane of Azure CNI to bring a high-performance eBPF-based dataplane with extensive security and observability capabilities to Azure Kubernetes Service (AKS)',
   quotedText:
-    'Cilium is the next generation for container networking. We can build so many things with it because of the potential it brings with eBPF.
-
-Our customers get all the benefits from a scalability and performance perspective which is key for a platform to provide and they are setting up their cloud native platform for the next set of challenges.',
+    'Our customers get all the benefits from a scalability and performance perspective which is key for a platform to provide and they are setting up their cloud native platform for the next set of challenges.',
   withPerson: true,
   name: 'Deepak Bansal',
   role: ' CVP and Technical Fellow, Microsoft Azure',
@@ -78,7 +76,7 @@ const bulletSection1 = {
 };
 
 const bulletSection2 = {
-  heading: "Hetzner Cloud Adopts Cilium for a Cloud Native Ingress Architecture",
+  heading: 'Hetzner Cloud Adopts Cilium for a Cloud Native Ingress Architecture',
   paragraphs: [
     'Hetzner Cloud, a leading German public cloud provider, recently overhauled its ingress architecture to pursue modern and scalable cloud services. Hetzner was scouting for a Kubernetes-native solution with ECMP, firewall, IPv6, and DSR capabilities. Cilium emerged as the ideal choice. Before adopting Cilium, Hetzner ran tests deploying different Cilium configurations in a Kubernetes cluster to benchmark RPS and throughput and then checking the CPU usage as a metric to compare the tests. These tests showed Cilium provided a massive increase in both RPS and throughput while still reducing CPU usage. ',
     "With Cilium's Kubernetes-native support, scalability, enhanced security, IPv6 compatibility, and efficiency with DSR, Cilium is a compelling choice for cloud providers. The results of Hetzner Cloud's performance tests highlight the value of adopting Cilium to elevate performance, security, and scalability in the cloud infrastructure landscape.",
