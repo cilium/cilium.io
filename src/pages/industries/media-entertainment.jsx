@@ -42,7 +42,7 @@ const heroContent = {
 const newyorktimesTestimonial = {
   logo: NewYorkTimesLogo,
   description:
-    'Cilium was a critical choice to increase networking performance while providing identity and application-aware security and visibility for cloud native workloads running on EKS at the New York Times.',
+    'Cilium was a critical choice to increase networking performance while providing identity and application-aware security and visibility for cloud native workloads running on EKS at The New York Times.',
   quotedText:
     'Perhaps the most important feature from Hubble UI is the network flow itself. If you look deeper into the flow you’ll see full deep rich information about every single packet traversed between different services. And that’s important so that we can build understanding of how traffic is flung between services.',
   withPerson: true,
