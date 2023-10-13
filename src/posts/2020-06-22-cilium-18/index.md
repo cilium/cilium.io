@@ -313,8 +313,8 @@ verdicts:
 ```
 # cilium monitor -t policy-verdict
 ...
-Policy verdict log: flow 0x1fdbbff4 local EP ID 1121, remote ID 16307, dst port 80, proto 6, ingress true, action allow, match L3-L4, 10.29.210.187:42768 {'-'}> 10.29.50.40:80 tcp SYN
-Policy verdict log: flow 0x3cc7e88f local EP ID 343, remote ID 11862, dst port 80, proto 6, ingress true, action deny, match none, 10.29.171.240:39126 {'-'}> 10.29.47.87:80 tcp SYN
+Policy verdict log: flow 0x1fdbbff4 local EP ID 1121, remote ID 16307, dst port 80, proto 6, ingress true, action allow, match L3-L4, 10.29.210.187:42768 -> 10.29.50.40:80 tcp SYN
+Policy verdict log: flow 0x3cc7e88f local EP ID 343, remote ID 11862, dst port 80, proto 6, ingress true, action deny, match none, 10.29.171.240:39126 -> 10.29.47.87:80 tcp SYN
 ```
 
 <a name="auditmode"></a>
@@ -958,4 +958,4 @@ to upgrade your Cilium deployment. Feel free to ping us on [Slack].
 
 [slack]: https://cilium.herokuapp.com/
 [publication]: https://dl.acm.org/doi/10.1145/3281411.3281443
-[ip fragmentation documentation]: https://docs.cilium.io/en/v1.8/concepts/networking/fragmentation
+[ip fragmentation documentation]: https://docs.cilium.io/en/v1.8/concepts/networking/fragmentatio

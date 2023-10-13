@@ -65,7 +65,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
 
   const {
     data: {
-      featuredPostEdges: { nodes: featuredPost },
+      featuredPostEdges: { edges: featuredPost },
       allCategories: { group: allCategories },
     },
   } = await graphql(`
@@ -100,11 +100,16 @@ async function createBlogPages({ graphql, actions, reporter }) {
       }
     }
   `);
-
   if (featuredPost?.length > 1) {
-    const featuredPosts = featuredPost.map(({ frontmatter: { isFeatured } }) => isFeatured);
+    const featuredPosts = featuredPost.map(
+      ({
+        node: {
+          internal: { contentFilePath },
+        },
+      }) => contentFilePath
+    );
     reporter.panicOnBuild(
-      `There must be the only one featured post. Please, check "isFeatured" fields in your posts. ${featuredPosts}`,
+      `There must be the only one featured post. Please, check "isFeatured" fields in your posts. File path: ${featuredPosts}`,
       new Error('Too much featured posts')
     );
   }
@@ -299,7 +304,7 @@ async function createLabsPage({ graphql, actions }) {
       query ($labsRegex: String!, $draftFilter: [Boolean]!) {
         allMdx(
           filter: {
-            fileAbsolutePath: { regex: $labsRegex }
+            internal: { contentFilePath: { regex: $labsRegex } }
             fields: { draft: { in: $draftFilter } }
           }
         ) {
@@ -311,8 +316,8 @@ async function createLabsPage({ graphql, actions }) {
             }
           }
         }
-        allCategories: allMdx(filter: { fileAbsolutePath: { regex: $labsRegex } }) {
-          group(field: frontmatter___categories) {
+        allCategories: allMdx(filter: { internal: { contentFilePath: { regex: $labsRegex } } }) {
+          group(field: { frontmatter: { categories: SELECT } }) {
             fieldValue
           }
         }
@@ -352,10 +357,10 @@ async function createLabsPage({ graphql, actions }) {
             ) {
               allMdx(
                 filter: {
-                  fileAbsolutePath: { regex: $labsRegex }
+                  internal: { contentFilePath: { regex: $labsRegex } }
                   fields: { categories: { glob: $tag }, draft: { in: $draftFilter } }
                 }
-                sort: { fields: frontmatter___title, order: ASC }
+                sort: { frontmatter: { title: ASC } }
                 limit: $limit
                 skip: $skip
               ) {

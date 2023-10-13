@@ -39,7 +39,14 @@ there's sure to be something new for you.
 
 Full-length video of the eBPF Summit, day one:
 
-<div><iframe width="1008" height="511" src="https://www.youtube.com/embed/1GSgyvn4N7E?color=white" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div style={{ position: 'relative', width: '100%', maxWidth: '1008px', paddingBottom: '56.25%', cursor: 'pointer' }}>
+    <iframe style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+        src="https://www.youtube.com/embed/1GSgyvn4N7E?color=white" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+    ></iframe>
+</div>
 
 ## A Beginner’s Guide to eBPF Programming by Liz Rice (Aqua)
 

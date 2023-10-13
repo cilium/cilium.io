@@ -184,7 +184,7 @@ Please note that netdev and llvm-commits receive a lot of patches and the list b
 - Christina Jacob, [[PATCH v4 0/1] XDP program for ip forward](https://patchwork.ozlabs.org/cover/834242/)
   - [[PATCH v4 1/1] xdp: Sample xdp program implementing ip forward](https://patchwork.ozlabs.org/patch/834241/)
 - Dan Carpenter, [[PATCH net-next] xdp: sample: Missing curly braces in read_route()](https://patchwork.ozlabs.org/patch/837684/)
-- Josef Bacik, [[PATCH 0/4 v6] Add the ability to do BPF directed error injection](https://lkml.org/lkml/2017/11/17/446)
+- Josef Bacik, [[PATCH 0/4] [v6] Add the ability to do BPF directed error injection](https://lkml.org/lkml/2017/11/17/446)
   - [[PATCH 1/4] add infrastructure for tagging functions as error injectable](https://lkml.org/lkml/2017/11/17/448)
   - [[PATCH 2/4] btrfs: make open_ctree error injectable](https://lkml.org/lkml/2017/11/17/449)
   - [[PATCH 3/4] bpf: add a `bpf_override_function` helper](https://lkml.org/lkml/2017/11/17/447)

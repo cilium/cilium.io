@@ -103,13 +103,13 @@ $ kubectl create -f https://raw.githubusercontent.com/cilium/cilium/master/examp
 
 ```
 $ kubectl exec $APP2_POD -- curl -s http://$\{SVC_IP\}/public
-\{ 'val': 'this is public' \}
+{ 'val': 'this is public' }
 ```
 
 ... and we can no longer access `app1/private`.
 
 ```
-$ kubectl exec $APP2_POD -- curl -s http://$\{SVC_IP\}/private
+$ kubectl exec $APP2_POD -- curl -s http://${SVC_IP}/private
 Access denied
 ```
 

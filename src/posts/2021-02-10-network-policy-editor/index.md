@@ -26,7 +26,14 @@ Implementing Network Policy is a critical part of building a secure Kubernetes-b
 
 Over the past years, we have learned a lot about the common challenges while working with many of you in the Cilium community implementing Kubernetes Network Policy. Today, we are excited to announce a new free tool for the community to assist you in your journey with Kubernetes NetworkPolicy: <a href="https://editor.cilium.io" target="_blank">editor.cilium.io</a>:
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/_ebbAeYT2z8?controls=0&autoplay=1&mute=1&loop=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div style={{ position: 'relative', width: '100%', maxWidth: '1008px', paddingBottom: '56.25%', cursor: 'pointer' }}>
+    <iframe style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
+        src="https://www.youtube.com/embed/_ebbAeYT2z8?controls=0&autoplay=1&mute=1&loop=1" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen
+    ></iframe>
+</div>
 
 <div style={{ paddingTop: '30px' }}>
 
@@ -55,29 +62,30 @@ To make this more concrete, let’s explore five common gotchas we see trip up t
 
 Consider a scenario where we want a centralized Prometheus instance running in a `monitoring` namespace to be able to scrape metrics from a Redis Pod running in the `default` namespace. Take a look at the following network policy, which is applied in the `default` namespace. It allows Pods with label `app=prometheus` to scrape metrics from Pods with label `app=redis`:
 
-<div style={{ display: 'grid', gridTemplateColumns: '2fr 3fr', gridGap: '2rem' }}>
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: allow-ingress-from-prometheus
-  namespace: default
-spec:
-  podSelector:
-    matchLabels:
-      app: redis
-  policyTypes:
-    - Ingress
-  ingress:
-    - from:
-        - podSelector:
-            matchLabels:
-              app: prometheus
-```
-
-![](mistake-1.png)
-
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+  <div style={{ flex: '2', minWidth: '300px', marginTop: "-20px" }}>
+  ```yaml
+  apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    name: allow-ingress-from-prometheus
+    namespace: default
+  spec:
+    podSelector:
+      matchLabels:
+        app: redis
+    policyTypes:
+      - Ingress
+    ingress:
+      - from:
+          - podSelector:
+              matchLabels:
+                app: prometheus
+  ```
+  </div>
+  <div style={{ flex: '2', minWidth: '300px' }}>
+    ![](mistake-1.png)
+  </div>
 </div>
 
 As you can see in the editor's visualization, the above network policy will only work if both Pods are in the same namespace. The `podSelector` is scoped to the policy's namespace unless you explicitly use `namespaceSelector` to select other namespaces.
@@ -92,8 +100,8 @@ How do you do this right?
 
 It is common that workloads must be locked down to limit external access (i.e. “egress” default deny). If you want to prevent your application from sending traffic anywhere except to Pods in the same namespace, you might create the following policy:
 
-<div style={{ display: 'grid', gridTemplateColumns: '2fr 3fr', gridGap: '2rem', alignItems: 'start', paddingBottom: '20px' }}>
-
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+  <div style={{ flex: '2', minWidth: '300px', marginTop: "-20px" }}>
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -108,9 +116,10 @@ spec:
     - to:
         - podSelector: {}
 ```
-
-![](mistake-2.png)
-
+</div>
+  <div style={{ flex: '2', minWidth: '300px' }}>
+    ![](mistake-2.png)
+  </div>
 </div>
 
 However, once you deploy this network policy, your application connectivity will likely be broken.
@@ -131,8 +140,8 @@ So how do you solve this?
 
 If you come from a traditional Networking background, it might be tempting to use a /32 CIDR rule to allow traffic to the IP address of a Pod as shown in the output of `kubectl describe pod`. For example:
 
-<div style={{ display: 'grid', gridTemplateColumns: '2fr 3fr', gridGap: '2rem', alignItems: 'start', paddingBottom: '20px' }}>
-
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+  <div style={{ flex: '2', minWidth: '300px', marginTop: "-20px" }}>
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -147,9 +156,10 @@ spec:
         - ipBlock:
             cidr: 10.0.2.125/32
 ```
-
-![](mistake-3.png)
-
+</div>
+  <div style={{ flex: '2', minWidth: '300px' }}>
+    ![](mistake-3.png)
+  </div>
 </div>
 
 However, Pod IPs are ephemeral and unpredictable, and depending on a network plugin implementation, ipBlock rules might only allow egress traffic to destinations outside of the cluster. <a href="https://kubernetes.io/docs/concepts/services-networking/network-policies/#behavior-of-to-and-from-selectors" target="_block">Kubernetes documentation</a> recommends using ipBlocks only for IP addresses outside of your cluster. So how do you solve this?
@@ -160,8 +170,8 @@ However, Pod IPs are ephemeral and unpredictable, and depending on a network plu
 
 Let's take a look at another egress policy example, that seeks to allow Pods with label `app=foo` to establish egress connections to an external VM with IP `192.168.1.22` on port `443`.
 
-<div style={{ display: 'grid', gridTemplateColumns: '2fr 3fr', gridGap: '2rem', alignItems: 'start', paddingBottom: '20px' }}>
-
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+  <div style={{ flex: '2', minWidth: '300px', marginTop: "-20px"  }}>
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -178,9 +188,10 @@ spec:
     - ports:
         - port: 443
 ```
-
-![](mistake-4.png)
-
+</div>
+  <div style={{ flex: '3', minWidth: '300px' }}>
+    ![](mistake-4.png)
+  </div>  
 </div>
 
 Wait... while this is valid YAML and a valid network policy, one extra character in the YAML made a huge difference here, and ended up allowing a lot more connectivity than expected. The additional “-” in front of “ports” meant that this is interpreted as two different rules, one that allows all traffic to the VM IP (on any port) and another that allows all traffic to port 443 (regardless of the destination IP address). The network policy specification dictates that the rules are logically OR'ed (not AND'ed), meaning the Pod workload has significantly more connectivity than intended.
@@ -193,19 +204,20 @@ How do you prevent these mistakes?
 
 In Network Policy, empty curly braces (i.e., “{}”) can have a different meaning in different contexts, leading to a lot of confusion. We’ll use this last example as a quiz. What is the difference between these two similar looking network policy rules that both leverage “{}”? Take a guess, then look at each rule in the Network Policy Editor below to see if you were right.
 
-<div style={{ display: 'grid', gridTemplateColumns: '2fr 3fr', gridGap: '2rem', paddingBottom: '20px' }}>
-
-```yaml
-ingress:
-  - {}
-```
-
-```yaml
-ingress:
-  - from:
-      - podSelector: {}
-```
-
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+  <div style={{ flex: '2', minWidth: '300px' }}>
+    ```yaml
+    ingress:
+      - {}
+    ```
+  </div>
+  <div style={{ flex: '2', minWidth: '300px' }}>
+    ```yaml
+    ingress:
+      - from:
+          - podSelector: {}
+    ```
+  </div>
 </div>
 
 🤓 <a href="https://editor.cilium.io/?policy-tutorial=empty-selectors" target="_blank">Get the answer with the Network Policy Editor</a>

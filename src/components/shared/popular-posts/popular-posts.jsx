@@ -19,6 +19,7 @@ const PopularPosts = ({ className, titleTheme }) => {
           fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
         }
         limit: 3
+        sort: { frontmatter: { date: DESC } }
       ) {
         posts: nodes {
           fields {

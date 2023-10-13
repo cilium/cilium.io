@@ -100,7 +100,9 @@ sudo systemctl enable docker
 
 Download and install the signing key for Kubernetes on master and worker nodes:
 
-    sudo su \-c 'curl \-s https:\/\/packages.cloud.google.com\/apt\/doc\/apt-key.gpg | apt-key add'
+```
+sudo su -c 'curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add'
+```
 
 Next, we're ready to add the Kubernetes repo and install Kubernetes on all nodes.
 
@@ -109,14 +111,14 @@ Next, we're ready to add the Kubernetes repo and install Kubernetes on all nodes
 As a regular user, add the repo and install package.
 
 ```
-sudo apt-add-repository "deb http:\/\/apt.kubernetes.io\/ kubernetes-xenial main"
+sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 sudo apt install kubeadm
 ```
 
 At the time of writing, Kubernetes requires swap to be turned off. For work-arounds, check this [GitHub issue](https://github.com/kubernetes/kubernetes/issues/53533). Disable memory swap immediately for all nodes:
 
 ```
-sudo swapoff \-a
+sudo swapoff -a
 ```
 
 This is _not_ persistent across host restarts so add to `/etc/fstab` accordingly for persistence.
@@ -124,7 +126,7 @@ This is _not_ persistent across host restarts so add to `/etc/fstab` accordingly
 ### Initialize the Kubernetes Master
 
 ```
-sudo kubeadm init \-\-pod-network-cidr=10.217.0.0\/16
+sudo kubeadm init --pod-network-cidr=10.217.0.0\/16
 ```
 
 ![](kube-init.png)
@@ -135,9 +137,9 @@ sudo kubeadm init \-\-pod-network-cidr=10.217.0.0\/16
 As a regular user, enable kubectl on the `kubernetes-master` node to use your cluster:
 
 ```
-mkdir \-p $HOME\/.kube
-sudo cp \-i \/etc\/kubernetes\/admin.conf $HOME\/.kube\/config
-sudo chown $(id \-u):$(id \-g) $HOME\/.kube\/config
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
 ### Join Worker Nodes to the Kubernetes Cluster
@@ -145,7 +147,7 @@ sudo chown $(id \-u):$(id \-g) $HOME\/.kube\/config
 On each of the worker nodes, execute the `kubeadm join` command from the master init output **as root**.
 
 ```
-sudo kubeadm join 172.0.126.152:6443 \-\-token XXXX \-\-discovery-token-ca-cert-hash sha256:XXXX
+sudo kubeadm join 172.0.126.152:6443 --token XXXX --discovery-token-ca-cert-hash sha256:XXXX
 ```
 
 You should see a message of successful cluster-join:
@@ -169,7 +171,7 @@ We will deploy Cilium on the Kubernetes cluster as the CNI plugin through a Daem
 - **Optional BPF Filesystem Mount:** We will mount the BPF filesystem on each node in the cluster. This step is optional and pins BPF resources to a persistent filesystem structure, thus persistent across `cilium-agent` restarts.
 
 ```
-sudo mount bpffs \/sys\/fs\/bpf \-t bpf
+sudo mount bpffs /sys/fs/bpf -t bpf
 ```
 
 This is _not_ persistent across host restarts so add to `/etc/fstab` accordingly for persistence.
@@ -181,14 +183,14 @@ Cilium requires a [KV-store](http://cilium.readthedocs.io/en/stable/concepts/#ke
 Download the Cilium repo folder and unzip it.
 
 ```
-wget https:\/\/github.com\/cilium\/cilium\/archive\/v1.2.3.tar.gz
-tar \-xvf v1.2.3.tar.gz
+wget https://github.com/cilium/cilium/archive/v1.2.3.tar.gz
+tar -xvf v1.2.3.tar.gz
 ```
 
 Go to the add-ons folder to follow the instructions in the etcd-operator README. It outlines the scripts for the etcd-operator and Cilium deployment.
 
 ```
-cd cilium-1.2.3\/examples\/kubernetes\/addons\/etcd-operator\/
+cd cilium-1.2.3/examples/kubernetes/addons/etcd-operator/
 cat README.md
 ```
 
@@ -203,7 +205,7 @@ At a high level, the steps from the README include:
 Confirm Cilium is up with the `CURRENT` count equal to the number of nodes in your cluster (may take several minutes):
 
 ```
-kubectl get daemonsets \-n kube-system
+kubectl get daemonsets -n kube-system
 ```
 
 Confirm your worker nodes have successfully joined the cluster and are `READY` now that Cilium is up by executing the following from the `kubernetes-master` node:
@@ -219,7 +221,7 @@ Let's run through a short HTTP example to demonstrate Cilium's API-aware network
 ### Deploy a Star Wars Demo Application
 
 ```
-kubectl create -f https:\/\/raw.githubusercontent.com\/cilium\/cilium/v1.2.3\/examples\/minikube\/http-sw-app.yaml
+kubectl create -f https://raw.githubusercontent.com/cilium/cilium/v1.2.3/examples/minikube/http-sw-app.yaml
 ```
 
 Confirm it's up:
@@ -231,10 +233,10 @@ kubectl get pods,svc
 And check the pods and services connectivity:
 
 ```
-kubectl exec xwing -- curl \-s \-XPOST deathstar.default.svc.cluster.local\/v1\/request-landing
-<span style="color:grey">Ship landed<\/span>
-kubectl exec tiefighter -- curl \-s \-XPOST  deathstar.default.svc.cluster.local\/v1\/request-landing
-<span style="color:grey">Ship landed<\/span>
+kubectl exec xwing -- curl -s -XPOST deathstar.default.svc.cluster.local/v1/request-landing
+<span style="color:grey">Ship landed</span>
+kubectl exec tiefighter -- curl -s -XPOST  deathstar.default.svc.cluster.local/v1/request-landing
+<span style="color:grey">Ship landed</span>
 ```
 
 ### Enforce an L7 Policy with CiliumNetworkPolicy
@@ -245,7 +247,7 @@ The policy will deny `xwing` access completely by its identity label and allow `
 <br />
 
 ```
-kubectl create -f https:\/\/raw.githubusercontent.com\/cilium\/cilium\/v1.2.3\/examples\/minikube\/sw_l3_l4_l7_policy.yaml
+kubectl create -f https://raw.githubusercontent.com/cilium/cilium/v1.2.3/examples/minikube/sw_l3_l4_l7_policy.yaml
 ```
 
 You can take a look at the Cilium Network Policy to see the HTTP-specific policy:
@@ -262,7 +264,7 @@ kubectl describe cnp rule1
 Now that your CiliumNetworkPolicy is in place, you can see it in action! Try to access the `deathstar` service from `xwing`:
 
 ```
-kubectl exec xwing -- curl \-\-connect-timeout 5 \-XPOST deathstar.default.svc.cluster.local\/v1\/request-landing
+kubectl exec xwing -- curl --connect-timeout 5 -XPOST deathstar.default.svc.cluster.local/v1/request-landing
 ```
 
 This command is denied by the (L3) identity-based policy. Use `CTRL-C` to exit prior to timeout.
@@ -270,15 +272,15 @@ This command is denied by the (L3) identity-based policy. Use `CTRL-C` to exit p
 Next, see what `tiefighter` can access. Per the policy, a POST to \/request-landing should be allowed:
 
 ```
-kubectl exec tiefighter -- curl \-s \-XPOST  deathstar.default.svc.cluster.local\/v1\/request-landing
-<span style="color:grey">Ship landed<\/span>
+kubectl exec tiefighter -- curl -s -XPOST  deathstar.default.svc.cluster.local/v1/request-landing
+<span style="color:grey">Ship landed</span>
 ```
 
 whereas other HTTP calls to the deathstar service are forbidden:
 
 ```
-kubectl exec tiefighter -- curl \-s \-XPOST deathstar.default.svc.cluster.local\/v1\/exhaust-port
-<span style="color:grey">Access denied<\/span>
+kubectl exec tiefighter -- curl -s -XPOST deathstar.default.svc.cluster.local/v1/exhaust-port
+<span style="color:grey">Access denied</span>
 ```
 
 Hooray! You have successfully deployed Cilium with Kubernetes on Ubuntu 18.04 and enforced an API-aware network security policy to provide least privilege security.
