@@ -114,7 +114,7 @@ const bulletSection2 = {
     "Streamline Onboarding New Applications and Teams and Accelerate Debugging with Hubble's Service Map",
   paragraphs: [
     "Cilium's Hubble Service Map allows platform teams to furnish application developers with a portal to view their own workloads, dependencies, and network flows. This self-service model makes it easier to identify service connections, calls, and even DNS operations, all crucial for diagnosing application networking problems. The service map helps streamline the onboarding of new applications and teams and accelerates the debugging process.",
-    'By mitigating disputes between application and infrastructure operation teams, Cilium accelerates the investigation of application-layer issues, enabling frictionless, self-service root cause analysis for application teams.',
+    'By mitigating disputes between application and infrastructure operation teams, Cilium accelerates the investigation of application-layer issues, enabling frictionless, self-service root cause analysis for developers.',
   ],
   withImage: true,
   imageSrc: SoftwareImage2,
