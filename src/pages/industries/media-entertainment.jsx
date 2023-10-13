@@ -33,7 +33,7 @@ const heroContent = {
   heading: 'Media and Entertainment',
   texts: [
     'The Media and Entertainment industry is navigating a digital transformation era with scalability, security, and latency challenges—traditional tooling struggles to handle rising consumer demands for high-quality, on-demand media. Security vulnerabilities can threaten valuable content and customer data, while latency issues undermine user experience. These challenges are compounded by rising operational costs and increasingly stringent regulatory environments.',
-    'Cilium is designed to provide high-performance, secure, and scalable networking and observability. It offers a wide range of features, helping companies in the media and entertainment industry deliver seamless experiences, reduce operational complexity, and secure their environment. ',
+    'Cilium is designed to provide high-performance, secure, and scalable networking and observability. It offers a wide range of features, helping companies in the media and entertainment industry deliver seamless experiences, reduce operational complexity, and secure their environments. ',
   ],
   imageSrc: PublicSPeakingBee,
   imageAlt: 'ebeedex public speaking bee',
