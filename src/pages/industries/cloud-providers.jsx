@@ -46,7 +46,9 @@ const azureTestimonial = {
   description:
     'Cilium combines with the existing control plane of Azure CNI to bring a high-performance eBPF-based dataplane with extensive security and observability capabilities to Azure Kubernetes Service (AKS)',
   quotedText:
-    'Azure Kubernetes Service will now be deployed with Cilium open sourced data plane and natively integrated with Azure CNI. Microsoft will handle first-line support and collaborate with Isovalent on specific support issues to their deep knowledge of the technology.',
+    'Cilium is the next generation for container networking. We can build so many things with it because of the potential it brings with eBPF.
+
+Our customers get all the benefits from a scalability and performance perspective which is key for a platform to provide and they are setting up their cloud native platform for the next set of challenges.',
   withPerson: true,
   name: 'Deepak Bansal',
   role: ' CVP and Technical Fellow, Microsoft Azure',
