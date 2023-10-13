@@ -141,7 +141,7 @@ const mediaUsecases = [
     icon: BandWidthIcon,
     title: 'Bandwidth and Latency Optimization',
     description:
-      'Optimize TCP and UDP workload with rate limiting and fair queuing. Rely on our TCP congestion control algorithm automization ',
+      'Optimize TCP and UDP workload with rate limiting and fair queuing. Rely on our TCP congestion control algorithm for improved performance',
     url: '/use-cases/bandwidth-optimization',
   },
 
