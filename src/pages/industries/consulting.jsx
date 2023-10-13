@@ -14,18 +14,6 @@ import ElectricianBee from 'images/pages/industries/electrician-bee.png';
 import MainLayout from 'layouts/main/main';
 
 import EficodeOfficeImage from './images/eficodeoffice.png';
-import GrayedAyedoLogo from './images/logos/ayedo.svg';
-import GrayedCengnLogo from './images/logos/cengn.svg';
-import GrayedCistecLogo from './images/logos/cistec.svg';
-import GrayedEficodeLogo from './images/logos/eficode.svg';
-import GrayedInnoqLogo from './images/logos/innoq.svg';
-import GrayedLiquidReplyLogo from './images/logos/liquid.svg';
-import GrayedMobilab from './images/logos/mobilab.svg';
-import GrayedNineNavigatorsLogo from './images/logos/nine.svg';
-import GrayedPalarkLogo from './images/logos/palark.svg';
-import GrayedSchubergLogo from './images/logos/schuberg.svg';
-import GrayedSuperOrbitalLogo from './images/logos/superorbital.svg';
-import GrayedTietoevryLogo from './images/logos/tietoevry.svg';
 import PalarkOfficeImage from './images/palarkoffice.png';
 import TieToevryOfficeImage from './images/tietoevryoffice.png';
 
@@ -89,18 +77,18 @@ const bulletSection2 = {
 };
 
 const consultingLogos = [
-  GrayedPalarkLogo,
-  GrayedTietoevryLogo,
-  GrayedMobilab,
-  GrayedCengnLogo,
-  GrayedCistecLogo,
-  GrayedEficodeLogo,
-  GrayedInnoqLogo,
-  GrayedLiquidReplyLogo,
-  GrayedNineNavigatorsLogo,
-  GrayedSchubergLogo,
-  GrayedAyedoLogo,
-  GrayedSuperOrbitalLogo,
+  'palark',
+  'tietoevry',
+  'mobilab',
+  'cengn',
+  'cistec',
+  'eficode',
+  'innoq',
+  'liquid',
+  'nine',
+  'schuberg',
+  'ayedo',
+  'superorbital',
 ];
 
 const consultingResources = [
@@ -143,7 +131,7 @@ const ConsultingPage = () => (
     <BulletSection {...bulletSection2} className="mb-8" />
     <AdopterTestimonial {...palarkTestimonial} className="mb-8" />
     <AdoptersLogo
-      logos={consultingLogos}
+      items={consultingLogos}
       className="mt-20 mb-16 grid grid-cols-3 lg:grid lg:grid-cols-4"
     />
     <ResourcesCard

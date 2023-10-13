@@ -15,20 +15,6 @@ import MainLayout from 'layouts/main/main';
 
 import AWSOfficeImage from './images/awsoffice.png';
 import GoogleOfficeImage from './images/googleoffice.png';
-import GrayedAlibabaCloudLogo from './images/logos/alibaba.svg';
-import GrayedAWSLogo from './images/logos/aws.svg';
-import GrayedAzureLogo from './images/logos/azure.svg';
-import GrayedCivoLogo from './images/logos/civo.svg';
-import GrayedDigitaloceanLogo from './images/logos/digitalocean.svg';
-import GrayedGooglecloudLogo from './images/logos/google.svg';
-import GrayedHetznerLogo from './images/logos/hetzner.svg';
-import GrayedInfomaniakLogo from './images/logos/infomaniak.svg';
-import GrayedOpenshiftLogo from './images/logos/openshift.svg';
-import GrayedOpenStackLogo from './images/logos/openstack.svg';
-import GrayedPlusserverLogo from './images/logos/plusserver.svg';
-import GrayedScalewayLogo from './images/logos/scaleway.svg';
-import GrayedSovereignCloud from './images/logos/sovereign.svg';
-import GrayedTencentCloudLogo from './images/logos/tencentcloud.svg';
 import MicrosoftOffice from './images/microsoftoffice.png';
 
 const heroContent = {
@@ -120,20 +106,20 @@ const cloudTalks = [
 ];
 
 const cloudAdoptersLogo = [
-  GrayedGooglecloudLogo,
-  GrayedAWSLogo,
-  GrayedAzureLogo,
-  GrayedAlibabaCloudLogo,
-  GrayedDigitaloceanLogo,
-  GrayedScalewayLogo,
-  GrayedHetznerLogo,
-  GrayedInfomaniakLogo,
-  GrayedCivoLogo,
-  GrayedTencentCloudLogo,
-  GrayedOpenshiftLogo,
-  GrayedSovereignCloud,
-  GrayedOpenStackLogo,
-  GrayedPlusserverLogo,
+  'google',
+  'aws',
+  'azure',
+  'alibaba',
+  'digitalocean',
+  'scaleway',
+  'hetzner',
+  'infomaniak',
+  'civo',
+  'tencent',
+  'openshift',
+  'sovereigncloud',
+  'openstack',
+  'plusserver',
 ];
 
 const cloudResouces = [
@@ -174,10 +160,7 @@ const MediaEntertainmentPage = () => (
     <AdopterTestimonial {...hertznerTestimonial} className="mt-8 pb-8" />
     <BulletSection {...bulletSection1} />
     <AdopterTestimonial {...googleTestimonial} className="my-8 pb-8" />
-    <AdoptersLogo
-      logos={cloudAdoptersLogo}
-      className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4"
-    />
+    <AdoptersLogo items={cloudAdoptersLogo} />
     <FeaturedTalks talks={cloudTalks} />
     <ResourcesCard
       heading="Bring Your Favorite Cloud. One Solution, Every Cloud"

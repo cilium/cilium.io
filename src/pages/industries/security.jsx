@@ -18,14 +18,6 @@ import MainLayout from 'layouts/main/main';
 
 import EncryptionIcon from './images/encryption.inline.svg';
 import EnforcementIcon from './images/enforcement.inline.svg';
-import GrayedEgdelessLogo from './images/logos/edgeless.svg';
-import GrayedF5Logo from './images/logos/f5.svg';
-import GrayedFRSCALogo from './images/logos/frsca.svg';
-import GrayedGdataLogo from './images/logos/gdata.svg';
-import GrayedKryptosLogo from './images/logos/kryptos.svg';
-import GrayedPalantirLogo from './images/logos/palantir.svg';
-import GrayedProtonLogo from './images/logos/proton.svg';
-import GrayedTestifyLogo from './images/logos/testify.svg';
 import NetworkPolicyIcon from './images/network-policy.inline.svg';
 import ProcessIcon from './images/process.inline.svg';
 import RuntimeEnforcementIcon from './images/runtime-enforcement.inline.svg';
@@ -124,15 +116,15 @@ const securityTalks = [
   },
 ];
 
-const securityAdopters = [
-  GrayedPalantirLogo,
-  GrayedEgdelessLogo,
-  GrayedGdataLogo,
-  GrayedFRSCALogo,
-  GrayedProtonLogo,
-  GrayedKryptosLogo,
-  GrayedTestifyLogo,
-  GrayedF5Logo,
+const securityLogos = [
+  'palantir',
+  'egdeless',
+  'gdata',
+  'frsca',
+  'proton',
+  'kryptos',
+  'testify',
+  'f5',
 ];
 
 const securityUsecases = [
@@ -172,10 +164,7 @@ const SecurityPage = () => (
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
     <FeaturedTalks heading="Featured talks" talks={securityTalks} />
-    <AdoptersLogo
-      logos={securityAdopters}
-      className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4"
-    />
+    <AdoptersLogo items={securityLogos} className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4" />
     <IndustryUseCases heading="Cilium’s Security Focused Use Cases" usecases={securityUsecases} />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>

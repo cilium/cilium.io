@@ -18,10 +18,6 @@ import MainLayout from 'layouts/main';
 import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
 import BellOfficeImage from './images/belloffice.png';
 import BGPIcon from './images/bgp.inline.svg';
-import GrayedBellLogo from './images/logos/bell.svg';
-import GrayedEquinixLogo from './images/logos/equinix.svg';
-import GrayedMasmovilLogo from './images/logos/masmovil.svg';
-import GrayedTelenorLogo from './images/logos/telenor.svg';
 import ScalableKubernetesIcon from './images/scalable-kubernetes.inline.svg';
 
 const heroContent = {
@@ -121,7 +117,7 @@ const telcoResources = [
   },
 ];
 
-const companyLogos = [GrayedBellLogo, GrayedEquinixLogo, GrayedMasmovilLogo, GrayedTelenorLogo];
+const telcoLogos = ['bell', 'equinix', 'masmovil', 'telenor'];
 
 const telcoUsecases = [
   {
@@ -157,7 +153,7 @@ const MediaEntertainmentPage = () => (
     <BulletSection {...bulletSection2} />
     <BulletSection {...bulletSection3} />
     <FeaturedTalks heading="Featured talks" talks={telcoTalks} />
-    <AdoptersLogo className="my-16 grid grid-cols-4" logos={companyLogos} />
+    <AdoptersLogo className="my-16 grid grid-cols-4" items={telcoLogos} />
     <ResourcesCard
       heading="Transform Your Telecom Infrastructure with Cilium: Your Gateway to 5G, Edge Computing, and Beyond"
       resources={telcoResources}

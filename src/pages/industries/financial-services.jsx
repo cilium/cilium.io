@@ -21,14 +21,6 @@ import MainLayout from 'layouts/main';
 import CapitalOnefficeImage from './images/capitaloneoffice.png';
 import EgressGatewayIcon from './images/egress-gateway.inline.svg';
 import EncryptionIcon from './images/encryption.inline.svg';
-import GrayedBloombergLogo from './images/logos/bloomberg.svg';
-import GrayedCapitaloneLogo from './images/logos/capitalone.svg';
-import GrayedEt888Logo from './images/logos/et888.svg';
-import GrayedForm3Logo from './images/logos/form3.svg';
-import GrayedJumoLogo from './images/logos/jumo.svg';
-import GrayedPostfinanceLogo from './images/logos/postfinance.svg';
-import GrayedQwistLogo from './images/logos/qwist.svg';
-import GrayedRobinhoodLogo from './images/logos/robinhood.svg';
 import NetworkPolicyIcon from './images/network-policy.inline.svg';
 import PostFinanceOfficeImage from './images/postfinanceoffice.png';
 import RobinhoodOfficeImage from './images/robinhoodoffice.png';
@@ -191,15 +183,14 @@ const financialResources = [
   },
 ];
 
-const companyLogos = [
-  GrayedCapitaloneLogo,
-  GrayedPostfinanceLogo,
-  GrayedRobinhoodLogo,
-  GrayedBloombergLogo,
-  GrayedForm3Logo,
-  GrayedEt888Logo,
-  GrayedJumoLogo,
-  GrayedQwistLogo,
+const financeLogos = [
+  'capitalone',
+  'postfinance',
+  'robinhood',
+  'bloomberg',
+  'form3',
+  'et888',
+  'qwist',
 ];
 
 const FinancialServicesPage = () => (
@@ -207,12 +198,11 @@ const FinancialServicesPage = () => (
     <Hero {...heroContent} imageStyle="lg:h-[470px] lg:w-[470px] lg:-mt-10 ">
       <Testimonial {...bloombergTestimonial} />
     </Hero>
-    {/* <BulletSection {...bulletSection1} className="mt-8" bulletColor="additional-purple" /> */}
     <BulletSection {...bulletSection2} />
     <BulletSection {...bulletSection3} />
     <Stats className="mb-16" {...postfinanceStats} />
     <FeaturedTalks heading="Featured talks" talks={financialTalks} className="mt-8" />
-    <AdoptersLogo logos={companyLogos} className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4" />
+    <AdoptersLogo items={financeLogos} className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4" />
     <ResourcesCard
       heading="Join Global Financial Leaders in the Cloud Native Networking Revolution "
       resources={financialResources}

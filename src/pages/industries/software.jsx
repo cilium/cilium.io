@@ -19,16 +19,6 @@ import MainLayout from 'layouts/main/main';
 
 import AscendOfficeImage from './images/ascendoffice.png';
 import ClickhouseOfficeImage from './images/clickhouseoffice.png';
-import GrayedAdobeLogo from './images/logos/adobe.svg';
-import GrayedArangodbLogo from './images/logos/arango.svg';
-import GrayedAscendLogo from './images/logos/ascend.svg';
-import GrayedCanonicalLogo from './images/logos/canonical.svg';
-import GrayedClickHouseLogo from './images/logos/clickhouse.svg';
-import GrayedCosmonicLogo from './images/logos/cosmonic.svg';
-import GrayedDatadogLogo from './images/logos/datadog.svg';
-import GrayedGitlab from './images/logos/gitlab.svg';
-import GrayedPalantirLogo from './images/logos/palantir.svg';
-import GrayedPlanetscaleLogo from './images/logos/planetscale.svg';
 
 const heroContent = {
   heading: 'SaaS, Software, and  DBaaS',
@@ -183,17 +173,16 @@ const softwareResources = [
 ];
 
 const softwareLogos = [
-  GrayedAdobeLogo,
-  GrayedClickHouseLogo,
-  GrayedPalantirLogo,
-  GrayedPalantirLogo,
-  GrayedAscendLogo,
-  GrayedDatadogLogo,
-  GrayedPlanetscaleLogo,
-  GrayedArangodbLogo,
-  GrayedGitlab,
-  GrayedCanonicalLogo,
-  GrayedCosmonicLogo,
+  'adobe',
+  'clickhouse',
+  'palantir',
+  'ascend',
+  'datadog',
+  'planetscale',
+  'arrango',
+  'gitlab',
+  'canonical',
+  'cosmonic',
 ];
 const SoftwarePage = () => (
   <MainLayout>
@@ -205,7 +194,7 @@ const SoftwarePage = () => (
     <BulletSection {...bulletSection2} className="my-8" />
     <Stats {...ascendStats} />
     <BulletSection {...bulletSection3} className="my-8" />
-    <AdoptersLogo logos={softwareLogos} className="my-16 grid grid-cols-3 lg:grid lg:grid-cols-4" />
+    <AdoptersLogo items={softwareLogos} className="my-16 grid grid-cols-3 lg:grid lg:grid-cols-4" />
     <FeaturedTalks heading="Featured Talks" talks={softwareTalks} />
     <ResourcesCard
       className="mt-10"

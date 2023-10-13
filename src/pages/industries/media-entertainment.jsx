@@ -15,14 +15,6 @@ import PublicSPeakingBee from 'images/pages/industries/public-speaking-bee.png';
 import MainLayout from 'layouts/main';
 
 import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
-import GrayedByteDanceLogo from './images/logos/bytedance.svg';
-import GrayedNewYorkTimesLogo from './images/logos/newyork.svg';
-import GrayedRadiofranceLogo from './images/logos/radiofrance.svg';
-import GrayedSeznamLogo from './images/logos/seznam.svg';
-import GrayedSkyBetLogo from './images/logos/skybet.svg';
-import GrayedSportRadarLogo from './images/logos/sportradar.svg';
-import GrayedWildLifeLogo from './images/logos/wildlife.svg';
-import GrayedYahooLogo from './images/logos/yahoo.svg';
 import NativeSupportIcon from './images/native-support.inline.svg';
 import NewyorkTimeOfficeImage from './images/newyorkoffice.png';
 import ServiceMapIcon from './images/service-map.inline.svg';
@@ -119,14 +111,14 @@ const mediaResources = [
 ];
 
 const companyLogos = [
-  GrayedByteDanceLogo,
-  GrayedNewYorkTimesLogo,
-  GrayedSkyBetLogo,
-  GrayedSeznamLogo,
-  GrayedSportRadarLogo,
-  GrayedRadiofranceLogo,
-  GrayedWildLifeLogo,
-  GrayedYahooLogo,
+  'bytedance',
+  'newyorktimes',
+  'skybet',
+  'seznam',
+  'sportradar',
+  'radiofrance',
+  'wildlife',
+  'yahoo',
 ];
 
 const mediaUsecases = [
@@ -162,7 +154,7 @@ const MediaEntertainmentPage = () => (
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
     <AdopterTestimonial {...seznamTestimonial} className="mt-8 pb-8" />
-    <AdoptersLogo className="my-16 grid grid-cols-3 lg:grid lg:grid-cols-4" logos={companyLogos} />
+    <AdoptersLogo className="my-16 grid grid-cols-3 lg:grid lg:grid-cols-4" items={companyLogos} />
     <ResourcesCard
       heading="See Real World Stories on Companies in the Media and Entertainment Industry"
       resources={mediaResources}

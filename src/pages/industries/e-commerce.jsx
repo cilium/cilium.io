@@ -22,14 +22,6 @@ import CodeIcon from './images/code.svg';
 import DbIcon from './images/db.svg';
 import IkeaOfficeImage from './images/ikeaoffice.png';
 import LockIcon from './images/lock.svg';
-import GrayedBackMarketLogo from './images/logos/backmarket.svg';
-import GrayedDbSchenkerLogo from './images/logos/dbschenker.svg';
-import GrayedElasticPathLogo from './images/logos/elasticpath.svg';
-import GrayedOverstockLogo from './images/logos/overstock.svg';
-import GrayedTailorBrandsLogo from './images/logos/tailorbrands.svg';
-import GrayedTrendyolLogo from './images/logos/trendyol.svg';
-import GrayedTripLogo from './images/logos/trip.svg';
-import GrayedUSwitchLogo from './images/logos/uswitch.svg';
 import ScalableKubernetesIcon from './images/scalable-kubernetes.inline.svg';
 import ServiceMeshIcon from './images/service-mesh.inline.svg';
 import TrendyolOfficeImage from './images/trendyoloffice.png';
@@ -138,15 +130,15 @@ const commerceResources = [
   },
 ];
 
-const companyLogos = [
-  GrayedTripLogo,
-  GrayedTrendyolLogo,
-  GrayedBackMarketLogo,
-  GrayedUSwitchLogo,
-  GrayedElasticPathLogo,
-  GrayedDbSchenkerLogo,
-  GrayedOverstockLogo,
-  GrayedTailorBrandsLogo,
+const ecommerceLogos = [
+  'trip',
+  'trendyol',
+  'backmarket',
+  'uswitch',
+  'elasticpath',
+  'dbschenker',
+  'overstock',
+  'tailorbrands',
 ];
 
 const commerceUsecases = [
@@ -217,7 +209,7 @@ const MediaEntertainmentPage = () => (
     <AdopterTestimonial {...trendyolTestimonial} />
     <AdoptersLogo
       className="my-16 mb-16 grid grid-cols-3 lg:grid lg:grid-cols-4"
-      logos={companyLogos}
+      items={ecommerceLogos}
     />
     <AdopterTestimonial {...dbSchenkerTestimonial} className="mb-24" />
     <ResourcesCard
