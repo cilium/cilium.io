@@ -143,7 +143,7 @@ const financialTalks = [
   {
     title: "eBPF, a road to invisible network: S&P Global's Network Transformation Journey",
     description:
-      'Guru Ramamoorthy talks on how S&P Global’s network engineers leveraged eBPF-based networking with Cilium to power their application.',
+      'Guru Ramamoorthy talks about how S&P Global’s network engineers leveraged eBPF-based networking with Cilium to connect and secure their clouds',
     videoSrc: 'https://www.youtube.com/embed/6CZ_SSTqb4g',
   },
   {
