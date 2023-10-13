@@ -95,7 +95,7 @@ const bulletSection1 = {
 };
 
 const bulletSection2 = {
-  heading: 'Weave Compliance and Security Throughout the DevOps process.',
+  heading: 'Weave Compliance and Security Throughout the DevOps process',
   paragraphs: [
     'Cilium empowers you to free your security and operations teams from the need to review each policy change manually. Cilium ensures that the appropriate TLS version and ciphers protect all traffic that needs to be encrypted, that the SNI matches the original destination DNS name, and that a trusted certificate authority signs the certificate received.',
   ],
