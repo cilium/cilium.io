@@ -134,7 +134,7 @@ const mediaUsecases = [
     icon: NativeSupportIcon,
     title: 'Load Balancing ',
     description:
-      ' Leverage the Power of Cilium’s XDP Acceleration for High-Speed, Efficient Load Balancing in Your Kubernetes Cluster',
+      ' Leverage the power of Cilium’s XDP acceleration for high-speed, efficient Load Balancing in your Kubernetes cluster',
     url: '/use-cases/load-balancer',
   },
   {
