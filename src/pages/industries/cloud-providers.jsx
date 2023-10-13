@@ -99,7 +99,7 @@ const bulletSection2 = {
 
 const cloudTalks = [
   {
-    title: 'Cilium on Azure: Most Scalable and Performant Implementation in the Cloud',
+    title: 'Cilium on Azure: Scale and Performance',
     videoSrc: 'https://www.youtube.com/embed/y3z6s-CTtU0',
     description:
       'Cilium in Azure will provide highly efficient load-balancing, extensive network security features, and rich observability integrated well along with robust and scalable Azure CNI IP management and native Azure networking routing,',
