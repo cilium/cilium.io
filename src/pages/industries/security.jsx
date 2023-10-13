@@ -119,7 +119,7 @@ const securityTalks = [
   {
     title: 'Mutual Authentication with Cilium',
     description:
-      "Cilium's Mutual TLS provides authentication, confidentiality and integrity to service-to-service communications.",
+      "Cilium's Mutual Authentication provides authentication, confidentiality, and integrity for service-to-service communications.",
     videoSrc: 'https://www.youtube.com/embed/tE9U1gNWzqs',
   },
 ];
