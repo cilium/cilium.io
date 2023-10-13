@@ -168,7 +168,7 @@ const MediaEntertainmentPage = () => (
       resources={mediaResources}
     />
     <IndustryUseCases
-      heading="Cilium’s Solutions for Media & Entertainment"
+      heading="Cilium’s Solutions for Media and Entertainment"
       usecases={mediaUsecases}
     />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
