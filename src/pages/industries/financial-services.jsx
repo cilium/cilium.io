@@ -177,7 +177,7 @@ const financialResources = [
     url: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w',
     CTAtext: 'Watch The Talk',
     description:
-      'Capital One built an internal PaaS called "Dragon" for its developers, based on Kubernetes. Dragon’s goal was to enable developers to ship code to production with little friction',
+      'Capital One leveraged Cilium to build a multi-tenant platform meeting all its requirements for security, maintainability, network visibility, and scale. ',
   },
 
   {
