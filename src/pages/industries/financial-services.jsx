@@ -135,7 +135,7 @@ const financialUsecases = [
     title: 'Egress Gateway',
     url: '/use-cases/egress-gateway',
     description:
-      'Present a group of cloud native workloads from a stable IP address to integrate with traditional firewalls.',
+      'Present a group of cloud native workloads from a stable IP address to integrate with traditional firewalls',
   },
 ];
 
