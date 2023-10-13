@@ -81,7 +81,7 @@ const bulletSection2 = {
     'Visibility Into Customers Infrastructure Across Clouds, Clusters, and Premises, Independent of The Underlying Platform',
   paragraphs: [
     'Cilium delivers comprehensive visibility across various platforms, whether on-premises, cloud, or clusters. This unified data plane approach allows for consistent monitoring across deployments, aiding in workload migration between clusters and simplifying the onboarding of new infrastructure providers.',
-    'Observability data from Cilium  is made available using modern standards such as Prometheus and can be visualized using powerful tools such as Grafana. Cilium also supports traditional standards such as sFLow and NetFlow.',
+    'Observability data from Cilium  is made available using modern standards such as Prometheus and can be visualized using powerful tools such as Grafana. Cilium also supports traditional standards such as sFlow and NetFlow.',
   ],
   withImage: true,
   imageSrc: ConsultingImage2,
