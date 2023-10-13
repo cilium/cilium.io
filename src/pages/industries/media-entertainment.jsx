@@ -104,7 +104,7 @@ const mediaResources = [
     CTAtext: 'Watch the Talk',
     url: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
     description:
-      'Yahoo improved load balancing performance and scalability by switching to Cilium L4 LB with XDP, achieving hardware-level efficiency and dynamic backend management.',
+      'Cilium was a critical choice to increase networking performance while providing identity and application-aware security and visibility for cloud native workloads running on EKS at the New York Times.',
   },
 
   {

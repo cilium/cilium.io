@@ -21,7 +21,9 @@ const BulletSection = ({
           <div className="items-center lg:flex lg:gap-12">
             <div className="grow">
               {paragraphs.map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
+                <p key={index} className="mb-4">
+                  {paragraph}
+                </p>
               ))}
             </div>
 
