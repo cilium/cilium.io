@@ -141,7 +141,7 @@ const securityUsecases = [
     title: 'Transparent Encryption ',
     url: '/use-cases/transparent-encryption',
     description:
-      'Elevate compliance and lower risk with Cilium transparent encryption. With just one switch, no application changes, service meshes  or additional proxies',
+      'Elevate compliance and lower risk with Cilium transparent encryption. With just one switch, no application changes, service meshes, or additional proxies',
   },
 
   {
