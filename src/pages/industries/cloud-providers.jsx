@@ -35,7 +35,7 @@ const heroContent = {
   heading: 'Cloud Providers',
   texts: [
     'Most cloud providers have their own custom CNIs, resulting in operational complexity for customers operating in multi-cloud environments. For example, the configuration and capabilities of the AWS VPC CNI and OpenShift SDN are significantly different. This fragmentation increases overhead in installing, operating, and troubleshooting network interfaces across cloud environments.',
-    'Cilium addresses these issues by presenting a unified networking solution tailored for Kubernetes that is compatible across various clouds, providing a consistent workflow that simplifies operations. Using eBPF, Cilium extends beyond Kubernetes basic networking capabilities, offering enhanced observability, security, and reduced latency. Major cloud providers, including Google Cloud, AWS, Azure, and Alibaba, have all standardized on Cilium for Kubernetes networking and security as a testament to its efficiency. ',
+    'Cilium addresses these issues by presenting a unified networking solution tailored for Kubernetes that is compatible across various clouds, providing a consistent workflow that simplifies operations. Using eBPF, Cilium extends beyond Kubernetes basic networking capabilities, offering enhanced observability, security, and reduced latency. Major cloud providers, including Google Cloud, AWS, Azure, and Alibaba, have all standardized on Cilium for Kubernetes networking and security as a testament to its scalability, performance, and rich feature set. ',
   ],
   imageSrc: AstronautBee,
   imageAlt: 'astronaut public speaking bee',
