@@ -42,7 +42,7 @@ const heroContent = {
 
 const datadogTestimonial = {
   quotedText:
-    'eBPF and Cilium helped us to push the boundaries both within operations and also with product development. To do things safer, faster and more easily than what we could have with traditional techniques. The overlay features in a single product, compatibility with multiple cloud providers, and ability to just run it. These three things are what made Cilium an obvious choice for us',
+    'eBPF and Cilium helped us to push the boundaries both within operations and also with product development. To do things safer, faster and more easily than what we could have with traditional techniques. The overlay of features in a single product, compatibility with multiple cloud providers, and ability to just run it. These three things are what made Cilium an obvious choice for us',
   description:
     'Datadog uses Cilium to secure and monitor the network traffic of their containerized applications running on Kubernetes',
   withPerson: true,
