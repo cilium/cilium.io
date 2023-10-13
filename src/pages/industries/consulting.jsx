@@ -107,7 +107,7 @@ const consultingResources = [
   {
     title: 'Cilium for Kubernetes networking: Why we use it and why we love it',
     description:
-      'After years of relying on a simple solution, Palark faced a growing demand for advanced features backed by our customers’ needs. Cilium brought the networking in their K8s platform to the next level',
+      'After years of relying on a simple solution, Palark faced a growing demand for advanced features backed by our customers’ needs. Cilium brought the networking in their Kubernetes platform to the next level',
     url: 'https://blog.palark.com/why-cilium-for-kubernetes-networking/',
     imageSrc: PalarkOfficeImage,
     imageAlt: 'palark office building',
