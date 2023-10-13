@@ -213,7 +213,7 @@ const FinancialServicesPage = () => (
     <FeaturedTalks heading="Featured talks" talks={financialTalks} className="mt-8" />
     <AdoptersLogo logos={companyLogos} className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4" />
     <ResourcesCard
-      heading="Join Global Finance Leaders in the  Cloud Native Networking Revolution "
+      heading="Join Global Financial Leaders in the Cloud Native Networking Revolution "
       resources={financialResources}
       className="mt-8"
     />
