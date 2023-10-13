@@ -215,7 +215,10 @@ const MediaEntertainmentPage = () => (
     <BulletSection {...bullectSection1} />
     <FeatureCard {...ecommerceFeatures} className="mt-12 mb-24" />
     <AdopterTestimonial {...trendyolTestimonial} />
-    <AdoptersLogo className="my-16 grid grid-cols-4" logos={companyLogos} />
+    <AdoptersLogo
+      className="my-16 mb-16 grid grid-cols-3 lg:grid lg:grid-cols-4"
+      logos={companyLogos}
+    />
     <AdopterTestimonial {...dbSchenkerTestimonial} className="mb-24" />
     <ResourcesCard
       heading="Leverage Cilium To Deliver Reliable, Fast, and Secure E-commerce Experience to  Users"

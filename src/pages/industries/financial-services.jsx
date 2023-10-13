@@ -154,7 +154,8 @@ const financialTalks = [
   },
   {
     title: 'Multi-cluster networking with Cilium at Form3',
-    description: 'This address the reasons Form3 choosed to build its platform with Cilium',
+    description:
+      'Adelina Simon, a technology evangelist at Form3 talks about how they built a multi-cloud payments platform using Cilium',
     videoSrc: 'https://www.youtube.com/embed/vKgRf4OzTIE?si=w_-F3oQysthruVtA',
   },
 ];
