@@ -4,7 +4,7 @@ import React from 'react';
 
 import Container from 'components/shared/container/container';
 
-const FeaturedTalks = ({ heading = 'Featured talks', talks, className }) => (
+const FeaturedTalks = ({ heading = 'Featured Talks', talks, className }) => (
   <div className={classNames(className, 'featured-talks bg-[#F6F7F8] py-12')}>
     <Container>
       <h3 className="text-center text-3xl font-bold lg:mb-[64px]">{heading}</h3>
