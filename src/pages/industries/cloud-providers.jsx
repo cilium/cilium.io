@@ -85,7 +85,7 @@ const bulletSection1 = {
   heading: 'Empowering Azure’s AKS Clusters with Cilium ',
   withImage: true,
   paragraphs: [
-    "Cilium's open source data plane is natively integrated with Azure CNI in Azure Kubernetes Service (AKS). This integration allows users to tap into Cilium's feature-rich ecosystem, right from the Azure Marketplace. Microsoft has committed to handling first-line support, ensuring that Azure users benefit from rapid issue resolution and updates.    ",
+    "Cilium's open source data plane is natively integrated with Azure CNI in Azure Kubernetes Service (AKS). This integration allows users to tap into Cilium's feature-rich ecosystem, right from the Azure Marketplace.",
   ],
   imageSrc: CloudImage1,
   imageAlt: 'cilium big tcp stats',
