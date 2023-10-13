@@ -187,7 +187,7 @@ const ecommerceFeatures = {
       icon: CodeIcon,
     },
     {
-      title: 'Multi-cluster and hybrid-cloud environments',
+      title: 'Multi-Cluster and Hybrid-Cloud Environments',
       description:
         'Cilium supports multi-cluster and hybrid cloud environments, allowing enterprises to easily connect and secure Kubernetes workloads across multiple clusters. ',
       icon: CloudIcon,
