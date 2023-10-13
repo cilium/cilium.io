@@ -84,7 +84,7 @@ const bulletSection2 = {
   heading:
     'Ease Integration with Traditional Firewall Systems Using Cilium’s Static Egress Gateway',
   paragraphs: [
-    "With Cilium's Static Egress Gateway, cloud-native workloads can be presented from stable IP addresses, easing integration with traditional firewall systems. This approach ensures that firewall requirements remain consistent even as workloads scale, fostering a bridge between cloud native and conventional environments. ",
+    "With Cilium's Static Egress Gateway, cloud native workloads can be presented from stable IP addresses, easing integration with traditional firewall systems. This approach ensures that firewall requirements remain consistent even as workloads scale, fostering a bridge between cloud native and conventional environments. ",
   ],
   withImage: true,
   imageSrc: SecurityImage3,
