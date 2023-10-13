@@ -59,7 +59,7 @@ const clickhouseStats = {
   logo: ClickHouseLogo,
   stats: [
     {
-      heading: 'MASSIVE SCALE',
+      heading: 'Massive Scale',
       subHeading:
         'Secured 10+PiB of streaming data & 30+ trillion inserted records in the first months of deployment',
     },
