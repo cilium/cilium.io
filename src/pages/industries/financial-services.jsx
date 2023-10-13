@@ -186,7 +186,7 @@ const financialResources = [
     url: 'https://www.youtube.com/watch?v=qdr9XQ6h5zs',
     CTAtext: 'Watch The Talk',
     description:
-      "Robinhood's war stories from running Cilium in a high-churn near-production environment, how they overcame challenges by better understanding and tuning Cilium.",
+      "Robinhood's war stories from running Cilium in a high-churn near-production environment, learn how they overcame challenges by better understanding and tuning Cilium.",
   },
 ];
 
