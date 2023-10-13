@@ -150,7 +150,7 @@ const financialTalks = [
     title: 'Cilium in Practice: Building Data Sandboxes at Bloomberg',
     videoSrc: 'https://www.youtube.com/embed/8fiYVyISyz4',
     description:
-      'Bloomberg leverages Cilium to construct data sandboxes that restrict users from distributing data outside the sandbox',
+      'Bloomberg leverages Cilium to construct data sandboxes that restrict users from exfiltrating data from the sandbox',
   },
   {
     title: 'Multi-cluster networking with Cilium at Form3',
