@@ -64,7 +64,7 @@ const clickhouseStats = {
         'Secured 10+PiB of streaming data & 30+ trillion inserted records in the first months of deployment',
     },
     {
-      heading: 'MULTI-CLOUD',
+      heading: 'Multi-Cloud',
       subHeading: '10,000+ pods across multiple regions and cloud providers',
     },
     {
