@@ -52,7 +52,7 @@ const bulletSection1 = {
   withImage: true,
   paragraphs: [
     'Telco and data center operators often have a blend of cloud native and legacy systems that require seamless communication. BGP, a common data center connectivity protocol is not natively integrated in Kubernetes.',
-    " With Cilium's native BGP support, operators can interconnect their legacy environment with a Cilium-managed environment, integrate seamlessly with Top of Rack devices, and automatically advertise pod CIDRs to BGP neighbors. Operators can significantly reduce CAPEX by leveraging Cilium's standalone load balancer to replace expensive legacy hardware load balancers.",
+    "With Cilium's native BGP support, operators can interconnect their legacy environment with a Cilium-managed environment, integrate seamlessly with Top of Rack devices, and automatically advertise pod CIDRs to BGP neighbors. Operators can also significantly reduce CAPEX by leveraging Cilium's standalone load balancer to replace expensive legacy hardware load balancers.",
   ],
   imageSrc: TelcoImage1,
   imageAlt: 'cilium bgp',
