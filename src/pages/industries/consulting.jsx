@@ -147,7 +147,7 @@ const ConsultingPage = () => (
       className="mt-20 mb-16 grid grid-cols-3 lg:grid lg:grid-cols-4"
     />
     <ResourcesCard
-      heading="Meet Customer’s Increasing Demand for Better Security, Performance, and Observability with Cilium. "
+      heading="Meet Customer’s Increasing Demand for Better Security, Performance, and Observability with Cilium"
       resources={consultingResources}
     />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
