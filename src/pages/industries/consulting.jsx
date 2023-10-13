@@ -68,7 +68,7 @@ const palarkTestimonial = {
 const bulletSection1 = {
   heading: "Easily Integrate With Customer's  Infrastructure.",
   paragraphs: [
-    "Consulting companies cater to various clients with different choices of infrastructures and cloud providers. Operating across different environments often results in additional operational and resource overhead. Cilium provides a consistent experience for operators across different environments. With Cilium's cluster mesh,  multiple clusters can be joined into a large unified network regardless of the Kubernetes distribution or location each is running. ",
+    "Consulting companies cater to various clients with different choices of infrastructures and cloud providers. Operating across different environments often results in additional operational and resource overhead. Cilium provides a consistent experience for operators across different environments. With Cilium's cluster mesh,  multiple clusters can be joined into a large unified network regardless of the Kubernetes distribution or location each is running.",
     "Cilium also reduces the number of tools operators have to deal with; for example, Cilium's load balancing can replace traditional hardware load balancers. Cilium's Layer 2 announcement can eliminate the need for extra tooling like MetalLB. Together, these features ensure that consulting companies can offer uniform, high-quality services regardless of their client's chosen infrastructure.",
   ],
   withImage: true,
