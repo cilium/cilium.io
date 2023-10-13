@@ -149,7 +149,7 @@ const mediaUsecases = [
     icon: ServiceMapIcon,
     title: 'Service Map',
     description:
-      'Enable platform teams to provide self-service portal to app teams to observe their own workloads, dependencies, and flows.',
+      'Enable platform teams to provide a self-service portal to app teams to observe their own workloads, dependencies, and network flows',
     url: '/use-cases/service-map',
   },
 ];
