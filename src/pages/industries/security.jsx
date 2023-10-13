@@ -71,7 +71,7 @@ const tetragonCardContents = [
 
 const bulletSection1 = {
   heading:
-    'Better Understand Security Breaches and Recover Quickly with Cilium’s Forensics Capabilities.',
+    'Better Understand Security Breaches and Recover Quickly with Cilium’s Forensics Capabilities',
   paragraphs: [
     "Critical workloads that run in a Kubernetes environment require cloud native-aware tooling to perform efficient incident investigations and monitor key compliance requirements. Cilium's forensic capabilities enable SecOps teams and App owners to conduct security analysis with a native understanding of cloud native identities. Cilium provides a deep understanding of network flows from L3/L4 up to L7 and runtime visibility from OS to code executions in the pod.",
   ],
