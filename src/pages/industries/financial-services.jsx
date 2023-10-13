@@ -167,7 +167,7 @@ const financialResources = [
     url: 'https://www.youtube.com/watch?v=fjhKw49YcY4',
     CTAtext: 'Watch The Case Study',
     description:
-      'Cilium helped the post finance team build a scalable Kubernetes platform which meets the demanding requirements to run mission-critical banking software in production.',
+      'Cilium helped the Post Finance team build a scalable Kubernetes platform which meets the demanding requirements to run mission-critical banking software in production.',
   },
   {
     imageSrc: CapitalOnefficeImage,
