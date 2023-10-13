@@ -107,7 +107,7 @@ const securityTalks = [
   {
     title: 'The Next Log4jshell? Preparing for CVEs with eBPF!',
     description:
-      'How open source eBPF based tools can give full network and process-level visibility to detect and prevent Log4jshell and your next CVE',
+      'See how Tetragon can give full network and process-level visibility to detect and prevent Log4jshell and your next CVE',
     videoSrc: 'https://www.youtube.com/embed/u8HKg5pENj4',
   },
   {
