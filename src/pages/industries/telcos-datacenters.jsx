@@ -85,7 +85,7 @@ const telcoTalks = [
   {
     title: 'eCHO Episode 59: Dual Stack with Cilium',
     videoSrc: 'https://www.youtube.com/embed/SwXvGeMy3Wg',
-    description: 'Watch Cilium's out-of-the-box support for both IPv4 and IPv6',
+    description: "Watch Cilium's out-of-the-box support for both IPv4 and IPv6",
   },
   {
     title: 'BGP with Cilium',
