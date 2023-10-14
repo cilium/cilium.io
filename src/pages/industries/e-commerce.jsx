@@ -78,7 +78,7 @@ const trendyolTestimonial = {
   CTAtext: 'READ THE CASE STUDY',
   withPerson: true,
   quotedText:
-    'We evaluated other CNIs, but Cilium stood out primarily due to its performance. When we started performance testing Cilium, we found that its performance remained steady, even as cluster traffic surged. As our scale increased, Cilium didn’t start degrading while other CNIs did.Cilium has leveled up Trendyol’s Kubernetes clusters. With its advanced capabilities, Cilium enabled us to solve our networking issues and outperformed all other CNIs. We have successfully increased our scalability, performance, security and visibility with Cilium',
+    'We evaluated other CNIs, but Cilium stood out primarily due to its performance. When we started performance testing Cilium, we found that its performance remained steady, even as cluster traffic surged. As our scale increased, Cilium didn’t start degrading while other CNIs did.Cilium has leveled up Trendyol’s Kubernetes clusters. With its advanced capabilities, Cilium enabled us to solve our networking issues and outperformed all other CNIs. We have successfully increased our scalability, performance, security and visibility with Cilium.',
   name: 'Emin Aktas',
   role: ' Platform Engineer, Trendyol',
   url: 'https://www.cncf.io/case-studies/trendyol/',
