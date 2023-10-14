@@ -145,8 +145,9 @@ const cloudResouces = [
     CTAtext: 'Learn More',
   },
   {
-    title: 'Microsoft and Isovalent bring eBPF-based Networking and Security to Azure',
-    description: 'Microsoft and Isovalent bring eBPF-based Networking and Security to Azure',
+    title: 'Azure CNI Powered by Cilium',
+    description:
+      'Azure CNI Powered by Cilium combines the robust control plane of Azure CNI with the data plane of Cilium to provide high-performance networking and security.',
     url: 'https://www.youtube.com/watch?v=8it8Hm2F_GM',
     imageSrc: MicrosoftOffice,
     imageAlt: 'microsoft office buidling',
