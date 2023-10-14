@@ -106,7 +106,7 @@ const commerceResources = [
     CTAtext: 'Read the case study',
     url: 'https://www.cncf.io/case-studies/trendyol/',
     description:
-      'Recognizing the need to enhance their clusters and unlock new capabilities, Trendyol switched from flannel and implemented Cilium as the default CNI for the Kubernetes cluster resulting in an up to 40% increase in performance     ',
+      'Recognizing the need to enhance their clusters and unlock new capabilities, Trendyol switched from flannel and implemented Cilium as the default CNI for the Kubernetes cluster resulting in an up to 40% increase in performance.',
   },
 
   {
