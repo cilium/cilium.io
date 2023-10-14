@@ -126,11 +126,11 @@ const consultingResources = [
 const ConsultingPage = () => (
   <MainLayout>
     <Hero {...heroContent} imageStyle="lg:h-[360px] lg:w-[360px] mb-24">
-      <AdopterTestimonial {...eficodeTestimonial} />
+      <AdopterTestimonial {...palarkTestimonial} />
     </Hero>
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} className="mb-8" />
-    <AdopterTestimonial {...palarkTestimonial} className="mb-8" />
+    <AdopterTestimonial {...eficodeTestimonial} className="mb-8" />
     <AdoptersLogo
       items={consultingLogos}
       className="mt-20 mb-16 grid grid-cols-3 lg:grid lg:grid-cols-4"

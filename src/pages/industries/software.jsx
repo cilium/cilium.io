@@ -49,17 +49,17 @@ const clickhouseStats = {
   logo: ClickHouseLogo,
   stats: [
     {
-      heading: 'Massive Scale',
+      heading: 'MASSIVE SCALE',
       subHeading:
         'Secured 10+PiB of streaming data & 30+ trillion inserted records in the first months of deployment',
     },
     {
-      heading: 'Multi-Cloud',
-      subHeading: '10,000+ pods across multiple regions and cloud providers',
+      heading: 'MULTI-CLOUD',
+      subHeading: '10,000+ pods across multiple regions, availability zones and cloud providers',
     },
     {
       heading: 'TIME TO VALUE',
-      subHeading: 'Weeks from POC to in-production deployment',
+      subHeading: 'Reduced time to weeks from proof of concept to in-production deployment',
     },
   ],
   url: 'https://www.cncf.io/case-studies/clickhouse/',
@@ -88,11 +88,24 @@ const ascendStats = {
   CTAtext: 'READ THE CASE STUDY',
 };
 
+const ascendTestimonial = {
+  description:
+    'Ascend turned to Cilium as their CNI which simplified integrating into customer networks, eliminated their IP churn and density issues.',
+  logo: AscendLogo,
+  withPerson: true,
+  quotedText:
+    'From experience, we know that getting network policy correct is difficult and when you do get it wrong it is a nightmare. Trying to understand what’s going on with traditional tooling means, you probably throw three engineers at the problem for five hours while with Hubble you know what’s happening in about three seconds. It was one of those very easy trade offs to explain to my CEO. We’re going to encounter the cost of debugging, let’s make it a lot less expensive.',
+  name: 'Joe Stevens',
+  role: 'Member of the Technical Staff, Ascend',
+  url: 'https://www.cncf.io/case-studies/ascend/',
+  CTAtext: 'READ THE CASE STUDY',
+};
+
 const bulletSection1 = {
   heading: 'Align with DevOps  and  GitOps Principles',
   paragraphs: [
     "One of the core tenets of DevOps is automation. Cilium's architecture ensures that all its components can be deployed automatically, integrating into existing workflows and augmenting automation capabilities. Platform engineering teams can seamlessly integrate Cilium into their CI/CD pipelines, ensuring continuous delivery and integration without manual intervention.",
-    "Cilium is designed to be configured using an API. This aligns with the GitOps principles, where the desired state of infrastructure is declared in code and stored in Git repositories. The API-driven model of Cilium enables organizations to manage, scale, and modify their infrastructure using code, ensuring consistency and repeatability.",
+    'Cilium is designed to be configured using an API. This aligns with the GitOps principles, where the desired state of infrastructure is declared in code and stored in Git repositories. The API-driven model of Cilium enables organizations to manage, scale, and modify their infrastructure using code, ensuring consistency and repeatability.',
   ],
   withImage: true,
   imageSrc: SoftwareImage1,
@@ -164,7 +177,8 @@ const softwareResources = [
   // },
   {
     title: 'How ClickHouse is Using Cilium to Implement Efficient Network Policies',
-    description: 'How ClickHouse is Using Cilium to Implement Efficient Network Policies',
+    description:
+      'Clickhouse leveragd Cilium in bulding its serverless SaaS offering, Clickhouse Cloud',
     url: 'https://www.cncf.io/case-studies/clickhouse/',
     imageSrc: ClickhouseOfficeImage,
     imageAlt: 'clickhouse banner',
@@ -192,7 +206,7 @@ const SoftwarePage = () => (
     <BulletSection {...bulletSection1} className="my-8" />
     <Stats {...clickhouseStats} />
     <BulletSection {...bulletSection2} className="my-8" />
-    <Stats {...ascendStats} />
+    <AdopterTestimonial {...ascendTestimonial} />
     <BulletSection {...bulletSection3} className="my-8" />
     <AdoptersLogo items={softwareLogos} className="my-16 grid grid-cols-3 lg:grid lg:grid-cols-4" />
     <FeaturedTalks heading="Featured Talks" talks={softwareTalks} />

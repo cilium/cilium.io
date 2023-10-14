@@ -104,7 +104,7 @@ const cloudTalks = [
     title: 'Cilium, eBPF, and EKS Anywhere',
     videoSrc: 'https://www.youtube.com/embed/ez0YUyoxMcg',
     description:
-      'How Cilium and its eBPF data plane was extended to support telco networking requirements in a cloud native way',
+      'EKS-Anywhere comes with Cilium as its default CNI. Liz Rice and Duffie Cooley talk about the details of this',
   },
 ];
 
