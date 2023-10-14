@@ -87,7 +87,7 @@ const trendyolTestimonial = {
 
 const dbSchenkerTestimonial = {
   description:
-    'DB schenker Migrated to Cilium to prepare it platform for the next steps in their cloud native journey.',
+    'DB Schenker migrated to Cilium to prepare it platform for the next steps in their cloud native journey.',
   CTAtext: 'READ THE BLOG POST',
   withPerson: true,
   quotedText:
