@@ -112,11 +112,11 @@ const commerceResources = [
   {
     imageSrc: IkeaOfficeImage,
     imageAlt: 'newyork times  office building',
-    title: 'Designing and Securing a Multi-Tenant Runtime Environment at the New York Times',
+    title: 'IKEA Private Cloud: Connecting 390+ Stores and 4.3 Billion Website Visitors',
     CTAtext: 'Watch the Talk',
-    url: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
+    url: 'https://www.youtube.com/watch?v=mRbsXkdWUNU',
     description:
-      'Yahoo improved load balancing performance and scalability by switching to Cilium L4 LB with XDP, achieving hardware-level efficiency and dynamic backend management.',
+      'Cilium has become a key piece connecting the vast cloud native estate of IKEA Retail (Ingka Group) encompassing both public and private cloud Kubernetes clusters.',
   },
 
   {
@@ -146,7 +146,7 @@ const commerceUsecases = [
     icon: BandWidthIcon,
     title: 'Bandwidth and Latency Management',
     description:
-      'Optimize your bandwidth and latency with rate limiting and fair queuing. Rely on our TCP congestion control algorithm automization.',
+      'Optimize your bandwidth and latency with rate limiting and fair queuing. Rely on our TCP congestion control algorithm.',
     url: '/use-cases/bandwidth-optimization',
   },
 
