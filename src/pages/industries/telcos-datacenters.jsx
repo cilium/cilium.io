@@ -57,7 +57,7 @@ const bulletSection1 = {
 const bulletSection2 = {
   heading: 'Future-proof Operations with Cilium’s Dual Stack IPv4/IPv6 and NAT46/64 Support',
   paragraphs: [
-    "Cilium Dual-stack IPv4/IPv6 Networking allows each pod to be allocated IPv4 and IPv6 addresses, ensuring seamless communication with modern IPv6 systems and legacy IPv4 applications and services. For businesses in the process of transitioning from IPv4 to IPv6, Cilium's NAT46/64 support provides a pathway to ease this transition. Cilium's IPv6 support with BGP lets users advertise their IPv6 Pod CIDRs. Together, these features offer scalability and prepare businesses for a future where IPv6 will be the norm rather than the exception.",
+    "Cilium's dual-stack IPv4/IPv6 networking allows each pod to be allocated IPv4 and IPv6 addresses, ensuring seamless communication with modern IPv6 systems and legacy IPv4 applications and services. For businesses in the process of transitioning from IPv4 to IPv6, Cilium's NAT46/64 support provides a pathway to ease this transition. Cilium's IPv6 support with BGP lets users advertise their IPv6 Pod CIDRs. Together, these features offer scalability and prepare businesses for a future where IPv6 will be the norm rather than the exception.",
   ],
   withImage: true,
   imageSrc: TelcoImage2,
