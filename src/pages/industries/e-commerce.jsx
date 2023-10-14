@@ -185,7 +185,7 @@ const ecommerceFeatures = {
       icon: CloudIcon,
     },
     {
-      title: 'Large-scale Kubernetes deployments',
+      title: 'Large-Scale Kubernetes Deployments',
       description:
         'Enterprises that have large-scale Kubernetes deployments with hundreds or thousands of nodes can benefit from the high-performance networking and observability features provided by Cilium.',
       icon: DbIcon,
