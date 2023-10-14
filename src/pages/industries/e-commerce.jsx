@@ -191,9 +191,9 @@ const ecommerceFeatures = {
       icon: DbIcon,
     },
     {
-      title: 'Compliance and regulatory requirements',
+      title: 'Securing Customer Data',
       description:
-        'Cilium provides advanced network policy enforcement and  transparent encryption making it easier  to comply with regulatory requirements such as FIPS, PCIDSS, GDPR, Fedramp, and SOC 2.',
+        'Cilium provides advanced network policy enforcement, mutual authentication, and transparent encryption to protect data in transit ensuring a secure check out process.',
       icon: LockIcon,
     },
   ],
