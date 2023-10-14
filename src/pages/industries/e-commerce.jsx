@@ -65,7 +65,7 @@ const bullectSection1 = {
     'Build Globally Distributed Services. Gain The Edge in Speed, Security, and Observability',
   paragraphs: [
     'E-commerce platforms with offerings spanning a wide geographic distribution often need to deploy their platforms close to their users to reduce latency. Cilium provides a wide range of features enabling e-commerce platforms to build infrastructure across multiple clouds, regions, availability zones, and geographic locations without sacrificing performance. Cilium Cluster Mesh effectively allows joining multiple clusters into a large unified network, regardless of the Kubernetes distribution or location each of them is running. Cilium also offers scalable and efficient load balancing and ingress, enabling maglev-supported load balancing on L3/L4 for N/S traffic and E/W, including DSR and transparent k8s ingress controllers.',
-    'With a Cilium-enabled infrastructure, E-commerce platforms can confidently expand their reach and offer fast, reliable, and globally accessible e-commerce experiences to their customers.',
+    'With a Cilium-enabled infrastructure, e-commerce platforms can confidently expand their reach and offer fast, reliable, and globally accessible e-commerce experiences to their customers.',
   ],
   withImage: true,
   imageSrc: EcommerceImage1,
