@@ -11,6 +11,7 @@ import GoogleCloudLogo from 'icons/logo-googlecloud.inline.svg';
 import HetznerLogo from 'icons/logo-hetzner.inline.svg';
 import AstronautBee from 'images/pages/industries/astronaut-bee.png';
 import CloudImage1 from 'images/pages/industries/cloud-1.png';
+import CloudImage2 from 'images/pages/industries/cloud-2.png';
 import MainLayout from 'layouts/main/main';
 
 import AWSOfficeImage from './images/awsoffice.png';
@@ -81,6 +82,9 @@ const bulletSection2 = {
     'Hetzner Cloud, a leading German public cloud provider, recently overhauled its ingress architecture to pursue modern and scalable cloud services. Hetzner was scouting for a Kubernetes-native solution with ECMP, firewall, IPv6, and DSR capabilities. Cilium emerged as the ideal choice. Before adopting Cilium, Hetzner ran tests deploying different Cilium configurations in a Kubernetes cluster to benchmark RPS and throughput and then checking the CPU usage as a metric to compare the tests. These tests showed Cilium provided a massive increase in both RPS and throughput while still reducing CPU usage. ',
     "With Cilium's Kubernetes-native support, scalability, enhanced security, IPv6 compatibility, and efficiency with DSR, Cilium is a compelling choice for cloud providers. The results of Hetzner Cloud's performance tests highlight the value of adopting Cilium to elevate performance, security, and scalability in the cloud infrastructure landscape.",
   ],
+  withImage: true,
+  imageSrc: CloudImage2,
+  imageAlt: 'hetzner cilium test illustration',
 };
 
 const cloudTalks = [
@@ -93,7 +97,8 @@ const cloudTalks = [
   {
     title: 'From Managed Kubernetes to App Platform: Cilium Usage at DigitalOcean',
     videoSrc: 'https://www.youtube.com/embed/xez34h7EY3A',
-    description: "Digital Ocean's Managed Kubernetes aka DKOS uses Cilium extensively.",
+    description:
+      'Digital Ocean migrated its Managed Kubernetes offering DKOS from to Cilium. Today Cilium powers over 0(10000) DOKS clusters.',
   },
   {
     title: 'Cilium, eBPF, and EKS Anywhere',
@@ -154,7 +159,7 @@ const MediaEntertainmentPage = () => (
     <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
       <AdopterTestimonial {...azureTestimonial} />
     </Hero>
-    <BulletSection {...bulletSection2} />
+    <BulletSection {...bulletSection2} imageStyle="h-[400px]" />
     <AdopterTestimonial {...hertznerTestimonial} className="mt-8 pb-8" />
     <BulletSection {...bulletSection1} />
     <AdopterTestimonial {...googleTestimonial} className="my-8 pb-8" />
