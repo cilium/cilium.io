@@ -79,7 +79,7 @@ const telcoTalks = [
   {
     title: 'Leveraging Cilium and SRv6 for Telco Networking',
     description:
-      'How Cilium and its eBPF data plane was extended to support telco networking requirements in a cloud native way',
+      'Learn how Cilium and its eBPF data plane was extended to support telco networking requirements in a cloud native way',
     videoSrc: 'https://www.youtube.com/embed/vJaOKGWiyvU',
   },
   {
