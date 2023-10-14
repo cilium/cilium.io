@@ -33,7 +33,7 @@ const heroContent = {
 const bellTestimonial = {
   logo: BellLogo,
   description:
-    "Bell is Canada's largest telecommunications company, providing Mobile phone, TV, high speed and wireless Internet, and residential Home phone services.",
+    "Bell is Canada's largest telecommunications company, providing mobile phone, TV, high speed and wireless Internet, and residential home phone services.",
   quotedText:
     'With Cilium, Kubernetes Pods now have a single interface with only a default route. Nothing complex, no forwarding rules, no insanities of IPv6 static routes! And from a developer perspective, you just assign a VRF and the rest is really quite simple.',
   withPerson: true,
