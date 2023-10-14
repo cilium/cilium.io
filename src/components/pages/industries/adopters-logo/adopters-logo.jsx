@@ -72,6 +72,7 @@ import TestifyLogo from './images/testify.inline.svg';
 import TietoevryLogo from './images/tietoevry.inline.svg';
 import TrendyolLogo from './images/trendyol.inline.svg';
 import TripLogo from './images/trip.inline.svg';
+import TsystemsLogo from './images/tsystems.inline.svg';
 import USwitchLogo from './images/uswitch.inline.svg';
 import WildLifeLogo from './images/wildlife.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
@@ -148,6 +149,7 @@ const logos = {
   uswitch: USwitchLogo,
   wildlife: WildLifeLogo,
   yahoo: YahooLogo,
+  tsystems: TsystemsLogo,
 };
 
 const spaceXClassNames = {
@@ -167,7 +169,7 @@ const AdoptersLogo = ({ items, spaceXSize = 'sm', id }) => (
                 'mt-4 h-12 w-auto text-gray-1 md:mt-6 md:h-14 lg:mt-8 lg:h-16',
                 spaceXClassNames[spaceXSize]
               )}
-              style={{ width: '40px' }}
+              style={{ height: '40px' }}
               key={index}
             />
           );

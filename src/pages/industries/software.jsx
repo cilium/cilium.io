@@ -13,7 +13,7 @@ import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import DatadogLogo from 'icons/logo-datadog.inline.svg';
 import AuditBee from 'images/pages/industries/audit-bee.png';
 import SoftwareImage1 from 'images/pages/industries/software-1.png';
-import SoftwareImage2 from 'images/pages/industries/software-2.png';
+import SoftwareImage2 from 'images/pages/industries/software-2.webp';
 import SoftwareImage3 from 'images/pages/industries/software-3.webp';
 import MainLayout from 'layouts/main/main';
 
@@ -136,23 +136,17 @@ const bulletSection3 = {
 
 const softwareTalks = [
   {
-    title: 'Designing and Securing a Multi-Tenant Runtime Environment at the New York Times ',
+    title: 'Tales from an eBPF Program’s Murder Mystery',
     description:
-      'The New York Times team was building multi-tenant Kubernetes clusters to complement the Internal Developer platform and needed networking that could securely scale up to 100+ Nodes',
-    videoSrc: 'https://www.youtube.com/embed/9FDpMNvPrCw',
+      "How datadog leveraged Cilium's observability features and eBPF to investigate and get the bottom of an issue with their Kubernetes clusters",
+    videoSrc: 'https://www.youtube.com/embed/YK7GyEJdJGo',
   },
 
   {
-    title: 'The Past, Present and Future of Cilium and Hubble at Palantir',
+    title: 'Running Cilium with Nomad',
     description:
-      'Vlad Ungureanu from Palantir details how they use Cilium and they plan to use it in future',
-    videoSrc: 'https://www.youtube.com/embed/3K5WJ_h5PhI',
-  },
-  {
-    title: 'Global Gaming Infrastructure with Cilium',
-    description:
-      'How Wildlife Studios built a Global Multi Cluster Gaming Infrastructure with Cilium',
-    videoSrc: 'https://www.youtube.com/embed/_1t3bXzptP0',
+      'Cosmonic wrote an application called Netreap that ties together data from Nomad and Consul to replace the Cilium Kubernetes operator to maintain endpoints and labels',
+    videoSrc: 'https://www.youtube.com/embed/DSkf9Y06-lE',
   },
 ];
 

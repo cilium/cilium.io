@@ -90,7 +90,7 @@ const telcoTalks = [
   {
     title: 'BGP with Cilium',
     description:
-      'Senior Technical Marketing Engineer Nico Vibert walks through BGP enhancements in Cilium',
+      'Interconnect Cilium-managed clusters with an existing network without using a  3rd party tool.',
     videoSrc: 'https://www.youtube.com/embed/AXTKS0WCXjE',
   },
 ];
@@ -117,7 +117,7 @@ const telcoResources = [
   },
 ];
 
-const telcoLogos = ['bell', 'equinix', 'masmovil', 'telenor'];
+const telcoLogos = ['bell', 'equinix', 'masmovil', 'telenor', 'tsystems'];
 
 const telcoUsecases = [
   {
