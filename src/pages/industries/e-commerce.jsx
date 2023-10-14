@@ -213,7 +213,7 @@ const MediaEntertainmentPage = () => (
     />
     <AdopterTestimonial {...dbSchenkerTestimonial} className="mb-24" />
     <ResourcesCard
-      heading="Leverage Cilium To Deliver Reliable, Fast, and Secure E-commerce Experience to  Users"
+      heading="Leverage Cilium To Deliver Reliable, Fast, and Secure E-commerce Experience to  Customers"
       resources={commerceResources}
     />
     <IndustryUseCases heading="Cilium’s Solutions for E-commerce " usecases={commerceUsecases} />
