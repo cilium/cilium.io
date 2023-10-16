@@ -15,6 +15,7 @@ import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
 import FinanceImage1 from 'images/pages/industries/finance-1.png';
 import FinanceImage2 from 'images/pages/industries/finance-2.png';
+import FinanceImage3 from 'images/pages/industries/finance-3.png';
 import ExecelBee from 'images/pages/usecase/excel-bee.png';
 import MainLayout from 'layouts/main';
 
@@ -79,27 +80,31 @@ const postfinanceStats = {
   ],
 };
 
-const bulletSection1 = {
-  heading: 'Converging  Compliance, Security, and Modern Networking',
-  paragraphs: [
-    'Cilium, integrated with Hubble and Tetragon, offers a unified solution that cohesively addresses each critical element of compliance, observability, security, and modern networking. With Hubble and Tetragon, financial institutions gain complete network observability data, enabling them to perform deep dives into network flows for real-time analysis. This capability is invaluable for compliance monitoring and forensic investigations, effectively closing the loop between what is required by regulators and what is technically feasible. Cilium also excels in security, providing multi-layered network visibility from L3/L4 to L7 and cloud native security analysis, ensuring that data in transit meets stringent compliance standards such as FIPS and PCIDSS.',
-  ],
-};
-
 const bulletSection2 = {
   heading: 'Weave Compliance and Security Throughout the DevOps process',
   paragraphs: [
-    'Cilium empowers you to free your security and operations teams from the need to review each policy change manually. Cilium ensures that the appropriate TLS version and ciphers protect all traffic that needs to be encrypted, that the SNI matches the original destination DNS name, and that a trusted certificate authority signs the certificate received.',
+    'Cilium empowers you to free your security and operations teams from the need to review each policy change manually. Cilium is natively integrated into the Kubernetes ecosystem and plays nicely with other tools, making it easier to weave compliance and security governance into the DevOps process. For example, operators can write Kubernetes admission controllers to ensure that only compliant containers and workloads are deployed. This integration helps maintain and enforce security and compliance standards throughout your DevOps processes.',
   ],
   withImage: true,
   imageSrc: FinanceImage2,
   imageAlt: 'cilium TLS keys and certificate illustration',
 };
 
+const bulletSection1 = {
+  heading: 'Enforce Zero-Trust Security with Ease. No Disparate Tools,  No Performance Hits',
+  paragraphs: [
+    'The dynamic nature of corporate networks, requires a more flexible security approach. Adopting a Zero Trust-based approach to security architecture is essential for companies in the financial service industry to maintain cyber resilience. ',
+    'Cilium provides a single unified tool that implements a range of features to enforce Zero Trust security principles. These features include identity-aware service to service security and observability, advanced network policies with native HTTP and DNS protocol support, transparent encryption using in-kernel IPsec or WireGuard, enforcement of TLS via Network Policy allowing operators to restrict the allowed TLS SNIs in their network, and providing a more secure environment, powerful security observability and real-time runtime enforcement platform with Tetragon, cluster-wide network policies can provide security guardrails while having more specific network policies to secure the application and operating system access control on different levels such as system calls, TCP/IP, file access or integrity, and namespaces.',
+  ],
+  withImage: true,
+  imageSrc: FinanceImage3,
+  imageAlt: 'cilium TLS keys and certificate illustration',
+};
+
 const bulletSection3 = {
   heading: '“Always On” Workload Analysis for Continuous Compliance',
   paragraphs: [
-    'Cilium ensures continuous compliance with standards like FIPS, PCIDSS, Open Banking, Fedramp, and SOC 2 by offering real-time monitoring and analysis of workload communication to identify non-compliant connections. It emphasizes encryption, traffic analysis, and full-stack monitoring without imposing performance constraints, ensuring confidentiality, integrity, and availability in regulated environments.    ',
+    'In a highly regulated industry such as financial services, ensuring that software and systems comply with these regulations is a constant challenge for development and operations teams. Cilium empowers teams with tools to ensure continuous compliance with standards like FIPS, PCIDSS, Open Banking, Fedramp, and SOC 2 by offering real-time monitoring and analysis of workload communication to identify non-compliant connections. It emphasizes encryption, traffic analysis, and full-stack monitoring without imposing performance constraints, ensuring confidentiality, integrity, and availability in regulated environments.    ',
   ],
 
   withImage: true,
@@ -195,12 +200,13 @@ const financeLogos = [
 
 const FinancialServicesPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="lg:h-[470px] lg:w-[470px] lg:-mt-10 ">
-      <Testimonial {...bloombergTestimonial} />
+    <Hero {...heroContent} imageStyle="lg:h-[470px] lg:w-[470px] lg:-mt-10">
+      <Testimonial {...bloombergTestimonial} className="mt-8" />
     </Hero>
-    <BulletSection {...bulletSection2} />
     <BulletSection {...bulletSection3} />
-    <Stats className="mb-16" {...postfinanceStats} />
+    <Stats className="my-8" {...postfinanceStats} />
+    <BulletSection {...bulletSection1} />
+    <BulletSection {...bulletSection2} />
     <FeaturedTalks heading="Featured talks" talks={financialTalks} className="mt-8" />
     <AdoptersLogo items={financeLogos} className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4" />
     <ResourcesCard

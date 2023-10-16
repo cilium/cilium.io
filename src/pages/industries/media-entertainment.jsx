@@ -57,11 +57,10 @@ const bulletSection1 = {
 const bulletSection2 = {
   heading: 'Robust Security, Scalability, and Flexibility at a Reduced Operational Overhead',
   paragraphs: [
-    'Securing content and data is vital in the media and entertainment industry. Cilium enforces a zero-trust security model  where no entity is inherently trusted, and access to resources is restricted until explicitly authorized. This approach enhances security and reduces the risk of data breaches.',
     "Many companies in the media and entertainment industries maintain legacy infrastructure for varying reasons. Cilium is flexible enough to integrate with both traditional and cloud native infrastructures. Companies like Cosmonic have extended Cilium beyond Kubernetes to platforms like Nomad. In scenarios where it is impossible to use Cilium as the Default CNI, Cilium's CNI chaining mode lets you utilize Cilium's features like Hubble for observability and Tetragon for security. Companies running workloads on non-k8s environments can leverage Cilium's Layer 4 standalone load balancer for efficient and scalable load balancing. This flexibility ensures your organization can benefit from Cilium regardless of your infrastructure choices.",
   ],
   withImage: true,
-  imageSrc: MediaImage2,
+  imageSrc: MediaImage1,
   imageAlt: 'cilium xdp',
 };
 
@@ -153,7 +152,7 @@ const MediaEntertainmentPage = () => (
     <BulletSection {...bulletSection1} />
     <AdopterTestimonial {...seznamTestimonial} className="mt-8 pb-8" />
     <BulletSection {...bulletSection2} />
-    <AdoptersLogo className="my-16 grid grid-cols-3 lg:grid lg:grid-cols-4" items={companyLogos} />
+    <AdoptersLogo className="grid grid-cols-3 lg:grid lg:grid-cols-4" items={companyLogos} />
     <ResourcesCard
       heading="See Real World Stories on Companies in the Media and Entertainment Industry"
       resources={mediaResources}

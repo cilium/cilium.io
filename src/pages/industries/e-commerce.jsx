@@ -205,13 +205,13 @@ const MediaEntertainmentPage = () => (
       <Stats {...tripStats} className="py-8" />
     </Hero>
     <BulletSection {...bullectSection1} />
-    <FeatureCard {...ecommerceFeatures} className="mt-12 mb-24" />
     <AdopterTestimonial {...trendyolTestimonial} />
+    <FeatureCard {...ecommerceFeatures} className="mt-12 mb-16" />
+    <AdopterTestimonial {...dbSchenkerTestimonial} />
     <AdoptersLogo
       className="my-16 mb-16 grid grid-cols-3 lg:grid lg:grid-cols-4"
       items={ecommerceLogos}
     />
-    <AdopterTestimonial {...dbSchenkerTestimonial} className="mb-24" />
     <ResourcesCard
       heading="Leverage Cilium To Deliver Reliable, Fast, and Secure E-commerce Experience to  Customers"
       resources={commerceResources}

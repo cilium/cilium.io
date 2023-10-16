@@ -18,7 +18,7 @@ const AdopterTestimonial = ({
 }) => (
   <Container className={className}>
     <div
-      className="rounded-xl bg-white px-8 py-6"
+      className="rounded-xl bg-white px-6 py-6"
       style={{ boxShadow: '0px 1px 8px 0px rgba(20, 26, 31, 0.20)' }}
     >
       <div className="lg:flex">
