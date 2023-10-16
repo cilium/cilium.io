@@ -335,7 +335,7 @@ join our [Slack] channel to ask questions and brag about your setup.
 - KubeCon US 2019 session: [Connecting Kubernetes Clusters Across Cloud
   Providers](https://docs.google.com/presentation/d/1siR8tPoIEbE0itbdoKdLKbkTS9nYV-2Wj0QIxJqRI7M/edit?usp=sharing)
 
-<iframe width="1202" height="676" src="https://www.youtube.com/embed/U34lQ8KbQow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<YoutubeIframe embedId='U34lQ8KbQow'/>
 
 - [ClusterMesh tutorial](https://istio.io/docs/setup/kubernetes/multicluster-install/)
 

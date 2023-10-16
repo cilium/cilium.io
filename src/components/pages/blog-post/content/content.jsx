@@ -7,11 +7,17 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
 import SocialShare from './social-share';
+import YoutubeIframe from './youtube-iframe';
 
 // eslint-disable-next-line react/prop-types
 const Wrapper = ({ children }) => <div className="prose md:prose-lg !max-w-none">{children}</div>;
 // eslint-disable-next-line react/jsx-no-useless-fragment
-const components = { wrapper: Wrapper, BlogAuthor, undefined: (props) => <Fragment {...props} /> };
+const components = {
+  wrapper: Wrapper,
+  BlogAuthor,
+  YoutubeIframe,
+  undefined: (props) => <Fragment {...props} />,
+};
 const Content = ({ date, title, summary, content, path, tags }) => {
   const postUrl = `${process.env.GATSBY_DEFAULT_SITE_URL}${path}`;
   return (

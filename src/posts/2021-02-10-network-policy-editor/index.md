@@ -26,14 +26,7 @@ Implementing Network Policy is a critical part of building a secure Kubernetes-b
 
 Over the past years, we have learned a lot about the common challenges while working with many of you in the Cilium community implementing Kubernetes Network Policy. Today, we are excited to announce a new free tool for the community to assist you in your journey with Kubernetes NetworkPolicy: <a href="https://editor.cilium.io" target="_blank">editor.cilium.io</a>:
 
-<div style={{ position: 'relative', width: '100%', maxWidth: '1008px', paddingBottom: '56.25%', cursor: 'pointer' }}>
-    <iframe style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} 
-        src="https://www.youtube.com/embed/_ebbAeYT2z8?controls=0&autoplay=1&mute=1&loop=1" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen
-    ></iframe>
-</div>
+<YoutubeIframe embedId='_ebbAeYT2z8'/>
 
 <div style={{ paddingTop: '30px' }}>
 
