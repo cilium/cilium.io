@@ -183,7 +183,7 @@ const plugins = [
       feeds: [
         {
           serialize: ({ query: { site, allMdx } }) =>
-            allMdx.nodes.map(({ excerpt, frontmatter, html }) => {
+            allMdx.nodes.map(({ excerpt, frontmatter }) => {
               const { path, date, externalUrl } = frontmatter;
               const url = externalUrl || site.siteMetadata.siteUrl + path;
               return {
