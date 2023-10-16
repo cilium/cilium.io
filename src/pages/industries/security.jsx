@@ -113,7 +113,7 @@ const bulletSection4 = {
     "Bolster Security, Streamline Infrastructure, Reduce Complexity Without Sacrificing Performance Using Cilium's Mutual Authentication",
   paragraphs: [
     "Organizations are increasingly looking to bolster their security posture in cloud native environments. Cilium's sidecar-free service mesh uses mutual authentication to optimize security and performance, ensuring that services authenticate each other's identities before communication occurs.",
-    'Cilium features network policies that operate at layers 3, 4, and 7, providing more flexibility in managing ingress and egress traffic. By leveraging eBPF, Cilium can insert security rules based on service/pods/container identity rather than an IP address for identification as in the traditional systems. Cilium makes applying security policies in a dynamic container environment scalable by decoupling security from IP addressing, providing stronger security isolation, and adding the following functionality to the Kubernetes cluster.',
+    'Cilium features network policies that operate at layers 3, 4, and 7, providing more flexibility in managing ingress and egress traffic. By leveraging eBPF, Cilium can insert security rules based on service/pods/container identity rather than an IP address for identification as in the traditional systems. Cilium makes applying security policies in a dynamic container environment scalable by decoupling security from IP addressing, providing stronger security isolation, and adding security functionality directly to the Kubernetes cluster.',
   ],
   withImage: true,
   imageSrc: SecurityImage4,
