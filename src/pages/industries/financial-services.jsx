@@ -180,7 +180,7 @@ const financialResources = [
   {
     imageSrc: RobinhoodOfficeImage,
     imageAlt: 'robinhoo office building',
-    title: 'More Churn No Problem: Lessons Learned Running Cilium zin Production',
+    title: 'More Churn No Problem: Lessons Learned Running Cilium in Production',
     url: 'https://www.youtube.com/watch?v=qdr9XQ6h5zs',
     CTAtext: 'Watch The Talk',
     description:
