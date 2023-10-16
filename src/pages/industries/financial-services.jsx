@@ -93,7 +93,7 @@ const bulletSection2 = {
 const bulletSection1 = {
   heading: 'Enforce Zero-Trust Security with Ease. No Disparate Tools,  No Performance Hits',
   paragraphs: [
-    'The dynamic nature of corporate networks, requires a more flexible security approach. Adopting a Zero Trust-based approach to security architecture is essential for companies in the financial service industry to maintain cyber resilience. ',
+    'Adopting a Zero Trust-based approach to network security architecture is essential for companies in the financial service industry to maintain compliance with stringent regulations and keep customer data secure.',
     'Cilium provides a single unified tool that implements a range of features to enforce Zero Trust security principles. These features include identity-aware service to service security and observability, advanced network policies with native HTTP and DNS protocol support, transparent encryption using in-kernel IPsec or WireGuard, enforcement of TLS via Network Policy allowing operators to restrict the allowed TLS SNIs in their network, and providing a more secure environment, powerful security observability and real-time runtime enforcement platform with Tetragon, cluster-wide network policies can provide security guardrails while having more specific network policies to secure the application and operating system access control on different levels such as system calls, TCP/IP, file access or integrity, and namespaces.',
   ],
   withImage: true,
