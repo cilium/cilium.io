@@ -199,7 +199,7 @@ Please note that netdev and llvm-commits receive a lot of patches and the list b
   - [[PATCH v3 net-next 5/5] selftests/bpf: add a test for device cgroup controller](https://www.spinics.net/lists/netdev/msg465069.html)
 - Jakub Kicinski, [[PATCH net-next] tools: bpftool: move `p_err()` and `p_info()` from main.h to common.c](https://www.mail-archive.com/netdev@vger.kernel.org/msg198226.html)
 - Colin King, [[PATCH net-next] net: sched: `cls_bpf`: use bitwise & rather than logical && on `gen_flags`](https://patchwork.kernel.org/patch/10039257/)
-- Craig Gallek, [[PATCH net-next v2] bpf: fix verifier NULL pointer dereference](https://patchwork.ozlabs.org/patch/833404/)
+- Craig Gallek, [[PATCH] [net-next v2] bpf: fix verifier NULL pointer dereference](https://patchwork.ozlabs.org/patch/833404/)
 - Arnd Bergmann, [[PATCH 1/2] [net-next] bpf: fix link error without CONFIG_NET](https://patchwork.kernel.org/patch/10038423/)
   - [[PATCH 2/2] [net-next] bpf: fix out-of-bounds access warning in bpf_check](https://patchwork.kernel.org/patch/10038425/)
 - Eric Dumazet, [[PATCH net] bpf: fix lockdep splat](https://www.spinics.net/lists/netdev/msg467241.html)

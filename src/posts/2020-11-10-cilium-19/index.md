@@ -1,5 +1,5 @@
 ---
-path: ' '
+path: 'blog/2020/11/10/cilium-19'
 date: '2020-11-10T17:00:00.000Z'
 title: 'Cilium 1.9: Maglev, Deny Policies, VM Support, OpenShift, Hubble mTLS, Bandwidth Manager, eBPF Node-Local Redirect, Datapath Optimizations, and more'
 isPopular: true
@@ -370,7 +370,7 @@ This new version of the Hubble CLI contains many more features
 ([`jsonpb`](https://developers.google.com/protocol-buffers/docs/proto3#json)
 support, support for fish and powershell completion, addition of flows per
 second output in the status subcommand, Linux arm and arm64 binaries, and more).
-See its [changelog](https://github.com/cilium/hubble/blob/v0.7/CHANGELOG.md) for
+See its [changelog] for
 the full list of changes.
 
 <a name="lrp"></a>
@@ -662,3 +662,4 @@ Feel free to ping us on [Slack] if you have any questions.
 [end of life]: https://helm.sh/blog/helm-v2-deprecation-timeline/
 [local-redirect-policy guide]: https://docs.cilium.io/en/v1.9/gettingstarted/local-redirect-policy/
 [ebpf tproxy]: /blog/2020/06/22/cilium-18#ebpf-based-tproxy-replacement
+[changelog]: https://github.com/cilium/cilium/blob/v1.9/CHANGELOG.md

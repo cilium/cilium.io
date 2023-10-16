@@ -958,4 +958,4 @@ to upgrade your Cilium deployment. Feel free to ping us on [Slack].
 
 [slack]: https://cilium.herokuapp.com/
 [publication]: https://dl.acm.org/doi/10.1145/3281411.3281443
-[ip fragmentation documentation]: https://docs.cilium.io/en/v1.8/concepts/networking/fragmentatio
+[ip fragmentation documentation]: https://docs.cilium.io/en/v1.8/concepts/networking/fragmentation

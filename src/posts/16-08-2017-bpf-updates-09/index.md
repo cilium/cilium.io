@@ -229,7 +229,7 @@ A new batch of random projects from Github. Check them out and Remember to give 
 - Yonghong Song, [bpf: generate better lowering code for certain select/setcc instructions](http://llvm.org/viewvc/llvm-project?rev=308080&view=rev)
 - Yonghong Song, [bpf: fix a compilation bug due to unused variable for release build](http://llvm.org/viewvc/llvm-project?rev=308083&view=rev)
 - Kefeng Wang, [[PATCH] bpf: fix return in `bpf_skb_adjust_net`](https://www.spinics.net/lists/netdev/msg444333.html)
-- Colin King, [[PATCH bpf-next] bpf: add missing break in for the `TCP_BPF_SNDCWND_CLAMP` case](https://patchwork.kernel.org/patch/9825277/)
+- Colin King, [[PATCH] [bpf-next] bpf: add missing break in for the `TCP_BPF_SNDCWND_CLAMP` case](https://patchwork.kernel.org/patch/9825277/)
 - Lawrence Brakmo, [[PATCH net-next] bpf: fix return in `load_bpf_file`](https://www.spinics.net/lists/netdev/msg443487.html)
 - Yonghong Song, [[PATCH net v2] samples/bpf: fix a build issue](https://www.spinics.net/lists/netdev/msg441745.html)
 - Al Viro, [[RFC] `get_compat_bpf_fprog()`: don't copyin field-by-field](https://www.spinics.net/lists/netdev/msg443938.html)
