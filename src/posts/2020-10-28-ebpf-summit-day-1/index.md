@@ -39,7 +39,7 @@ there's sure to be something new for you.
 
 Full-length video of the eBPF Summit, day one:
 
-<YoutubeIframe embedId='1GSgyvn4N7E'/>
+<YoutubeIframe embedId='1GSgyvn4N7E?color=white'/>
 
 ## A Beginner’s Guide to eBPF Programming by Liz Rice (Aqua)
 

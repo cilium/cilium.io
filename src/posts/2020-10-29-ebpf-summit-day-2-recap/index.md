@@ -35,7 +35,7 @@ the eBPF mascot that we collected from the prior day also found a clear winner:
 
 Full length video of the eBPF Summit, day two:
 
-<YoutubeIframe embedId='jw8tEPP6jwQ'/>
+<YoutubeIframe embedId='jw8tEPP6jwQ?start=35&color=white'/>
 
 ## Safe Programs, the Foundation of BPF by Alexei Starovoitov (Facebook)
 

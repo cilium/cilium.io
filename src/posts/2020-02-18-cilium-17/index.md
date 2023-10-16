@@ -252,7 +252,7 @@ Check out our **[2 minute Cilium demo](http://www.youtube.com/watch?v=bIRwSIwNHC
 on running Kubernetes without kube-proxy and netfilter/iptables being compiled
 out of the kernel:
 
-<YoutubeIframe embedId='bIRwSIwNHC0'/>
+<YoutubeIframe embedId='bIRwSIwNHC0?start=113&modestbranding=1&autoplay=1'/>
 
 ## Direct Server Return
 

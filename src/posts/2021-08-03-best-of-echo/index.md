@@ -28,7 +28,7 @@ moments from what we might call Season 1.
 
 We started the series with a bang: Thomas Graf joined Liz for a demo-rich [introduction to Cilium](https://youtu.be/80OYrzS1dCA?t=768). For many viewers this was the first peak at the new [Cilium CLI added in 1.10](/blog/2021/05/20/cilium-110#cli). We saw how easy it is to use this to install Cilium and Hubble and get a quick view of status and network connectivity.
 
-<YoutubeIframe embedId='80OYrzS1dCA'/>
+<YoutubeIframe embedId='80OYrzS1dCA?t=768'/>
 
 ## Duffie debugs a routing issue
 
@@ -88,7 +88,7 @@ If you want to learn about some of the networking capabilities that Cilium
 provides, check out the great explanations that Joe Stringer provides in episode
 6 about features added in Cilium 1.10. For example, this episode covers what we mean by an [Egress IP Gateway](https://youtu.be/y5xcvr_fgxc?t=463), or [BGP Service Announcement](https://youtu.be/y5xcvr_fgxc?t=924).
 
-<YoutubeIframe embedId='y5xcvr_fgxc'/>
+<YoutubeIframe embedId='y5xcvr_fgxc?t=463'/>
 
 ## Coming up in Season 2
 
