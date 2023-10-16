@@ -25,6 +25,7 @@ const heroContent = {
   texts: [
     'Telcos grapple with the challenges of maintaining legacy technologies, complying with regulatory constraints, and the complexity of managing and delivering diversified service offerings. In an increasingly evolving landscape, advancements with technologies like 5G further amplify the demand for flexible and efficient network solutions.',
     "Cilium provides a comprehensive suite of capabilities that empower telcos and data center providers to transition seamlessly from traditional infrastructure to cloud native environments. As operators transition from IPv4 to IPv6, Cilium's NAT46/64 support provides a smooth pathway to ease this transition. Cilium's IPv6 support with BGP lets users advertise their IPv6 Pod CIDRs. Cilium's SRv6 L3VPN offers a scalable and flexible solution for interconnecting multiple sites while maintaining end-to-end network slicing and service isolation. Notably, Cilium supports SCTP, a protocol typically used by service providers and mobile operators. ",
+    'Simplify your Telco and data center networks, comply with regulatory requirements, and ease your cloud native journey with Cilium. ',
   ],
   imageSrc: BulldozerBee,
   imageAlt: 'ebeedex public speaking bee',

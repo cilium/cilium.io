@@ -81,12 +81,9 @@ const spaceXClassNames = {
   md: 'mx-4 md:mx-6 lg:mx-8',
 };
 
-const Logos = ({ title, items, spaceXSize, id }) => (
+const Logos = ({ items, spaceXSize, id }) => (
   <section className="pt-10 md:pt-20 lg:pt-28 xl:pt-32" id={id}>
     <Container size="md">
-      <Link className="text-center" to={`#${id}`}>
-        <Heading tag="h2">{title}</Heading>
-      </Link>
       <div className="mx-0 mt-4 flex flex-wrap justify-center md:mt-6 lg:mx-[-26px] lg:mt-8">
         {items.map((logo, index) => {
           const Logo = logos[logo];

@@ -9,8 +9,8 @@ import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
-import Container from 'components/shared/container/container';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
+import SecurityImage1 from 'images/pages/industries/security-1.webp';
 import SecurityImage2 from 'images/pages/industries/security-2.png';
 import SecurityImage3 from 'images/pages/industries/security-3.png';
 import SecurityImage4 from 'images/pages/industries/security-4.png';
@@ -24,7 +24,6 @@ import NetworkPolicyIcon from './images/network-policy.inline.svg';
 import ProcessIcon from './images/process.inline.svg';
 import RuntimeEnforcementIcon from './images/runtime-enforcement.inline.svg';
 import RuntimeIcon from './images/runtime.inline.svg';
-import tetragonImage1 from './images/tetragon-illustration.png';
 
 const heroContent = {
   heading: 'Security',
@@ -87,6 +86,17 @@ const bulletSection1 = {
   imageAlt: '',
 };
 
+const bulletSection3 = {
+  heading:
+    "Secure Modern Applications with Cilium's Advanced Network Policies. Scale Policies with Identities, Not IPs",
+  paragraphs: [
+    "Modern distributed applications rely on containers to facilitate agility in deploying new versions of their application and to scale out on demand. Typical firewalls secure workloads by filtering source IP addresses and ports, but in Kubernetes and other cloud native platforms, IP addresses are ephemeral. Traditional firewalls are not cloud-native aware and can't be programmed on the fly as applications scale out or new versions are deployed. Updating the Firewall constantly to adapt to the constant changes becomes impossible at scale. ",
+    'Cilium features network policies that operate at layers 3, 4, and 7, affording more flexibility in managing ingress and egress traffic. By leveraging eBPF, Cilium can insert security rules based on service/pods/container identity rather than an IP address for identification as in the traditional system. eBPF makes applying security policies in a dynamic container environment scalable by decoupling security from IP addressing, providing stronger security isolation, and adding the following functionality to the Kubernetes cluster.',
+  ],
+  withImage: true,
+  imageSrc: SecurityImage1,
+  imageAlt: '',
+};
 const bulletSection2 = {
   heading:
     'Ease Integration with Traditional Firewall Systems Using Cilium’s Static Egress Gateway',
@@ -103,7 +113,7 @@ const bulletSection4 = {
     "Bolster Security, Streamline Infrastructure, Reduce Complexity Without Sacrificing Performance Using Cilium's Mutual Authentication",
   paragraphs: [
     "Organizations are increasingly looking to bolster their security posture in a cloud native environment. Cilium's sidecar-free service mesh uses mutual authentication to optimize security and performance, ensuring that services authenticate each other's identities before communication occurs.",
-    'More than just authentication, Cilium extends the identity concept to processes, binaries, and execution contexts, allowing only specific binaries running in secure contexts to authenticate each other, thereby enhancing the overall security model.',
+    'Cilium features network policies that operate at layers 3, 4, and 7, providing more flexibility in managing ingress and egress traffic. By leveraging eBPF, Cilium can insert security rules based on service/pods/container identity rather than an IP address for identification as in the traditional systems. Cilium makes applying security policies in a dynamic container environment scalable by decoupling security from IP addressing, providing stronger security isolation, and adding the following functionality to the Kubernetes cluster.',
   ],
   withImage: true,
   imageSrc: SecurityImage4,
@@ -172,6 +182,7 @@ const SecurityPage = () => (
     <Hero {...heroContent} imageStyle="lg:h-[390px] lg:w-[350px]">
       <AdopterTestimonial {...ciliumTestimonial} className="mt-8" />
     </Hero>
+    <BulletSection {...bulletSection3} />
     <SecurityCard {...tetragonContent} className="py-12" />
     <TetragonCard contents={tetragonCardContents} />
     {/* <Container className="my-12 py-12">
