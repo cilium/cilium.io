@@ -152,7 +152,10 @@ const MediaEntertainmentPage = () => (
     <BulletSection {...bulletSection1} />
     <AdopterTestimonial {...seznamTestimonial} className="mt-8 pb-8" />
     <BulletSection {...bulletSection2} />
-    <AdoptersLogo className="grid grid-cols-3 lg:grid lg:grid-cols-4" items={companyLogos} />
+    <AdoptersLogo
+      className="mb-12 mt-8 grid grid-cols-3 lg:grid lg:grid-cols-4"
+      items={companyLogos}
+    />
     <ResourcesCard
       heading="See Real World Stories on Companies in the Media and Entertainment Industry"
       resources={mediaResources}

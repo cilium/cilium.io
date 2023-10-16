@@ -157,37 +157,50 @@ const spaceXClassNames = {
   md: 'mx-4 md:mx-6 lg:mx-8',
 };
 
-const AdoptersLogo = ({ items, spaceXSize = 'sm', id }) => (
-  <section className="pt-10 md:pt-20 lg:pt-28 xl:pt-32" id={id}>
-    <Container size="md">
-      <div className="mx-0 mt-4 flex flex-wrap justify-center md:mt-6 lg:mx-[-26px] lg:mt-8">
-        {items.map((logo, index) => {
-          const Logo = logos[logo];
-          return (
-            <Logo
-              className={classNames(
-                'mt-4 h-12 w-auto text-gray-1 md:mt-6 md:h-14 lg:mt-8 lg:h-16',
-                spaceXClassNames[spaceXSize]
-              )}
-              style={{ height: '40px' }}
-              key={index}
-            />
-          );
-        })}
-      </div>
-    </Container>
-  </section>
+// const AdoptersLogo = ({ items }) => (
+//   <section className="pt-10 md:pt-20 lg:pt-28 xl:pt-32">
+//     <Container>
+//       <div className="mx-0 mt-4 flex flex-wrap justify-center md:mt-6 lg:mx-[-26px] lg:mt-8">
+//         {items.map((logo, index) => {
+//           const Logo = logos[logo];
+//           return (
+//             <Logo
+//               className={classNames(
+//                 'mt-4 h-12 w-auto text-gray-1 md:mt-6 md:h-14 lg:mt-8 lg:h-16',
+//               )}
+//               key={index}
+//             />
+//           );
+//         })}
+//       </div>
+//     </Container>
+//   </section>
+// );
+
+const AdoptersLogo = ({ items, className }) => (
+  <Container>
+    <div className={classNames('mx-auto text-center lg:gap-y-[8px]', className)}>
+      {items.map((logo, index) => {
+        const Logo = logos[logo];
+        return (
+          <Logo
+            className="h-40px  max-w-[180px] text-gray-1"
+            style={{ height: '60px' }}
+            key={index}
+          />
+        );
+      })}
+    </div>
+  </Container>
 );
 
 AdoptersLogo.propTypes = {
-  id: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
-  spaceXSize: PropTypes.oneOf(Object.keys(spaceXClassNames)),
+  className: PropTypes.string,
 };
 
 AdoptersLogo.defaultProps = {
-  id: null,
-  spaceXSize: 'sm',
+  className: 'grid grid-cols-3 lg:grid lg:grid-cols-4',
 };
 
 export default AdoptersLogo;
