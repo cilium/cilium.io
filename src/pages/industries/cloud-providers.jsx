@@ -98,7 +98,7 @@ const cloudTalks = [
     title: 'From Managed Kubernetes to App Platform: Cilium Usage at DigitalOcean',
     videoSrc: 'https://www.youtube.com/embed/xez34h7EY3A',
     description:
-      'Digital Ocean migrated its Managed Kubernetes offering DKOS from to Cilium. Today Cilium powers over 0(10000) DOKS clusters.',
+      'Digital Ocean migrated its Managed Kubernetes offering DKOS from to Cilium. Today Cilium powers over 10,000 DOKS clusters.',
   },
   {
     title: 'Cilium, eBPF, and EKS Anywhere',

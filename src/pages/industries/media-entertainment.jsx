@@ -25,7 +25,7 @@ const heroContent = {
   heading: 'Media and Entertainment',
   texts: [
     'The Media and Entertainment industry is navigating a digital transformation era with scalability, security, and latency challenges—traditional tooling struggles to handle rising consumer demands for high-quality, on-demand media. Security vulnerabilities can threaten valuable content and customer data, while latency issues undermine user experience. Rising operational costs and increasingly stringent regulatory environments compound these challenges.',
-    "Media companies must deliver high-quality content to a vast and global audience. This requires infrastructure that can handle spikes in demand, especially during live events and popular content releases. Cilium offers intelligent load balancing, ensuring that the high volume of user requests typical for OTT platforms are distributed efficiently. This results in consistent content and smooth media experiences for end users. Load balancing across multi-cloud and hybrid cloud clusters is easier to configure and operate with Cilium, allowing the design of more resilient and fault-tolerant infrastructure.",
+    'Media companies must deliver high-quality content to a vast and global audience. This requires infrastructure that can handle spikes in demand, especially during live events and popular content releases. Cilium offers intelligent load balancing, ensuring that the high volume of user requests typical for OTT platforms are distributed efficiently. This results in consistent content and smooth media experiences for end users. Load balancing across multi-cloud and hybrid cloud clusters is easier to configure and operate with Cilium, allowing the design of more resilient and fault-tolerant infrastructure.',
     'Leverage the Cilium advantage to deliver seamless experiences to your users, reduce operational complexity for your teams, and secure your environments.',
   ],
   imageSrc: PublicSPeakingBee,
@@ -48,7 +48,7 @@ const bulletSection1 = {
   heading: "Global Content Delivery at Scale with Cilium's Load Balancing",
   withImage: true,
   paragraphs: [
-    'Companies in the media and entertainment industry with strict latency and failover requirements can benefit from Cilium's scalable load balancing with XDP, an eBPF-based high-performance data path. Production users found it doubled throughput while reducing CPU usage by 72x. Cilium's standalone Layer 4 load balancer comes at a fraction of the cost of traditional hardware load balancers while delivering higher performance.',
+    "Companies in the media and entertainment industry with strict latency and failover requirements can benefit from Cilium's scalable load balancing with XDP, an eBPF-based high-performance data path. Production users found it doubled throughput while reducing CPU usage by 72x. Cilium's standalone Layer 4 load balancer comes at a fraction of the cost of traditional hardware load balancers while delivering higher performance.",
   ],
   imageSrc: MediaImage2,
   imageAlt: 'cilium big tcp stats',
