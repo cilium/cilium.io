@@ -52,7 +52,7 @@ const ciliumTestimonial = {
   withPerson: true,
   logo: CiliumLogo,
   url: 'https://www.cncf.io/blog/2023/02/13/a-well-secured-project-cilium-security-audits-2022-published/',
-  CTAText: 'Read The Blog Post',
+  CTAtext: 'Read The Blog Post',
   name: 'Adam Korczynski & David Korczynski',
   role: 'Security Researchers, Ada Logics',
 };
