@@ -104,7 +104,7 @@ const cloudTalks = [
     title: 'Cilium, eBPF, and EKS Anywhere',
     videoSrc: 'https://www.youtube.com/embed/ez0YUyoxMcg',
     description:
-      'EKS-Anywhere comes with Cilium as its default CNI. Liz Rice and Duffie Cooley talk about the details of this',
+      'EKS-Anywhere comes with Cilium as its default CNI. Liz Rice and Duffie Cooley talk about the details',
   },
 ];
 
