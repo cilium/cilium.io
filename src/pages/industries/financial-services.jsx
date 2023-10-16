@@ -83,7 +83,7 @@ const postfinanceStats = {
 const bulletSection2 = {
   heading: 'Weave Compliance and Security Throughout the DevOps Process',
   paragraphs: [
-    'Cilium empowers you to free your security and operations teams from the need to review each policy change manually. Cilium is natively integrated into the Kubernetes ecosystem and plays nicely with other tools, making it easier to weave compliance and security governance into the DevOps process. For example, operators can write Kubernetes admission controllers to ensure that only compliant containers and workloads are deployed. This integration helps maintain and enforce security and compliance standards throughout your DevOps processes.',
+    'By moving from IP to identity, Cilium empowers you to free your security and operations teams from the need to manually review and audit every policy change. Cilium is natively integrated into the Kubernetes ecosystem aware of higher level identities, making it easier to weave compliance and security governance into the DevOps process. For example, operators can write network policies based on namespaces or labels rather hardcoding IPs. This integration helps maintain and enforce security and compliance standards throughout your DevOps processes.',
   ],
   withImage: true,
   imageSrc: FinanceImage2,
