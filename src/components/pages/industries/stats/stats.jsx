@@ -52,11 +52,11 @@ const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
                 <div
                   key={index}
                   style={gridChild}
-                  className="justify-stretch flex basis-1/3 items-center lg:h-[150px]  lg:border-l lg:border-[#E0E5EB]"
+                  className="flex basis-1/3 items-center justify-center lg:h-[150px]  lg:border-l lg:border-[#E0E5EB]"
                 >
-                  <div className="flex flex-col items-center text-center lg:gap-8">
-                    <h1 className="text-md font-bold lg:text-xl">{stat.heading}</h1>
-                    <h3 className="text-md p-1">{stat.subHeading}</h3>
+                  <div className="flex flex-col  items-center text-center lg:gap-8">
+                    <span className="text-md mx-auto font-bold lg:text-xl">{stat.heading}</span>
+                    <span className="text-md mx-auto  p-1 text-left">{stat.subHeading}</span>
                   </div>
                 </div>
               );

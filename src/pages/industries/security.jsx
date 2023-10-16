@@ -7,8 +7,10 @@ import { TetragonCard } from 'components/pages/industries/cards/tetragon';
 import FeaturedTalks from 'components/pages/industries/featured-talks';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
+import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import Container from 'components/shared/container/container';
+import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import SecurityImage2 from 'images/pages/industries/security-2.png';
 import SecurityImage3 from 'images/pages/industries/security-3.png';
 import SecurityImage4 from 'images/pages/industries/security-4.png';
@@ -29,7 +31,7 @@ const heroContent = {
   texts: [
     'For businesses at the forefront of cybersecurity and those for whom security is integral to their operations, the rise of cloud native applications presents immense opportunities and accompanying challenges. The dynamism of cloud native architectures, from microservices to containerization and distributed computing, demands a paradigm shift in securing these environments.',
     'Traditional security approaches struggle to adapt to the ephemeral and dynamic nature of cloud native applications. ',
-    'Cilium delivers robust cloud native security with features like zero trust security, transparent encryption, mutual authentication, security observability, and runtime enforcement. Leveraging eBPF, Cilium offers efficient observability across the entire application stack, integrates seamlessly with SIEM systems, and ensures compliance with standards like FIPS, FedRAMP, and SOC. Cilium aligns security practices with the realities of building, maintaining, and scaling cloud native applications.',
+    'Cilium delivers robust cloud native security with features like transparent encryption, mutual authentication, security observability, advanced network polices, egress gateway, and, runtime enforcement. Leveraging eBPF, Cilium offers efficient observability across the entire application stack, integrates seamlessly with SIEM systems, and ensures compliance with standards like FIPS, FedRAMP, and SOC. Cilium aligns security practices with the realities of building, maintaining, and scaling cloud native applications.',
   ],
   imageSrc: SecurityBee,
   imageAlt: 'ebeedex security bee',
@@ -41,6 +43,19 @@ const tetragonContent = {
     'Tetragon is a flexible Kubernetes-aware security observability and runtime enforcement tool that applies policy and filtering directly with eBPF, allowing for reduced observation overhead, tracking of any process, and real-time enforcement of policies.',
   imageSrc: TetragonImage,
   imageAlt: 'tetragon image logo',
+};
+
+const ciliumTestimonial = {
+  description:
+    'The Cilium project has undergone security and fuzzing audits by a reputable third-party company, Ada Logics, and the CNCF has commissioned the resulting reports.',
+  quotedText:
+    'The overall conclusion is that Cilium is a well-secured project. The audit found no critical vulnerabilities and found a lot of positives about the security of Cilium. This included both the code displaying positive security awareness as well as the maintainers having thorough understanding about the security posture of Cilium.',
+  withPerson: true,
+  logo: CiliumLogo,
+  url: 'https://www.cncf.io/blog/2023/02/13/a-well-secured-project-cilium-security-audits-2022-published/',
+  CTAText: 'Read The Blog Post',
+  name: 'Adam Korczynski & David Korczynski',
+  role: 'Security Researchers, Ada Logics',
 };
 
 const tetragonCardContents = [
@@ -154,12 +169,14 @@ const securityUsecases = [
 
 const SecurityPage = () => (
   <MainLayout>
-    <Hero {...heroContent} imageStyle="lg:h-[390px] lg:w-[350px]" />
+    <Hero {...heroContent} imageStyle="lg:h-[390px] lg:w-[350px]">
+      <AdopterTestimonial {...ciliumTestimonial} className="mt-8" />
+    </Hero>
     <SecurityCard {...tetragonContent} className="py-12" />
     <TetragonCard contents={tetragonCardContents} />
-    <Container className="my-12 py-12">
+    {/* <Container className="my-12 py-12">
       <img src={tetragonImage1} alt="tetragon architecture and features illustration" />
-    </Container>
+    </Container> */}
     <BulletSection {...bulletSection4} />
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />

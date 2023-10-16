@@ -9,7 +9,7 @@ import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
-import MediaImage1 from 'images/pages/industries/media-1.webp';
+import MediaImage1 from 'images/pages/industries/media-1.png';
 import MediaImage2 from 'images/pages/industries/media-2.png';
 import PublicSPeakingBee from 'images/pages/industries/public-speaking-bee.png';
 import MainLayout from 'layouts/main';
@@ -24,8 +24,9 @@ import YahooOfficeImage from './images/yahoooffice.png';
 const heroContent = {
   heading: 'Media and Entertainment',
   texts: [
-    'The Media and Entertainment industry is navigating a digital transformation era with scalability, security, and latency challenges—traditional tooling struggles to handle rising consumer demands for high-quality, on-demand media. Security vulnerabilities can threaten valuable content and customer data, while latency issues undermine user experience. These challenges are compounded by rising operational costs and increasingly stringent regulatory environments.',
-    'Cilium is designed to provide high-performance, secure, and scalable networking and observability. It offers a wide range of features, helping companies in the media and entertainment industry deliver seamless experiences, reduce operational complexity, and secure their environments. ',
+    'The Media and Entertainment industry is navigating a digital transformation era with scalability, security, and latency challenges—traditional tooling struggles to handle rising consumer demands for high-quality, on-demand media. Security vulnerabilities can threaten valuable content and customer data, while latency issues undermine user experience. Rising operational costs and increasingly stringent regulatory environments compound these challenges.',
+    "Companies in the media and entertainment industry with strict latency and failover requirements can benefit from Cilium's scalable load balancing and multi-cluster feature. Cilium features acceleration with XDP, an eBPF-based high-performance data path that provides a 5x reduction in CPU usage, resulting in reduced CAPEX. Companies using Non-k8s environments can still benefit from Cilium's standalone L4 load balancer with high throughput gains, all at a fraction of the cost of traditional hardware load balancers.",
+    'Leverage the Cilium advantage to deliver seamless experiences to your users, reduce operational complexity for your teams, and secure your environments.',
   ],
   imageSrc: PublicSPeakingBee,
   imageAlt: 'ebeedex public speaking bee',
@@ -44,22 +45,20 @@ const newyorktimesTestimonial = {
 };
 
 const bulletSection1 = {
-  heading:
-    'Enhance Content Delivery and User Experience with Cilium’s Transparent Acceleration and  Load Balancing ',
+  heading: "Global Content Delivery at Scale with Cilium's Load Balancing",
   withImage: true,
   paragraphs: [
-    'Streaming platforms and content delivery services need to scale rapidly to meet the ever-growing consumer demands for high-quality and on-demand media. Cilium offers intelligent load balancing, ensuring that the high volume of user requests typical for OTT platforms are distributed efficiently. This results in consistent content and smooth streaming experiences for end users.',
-    'By leveraging technologies like XDP (eXpress Data Path), bandwidth manager, and BIG TCP, Cilium optimizes the datapath, significantly reducing latency. For an industry that thrives on seamless content delivery, this is paramount.',
+    'Media companies must deliver high-quality content to a vast and global audience. This requires infrastructure that can handle spikes in demand, especially during live events and popular content releases. Cilium offers intelligent load balancing, ensuring that the high volume of user requests typical for OTT platforms are distributed efficiently. This results in consistent content and smooth media experiences for end users.  Load balancing across multi-cloud and hybrid cloud clusters is easier to configure and operate with Cilium, allowing the design of more resilient and fault-tolerant infrastructure.',
   ],
-  imageSrc: MediaImage1,
+  imageSrc: MediaImage2,
   imageAlt: 'cilium big tcp stats',
 };
 
 const bulletSection2 = {
   heading: 'Robust Security, Scalability, and Flexibility at a Reduced Operational Overhead',
   paragraphs: [
-    'Safeguarding content and user data is vital in media and entertainment. Cilium enables efficient workload isolation, protecting the entire ecosystem from potential breaches. As platforms grow, Cilium adapts to shifting network needs. ',
-    "Cilium integrates with both traditional and cloud-native infrastructures. Companies like Cosmonic have extended Cilium beyond Kubernetes to platforms like Nomad. In scenarios where it is impossible to use Cilium as the Default CNI, Cilium's CNI chaining mode lets you utilize Cilium's features like Hubble for observability and Tetragon for security, ensuring organizations can benefit from Cilium regardless of their infrastructure choices.",
+    'Securing content and data is vital in the media and entertainment industry. Cilium enforces a zero-trust security model  where no entity is inherently trusted, and access to resources is restricted until explicitly authorized. This approach enhances security and reduces the risk of data breaches.',
+    "Many companies in the media and entertainment industries maintain legacy infrastructure for varying reasons. Cilium is flexible enough to integrate with both traditional and cloud native infrastructures. Companies like Cosmonic have extended Cilium beyond Kubernetes to platforms like Nomad. In scenarios where it is impossible to use Cilium as the Default CNI, Cilium's CNI chaining mode lets you utilize Cilium's features like Hubble for observability and Tetragon for security. Companies running workloads on non-k8s environments can leverage Cilium's Layer 4 standalone load balancer for efficient and scalable load balancing. This flexibility ensures your organization can benefit from Cilium regardless of your infrastructure choices.",
   ],
   withImage: true,
   imageSrc: MediaImage2,
@@ -148,12 +147,12 @@ const mediaUsecases = [
 
 const MediaEntertainmentPage = () => (
   <MainLayout>
-    <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
-      <AdopterTestimonial {...newyorktimesTestimonial} />
+    <Hero {...heroContent} imageStyle="lg:h-[400px] lg:w-[400px] pt-24 mb-24">
+      <AdopterTestimonial className="mt-6" {...newyorktimesTestimonial} />
     </Hero>
     <BulletSection {...bulletSection1} />
-    <BulletSection {...bulletSection2} />
     <AdopterTestimonial {...seznamTestimonial} className="mt-8 pb-8" />
+    <BulletSection {...bulletSection2} />
     <AdoptersLogo className="my-16 grid grid-cols-3 lg:grid lg:grid-cols-4" items={companyLogos} />
     <ResourcesCard
       heading="See Real World Stories on Companies in the Media and Entertainment Industry"
