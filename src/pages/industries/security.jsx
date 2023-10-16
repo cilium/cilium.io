@@ -83,7 +83,7 @@ const bulletSection1 = {
   ],
   withImage: true,
   imageSrc: SecurityImage2,
-  imageAlt: '',
+  imageAlt: 'tetragon runtime enforcement illustration',
 };
 
 const bulletSection3 = {
@@ -91,11 +91,11 @@ const bulletSection3 = {
     "Secure Modern Applications with Cilium's Advanced Network Policies. Scale Policies with Identities, Not IPs",
   paragraphs: [
     "Modern distributed applications rely on containers to facilitate agility in deploying new versions of their application and to scale out on demand. Typical firewalls secure workloads by filtering source IP addresses and ports, but in Kubernetes and other cloud native platforms, IP addresses are ephemeral. Traditional firewalls are not cloud-native aware and can't be programmed on the fly as applications scale out or new versions are deployed. Updating the Firewall constantly to adapt to the constant changes becomes impossible at scale. ",
-    'Cilium features network policies that operate at layers 3, 4, and 7, affording more flexibility in managing ingress and egress traffic. By leveraging eBPF, Cilium can insert security rules based on service/pods/container identity rather than an IP address for identification as in the traditional system. eBPF makes applying security policies in a dynamic container environment scalable by decoupling security from IP addressing, providing stronger security isolation, and adding the following functionality to the Kubernetes cluster.',
+    'Cilium features network policies that operate at layers 3, 4, and 7, providing more flexibility in managing ingress and egress traffic. By leveraging eBPF, Cilium can insert security rules based on service/pods/container identity rather than an IP address for identification as in the traditional systems. Cilium makes applying security policies in a dynamic container environment scalable by decoupling security from IP addressing, providing stronger security isolation, and adding the following functionality to the Kubernetes cluster.',
   ],
   withImage: true,
   imageSrc: SecurityImage1,
-  imageAlt: '',
+  imageAlt: 'l3 - l7 policy illustration',
 };
 const bulletSection2 = {
   heading:
@@ -184,10 +184,7 @@ const SecurityPage = () => (
     </Hero>
     <BulletSection {...bulletSection3} />
     <SecurityCard {...tetragonContent} className="py-12" />
-    <TetragonCard contents={tetragonCardContents} />
-    {/* <Container className="my-12 py-12">
-      <img src={tetragonImage1} alt="tetragon architecture and features illustration" />
-    </Container> */}
+    <TetragonCard contents={tetragonCardContents} className="my-8" />
     <BulletSection {...bulletSection4} />
     <BulletSection {...bulletSection1} />
     <BulletSection {...bulletSection2} />
