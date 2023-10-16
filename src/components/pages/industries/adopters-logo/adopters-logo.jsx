@@ -185,7 +185,7 @@ const AdoptersLogo = ({ items, className }) => (
         return (
           <Logo
             className="h-40px  max-w-[180px] text-gray-1"
-            style={{ height: '60px' }}
+            style={{ height: '40px' }}
             key={index}
           />
         );
