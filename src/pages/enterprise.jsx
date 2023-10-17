@@ -14,7 +14,7 @@ const EnterprisePage = () => {
   const hero = {
     title: 'Cilium Enterprise Distributions & Training',
     description:
-      '<p>Cilium was originally created by Isovalent and contributed to the CNCF as an incubation-level project in 2021</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium.</p>',
+      '<p>Cilium was originally created by Isovalent and is a CNCF Graduation level project</p><p>The listed partners offer enterprise distributions, training, and commercial support for Cilium</p>',
     illustration,
   };
 
