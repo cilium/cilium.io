@@ -8,7 +8,7 @@ import CNCFLogo from 'icons/logo-cncf.inline.svg';
 
 import Container from '../container';
 
-const title = 'We are proud to be a CNCF incubation level project';
+const title = 'We are proud to be a CNCF Graduation level project';
 
 const CNCFBanner = ({ className }) => (
   <section className={classNames('mt-10 md:mt-20 lg:mt-32', className)}>
