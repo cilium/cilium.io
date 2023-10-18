@@ -13,7 +13,7 @@ import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
-import FinanceImage1 from 'images/pages/industries/finance-1.png';
+import FinanceImage1 from 'images/pages/industries/finance-1.webp';
 import FinanceImage2 from 'images/pages/industries/finance-2.png';
 import FinanceImage3 from 'images/pages/industries/finance-3.png';
 import ExecelBee from 'images/pages/usecase/excel-bee.png';

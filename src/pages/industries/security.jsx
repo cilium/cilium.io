@@ -10,11 +10,11 @@ import IndustryUseCases from 'components/pages/industries/industry-usecase/indus
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
+import GuardianBee from 'images/pages/industries/guardian-bee.png';
 import SecurityImage1 from 'images/pages/industries/security-1.webp';
 import SecurityImage2 from 'images/pages/industries/security-2.png';
 import SecurityImage3 from 'images/pages/industries/security-3.png';
 import SecurityImage4 from 'images/pages/industries/security-4.png';
-import SecurityBee from 'images/pages/industries/security-bee.png';
 import TetragonImage from 'images/pages/industries/tetragon.png';
 import MainLayout from 'layouts/main/main';
 
@@ -32,7 +32,7 @@ const heroContent = {
     'Traditional security approaches struggle to adapt to the ephemeral and dynamic nature of cloud native applications. ',
     'Cilium delivers robust cloud native security with features like transparent encryption, mutual authentication, security observability, advanced network polices, egress gateway, and runtime enforcement. Leveraging eBPF, Cilium offers efficient observability across the entire application stack, integrates seamlessly with SIEM systems, and ensures compliance with standards like FIPS, FedRAMP, and SOC. Cilium aligns security practices with the realities of building, maintaining, and scaling cloud native applications.',
   ],
-  imageSrc: SecurityBee,
+  imageSrc: GuardianBee,
   imageAlt: 'ebeedex security bee',
 };
 
@@ -179,14 +179,14 @@ const securityUsecases = [
 
 const SecurityPage = () => (
   <MainLayout>
-    <Hero {...heroContent} imageStyle="lg:h-[390px] lg:w-[350px]">
+    <Hero {...heroContent} imageStyle="scale-75">
       <AdopterTestimonial {...ciliumTestimonial} className="mt-8" />
     </Hero>
     <BulletSection {...bulletSection3} />
     <SecurityCard {...tetragonContent} className="py-12" />
     <TetragonCard contents={tetragonCardContents} className="my-8" />
     <BulletSection {...bulletSection4} />
-    <BulletSection {...bulletSection1} />
+    <BulletSection {...bulletSection1} imageStyle="lg:scale-90" />
     <BulletSection {...bulletSection2} />
     <FeaturedTalks heading="Featured talks" talks={securityTalks} />
     <AdoptersLogo items={securityLogos} className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4" />

@@ -66,28 +66,6 @@ const clickhouseStats = {
   CTAtext: 'READ THE CASE STUDY',
 };
 
-const ascendStats = {
-  description:
-    'Ascend turned to Cilium as their CNI which simplified integrating into customer networks, eliminated their IP churn and density issues.',
-  logo: AscendLogo,
-  stats: [
-    {
-      heading: 'REDUCED IPS 256X',
-      subHeading: 'Running overlay giving pods non-VPC-routable IPs',
-    },
-    {
-      heading: 'COMPLETE DATA ENCRYPTION',
-      subHeading: 'At rest and in transit',
-    },
-    {
-      heading: 'FASTER DEBUGGING',
-      subHeading: 'From 4-16 hours down to 20 seconds',
-    },
-  ],
-  url: 'https://www.cncf.io/case-studies/ascend/',
-  CTAtext: 'READ THE CASE STUDY',
-};
-
 const ascendTestimonial = {
   description:
     'Ascend turned to Cilium as their CNI which simplified integrating into customer networks, eliminated their IP churn and density issues.',
@@ -147,6 +125,13 @@ const softwareTalks = [
     description:
       'Cosmonic wrote an application called Netreap that ties together data from Nomad and Consul to replace the Cilium Kubernetes operator to maintain endpoints and labels',
     videoSrc: 'https://www.youtube.com/embed/DSkf9Y06-lE',
+  },
+
+  {
+    description:
+      'Adobe leverages Cilium in many way. One way is to achieve network isolation of tenants on multi-tenant clusters',
+    videoSrc: 'https://www.youtube.com/embed/7UQ2CU6UEGY',
+    title: 'eBPF at Adobe - Brandon Cook, Adobe',
   },
 ];
 

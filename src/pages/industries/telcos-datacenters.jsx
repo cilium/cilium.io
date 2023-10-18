@@ -10,7 +10,7 @@ import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import BellLogo from 'icons/logo-bell.inline.svg';
 import BulldozerBee from 'images/pages/industries/bulldozer-bee.png';
-import TelcoImage1 from 'images/pages/industries/telco-1.webp';
+import TelcoImage1 from 'images/pages/industries/telco-1.png';
 import TelcoImage2 from 'images/pages/industries/telco-2.png';
 import TelcoImage3 from 'images/pages/industries/telco-3.webp';
 import MainLayout from 'layouts/main';
