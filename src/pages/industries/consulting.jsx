@@ -6,6 +6,7 @@ import Hero from 'components/pages/industries/hero';
 import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
+import SEO from 'components/shared/seo';
 import EficodeLogo from 'icons/logo-efficode.inline.svg';
 import PalarkLogo from 'icons/logo-palark.inline.svg';
 import ConsultingImage1 from 'images/pages/industries/consulting-1.png';
@@ -144,3 +145,14 @@ const ConsultingPage = () => (
 );
 
 export default ConsultingPage;
+
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.heading,
+    description:
+      'Discover how consulting companies leverage Cilium to deliver solutions for a wide range of clients',
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

@@ -9,6 +9,7 @@ import ResourcesCard from 'components/pages/industries/resources';
 import Stats from 'components/pages/industries/stats';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
+import SEO from 'components/shared/seo';
 import DbSchenkerLogo from 'icons/logo-dbschenker.inline.svg';
 import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
@@ -222,3 +223,14 @@ const MediaEntertainmentPage = () => (
 );
 
 export default MediaEntertainmentPage;
+
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.heading,
+    description:
+      'Discover how global e-commerce brands leverage Cilium to build globally distributed services and gain the edge in speed, security and observability',
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

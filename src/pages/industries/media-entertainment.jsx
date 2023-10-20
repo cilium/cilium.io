@@ -7,6 +7,7 @@ import IndustryUseCases from 'components/pages/industries/industry-usecase/indus
 import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
+import SEO from 'components/shared/seo';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import MediaImage1 from 'images/pages/industries/media-1.png';
@@ -146,8 +147,8 @@ const mediaUsecases = [
 
 const MediaEntertainmentPage = () => (
   <MainLayout>
-    <Hero {...heroContent} imageStyle="lg:h-[400px] lg:w-[400px] pt-24 mb-24">
-      <AdopterTestimonial className="mt-6" {...newyorktimesTestimonial} />
+    <Hero {...heroContent} imageStyle="lg:h-[400px] lg:my-20">
+      <AdopterTestimonial className="mt-8" {...newyorktimesTestimonial} />
     </Hero>
     <BulletSection {...bulletSection1} />
     <AdopterTestimonial {...seznamTestimonial} className="mt-8 pb-8" />
@@ -170,7 +171,13 @@ const MediaEntertainmentPage = () => (
 
 export default MediaEntertainmentPage;
 
-// export const Head = ({ location: { pathname } }) => {
-//   const pageMetadata = { ...seo, slug: pathname };
-//   return <SEO data={pageMetadata} />;
-// };
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.heading,
+    description:
+      'Discover how companies in the media and entertainment industry leverage cilium for robust security, scalability, and flexibility at a reduced operational overhead',
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

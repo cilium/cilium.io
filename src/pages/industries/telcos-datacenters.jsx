@@ -8,6 +8,7 @@ import IndustryUseCases from 'components/pages/industries/industry-usecase/indus
 import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
+import SEO from 'components/shared/seo';
 import BellLogo from 'icons/logo-bell.inline.svg';
 import BulldozerBee from 'images/pages/industries/bulldozer-bee.png';
 import TelcoImage1 from 'images/pages/industries/telco-1.png';
@@ -169,7 +170,13 @@ const MediaEntertainmentPage = () => (
 
 export default MediaEntertainmentPage;
 
-// export const Head = ({ location: { pathname } }) => {
-//   const pageMetadata = { ...seo, slug: pathname };
-//   return <SEO data={pageMetadata} />;
-// };
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.heading,
+    description:
+      'Simplify your Telco and data center networks, comply with regulatory requirements, and ease your cloud native journey with Cilium.',
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};
