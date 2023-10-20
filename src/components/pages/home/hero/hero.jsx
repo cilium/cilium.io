@@ -34,7 +34,7 @@ const Hero = () => (
       </div>
       <div className="relative col-span-full flex justify-center lg:col-span-6 2xl:col-span-5 2xl:-ml-8">
         <img
-          className="top-0 z-10 h-full w-full lg:absolute lg:-right-10 lg:h-auto lg:w-[580px] lg:max-w-max xl:-top-28 xl:right-auto xl:-left-24 xl:w-max"
+          className="top-0 z-10 h-auto w-1/4 lg:absolute lg:-right-10 lg:h-full lg:w-full lg:max-w-max xl:-top-28 xl:right-auto xl:-left-24 xl:w-max"
           src={illustration}
           alt={title}
           loading="eager"

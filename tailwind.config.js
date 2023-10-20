@@ -49,9 +49,13 @@ module.exports = {
           3: '#00877C',
           4: '#D6EBFF',
           5: '#FFFAEB',
+          6: '#97C639',
+
           blue: '#0A61C2',
           green: '#007A70',
           red: '#C43131',
+          purple: '#795AA5',
+          orange: '#F17423',
           'light-green': '#EFFBFA',
         },
       },
