@@ -9,6 +9,7 @@ import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
+import SEO from 'components/shared/seo';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import GuardianBee from 'images/pages/industries/guardian-bee.png';
 import SecurityImage1 from 'images/pages/industries/security-1.webp';
@@ -196,3 +197,14 @@ const SecurityPage = () => (
 );
 
 export default SecurityPage;
+
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.heading,
+    description:
+      'Discover how companies in the security industry and companies whom security is integral to their operations leverage cilium.',
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

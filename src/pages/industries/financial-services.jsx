@@ -224,4 +224,13 @@ const FinancialServicesPage = () => (
 
 export default FinancialServicesPage;
 
-export const Head = ({ location: { pathname } }) => <SEO slug={pathname} />;
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.heading,
+    description:
+      'Discover how companies in the financial service industry leverage cilium for zero-trust security and continuos compliance',
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};

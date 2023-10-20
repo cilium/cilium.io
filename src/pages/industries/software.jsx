@@ -8,6 +8,7 @@ import ResourcesCard from 'components/pages/industries/resources';
 import Stats from 'components/pages/industries/stats';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
+import SEO from 'components/shared/seo';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import DatadogLogo from 'icons/logo-datadog.inline.svg';
@@ -145,15 +146,6 @@ const softwareResources = [
     imageAlt: 'ascend office interior',
     CTAtext: 'Learn More',
   },
-  // {
-  //     title: "Cilium User Story: Securing 100,000+ RPS in a Multi-Tenant Environment",
-  //     description: "A company in the publishing industry leverages to create secure and scalable multi tenant kubernetes environments",
-  //     url: "https://cilium.io/blog/2022/10/13/publishing-user-story/",
-  //     imageSrc: "",
-  //     imageAlt: "",
-  //     CTAtext: ""
-
-  // },
   {
     title: 'How ClickHouse is Using Cilium to Implement Efficient Network Policies',
     description:
@@ -199,3 +191,14 @@ const SoftwarePage = () => (
 );
 
 export default SoftwarePage;
+
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.heading,
+    description:
+      'Discover how SaaS, software, and DBaaS companies leverage cilium to meet the challenges of modern software deployment head-on.',
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};
