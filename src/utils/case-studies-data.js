@@ -625,6 +625,16 @@ export default {
       },
     ],
   },
+  parseable: {
+    iconName: 'parseable',
+    text: '<b>Parseable</b> uses Tertragon for collecting and ingesting eBPF logs for Kubernetes clusters',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://www.parseable.io/blog/ebpf-log-analytics',
+      },
+    ],
+  },
   twilio: {
     iconName: 'twilio',
     text: '<b>Twilio Segment</b>  is using Cilium across their Kubernetes based compute platform',
@@ -728,10 +738,6 @@ export default {
   northflank: {
     iconName: 'northflank',
     text: '<b>Northflank</b> uses Cilium as its CNI plugin across GCP, Azure, AWS and bare metal',
-  },
-  parseable: {
-    iconName: 'parseable',
-    text: '<b>Parseable</b> uses Tertragon for collecting and ingesting eBPF logs for Kubernetes clusters',
   },
   plaid: {
     iconName: 'plaid',

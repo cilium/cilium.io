@@ -127,6 +127,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    parseable,
     dbraincloud,
     dbschenker,
     testifysec,
@@ -185,7 +186,6 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
-    parseable,
     plusserver,
     twilio,
     unitedcloud,
