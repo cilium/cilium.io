@@ -79,6 +79,7 @@ import NorthflankLogo from './images/northflank.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
+import ParseableLogo from './images/parseable.inline.svg';
 import PlaidLogo from './images/plaid.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
 import PlusserverLogo from './images/plusserver.inline.svg';
@@ -115,6 +116,7 @@ import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  parseable: ParseableLogo,
   plusserver: PlusserverLogo,
   dbraincloud: DbraincloudLogo,
   dbschenker: DbschenkerLogo,

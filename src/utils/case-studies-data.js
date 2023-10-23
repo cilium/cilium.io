@@ -729,6 +729,10 @@ export default {
     iconName: 'northflank',
     text: '<b>Northflank</b> uses Cilium as its CNI plugin across GCP, Azure, AWS and bare metal',
   },
+  parseable: {
+    iconName: 'parseable',
+    text: '<b>Parseable</b> uses Tertragon for collecting and ingesting eBPF logs for Kubernetes clusters',
+  },
   plaid: {
     iconName: 'plaid',
     text: '<b>Plaid</b> uses Cilium as the CNI for its serverless database platform',

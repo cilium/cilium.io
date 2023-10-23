@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  parseable,
   plusserver,
   dbraincloud,
   dbschenker,
@@ -184,6 +185,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    parseable,
     plusserver,
     twilio,
     unitedcloud,
