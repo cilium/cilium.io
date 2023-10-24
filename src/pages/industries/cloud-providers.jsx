@@ -6,6 +6,7 @@ import FeaturedTalks from 'components/pages/industries/featured-talks';
 import Hero from 'components/pages/industries/hero';
 import ResourcesCard from 'components/pages/industries/resources';
 import AdopterTestimonial from 'components/pages/industries/testimonial';
+import SEO from 'components/shared/seo';
 import AzureLogo from 'icons/logo-azure.inline.svg';
 import GoogleCloudLogo from 'icons/logo-googlecloud.inline.svg';
 import HetznerLogo from 'icons/logo-hetzner.inline.svg';
@@ -166,7 +167,7 @@ const MediaEntertainmentPage = () => (
     <AdopterTestimonial {...googleTestimonial} className="my-8 pb-8" />
     <AdoptersLogo
       items={cloudAdoptersLogo}
-      className="grid grid-cols-3 pb-8 lg:grid lg:grid-cols-4"
+      className="mb-16 grid grid-cols-3  lg:grid lg:grid-cols-4"
     />
     <FeaturedTalks talks={cloudTalks} />
     <ResourcesCard
@@ -179,7 +180,12 @@ const MediaEntertainmentPage = () => (
 
 export default MediaEntertainmentPage;
 
-// export const Head = ({ location: { pathname } }) => {
-//   const pageMetadata = { ...seo, slug: pathname };
-//   return <SEO data={pageMetadata} />;
-// };
+// eslint-disable-next-line react/prop-types
+export const Head = ({ location: { pathname } }) => {
+  const pageMetadata = {
+    title: heroContent.heading,
+    description: 'Discover Cloud Providers use Cilium',
+    slug: pathname,
+  };
+  return <SEO data={pageMetadata} />;
+};
