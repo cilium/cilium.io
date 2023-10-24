@@ -21,7 +21,7 @@ _Written by: Shedrack Akintayo, Isovalent_
 
 ## How did you first get into technology?
 
-I got into tech when I was in high school. I played with PCBs (printed circuit boards) a lot. It was fun exploring transistors and diodes because there is something uniquely satisfying about turning lights on in a controlled manner. During a summer vacation, I enrolled in an aero modelling workshop. The challenge was to craft a model plane from the ground up and the thrill of that first flight is still fresh in my memory.
+I got into tech when I was in high school. I played with PCBs ([printed circuit boards](https://en.wikipedia.org/wiki/Printed_circuit_board)) a lot. It was fun exploring transistors and diodes because there is something uniquely satisfying about turning lights on in a controlled manner. During a summer vacation, I enrolled in an aero modelling workshop. The challenge was to craft a model plane from the ground up and the thrill of that first flight is still fresh in my memory.
 
 On the other hand, my journey into programming began with the C language. Navigating through concepts like pointers was challenging but also exciting and it provided me with a solid foundation in programming. This knowledge also served me well when I transitioned to Go, which became my primary programming language while contributing to Cilium.
 
