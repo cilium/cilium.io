@@ -55,7 +55,7 @@ const postfinanceStats = {
   description:
     "Post Finance one of Switzerland's leading financial institutions uses Cilium for Cloud Native Networking",
   CTAtext: 'read the case study',
-  url: 'https://www.youtube.com/watch?v=fjhKw49YcY4',
+  url: 'https://cilium.isovalent.com/hubfs/Case%20Studies/Case%20Study%20_%20PostFinance.pdf',
   stats: [
     {
       heading: '17',
