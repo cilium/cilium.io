@@ -637,7 +637,7 @@ export default {
   },
   deezer: {
     iconName: 'deezer',
-    text: '<b>Deezer</b> uses Cilium as their CNI for all on-prem Kubernetes clusters for its performance and security.',
+    text: '<b>Deezer</b> uses Cilium as their CNI for all on-prem Kubernetes clusters for its performance and security',
     links: [
       {
         linkText: 'Read Blog',
