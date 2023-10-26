@@ -635,6 +635,17 @@ export default {
       },
     ],
   },
+  deezer: {
+    iconName: 'deezer',
+    text: '<b>Deezer</b> uses Cilium as CNI for all their on-prem clusters for its performance and security.',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://deezer.io/migrating-cilium-from-legacy-iptables-routing-to-native-ebpf-routing-in-production-84a035af1cd6',
+      },
+    ],
+  },
   twilio: {
     iconName: 'twilio',
     text: '<b>Twilio Segment</b>  is using Cilium across their Kubernetes based compute platform',

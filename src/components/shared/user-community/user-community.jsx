@@ -45,6 +45,7 @@ import CogniteLogo from './images/cognite.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
 import DbschenkerLogo from './images/dbschenker.inline.svg';
+import DeezerLogo from './images/deezer.inline.svg';
 import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
@@ -116,6 +117,7 @@ import UtmostLogo from './images/utmost.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  deezer: DeezerLogo,
   parseable: ParseableLogo,
   plusserver: PlusserverLogo,
   dbraincloud: DbraincloudLogo,
