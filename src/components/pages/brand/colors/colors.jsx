@@ -26,6 +26,7 @@ const Colors = ({ title, description, linkUrl = null, colors }) => (
             to={linkUrl}
             target="_blank"
             theme="primary-1"
+            asDefaultLink
           >
             Download Brand Guide
           </Button>

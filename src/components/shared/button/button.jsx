@@ -30,6 +30,7 @@ const Button = ({
   children,
   disabled,
   loading,
+  asDefaultLink,
   ...otherProps
 }) => {
   const className = classNames(
@@ -40,6 +41,14 @@ const Button = ({
     additionalClassName
   );
   const Tag = to ? Link : 'button';
+
+  if (asDefaultLink) {
+    return (
+      <a className={className} href={to} {...otherProps}>
+        {children}
+      </a>
+    );
+  }
 
   return (
     <Tag className={className} to={to} disabled={disabled} {...otherProps}>
@@ -56,6 +65,7 @@ Button.propTypes = {
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   loading: PropTypes.bool,
+  asDefaultLink: PropTypes.bool,
 };
 
 Button.defaultProps = {
@@ -65,6 +75,7 @@ Button.defaultProps = {
   theme: 'primary-2',
   disabled: false,
   loading: false,
+  asDefaultLink: false,
 };
 
 export default Button;

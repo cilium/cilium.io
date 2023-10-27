@@ -40,8 +40,8 @@ const Logos = ({ title, description, downloadLink, brand = 'cilium', titleSize =
           className="w-full !rounded-md border-2 !px-7 sm:w-auto lg:h-[50px] lg:self-end"
           theme="outline-gray"
           to={downloadLink}
-          target="_blank"
           download
+          asDefaultLink
         >
           Download Logo ZIP
         </Button>
