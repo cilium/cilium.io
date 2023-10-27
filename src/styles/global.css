@@ -16,6 +16,18 @@
     scrollbar-width: none; /* Firefox */
   }
 
+  .gap-x-grid {
+    @apply gap-x-4 md:gap-x-6 lg:gap-x-8;
+  }
+
+  .gap-y-grid {
+    @apply gap-y-4 md:gap-y-6 lg:gap-y-8;
+  }
+
+  .gap-grid {
+    @apply gap-y-grid gap-x-grid;
+  }
+
   :not(pre) > code[class*='language-text'] {
     @apply !rounded border border-gray-3 !bg-gray-4 !px-2 font-normal;
   }
