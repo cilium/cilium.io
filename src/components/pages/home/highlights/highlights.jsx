@@ -2,23 +2,23 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import AuditIcon from 'icons/highlights/audit.inline.svg';
+import BandWidthIcon from 'icons/highlights/bandwidth-latency-optimization.inline.svg';
+import BGPIcon from 'icons/highlights/bgp.inline.svg';
+import ConnectivityIcon from 'icons/highlights/connectivity.inline.svg';
+import EgressGatewayIcon from 'icons/highlights/egress-gateway.inline.svg';
+import EncryptionIcon from 'icons/highlights/encryption.inline.svg';
+import KubeProxyIcon from 'icons/highlights/kubeproxy.inline.svg';
+import MetricsIcon from 'icons/highlights/metrics-export.inline.svg';
+import NativeSupportIcon from 'icons/highlights/native-support.inline.svg';
+import NetworkFlowLogs from 'icons/highlights/network-flow.inline.svg';
+import NetworkPolicyIcon from 'icons/highlights/network-policy.inline.svg';
+import AdvancedProtocolVisibilityIcon from 'icons/highlights/protocol-visibility.inline.svg';
+import RuntimeEnforcementIcon from 'icons/highlights/runtime-enforcement.inline.svg';
+import ScalableKubernetesIcon from 'icons/highlights/scalable-kubernetes.inline.svg';
+import ServiceMapIcon from 'icons/highlights/service-map.inline.svg';
+import ServiceMeshIcon from 'icons/highlights/service-mesh.inline.svg';
 
-import AuditIcon from './images/audit.inline.svg';
-import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
-import BGPIcon from './images/bgp.inline.svg';
-import ConnectivityIcon from './images/connectivity.inline.svg';
-import EgressGatewayIcon from './images/egress-gateway.inline.svg';
-import EncryptionIcon from './images/encryption.inline.svg';
-import KubeProxyIcon from './images/kubeproxy.inline.svg';
-import MetricsIcon from './images/metrics-export.inline.svg';
-import NativeSupportIcon from './images/native-support.inline.svg';
-import NetworkFlowLogs from './images/network-flow.inline.svg';
-import NetworkPolicyIcon from './images/network-policy.inline.svg';
-import AdvancedProtocolVisibilityIcon from './images/protocol-visibility.inline.svg';
-import RuntimeEnforcementIcon from './images/runtime-enforcement.inline.svg';
-import ScalableKubernetesIcon from './images/scalable-kubernetes.inline.svg';
-import ServiceMapIcon from './images/service-map.inline.svg';
-import ServiceMeshIcon from './images/service-mesh.inline.svg';
 import ItemCard from './item/item-card';
 
 const list = [
@@ -127,7 +127,7 @@ const Highlights = () => (
     <Container>
       {list.map(({ title, items }, index) => (
         <div key={index} id={title.toLowerCase()}>
-          <Heading className="pb-10 pt-20 md:pb-14 md:pt-28" tag="h2" size="sm">
+          <Heading className="pt-20 pb-10 md:pb-14 md:pt-28" tag="h2" size="sm">
             {title}
           </Heading>
           <ul className="grid grid-cols-1 gap-6 md:auto-rows-fr md:grid-cols-2 md:gap-8 lg:grid lg:auto-rows-fr lg:grid-cols-3">

@@ -50,6 +50,7 @@ const FeaturedTalks = () => {
     }
   `);
   const placeholders = { card1, card2, card3, card4 };
+
   return (
     <section className="mt-10 md:mt-20 lg:mt-32">
       <Container>

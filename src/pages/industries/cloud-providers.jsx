@@ -5,19 +5,16 @@ import BulletSection from 'components/pages/industries/bullet-section';
 import FeaturedTalks from 'components/pages/industries/featured-talks';
 import Hero from 'components/pages/industries/hero';
 import ResourcesCard from 'components/pages/industries/resources';
-import AdopterTestimonial from 'components/pages/industries/testimonial';
+import Testimonial from 'components/pages/industries/testimonial';
+import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import AzureLogo from 'icons/logo-azure.inline.svg';
-import GoogleCloudLogo from 'icons/logo-googlecloud.inline.svg';
-import HetznerLogo from 'icons/logo-hetzner.inline.svg';
-import AstronautBee from 'images/pages/industries/astronaut-bee.png';
-import CloudImage1 from 'images/pages/industries/cloud-1.png';
-import CloudImage2 from 'images/pages/industries/cloud-2.png';
+import AstronautBee from 'images/pages/industries/cloud-providers/astronaut-bee.png';
+import AWSOfficeImage from 'images/pages/industries/cloud-providers/awsoffice.png';
+import CloudImage1 from 'images/pages/industries/cloud-providers/cloud-1.png';
+import CloudImage2 from 'images/pages/industries/cloud-providers/cloud-2.png';
+import GoogleOfficeImage from 'images/pages/industries/cloud-providers/googleoffice.png';
+import MicrosoftOffice from 'images/pages/industries/cloud-providers/microsoftoffice.png';
 import MainLayout from 'layouts/main/main';
-
-import AWSOfficeImage from './images/awsoffice.png';
-import GoogleOfficeImage from './images/googleoffice.png';
-import MicrosoftOffice from './images/microsoftoffice.png';
 
 const heroContent = {
   heading: 'Cloud Providers',
@@ -30,7 +27,7 @@ const heroContent = {
 };
 
 const azureTestimonial = {
-  logo: AzureLogo,
+  logo: 'azure',
   description:
     'Cilium combines with the existing control plane of Azure CNI to bring a high-performance eBPF-based dataplane with extensive security and observability capabilities to Azure Kubernetes Service (AKS)',
   quotedText:
@@ -42,7 +39,7 @@ const azureTestimonial = {
 };
 
 const googleTestimonial = {
-  logo: GoogleCloudLogo,
+  logo: 'googleCloud',
   description:
     'Google uses Cilium and eBPF as the new networking dataplane for Google’s managed Kubernetes offering (GKE) and Anthos.',
   quotedText:
@@ -64,17 +61,17 @@ const hertznerTestimonial = {
   role: 'DevOps Engineer, Hetzner Cloud ',
   url: 'https://cilium.io/blog/2023/01/25/hetzner-performance-testing/',
   CTAtext: 'Read The Blog Post',
-  logo: HetznerLogo,
+  logo: 'hetzner',
 };
 
 const bulletSection1 = {
   heading: 'Empowering Azure’s AKS Clusters with Cilium ',
-  withImage: true,
   paragraphs: [
     "Cilium's open source data plane is natively integrated with Azure CNI in Azure Kubernetes Service (AKS). This integration allows users to tap into Cilium's feature-rich ecosystem, right from the Azure Marketplace.",
   ],
   imageSrc: CloudImage1,
   imageAlt: 'cilium big tcp stats',
+  imageRight: false,
 };
 
 const bulletSection2 = {
@@ -83,7 +80,6 @@ const bulletSection2 = {
     'Hetzner Cloud, a leading German public cloud provider, recently overhauled its ingress architecture to pursue modern and scalable cloud services. Hetzner was scouting for a Kubernetes-native solution with ECMP, firewall, IPv6, and DSR capabilities. Cilium emerged as the ideal choice. Before adopting Cilium, Hetzner ran tests deploying different Cilium configurations in a Kubernetes cluster to benchmark RPS and throughput and then checking the CPU usage as a metric to compare the tests. These tests showed Cilium provided a massive increase in both RPS and throughput while still reducing CPU usage. ',
     "With Cilium's Kubernetes-native support, scalability, enhanced security, IPv6 compatibility, and efficiency with DSR, Cilium is a compelling choice for cloud providers. The results of Hetzner Cloud's performance tests highlight the value of adopting Cilium to elevate performance, security, and scalability in the cloud infrastructure landscape.",
   ],
-  withImage: true,
   imageSrc: CloudImage2,
   imageAlt: 'hetzner cilium test illustration',
 };
@@ -131,50 +127,43 @@ const cloudResouces = [
     title: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
     description:
       'AWS picked Cilium as the built-in default for networking and security. As you create your first EKS Anywhere (EKS-A) cluster, you will automatically have Cilium installed.',
-    url: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/',
+    buttonLink: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/',
     imageSrc: AWSOfficeImage,
     imageAlt: 'aws office building',
-    CTAtext: 'Learn More',
   },
   {
     title: 'Google chooses Cilium in Datapath V2 for GKE and Anthos',
     description:
       'GKE Dataplane V2 harnesses the power of eBPF and Cilium to bring Kubernetes Network Policy logging to Google Kubernetes Engine (GKE) among other features.',
-    url: 'https://cilium.io/blog/2020/08/19/google-chooses-cilium-for-gke-networking/',
+    buttonLink: 'https://cilium.io/blog/2020/08/19/google-chooses-cilium-for-gke-networking/',
     imageSrc: GoogleOfficeImage,
     imageAlt: 'google office building',
-    CTAtext: 'Learn More',
   },
   {
     title: 'Azure CNI Powered by Cilium',
     description:
       'Azure CNI Powered by Cilium combines the robust control plane of Azure CNI with the data plane of Cilium to provide high-performance networking and security.',
-    url: 'https://www.youtube.com/watch?v=8it8Hm2F_GM',
+    buttonLink: 'https://www.youtube.com/watch?v=8it8Hm2F_GM',
     imageSrc: MicrosoftOffice,
     imageAlt: 'microsoft office buidling',
-    CTAtext: 'Learn More',
   },
 ];
 
 const MediaEntertainmentPage = () => (
-  <MainLayout>
-    <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
-      <AdopterTestimonial {...azureTestimonial} />
-    </Hero>
-    <BulletSection {...bulletSection2} imageStyle="h-[400px]" />
-    <AdopterTestimonial {...hertznerTestimonial} className="mt-8 pb-8" />
-    <BulletSection {...bulletSection1} />
-    <AdopterTestimonial {...googleTestimonial} className="my-8 pb-8" />
-    <AdoptersLogo
-      items={cloudAdoptersLogo}
-      className="mb-16 grid grid-cols-3  lg:grid lg:grid-cols-4"
-    />
+  <MainLayout theme="gray">
+    <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px]" />
+    <Testimonial {...azureTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
+    <Testimonial {...hertznerTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
+    <Testimonial {...googleTestimonial} className="my-10 md:my-20 lg:my-32" />
     <FeaturedTalks talks={cloudTalks} />
+    <AdoptersLogo items={cloudAdoptersLogo} className="mt-10 md:mt-20 lg:mt-32" />
     <ResourcesCard
       heading="Bring Your Favorite Cloud. One Solution, Every Cloud"
       resources={cloudResouces}
-      className="my-8"
     />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

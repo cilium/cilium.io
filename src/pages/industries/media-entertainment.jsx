@@ -5,22 +5,16 @@ import BulletSection from 'components/pages/industries/bullet-section';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import ResourcesCard from 'components/pages/industries/resources';
-import AdopterTestimonial from 'components/pages/industries/testimonial';
+import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
-import SeznamLogo from 'icons/logo-seznam.inline.svg';
-import MediaImage1 from 'images/pages/industries/media-1.png';
-import MediaImage2 from 'images/pages/industries/media-2.png';
-import PublicSPeakingBee from 'images/pages/industries/public-speaking-bee.png';
+import MediaImage1 from 'images/pages/industries/media-entertainment/media-1.png';
+import MediaImage2 from 'images/pages/industries/media-entertainment/media-2.png';
+import NewyorkTimeOfficeImage from 'images/pages/industries/media-entertainment/newyorkoffice.png';
+import PublicSPeakingBee from 'images/pages/industries/media-entertainment/public-speaking-bee.png';
+import SkyOfficeImage from 'images/pages/industries/media-entertainment/skyoffice.png';
+import YahooOfficeImage from 'images/pages/industries/media-entertainment/yahoooffice.png';
 import MainLayout from 'layouts/main';
-
-import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
-import NativeSupportIcon from './images/native-support.inline.svg';
-import NewyorkTimeOfficeImage from './images/newyorkoffice.png';
-import ServiceMapIcon from './images/service-map.inline.svg';
-import SkyOfficeImage from './images/skyoffice.png';
-import YahooOfficeImage from './images/yahoooffice.png';
 
 const heroContent = {
   heading: 'Media and Entertainment',
@@ -34,7 +28,7 @@ const heroContent = {
 };
 
 const newyorktimesTestimonial = {
-  logo: NewYorkTimesLogo,
+  logo: 'newYorkTimes',
   description:
     'Cilium was a critical choice to increase networking performance while providing identity and application-aware security and visibility for cloud native workloads running on EKS at The New York Times.',
   quotedText:
@@ -47,7 +41,6 @@ const newyorktimesTestimonial = {
 
 const bulletSection1 = {
   heading: "Global Content Delivery at Scale with Cilium's Load Balancing",
-  withImage: true,
   paragraphs: [
     "Companies in the media and entertainment industry with strict latency and failover requirements can benefit from Cilium's scalable load balancing with XDP, an eBPF-based high-performance data path. Production users found it doubled throughput while reducing CPU usage by 72x. Cilium's standalone Layer 4 load balancer comes at a fraction of the cost of traditional hardware load balancers while delivering higher performance.",
   ],
@@ -60,13 +53,13 @@ const bulletSection2 = {
   paragraphs: [
     "Many companies in the media and entertainment industries maintain legacy infrastructure for varying reasons. Cilium is flexible enough to integrate with both traditional and cloud native infrastructures. Companies like Cosmonic have extended Cilium beyond Kubernetes to platforms like Nomad. In scenarios where it is impossible to use Cilium as the Default CNI, Cilium's CNI chaining mode lets you utilize Cilium's features like Hubble for observability and Tetragon for security. Companies running workloads on non-k8s environments can leverage Cilium's Layer 4 standalone load balancer for efficient and scalable load balancing. This flexibility ensures your organization can benefit from Cilium regardless of your infrastructure choices.",
   ],
-  withImage: true,
   imageSrc: MediaImage1,
   imageAlt: 'cilium xdp',
+  imageRight: false,
 };
 
 const seznamTestimonial = {
-  logo: SeznamLogo,
+  logo: 'seznam',
   url: 'https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/',
   description:
     "Seznam.cz tested Cilium's Standalone L4LB XDP as an alternative to their IPVS load balancer due to increasing traffic concerns.",
@@ -82,8 +75,8 @@ const mediaResources = [
     imageSrc: YahooOfficeImage,
     imageAlt: 'yahoo office building',
     title: 'Software L4 Load Balancing for Kubernetes Services at Yahoo',
-    CTAtext: 'Watch the Talk',
-    url: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
+    buttonText: 'Watch the Talk',
+    buttonLink: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
     description:
       'Yahoo improved load balancing performance and scalability by switching to Cilium L4 LB with XDP, achieving hardware-level efficiency and dynamic backend management.',
   },
@@ -92,8 +85,8 @@ const mediaResources = [
     imageSrc: NewyorkTimeOfficeImage,
     imageAlt: 'newyork times  office building',
     title: 'Designing and Securing a Multi-Tenant Runtime Environment at the New York Times',
-    CTAtext: 'Watch the Talk',
-    url: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
+    buttonText: 'Watch the Talk',
+    buttonLink: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
     description:
       'Cilium was a critical choice to increase networking performance while providing identity and application-aware security and visibility for cloud native workloads running on EKS at the New York Times.',
   },
@@ -102,8 +95,8 @@ const mediaResources = [
     imageSrc: SkyOfficeImage,
     imageAlt: 'sky group  office building',
     title: 'Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev Teams)',
-    CTAtext: 'Read The Blog Post',
-    url: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
+    buttonText: 'Read The Blog Post',
+    buttonLink: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
     description:
       'Sky required a performant and secure solution to help them implement zero-trust network security and landed on leveraging additional features in Cilium as the answer.',
   },
@@ -122,41 +115,37 @@ const companyLogos = [
 
 const mediaUsecases = [
   {
-    icon: NativeSupportIcon,
+    icon: 'nativeSupport',
     title: 'Load Balancing ',
     description:
       ' Leverage the power of Cilium’s XDP acceleration for high-speed, efficient Load Balancing in your Kubernetes cluster',
-    url: '/use-cases/load-balancer',
+    buttonLink: '/use-cases/load-balancer',
   },
   {
-    icon: BandWidthIcon,
+    icon: 'bandWidth',
     title: 'Bandwidth and Latency Optimization',
     description:
       'Optimize TCP and UDP workload with rate limiting and fair queuing. Rely on our TCP congestion control algorithm for improved performance',
-    url: '/use-cases/bandwidth-optimization',
+    buttonLink: '/use-cases/bandwidth-optimization',
   },
 
   {
-    icon: ServiceMapIcon,
+    icon: 'serviceMap',
     title: 'Service Map',
     description:
       'Enable platform teams to provide a self-service portal to app teams to observe their own workloads, dependencies, and network flows',
-    url: '/use-cases/service-map',
+    buttonLink: '/use-cases/service-map',
   },
 ];
 
 const MediaEntertainmentPage = () => (
-  <MainLayout>
-    <Hero {...heroContent} imageStyle="lg:h-[400px] lg:my-20">
-      <AdopterTestimonial className="mt-8" {...newyorktimesTestimonial} />
-    </Hero>
-    <BulletSection {...bulletSection1} />
-    <AdopterTestimonial {...seznamTestimonial} className="mt-8 pb-8" />
-    <BulletSection {...bulletSection2} />
-    <AdoptersLogo
-      className="mb-12 mt-8 grid grid-cols-3 lg:grid lg:grid-cols-4"
-      items={companyLogos}
-    />
+  <MainLayout theme="gray">
+    <Hero {...heroContent} imageStyle="lg:h-[400px]" />
+    <Testimonial {...newyorktimesTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
+    <Testimonial {...seznamTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
+    <AdoptersLogo items={companyLogos} className="mt-10 md:mt-20 lg:mt-32" />
     <ResourcesCard
       heading="See Real World Stories on Companies in the Media and Entertainment Industry"
       resources={mediaResources}

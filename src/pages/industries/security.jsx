@@ -2,29 +2,20 @@ import React from 'react';
 
 import AdoptersLogo from 'components/pages/industries/adopters-logo/adopters-logo';
 import BulletSection from 'components/pages/industries/bullet-section';
-import { SecurityCard } from 'components/pages/industries/cards/security';
 import { TetragonCard } from 'components/pages/industries/cards/tetragon';
 import FeaturedTalks from 'components/pages/industries/featured-talks';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
-import AdopterTestimonial from 'components/pages/industries/testimonial';
+import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import CiliumLogo from 'icons/logo-cilium.inline.svg';
-import GuardianBee from 'images/pages/industries/guardian-bee.png';
-import SecurityImage1 from 'images/pages/industries/security-1.webp';
-import SecurityImage2 from 'images/pages/industries/security-2.png';
-import SecurityImage3 from 'images/pages/industries/security-3.png';
-import SecurityImage4 from 'images/pages/industries/security-4.png';
-import TetragonImage from 'images/pages/industries/tetragon.png';
+import GuardianBee from 'images/pages/industries/security/guardian-bee.png';
+import SecurityImage1 from 'images/pages/industries/security/security-1.webp';
+import SecurityImage2 from 'images/pages/industries/security/security-2.png';
+import SecurityImage3 from 'images/pages/industries/security/security-3.png';
+import SecurityImage4 from 'images/pages/industries/security/security-4.png';
+import TetragonImage from 'images/pages/industries/security/tetragon.png';
 import MainLayout from 'layouts/main/main';
-
-import EncryptionIcon from './images/encryption.inline.svg';
-import EnforcementIcon from './images/enforcement.inline.svg';
-import NetworkPolicyIcon from './images/network-policy.inline.svg';
-import ProcessIcon from './images/process.inline.svg';
-import RuntimeEnforcementIcon from './images/runtime-enforcement.inline.svg';
-import RuntimeIcon from './images/runtime.inline.svg';
 
 const heroContent = {
   heading: 'Security',
@@ -43,6 +34,23 @@ const tetragonContent = {
     'Tetragon is a flexible Kubernetes-aware security observability and runtime enforcement tool that applies policy and filtering directly with eBPF, allowing for reduced observation overhead, tracking of any process, and real-time enforcement of policies.',
   imageSrc: TetragonImage,
   imageAlt: 'tetragon image logo',
+  contents: [
+    {
+      title: 'Monitor Process Execution',
+      text: 'Observe the complete lifecycle of every process on your machine with Kubernetes context awareness',
+      icon: 'process',
+    },
+    {
+      title: 'Runtime Security Policies',
+      text: 'Translate high level policies for file monitoring, network observability, container security, and more into low overhead eBPF programs ',
+      icon: 'runtime',
+    },
+    {
+      title: 'Real Time Enforcement',
+      text: 'Synchronous monitoring, filtering, and enforcement completely in the kernel with eBPF',
+      icon: 'enforcement',
+    },
+  ],
 };
 
 const ciliumTestimonial = {
@@ -51,30 +59,12 @@ const ciliumTestimonial = {
   quotedText:
     'The overall conclusion is that Cilium is a well-secured project. The audit found no critical vulnerabilities and found a lot of positives about the security of Cilium. This included both the code displaying positive security awareness as well as the maintainers having thorough understanding about the security posture of Cilium.',
   withPerson: true,
-  logo: CiliumLogo,
+  logo: 'cilium',
   url: 'https://www.cncf.io/blog/2023/02/13/a-well-secured-project-cilium-security-audits-2022-published/',
   CTAtext: 'Read The Blog Post',
   name: 'Adam Korczynski & David Korczynski',
   role: 'Security Researchers, Ada Logics',
 };
-
-const tetragonCardContents = [
-  {
-    title: 'Monitor Process Execution',
-    text: 'Observe the complete lifecycle of every process on your machine with Kubernetes context awareness',
-    icon: ProcessIcon,
-  },
-  {
-    title: 'Runtime Security Policies',
-    text: 'Translate high level policies for file monitoring, network observability, container security, and more into low overhead eBPF programs ',
-    icon: RuntimeIcon,
-  },
-  {
-    title: 'Real Time Enforcement',
-    text: 'Synchronous monitoring, filtering, and enforcement completely in the kernel with eBPF',
-    icon: EnforcementIcon,
-  },
-];
 
 const bulletSection1 = {
   heading:
@@ -82,7 +72,6 @@ const bulletSection1 = {
   paragraphs: [
     "Critical workloads that run in a Kubernetes environment require cloud native-aware tooling to perform efficient incident investigations and monitor key compliance requirements. Cilium's forensic capabilities enable SecOps teams and App owners to conduct security analysis with a native understanding of cloud native identities. Cilium provides a deep understanding of network flows from L3/L4 up to L7 and runtime visibility from OS to code executions in the pod.",
   ],
-  withImage: true,
   imageSrc: SecurityImage2,
   imageAlt: 'tetragon runtime enforcement illustration',
 };
@@ -94,7 +83,6 @@ const bulletSection3 = {
     "Modern distributed applications rely on containers to facilitate agility in deploying new versions of their application and to scale out on demand. Typical firewalls secure workloads by filtering source IP addresses and ports, but in Kubernetes and other cloud native platforms, IP addresses are ephemeral. Traditional firewalls are not cloud native aware and can't be programmed on the fly as applications scale out or new versions are deployed. Updating the firewall constantly to adapt to the constant changes becomes impossible at scale. ",
     'Cilium features network policies that operate at layers 3, 4, and 7, providing more flexibility in managing ingress and egress traffic. By leveraging eBPF, Cilium can insert security rules based on service/pods/container identity rather than an IP address for identification as in the traditional systems. Cilium makes applying security policies in a dynamic container environment scalable by decoupling security from IP addressing, providing stronger security isolation, and adding the following functionality to the Kubernetes cluster.',
   ],
-  withImage: true,
   imageSrc: SecurityImage1,
   imageAlt: 'l3 - l7 policy illustration',
 };
@@ -104,9 +92,9 @@ const bulletSection2 = {
   paragraphs: [
     "With Cilium's Static Egress Gateway, cloud native workloads can be presented from stable IP addresses, easing integration with traditional firewall systems. This approach ensures that firewall requirements remain consistent even as workloads scale, fostering a bridge between cloud native and conventional environments. ",
   ],
-  withImage: true,
   imageSrc: SecurityImage3,
   imageAlt: 'Cilium egress gateway illustration',
+  imageRight: false,
 };
 
 const bulletSection4 = {
@@ -116,9 +104,9 @@ const bulletSection4 = {
     "Organizations are increasingly looking to bolster their security posture in cloud native environments. Cilium's sidecar-free service mesh uses mutual authentication to optimize security and performance, ensuring that services authenticate each other's identities before communication occurs.",
     'Cilium features network policies that operate at layers 3, 4, and 7, providing more flexibility in managing ingress and egress traffic. By leveraging eBPF, Cilium can insert security rules based on service/pods/container identity rather than an IP address for identification as in the traditional systems. Cilium makes applying security policies in a dynamic container environment scalable by decoupling security from IP addressing, providing stronger security isolation, and adding security functionality directly to the Kubernetes cluster.',
   ],
-  withImage: true,
   imageSrc: SecurityImage4,
   imageAlt: "Cilium's mutual TLS illustration",
+  imageRight: false,
 };
 
 const securityTalks = [
@@ -155,42 +143,40 @@ const securityLogos = [
 
 const securityUsecases = [
   {
-    icon: EncryptionIcon,
+    icon: 'encryption',
     title: 'Transparent Encryption ',
-    url: '/use-cases/transparent-encryption',
+    buttonLink: '/use-cases/transparent-encryption',
     description:
       'Elevate compliance and lower risk with Cilium transparent encryption. With just one switch, no application changes, service meshes, or additional proxies',
   },
 
   {
-    icon: NetworkPolicyIcon,
+    icon: 'networkPolicy',
     title: 'Network Policy',
-    url: '/use-cases/network-policy',
+    buttonLink: '/use-cases/network-policy',
     description:
       'Maintain identity based policies effectively at scale with Cilium’s advanced network polices.',
   },
   {
-    icon: RuntimeEnforcementIcon,
+    icon: 'runtimeEnforcement',
     title: 'Runtime Enforcement',
-    url: '/use-cases/runtime-enforcement',
+    buttonLink: '/use-cases/runtime-enforcement',
     description:
       'Prevent unauthorized access to your traffic at runtime to stop attacks on the OS level, preventing malicious actions.',
   },
 ];
 
 const SecurityPage = () => (
-  <MainLayout>
-    <Hero {...heroContent} imageStyle="scale-75">
-      <AdopterTestimonial {...ciliumTestimonial} className="mt-8" />
-    </Hero>
-    <BulletSection {...bulletSection3} />
-    <SecurityCard {...tetragonContent} className="py-12" />
-    <TetragonCard contents={tetragonCardContents} className="my-8" />
-    <BulletSection {...bulletSection4} />
-    <BulletSection {...bulletSection1} imageStyle="lg:scale-90" />
-    <BulletSection {...bulletSection2} />
-    <FeaturedTalks heading="Featured talks" talks={securityTalks} />
-    <AdoptersLogo items={securityLogos} className="my-12 grid grid-cols-3 lg:grid lg:grid-cols-4" />
+  <MainLayout theme="gray">
+    <Hero {...heroContent} imageStyle="scale-75" />
+    <Testimonial {...ciliumTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection3} className="mt-10 md:mt-20 lg:mt-32" />
+    <TetragonCard {...tetragonContent} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection4} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection2} className="my-10 md:my-20 lg:my-32" />
+    <FeaturedTalks talks={securityTalks} />
+    <AdoptersLogo items={securityLogos} className="mt-10 md:mt-20 lg:mt-32" />
     <IndustryUseCases heading="Cilium’s Security Focused Use Cases" usecases={securityUsecases} />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>

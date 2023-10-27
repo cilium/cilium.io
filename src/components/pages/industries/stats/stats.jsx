@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-// import classNames from 'classnames';
 import Container from 'components/shared/container/container';
 import ArrowIcon from 'icons/arrow.inline.svg';
 
@@ -10,6 +9,7 @@ const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
     gridTemplateColumns: `repeat(${stats.length}, 1fr)`,
     gridTemplateRows: '1fr',
   };
+
   const gridArea = [
     '1 / 1 / 2 / 2',
     '1 / 2 / 2 / 3',
@@ -20,10 +20,7 @@ const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
 
   return (
     <Container className={className}>
-      <div
-        style={{ boxShadow: '0px 1px 8px 0px rgba(20, 26, 31, 0.20)' }}
-        className="rounded-xl bg-white p-6"
-      >
+      <div className="rounded-xl bg-white p-6 shadow-primary">
         <div className=" lg:flex lg:items-center lg:gap-[29px]">
           <div className="m-auto text-center lg:text-left">
             <Logo className="h-20 w-32" />
@@ -54,9 +51,9 @@ const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
                   style={gridChild}
                   className="flex basis-1/3 items-center justify-center lg:h-[150px]  lg:border-l lg:border-[#E0E5EB]"
                 >
-                  <div className="flex flex-col  items-center text-center lg:gap-8">
+                  <div className="flex flex-col items-center text-center lg:gap-8">
                     <span className="text-md mx-auto font-bold lg:text-xl">{stat.heading}</span>
-                    <span className="text-md mx-auto  p-1 text-left">{stat.subHeading}</span>
+                    <span className="text-md mx-auto p-1 text-left">{stat.subHeading}</span>
                   </div>
                 </div>
               );

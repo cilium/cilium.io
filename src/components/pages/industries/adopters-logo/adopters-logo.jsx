@@ -152,34 +152,14 @@ const logos = {
   tsystems: TsystemsLogo,
 };
 
-const spaceXClassNames = {
-  sm: 'mx-4 md:mx-6 lg:mx-[26px]',
-  md: 'mx-4 md:mx-6 lg:mx-8',
-};
-
-// const AdoptersLogo = ({ items }) => (
-//   <section className="pt-10 md:pt-20 lg:pt-28 xl:pt-32">
-//     <Container>
-//       <div className="mx-0 mt-4 flex flex-wrap justify-center md:mt-6 lg:mx-[-26px] lg:mt-8">
-//         {items.map((logo, index) => {
-//           const Logo = logos[logo];
-//           return (
-//             <Logo
-//               className={classNames(
-//                 'mt-4 h-12 w-auto text-gray-1 md:mt-6 md:h-14 lg:mt-8 lg:h-16',
-//               )}
-//               key={index}
-//             />
-//           );
-//         })}
-//       </div>
-//     </Container>
-//   </section>
-// );
-
 const AdoptersLogo = ({ items, className }) => (
   <Container>
-    <div className={classNames('mx-auto text-center lg:gap-y-[8px]', className)}>
+    <div
+      className={classNames(
+        'mx-auto grid grid-cols-2 place-content-center place-items-center content-center gap-4 text-center md:grid-cols-3 md:gap-6 lg:grid-cols-4 lg:gap-8',
+        className
+      )}
+    >
       {items.map((logo, index) => {
         const Logo = logos[logo];
         return (
@@ -200,7 +180,7 @@ AdoptersLogo.propTypes = {
 };
 
 AdoptersLogo.defaultProps = {
-  className: 'grid grid-cols-3 lg:grid lg:grid-cols-4',
+  className: null,
 };
 
 export default AdoptersLogo;
