@@ -40,7 +40,14 @@ const BrandFeatures = () => (
             className="col-span-full rounded-xl p-5 pt-2 shadow-[0px_1px_8px_0px_rgba(20,26,31,0.20)] md:col-span-6 lg:px-8 lg:pt-3 lg:pb-8"
             key={index}
           >
-            <img className="w-full" src={icon} alt={title} loading="lazy" />
+            <img
+              className="w-full"
+              src={icon}
+              alt={title}
+              width={528}
+              height={261}
+              loading="lazy"
+            />
             <h3 className="mt-3 text-xl font-bold leading-snug lg:text-2xl">{title}</h3>
             <p className="mt-2.5 text-base lg:text-lg lg:leading-relaxed">{description}</p>
           </li>

@@ -6,7 +6,7 @@ const LogosRow = ({ title, logos, className = undefined, isDark = false }) => (
   <div className={className}>
     <h3 className="font-bold uppercase leading-none tracking-wide text-gray-1">{title}</h3>
     <ul className="gap-grid mt-4 grid grid-cols-12 gap-y-5">
-      {logos.map((logo, index) => (
+      {logos.map(({ src, width, height }, index) => (
         <li
           className={classNames(
             'col-span-full flex h-[192px] items-center justify-center rounded-xl px-11 sm:col-span-6 lg:col-span-3',
@@ -14,7 +14,7 @@ const LogosRow = ({ title, logos, className = undefined, isDark = false }) => (
           )}
           key={index}
         >
-          <img className="max-w-none shrink-0" src={logo} alt="" />
+          <img className="max-w-none shrink-0" src={src} width={width} height={height} alt="" />
         </li>
       ))}
     </ul>

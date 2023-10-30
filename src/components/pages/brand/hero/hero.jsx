@@ -39,6 +39,8 @@ const Hero = () => (
     <img
       className="absolute -bottom-6 left-1/2 -translate-x-1/2 translate-y-0 xs:-bottom-4 xs:max-w-[390px] sm:hidden"
       src={backgroundSmSvg}
+      width={390}
+      height={540}
       loading="eager"
       alt=""
       aria-hidden

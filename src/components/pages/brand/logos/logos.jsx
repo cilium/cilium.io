@@ -5,22 +5,7 @@ import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
-import ciliumDark1 from './images/cilium-dark-1.svg';
-import ciliumDark2 from './images/cilium-dark-2.svg';
-import ciliumDark3 from './images/cilium-dark-3.svg';
-import ciliumDark4 from './images/cilium-dark-4.svg';
-import ciliumLight1 from './images/cilium-light-1.svg';
-import ciliumLight2 from './images/cilium-light-2.svg';
-import ciliumLight3 from './images/cilium-light-3.svg';
-import ciliumLight4 from './images/cilium-light-4.svg';
-import hubbleDark1 from './images/hubble-dark-1.svg';
-import hubbleDark2 from './images/hubble-dark-2.svg';
-import hubbleDark3 from './images/hubble-dark-3.svg';
-import hubbleDark4 from './images/hubble-dark-4.svg';
-import hubbleLight1 from './images/hubble-light-1.svg';
-import hubbleLight2 from './images/hubble-light-2.svg';
-import hubbleLight3 from './images/hubble-light-3.svg';
-import hubbleLight4 from './images/hubble-light-4.svg';
+import { ciliumLogos, hubbleLogos } from './data/logos';
 import LogosRow from './logos-row';
 
 const Logos = ({ title, description, downloadLink, brand = 'cilium', titleSize = 'md' }) => (
@@ -49,20 +34,12 @@ const Logos = ({ title, description, downloadLink, brand = 'cilium', titleSize =
       <LogosRow
         className="mt-10"
         title="Light background"
-        logos={
-          brand === 'cilium'
-            ? [ciliumLight1, ciliumLight2, ciliumLight3, ciliumLight4]
-            : [hubbleLight1, hubbleLight2, hubbleLight3, hubbleLight4]
-        }
+        logos={brand === 'cilium' ? ciliumLogos.light : hubbleLogos.light}
       />
       <LogosRow
         className="mt-12"
         title="Dark background"
-        logos={
-          brand === 'cilium'
-            ? [ciliumDark1, ciliumDark2, ciliumDark3, ciliumDark4]
-            : [hubbleDark1, hubbleDark2, hubbleDark3, hubbleDark4]
-        }
+        logos={brand === 'cilium' ? ciliumLogos.dark : hubbleLogos.dark}
         isDark
       />
     </Container>

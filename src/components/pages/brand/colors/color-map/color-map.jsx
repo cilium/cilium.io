@@ -7,25 +7,25 @@ const ColorMap = ({ className = undefined, title, colors }) => (
     <ul className="mt-6 grid grid-cols-1 gap-6 xs:grid-cols-2 lg:grid-cols-3 lg:gap-8 xl:grid-cols-4">
       {colors.map(({ color, hex, rgb, hsl, cmyk }, index) => (
         <li
-          className="flex items-center gap-x-5 rounded-lg border border-gray-5 py-5 pl-5 pr-3 leading-none xs:flex-col xs:gap-x-0 xs:gap-y-5 sm:flex-row sm:gap-y-0 sm:gap-x-5 sm:py-7 sm:pl-7"
+          className="flex items-center gap-x-5 rounded-lg border-2 border-gray-6 py-5 pl-5 pr-3 leading-none xs:flex-col xs:gap-x-0 xs:gap-y-5 sm:flex-row sm:gap-y-0 sm:gap-x-5 sm:py-[26px] sm:pl-7"
           key={index}
         >
           <div style={{ background: `${color}` }} className="h-[72px] w-[72px] shrink-0 rounded" />
-          <div className="flex flex-col gap-y-2.5 text-sm leading-none tracking-wide">
-            <span>
-              <strong>HEX -</strong> {hex}
+          <div className="flex flex-col gap-y-2.5 text-sm leading-none">
+            <span className="tracking-wider">
+              <strong className="tracking-wide">HEX -</strong> {hex}
             </span>
-            <span>
-              <strong>RGB -</strong> {rgb}
+            <span className="tracking-wider">
+              <strong className="tracking-wide">RGB -</strong> {rgb}
             </span>
             {hsl && (
-              <span>
-                <strong>HSL -</strong> {hsl}
+              <span className="tracking-wider">
+                <strong className="tracking-wide">HSL -</strong> {hsl}
               </span>
             )}
             {cmyk && (
-              <span>
-                <strong>CMYK -</strong> {cmyk}
+              <span className="tracking-wider">
+                <strong className="tracking-wide">CMYK -</strong> {cmyk}
               </span>
             )}
           </div>
