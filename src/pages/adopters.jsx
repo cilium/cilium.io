@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  deezer,
   parseable,
   plusserver,
   dbraincloud,
@@ -127,6 +128,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    deezer,
     parseable,
     dbraincloud,
     dbschenker,
