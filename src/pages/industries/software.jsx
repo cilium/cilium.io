@@ -9,7 +9,6 @@ import Stats from 'components/pages/industries/stats';
 import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import AscendOfficeImage from 'images/pages/industries/software/ascendoffice.png';
 import AuditBee from 'images/pages/industries/software/audit-bee.png';
 import ClickhouseOfficeImage from 'images/pages/industries/software/clickhouseoffice.png';
@@ -44,7 +43,7 @@ const datadogTestimonial = {
 const clickhouseStats = {
   description:
     'ClickHouse turned to Cilium as their preferred networking solution to simplify the process of isolating customers from each other',
-  logo: ClickHouseLogo,
+  logo: 'clickHouse',
   stats: [
     {
       heading: 'MASSIVE SCALE',
@@ -162,6 +161,7 @@ const softwareLogos = [
   'canonical',
   'cosmonic',
 ];
+
 const SoftwarePage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} />

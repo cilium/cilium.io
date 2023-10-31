@@ -5,7 +5,7 @@ import React from 'react';
 import Container from 'components/shared/container/container';
 import Heading from 'components/shared/heading';
 
-const FeaturedTalks = ({ heading = 'Featured Talks', talks, className }) => (
+const FeaturedTalks = ({ heading, talks, className }) => (
   <div className={classNames('featured-talks bg-[#F6F7F8] py-10 md:py-20 lg:py-32', className)}>
     <Container>
       <Heading tag="h2" className="text-center">
@@ -33,7 +33,7 @@ const FeaturedTalks = ({ heading = 'Featured Talks', talks, className }) => (
 );
 
 FeaturedTalks.propTypes = {
-  heading: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   className: PropTypes.string,
   talks: PropTypes.arrayOf(
     PropTypes.shape({
@@ -46,6 +46,7 @@ FeaturedTalks.propTypes = {
 
 FeaturedTalks.defaultProps = {
   className: '',
+  heading: 'Featured Talks',
 };
 
 export default FeaturedTalks;

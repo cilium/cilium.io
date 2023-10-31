@@ -10,7 +10,6 @@ import Stats from 'components/pages/industries/stats';
 import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import TripLogo from 'icons/logo-trip.inline.svg';
 import CloudIcon from 'images/pages/industries/e-commerce/cloud.inline.svg';
 import CodeIcon from 'images/pages/industries/e-commerce/code.inline.svg';
 import DbIcon from 'images/pages/industries/e-commerce/db.inline.svg';
@@ -34,7 +33,7 @@ const heroContent = {
 };
 
 const tripStats = {
-  logo: TripLogo,
+  logo: 'trip',
   url: 'https://www.cncf.io/case-studies/trip-com-group/',
   description:
     'Trip.com operates in 200 countries and 40 languages, using both on-premise and cloud-based Kubernetes.',

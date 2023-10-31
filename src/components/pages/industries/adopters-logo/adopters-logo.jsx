@@ -156,18 +156,19 @@ const AdoptersLogo = ({ items, className }) => (
   <Container>
     <div
       className={classNames(
-        'mx-auto grid grid-cols-2 place-content-center place-items-center content-center gap-4 text-center md:grid-cols-3 md:gap-6 lg:grid-cols-4 lg:gap-8',
+        'mx-auto flex flex-row flex-wrap justify-center gap-y-4 md:gap-y-6 lg:gap-y-8',
         className
       )}
     >
       {items.map((logo, index) => {
         const Logo = logos[logo];
         return (
-          <Logo
-            className="h-40px  max-w-[180px] text-gray-1"
-            style={{ height: '40px' }}
+          <div
+            className="flex basis-full items-center justify-center md:basis-1/3 lg:basis-1/4"
             key={index}
-          />
+          >
+            <Logo className="h-40px  max-w-[180px] text-gray-1" style={{ height: '40px' }} />
+          </div>
         );
       })}
     </div>

@@ -11,7 +11,6 @@ import Stats from 'components/pages/industries/stats';
 import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
 import CapitalOnefficeImage from 'images/pages/industries/financial-services/capitaloneoffice.png';
 import FinanceImage1 from 'images/pages/industries/financial-services/finance-1.png';
 import FinanceImage2 from 'images/pages/industries/financial-services/finance-2.png';
@@ -46,7 +45,7 @@ const bloombergTestimonial = {
 };
 
 const postfinanceStats = {
-  logo: PostFinanceLogo,
+  logo: 'postFinance',
   description:
     "Post Finance one of Switzerland's leading financial institutions uses Cilium for Cloud Native Networking",
   CTAtext: 'watch the case study',
