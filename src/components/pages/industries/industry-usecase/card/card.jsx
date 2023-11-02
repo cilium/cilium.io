@@ -49,10 +49,9 @@ const Card = ({ icon, title, description, buttonText, buttonLink, buttonTarget, 
         target={buttonTarget}
         type="text"
         theme="primary"
-        rel="noopener noreferrer"
         className="mt-auto flex gap-2 border-t border-gray-3 pt-6"
       >
-        <span>{buttonText}</span>
+        {buttonText}
         <ArrowIcon />
       </Link>
     </article>

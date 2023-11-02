@@ -22,7 +22,7 @@ const Card = ({
     <img
       src={imageSrc}
       alt={imageAlt}
-      className="max-h-[180px] w-full rounded"
+      className="max-h-[180px] min-h-[165px] w-full rounded object-cover"
       loading="lazy"
       width={272}
       height={164}
@@ -39,7 +39,7 @@ const Card = ({
       rel="noopener noreferrer"
       className="mt-auto flex gap-2 border-t border-gray-3 pt-6"
     >
-      <span>{buttonText}</span>
+      {buttonText}
       <ArrowIcon />
     </Link>
   </article>

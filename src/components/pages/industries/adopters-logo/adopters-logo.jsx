@@ -154,7 +154,7 @@ const logos = {
 
 const AdoptersLogo = ({ items, className }) => (
   <Container>
-    <div
+    <ul
       className={classNames(
         'mx-auto flex flex-row flex-wrap justify-center gap-y-4 md:gap-y-6 lg:gap-y-8',
         className
@@ -163,15 +163,15 @@ const AdoptersLogo = ({ items, className }) => (
       {items.map((logo, index) => {
         const Logo = logos[logo];
         return (
-          <div
-            className="flex basis-full items-center justify-center md:basis-1/3 lg:basis-1/4"
+          <li
+            className="flex basis-1/2 items-center justify-center md:basis-1/3 lg:basis-1/4"
             key={index}
           >
-            <Logo className="h-40px  max-w-[180px] text-gray-1" style={{ height: '40px' }} />
-          </div>
+            <Logo className="h-10 max-w-[180px] text-gray-1" />
+          </li>
         );
       })}
-    </div>
+    </ul>
   </Container>
 );
 

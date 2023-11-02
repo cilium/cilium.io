@@ -17,7 +17,7 @@ const FeaturedTalks = ({ heading, talks, className }) => (
             <iframe
               src={videoSrc}
               title="YouTube video player"
-              className="block h-auto min-h-[12rem] w-full rounded-lg border border-gray-3"
+              className="aspect-video w-full rounded-lg border border-gray-3"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />

@@ -53,7 +53,7 @@ const AdopterTestimonial = ({
     <Container className={className}>
       <div className="rounded-xl bg-white px-6 py-8 shadow-primary">
         <div className="grid grid-cols-12 gap-4 divide-y divide-gray-3 md:gap-6 lg:gap-8 lg:divide-x lg:divide-y-0">
-          <div className="col-span-12 flex flex-col items-center justify-between gap-y-6 text-center lg:col-span-8">
+          <figure className="col-span-12 flex flex-col items-center justify-between gap-y-6 text-center lg:col-span-8">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 26 29"
@@ -69,14 +69,14 @@ const AdopterTestimonial = ({
                 fill="#A7B1BE"
               />
             </svg>
-            <p className="flex-1 text-lg">{quotedText}</p>
+            <blockquote className="flex-1 text-lg">{quotedText}</blockquote>
             {withPerson && (
-              <p>
+              <figcaption>
                 <span className="text-sm font-bold">{name}</span> —{' '}
                 <span className="text-sm text-gray-1">{role}</span>
-              </p>
+              </figcaption>
             )}
-          </div>
+          </figure>
           <div className="col-span-12 flex h-full flex-col items-start justify-start pt-6 md:pt-8 lg:col-span-4 lg:pl-8 lg:pt-0">
             <span className="shrink-0 text-left">
               <Logo className="w-32" />
@@ -89,7 +89,7 @@ const AdopterTestimonial = ({
               className="mt-6 text-sm font-semibold uppercase text-primary-1 hover:text-gray-1"
             >
               <span className="flex items-center gap-2">
-                <span>{CTAtext}</span>
+                {CTAtext}
                 <ArrowIcon className="ml-1 shrink-0" />
               </span>
             </Link>

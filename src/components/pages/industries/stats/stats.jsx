@@ -48,7 +48,7 @@ const Stats = ({ logo, description, CTAtext, url, stats, className }) => {
               className="mt-6 text-sm font-semibold uppercase text-primary-1 hover:text-gray-1"
             >
               <span className="flex items-center gap-2">
-                <span>{CTAtext}</span>
+                {CTAtext}
                 <ArrowIcon className="ml-1 shrink-0" />
               </span>
             </Link>
