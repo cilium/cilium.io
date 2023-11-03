@@ -16,7 +16,7 @@ import SecurityImage1 from 'images/pages/industries/security-1.webp';
 import SecurityImage2 from 'images/pages/industries/security-2.png';
 import SecurityImage3 from 'images/pages/industries/security-3.png';
 import SecurityImage4 from 'images/pages/industries/security-4.png';
-import TetragonImage from 'images/pages/industries/tetragon.png';
+import TetragonImage from 'images/pages/industries/tetragon-shield.png';
 import MainLayout from 'layouts/main/main';
 
 import EncryptionIcon from './images/encryption.inline.svg';
@@ -40,7 +40,7 @@ const heroContent = {
 const tetragonContent = {
   heading: 'Tetragon: eBPF-based Security Observability and Runtime Enforcement',
   description:
-    'Tetragon is a flexible Kubernetes-aware security observability and runtime enforcement tool that applies policy and filtering directly with eBPF, allowing for reduced observation overhead, tracking of any process, and real-time enforcement of policies.',
+    "<a href='https://tetragon.io' style='text-decoration: underline;'>Tetragon</a> is a flexible Kubernetes-aware security observability and runtime enforcement tool that applies policy and filtering directly with eBPF, allowing for reduced observation overhead, tracking of any process, and real-time enforcement of policies.",
   imageSrc: TetragonImage,
   imageAlt: 'tetragon image logo',
 };
