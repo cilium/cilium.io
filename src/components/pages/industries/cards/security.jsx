@@ -9,7 +9,10 @@ export const SecurityCard = ({ heading, description, imageSrc, imageAlt, classNa
     <Container className={className}>
       <h2 className="text-3xl font-bold">{heading}</h2>
       <div className="items-center lg:flex lg:gap-10">
-        <p className="w-full py-8 lg:max-w-[694px] lg:py-0 lg:text-center">{description}</p>
+        <p
+          className="w-full py-8 lg:max-w-[694px] lg:py-0 lg:text-center"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
         <figure className="lg:mt-8">
           <img className="w-60" src={imageSrc} alt={imageAlt} />
         </figure>

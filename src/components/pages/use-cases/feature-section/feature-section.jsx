@@ -35,7 +35,7 @@ const FeatureSection = ({
         >
           {title}
         </Heading>
-        <p className="text-lg leading-normal">{description}</p>
+        <p className="text-lg leading-normal" dangerouslySetInnerHTML={{ __html: description }} />
       </div>
       <div
         className={classNames(
