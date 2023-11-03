@@ -194,7 +194,7 @@ const ecommerceFeatures = {
 
 const MediaEntertainmentPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px]" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[350px]" />
     <Stats {...tripStats} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bullectSection1} className="mt-10 md:mt-20 lg:mt-32" />
     <Testimonial {...trendyolTestimonial} className="mt-10 md:mt-20 lg:mt-32" />

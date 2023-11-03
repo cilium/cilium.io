@@ -122,7 +122,7 @@ const consultingResources = [
 
 const ConsultingPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="lg:h-[360px] lg:w-[360px]" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[360px]" />
     <Testimonial {...palarkTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />

@@ -44,7 +44,7 @@ Hero.propTypes = {
 };
 
 Hero.defaultProps = {
-  imageStyle: 'h-auto lg:min-h-[470px] lg:w-[470px]',
+  imageStyle: 'h-auto lg:w-[470px]',
   className: '',
 };
 

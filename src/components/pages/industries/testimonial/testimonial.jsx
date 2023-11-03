@@ -18,6 +18,7 @@ import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import PalarkLogo from 'icons/logo-palark.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
+import QuoteIcon from 'icons/quote.inline.svg';
 
 const logos = {
   bell: BellLogo,
@@ -54,21 +55,7 @@ const AdopterTestimonial = ({
       <div className="rounded-xl bg-white px-6 py-8 shadow-primary">
         <div className="grid grid-cols-12 gap-4 divide-y divide-gray-3 md:gap-6 lg:gap-8 lg:divide-x lg:divide-y-0">
           <figure className="col-span-12 flex flex-col items-center justify-between gap-y-6 text-center lg:col-span-8">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 26 29"
-              fill="none"
-              className="inline-block w-4 lg:w-4"
-            >
-              <path
-                d="M7.63703 14.0635H1.75564C1.85596 6.75107 3.00967 5.54537 6.60873 2.88343C7.02256 2.57026 7.1605 1.9126 6.90969 1.38021C6.67143 0.863483 6.1322 0.69124 5.71837 1.00441C1.47975 4.1361 0 6.04644 0 15.1439V23.5839C0 26.2615 1.7431 28.4223 3.87495 28.4223H7.63703C9.84412 28.4223 11.512 26.3397 11.512 23.5839V18.8863C11.512 16.1461 9.84412 14.0635 7.63703 14.0635Z"
-                fill="#A7B1BE"
-              />
-              <path
-                d="M21.2038 14.0635H15.3224C15.4227 6.75107 16.5764 5.54537 20.1755 2.88343C20.5893 2.57026 20.7272 1.9126 20.4764 1.38021C20.2256 0.863483 19.6989 0.69124 19.2726 1.00441C15.034 4.1361 13.5542 6.04644 13.5542 15.1596V23.5995C13.5542 26.2771 15.2973 28.438 17.4291 28.438H21.1912C23.3983 28.438 25.0662 26.3554 25.0662 23.5995V18.902C25.0787 16.1461 23.4109 14.0635 21.2038 14.0635Z"
-                fill="#A7B1BE"
-              />
-            </svg>
+            <QuoteIcon className="inline-block w-4 lg:w-4" />
             <blockquote className="flex-1 text-lg">{quotedText}</blockquote>
             {withPerson && (
               <figcaption>

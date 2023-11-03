@@ -22,7 +22,7 @@ const Card = ({
     <img
       src={imageSrc}
       alt={imageAlt}
-      className="max-h-[180px] min-h-[165px] w-full rounded object-cover"
+      className="h-auto w-full rounded object-cover md:max-h-[180px] md:min-h-[165px]"
       loading="lazy"
       width={272}
       height={164}

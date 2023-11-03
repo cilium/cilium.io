@@ -191,7 +191,7 @@ const financeLogos = [
 
 const FinancialServicesPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="lg:h-[470px] lg:w-[470px]" />
+    <Hero {...heroContent} />
     <Testimonial {...bloombergTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection3} className="mt-10 md:mt-20 lg:mt-32" />
     <Stats {...postfinanceStats} className="mt-10 md:mt-20 lg:mt-32" />

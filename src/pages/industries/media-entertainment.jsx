@@ -140,7 +140,7 @@ const mediaUsecases = [
 
 const MediaEntertainmentPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="lg:h-[400px]" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[400px]" />
     <Testimonial {...newyorktimesTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
     <Testimonial {...seznamTestimonial} className="mt-10 md:mt-20 lg:mt-32" />

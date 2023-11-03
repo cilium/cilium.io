@@ -151,7 +151,7 @@ const cloudResouces = [
 
 const MediaEntertainmentPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px]" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[350px]" />
     <Testimonial {...azureTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
     <Testimonial {...hertznerTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
