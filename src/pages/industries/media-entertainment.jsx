@@ -102,8 +102,8 @@ const mediaResources = [
     imageSrc: SkyOfficeImage,
     imageAlt: 'sky group  office building',
     title: 'Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev Teams)',
-    CTAtext: 'Read The Blog Post',
-    url: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
+    CTAtext: 'Watch the Talk',
+    url: 'https://www.youtube.com/watch?v=1LXKafeuTPo',
     description:
       'Sky required a performant and secure solution to help them implement zero-trust network security and landed on leveraging additional features in Cilium as the answer.',
   },
