@@ -19,9 +19,10 @@ export const TetragonCard = ({ heading, description, className, contents }) => (
     <Heading tag="h2" className="text-center">
       {heading}
     </Heading>
-    <p className="mx-auto mt-3 block w-full text-center text-lg font-light lg:mt-4 lg:max-w-[694px]">
-      {description}
-    </p>
+    <p
+      className="mx-auto mt-3 block w-full text-center text-lg font-light lg:mt-4 lg:max-w-[694px]"
+      dangerouslySetInnerHTML={{ __html: description }}
+    />
     <ul className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:grid-cols-3 md:gap-6 lg:mt-14 lg:gap-8">
       {contents.map(({ title, text, icon }, index) => {
         const Icon = icons[icon];

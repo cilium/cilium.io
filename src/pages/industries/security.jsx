@@ -31,7 +31,7 @@ const heroContent = {
 const tetragonContent = {
   heading: 'Tetragon: eBPF-based Security Observability and Runtime Enforcement',
   description:
-    "<a href='https://tetragon.io' style='text-decoration: underline;'>Tetragon</a> is a flexible Kubernetes-aware security observability and runtime enforcement tool that applies policy and filtering directly with eBPF, allowing for reduced observation overhead, tracking of any process, and real-time enforcement of policies.",
+    "<a href='https://tetragon.io' style='text-decoration: underline;' target='_blank'>Tetragon</a> is a flexible Kubernetes-aware security observability and runtime enforcement tool that applies policy and filtering directly with eBPF, allowing for reduced observation overhead, tracking of any process, and real-time enforcement of policies.",
   imageSrc: TetragonImage,
   imageAlt: 'tetragon image logo',
   contents: [
