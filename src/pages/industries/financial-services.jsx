@@ -11,20 +11,14 @@ import Stats from 'components/pages/industries/stats';
 import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
-import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
-import FinanceImage1 from 'images/pages/industries/finance-1.webp';
-import FinanceImage2 from 'images/pages/industries/finance-2.png';
-import FinanceImage3 from 'images/pages/industries/finance-3.png';
+import CapitalOnefficeImage from 'images/pages/industries/financial-services/capitaloneoffice.png';
+import FinanceImage1 from 'images/pages/industries/financial-services/finance-1.png';
+import FinanceImage2 from 'images/pages/industries/financial-services/finance-2.png';
+import FinanceImage3 from 'images/pages/industries/financial-services/finance-3.png';
+import PostFinanceOfficeImage from 'images/pages/industries/financial-services/postfinanceoffice.png';
+import RobinhoodOfficeImage from 'images/pages/industries/financial-services/robinhoodoffice.png';
 import ExecelBee from 'images/pages/usecase/excel-bee.png';
 import MainLayout from 'layouts/main';
-
-import CapitalOnefficeImage from './images/capitaloneoffice.png';
-import EgressGatewayIcon from './images/egress-gateway.inline.svg';
-import EncryptionIcon from './images/encryption.inline.svg';
-import NetworkPolicyIcon from './images/network-policy.inline.svg';
-import PostFinanceOfficeImage from './images/postfinanceoffice.png';
-import RobinhoodOfficeImage from './images/robinhoodoffice.png';
 
 const heroContent = {
   heading: 'Financial Services ',
@@ -47,11 +41,11 @@ const bloombergTestimonial = {
   CTAtext: 'read the case study',
   role: 'Team Lead for the BQuant Enterprise Identity Management team',
   url: 'https://www.cncf.io/case-studies/bloomberg-2/',
-  logo: BloombergLogo,
+  logo: 'bloomberg',
 };
 
 const postfinanceStats = {
-  logo: PostFinanceLogo,
+  logo: 'postFinance',
   description:
     "Post Finance one of Switzerland's leading financial institutions uses Cilium for Cloud Native Networking",
   CTAtext: 'watch the case study',
@@ -85,7 +79,6 @@ const bulletSection2 = {
   paragraphs: [
     'By moving from IP to identity, Cilium empowers you to free your security and operations teams from the need to manually review and audit every policy change. Cilium is natively integrated into the Kubernetes ecosystem aware of higher level identities, making it easier to weave compliance and security governance into the DevOps process. For example, operators can write network policies based on namespaces or labels rather hardcoding IPs. This integration helps maintain and enforce security and compliance standards throughout your DevOps processes.',
   ],
-  withImage: true,
   imageSrc: FinanceImage2,
   imageAlt: 'cilium TLS keys and certificate illustration',
 };
@@ -96,9 +89,9 @@ const bulletSection1 = {
     'Adopting a Zero Trust-based approach to network security architecture is essential for companies in the financial service industry to maintain compliance with stringent regulations and keep customer data secure.',
     'Cilium provides a unified tool that implements a range of features to enforce Zero Trust networking security principles. These features include identity-aware service to service communication and observability, advanced network policies with native HTTP and DNS protocol support, transparent encryption using in-kernel IPsec or WireGuard. Enforcement of TLS via Network Policy allows operators to restrict the allowed TLS SNIs in their network, and provide a more secure environment. Powerful security observability and real-time runtime enforcement with Tetragon and cluster-wide network policies provide security guardrails while having more specific policies to secure the application and operating system access control on different levels such as system calls, TCP/IP, file access, and namespace.',
   ],
-  withImage: true,
   imageSrc: FinanceImage3,
   imageAlt: 'cilium TLS keys and certificate illustration',
+  imageRight: false,
 };
 
 const bulletSection3 = {
@@ -106,31 +99,29 @@ const bulletSection3 = {
   paragraphs: [
     'In a highly regulated industry such as financial services, ensuring that software and systems comply with these regulations is a constant challenge for development and operations teams. Cilium empowers teams with tools to ensure continuous compliance with standards like FIPS, PCIDSS, Open Banking, Fedramp, and SOC 2 by offering real-time monitoring and analysis of workload communication to identify non-compliant connections. It emphasizes encryption, traffic analysis, and full-stack monitoring without imposing performance constraints, ensuring confidentiality, integrity, and availability in regulated environments.    ',
   ],
-
-  withImage: true,
   imageSrc: FinanceImage1,
   imageAlt: 'Cilium continuous compliance image',
 };
 
 const financialUsecases = [
   {
-    icon: EncryptionIcon,
+    icon: 'encryption',
     title: 'Transparent Encryption ',
-    url: '/use-cases/transparent-encryption',
+    buttonLink: '/use-cases/transparent-encryption',
     description:
       'Elevate compliance and lower risk with Cilium transparent encryption. With just one switch, no application changes, service meshes  or additional proxies',
   },
   {
-    icon: NetworkPolicyIcon,
+    icon: 'networkPolicy',
     title: 'Network Policy ',
-    url: '/use-cases/network-policy',
+    buttonLink: '/use-cases/network-policy',
     description:
       'Maintain identity based policies effectively at scale with Cilium’s advanced network polices ',
   },
   {
-    icon: EgressGatewayIcon,
+    icon: 'egressGateway',
     title: 'Egress Gateway',
-    url: '/use-cases/egress-gateway',
+    buttonLink: '/use-cases/egress-gateway',
     description:
       'Present a group of cloud native workloads from a stable IP address to integrate with traditional firewalls',
   },
@@ -162,8 +153,8 @@ const financialResources = [
     imageSrc: PostFinanceOfficeImage,
     imageAlt: 'post finance office',
     title: ' Post Finance picks Cilium for Cloud Native Networking',
-    url: 'https://www.youtube.com/watch?v=fjhKw49YcY4',
-    CTAtext: 'Watch The Case Study',
+    buttonLink: 'https://www.youtube.com/watch?v=fjhKw49YcY4',
+    buttonText: 'Watch The Case Study',
     description:
       'Cilium helped the Post Finance team build a scalable Kubernetes platform which meets the demanding requirements to run mission-critical banking software in production.',
   },
@@ -171,8 +162,8 @@ const financialResources = [
     imageSrc: CapitalOnefficeImage,
     imageAlt: 'capital office building',
     title: ' How Capital One used eBPF and Cilium to build a secure, maintainable PaaS',
-    url: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w',
-    CTAtext: 'Watch The Talk',
+    buttonLink: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w',
+    buttonText: 'Watch The Talk',
     description:
       'Capital One leveraged Cilium to build a multi-tenant platform meeting all its requirements for security, maintainability, network visibility, and scale. ',
   },
@@ -181,8 +172,8 @@ const financialResources = [
     imageSrc: RobinhoodOfficeImage,
     imageAlt: 'robinhoo office building',
     title: 'More Churn No Problem: Lessons Learned Running Cilium in Production',
-    url: 'https://www.youtube.com/watch?v=qdr9XQ6h5zs',
-    CTAtext: 'Watch The Talk',
+    buttonLink: 'https://www.youtube.com/watch?v=qdr9XQ6h5zs',
+    buttonText: 'Watch The Talk',
     description:
       "Robinhood's war stories from running Cilium in a high-churn near-production environment, learn how they overcame challenges by better understanding and tuning Cilium.",
   },
@@ -200,19 +191,17 @@ const financeLogos = [
 
 const FinancialServicesPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="lg:h-[470px] lg:w-[470px] lg:-mt-10">
-      <Testimonial {...bloombergTestimonial} className="mt-8" />
-    </Hero>
-    <BulletSection {...bulletSection3} />
-    <Stats className="my-8" {...postfinanceStats} />
-    <BulletSection {...bulletSection1} />
-    <BulletSection {...bulletSection2} />
-    <FeaturedTalks heading="Featured talks" talks={financialTalks} className="mt-8" />
-    <AdoptersLogo items={financeLogos} className="my-16 grid grid-cols-3 lg:grid lg:grid-cols-4" />
+    <Hero {...heroContent} />
+    <Testimonial {...bloombergTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection3} className="mt-10 md:mt-20 lg:mt-32" />
+    <Stats {...postfinanceStats} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection2} className="my-10 md:my-20 lg:my-32" />
+    <FeaturedTalks talks={financialTalks} />
+    <AdoptersLogo items={financeLogos} className="mt-10 md:mt-20 lg:mt-32" />
     <ResourcesCard
       heading="Join Global Financial Leaders in the Cloud Native Networking Revolution "
       resources={financialResources}
-      className="mt-8"
     />
     <IndustryUseCases
       heading="Cilium’s Solutions for Financial Services"

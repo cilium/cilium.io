@@ -6,20 +6,16 @@ import FeaturedTalks from 'components/pages/industries/featured-talks';
 import Hero from 'components/pages/industries/hero';
 import ResourcesCard from 'components/pages/industries/resources';
 import Stats from 'components/pages/industries/stats';
-import AdopterTestimonial from 'components/pages/industries/testimonial';
+import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import AscendLogo from 'icons/logo-ascend.inline.svg';
-import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
-import DatadogLogo from 'icons/logo-datadog.inline.svg';
-import AuditBee from 'images/pages/industries/audit-bee.png';
-import SoftwareImage1 from 'images/pages/industries/software-1.png';
-import SoftwareImage2 from 'images/pages/industries/software-2.webp';
-import SoftwareImage3 from 'images/pages/industries/software-3.webp';
+import AscendOfficeImage from 'images/pages/industries/software/ascendoffice.png';
+import AuditBee from 'images/pages/industries/software/audit-bee.png';
+import ClickhouseOfficeImage from 'images/pages/industries/software/clickhouseoffice.png';
+import SoftwareImage1 from 'images/pages/industries/software/software-1.png';
+import SoftwareImage2 from 'images/pages/industries/software/software-2.webp';
+import SoftwareImage3 from 'images/pages/industries/software/software-3.webp';
 import MainLayout from 'layouts/main/main';
-
-import AscendOfficeImage from './images/ascendoffice.png';
-import ClickhouseOfficeImage from './images/clickhouseoffice.png';
 
 const heroContent = {
   heading: 'SaaS, Software, and  DBaaS',
@@ -37,7 +33,7 @@ const datadogTestimonial = {
   description:
     'Datadog uses Cilium to secure and monitor the network traffic of their containerized applications running on Kubernetes',
   withPerson: true,
-  logo: DatadogLogo,
+  logo: 'datadog',
   name: 'Laurent Bernaille',
   role: ' Staff Engineer, Datadog',
   url: 'https://www.cncf.io/case-studies/datadog/',
@@ -47,7 +43,7 @@ const datadogTestimonial = {
 const clickhouseStats = {
   description:
     'ClickHouse turned to Cilium as their preferred networking solution to simplify the process of isolating customers from each other',
-  logo: ClickHouseLogo,
+  logo: 'clickHouse',
   stats: [
     {
       heading: 'MASSIVE SCALE',
@@ -70,7 +66,7 @@ const clickhouseStats = {
 const ascendTestimonial = {
   description:
     'Ascend turned to Cilium as their CNI which simplified integrating into customer networks, eliminated their IP churn and density issues.',
-  logo: AscendLogo,
+  logo: 'ascend',
   withPerson: true,
   quotedText:
     'From experience, we know that getting network policy correct is difficult and when you do get it wrong it is a nightmare. Trying to understand what’s going on with traditional tooling means, you probably throw three engineers at the problem for five hours while with Hubble you know what’s happening in about three seconds. It was one of those very easy trade offs to explain to my CEO. We’re going to encounter the cost of debugging, let’s make it a lot less expensive.',
@@ -86,7 +82,6 @@ const bulletSection1 = {
     "One of the core tenets of DevOps is automation. Cilium's architecture ensures that all its components can be deployed automatically, integrating into existing workflows and augmenting automation capabilities. Platform engineering teams can seamlessly integrate Cilium into their CI/CD pipelines, ensuring continuous delivery and integration without manual intervention.",
     'Cilium is designed to be configured using an API. This aligns with the GitOps principles, where the desired state of infrastructure is declared in code and stored in Git repositories. The API-driven model of Cilium enables organizations to manage, scale, and modify their infrastructure using code, ensuring consistency and repeatability.',
   ],
-  withImage: true,
   imageSrc: SoftwareImage1,
   ImageAlt: 'cilium saas tools and dbs illustration',
 };
@@ -98,9 +93,9 @@ const bulletSection2 = {
     "Cilium's Hubble Service Map allows platform teams to furnish application developers with a portal to view their own workloads, dependencies, and network flows. This self-service model makes it easier to identify service connections, calls, and even DNS operations, all crucial for diagnosing application networking problems. The service map helps streamline the onboarding of new applications and teams and accelerates the debugging process.",
     'By mitigating disputes between application and infrastructure operation teams, Cilium accelerates the investigation of application-layer issues, enabling frictionless, self-service root cause analysis for developers.',
   ],
-  withImage: true,
   imageSrc: SoftwareImage2,
   ImageAlt: 'hubble 5xx graphs',
+  imageRight: false,
 };
 
 const bulletSection3 = {
@@ -108,7 +103,6 @@ const bulletSection3 = {
   paragraphs: [
     "For enterprises building muti-tenant architectures, Cilium enforces isolation between tenants and ensures different teams can safely run on the same platform. With Cilium's multi-tenant observability features, teams can easily access application metrics without compromising security. Traditional logging systems often fall short when segregating data by tenants. Cilium provides multi-tenant, self-service access using the OpenID Connect (OIDC) standard. Teams can have RBAC-based access to relevant data and connectivity metrics, such as network policy drops, DNS lookup failures, and more.",
   ],
-  withImage: true,
   imageSrc: SoftwareImage3,
   ImageAlt: 'hubble architecture',
 };
@@ -141,19 +135,17 @@ const softwareResources = [
     title: 'How Ascend Leverages Cilium as a Networking Layer',
     description:
       'Ascend turned to Cilium as their CNI which simplified integrating into customer networks, eliminated their IP churn and density issues, and provided them with reliable encryption and network policies',
-    url: 'https://www.cncf.io/case-studies/ascend/',
+    buttonLink: 'https://www.cncf.io/case-studies/ascend/',
     imageSrc: AscendOfficeImage,
     imageAlt: 'ascend office interior',
-    CTAtext: 'Learn More',
   },
   {
     title: 'How ClickHouse is Using Cilium to Implement Efficient Network Policies',
     description:
       'Clickhouse leveragd Cilium in bulding its serverless SaaS offering, Clickhouse Cloud',
-    url: 'https://www.cncf.io/case-studies/clickhouse/',
+    buttonLink: 'https://www.cncf.io/case-studies/clickhouse/',
     imageSrc: ClickhouseOfficeImage,
     imageAlt: 'clickhouse banner',
-    CTAtext: 'Learn More',
   },
 ];
 
@@ -169,20 +161,19 @@ const softwareLogos = [
   'canonical',
   'cosmonic',
 ];
+
 const SoftwarePage = () => (
-  <MainLayout>
-    <Hero {...heroContent} imageStyle="" className="">
-      <AdopterTestimonial {...datadogTestimonial} />
-    </Hero>
-    <BulletSection {...bulletSection1} className="my-8" />
-    <Stats {...clickhouseStats} />
-    <BulletSection {...bulletSection2} className="my-8" />
-    <AdopterTestimonial {...ascendTestimonial} />
-    <BulletSection {...bulletSection3} className="my-8" />
-    <AdoptersLogo items={softwareLogos} className="my-16 grid grid-cols-3 lg:grid lg:grid-cols-4" />
-    <FeaturedTalks heading="Featured Talks" talks={softwareTalks} />
+  <MainLayout theme="gray">
+    <Hero {...heroContent} />
+    <Testimonial {...datadogTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
+    <Stats {...clickhouseStats} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
+    <Testimonial {...ascendTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection3} className="my-10 md:my-20 lg:my-32" />
+    <FeaturedTalks talks={softwareTalks} />
+    <AdoptersLogo items={softwareLogos} className="mt-10 md:mt-20 lg:mt-32" />
     <ResourcesCard
-      className="mt-10"
       heading="Build on a Secure, Scalable, and Modern Networking and Observability Stack"
       resources={softwareResources}
     />

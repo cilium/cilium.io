@@ -91,7 +91,7 @@ const Header = ({
           </div>
           <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1100px)]:flex">
             {showSearchBox && <SearchBox indices={searchIndices} />}
-            <ul className="flex items-center lg:space-x-6 xl:space-x-8 2xl:space-x-11">
+            <ul className="flex items-center lg:space-x-6 2xl:space-x-11">
               {navigation.map((item, index) => (
                 <MenuItem {...item} key={index} />
               ))}

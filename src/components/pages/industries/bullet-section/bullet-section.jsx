@@ -3,42 +3,51 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Container from 'components/shared/container/container';
+import Heading from 'components/shared/heading';
 
 const BulletSection = ({
   heading,
   className,
-  withImage,
   imageSrc,
+  imageRight,
   paragraphs,
   imageAlt,
   imageStyle,
+  withBackground,
 }) => (
-  <Container>
-    <div className={classNames('py-8', className)}>
-      <div className="lg:flex lg:items-start lg:gap-[42px]">
-        <div className="">
-          <h2 className="text-2xl font-bold lg:pb-6">{heading}</h2>
-          <div className="items-center lg:flex lg:gap-12">
-            <div className="grow">
-              {paragraphs.map((paragraph, index) => (
-                <p key={index} className="mb-4">
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-
-            {withImage && (
-              <img
-                className={classNames('"w-full  lg:w-1/2 lg:grow', imageStyle)}
-                src={imageSrc}
-                alt={imageAlt}
-              />
-            )}
-          </div>
-        </div>
+  <section className={classNames(withBackground && 'bg-gray-4')}>
+    <Container className={classNames('grid grid-cols-12 gap-y-6 gap-x-6 xl:gap-x-8', className)}>
+      <div className={classNames('col-span-full lg:col-span-6')}>
+        <Heading className="mb-5 leading-tight" tag="h2" size="sm">
+          {heading}
+        </Heading>
+        {paragraphs.map((paragraph, index) => (
+          <p key={index} className={classNames(index < paragraphs.length - 1 && 'mb-4')}>
+            {paragraph}
+          </p>
+        ))}
       </div>
-    </div>
-  </Container>
+      {imageSrc && (
+        <div
+          className={classNames(
+            'col-span-full flex items-center justify-center justify-self-center pt-6 md:col-span-8 lg:col-span-6 lg:pt-0',
+            !imageRight
+              ? 'pr-0 lg:col-start-1 lg:row-start-1 lg:pr-10 xl:pr-[72px]'
+              : 'pl-0 lg:pl-10 xl:pl-[72px]'
+          )}
+        >
+          <img
+            className={classNames('max-h-full w-full lg:max-h-[350px]', imageStyle)}
+            width={592}
+            height={350}
+            src={imageSrc}
+            alt={imageAlt}
+            loading="lazy"
+          />
+        </div>
+      )}
+    </Container>
+  </section>
 );
 
 BulletSection.propTypes = {
@@ -48,16 +57,18 @@ BulletSection.propTypes = {
   imageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
   imageStyle: PropTypes.string,
-  withImage: PropTypes.bool,
+  imageRight: PropTypes.bool,
+  withBackground: PropTypes.bool,
 };
 
 BulletSection.defaultProps = {
-  className: {},
-  withImage: false,
-  imageSrc: '',
-  imageAlt: '',
+  className: null,
+  imageSrc: null,
+  imageAlt: null,
   imageStyle: '',
   paragraphs: [],
+  imageRight: true,
+  withBackground: false,
 };
 
 export default BulletSection;

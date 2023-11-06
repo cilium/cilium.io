@@ -1,80 +1,58 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-// import classNames from 'classnames';
 import Container from 'components/shared/container/container';
+import Link from 'components/shared/link/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
+import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
+import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
+import TripLogo from 'icons/logo-trip.inline.svg';
 
-const Stats = ({ logo: Logo, description, CTAtext, url, stats, className }) => {
-  const gridStyle = {
-    gridTemplateColumns: `repeat(${stats.length}, 1fr)`,
-    gridTemplateRows: '1fr',
-  };
-  const gridArea = [
-    '1 / 1 / 2 / 2',
-    '1 / 2 / 2 / 3',
-    '1 / 3 / 2 / 4',
-    '1 / 4 / 2 / 5',
-    '1 / 5 / 2 / 6',
-  ];
+const logos = {
+  clickHouse: ClickHouseLogo,
+  trip: TripLogo,
+  postFinance: PostFinanceLogo,
+};
+
+const Stats = ({ logo, description, CTAtext, url, stats, className }) => {
+  const Logo = logos[logo];
 
   return (
     <Container className={className}>
-      <div
-        style={{ boxShadow: '0px 1px 8px 0px rgba(20, 26, 31, 0.20)' }}
-        className="rounded-xl bg-white p-6"
-      >
-        <div className=" lg:flex lg:items-center lg:gap-[29px]">
-          <div className="m-auto text-center lg:text-left">
-            <Logo className="h-20 w-32" />
-            <p className="pb-3 text-center lg:w-[285px] lg:text-left lg:text-sm">{description}</p>
-            <a
-              href={url}
+      <div className="rounded-xl bg-white px-6 py-8 shadow-primary">
+        <div className="grid grid-cols-12 gap-4 divide-y divide-gray-3 md:gap-6 lg:gap-8 lg:divide-x lg:divide-y-0">
+          <div className="col-span-12 flex flex-col items-start justify-start gap-4 divide-y divide-gray-3 md:flex-row md:items-center md:justify-between md:gap-6 md:divide-x md:divide-y-0 lg:col-span-8 lg:gap-8">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className={classNames(
+                  'flex h-full w-full flex-1 flex-col items-center justify-center gap-y-2 text-left md:w-auto',
+                  index !== 0 ? 'pt-6 md:pl-8 md:pt-0' : ''
+                )}
+              >
+                <span className="text-md w-full font-bold lg:text-xl">{stat.heading}</span>
+                <span className="text-md w-full text-left">{stat.subHeading}</span>
+              </div>
+            ))}
+          </div>
+          <div className="col-span-12 flex h-full flex-col items-start justify-start pt-6 md:pt-8 lg:col-span-4 lg:pl-8 lg:pt-0">
+            <span className="shrink-0 text-left">
+              <Logo className="h-20 w-32" />
+            </span>
+            <p className="w-full max-w-none text-sm">{description}</p>
+            <Link
+              to={url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden text-sm font-bold uppercase text-primary-1 hover:text-gray-1 lg:inline-block"
+              className="mt-6 text-sm font-semibold uppercase text-primary-1 hover:text-gray-1"
             >
               <span className="flex items-center gap-2">
-                <span>{CTAtext}</span>
-                <span>
-                  <ArrowIcon className="ml-1 hidden shrink-0 xs:inline-block" />
-                </span>
+                {CTAtext}
+                <ArrowIcon className="ml-1 shrink-0" />
               </span>
-            </a>
+            </Link>
           </div>
-          <div
-            className="mt-5 flex flex-row flex-wrap gap-8 self-center lg:mt-0  lg:grid lg:w-[876px] lg:gap-4"
-            style={gridStyle}
-          >
-            {stats.map((stat, index) => {
-              const gridChild = { gridArea: gridArea[index] };
-              return (
-                <div
-                  key={index}
-                  style={gridChild}
-                  className="flex basis-1/3 items-center justify-center lg:h-[150px]  lg:border-l lg:border-[#E0E5EB]"
-                >
-                  <div className="flex flex-col  items-center text-center lg:gap-8">
-                    <span className="text-md mx-auto font-bold lg:text-xl">{stat.heading}</span>
-                    <span className="text-md mx-auto  p-1 text-left">{stat.subHeading}</span>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block font-bold uppercase text-[#0073E5] lg:hidden"
-          >
-            <span className="flex items-center gap-2">
-              <span>{CTAtext}</span>
-              <span>
-                <ArrowIcon className="ml-1 hidden shrink-0 xs:inline-block" />
-              </span>
-            </span>
-          </a>
         </div>
       </div>
     </Container>
