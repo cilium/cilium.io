@@ -648,7 +648,7 @@ export default {
   },
   singlestore: {
     iconName: 'singlestore',
-    text: '<b>SingleStore</b> uses hubble for observability ',
+    text: '<b>SingleStore</b> uses Hubble for observability ',
     links: [
       {
         linkText: 'Read Blog',
