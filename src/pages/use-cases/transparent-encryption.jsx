@@ -31,7 +31,7 @@ const sectionContent1 = {
 const testimonials = [
   {
     logo: AscendLogo,
-    title: 'Achieving HIPPA compliance with Cilium’s transparent encryption',
+    title: 'Achieving HIPAA compliance with Cilium’s transparent encryption',
     CTAtext: 'Read The Case Study',
     url: 'https://www.cncf.io/case-studies/ascend/',
     description:
