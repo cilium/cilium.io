@@ -97,6 +97,7 @@ import SapianLogo from './images/sapian.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SchubergPhilisLogo from './images/schuberg-philis.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
+import SinglestoreLogo from './images/singlestore.inline.svg';
 import SkybetLogo from './images/skybet.inline.svg';
 import SmileLogo from './images/smile.inline.svg';
 import SnappLogo from './images/snapp.inline.svg';
@@ -114,9 +115,12 @@ import TwilioLogo from './images/twilio.inline.svg';
 import UngleichLogo from './images/ungleich.inline.svg';
 import UnitedCloudLogo from './images/unitedcloud.inline.svg';
 import UtmostLogo from './images/utmost.inline.svg';
+import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  ws02: Ws02Logo,
+  singlestore: SinglestoreLogo,
   deezer: DeezerLogo,
   parseable: ParseableLogo,
   plusserver: PlusserverLogo,

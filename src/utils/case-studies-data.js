@@ -646,6 +646,29 @@ export default {
       },
     ],
   },
+  singlestore: {
+    iconName: 'singlestore',
+    text: '<b>SingleStore</b> uses Hubble for observability ',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://www.singlestore.com/blog/showing-blocked-requests-in-notebooks-with-cilium-hubble/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  ws02: {
+    iconName: 'ws02',
+    text: '<b>WS02</b> is using Cilium to implement zero trust networking within their internal developer platform as a service',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://wso2.com/library/blogs/how-we-implemented-zero-trust-in-choreo/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   twilio: {
     iconName: 'twilio',
     text: '<b>Twilio Segment</b>  is using Cilium across their Kubernetes based compute platform',

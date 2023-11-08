@@ -7,26 +7,19 @@ import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import ResourcesCard from 'components/pages/industries/resources';
 import Stats from 'components/pages/industries/stats';
-import AdopterTestimonial from 'components/pages/industries/testimonial';
+import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import DbSchenkerLogo from 'icons/logo-dbschenker.inline.svg';
-import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
-import TripLogo from 'icons/logo-trip.inline.svg';
-import EcommerceImage1 from 'images/pages/industries/ecommerce-1.png';
-import TravelBee from 'images/pages/industries/travel-bee.png';
+import CloudIcon from 'images/pages/industries/e-commerce/cloud.inline.svg';
+import CodeIcon from 'images/pages/industries/e-commerce/code.inline.svg';
+import DbIcon from 'images/pages/industries/e-commerce/db.inline.svg';
+import EcommerceImage1 from 'images/pages/industries/e-commerce/ecommerce-1.png';
+import IkeaOfficeImage from 'images/pages/industries/e-commerce/ikeaoffice.png';
+import LockIcon from 'images/pages/industries/e-commerce/lock.inline.svg';
+import TravelBee from 'images/pages/industries/e-commerce/travel-bee.png';
+import TrendyolOfficeImage from 'images/pages/industries/e-commerce/trendyoloffice.png';
+import TripOfficeImage from 'images/pages/industries/e-commerce/tripoffice.png';
 import MainLayout from 'layouts/main';
-
-import BandWidthIcon from './images/bandwidth-latency-optimization.inline.svg';
-import CloudIcon from './images/cloud.svg';
-import CodeIcon from './images/code.svg';
-import DbIcon from './images/db.svg';
-import IkeaOfficeImage from './images/ikeaoffice.png';
-import LockIcon from './images/lock.svg';
-import ScalableKubernetesIcon from './images/scalable-kubernetes.inline.svg';
-import ServiceMeshIcon from './images/service-mesh.inline.svg';
-import TrendyolOfficeImage from './images/trendyoloffice.png';
-import TripOfficeImage from './images/tripoffice.png';
 
 const heroContent = {
   heading: 'E-commerce',
@@ -40,7 +33,7 @@ const heroContent = {
 };
 
 const tripStats = {
-  logo: TripLogo,
+  logo: 'trip',
   url: 'https://www.cncf.io/case-studies/trip-com-group/',
   description:
     'Trip.com operates in 200 countries and 40 languages, using both on-premise and cloud-based Kubernetes.',
@@ -68,7 +61,6 @@ const bullectSection1 = {
     'E-commerce platforms with offerings spanning a wide geographic distribution often need to deploy their platforms close to their users to reduce latency. Cilium provides a wide range of features enabling e-commerce platforms to build infrastructure across multiple clouds, regions, availability zones, and geographic locations without sacrificing performance. Cilium Cluster Mesh effectively allows joining multiple clusters into a large unified network, regardless of the Kubernetes distribution or location each of them is running. Cilium also offers scalable and efficient load balancing and ingress, enabling maglev-supported load balancing on L3/L4 for N/S traffic and E/W, including DSR and transparent k8s ingress controllers.',
     'With a Cilium-enabled infrastructure, e-commerce platforms can confidently expand their reach and offer fast, reliable, and globally accessible e-commerce experiences to their customers.',
   ],
-  withImage: true,
   imageSrc: EcommerceImage1,
   imageAlt: 'cilium load balancing illustration',
 };
@@ -83,7 +75,7 @@ const trendyolTestimonial = {
   name: 'Emin Aktas',
   role: ' Platform Engineer, Trendyol',
   url: 'https://www.cncf.io/case-studies/trendyol/',
-  logo: TrendyolLogo,
+  logo: 'trendyol',
 };
 
 const dbSchenkerTestimonial = {
@@ -96,7 +88,7 @@ const dbSchenkerTestimonial = {
   name: 'Amir Kheirkhahan',
   role: 'DevOps Specialist, DB Schenker',
   url: 'https://cilium.io/blog/2023/09/07/db-schenker-migration-to-cilium/',
-  logo: DbSchenkerLogo,
+  logo: 'dbSchenker',
 };
 
 const commerceResources = [
@@ -104,8 +96,8 @@ const commerceResources = [
     imageSrc: TrendyolOfficeImage,
     imageAlt: 'holding a trenydol shipping box',
     title: 'Unleashing the Power of Cilium CNI to Propel Trendyol’s Performance Up to 40%!',
-    CTAtext: 'Read the case study',
-    url: 'https://www.cncf.io/case-studies/trendyol/',
+    buttonText: 'Read the case study',
+    buttonLink: 'https://www.cncf.io/case-studies/trendyol/',
     description:
       'Recognizing the need to enhance their clusters and unlock new capabilities, Trendyol switched from flannel and implemented Cilium as the default CNI for the Kubernetes cluster resulting in an up to 40% increase in performance.',
   },
@@ -114,8 +106,8 @@ const commerceResources = [
     imageSrc: IkeaOfficeImage,
     imageAlt: 'newyork times  office building',
     title: 'IKEA Private Cloud: Connecting 390+ Stores and 4.3 Billion Website Visitors',
-    CTAtext: 'Watch the Talk',
-    url: 'https://www.youtube.com/watch?v=mRbsXkdWUNU',
+    buttonText: 'Watch the Talk',
+    buttonLink: 'https://www.youtube.com/watch?v=mRbsXkdWUNU',
     description:
       'Cilium has become a key piece connecting the vast cloud native estate of IKEA Retail (Ingka Group) encompassing both public and private cloud Kubernetes clusters.',
   },
@@ -124,8 +116,8 @@ const commerceResources = [
     imageSrc: TripOfficeImage,
     imageAlt: 'trip.com office building',
     title: 'How Trip.com Group switched to Cilium For Scalable and Cloud Native Networking',
-    CTAtext: 'Read The Blog Post',
-    url: 'https://www.cncf.io/case-studies/trip-com-group/',
+    buttonText: 'Read The Blog Post',
+    buttonLink: 'https://www.cncf.io/case-studies/trip-com-group/',
     description:
       'Trip.com looked at several options to pick its next-generation networking platform. Cilium provided them with an extremely scalable and stable networking solution.',
   },
@@ -144,27 +136,27 @@ const ecommerceLogos = [
 
 const commerceUsecases = [
   {
-    icon: BandWidthIcon,
+    icon: 'bandWidth',
     title: 'Bandwidth and Latency Management',
     description:
       'Optimize your bandwidth and latency with rate limiting and fair queuing. Rely on our TCP congestion control algorithm.',
-    url: '/use-cases/bandwidth-optimization',
+    buttonLink: '/use-cases/bandwidth-optimization',
   },
 
   {
-    icon: ServiceMeshIcon,
+    icon: 'serviceMesh',
     title: 'Service Mesh',
     description:
       'Cilium redefines traditional service mesh frameworks by integrating the mesh layer directly into the kernel using eBPF',
-    url: '/use-cases/service-mesh',
+    buttonLink: '/use-cases/service-mesh',
   },
 
   {
-    icon: ScalableKubernetesIcon,
+    icon: 'scalableKubernetes',
     title: 'High Performance Networking (CNI)',
     description:
       'Enabling network operators to abstract and manage the cloud native network, including on-prem integration with BGP and overlay networking compatible with Cloud SDNs.',
-    url: '/use-cases/cni',
+    buttonLink: '/use-cases/cni',
   },
 ];
 
@@ -201,18 +193,14 @@ const ecommerceFeatures = {
 };
 
 const MediaEntertainmentPage = () => (
-  <MainLayout>
-    <Hero {...heroContent} imageStyle="lg:h-[350px] lg:w-[350px] mb-24">
-      <Stats {...tripStats} className="py-8" />
-    </Hero>
-    <BulletSection {...bullectSection1} />
-    <AdopterTestimonial {...trendyolTestimonial} />
-    <FeatureCard {...ecommerceFeatures} className="mt-12 mb-16" />
-    <AdopterTestimonial {...dbSchenkerTestimonial} />
-    <AdoptersLogo
-      className="my-16 mb-16 grid grid-cols-3 lg:grid lg:grid-cols-4"
-      items={ecommerceLogos}
-    />
+  <MainLayout theme="gray">
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[350px]" />
+    <Stats {...tripStats} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bullectSection1} className="mt-10 md:mt-20 lg:mt-32" />
+    <Testimonial {...trendyolTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <FeatureCard {...ecommerceFeatures} className="mt-10 md:mt-20 lg:mt-32" />
+    <Testimonial {...dbSchenkerTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <AdoptersLogo items={ecommerceLogos} className="mt-10 md:mt-20 lg:mt-32" />
     <ResourcesCard
       heading="Leverage Cilium To Deliver Reliable, Fast, and Secure E-commerce Experience to  Customers"
       resources={commerceResources}
