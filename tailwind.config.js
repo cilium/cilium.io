@@ -20,6 +20,7 @@ module.exports = {
         '2xl': [defaultTheme.fontSize['2xl'][0], defaultTheme.lineHeight.snug],
         '4xl': [defaultTheme.fontSize['4xl'][0], defaultTheme.lineHeight.tight],
         '5xl': [defaultTheme.fontSize['5xl'][0], defaultTheme.lineHeight.tight],
+        15: 15,
         22: 22,
         44: 44,
         52: 52,
@@ -77,6 +78,7 @@ module.exports = {
         'search-icon': "url('/images/search.svg')",
         loader: "url('/images/loader.svg')",
         grid: "url('/images/grid.svg')",
+        '404-page-pattern': "url('/images/404-page-pattern.svg')",
       },
       typography: (theme) => ({
         DEFAULT: {
