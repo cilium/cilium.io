@@ -8,7 +8,7 @@ export default {
         linkUrl: 'https://cilium.io/blog/2020/09/03/wildlife-studios-multi-cluster-gaming-platform',
       },
       {
-        linkText: 'Video',
+        linkText: 'Talk',
         linkUrl: 'https://www.youtube.com/watch?v=_1t3bXzptP0&ab_channel=eBPFSummit',
         linkTarget: '_blank',
       },
@@ -41,7 +41,7 @@ export default {
     text: 'S&P Global uses Cilium as its CNI',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=6CZ_SSTqb4g',
         linkTarget: '_blank',
       },
@@ -125,7 +125,7 @@ export default {
     text: 'Building a Secure and Maintainable PaaS',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w&ab_channel=eBPFSummit',
         linkTarget: '_blank',
       },
@@ -148,7 +148,7 @@ export default {
     text: 'Scaling a Multi-Tenant Kubernetes Clusters in a Telco',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=JH3pcmhNEHA&ab_channel=eBPFSummit',
         linkTarget: '_blank',
       },
@@ -186,7 +186,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video',
+        linkText: 'Talk',
         linkUrl: 'https://isovalent.com/postfinance-cilium-webinar/',
         linkTarget: '_blank',
       },
@@ -201,7 +201,7 @@ export default {
         linkUrl: 'https://cilium.io/blog/2022/04/12/cilium-multi-cluster-networking',
       },
       {
-        linkText: 'Video',
+        linkText: 'Talk',
         linkUrl: 'https://youtu.be/MsbrVLaPFMo',
         linkTarget: '_blank',
       },
@@ -225,7 +225,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video',
+        linkText: 'Talk',
         linkUrl: 'https://www.youtube.com/watch?v=NIsU4I950l4',
         linkTarget: '_blank',
       },
@@ -236,7 +236,7 @@ export default {
     text: 'Cloud Native Networking with eBPF',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=yXm7yZE2rk4',
         linkTarget: '_blank',
       },
@@ -247,7 +247,7 @@ export default {
     text: 'Managed Kubernetes: 1.5 Years of Cilium Usage at DigitalOcean',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Watch Talk',
         linkUrl: 'https://youtu.be/jw8tEPP6jwQ?t=7885',
         linkTarget: '_blank',
       },
@@ -264,7 +264,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video',
+        linkText: 'Talk',
         linkUrl: 'https://www.youtube.com/watch?v=26KbW5-BeNA',
         linkTarget: '_blank',
       },
@@ -285,12 +285,12 @@ export default {
     text: 'Bell uses Cilium and eBPF for telco networking',
     links: [
       {
-        linkText: 'Video 1',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=fNtG0iHYne4',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video 2',
+        linkText: 'Talk 2',
         linkUrl: 'https://www.youtube.com/watch?v=vJaOKGWiyvU',
         linkTarget: '_blank',
       },
@@ -301,7 +301,7 @@ export default {
     text: 'Kubernetes Network Policies in Action with Cilium',
     links: [
       {
-        linkText: 'Video',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=kwQ0ooO3UM8&ab_channel=eBPFSummit',
         linkTarget: '_blank',
       },
@@ -328,12 +328,12 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video 1',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=sg-F_R-ZVNc',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video 2',
+        linkText: 'Talk 2',
         linkUrl:
           'https://www.youtube.com/watch?v=mRbsXkdWUNU&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=4',
         linkTarget: '_blank',
@@ -345,12 +345,12 @@ export default {
     text: 'Sky uses Cilium as their CNI and for network security',
     links: [
       {
-        linkText: 'Video 1',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=u-4naOMfs_w',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video 2',
+        linkText: 'Talk 2',
         linkUrl: 'https://www.youtube.com/watch?v=1LXKafeuTPo',
         linkTarget: '_blank',
       },
@@ -366,12 +366,12 @@ export default {
     text: 'Datadog is using Cilium in AWS (self-hosted k8s)',
     links: [
       {
-        linkText: 'Video 1',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=6mTVuZUHLBg',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video 2',
+        linkText: 'Talk 2',
         linkUrl:
           'https://www.youtube.com/watch?v=YK7GyEJdJGo&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=7',
         linkTarget: '_blank',
@@ -393,7 +393,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video',
+        linkText: 'Talk',
         linkUrl: 'https://www.youtube.com/watch?v=DSkf9Y06-lE',
         linkTarget: '_blank',
       },
@@ -404,13 +404,13 @@ export default {
     text: 'Meltwater is using Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
     links: [
       {
-        linkText: 'Video',
-        linkUrl: 'https://www.youtube.com/watch?v=w6S6baRHHu8',
+        linkText: 'User Story',
+        linkUrl: 'https://www.cncf.io/case-studies/meltwater/',
         linkTarget: '_blank',
       },
       {
-        linkText: 'User Story',
-        linkUrl: 'https://www.cncf.io/case-studies/meltwater/',
+        linkText: 'Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=w6S6baRHHu8',
         linkTarget: '_blank',
       },
     ],
@@ -444,7 +444,7 @@ export default {
     text: 'Form3 is using Cilium in their production clusters (self-hosted, bare-metal, private cloud)',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
         linkTarget: '_blank',
       },
@@ -460,7 +460,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video',
+        linkText: 'Talk',
         linkUrl:
           'https://www.youtube.com/watch?v=9FDpMNvPrCw&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=5',
         linkTarget: '_blank',
@@ -472,7 +472,7 @@ export default {
     text: 'Bloomberg leverages Cilium to construct data sandboxes that restrict users from distributing data outside the sandbox',
     links: [
       {
-        linkText: 'Video',
+        linkText: 'Talk',
         linkUrl: 'https://www.youtube.com/watch?v=8fiYVyISyz4/',
         linkTarget: '_blank',
       },
@@ -488,7 +488,7 @@ export default {
     text: 'Microsoft chooses Cilium for Azure networking',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Watch Talk',
         linkUrl:
           'https://www.youtube.com/watch?v=y3z6s-CTtU0&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=2',
         linkTarget: '_blank',
@@ -500,7 +500,7 @@ export default {
     text: 'Robinhood uses Cilium for Kubernetes overlay networking',
     links: [
       {
-        linkText: 'Watch video',
+        linkText: 'Watch Talk',
         linkUrl:
           'https://www.youtube.com/watch?v=qdr9XQ6h5zs&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=8',
         linkTarget: '_blank',
@@ -539,7 +539,7 @@ export default {
     text: 'Eficode uses Cilium and Hubble as the default networking and observability solution for their customers',
     links: [
       {
-        linkText: 'Watch Video',
+        linkText: 'Watch Talk',
         linkUrl: 'https://youtu.be/RdAO_Kxe6tE?t=509',
         linkTarget: '_blank',
       },
@@ -550,7 +550,7 @@ export default {
     text: '<b>Yahoo</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
     links: [
       {
-        linkText: 'Watch Video',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
         linkTarget: '_blank',
       },
@@ -618,7 +618,7 @@ export default {
     text: 'TestifySec uses Tetragon to provide detailed eBPF traces of a build step in their supply chain security framework',
     links: [
       {
-        linkText: 'Watch Video',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=zCznRGlsYvo',
         linkTarget: '_blank',
       },
