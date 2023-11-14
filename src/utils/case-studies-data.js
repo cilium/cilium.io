@@ -56,8 +56,14 @@ export default {
         linkUrl: 'https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/',
       },
       {
-        linkText: 'Video',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=xwjZF3alO7g',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 2',
+        linkUrl:
+          'https://www.youtube.com/watch?v=9_hEEk3vUW8&list=PLDg_GiBbAx-l7kyTSyrmVMeTwneGziVQ3&index=15',
         linkTarget: '_blank',
       },
     ],
@@ -98,13 +104,18 @@ export default {
     text: 'What Makes a Good Multi-tenant Kubernetes Solution',
     links: [
       {
-        linkText: 'Video 1',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=7UQ2CU6UEGY&ab_channel=eBPFSummit',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Video 2',
+        linkText: 'Talk 2',
         linkUrl: 'https://www.youtube.com/watch?v=39FLsSc2P-Y&feature=youtu.be&t=116',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 3',
+        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
         linkTarget: '_blank',
       },
     ],
@@ -516,6 +527,11 @@ export default {
         linkUrl: 'https://www.cncf.io/case-studies/clickhouse/',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=jevKiqz7dNU',
+        linkTarget: '_blank',
+      },
     ],
   },
   eficode: {
@@ -576,6 +592,11 @@ export default {
       {
         linkText: 'Read Blog',
         linkUrl: 'https://cilium.io/blog/2022/10/17/constellation-network-encryption/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=EhvCfHzfomI',
         linkTarget: '_blank',
       },
     ],
