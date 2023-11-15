@@ -12,9 +12,12 @@ const pageLinkAndBreakLinkClassName =
 const previousAndNextLinkClassName =
   'flex items-center text-15 gap-x-1 text-primary-1 tracking-tight font-semibold transition-colors hover:text-gray-1';
 
-const Pagination = ({ className, currentPageIndex, pageCount, pageURL }) => {
+const Pagination = ({ className, currentPageIndex, pageCount, pageURL, optionsToSave }) => {
   const handlePageChange = ({ selected }) => {
     const navigatePath = selected === 0 ? pageURL : pageURL + (selected + 1);
+    if (optionsToSave) {
+      localStorage.setItem('navigationData', JSON.stringify(optionsToSave));
+    }
     navigate(navigatePath);
   };
 
@@ -26,6 +29,7 @@ const Pagination = ({ className, currentPageIndex, pageCount, pageURL }) => {
     <nav className={classNames('safe-paddings', className)}>
       <ReactPaginate
         breakLabel="..."
+        hrefBuilder={(page) => pageURL + page}
         containerClassName="flex justify-center items-center sm:gap-x-4 [&>li]:leading-none gap-x-3"
         pageLinkClassName={pageLinkAndBreakLinkClassName}
         breakLinkClassName={pageLinkAndBreakLinkClassName}
@@ -62,10 +66,12 @@ Pagination.propTypes = {
   currentPageIndex: PropTypes.number.isRequired,
   pageCount: PropTypes.number.isRequired,
   pageURL: PropTypes.string.isRequired,
+  optionsToSave: PropTypes.shape(),
 };
 
 Pagination.defaultProps = {
   className: null,
+  optionsToSave: null,
 };
 
 export default Pagination;

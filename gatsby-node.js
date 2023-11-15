@@ -2,7 +2,7 @@ const fetch = require(`node-fetch`);
 const Path = require('path');
 
 const { createEventFilters } = require('./src/utils/event-filters');
-const { EVENT_REGEX } = require('./src/utils/events');
+const { EVENT_REGEX, EVENT_PER_PAGE } = require('./src/utils/events');
 const { EVENTS_BASE_PATH } = require('./src/utils/routes');
 const { slugify } = require('./src/utils/slugify');
 
@@ -231,7 +231,6 @@ async function createEventsPage({ graphql, actions }) {
 
   if (result.errors) throw new Error(result.errors);
 
-  const { totalCount } = result.data.allMdx;
   const {
     featuredPost: { nodes: featuredPost },
     allPosts: { nodes: allEvents },
@@ -254,17 +253,24 @@ async function createEventsPage({ graphql, actions }) {
   const regions = allRegions.reduce((acc, type) => [...acc, type.fieldValue], []);
   const eventFilters = createEventFilters(types, regions);
   const initialFilters = getInitialFilters(eventFilters);
+  const totalPageCount = Math.ceil(postEvents.length / EVENT_PER_PAGE);
 
-  createPage({
-    path: EVENTS_BASE_PATH,
-    component: Path.resolve('./src/templates/events.jsx'),
-    context: {
-      featuredEvent,
-      postEvents,
-      totalCount,
-      eventFilters,
-      initialFilters,
-    },
+  Array.from({ length: totalPageCount }).forEach((_, i) => {
+    const path = i === 0 ? EVENTS_BASE_PATH : `${EVENTS_BASE_PATH}${i + 1}`;
+    createPage({
+      path,
+      component: Path.resolve('./src/templates/events.jsx'),
+      context: {
+        limit: EVENT_PER_PAGE,
+        skip: i * EVENT_PER_PAGE,
+        totalPageCount,
+        currentPage: i + 1,
+        featuredEvent,
+        postEvents,
+        eventFilters,
+        initialFilters,
+      },
+    });
   });
 }
 
