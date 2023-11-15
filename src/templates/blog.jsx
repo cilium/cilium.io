@@ -43,7 +43,7 @@ const BlogPage = (props) => {
       allPosts: { nodes: posts },
       featuredPostEdges: { nodes: featuredStory },
     },
-    pageContext: { categories, currentCategory, currentPage, numPages, slug },
+    pageContext: { categories, currentCategory, basePath, currentPage, numPages },
     location: { pathname },
   } = props;
   const isBlogPage = pathname.startsWith('/blog');
@@ -57,6 +57,7 @@ const BlogPage = (props) => {
         categories={categories}
         posts={posts}
         currentCategory={currentCategory}
+        basePath={basePath}
         currentPage={currentPage}
         numPages={numPages}
       />
