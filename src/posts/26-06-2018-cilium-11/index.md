@@ -250,21 +250,23 @@ containers that are being initialized.
 
 **Kubernetes Example:**
 
-    apiVersion: "cilium.io/v2"
-    kind: CiliumNetworkPolicy
-    metadata:
-      name: init-allow-dns
-    specs:
-      - endpointSelector:
-          matchLabels:
-            "reserved:init": ""
-        egress:
-        - toEntities:
-          - all
-          toPorts:
-          - ports:
-            - port: "53"
-              protocol: UDP
+```
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: init-allow-dns
+specs:
+  - endpointSelector:
+      matchLabels:
+        "reserved:init": ""
+    egress:
+    - toEntities:
+      - all
+      toPorts:
+      - ports:
+        - port: "53"
+          protocol: UDP
+```
 
 The above example allows all pods in the initialization phase to emit traffic on
 port 53/UDP regardless of the destination. Instead of an entities match on
@@ -279,38 +281,42 @@ The service account of a pod is either defined via the [service account admissio
 or can be directly specified in the Pod, Deployment, ReplicationController
 resource like this:
 
-    apiVersion: v1
-    kind: Pod
-    metadata:
-      name: my-pod
-    spec:
-      serviceAccountName: leia
-      ...
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  serviceAccountName: leia
+  ...
+```
 
 The following example grants any pod running under the service account of
 "luke" to issue a `HTTP GET /public` request on TCP port 80 to all pods
 running associated to the service account of "leia".
 
-    apiVersion: "cilium.io/v2"
-    kind: CiliumNetworkPolicy
-    metadata:
-      name: "k8s-svc-account"
-    spec:
-      endpointSelector:
-        matchLabels:
-          io.cilium.k8s.policy.serviceaccount: leia
-      ingress:
-      - fromEndpoints:
-        - matchLabels:
-            io.cilium.k8s.policy.serviceaccount: luke
-        toPorts:
-        - ports:
-          - port: '80'
-            protocol: TCP
-          rules:
-            HTTP:
-            - method: GET
-              path: "/public$"
+```
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: "k8s-svc-account"
+spec:
+  endpointSelector:
+    matchLabels:
+      io.cilium.k8s.policy.serviceaccount: leia
+  ingress:
+  - fromEndpoints:
+    - matchLabels:
+        io.cilium.k8s.policy.serviceaccount: luke
+    toPorts:
+    - ports:
+      - port: '80'
+        protocol: TCP
+      rules:
+        HTTP:
+        - method: GET
+          path: "/public$"
+```
 
 ## Upgrade Notes
 
@@ -385,7 +391,6 @@ Cilium deployment. Feel free to ping us on [Slack](http://cilium.io/slack).
 [mutual tls]: https://istio.io/docs/concepts/security/mutual-tls/
 [prometheus]: https://github.com/prometheus/prometheus
 [init container]: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/
-[go 1.10]: https://blog.golang.org/go1.10
 [bpf reference guide]: https://cilium.readthedocs.io/en/v1.1/bpf/
 [kube-dns policy example]: https://github.com/cilium/cilium/blob/master/examples/policies/kubernetes/namespace/kubedns-policy.yaml
 [kubernetes service account]: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/

@@ -39,23 +39,19 @@ But until recently the biggest impediment to adoption has been that users need a
 Linux kernel that's recent enough to include eBPF capabilities. It takes a while
 for kernel releases to make it into the distributions that are commonly used in
 production environments. We've now passed a watershed, where even [RHEL users
-have 4.18 kernels and can use eBPF
-capabilities](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.4_release_notes/new-features#enhancement_kernel).
+have 4.18 kernels and can use eBPF capabilities](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/8.4_release_notes/new-features#enhancement_kernel).
 As a result we're seeing Cilium adoption in more and more deployments, with the
 field hardening that implies.
 
 ## The natural default CNI
 
 The big public cloud providers have taken an interest along the way. Google uses
-Cilium for the [GKE data
-plane](https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebpf-and-cilium-to-google-kubernetes-engine),
-and AWS recently picked Cilium for [networking in EKS
-Anywhere](https://www.isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium).
+Cilium for the [GKE data plane](https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebpf-and-cilium-to-google-kubernetes-engine),
+and AWS recently picked Cilium for [networking in EKS Anywhere](https://www.isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium).
 With Cilium joining the CNCF as the only Incubation- or Graduation-level CNI
 solution, it's rapidly becoming the natural default for Kubernetes clusters
 everywhere. It already has well over 9,000 GitHub stargazers. We know that our
-current [published list of
-users](https://github.com/cilium/cilium/blob/master/USERS.md) is far from
+current [published list of users](https://github.com/cilium/cilium/blob/master/USERS.md) is far from
 comprehensive - if your organization is also using Cilium we'd be delighted to
 see a pull request adding it.
 
@@ -81,27 +77,22 @@ first started talking with Dan & Thomas was their inherent understanding of open
 source communities, and the way that Cilium has consistently been run as a
 community-oriented project even while owned by the company. We do assign
 resources to an enterprise distribution, and additional enterprise features -
-after all, [you have to have something to
-sell](https://youtu.be/2zF-XcDkTiY?t=350) as a business. But this goes hand in
+after all, [you have to have something to sell](https://youtu.be/2zF-XcDkTiY?t=350) as a business. But this goes hand in
 hand with devoting significant efforts into the open source project. By joining
 the CNCF, the Cilium project is signaling its intent to remain, forever, a
 community project with its core functionality available to all.
 
-As well as Isovalent, we have representation amongst our [maintainers and
-committers](https://raw.githubusercontent.com/cilium/cilium/master/MAINTAINERS.md)
-from many other organizations including Google, Red Hat, SUSE and Datadog. We
+As well as Isovalent, we have representation amongst our [maintainers and committers](https://raw.githubusercontent.com/cilium/cilium/master/MAINTAINERS.md) from many other organizations including Google, Red Hat, SUSE and Datadog. We
 know there are other companies interested to get involved for whom the neutral
 ownership by CNCF will be a real encouragement. The project governance already
-ensures that [no single
-company](https://docs.cilium.io/en/stable/contributing/governance/commit_access/#company-block-vote-limit)
+ensures that [no single company](https://docs.cilium.io/en/stable/contributing/governance/commit_access/#company-block-vote-limit)
 can take control.
 
 Because Cilium has long been run by its community, we don't expect to see any
 dramatic overnight changes in the way you use, interact with or contribute to
 it.
 
-- The best place to start is our [Slack
-  community](https://cilium.herokuapp.com/) where you'll find thousands of
+- The best place to start is our [Slack community](https://cilium.herokuapp.com/) where you'll find thousands of
   people and a lot of help, should you need it
 
 - One new initiative is our weekly [Cilium InstallFest](https://cilium.io/learn) - book your place today!

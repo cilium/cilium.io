@@ -15,11 +15,11 @@ const PopularPosts = ({ className, titleTheme }) => {
     query BlogPagePopularPosts {
       allPopularPosts: allMdx(
         filter: {
-          fileAbsolutePath: { regex: "/posts/" }
+          internal: { contentFilePath: { regex: "/posts/" } }
           fields: { isPopular: { eq: true }, isFeatured: { eq: false } }
         }
         limit: 3
-        sort: { order: DESC, fields: fileAbsolutePath }
+        sort: { frontmatter: { date: DESC } }
       ) {
         posts: nodes {
           fields {
@@ -38,7 +38,6 @@ const PopularPosts = ({ className, titleTheme }) => {
               }
             }
           }
-          fileAbsolutePath
         }
       }
     }

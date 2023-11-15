@@ -37,9 +37,7 @@ Check out our [docs](http://docs.cilium.io/en/stable/intro/) for a more detailed
 - Multiple machines set up with Ubuntu 18.04 (bare-metal, AWS instances, GCE instances, etc).
 - Privileged access to the Ubuntu servers as root or with `sudo` for installing packages.
 
-For AWS deployments, you can choose a community AMI for your location: <https://cloud-images.ubuntu.com/daily/server/locator/>. We used the community AMI `ami-d8d997a0` to launch 3 Ubuntu 18.04 instances. You'll need to open up your Security Group (SG) to allow communication on at least the following ports.
-
-<center>
+For AWS deployments, you can choose a community AMI for your location: [https://cloud-images.ubuntu.com/daily/server/locator/](https://cloud-images.ubuntu.com/daily/server/locator/). We used the community AMI `ami-d8d997a0` to launch 3 Ubuntu 18.04 instances. You'll need to open up your Security Group (SG) to allow communication on at least the following ports.
 
 |           |                          |
 | :-------- | :----------------------- |
@@ -48,12 +46,11 @@ For AWS deployments, you can choose a community AMI for your location: <https://
 | 443       | k8s API within SG        |
 | 2379-2380 | etcd-operator within SG  |
 | 4240      | HTTP L3 checks within SG |
-| 6443      | kubeadm/k8s API access   |
+| 6443      | kubeadm\/k8s API access  |
 | 8472      | vxlan within SG          |
 | 9090      | optional for metrics     |
 | ICMP      | ICMP check within SG     |
 
-</center>
 <br/>
 Be sure to note that some steps are not persistent across host restarts and need to be added to a start-up script for a permanent configuration.
 
@@ -103,7 +100,9 @@ sudo systemctl enable docker
 
 Download and install the signing key for Kubernetes on master and worker nodes:
 
-    sudo su -c 'curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add'
+```
+sudo su -c 'curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add'
+```
 
 Next, we're ready to add the Kubernetes repo and install Kubernetes on all nodes.
 
@@ -127,10 +126,10 @@ This is _not_ persistent across host restarts so add to `/etc/fstab` accordingly
 ### Initialize the Kubernetes Master
 
 ```
-sudo kubeadm init --pod-network-cidr=10.217.0.0/16
+sudo kubeadm init --pod-network-cidr=10.217.0.0\/16
 ```
 
-<img src="kube-init.png" align="center" width="100%" />
+![](kube-init.png)
 <br />
 
 - Note: the final output from the command above to enable a regular user with the `.kube` config and extract the join command required for worker nodes to join the cluster.
@@ -153,7 +152,7 @@ sudo kubeadm join 172.0.126.152:6443 --token XXXX --discovery-token-ca-cert-hash
 
 You should see a message of successful cluster-join:
 
-<img src="worker-join.png" align="center" width="100%" />
+![](worker-join.png)
 
 <br />
 
@@ -197,7 +196,7 @@ cat README.md
 
 At a high level, the steps from the README include:
 
-- Prerequisites: install CloudFlare PKI/TLS toolkit
+- Prerequisites: install CloudFlare PKI\/TLS toolkit
 - Create etcd certificates using the provided script
 - Deploy the generated certificates to your Kubernetes cluster
 - Ensure the DNS pods have the required label
@@ -244,7 +243,7 @@ kubectl exec tiefighter -- curl -s -XPOST  deathstar.default.svc.cluster.local/v
 
 The policy will deny `xwing` access completely by its identity label and allow `tiefighter` to only make a specific HTTP call.
 
-<img src="cilium_sw_http_l3_l4_l7.png" align="center" width="200px" />
+![](cilium_sw_http_l3_l4_l7.png)
 <br />
 
 ```
@@ -257,7 +256,7 @@ You can take a look at the Cilium Network Policy to see the HTTP-specific policy
 kubectl describe cnp rule1
 ```
 
-<img src="l7-policy.png" align="center" width="100%" />
+![](l7-policy.png)
 <br />
 
 ### Test Cilium Security Enforcement
@@ -270,7 +269,7 @@ kubectl exec xwing -- curl --connect-timeout 5 -XPOST deathstar.default.svc.clus
 
 This command is denied by the (L3) identity-based policy. Use `CTRL-C` to exit prior to timeout.
 
-Next, see what `tiefighter` can access. Per the policy, a POST to /request-landing should be allowed:
+Next, see what `tiefighter` can access. Per the policy, a POST to \/request-landing should be allowed:
 
 ```
 kubectl exec tiefighter -- curl -s -XPOST  deathstar.default.svc.cluster.local/v1/request-landing
@@ -293,4 +292,4 @@ We have several examples of API-aware network policy for various protocols. They
 ## References
 
 - [docs.cilium.io](docs.cilium.io)
-- <https://linuxconfig.org/how-to-install-kubernetes-on-ubuntu-18-04-bionic-beaver-linux>
+- [https://linuxconfig.org/how-to-install-kubernetes-on-ubuntu-18-04-bionic-beaver-linux](https://linuxconfig.org/how-to-install-kubernetes-on-ubuntu-18-04-bionic-beaver-linux)

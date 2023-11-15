@@ -12,7 +12,7 @@ import getYear from 'utils/get-year';
 const Issues = () => {
   const data = useStaticQuery(graphql`
     query {
-      allHubspotEmail(sort: { fields: publishDate, order: DESC }) {
+      allHubspotEmail(sort: { publishDate: DESC }) {
         nodes {
           name
           publishDate

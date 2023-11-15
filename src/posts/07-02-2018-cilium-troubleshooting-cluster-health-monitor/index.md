@@ -17,28 +17,30 @@ As we approach the upcoming 1.0 release, the Cilium community has been putting a
 
 **cilium-health** is a new tool available in Cilium which provides visibility into the overall health of the cluster’s networking connectivity.
 
-    Agent for hosting and querying the Cilium health status API
+```
+Agent for hosting and querying the Cilium health status API
 
-    Usage:
-      cilium-health [flags]
-      cilium-health [command]
+Usage:
+  cilium-health [flags]
+  cilium-health [command]
 
-    Available Commands:
-      get         Display local cilium agent status
-      ping        Check whether the cilium-health API is up
-      status      Display cilium connectivity to other nodes
+Available Commands:
+  get         Display local cilium agent status
+  ping        Check whether the cilium-health API is up
+  status      Display cilium connectivity to other nodes
 
-    Flags:
-          --admin string     Expose resources over 'unix' socket, 'any' socket (default "any")
-      -c, --cilium string    URI to Cilium server API
-      -d, --daemon           Run as a daemon
-      -D, --debug            Enable debug messages
-      -H, --host string      URI to cilium-health server API
-      -i, --interval int     Interval (in seconds) for periodic connectivity probes (default 60)
-      -p, --passive          Only respond to HTTP health checks
-          --pidfile string   Write the PID to the specified file
+Flags:
+      --admin string     Expose resources over 'unix' socket, 'any' socket (default "any")
+  -c, --cilium string    URI to Cilium server API
+  -d, --daemon           Run as a daemon
+  -D, --debug            Enable debug messages
+  -H, --host string      URI to cilium-health server API
+  -i, --interval int     Interval (in seconds) for periodic connectivity probes (default 60)
+  -p, --passive          Only respond to HTTP health checks
+      --pidfile string   Write the PID to the specified file
 
-    Use "cilium-health [command] --help" for more information about a command.
+Use "cilium-health [command] --help" for more information about a command.
+```
 
 It aims to answer the following questions:
 
@@ -46,23 +48,25 @@ Is Cilium successfully deployed on all cluster nodes? Can my cluster nodes reach
 
 The following example shows usage of the **cilium-health** tool. It assumes that you've already deployed Cilium into your cluster, for which you can get more information here. **cilium-health** can be run from any node:
 
-    $ cilium-health status
-    Probe time:   2018-02-06T19:40:16Z
-    Nodes:
-     k8s1 (localhost):
-       Host connectivity to 192.168.36.11:
-         ICMP:          OK, RTT=1.258166ms
-         HTTP via L3:   OK, RTT=434.173µs
-       Endpoint connectivity to 10.10.0.172:
-         ICMP:          OK, RTT=1.266885ms
-         HTTP via L3:   OK, RTT=554.219µs
-     k8s2:
-       Host connectivity to 192.168.36.12:
-         ICMP:          OK, RTT=1.53503ms
-         HTTP via L3:   OK, RTT=2.420321ms
-       Endpoint connectivity to 10.10.1.172:
-         ICMP:          OK, RTT=2.081433ms
-         HTTP via L3:   OK, RTT=6.550839ms
+```
+$ cilium-health status
+Probe time:   2018-02-06T19:40:16Z
+Nodes:
+  k8s1 (localhost):
+    Host connectivity to 192.168.36.11:
+      ICMP:          OK, RTT=1.258166ms
+      HTTP via L3:   OK, RTT=434.173µs
+    Endpoint connectivity to 10.10.0.172:
+      ICMP:          OK, RTT=1.266885ms
+      HTTP via L3:   OK, RTT=554.219µs
+  k8s2:
+    Host connectivity to 192.168.36.12:
+      ICMP:          OK, RTT=1.53503ms
+      HTTP via L3:   OK, RTT=2.420321ms
+    Endpoint connectivity to 10.10.1.172:
+      ICMP:          OK, RTT=2.081433ms
+      HTTP via L3:   OK, RTT=6.550839ms
+```
 
 The first line describes the time that the cluster connectivity was probed. By default, the connectivity is probed roughly once every sixty seconds. Running the command as above will return the status during the most recent probe. If you have any reason to suspect that a connectivity issue was introduced more recently, you can run `cilium-health status --probe` to actively probe the cluster connectivity at any point. In `--probe` mode, cilium-health will synchronously probe the connectivity and report it back when it gets the results. This may take a few seconds.
 
@@ -80,23 +84,25 @@ _We deployed Cilium and spawned up some endpoints but we were unable to connect 
 
 In order to troubleshoot, we used the **cilium-health** tool to have a starting point on troubleshooting, with the following output:
 
-    $ cilium-health status
-    Probe time:   2018-02-06T23:57:45Z
-    Nodes:
-     k8s1 (localhost):
-       Host connectivity to 192.168.36.11:
-         ICMP:          OK, RTT=424.945µs
-         HTTP via L3:   OK, RTT=1.085883ms
-       Endpoint connectivity to 10.10.0.172:
-         HTTP via L3:   OK, RTT=2.100516ms
-         ICMP:          OK, RTT=445.51µs
-     k8s2:
-       Host connectivity to 192.168.36.12:
-         ICMP:          OK, RTT=573.414µs
-         HTTP via L3:   OK, RTT=2.710255ms
-       Endpoint connectivity to 10.10.1.172:
-         ICMP:          Connection timed out
-         HTTP via L3:   Connection timed out
+```
+$ cilium-health status
+Probe time:   2018-02-06T23:57:45Z
+Nodes:
+  k8s1 (localhost):
+    Host connectivity to 192.168.36.11:
+      ICMP:          OK, RTT=424.945µs
+      HTTP via L3:   OK, RTT=1.085883ms
+    Endpoint connectivity to 10.10.0.172:
+      HTTP via L3:   OK, RTT=2.100516ms
+      ICMP:          OK, RTT=445.51µs
+  k8s2:
+    Host connectivity to 192.168.36.12:
+      ICMP:          OK, RTT=573.414µs
+      HTTP via L3:   OK, RTT=2.710255ms
+    Endpoint connectivity to 10.10.1.172:
+      ICMP:          Connection timed out
+      HTTP via L3:   Connection timed out
+```
 
 For some reason, the nodes could connect to one another, but endpoints couldn't be reached on other nodes. The output was similar when observed from the other node, again with only the local endpoint appearing to be reachable. This tells us a few important pieces of information:
 
@@ -112,11 +118,13 @@ On each node where cilium is running, it spawns instances of the cilium-health d
 
 Another instance of the cilium-health daemon is launched on each node in a similar way to an endpoint. This one doesn’t communicate with the main Cilium daemon, but simply serves responses to incoming HTTP requests from the other cilium-health daemons. The probes which test this path are running over the same datapath logic as any other regular endpoint, so if it’s not working, then something is likely wrong for all endpoints on the node; whereas if connectivity to this node works, then it suggests that any other connectivity issues observed must occur with additional features above, for instance layer 7 policies or services. Finally, this endpoint has special “reserved” labels associated with it so that it can be easily identified:
 
-    root@k8s1:~# cilium endpoint list
-    ENDPOINT   POLICY (ingress)   POLICY (egress)   IDENTITY   LABELS (source:key[=value])                      IPv6                 IPv4            STATUS
-               ENFORCEMENT        ENFORCEMENT
-    29898      Disabled           Disabled          299        reserved:health                                 f00d::a0f:0:0:74ca   10.15.242.54    ready
-    ...
+```
+root@k8s1:~# cilium endpoint list
+ENDPOINT   POLICY (ingress)   POLICY (egress)   IDENTITY   LABELS (source:key[=value])                      IPv6                 IPv4            STATUS
+            ENFORCEMENT        ENFORCEMENT
+29898      Disabled           Disabled          299        reserved:health                                 f00d::a0f:0:0:74ca   10.15.242.54    ready
+...
+```
 
 ## Summary
 

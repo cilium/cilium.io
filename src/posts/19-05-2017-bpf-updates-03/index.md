@@ -77,7 +77,7 @@ You can subscribe by sending a email to `majordomo@vger.kernel.org`, with a mess
   - [[PATCH v2 6/7] bpf: Make use of alignment information in `check_val_ptr_alignment()`.](https://www.spinics.net/lists/netdev/msg434713.html)
   - [[PATCH v2 7/7] bpf: Adjust test_verifier for alignment changes.](https://www.spinics.net/lists/netdev/msg434714.html)
 - David Miller, [[PATCH v2 0/3] bpf: Track MAP pointer alignment](https://www.spinics.net/lists/netdev/msg435073.html)
-  - [[PATCH v2 1/3] bpf: Use 1<<16 data-preserve-html-node="true" as ceiling for immediate alignment in verifier.](https://www.spinics.net/lists/netdev/msg435074.html)
+  - [[PATCH v2 1/3] bpf: Use 1\<\<16 data-preserve-html-node="true" as ceiling for immediate alignment in verifier.](https://www.spinics.net/lists/netdev/msg435074.html)
   - [[PATCH v2 2/3] bpf: Track alignment of MAP pointers in verifier.](https://www.spinics.net/lists/netdev/msg435071.html)
   - [[PATCH v2 3/3] bpf: Update MAP test_verifier.c tests wrt. alignment.](https://www.spinics.net/lists/netdev/msg435072.html)
 - Andy Gospodarek, [[PATCH net] samples/bpf: run cleanup routines when receiving SIGTERM](https://www.spinics.net/lists/netdev/msg434761.html)

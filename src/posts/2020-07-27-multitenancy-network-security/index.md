@@ -23,7 +23,7 @@ _Contributed by Jed Salazar and Joe Stringer, Isovalent_
 
 Multitenancy is a common pattern in Kubernetes. Many organizations deploy Kubernetes-as-a-Service, where one cluster houses many tenants and workloads. This pattern might sound familiar, as cloud computing services like AWS, Azure, and GCP have enabled multiple customers (tenants) to run their business-critical workloads in a single cluster for years.
 
-The benefits of this pattern are well-understood: Infrastructure efficiency is increased as CPU cores and memory have become a commodity. SRE/ops teams aren’t burdened with linear management of _N_ clusters for _N_ tenants, and generalized hardware can be utilized for virtually any workload.
+The benefits of this pattern are well-understood: Infrastructure efficiency is increased as CPU cores and memory have become a commodity. SRE\/ops teams aren’t burdened with linear management of _N_ clusters for _N_ tenants, and generalized hardware can be utilized for virtually any workload.
 
 However, with these benefits comes trade-offs: A model of shared compute implies shared infrastructure. In an environment with untrusted workloads, isolation has become a [serious security challenge](https://blog.jessfraz.com/post/hard-multi-tenancy-in-kubernetes/). In Kubernetes there are many shared resources that deserve security attention, but we’re going to focus on networking and discuss the unique network security challenges Kubernetes faces as a multitenancy provider.
 
@@ -81,5 +81,5 @@ If you're using (or are looking to use) Cilium for secure multitenancy, head ove
 
 ## Image Attribution
 
-- <https://unsplash.com/photos/0Yiy0XajJHQ>
-- <https://unsplash.com/photos/M5tzZtFCOfs>
+- [https://unsplash.com/photos/0Yiy0XajJHQ](https://unsplash.com/photos/0Yiy0XajJHQ)
+- [https://unsplash.com/photos/M5tzZtFCOfs](https://unsplash.com/photos/M5tzZtFCOfs)
