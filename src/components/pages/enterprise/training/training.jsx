@@ -58,6 +58,13 @@ const items = [
   },
 ];
 
+const promo = {
+  title: 'Want to contibute to Cilium Distributions & Training?',
+  linkText: 'Add Your Company',
+  linkUrl:
+    'https://github.com/cilium/cilium.io/blob/main/CONTRIBUTING.md#listing-cilium-distributions',
+};
+
 const Training = () => (
   <section className="py-16 md:py-20 lg:py-28" id="trainings">
     <Container>
@@ -100,6 +107,24 @@ const Training = () => (
             );
           }
         )}
+      </div>
+      <div className="mt-8 flex flex-col items-center justify-between gap-6 rounded-xl bg-dark-blue p-10 md:flex-row md:px-14 md:py-10 lg:py-14 lg:px-[88px] ">
+        <Heading
+          className="max-w-md text-center font-bold text-white md:text-left xl:max-w-none xl:leading-none"
+          size="sm"
+          tag="h2"
+        >
+          {promo.title}
+        </Heading>
+        <Button
+          className="w-[226px]"
+          theme="primary-1"
+          to={promo.linkUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {promo.linkText}
+        </Button>
       </div>
     </Container>
   </section>

@@ -1,7 +1,7 @@
 const enterprise = {
   // title: 'Cilium - Enterprise Distributions & Training',
   description:
-    'Cilium was originally created by Isovalent and contributed to the CNCF as an incubation-level project in 2021',
+    'Learn how to get enterprise level support and training for Cilium from different vendors in the ecosystem',
 };
 const learn = {
   // title: 'Cilium - What is Cilium?',

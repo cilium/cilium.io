@@ -2,7 +2,7 @@
 path: '/blog/2021/04/06/war-games-network-policy'
 date: '2021-04-06T10:00:00.000Z'
 title: 'From "War Games" to Network Policies'
-isPopular: true
+isPopular: false
 categories:
   - Technology
 tags:

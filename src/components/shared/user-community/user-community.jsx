@@ -45,6 +45,7 @@ import CogniteLogo from './images/cognite.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
 import DbschenkerLogo from './images/dbschenker.inline.svg';
+import DeezerLogo from './images/deezer.inline.svg';
 import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
@@ -79,6 +80,7 @@ import NorthflankLogo from './images/northflank.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
+import ParseableLogo from './images/parseable.inline.svg';
 import PlaidLogo from './images/plaid.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
 import PlusserverLogo from './images/plusserver.inline.svg';
@@ -95,6 +97,7 @@ import SapianLogo from './images/sapian.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SchubergPhilisLogo from './images/schuberg-philis.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
+import SinglestoreLogo from './images/singlestore.inline.svg';
 import SkybetLogo from './images/skybet.inline.svg';
 import SmileLogo from './images/smile.inline.svg';
 import SnappLogo from './images/snapp.inline.svg';
@@ -112,9 +115,14 @@ import TwilioLogo from './images/twilio.inline.svg';
 import UngleichLogo from './images/ungleich.inline.svg';
 import UnitedCloudLogo from './images/unitedcloud.inline.svg';
 import UtmostLogo from './images/utmost.inline.svg';
+import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  ws02: Ws02Logo,
+  singlestore: SinglestoreLogo,
+  deezer: DeezerLogo,
+  parseable: ParseableLogo,
   plusserver: PlusserverLogo,
   dbraincloud: DbraincloudLogo,
   dbschenker: DbschenkerLogo,
