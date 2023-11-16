@@ -39,7 +39,7 @@ Interesting read on the verifier. It explains some of the checks performed and w
 
 ### [Alignment in BPF verifier](https://www.mail-archive.com/netdev@vger.kernel.org/msg169180.html)
 
-Some of this stuff is over my head, but from the reading it looks like we have a new algorithm for alignment checking. The early implementation is in [python](https://gist.github.com/ecree-solarflare/0665d5b46c2d8d08de2377fbd527de8d). While initially on a different topic, the thread on [[PATCH v2 1/3] bpf: Use 1<<16 data-preserve-html-node="true" as ceiling for immediate alignment in verifier.](https://www.spinics.net/lists/netdev/msg435542.html) is worth reading to get the full context.
+Some of this stuff is over my head, but from the reading it looks like we have a new algorithm for alignment checking. The early implementation is in [python](https://gist.github.com/ecree-solarflare/0665d5b46c2d8d08de2377fbd527de8d). While initially on a different topic, the thread on [[PATCH v2 1/3] bpf: Use 1\<\<16 data-preserve-html-node="true" as ceiling for immediate alignment in verifier.](https://www.spinics.net/lists/netdev/msg435542.html) is worth reading to get the full context.
 
 ### [An entertaining eBPF XDP adventure](https://suchakra.wordpress.com/2017/05/23/an-entertaining-ebpf-xdp-adventure/)
 

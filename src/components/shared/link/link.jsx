@@ -21,15 +21,7 @@ const themeClassNames = {
   },
 };
 
-const Link = ({
-  className: additionalClassName,
-  to,
-  type,
-  theme,
-  smooth,
-  children,
-  ...otherProps
-}) => {
+const Link = ({ className: additionalClassName, to, type, theme, children, ...otherProps }) => {
   const className = classNames(
     type && theme && commonClassNames,
     themeClassNames[type]?.common,

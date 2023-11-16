@@ -91,14 +91,14 @@ export const blogPostsQuery = graphql`
   ) {
     allPosts: allMdx(
       filter: {
-        fileAbsolutePath: { regex: "/posts/" }
+        internal: { contentFilePath: { regex: "/posts/" } }
         fields: {
           categories: { glob: $currentCategory }
           isFeatured: { eq: false }
           draft: { in: $draftFilter }
         }
       }
-      sort: { order: DESC, fields: frontmatter___date }
+      sort: { frontmatter: { date: DESC } }
       limit: $limit
       skip: $skip
     ) {
@@ -123,7 +123,10 @@ export const blogPostsQuery = graphql`
     }
 
     featuredPostEdges: allMdx(
-      filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isFeatured: { eq: true } } }
+      filter: {
+        internal: { contentFilePath: { regex: "/posts/" } }
+        fields: { isFeatured: { eq: true } }
+      }
     ) {
       nodes {
         fields {
@@ -142,7 +145,6 @@ export const blogPostsQuery = graphql`
             }
           }
         }
-        fileAbsolutePath
       }
     }
   }

@@ -62,8 +62,7 @@ channel](https://cilium.slack.com/archives/C02QKQDTVDX) suggests that SMI would 
 Kubernetes **Ingress** capabilities are required to get external traffic to your
 services, although whether you see them as inherently part of a service mesh or
 as a separate entity is a topic for debate. We have examples for HTTP and gRPC
-traffic ingress, including TLS support, as [part of the
-beta](https://github.com/cilium/cilium-service-mesh-beta/tree/main/kubernetes-ingress).
+traffic ingress, including TLS support, as [part of the beta](https://github.com/cilium/cilium-service-mesh-beta/tree/main/kubernetes-ingress).
 
 The last group of features that folks are interested in with service mesh
 include **rate limiting**, **retries** and **circuit breaking**, with between a

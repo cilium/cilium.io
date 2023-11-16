@@ -37,8 +37,7 @@ developing a solution for live migration, and how it all works.
 
 Container Network Interface (CNI) is a big topic, but in short, CNI is a set of
 specifications that define an interface used by container orchestrators to set
-up networking between containers. In the [Kubernetes
-space](https://kubernetes.io/docs/concepts/cluster-administration/networking/),
+up networking between containers. In the [Kubernetes space](https://kubernetes.io/docs/concepts/cluster-administration/networking/),
 the Kubelet is responsible for calling the CNI installed on the cluster so Pods
 are attached to the Kubernetes cluster network during creation, and its
 resources are properly released during deletion. CNIs can also be responsible
@@ -106,10 +105,8 @@ protocols, or broken network policy since identity is lost. This can be
 demonstrated below where Pods on Node 1 will be unable to communicate to Pods on
 Node 2, and visa versa.
 
-<figure class="pure-img center">
-  <img src="1-canal-2-cilium.png" alt="Diffident CNIs Installed" style="max-height: 20em;" />
-  <figcaption><p>Separate CNIs installed</p></figcaption>
-</figure>
+![Diffident CNIs Installed](1-canal-2-cilium.png)
+_Separate CNIs installed_
 
 With this constraint, it is clear that during the migration, there must be a
 period in which all Pods on the cluster are members of both networks. Once all
@@ -122,30 +119,20 @@ The best strategy therefore, is to install the new CNI alongside the current
 one and then remove the old CNI during the migration. The overview of the migration
 is as follows.
 
-<figure class="pure-img center">
-  <img src="1-canal-2-canal.png" alt="Single CNI installed" style="max-height: 20em;" />
-  <figcaption><p>Step 0: Single CNI installed on the cluster.</p></figcaption>
-</figure>
+![Single CNI installed](1-canal-2-canal.png)
+_Step 0: Single CNI installed on the cluster._
 
-<figure class="pure-img center">
-  <img src="1-canal-cilium-2-canal.png" alt="Rollout out second CNI" style="max-height: 20em;" />
-  <figcaption><p>Step 1: Rollout the second CNI alongside the current. All pods communicate over the current.</p></figcaption>
-</figure>
+![Rollout out second CNI](1-canal-cilium-2-canal.png)
+_Step 1: Rollout the second CNI alongside the current. All pods communicate over the current._
 
-<figure class="pure-img center">
-  <img src="1-canal-cilium-2-canal-cilium.png" alt="Both CNIs installed everywhere" style="max-height: 20em;" />
-  <figcaption><p>Step 2: Both CNIs installed on all nodes, and Pods can communicate on either CNI.</p></figcaption>
-</figure>
+![Both CNIs installed everywhere](1-canal-cilium-2-canal-cilium.png)
+_Step 2: Both CNIs installed on all nodes, and Pods can communicate on either CNI._
 
-<figure class="pure-img center">
-  <img src="1-cilium-2-canal-cilium.png" alt="Peel away first CNI" style="max-height: 20em;" />
-  <figcaption><p>Step 3: Peel away the first CNI. Pods can communicate on the new CNI if the first is unavailable at the source or destination Pod.</p></figcaption>
-</figure>
+![Peel away first CNI](1-cilium-2-canal-cilium.png)
+_Step 3: Peel away the first CNI. Pods can communicate on the new CNI if the first is unavailable at the source or destination Pod._
 
-<figure class="pure-img center">
-  <img src="1-cilium-2-cilium.png" alt="Migration complete" style="max-height: 20em;" />
-  <figcaption><p>Step 4: First CNI is completely removed. All commination done over the new CNI.</p></figcaption>
-</figure>
+![Migration complete](1-cilium-2-cilium.png)
+_Step 4: First CNI is completely removed. All commination done over the new CNI._
 
 This strategy maintains all network policy throughout the entire migration, and
 ensures no network downtime.
@@ -276,8 +263,7 @@ This step is for installing all our dependant resources, and labelling nodes.
 ### Node Labels
 
 The migration will swap out multiple DaemonSets at various steps, so we use
-[Node Labels and
-Selectors](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
+[Node Labels and Selectors](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
 to control the scheduling. Not only is it better to leave scheduling to
 Kubernetes, but it's also a convenient way to observe where we are in the
 migration through a simple `kubectl get nodes`. We also make sure that we patch
@@ -386,8 +372,7 @@ Multus, and us during the migration, take advantage of this.
 
 ### SBR Plugin
 
-Cilium manages [identity of
-endpoints](https://docs.cilium.io/en/v1.8/concepts/terminology/#what-is-an-identity)
+Cilium manages [identity of endpoints](https://docs.cilium.io/en/v1.8/concepts/terminology/#what-is-an-identity)
 in order to make routing and policy decisions. One issue that we ran into was
 Cilium losing the source identity of requests when the request was being sent
 as a non default, secondary network interface to the Pod. Cilium would interpret
@@ -395,8 +380,7 @@ the source of that request as an identity of
 [`reserved:world`](https://docs.cilium.io/en/v1.8/concepts/terminology/#special-identities),
 which would then get dropped, never reaching the Pod. Although I didn't track
 down what the source of the issue was, I was able to mitigate it by using the
-[SBR (Source Based Routing) CNI meta
-plugin](https://github.com/containernetworking/plugins/tree/master/plugins/meta/sbr).
+[SBR (Source Based Routing) CNI meta plugin](https://github.com/containernetworking/plugins/tree/master/plugins/meta/sbr).
 
 The SBR CNI meta plugin will cause the default route of the Pod to be
 overridden to the Cilium network interface. This fixed the issue, and

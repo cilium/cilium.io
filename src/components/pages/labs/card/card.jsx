@@ -74,10 +74,10 @@ const Card = ({
             ))}
           </div>
         )}
-        <Tag className="text-xl font-bold leading-snug transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-22">
+        <Tag className="line-clamp-3 text-xl font-bold leading-snug transition-colors duration-200 group-hover:text-primary-1 md:text-22">
           {title}
         </Tag>
-        <p className="mt-2 text-base leading-normal text-black/60 line-clamp-4">{summary}</p>
+        <p className="line-clamp-4 mt-2 text-base leading-normal text-black/60">{summary}</p>
       </article>
     </Link>
   );

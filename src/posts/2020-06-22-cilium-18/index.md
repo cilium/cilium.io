@@ -105,8 +105,7 @@ based on Go. Because eBPF runs inside the Linux kernel, all Cilium
 functionality can be applied without any changes to the application code or
 container configuration.
 
-See the section **[Introduction to
-Cilium](https://docs.cilium.io/en/v1.8/intro/)** for a more detailed general
+See the section **[Introduction to Cilium](https://docs.cilium.io/en/v1.8/intro/)** for a more detailed general
 introduction to Cilium.
 
 <a name="kubeproxy-removal"></a>
@@ -120,22 +119,15 @@ _Contributed by Daniel Borkmann (Isovalent)_
 
 We first introduced Cilium's kube-proxy replacement in eBPF in Cilium's <a href="/blog/2019/08/20/cilium-16/#kubeproxy-removal">1.6</a> release and further improved it in <a href="/blog/2020/02/18/cilium-17#kubeproxy-removal">1.7</a> to run by default in new Cilium deployments. For the Cilium 1.8 release we took it to another extreme and now _accelerate_ our eBPF-based kube-proxy replacement handling for Kubernetes service types `NodePort`, `LoadBalancer` and services with `externalIPs`. eXpress Data Path (XDP) in the Linux kernel allows for significantly better performance while at the same time making more efficient use of CPU resources on the worker nodes.
 
-The XDP layer, which we co-maintain and develop in the Linux kernel, is
-directly integrated into network drivers and supported by all major 10G, 40G or
-faster NIC drivers in Linux, including most major cloud provided virtual NICs.
-The XDP layer operates at the _earliest_ possible point in software to process
-packets coming right off the driver's receive queue with eBPF, which is what
-makes it so fast. For more details including performance benchmarks, see our
+The XDP layer, which we co-maintain and develop in the Linux kernel, is directly integrated into network drivers and supported by all major 10G, 40G or
+faster NIC drivers in Linux, including most major cloud provided virtual NICs. The XDP layer operates at the _earliest_ possible point in software to process
+packets coming right off the driver's receive queue with eBPF, which is what makes it so fast. For more details including performance benchmarks, see our
 open access [publication] on XDP itself.
 
-In order to understand where Cilium's XDP service acceleration fits into the
-bigger picture, below is a brief outline of Cilium 1.8's service load balancing
+In order to understand where Cilium's XDP service acceleration fits into the bigger picture, below is a brief outline of Cilium 1.8's service load balancing
 architecture:
 
-<center>
-<div
-  style=" max-width: 1225px; height: 580px; background: url('/2020-06-02-cilium-18-xdp-arch.png') #fff no-repeat center; background-size: contain;">
-</div></center>
+![](2020-06-02-cilium-18-xdp-arch.png)
 
 As can be seen, the Cilium's kube-proxy replacement in eBPF consists at a high-level of
 two main components: eBPF at the socket layer and eBPF at the driver layer.
@@ -178,10 +170,7 @@ freshly kubeadm-deployed node with a bleeding edge 5.7 kernel, ran with iptables
 ipvs-based kube-proxy to get a baseline, and then plugged Cilium's kube-proxy replacement
 in eBPF from tc and XDP side right in front of it:
 
-<center>
-<div
-  style=" max-width: 1225px; height: 370px; background: url('/2020-06-02-cilium-18-xdp-test.png') #fff no-repeat center; background-size: contain;">
-</div></center>
+![](2020-06-02-cilium-18-xdp-test.png)
 
 Initial results show a dramatic increase in Cilium's kube-proxy replacement's XDP
 acceleration being able to max out the packet generator and push all 10M incoming
@@ -195,10 +184,7 @@ but also increases the performance as can be seen with the observed ~3.6M reques
 second for that node, though that is still no comparison to the significantly better
 gain when Cilium gets accelerated at the XDP layer:
 
-<center>
-<div
-  style=" max-width: 1225px; height: 400px; background: url('/2020-06-02-cilium-18-xdp-bench.png') #fff no-repeat center; background-size: contain;">
-</div></center>
+![](2020-06-02-cilium-18-xdp-bench.png)
 
 Comparing flame-graphs for <a href="/2020-06-02-cilium-18-kube-proxy.svg">kube-proxy</a>
 and <a href="/2020-06-02-cilium-18-xdp.svg">Cilium's XDP</a> implementation under 10M
@@ -216,10 +202,7 @@ kube-proxy case gets significantly worse under ~2M or ~4M requests per second wh
 is only between 1-2% free share while the CPU spends 98% of its time in softirq context
 for packet processing:
 
-<center>
-<div
-  style=" max-width: 1225px; height: 400px; background: url('/2020-06-02-cilium-18-xdp-bench2.png') #fff no-repeat center; background-size: contain;">
-</div></center>
+![](2020-06-02-cilium-18-xdp-bench2.png)
 
 In short, being able to accelerate Kubernetes service handling under XDP with Cilium
 dramatically increases the performance to push packets to remote backends under
@@ -260,8 +243,7 @@ to their API endpoints. Running Hubble Relay as a deployment provides
 flexibility in terms of scheduling and resource allocation. Furthermore, as it
 is decoupled from Cilium, specific network policies can be applied.
 
-A new <a href="https://docs.cilium.io/en/v1.8/gettingstarted/hubble">networking and security observability with Hubble</a> getting started guide has been added to our documentation. It provides a walkthrough of setting up a local multi-node Kubernetes cluster on Docker using <a href="https://kind.sigs.k8s.io/">kind</a> in order to demonstrate some of
-Hubble’s capabilities, including using Hubble Relay.
+A new <a href="https://docs.cilium.io/en/v1.8/gettingstarted/hubble">networking and security observability with Hubble</a> getting started guide has been added to our documentation. It provides a walkthrough of setting up a local multi-node Kubernetes cluster on Docker using <a href="https://kind.sigs.k8s.io/">kind</a> in order to demonstrate some of Hubble’s capabilities, including using Hubble Relay.
 
 Our vision for Hubble Relay is to make it the entrypoint for cluster-wide
 observability. Ultimately, once properly secured, it also becomes possible to
@@ -533,7 +515,7 @@ base tooling including LLVM which is integrated into the <a href="https://github
 _Contributed by Michi Mutsuzaki (Isovalent) and Robin Hahling (Isovalent)_
 
 The development cycle of Cilium 1.7 coincided with a
-[first preview release of Hubble](/blog/2019/11/19/announcing-hubble) -- an
+[first preview release of Hubble](/blog/2019/11/19/announcing-hubble) {'-'}- an
 observability platform for cloud native workloads leveraging Cilium and eBPF.
 At the time, Hubble was a completely separate component which was typically
 deployed alongside Cilium in order to pull information from Cilium's agent.
@@ -604,7 +586,7 @@ spec:
         run: my-nginx
     spec:
       containers:
-      - name: my-nginx
+     - name: my-nginx
         image: nginx
         ports:
         - containerPort: 80
@@ -740,12 +722,9 @@ full flexibility over the choice of model:
   private IP addresses. Is subject to Azure addressing limits but avoids
   encapsulation.
 
-See the [Azure Cloud Getting Started
-Guide](https://docs.cilium.io/en/v1.8/gettingstarted/k8s-install-azure/) for
-more details.
+See the [Azure Cloud Getting Started Guide](https://docs.cilium.io/en/v1.8/gettingstarted/k8s-install-azure/) for more details.
 
-Special thanks to our friends at Datadog and Palantir for helping to contribute
-this feature.
+Special thanks to our friends at Datadog and Palantir for helping to contribute this feature.
 
 <a name="multi-dev"></a>
 
@@ -764,7 +743,7 @@ Cilium 1.8 brings a support for attaching eBPF NodePort to multiple devices.
 Each device can be specified via the helm option `global.devices`, e.g.
 `global.devices={eth0,eth1,eth2}`. If no device is specified, cilium-agent will
 try to attach the program to a device with a default route and a device which
-has Kubernetes `InternalIP` or `ExternalIP` set. See <a href="https://docs.cilium.io/en/v1.8/gettingstarted/kubeproxy-free/#nodeport-devices-port-and-bind-settings">Kubernetes without kube-proxy</a> for more details.
+has Kubernetes `InternalIP` or `ExternalIP` set. See <a href="https://docs.cilium.io/en/v1.8/gettingstarted/kubeproxy-free #nodeport-devices-port-and-bind-settings">Kubernetes without kube-proxy</a> for more details.
 
 <a name="arm64"></a>
 
@@ -948,7 +927,7 @@ See the merged patch sets for further information: <a href="https://lore.kernel.
 - **Istio**
   - Support for 1.5.6
 - **CLI**
-  - New `cilium ip list` command for ip <-> identity introspection
+  - New `cilium ip list` command for ip {'<->'} identity introspection
 - **Continuous Integration / Testing**
   - This release marks the start of major CI improvements effort (aka CI Force)
   - Many reliability improvements were made to current integration tests
@@ -965,15 +944,12 @@ for full notes on changes during the Cilium 1.8 development cycle.
 
 # Getting Started
 
-New to Cilium? Follow one of the [Getting Started
-Guides](https://docs.cilium.io/en/v1.8/gettingstarted/).
+New to Cilium? Follow one of the [Getting Started Guides](https://docs.cilium.io/en/v1.8/gettingstarted/).
 
 # Upgrade Instructions
 
-As usual, follow the [upgrade
-guide](https://cilium.readthedocs.io/en/v1.8/install/upgrade/#upgrading-minor-versions)
-to upgrade your Cilium deployment. Feel free to ping us on
-[Slack].
+As usual, follow the [upgrade guide](https://cilium.readthedocs.io/en/v1.8/install/upgrade/#upgrading-minor-versions)
+to upgrade your Cilium deployment. Feel free to ping us on [Slack].
 
 # Release
 
@@ -981,6 +957,5 @@ to upgrade your Cilium deployment. Feel free to ping us on
 - Container image: `docker.io/cilium/cilium:v1.8.0`
 
 [slack]: https://cilium.herokuapp.com/
-[ipmasq]: https://github.com/kubernetes-sigs/ip-masq-agent
 [publication]: https://dl.acm.org/doi/10.1145/3281411.3281443
 [ip fragmentation documentation]: https://docs.cilium.io/en/v1.8/concepts/networking/fragmentation

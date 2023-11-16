@@ -128,10 +128,7 @@ which backend is currently serving the connection. This eventually leads to unex
 disruptions on connection-oriented protocols like TCP as client connections are being reset
 by the newly selected backends.
 
-<center>
-<div
-  style=" max-width: 1225px; height: 530px; margin-top: -40px; margin-bottom: -40px; background: url('/2020-11-cilium-19-random.gif') #fff no-repeat center; background-size: contain;">
-</div></center>
+![](2020-11-cilium-19-random.gif)
 
 Maglev consistent hashing minimizes such disruptions by ensuring that each load balancing node
 has a consistent view and ordering for the backend lookup table such that selecting the backend
@@ -147,10 +144,7 @@ as it did before the operation. Upon backend removal, the backend lookup tables 
 with minimal changes for unrelated backends, that is, typical configurations
 provide the upper bound of at most 1% tolerable difference in the reassignments.
 
-<center>
-<div
-  style=" max-width: 1225px; height: 530px; margin-top: -25px; margin-bottom: -40px; background: url('/2020-11-cilium-19-maglev.gif') #fff no-repeat center; background-size: contain;">
-</div></center>
+![](2020-11-cilium-19-maglev.gif)
 
 In order to support Maglev in Cilium's eBPF load balancer, the datapath backend selection
 algorithm is now pluggable between `maglev` and `random`. Maglev achieves the better
@@ -212,10 +206,7 @@ More information about deny policies can be found
 
 _Contributed by Jarno Rajahalme_
 
-<center>
-<div
-  style=" max-width: 950px; height: 452px; background: url('/2020-10-cilium-19-vm.png') #fff no-repeat center; background-size: contain;">
-</div></center>
+![](2020-10-cilium-19-vm.png)
 
 A major focus of Cilium 1.9 has been to enable Cilium to run in other
 environments where users are already running workloads. VM support, or more
@@ -282,10 +273,8 @@ Availability_ (GA) with Cilium 1.9. We are excited for more users to try it out!
 We have made many small improvements to ensure deploying and operating Hubble
 remains easy. For example, TLS certificates required for mTLS are automatically
 generated and distributed by default. Of course, sophisticated users can still
-employ [their own certificate
-infrastructure](https://docs.cilium.io/en/v1.9/concepts/observability/hubble-configuration/#use-custom-tls-certificates).
-This is notably required in a [Cluster Mesh
-scenario](https://docs.cilium.io/en/v1.9/concepts/clustermesh/) to get
+employ [their own certificate infrastructure](https://docs.cilium.io/en/v1.9/concepts/observability/hubble-configuration/#use-custom-tls-certificates).
+This is notably required in a [Cluster Mesh scenario](https://docs.cilium.io/en/v1.9/concepts/clustermesh/) to get
 cross-cluster visibility via Hubble Relay.
 
 As another notable improvement, support for TLS certificates hot reloading was
@@ -381,7 +370,7 @@ This new version of the Hubble CLI contains many more features
 ([`jsonpb`](https://developers.google.com/protocol-buffers/docs/proto3#json)
 support, support for fish and powershell completion, addition of flows per
 second output in the status subcommand, Linux arm and arm64 binaries, and more).
-See its [changelog](https://github.com/cilium/hubble/blob/v0.7/CHANGELOG.md) for
+See its [changelog] for
 the full list of changes.
 
 <a name="lrp"></a>
@@ -490,10 +479,7 @@ out earlier than their timestamp dictates. Through the flexibility of eBPF, the
 classification into the Pod aggregate works not only for direct routing, but also
 in case of tunnelling or use of L7 proxies.
 
-<center>
-<div
-  style=" height: 500px; background: url('/2020-10-cilium-19-edt.png') #fff no-repeat center; background-size: contain;">
-</div></center><br/>
+![](2020-10-cilium-19-edt.png)
 
 Evaluating the application latency under rate-limiting with HTB (Hierarchical Token Bucket) compared
 to eBPF with FQ [shows](https://netdevconf.info/0x14/session.html?talk-replacing-HTB-with-EDT-and-BPF)
@@ -583,10 +569,7 @@ inaccurately providing it too early when it would be pushed up to the host stack
 routing. This is now possible because the packet's socket association can be kept
 intact when it is passed down into the NIC driver.
 
-<center><br/>
-<div
-  style=" max-width: 1225px; height: 450px; background: url('/2020-10-cilium-19-tcp-combined.png') #fff no-repeat center; background-size: contain;">
-</div></center><br/>
+![](2020-10-cilium-19-tcp-combined.png)
 
 As can be seen from initial results, the single stream TCP throughput for a Pod to
 remote Pod session under direct routing doubles in throughput for the nodes under test
@@ -675,8 +658,8 @@ Feel free to ping us on [Slack] if you have any questions.
 [slack]: https://cilium.herokuapp.com/
 [getting started guides]: https://docs.cilium.io/en/v1.9/gettingstarted
 [upgrade guide]: https://cilium.readthedocs.io/en/v1.9/operations/upgrade/#upgrading-minor-versions
-[changelog]: https://github.com/cilium/cilium/blob/v1.9/CHANGELOG.md
 [introduction to cilium]: https://docs.cilium.io/en/v1.9/intro/
 [end of life]: https://helm.sh/blog/helm-v2-deprecation-timeline/
 [local-redirect-policy guide]: https://docs.cilium.io/en/v1.9/gettingstarted/local-redirect-policy/
 [ebpf tproxy]: /blog/2020/06/22/cilium-18#ebpf-based-tproxy-replacement
+[changelog]: https://github.com/cilium/cilium/blob/v1.9/CHANGELOG.md

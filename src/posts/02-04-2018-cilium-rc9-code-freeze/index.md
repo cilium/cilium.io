@@ -184,7 +184,7 @@ first.
 
 ### Other Changes
 
-- Refactor /endpoint/{id}/config for API 1.0 stability ([3448](https://github.com/cilium/cilium/pull/3448), @tgraf)
+- Refactor /endpoint/{'{'}id}/config for API 1.0 stability ([3448](https://github.com/cilium/cilium/pull/3448), @tgraf)
 - envoy: Add host identity ([nphds) gRPC client (3407](https://github.com/cilium/cilium/pull/nphds) gRPC client (3407), @jrajahalme)
 - Increase capacity of BPF maps ([3391](https://github.com/cilium/cilium/pull/3391), @tgraf)
 - daemon: Merge Envoy logs with cilium logs by default. ([3364](https://github.com/cilium/cilium/pull/3364), @jrajahalme)

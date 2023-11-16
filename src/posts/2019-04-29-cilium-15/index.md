@@ -72,8 +72,7 @@ extension framework based on Go. Because BPF runs inside the Linux kernel, all
 Cilium functionality can be applied without any changes to the application code
 or container configuration.
 
-See the section **[Introduction to
-Cilium](https://cilium.readthedocs.io/en/stable/intro/)** for a more detailed general
+See the section **[Introduction to Cilium](https://cilium.readthedocs.io/en/stable/intro/)** for a more detailed general
 introduction to Cilium.
 
 <a name="Scalability"></a>
@@ -579,4 +578,3 @@ As outlined in the scalability section, we will still require etcd to guarantee
 performance above a certain cluster size.
 
 [slack]: https://cilium.herokuapp.com/
-[cilium-etcd-operator]: https://github.com/cilium/cilium-etcd-operator
