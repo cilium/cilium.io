@@ -34,6 +34,8 @@ const sectionContent2 = {
   description:
     "<a href='https://tetragon.io' style='text-decoration: underline;'>Tetragon</a> is Kubernetes-aware, meaning it recognizes Kubernetes identities like namespaces and pods. This enables security event detection that can be tailored to individual workloads. Using eBPF, Tetragon can access the Linux kernel state and combine it with Kubernetes awareness and user policy to generate rules that are enforced by the kernel in real-time. This allows for capabilities like process namespace and capabilities annotation and enforcement, process file descriptor to filename association, and socket to process control.",
   imageSrc: TetragonIllustration,
+  imageWidth: 624,
+  imageHeight: 373,
   imageAlt: 'identities with cilium',
   imageRight: false,
 };

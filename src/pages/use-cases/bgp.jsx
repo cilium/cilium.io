@@ -27,6 +27,8 @@ const sectionContent1 = {
   description:
     "Cilium amplifies the power of BGP - the backbone of the internet - to bring you high-speed, scalable, and secure routing for your cloud environments. Seamlessly integrating with existing infrastructure, Cilium's BGP is perfect for a range of deployments, from hybrid to multi cloud to edge. With advanced traffic engineering features, you'll have granular control over your network traffic, optimizing your network's performance and security.",
   imageSrc: BGPImage1,
+  imageWidth: 624,
+  imageHeight: 509,
   imageAlt: 'multi-cluster illustration',
 };
 

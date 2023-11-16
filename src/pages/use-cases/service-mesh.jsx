@@ -30,6 +30,8 @@ const sectionContent2 = {
   description:
     'At the heart of Cilium is eBPF, a revolutionary technology built into the Linux kernel. With eBPF, Cilium delivers lightning-fast, efficient, and scalable networking. This bypasses the performance drawbacks of traditional proxies, enabling direct and efficient communication between your services.',
   imageSrc: ServiceMeshImage1,
+  imageWidth: 624,
+  imageHeight: 318,
   imageAlt: 'eBPF powered service mesh illustration',
   imageRight: false,
 };

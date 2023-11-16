@@ -38,6 +38,8 @@ const sectionContent2 = {
   description:
     'Cluster Mesh enhances your services high availability and fault tolerance. It supports the operation of Kubernetes clusters in multiple regions or availability zones. If resources become temporarily unavailable, are misconfigured in one cluster, or offline for upgrades, it enables failover to other clusters, ensuring your services remain accessible at all times.',
   imageSrc: ClusterMeshImage1,
+  imageWidth: 624,
+  imageHeight: 329,
   imageAlt: 'multi-cluster illustration',
 };
 
@@ -46,6 +48,8 @@ const sectionContent3 = {
   description:
     'Cluster Mesh automates service discovery across your Kubernetes clusters. Using standard Kubernetes services, it automatically merges services with identical names and namespaces across clusters into a global service. This means your applications can discover and interact with services, irrespective of the cluster they reside in, greatly simplifying cross-cluster communication.  ',
   imageSrc: ClusterMeshImage2,
+  imageWidth: 624,
+  imageHeight: 335,
   imageAlt: 'multi-cluster illustration',
   imageRight: false,
 };
@@ -62,6 +66,8 @@ const sectionContent5 = {
   description:
     'Cluster Mesh enables sharing of services such as secrets management, logging, monitoring, or DNS between all clusters. This reduces operational overhead, simplifies management, and maintains isolation between tenant clusters.',
   imageSrc: ClusterMeshImage3,
+  imageWidth: 624,
+  imageHeight: 409,
   imageAlt: 'shared services in multi-cluster illustration',
   imageRight: false,
 };
@@ -71,6 +77,8 @@ const sectionContent6 = {
   description:
     "Cluster Mesh extends Cilium's Layer 3-7 network policy enforcement to all clusters in the mesh. It standardizes the application of network policies, ensuring a consistent security approach across your entire Kubernetes deployment, irrespective of the number of clusters involved.",
   imageSrc: ClusterMeshImage4,
+  imageWidth: 624,
+  imageHeight: 362,
   imageAlt: 'multi-cluster Uniform Network Policy Enforcement',
 };
 

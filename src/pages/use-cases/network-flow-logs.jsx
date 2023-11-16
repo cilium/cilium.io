@@ -34,6 +34,8 @@ const sectionContent2 = {
   description:
     'Cilium enhances network flow logs with additional information about the identity of the Kubernetes workloads generating or receiving the traffic. This identity information is based on the Kubernetes labels and annotations assigned to the workloads, as well as any other metadata that can be retrieved from the Kubernetes API server.',
   imageSrc: FlowImage1,
+  imageWidth: 624,
+  imageHeight: 527,
   imageAlt: 'cilium metrics and tracing with grafana illustration',
   imageRight: false,
 };

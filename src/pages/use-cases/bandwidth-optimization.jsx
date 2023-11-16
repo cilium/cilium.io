@@ -28,6 +28,8 @@ const sectionContent1 = {
   description:
     'Cilium’s Bandwidth Manager allows rate-limiting per Pod with just one line of YAML. Compared to other alternatives, the Bandwidth Manager provides a 4x reduction in latency, ensuring a smooth network experience and isn’t detrimental to performances and is designed for multi-queue and multi-core NICs. ',
   imageSrc: BandWidthImage2,
+  imageWidth: 624,
+  imageHeight: 225,
   imageAlt: 'Cilium bandwidth manager illustration',
 };
 
@@ -36,6 +38,8 @@ const sectionContent2 = {
   description:
     'Cilium supports BBR, a congestion control algorithm developed by Google, making it the first platform to do so. Google observed up to 2,700x improvement in throughput when testing BBR, making it a valuable addition for optimizing network performance. Cilium’s BBR provides exceptional improvements in throughput and latency for external-facing applications, offering consumers a delightful user experience',
   imageSrc: BandWidthImage3,
+  imageWidth: 624,
+  imageHeight: 288,
   imageAlt: 'Cilium bandwidth manager illustration',
   imageRight: false,
 };

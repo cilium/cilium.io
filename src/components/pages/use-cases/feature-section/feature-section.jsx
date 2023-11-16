@@ -9,6 +9,8 @@ const FeatureSection = ({
   title,
   description,
   imageSrc,
+  imageWidth,
+  imageHeight,
   imageAlt,
   imageRight,
   videoSrc,
@@ -47,9 +49,9 @@ const FeatureSection = ({
       >
         {imageSrc && (
           <img
-            className="max-h-full w-full lg:max-h-[350px]"
-            width={592}
-            height={350}
+            className="h-auto w-full"
+            width={imageWidth}
+            height={imageHeight}
             src={imageSrc}
             alt={imageAlt}
           />
@@ -74,6 +76,8 @@ FeatureSection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageSrc: PropTypes.string,
+  imageWidth: PropTypes.number,
+  imageHeight: PropTypes.number,
   imageAlt: PropTypes.string,
   imageRight: PropTypes.bool,
   withBackground: PropTypes.bool,
@@ -85,6 +89,8 @@ FeatureSection.defaultProps = {
   imageRight: true,
   withBackground: false,
   videoSrc: null,
+  imageWidth: 592,
+  imageHeight: 350,
   imageSrc: null,
   imageAlt: null,
   className: null,

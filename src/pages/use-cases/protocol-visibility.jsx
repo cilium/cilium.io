@@ -27,6 +27,8 @@ const sectionContent1 = {
   description:
     "Cilium's protocol-aware visibility provides application owners with deep insights into their workload’s communications at the protocol level. This means that Cilium is capable of native understanding of various application protocols, such as TLS, gRPC, Kafka, DNS, and HTTP, and other ones like SCTP enabling fine-grained observability of API-specific endpoints and DNS-identities for external endpoints.",
   imageSrc: ProtocolImage1,
+  imageWidth: 624,
+  imageHeight: 528,
   imageAlt: 'hubble insights illustration',
   imageRight: false,
 };

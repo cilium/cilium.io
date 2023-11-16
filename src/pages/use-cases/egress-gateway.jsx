@@ -34,6 +34,8 @@ const sectionContent2 = {
   description:
     "The egress gateway allows fine-grained control over which pods' traffic should be routed through the gateway node. This is done by applying egress gateway policies that use label selectors to target specific pods. This selective routing can help in implementing security policies, achieving network isolation, and managing network costs.",
   imageSrc: EgressImage1,
+  imageWidth: 624,
+  imageHeight: 315,
   imageAlt: 'selective traffic for egress gateway illustration',
   imageRight: false,
 };
@@ -43,6 +45,8 @@ const sectionContent3 = {
   description:
     'In multi-tenant Kubernetes clusters, different workloads might need to interact with different external systems that have specific network requirements. Egress gateways can help meet these requirements by allowing the configuration of workload-specific routing rules.',
   imageSrc: EgressImage3,
+  imageWidth: 624,
+  imageHeight: 618,
   imageAlt: 'workload routing with egress gateway illustration',
 };
 
