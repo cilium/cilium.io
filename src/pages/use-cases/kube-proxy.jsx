@@ -9,7 +9,7 @@ import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import KubermaticLogo from 'icons/logo-kubermatic.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
 import ElectricianBee from 'images/pages/usecase/electrician-bee.png';
-import KubeProxyImage1 from 'images/pages/usecase/kubeproxy-1.webp';
+import KubeProxyImage1 from 'images/pages/usecase/kubeproxy-1.png';
 import KubeProxyImage2 from 'images/pages/usecase/kubeproxy-2.png';
 import MainLayout from 'layouts/main/main';
 

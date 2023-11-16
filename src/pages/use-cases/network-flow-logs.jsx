@@ -8,7 +8,7 @@ import SEO from 'components/shared/seo';
 import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import AuditBee from 'images/pages/usecase/audit-bee.png';
-import FlowImage1 from 'images/pages/usecase/flow-1.webp';
+import FlowImage1 from 'images/pages/usecase/flow-1.png';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {

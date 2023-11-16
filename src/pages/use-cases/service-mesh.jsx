@@ -4,7 +4,7 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import SEO from 'components/shared/seo';
-import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.webp';
+import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.png';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {

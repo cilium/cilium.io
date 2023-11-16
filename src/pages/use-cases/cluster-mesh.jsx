@@ -10,8 +10,8 @@ import Form3Logo from 'icons/logo-form3.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
 import AstronautBee from 'images/pages/usecase/astronaut-bee.png';
 import ClusterMeshImage1 from 'images/pages/usecase/clustermesh-1.png';
-import ClusterMeshImage2 from 'images/pages/usecase/clustermesh-2.webp';
-import ClusterMeshImage3 from 'images/pages/usecase/clustermesh-3.webp';
+import ClusterMeshImage2 from 'images/pages/usecase/clustermesh-2.png';
+import ClusterMeshImage3 from 'images/pages/usecase/clustermesh-3.png';
 import ClusterMeshImage4 from 'images/pages/usecase/clustermesh-4.png';
 import MainLayout from 'layouts/main/main';
 

@@ -7,7 +7,7 @@ import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 import BandWidthImage1 from 'images/pages/usecase/bandwidth-1.png';
-import BandWidthImage2 from 'images/pages/usecase/bandwidth-2.webp';
+import BandWidthImage2 from 'images/pages/usecase/bandwidth-2.png';
 import BandWidthImage3 from 'images/pages/usecase/bandwidth-3.png';
 import MainLayout from 'layouts/main/main';
 
