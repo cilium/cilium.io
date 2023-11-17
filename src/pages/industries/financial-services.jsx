@@ -77,7 +77,7 @@ const postfinanceStats = {
 const bulletSection2 = {
   heading: 'Weave Compliance and Security Throughout the DevOps Process',
   paragraphs: [
-    'By moving from IP to identity, Cilium empowers you to free your security and operations teams from the need to manually review and audit every policy change. Cilium is natively integrated into the Kubernetes ecosystem aware of higher level identities, making it easier to weave compliance and security governance into the DevOps process. For example, operators can write network policies based on namespaces or labels rather hardcoding IPs. This integration helps maintain and enforce security and compliance standards throughout your DevOps processes.',
+    "By moving from IP to identity, Cilium empowers you to free your security and operations teams from the need to manually review and audit every policy change. Cilium's native integration with the Kubernetes ecosystem enables it to seamlessly weaves compliance and security governance into the DevOps process. For example, operators can write network policies based on namespaces or labels rather hardcoding IPs.",
   ],
   imageSrc: FinanceImage2,
   imageAlt: 'cilium TLS keys and certificate illustration',
@@ -87,7 +87,8 @@ const bulletSection1 = {
   heading: 'Enforce Zero-Trust Security with Ease. No Disparate Tools,  No Performance Hits',
   paragraphs: [
     'Adopting a Zero Trust-based approach to network security architecture is essential for companies in the financial service industry to maintain compliance with stringent regulations and keep customer data secure.',
-    'Cilium provides a unified tool that implements a range of features to enforce Zero Trust networking security principles. These features include identity-aware service to service communication and observability, advanced network policies with native HTTP and DNS protocol support, transparent encryption using in-kernel IPsec or WireGuard. Enforcement of TLS via Network Policy allows operators to restrict the allowed TLS SNIs in their network, and provide a more secure environment. Powerful security observability and real-time runtime enforcement with Tetragon and cluster-wide network policies provide security guardrails while having more specific policies to secure the application and operating system access control on different levels such as system calls, TCP/IP, file access, and namespace.',
+    'Cilium provides a unified tool that implements a range of features to enforce Zero Trust networking security principles. These features include identity-aware service to service communication and observability, advanced network policies with native HTTP and DNS protocol support, transparent encryption and using in-kernel IPsec or WireGuard. Enforcement of TLS via Network Policy allows operators to restrict the allowed TLS SNIs in their network, and provide a more secure environment.',
+    'Tetragon provides powerful security observability and real time enforcement guardrails. Cilium offers broad cluster-wide network policies that can be mixed with Tetragon tracing policies for more specific protocol controls like system calls, TCP/IP, file access, and namespace privilege capabilities.',
   ],
   imageSrc: FinanceImage3,
   imageAlt: 'cilium TLS keys and certificate illustration',
@@ -97,7 +98,7 @@ const bulletSection1 = {
 const bulletSection3 = {
   heading: '“Always On” Workload Analysis for Continuous Compliance',
   paragraphs: [
-    'In a highly regulated industry such as financial services, ensuring that software and systems comply with these regulations is a constant challenge for development and operations teams. Cilium empowers teams with tools to ensure continuous compliance with standards like FIPS, PCIDSS, Open Banking, Fedramp, and SOC 2 by offering real-time monitoring and analysis of workload communication to identify non-compliant connections. It emphasizes encryption, traffic analysis, and full-stack monitoring without imposing performance constraints, ensuring confidentiality, integrity, and availability in regulated environments.    ',
+    'In a highly regulated industry such as financial services, ensuring that software and systems comply with these regulations is a constant challenge for development and operations teams. Cilium empowers teams with tools to ensure continuous compliance with standards like FIPS, PCI DSS, Open Banking, and SOC 2 by offering real-time monitoring and analysis of workload communication to identify non-compliant connections. It emphasizes encryption, traffic analysis, and full-stack monitoring without imposing performance constraints, ensuring confidentiality, integrity, and availability in regulated environments.    ',
   ],
   imageSrc: FinanceImage1,
   imageAlt: 'Cilium continuous compliance image',
@@ -179,15 +180,7 @@ const financialResources = [
   },
 ];
 
-const financeLogos = [
-  'capitalone',
-  'postfinance',
-  'robinhood',
-  'bloomberg',
-  'form3',
-  'et888',
-  'qwist',
-];
+const financeLogos = ['sandp', 'postfinance', 'robinhood', 'bloomberg', 'form3', 'et888', 'qwist'];
 
 const FinancialServicesPage = () => (
   <MainLayout theme="gray">
