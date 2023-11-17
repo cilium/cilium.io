@@ -15,10 +15,7 @@ const previousAndNextLinkClassName =
 const Pagination = ({ className, currentPageIndex, pageCount, pageURL, optionsToSave }) => {
   const handlePageChange = ({ selected }) => {
     const navigatePath = selected === 0 ? pageURL : pageURL + (selected + 1);
-    if (optionsToSave) {
-      localStorage.setItem('navigationData', JSON.stringify(optionsToSave));
-    }
-    navigate(navigatePath);
+    navigate(navigatePath, { state: optionsToSave });
   };
 
   const { width } = useWindowSize();
