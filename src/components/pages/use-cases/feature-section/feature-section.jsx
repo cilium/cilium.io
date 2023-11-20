@@ -53,6 +53,7 @@ const FeatureSection = ({
             width={imageWidth}
             height={imageHeight}
             src={imageSrc}
+            loading="lazy"
             alt={imageAlt}
           />
         )}
