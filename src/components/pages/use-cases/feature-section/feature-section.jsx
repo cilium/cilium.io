@@ -26,7 +26,7 @@ const FeatureSection = ({
     >
       <div
         className={classNames(
-          'col-span-full lg:col-span-5',
+          'col-span-full lg:col-span-5 flex flex-col justify-center',
           !imageRight ? 'lg:col-start-8' : 'lg:col-start-1'
         )}
       >
