@@ -78,6 +78,7 @@ module.exports = {
         'search-icon': "url('/images/search.svg')",
         loader: "url('/images/loader.svg')",
         grid: "url('/images/grid.svg')",
+        '404-page-pattern': "url('/images/404-page-pattern.svg')",
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -163,5 +164,5 @@ module.exports = {
       }),
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp')],
+  plugins: [require('@tailwindcss/typography')],
 };

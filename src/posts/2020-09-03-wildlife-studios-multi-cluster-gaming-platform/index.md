@@ -104,8 +104,7 @@ reflector configuration for exchanging routes. It meant that we needed to use it
 normal BGP full-node-mesh mode, but in this way, it would be virtually
 impossible to deploy a cluster with more than 300 nodes. Even though this was a
 breaking point, we decided to configure an external
-[BIRD](https://bird.network.cz/) according to [this post from
-IBM](https://medium.com/ibm-cloud/journey-to-1000-nodes-for-ibm-cloud-private-5294138047d5),
+[BIRD](https://bird.network.cz/) according to [this post from IBM](https://medium.com/ibm-cloud/journey-to-1000-nodes-for-ibm-cloud-private-5294138047d5),
 building a full-mesh of route reflectors.
 
 ![](calico_clustermesh.png)
@@ -149,8 +148,7 @@ Nowadays, Cilium also supports CRD-backed IPAM mode instead of using a dedicated
 This works for large clusters and cluster meshes configurations as well, managing IP addresses
 via Kubernetes Custom Resource Definition (CRD).
 
-Cilium also comes with a feature called [global
-services](https://cilium.io/blog/2019/03/12/clustermesh/) that solved the
+Cilium also comes with a feature called [global services](https://cilium.io/blog/2019/03/12/clustermesh/) that solved the
 internal load balancer problem in a very simple way. We only had to add an
 annotation to those services and deploy them to all the clusters.
 

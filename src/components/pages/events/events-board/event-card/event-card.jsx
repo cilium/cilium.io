@@ -68,10 +68,10 @@ const EventCard = ({
           <span className="text-sm font-normal leading-none">{place}</span>
         </div>
       </div>
-      <h3 className="mt-3 text-xl font-bold leading-snug transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:text-22">
+      <h3 className="line-clamp-3 mt-3 text-xl font-bold leading-snug transition-colors duration-200 group-hover:text-primary-1 md:text-22">
         {title}
       </h3>
-      <p className="mt-2 mb-4 text-base leading-normal text-black/60 line-clamp-5">{summary}</p>
+      <p className="line-clamp-5 mt-2 mb-4 text-base leading-normal text-black/60">{summary}</p>
       <TypeLabel type={type} className="mt-auto" />
     </article>
   </Link>

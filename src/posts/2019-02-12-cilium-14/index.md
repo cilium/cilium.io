@@ -57,8 +57,7 @@ extension framework based on Go. Because BPF runs inside the Linux kernel, all
 Cilium functionality can be applied without any changes to the application code
 or container configuration.
 
-See the section **[Introduction to
-Cilium](https://cilium.readthedocs.io/en/stable/intro/)** for a more detailed general
+See the section **[Introduction to Cilium](https://cilium.readthedocs.io/en/stable/intro/)** for a more detailed general
 introduction to Cilium.
 
 ## Multi-Cluster Service Routing
@@ -117,8 +116,7 @@ couple of weeks.
 
 ![IPVLAN performance](ipvlan_perf.png)
 
-IPVLAN is a beta level feature in 1.4, see the [IPVLAN getting started
-guide](https://docs.cilium.io/en/v1.4/gettingstarted/ipvlan/) for instructions
+IPVLAN is a beta level feature in 1.4, see the [IPVLAN getting started guide](https://docs.cilium.io/en/v1.4/gettingstarted/ipvlan/) for instructions
 on how to enable and configure the feature.
 
 ## DNS Request/Response Aware Security & Visibility
@@ -490,8 +488,7 @@ kvstore requirement while keeping the installation simple.
 
 ## Upgrade Instructions
 
-As usual, follow the [upgrade
-guide](https://cilium.readthedocs.io/en/v1.4/install/upgrade/#upgrading-minor-versions)
+As usual, follow the [upgrade guide](https://cilium.readthedocs.io/en/v1.4/install/upgrade/#upgrading-minor-versions)
 to upgrade your Cilium deployment. Feel free to ping us on
 [Slack].
 

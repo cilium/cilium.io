@@ -13,7 +13,7 @@ We have released Cilium v0.12 a couple of weeks back. One of the exciting featur
 
 The following video will take you through a quick Kafka demo:
 
-<iframe data-preserve-html-node="true" width="640" height="360" src="https://www.youtube.com/embed/zK5hy6nsYEg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>
+<YoutubeIframe embedId='zK5hy6nsYEg'/>
 
 You can also check out the [Kafka Getting Started Guide](http://docs.cilium.io/en/stable/gettingstarted/#getting-started-using-kubernetes-with-kafka) to learn how to enforce Kafka-aware policies yourself.
 

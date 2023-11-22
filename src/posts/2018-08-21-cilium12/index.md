@@ -109,26 +109,28 @@ The following simple example demonstrates how to define a network security
 policy that allows all pods with the label app=test-app to resolve DNS names
 via kube-dns and make external requests to the service my-remote-service.com:
 
-    apiVersion: "cilium.io/v2"
-    kind: CiliumNetworkPolicy
-    metadata:
-      name: "to-fqdn-example"
-    spec:
-      endpointSelector:
-        matchLabels:
-          app: test-app
-      egress:
-        - toFQDNs:
-            - matchName: "my-remote-service.com"
-        - toEndpoints:
-          - matchLabels:
-              "k8s:io.cilium.k8s.policy.serviceaccount": kube-dns
-              "k8s:io.kubernetes.pod.namespace": kube-system
-              "k8s:k8s-app": kube-dns
-          toPorts:
-          - ports:
-            - port: "53"
-              protocol: UDP
+```
+apiVersion: "cilium.io/v2"
+kind: CiliumNetworkPolicy
+metadata:
+  name: "to-fqdn-example"
+spec:
+  endpointSelector:
+    matchLabels:
+      app: test-app
+  egress:
+    - toFQDNs:
+        - matchName: "my-remote-service.com"
+    - toEndpoints:
+      - matchLabels:
+          "k8s:io.cilium.k8s.policy.serviceaccount": kube-dns
+          "k8s:io.kubernetes.pod.namespace": kube-system
+          "k8s:k8s-app": kube-dns
+      toPorts:
+      - ports:
+        - port: "53"
+          protocol: UDP
+```
 
 Cilium will automatically maintain the respective CIDR based rules to allow all
 pods to talk to all IP addresses that are being returned for that DNS name.
@@ -201,10 +203,8 @@ As a result of the community effort led by the DigitalOcean team, Cilium is
 now integrated with Kube-router combining the benefits of BPF with BGP based
 routing.
 
-Check out the guide [Using kube-router to run
-BGP](http://docs.cilium.io/en/v1.2/kubernetes/install/kube-router/) to learn
-how to run kube-router and Cilium side by side to run BGP networking with
-Cilium L3-L7 policy enforcement and load-balancing.
+Check out the guide [Using kube-router to run BGP](http://docs.cilium.io/en/v1.2/kubernetes/install/kube-router/) to learn
+how to run kube-router and Cilium side by side to run BGP networking with Cilium L3-L7 policy enforcement and load-balancing.
 
 ## Istio 1.0 Support
 
@@ -226,10 +226,8 @@ Ping us on [Slack] if you would like to learn more.
 
 ## Upgrade Instructions
 
-As usual, follow the [upgrade
-guide](https://cilium.readthedocs.io/en/v1.2/install/upgrade/#upgrading-minor-versions)
-to upgrade your Cilium deployment. Feel free to ping us on
-[Slack].
+As usual, follow the [upgrade guide](https://cilium.readthedocs.io/en/v1.2/install/upgrade/#upgrading-minor-versions)
+to upgrade your Cilium deployment. Feel free to ping us on [Slack].
 
 ## Release
 

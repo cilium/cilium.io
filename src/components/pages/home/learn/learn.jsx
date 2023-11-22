@@ -16,7 +16,7 @@ const Learn = () => {
     allMdx: { posts },
   } = useStaticQuery(graphql`
     query blogQuery {
-      allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 5) {
+      allMdx(sort: { frontmatter: { date: DESC } }, limit: 5) {
         posts: nodes {
           frontmatter {
             path

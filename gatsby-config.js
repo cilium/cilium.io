@@ -36,6 +36,13 @@ const plugins = [
     resolve: `gatsby-plugin-mdx`,
     options: {
       extensions: [`.mdx`, `.md`],
+      mdxOptions: {
+        remarkPlugins: [
+          // Add GitHub Flavored Markdown (GFM) support
+          // eslint-disable-next-line global-require
+          require('remark-gfm'),
+        ],
+      },
       gatsbyRemarkPlugins: [
         'gatsby-remark-copy-linked-files',
         {
@@ -176,7 +183,7 @@ const plugins = [
       feeds: [
         {
           serialize: ({ query: { site, allMdx } }) =>
-            allMdx.nodes.map(({ excerpt, frontmatter, html }) => {
+            allMdx.nodes.map(({ excerpt, frontmatter }) => {
               const { path, date, externalUrl } = frontmatter;
               const url = externalUrl || site.siteMetadata.siteUrl + path;
               return {
@@ -185,18 +192,16 @@ const plugins = [
                 date,
                 url,
                 guid: url,
-                custom_elements: [{ 'content:encoded': html }],
               };
             }),
           query: `
             {
               allMdx(
-                filter: {fileAbsolutePath: { regex: "/posts/" }, fields: {draft: {eq: false}} }
+                filter: {internal: { contentFilePath: { regex: "/posts/" } }, fields: {draft: {eq: false}} }
                 limit: 20
-                sort: { order: DESC, fields: [frontmatter___date] },
+                sort: { frontmatter: { date: DESC } },
               ) {
                 nodes {
-                  html
                   excerpt
                   frontmatter {
                     title
@@ -225,7 +230,7 @@ const plugins = [
             }),
           query: `
           {
-            allHubspotEmail(sort: { fields: publishDate, order: DESC }) {
+            allHubspotEmail(sort: { publishDate: DESC }) {
               nodes {
                 name
                 publishDate

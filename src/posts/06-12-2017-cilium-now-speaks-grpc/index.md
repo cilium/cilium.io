@@ -22,6 +22,6 @@ Microservices written using gRPC typically include a large number of RPC "method
 
 We have created a Cilium + gRPC "Getting Started Guide" so you can try it out yourself: http://docs.cilium.io/en/stable/gettingstarted/grpc/ .  Building on our tradition of Star Wars-themed demos, this guide explains how the lack of gRPC-aware network security helped the rebels escape from Cloud City during "The Empire Strikes Back".   Check out the video!
 
-<iframe src="//www.youtube.com/embed/-aUHGeBRDPU?wmode=opaque&amp;enablejsapi=1" height="480" width="854" scrolling="no" frameborder="0" allowfullscreen=""></iframe>
+<YoutubeIframe embedId='-aUHGeBRDPU'/>
 
 As always, we're very interested in your questions and feedback, so don't hesitate to reach out via Twitter ([@ciliumproject](https://twitter.com/ciliumproject)) or Slack ([http://www.cilium.io/slack](http://www.cilium.io/slack)).   And don't forget to check out the code and star us on [Cilium Github](http://github.com/cilium/cilium) .  Happy gRPC-ing!

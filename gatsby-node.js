@@ -20,39 +20,43 @@ async function createBlogPosts({ graphql, actions }) {
     },
   } = await graphql(`
     query BlogPosts {
-      allMdx(filter: { fileAbsolutePath: { regex: "/src/posts/" } }) {
+      allMdx(filter: { internal: { contentFilePath: { regex: "/src/posts/" } } }) {
         nodes {
           id
-          fileAbsolutePath
           frontmatter {
             path
           }
           fields {
             draft
           }
+          internal {
+            contentFilePath
+          }
         }
       }
     }
   `);
 
-  blogPosts.forEach((file) => {
-    // skip page creation if post has `draft` flag
-    if (process.env.NODE_ENV === 'production' && file.fields.draft) {
-      return;
+  blogPosts.forEach(
+    ({ id, frontmatter: { path }, internal: { contentFilePath }, fields: { draft } }) => {
+      // skip page creation if post has `draft` flag
+      if (process.env.NODE_ENV === 'production' && draft) {
+        return;
+      }
+
+      if (!path) {
+        return;
+      }
+
+      const postTemplate = Path.resolve('./src/templates/blog-post.jsx');
+
+      actions.createPage({
+        path,
+        component: `${postTemplate}?__contentFilePath=${contentFilePath}`,
+        context: { id },
+      });
     }
-
-    const { path } = file.frontmatter;
-
-    if (!path) {
-      return;
-    }
-
-    actions.createPage({
-      path,
-      component: Path.resolve('./src/templates/blog-post.jsx'),
-      context: { id: file.id },
-    });
-  });
+  );
 }
 
 // Create Blog Pages
@@ -61,30 +65,51 @@ async function createBlogPages({ graphql, actions, reporter }) {
 
   const {
     data: {
-      featuredPostEdges: { nodes: featuredPost },
+      featuredPostEdges: { edges: featuredPost },
       allCategories: { group: allCategories },
     },
   } = await graphql(`
     {
-      allCategories: allMdx(filter: { fileAbsolutePath: { regex: "/posts/" } }) {
-        group(field: frontmatter___categories) {
+      allCategories: allMdx(filter: { internal: { contentFilePath: { regex: "/posts/" } } }) {
+        group(field: { frontmatter: { categories: SELECT } }) {
           fieldValue
+        }
+        nodes {
+          frontmatter {
+            categories
+          }
         }
       }
       featuredPostEdges: allMdx(
-        filter: { fileAbsolutePath: { regex: "/posts/" }, fields: { isFeatured: { eq: true } } }
+        filter: {
+          internal: { contentFilePath: { regex: "/posts/" } }
+          frontmatter: { isFeatured: { eq: true } }
+        }
       ) {
-        nodes {
-          fileAbsolutePath
+        edges {
+          node {
+            id
+            frontmatter {
+              isFeatured
+            }
+            internal {
+              contentFilePath
+            }
+          }
         }
       }
     }
   `);
-
   if (featuredPost?.length > 1) {
-    const featuredPosts = featuredPost.map((post) => post.fileAbsolutePath);
+    const featuredPosts = featuredPost.map(
+      ({
+        node: {
+          internal: { contentFilePath },
+        },
+      }) => contentFilePath
+    );
     reporter.panicOnBuild(
-      `There must be the only one featured post. Please, check "isFeatured" fields in your posts. ${featuredPosts}`,
+      `There must be the only one featured post. Please, check "isFeatured" fields in your posts. File path: ${featuredPosts}`,
       new Error('Too much featured posts')
     );
   }
@@ -104,7 +129,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
           query CategoryPostsQuery($tag: String!, $draftFilter: [Boolean]!) {
             allMdx(
               filter: {
-                fileAbsolutePath: { regex: "/posts/" }
+                internal: { contentFilePath: { regex: "/posts/" } }
                 fields: {
                   isFeatured: { eq: false }
                   categories: { glob: $tag }
@@ -159,28 +184,28 @@ async function createEventsPage({ graphql, actions }) {
       query ($draftFilter: [Boolean]!, $eventRegex: String!) {
         allMdx(
           filter: {
-            fileAbsolutePath: { regex: $eventRegex }
+            internal: { contentFilePath: { regex: $eventRegex } }
             fields: { draft: { in: $draftFilter } }
           }
         ) {
           totalCount
         }
-        allTypes: allMdx(filter: { fileAbsolutePath: { regex: $eventRegex } }) {
-          group(field: frontmatter___type) {
+        allTypes: allMdx(filter: { internal: { contentFilePath: { regex: $eventRegex } } }) {
+          group(field: { frontmatter: { type: SELECT } }) {
             fieldValue
           }
         }
-        allRegions: allMdx(filter: { fileAbsolutePath: { regex: $eventRegex } }) {
-          group(field: frontmatter___region) {
+        allRegions: allMdx(filter: { internal: { contentFilePath: { regex: $eventRegex } } }) {
+          group(field: { frontmatter: { region: SELECT } }) {
             fieldValue
           }
         }
         allPosts: allMdx(
           filter: {
-            fileAbsolutePath: { regex: $eventRegex }
+            internal: { contentFilePath: { regex: $eventRegex } }
             fields: { draft: { in: $draftFilter }, isFeatured: { eq: false } }
           }
-          sort: { fields: frontmatter___date, order: DESC }
+          sort: { frontmatter: { date: DESC } }
         ) {
           nodes {
             frontmatter {
@@ -201,10 +226,10 @@ async function createEventsPage({ graphql, actions }) {
         }
         featuredPost: allMdx(
           filter: {
-            fileAbsolutePath: { regex: $eventRegex }
+            internal: { contentFilePath: { regex: $eventRegex } }
             fields: { draft: { in: $draftFilter }, isFeatured: { eq: true } }
           }
-          sort: { fields: frontmatter___date, order: DESC }
+          sort: { frontmatter: { date: DESC } }
           limit: 1
         ) {
           nodes {
@@ -289,7 +314,7 @@ async function createLabsPage({ graphql, actions }) {
       query ($labsRegex: String!, $draftFilter: [Boolean]!) {
         allMdx(
           filter: {
-            fileAbsolutePath: { regex: $labsRegex }
+            internal: { contentFilePath: { regex: $labsRegex } }
             fields: { draft: { in: $draftFilter } }
           }
         ) {
@@ -301,8 +326,8 @@ async function createLabsPage({ graphql, actions }) {
             }
           }
         }
-        allCategories: allMdx(filter: { fileAbsolutePath: { regex: $labsRegex } }) {
-          group(field: frontmatter___categories) {
+        allCategories: allMdx(filter: { internal: { contentFilePath: { regex: $labsRegex } } }) {
+          group(field: { frontmatter: { categories: SELECT } }) {
             fieldValue
           }
         }
@@ -346,10 +371,10 @@ async function createLabsPage({ graphql, actions }) {
             ) {
               allMdx(
                 filter: {
-                  fileAbsolutePath: { regex: $labsRegex }
+                  internal: { contentFilePath: { regex: $labsRegex } }
                   fields: { categories: { glob: $tag }, draft: { in: $draftFilter } }
                 }
-                sort: { fields: frontmatter___title, order: ASC }
+                sort: { frontmatter: { title: ASC } }
                 limit: $limit
                 skip: $skip
               ) {

@@ -14,7 +14,7 @@ const EventsSubscribe = ({ title, description, className }) => (
       <SubscribeForm
         className="mt-6 max-w-[600px]"
         inputClassName="!py-2.5"
-        buttonClassName="right-0 py-4"
+        buttonClassName="!right-0 py-4"
         divClassName="md:!min-h-[105px]"
       />
     </div>

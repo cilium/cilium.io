@@ -14,7 +14,14 @@ const LogosRow = ({ title, logos, className = undefined, isDark = false }) => (
           )}
           key={index}
         >
-          <img className="max-w-none shrink-0" src={src} width={width} height={height} alt="" loading="lazy" />
+          <img
+            className="max-w-none shrink-0"
+            src={src}
+            width={width}
+            height={height}
+            alt=""
+            loading="lazy"
+          />
         </li>
       ))}
     </ul>
