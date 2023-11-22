@@ -26,7 +26,7 @@ const Pagination = ({ className, currentPageIndex, pageCount, pageURL, optionsTo
     <nav className={classNames('safe-paddings', className)}>
       <ReactPaginate
         breakLabel="..."
-        hrefBuilder={(page) => pageURL + page}
+        hrefBuilder={(page) => (page === 1 ? pageURL : pageURL + page)}
         containerClassName="flex justify-center items-center sm:gap-x-4 [&>li]:leading-none gap-x-3"
         pageLinkClassName={pageLinkAndBreakLinkClassName}
         breakLinkClassName={pageLinkAndBreakLinkClassName}
