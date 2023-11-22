@@ -48,7 +48,7 @@ const testimonials = [
 ];
 
 const TransparentEncryptionPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <UseCaseCard

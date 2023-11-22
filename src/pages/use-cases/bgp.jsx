@@ -61,7 +61,7 @@ const testimonials = [
 ];
 
 const BGPPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

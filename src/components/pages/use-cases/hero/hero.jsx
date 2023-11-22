@@ -41,7 +41,7 @@ const Hero = ({
       >
         <Label category={category} />
         <Heading
-          className="mt-2.5 mb-3 leading-tight lg:leading-tight xl:!text-44 xl:leading-tight"
+          className="mt-6 mb-3 leading-tight lg:leading-tight xl:!text-44 xl:leading-tight"
           tag="h1"
           size="md"
         >

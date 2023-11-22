@@ -93,7 +93,7 @@ const testimonials = [
 ];
 
 const NetworkPolicyPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
