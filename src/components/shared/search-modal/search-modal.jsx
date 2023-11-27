@@ -1,24 +1,30 @@
 import algoliasearch from 'algoliasearch/lite';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { InstantSearch } from 'react-instantsearch-dom';
 import ReactModal from 'react-modal';
 
-import Link from 'components/shared/link';
-
+import Footer from './footer';
 import HitsInIndex from './hits-in-index';
-import AlgoliaLogo from './images/algolia.inline.svg';
-import ChevronIcon from './images/chevron.inline.svg';
-import SearchInput from './search-input';
+import SearchInput from './input';
 
 const SearchModal = ({ className, isOpen, closeModal, indices }) => {
   const [allResultsShown, setAllResultsShown] = useState(false);
-  const [query, setQuery] = useState();
+  const [query, setQuery] = useState(null);
   const searchClient = useMemo(
     () => algoliasearch(process.env.GATSBY_ALGOLIA_APP_ID, process.env.GATSBY_ALGOLIA_SEARCH_KEY),
     []
   );
+
+  const EnhancedCloseModal = (e) => {
+    setQuery(null);
+    closeModal(e);
+  };
+
+  useEffect(() => {
+    setAllResultsShown(false);
+  }, [query]);
 
   return (
     <ReactModal
@@ -39,7 +45,7 @@ const SearchModal = ({ className, isOpen, closeModal, indices }) => {
       )}
       closeTimeoutMS={200}
       shouldCloseOnOverlayClick
-      onRequestClose={closeModal}
+      onRequestClose={EnhancedCloseModal}
     >
       <InstantSearch
         searchClient={searchClient}
@@ -47,35 +53,23 @@ const SearchModal = ({ className, isOpen, closeModal, indices }) => {
         onSearchStateChange={({ query }) => setQuery(query)}
       >
         <SearchInput className="flex w-full" />
-        <div className="overflow-y-scroll w-full h-full">
-          {indices.map((index) => (
-            <HitsInIndex allResultsShown={allResultsShown} index={index} key={index.name} />
-          ))}
+        <div className="overflow-y-scroll w-full h-full flex flex-col items-center">
+          {query ? (
+            indices.map((index) => (
+              <HitsInIndex allResultsShown={allResultsShown} index={index} key={index.name} />
+            ))
+          ) : (
+            <span className="text-lg leading-none text-black mt-16">
+              Try searching for something
+            </span>
+          )}
         </div>
       </InstantSearch>
-      <div className="flex border-t w-full border-gray-3 bg-gray-4 p-3">
-        {!allResultsShown && (
-          <button
-            className="mr-auto flex items-center text-xs font-bold uppercase leading-none tracking-wider text-primary-1"
-            type="button"
-            onClick={() => setAllResultsShown((prev) => !prev)}
-          >
-            <span>View all</span>
-            <ChevronIcon className="ml-1 hidden sm:inline-block" />
-          </button>
-        )}
-        <Link
-          className="group inline-flex items-center space-x-2 xl:ml-auto"
-          to="https://www.algolia.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="text-xs leading-none text-gray-1 transition-colors duration-200 group-hover:text-black">
-            Search By Algolia
-          </span>
-          <AlgoliaLogo className="shrink-0" />
-        </Link>
-      </div>
+      <Footer
+        allResultsShown={allResultsShown}
+        setAllResultsShown={setAllResultsShown}
+        query={query}
+      />
     </ReactModal>
   );
 };

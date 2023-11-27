@@ -27,7 +27,7 @@ const themeClassNames = {
 };
 
 const Header = ({
-  showSearchBox,
+  showSearch,
   isMobileMenuOpen,
   handleCloseClick,
   navigation,
@@ -68,13 +68,13 @@ const Header = ({
                   <GithubStars
                     className={classNames(
                       'ml-4 bg-white lg:ml-8',
-                      showSearchBox ? 'hidden xl:inline-flex' : 'inline-flex'
+                      showSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                     )}
                   />
                   <Button
                     className={classNames(
                       'ml-4 items-center bg-white leading-none ',
-                      showSearchBox ? 'hidden xl:inline-flex' : 'inline-flex'
+                      showSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                     )}
                     to="https://cilium.herokuapp.com/"
                     target="_blank"
@@ -86,7 +86,7 @@ const Header = ({
                     <span
                       className={classNames(
                         'hidden lg:ml-1.5',
-                        showSearchBox ? '2xl:block' : 'xl:block'
+                        showSearch ? '2xl:block' : 'xl:block'
                       )}
                     >
                       Join Slack
@@ -95,14 +95,14 @@ const Header = ({
                 </div>
               </div>
               <div className="flex items-center [@media(min-width:1100px)]:hidden">
-                {showSearchBox && !isMobileMenuOpen && (
+                {showSearch && !isMobileMenuOpen && (
                   <SearchButton className="mr-3" onClick={openModal} />
                 )}
                 <Burger isToggled={isMobileMenuOpen} onClick={handleCloseClick} />
               </div>
             </div>
             <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1100px)]:flex">
-              {showSearchBox && (
+              {showSearch && (
                 <SearchButton
                   className="rounded h-8 w-8 border border-gray-2 p-[7px]"
                   onClick={openModal}
@@ -118,7 +118,7 @@ const Header = ({
         </Container>
       </header>
       <MobileMenu
-        isBlogPage={showSearchBox}
+        isBlogPage={showSearch}
         navigation={navigation}
         isOpen={isMobileMenuOpen}
         handleOverlay={handleOverlay}
@@ -131,7 +131,7 @@ const Header = ({
 
 Header.propTypes = {
   handleOverlay: PropTypes.func.isRequired,
-  showSearchBox: PropTypes.bool,
+  showSearch: PropTypes.bool,
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
   isMobileMenuOpen: PropTypes.bool.isRequired,
   handleCloseClick: PropTypes.func.isRequired,
@@ -153,7 +153,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  showSearchBox: false,
+  showSearch: false,
   theme: 'white',
 };
 export default Header;

@@ -78,7 +78,7 @@ const MainLayout = ({ isBlogPage, children, theme, footerWithTopBorder }) => {
     <>
       <Header
         navigation={navigation}
-        showSearchBox={isBlogPage}
+        showSearch={isBlogPage}
         theme={theme}
         isMobileMenuOpen={isMobileMenuOpen}
         handleOverlay={handleOverlay}
