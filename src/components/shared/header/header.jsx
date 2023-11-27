@@ -39,10 +39,6 @@ const Header = ({
   const openModal = () => {
     setIsOpen(true);
   };
-  const closeModal = (e) => {
-    e.stopPropagation();
-    setIsOpen(false);
-  };
 
   return (
     <div className="relative z-20">
@@ -124,7 +120,7 @@ const Header = ({
         handleOverlay={handleOverlay}
         handleCloseClick={handleCloseClick}
       />
-      <SearchModal isOpen={isOpen} closeModal={closeModal} indices={searchIndices} />
+      <SearchModal isOpen={isOpen} setIsOpen={setIsOpen} indices={searchIndices} />
     </div>
   );
 };

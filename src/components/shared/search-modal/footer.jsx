@@ -10,6 +10,7 @@ const Footer = ({ allResultsShown, setAllResultsShown, query }) => (
   <div className="flex border-t w-full border-gray-3 bg-gray-4 p-3">
     {!allResultsShown && query && (
       <button
+        aria-label="View all results"
         className="mr-auto flex items-center text-xs font-bold uppercase leading-none tracking-wider text-primary-1"
         type="button"
         onClick={() => setAllResultsShown((prev) => !prev)}

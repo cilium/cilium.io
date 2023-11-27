@@ -9,7 +9,7 @@ import Footer from './footer';
 import HitsInIndex from './hits-in-index';
 import SearchInput from './input';
 
-const SearchModal = ({ className, isOpen, closeModal, indices }) => {
+const SearchModal = ({ className, isOpen, setIsOpen, indices }) => {
   const [allResultsShown, setAllResultsShown] = useState(false);
   const [query, setQuery] = useState(null);
   const searchClient = useMemo(
@@ -17,9 +17,10 @@ const SearchModal = ({ className, isOpen, closeModal, indices }) => {
     []
   );
 
-  const EnhancedCloseModal = (e) => {
+  const CloseModal = (e) => {
+    e.stopPropagation();
     setQuery(null);
-    closeModal(e);
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -45,7 +46,7 @@ const SearchModal = ({ className, isOpen, closeModal, indices }) => {
       )}
       closeTimeoutMS={200}
       shouldCloseOnOverlayClick
-      onRequestClose={EnhancedCloseModal}
+      onRequestClose={CloseModal}
     >
       <InstantSearch
         searchClient={searchClient}
@@ -77,7 +78,12 @@ const SearchModal = ({ className, isOpen, closeModal, indices }) => {
 SearchModal.propTypes = {
   className: PropTypes.string,
   isOpen: PropTypes.bool.isRequired,
-  closeModal: PropTypes.func.isRequired,
+  setIsOpen: PropTypes.func.isRequired,
+  indices: PropTypes.arrayOf(
+    PropTypes.exact({
+      name: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 SearchModal.defaultProps = {
