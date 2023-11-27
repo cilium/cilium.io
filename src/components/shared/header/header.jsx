@@ -124,7 +124,7 @@ const Header = ({
         handleOverlay={handleOverlay}
         handleCloseClick={handleCloseClick}
       />
-      <SearchModal isOpen={isOpen} closeModal={closeModal} />
+      <SearchModal isOpen={isOpen} closeModal={closeModal} indices={searchIndices} />
     </div>
   );
 };
