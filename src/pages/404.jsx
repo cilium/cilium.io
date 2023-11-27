@@ -10,7 +10,7 @@ const links = [
     to: '/blog/',
   },
   {
-    title: 'Start learning on labs',
+    title: 'Start learning with labs',
     to: '/labs/categories/getting-started/',
   },
   {
