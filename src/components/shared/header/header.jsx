@@ -1,8 +1,10 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 
 import Button from 'components/shared/button';
+import SearchButton from 'components/shared/search-button';
+import SearchModal from 'components/shared/search-modal';
 import SlackIcon from 'icons/slack.inline.svg';
 import Logo from 'images/logo.inline.svg';
 import algoliaQueries from 'utils/algolia-queries';
@@ -11,7 +13,6 @@ import Container from '../container';
 import GithubStars from '../github-stars';
 import Link from '../link';
 import MobileMenu from '../mobile-menu';
-import SearchBox from '../search-box';
 
 import Burger from './burger';
 import MenuItem from './menu-item';
@@ -32,84 +33,101 @@ const Header = ({
   navigation,
   theme,
   handleOverlay,
-}) => (
-  <div className="relative z-20">
-    <header
-      className={classNames(
-        'py-5 transition-[background] duration-200',
-        themeClassNames[theme],
-        isMobileMenuOpen && themeClassNames.white
-      )}
-    >
-      <Container size="lg">
-        <nav
-          className="relative flex w-full items-center justify-between space-x-6 sm:h-10"
-          aria-label="Global"
-        >
-          <div className="flex w-full shrink-0 items-center justify-between [@media(min-width:1100px)]:w-auto">
-            <div className="flex items-center">
-              <Link to="/">
-                <span className="sr-only">Cilium</span>
-                <Logo />
-              </Link>
-              <div className="hidden items-center [@media(min-width:1100px)]:inline-flex">
-                <GithubStars
-                  className={classNames(
-                    'ml-4 bg-white lg:ml-8',
-                    showSearchBox ? 'hidden xl:inline-flex' : 'inline-flex'
-                  )}
-                />
-                <Button
-                  className={classNames(
-                    'ml-4 items-center bg-white leading-none ',
-                    showSearchBox ? 'hidden xl:inline-flex' : 'inline-flex'
-                  )}
-                  to="https://cilium.herokuapp.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  theme="outline-gray"
-                  size="xs"
-                >
-                  <SlackIcon className="h-4 w-4" />
-                  <span
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+  const closeModal = (e) => {
+    e.stopPropagation();
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="relative z-20">
+      <header
+        className={classNames(
+          'py-5 transition-[background] duration-200',
+          themeClassNames[theme],
+          isMobileMenuOpen && themeClassNames.white
+        )}
+      >
+        <Container size="lg">
+          <nav
+            className="relative flex w-full items-center justify-between space-x-6 sm:h-10"
+            aria-label="Global"
+          >
+            <div className="flex w-full shrink-0 items-center justify-between [@media(min-width:1100px)]:w-auto">
+              <div className="flex items-center">
+                <Link to="/">
+                  <span className="sr-only">Cilium</span>
+                  <Logo />
+                </Link>
+                <div className="hidden items-center [@media(min-width:1100px)]:inline-flex">
+                  <GithubStars
                     className={classNames(
-                      'hidden lg:ml-1.5',
-                      showSearchBox ? '2xl:block' : 'xl:block'
+                      'ml-4 bg-white lg:ml-8',
+                      showSearchBox ? 'hidden xl:inline-flex' : 'inline-flex'
                     )}
+                  />
+                  <Button
+                    className={classNames(
+                      'ml-4 items-center bg-white leading-none ',
+                      showSearchBox ? 'hidden xl:inline-flex' : 'inline-flex'
+                    )}
+                    to="https://cilium.herokuapp.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    theme="outline-gray"
+                    size="xs"
                   >
-                    Join Slack
-                  </span>
-                </Button>
+                    <SlackIcon className="h-4 w-4" />
+                    <span
+                      className={classNames(
+                        'hidden lg:ml-1.5',
+                        showSearchBox ? '2xl:block' : 'xl:block'
+                      )}
+                    >
+                      Join Slack
+                    </span>
+                  </Button>
+                </div>
+              </div>
+              <div className="flex items-center [@media(min-width:1100px)]:hidden">
+                {showSearchBox && !isMobileMenuOpen && (
+                  <SearchButton className="mr-3" onClick={openModal} />
+                )}
+                <Burger isToggled={isMobileMenuOpen} onClick={handleCloseClick} />
               </div>
             </div>
-            <div className="flex items-center [@media(min-width:1100px)]:hidden">
-              {showSearchBox && !isMobileMenuOpen && (
-                <SearchBox className="mr-4 hidden sm:flex" indices={searchIndices} />
+            <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1100px)]:flex">
+              {showSearchBox && (
+                <SearchButton
+                  className="rounded h-8 w-8 border border-gray-2 p-[7px]"
+                  onClick={openModal}
+                />
               )}
-              <Burger isToggled={isMobileMenuOpen} onClick={handleCloseClick} />
+              <ul className="flex items-center lg:space-x-6 2xl:space-x-11">
+                {navigation.map((item, index) => (
+                  <MenuItem {...item} key={index} />
+                ))}
+              </ul>
             </div>
-          </div>
-          <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1100px)]:flex">
-            {showSearchBox && <SearchBox indices={searchIndices} />}
-            <ul className="flex items-center lg:space-x-6 2xl:space-x-11">
-              {navigation.map((item, index) => (
-                <MenuItem {...item} key={index} />
-              ))}
-            </ul>
-          </div>
-        </nav>
-      </Container>
-    </header>
-    <MobileMenu
-      isBlogPage={showSearchBox}
-      navigation={navigation}
-      isOpen={isMobileMenuOpen}
-      handleOverlay={handleOverlay}
-      handleCloseClick={handleCloseClick}
-    />
-    {showSearchBox && <SearchBox className="mx-4 flex sm:hidden" indices={searchIndices} />}
-  </div>
-);
+          </nav>
+        </Container>
+      </header>
+      <MobileMenu
+        isBlogPage={showSearchBox}
+        navigation={navigation}
+        isOpen={isMobileMenuOpen}
+        handleOverlay={handleOverlay}
+        handleCloseClick={handleCloseClick}
+      />
+      <SearchModal isOpen={isOpen} closeModal={closeModal} />
+    </div>
+  );
+};
 
 Header.propTypes = {
   handleOverlay: PropTypes.func.isRequired,
