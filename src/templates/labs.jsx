@@ -61,9 +61,9 @@ export default LabsPage;
 
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
-    title: 'Labs about Cilium',
+    title: 'Cilium - Interactive Tutorials & Learning Labs',
     description:
-      'Learn how Cilium, Hubble, and Tetragon are used for networking, observability, and Security',
+      'Hands on environments teaching how Cilium, Hubble, and Tetragon are used for networking, observability, and security',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
