@@ -690,6 +690,10 @@ export default {
       },
     ],
   },
+  cybozu: {
+    iconName: 'cybozu',
+    text: '<b>Cybozu</b> uses Cilium as a CNI in their on-prem Kubernetes clusters',
+  },
   twilio: {
     iconName: 'twilio',
     text: '<b>Twilio Segment</b>  is using Cilium across their Kubernetes based compute platform',
