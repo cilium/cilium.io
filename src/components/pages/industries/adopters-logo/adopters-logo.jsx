@@ -42,6 +42,7 @@ import InnoqLogo from './images/innoq.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
 import KryptosLogo from './images/kryptos.inline.svg';
 import LiquidReplyLogo from './images/liquid.inline.svg';
+import SandPLogo from './images/logo-s&p.inline.svg';
 import MasmovilLogo from './images/masmovil.inline.svg';
 import MobilabLogo from './images/mobilab.inline.svg';
 import NewYorkTimesLogo from './images/newyork.inline.svg';
@@ -132,6 +133,7 @@ const logos = {
   qwist: QwistLogo,
   radiofrance: RadiofranceLogo,
   robinhood: RobinhoodLogo,
+  sandp: SandPLogo,
   scaleway: ScalewayLogo,
   schuberg: SchubergLogo,
   seznam: SeznamLogo,
