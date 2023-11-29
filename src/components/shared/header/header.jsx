@@ -43,7 +43,7 @@ const Header = ({
     >
       <Container size="lg">
         <nav
-          className="relative flex w-full items-center justify-between space-x-6 sm:h-10"
+          className="relative flex items-center justify-between w-full space-x-6 sm:h-10"
           aria-label="Global"
         >
           <div className="flex w-full shrink-0 items-center justify-between [@media(min-width:1100px)]:w-auto">
@@ -70,7 +70,7 @@ const Header = ({
                   theme="outline-gray"
                   size="xs"
                 >
-                  <SlackIcon className="h-4 w-4" />
+                  <SlackIcon className="w-4 h-4" />
                   <span
                     className={classNames(
                       'hidden lg:ml-1.5',
@@ -82,10 +82,8 @@ const Header = ({
                 </Button>
               </div>
             </div>
-            <div className="flex items-center [@media(min-width:1100px)]:hidden">
-              {showSearch && !isMobileMenuOpen && (
-                <Search buttonClassName="mr-3" indices={searchIndices} />
-              )}
+            <div className="flex items-center [@media(min-width:1100px)]:hidden space-x-6">
+              {showSearch && !isMobileMenuOpen && <Search indices={searchIndices} />}
               <Burger isToggled={isMobileMenuOpen} onClick={handleCloseClick} />
             </div>
           </div>
