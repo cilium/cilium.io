@@ -26,7 +26,7 @@ const themeClassNames = {
 };
 
 const Header = ({
-  showSearch,
+  withSearch,
   isMobileMenuOpen,
   handleCloseClick,
   navigation,
@@ -56,13 +56,13 @@ const Header = ({
                 <GithubStars
                   className={classNames(
                     'ml-4 bg-white lg:ml-8',
-                    showSearch ? 'hidden xl:inline-flex' : 'inline-flex'
+                    withSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                   )}
                 />
                 <Button
                   className={classNames(
                     'ml-4 items-center bg-white leading-none ',
-                    showSearch ? 'hidden xl:inline-flex' : 'inline-flex'
+                    withSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                   )}
                   to="https://cilium.herokuapp.com/"
                   target="_blank"
@@ -74,7 +74,7 @@ const Header = ({
                   <span
                     className={classNames(
                       'hidden lg:ml-1.5',
-                      showSearch ? '2xl:block' : 'xl:block'
+                      withSearch ? '2xl:block' : 'xl:block'
                     )}
                   >
                     Join Slack
@@ -83,12 +83,12 @@ const Header = ({
               </div>
             </div>
             <div className="flex items-center [@media(min-width:1100px)]:hidden space-x-6">
-              {showSearch && !isMobileMenuOpen && <Search indices={searchIndices} />}
+              {withSearch && !isMobileMenuOpen && <Search indices={searchIndices} />}
               <Burger isToggled={isMobileMenuOpen} onClick={handleCloseClick} />
             </div>
           </div>
           <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1100px)]:flex">
-            {showSearch && (
+            {withSearch && (
               <Search
                 buttonClassName="rounded h-8 w-8 border border-gray-2 p-[7px]"
                 indices={searchIndices}
@@ -114,7 +114,7 @@ const Header = ({
 
 Header.propTypes = {
   handleOverlay: PropTypes.func.isRequired,
-  showSearch: PropTypes.bool,
+  withSearch: PropTypes.bool,
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
   isMobileMenuOpen: PropTypes.bool.isRequired,
   handleCloseClick: PropTypes.func.isRequired,
@@ -136,7 +136,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  showSearch: false,
+  withSearch: false,
   theme: 'white',
 };
 export default Header;

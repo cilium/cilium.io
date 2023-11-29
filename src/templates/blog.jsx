@@ -46,12 +46,10 @@ const BlogPage = (props) => {
     pageContext: { categories, currentCategory, basePath, currentPage, numPages },
     location: { pathname },
   } = props;
-  const isBlogPage = pathname.startsWith('/blog');
-
   const isCategoryPage = pathname.includes('categories');
 
   return (
-    <MainLayout isBlogPage={isBlogPage}>
+    <MainLayout headerWithSearch>
       {!isCategoryPage && <FeaturedPosts featuredStory={featuredStory?.[0]} />}
       <PostsBoard
         categories={categories}

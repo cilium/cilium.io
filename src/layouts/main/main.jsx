@@ -76,16 +76,17 @@ const navigation = [
   { name: 'Enterprise', href: '/enterprise' },
 ];
 
-const MainLayout = ({ isBlogPage, children, theme, footerWithTopBorder }) => {
+const MainLayout = ({ children, theme, headerWithSearch, footerWithTopBorder }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const handleCloseClick = () => setIsMobileMenuOpen(!isMobileMenuOpen);
   const handleOverlay = () => setIsMobileMenuOpen(false);
+
   return (
     <>
       <Header
         navigation={navigation}
-        showSearch={isBlogPage}
+        withSearch={headerWithSearch}
         theme={theme}
         isMobileMenuOpen={isMobileMenuOpen}
         handleOverlay={handleOverlay}
@@ -99,14 +100,14 @@ const MainLayout = ({ isBlogPage, children, theme, footerWithTopBorder }) => {
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  isBlogPage: PropTypes.bool,
   theme: PropTypes.string,
+  headerWithSearch: PropTypes.bool,
   footerWithTopBorder: PropTypes.bool,
 };
 
 MainLayout.defaultProps = {
-  isBlogPage: false,
   theme: null,
+  headerWithSearch: false,
   footerWithTopBorder: false,
 };
 
