@@ -9,17 +9,28 @@ import MainLayout from 'layouts/main';
 
 const EventsPage = (props) => {
   const {
-    pageContext: { featuredEvent, postEvents, totalCount, eventFilters, initialFilters },
+    pageContext: {
+      featuredEvent,
+      skip,
+      limit,
+      currentPage,
+      postEvents,
+      totalPageCount,
+      eventFilters,
+      initialFilters,
+    },
   } = props;
-
   return (
     <MainLayout>
       <FeaturedEvent featuredStory={featuredEvent} />
       <EventsBoard
         events={postEvents}
+        currentPage={currentPage}
+        totalPageCount={totalPageCount}
+        skip={skip}
+        limit={limit}
         eventFilters={eventFilters}
         initialFilters={initialFilters}
-        totalCount={totalCount}
       />
       <CtaSection />
     </MainLayout>

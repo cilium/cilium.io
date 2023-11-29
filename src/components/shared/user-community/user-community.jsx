@@ -42,6 +42,7 @@ import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
+import CybozuLogo from './images/cybozu.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
 import DbschenkerLogo from './images/dbschenker.inline.svg';
@@ -119,6 +120,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  cybozu: CybozuLogo,
   ws02: Ws02Logo,
   singlestore: SinglestoreLogo,
   deezer: DeezerLogo,

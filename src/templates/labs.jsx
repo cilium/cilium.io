@@ -3,9 +3,9 @@ import React from 'react';
 
 import Banner from 'components/pages/labs/banner';
 import Card from 'components/pages/labs/card';
-import Pagination from 'components/pages/labs/pagination';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import Pagination from 'components/shared/pagination';
 import SEO from 'components/shared/seo';
 import Tabs from 'components/shared/tabs';
 import MainLayout from 'layouts/main';
@@ -18,7 +18,7 @@ const data = {
 
 const LabsPage = (props) => {
   const {
-    pageContext: { labs, categories, currentCategory, totalPageCount, currentPage },
+    pageContext: { labs, categories, currentCategory, basePath, totalPageCount, currentPage },
   } = props;
 
   return (
@@ -31,10 +31,9 @@ const LabsPage = (props) => {
           <p className="mt-4 w-full text-center text-lg text-black">{data.description}</p>
           <Tabs
             id="categories"
-            type="labs"
             defaultTabTitle="All labs"
             items={categories}
-            active={currentCategory}
+            activeLabel={currentCategory}
             align="center"
             className="mt-6 md:mt-12"
           />
@@ -45,10 +44,10 @@ const LabsPage = (props) => {
           </div>
           {totalPageCount > 1 && (
             <Pagination
-              currentPage={currentPage}
-              numPages={totalPageCount}
-              currentItem={currentCategory}
-              type="labs"
+              className="mt-12 md:mt-16"
+              currentPageIndex={currentPage - 1}
+              pageCount={totalPageCount}
+              pageURL={basePath}
             />
           )}
           <Banner />
@@ -62,9 +61,9 @@ export default LabsPage;
 
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
-    title: 'Labs about Cilium',
+    title: 'Cilium - Interactive Tutorials & Learning Labs',
     description:
-      'Learn how Cilium, Hubble, and Tetragon are used for networking, observability, and Security',
+      'Hands on environments teaching how Cilium, Hubble, and Tetragon are used for networking, observability, and security',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

@@ -6,6 +6,7 @@ import Header from 'components/shared/header';
 import AdoptersIcon from 'icons/adopters.inline.svg';
 import BlogIcon from 'icons/blog.inline.svg';
 import BrandingIcon from 'icons/branding.inline.svg';
+import CertificationIcon from 'icons/certification.inline.svg';
 import GetHelpIcon from 'icons/get-help.inline.svg';
 import GetInvolvedIcon from 'icons/get-involved.inline.svg';
 import GetStartedIcon from 'icons/get-started.inline.svg';
@@ -40,6 +41,12 @@ const navigation = [
     name: 'Learn',
     childItems: [
       { icon: LabsIcon, name: 'Labs', href: '/labs/categories/getting-started/' },
+      {
+        icon: CertificationIcon,
+        name: 'Get Certified',
+        href: 'https://training.linuxfoundation.org/certification/cilium-certified-associate-cca/',
+        target: '_blank',
+      },
       { icon: GetStartedIcon, name: 'Get Started', href: '/get-started' },
       { icon: GetInvolvedIcon, name: 'Get Involved', href: '/get-involved' },
       { icon: GetHelpIcon, name: 'Get Help', href: '/get-help' },

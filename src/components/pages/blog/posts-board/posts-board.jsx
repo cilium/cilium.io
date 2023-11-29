@@ -3,12 +3,12 @@ import React, { useEffect } from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import Pagination from 'components/shared/pagination';
 import Tabs from 'components/shared/tabs';
 
 import BlogPostsList from './blog-posts-list';
-import Pagination from './pagination';
 
-const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages }) => {
+const PostsBoard = ({ categories, posts, currentCategory, basePath, currentPage, numPages }) => {
   const blockTitle = currentCategory === '*' ? 'All posts' : currentCategory;
 
   const scrollTo = () => {
@@ -31,25 +31,31 @@ const PostsBoard = ({ categories, posts, currentCategory, currentPage, numPages 
         <Heading tag="h2">{blockTitle}</Heading>
         <Tabs
           id="categories"
-          type="blog"
           items={categories}
-          active={currentCategory}
+          activeLabel={currentCategory}
           className="mt-6 md:mt-10 lg:mt-14"
         />
         <BlogPostsList posts={posts} />
-        <Pagination
-          currentPage={currentPage}
-          numPages={numPages}
-          currentItem={currentCategory}
-          type="blog"
-        />
+        {numPages > 1 && (
+          <Pagination
+            className="mt-12 md:mt-16"
+            currentPageIndex={currentPage - 1}
+            pageCount={numPages}
+            pageURL={basePath}
+          />
+        )}
       </Container>
     </section>
   );
 };
 
 PostsBoard.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  categories: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      basePath: PropTypes.string,
+    })
+  ).isRequired,
   posts: PropTypes.arrayOf(
     PropTypes.shape({
       frontmatter: PropTypes.shape({
@@ -67,6 +73,7 @@ PostsBoard.propTypes = {
     })
   ).isRequired,
   currentCategory: PropTypes.string.isRequired,
+  basePath: PropTypes.string.isRequired,
   currentPage: PropTypes.number.isRequired,
   numPages: PropTypes.number.isRequired,
 };
