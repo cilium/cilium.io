@@ -178,7 +178,7 @@ export default {
   },
   postfinance: {
     iconName: 'postfinance',
-    text: 'PostFinance is using Cilium as their CNI for all mission critical, on premise k8s clusters',
+    text: 'PostFinance uses Cilium as their CNI for all mission critical, on premise k8s clusters',
     links: [
       {
         linkText: 'Case Study',
@@ -363,7 +363,7 @@ export default {
   },
   datadog: {
     iconName: 'datadog',
-    text: 'Datadog is using Cilium in AWS (self-hosted k8s)',
+    text: 'Datadog uses Cilium in AWS (self-hosted k8s)',
     links: [
       {
         linkText: 'Talk 1',
@@ -401,7 +401,7 @@ export default {
   },
   meltwater: {
     iconName: 'meltwater',
-    text: 'Meltwater is using Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
+    text: 'Meltwater uses Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
     links: [
       {
         linkText: 'User Story',
@@ -417,7 +417,7 @@ export default {
   },
   utmost: {
     iconName: 'utmost',
-    text: 'Utmost is using Cilium in all tiers of its Kubernetes ecosystem to implement zero trust networking',
+    text: 'Utmost uses Cilium in all tiers of its Kubernetes ecosystem to implement zero trust networking',
     links: [
       {
         linkText: 'User Story',
@@ -441,7 +441,7 @@ export default {
   },
   form3: {
     iconName: 'form3',
-    text: 'Form3 is using Cilium in their production clusters (self-hosted, bare-metal, private cloud)',
+    text: 'Form3 uses Cilium in their production clusters (self-hosted, bare-metal, private cloud)',
     links: [
       {
         linkText: 'Watch Talk',
@@ -547,7 +547,7 @@ export default {
   },
   yahoo: {
     iconName: 'yahoo',
-    text: '<b>Yahoo</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
+    text: '<b>Yahoo</b> uses Cilium for L4 North-South Load Balancing for Kubernetes Services',
     links: [
       {
         linkText: 'Watch Talk',
@@ -681,7 +681,7 @@ export default {
   },
   ws02: {
     iconName: 'ws02',
-    text: '<b>WS02</b> is using Cilium to implement zero trust networking within their internal developer platform as a service',
+    text: '<b>WS02</b> uses Cilium to implement zero trust networking within their internal developer platform as a service',
     links: [
       {
         linkText: 'Read Blog',
@@ -692,7 +692,7 @@ export default {
   },
   ilionx: {
     iconName: 'ilionx',
-    text: '<b>ilionx</b> is using Cilium as their preferred networking, observability and security solution ',
+    text: '<b>ilionx</b> uses Cilium as their preferred networking, observability and security solution',
     links: [
       {
         linkText: 'Case Study',
@@ -707,7 +707,7 @@ export default {
   },
   twilio: {
     iconName: 'twilio',
-    text: '<b>Twilio Segment</b>  is using Cilium across their Kubernetes based compute platform',
+    text: '<b>Twilio Segment</b> uses Cilium across their Kubernetes based compute platform',
   },
   kubesphere: {
     iconName: 'kubesphere',
@@ -719,7 +719,7 @@ export default {
   },
   sportradar: {
     iconName: 'sportradar',
-    text: '<b>Sportradar</b> is using Cilium as their main CNI plugin in AWS (using kops)',
+    text: '<b>Sportradar</b> uses Cilium as their main CNI plugin in AWS (using kops)',
   },
   accuknox: {
     iconName: 'accuknox',
@@ -912,11 +912,11 @@ export default {
   },
   daimlertruck: {
     iconName: 'daimlertruck',
-    text: '<b>Daimler Truck</b> is maintaining an AKS k8s cluster as a shared resource for DevOps crews and is using Cilium as the default CNI',
+    text: '<b>Daimler Truck</b> is maintaining an AKS k8s cluster as a shared resource for DevOps crews and uses Cilium as the default CNI',
   },
   proton: {
     iconName: 'proton',
-    text: '<b>Proton</b> is using Cilium as their CNI for all their Kubernetes clusters',
+    text: '<b>Proton</b> uses Cilium as their CNI for all their Kubernetes clusters',
   },
   plusserver: {
     iconName: 'plusserver',
@@ -932,6 +932,6 @@ export default {
   },
   unitedcloud: {
     iconName: 'unitedcloud',
-    text: '<b>United Cloud</b> is using Cilium for all non-production and production clusters (on-premises)',
+    text: '<b>United Cloud</b> uses Cilium for all non-production and production clusters (on-premises)',
   },
 };
