@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from 'components/shared/button';
+import Search from 'components/shared/search';
 import SlackIcon from 'icons/slack.inline.svg';
 import Logo from 'images/logo.inline.svg';
 import algoliaQueries from 'utils/algolia-queries';
@@ -11,7 +12,6 @@ import Container from '../container';
 import GithubStars from '../github-stars';
 import Link from '../link';
 import MobileMenu from '../mobile-menu';
-import SearchBox from '../search-box';
 
 import Burger from './burger';
 import MenuItem from './menu-item';
@@ -26,7 +26,7 @@ const themeClassNames = {
 };
 
 const Header = ({
-  showSearchBox,
+  withSearch,
   isMobileMenuOpen,
   handleCloseClick,
   navigation,
@@ -43,7 +43,7 @@ const Header = ({
     >
       <Container size="lg">
         <nav
-          className="relative flex w-full items-center justify-between space-x-6 sm:h-10"
+          className="relative flex items-center justify-between w-full space-x-6 sm:h-10"
           aria-label="Global"
         >
           <div className="flex w-full shrink-0 items-center justify-between [@media(min-width:1100px)]:w-auto">
@@ -56,13 +56,13 @@ const Header = ({
                 <GithubStars
                   className={classNames(
                     'ml-4 bg-white lg:ml-8',
-                    showSearchBox ? 'hidden xl:inline-flex' : 'inline-flex'
+                    withSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                   )}
                 />
                 <Button
                   className={classNames(
                     'ml-4 items-center bg-white leading-none ',
-                    showSearchBox ? 'hidden xl:inline-flex' : 'inline-flex'
+                    withSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                   )}
                   to="https://cilium.herokuapp.com/"
                   target="_blank"
@@ -70,11 +70,11 @@ const Header = ({
                   theme="outline-gray"
                   size="xs"
                 >
-                  <SlackIcon className="h-4 w-4" />
+                  <SlackIcon className="w-4 h-4" />
                   <span
                     className={classNames(
                       'hidden lg:ml-1.5',
-                      showSearchBox ? '2xl:block' : 'xl:block'
+                      withSearch ? '2xl:block' : 'xl:block'
                     )}
                   >
                     Join Slack
@@ -82,15 +82,18 @@ const Header = ({
                 </Button>
               </div>
             </div>
-            <div className="flex items-center [@media(min-width:1100px)]:hidden">
-              {showSearchBox && !isMobileMenuOpen && (
-                <SearchBox className="mr-4 hidden sm:flex" indices={searchIndices} />
-              )}
+            <div className="flex items-center [@media(min-width:1100px)]:hidden space-x-6">
+              {withSearch && !isMobileMenuOpen && <Search indices={searchIndices} />}
               <Burger isToggled={isMobileMenuOpen} onClick={handleCloseClick} />
             </div>
           </div>
           <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1100px)]:flex">
-            {showSearchBox && <SearchBox indices={searchIndices} />}
+            {withSearch && (
+              <Search
+                buttonClassName="rounded h-8 w-8 border border-gray-2 p-[7px]"
+                indices={searchIndices}
+              />
+            )}
             <ul className="flex items-center lg:space-x-6 2xl:space-x-11">
               {navigation.map((item, index) => (
                 <MenuItem {...item} key={index} />
@@ -101,19 +104,17 @@ const Header = ({
       </Container>
     </header>
     <MobileMenu
-      isBlogPage={showSearchBox}
       navigation={navigation}
       isOpen={isMobileMenuOpen}
       handleOverlay={handleOverlay}
       handleCloseClick={handleCloseClick}
     />
-    {showSearchBox && <SearchBox className="mx-4 flex sm:hidden" indices={searchIndices} />}
   </div>
 );
 
 Header.propTypes = {
   handleOverlay: PropTypes.func.isRequired,
-  showSearchBox: PropTypes.bool,
+  withSearch: PropTypes.bool,
   theme: PropTypes.oneOf(Object.keys(themeClassNames)),
   isMobileMenuOpen: PropTypes.bool.isRequired,
   handleCloseClick: PropTypes.func.isRequired,
@@ -135,7 +136,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  showSearchBox: false,
+  withSearch: false,
   theme: 'white',
 };
 export default Header;

@@ -38,7 +38,7 @@ const overlayVariants = {
   },
 };
 
-const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage, handleCloseClick }) => {
+const MobileMenu = ({ navigation, isOpen, handleOverlay, handleCloseClick }) => {
   const controls = useAnimation();
 
   useEffect(() => {
@@ -57,7 +57,7 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage, handleClose
     <LazyMotion features={domAnimation}>
       {isOpen && (
         <m.div
-          className="fixed inset-x-0 bottom-0 top-60 bg-black bg-opacity-50"
+          className="fixed inset-x-0 bottom-0 bg-black bg-opacity-50 top-60"
           initial="from"
           animate={controls}
           variants={overlayVariants}
@@ -68,18 +68,13 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage, handleClose
       )}
 
       <m.nav
-        className={classNames(
-          'safe-paddings py-safe absolute inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 bg-white shadow-lg xl:hidden',
-          isBlogPage
-            ? 'max-h-[calc(100vh-12.5rem)] sm:max-h-[calc(100vh-11rem)] md:max-h-[calc(100vh-9rem)]'
-            : 'max-h-[calc(100vh-5rem)]'
-        )}
+        className="safe-paddings py-safe absolute max-h-[calc(100vh-5rem)] inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 bg-white shadow-lg xl:hidden"
         initial="from"
         animate={controls}
         variants={menuVariants}
         transition={{ duration: ANIMATION_DURATION }}
       >
-        <ul className="flex h-full flex-grow flex-col divide-y divide-gray-3 overflow-x-hidden overflow-y-scroll px-4 md:px-6 lg:px-10">
+        <ul className="flex flex-col flex-grow h-full px-4 overflow-x-hidden overflow-y-scroll divide-y divide-gray-3 md:px-6 lg:px-10">
           {navigation.map((item, index) => (
             <MenuItem {...item} key={index} handleCloseClick={handleCloseClick} />
           ))}
@@ -92,14 +87,14 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, isBlogPage, handleClose
         >
           <GithubStars className="bg-white" />
           <Button
-            className="inline-flex items-center bg-white leading-none"
+            className="inline-flex items-center leading-none bg-white"
             to="https://cilium.herokuapp.com/"
             target="_blank"
             rel="noopener noreferrer"
             theme="outline-gray"
             size="xs"
           >
-            <SlackIcon className="h-4 w-4" />
+            <SlackIcon className="w-4 h-4" />
             <span className="ml-1.5 block">Join Slack</span>
           </Button>
         </div>
@@ -126,12 +121,7 @@ MobileMenu.propTypes = {
   ).isRequired,
   isOpen: PropTypes.bool.isRequired,
   handleOverlay: PropTypes.func.isRequired,
-  isBlogPage: PropTypes.bool,
   handleCloseClick: PropTypes.func.isRequired,
-};
-
-MobileMenu.defaultProps = {
-  isBlogPage: null,
 };
 
 export default MobileMenu;

@@ -51,6 +51,7 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.45.4",
     "react-instantsearch-dom": "^6.34.0",
+    "react-modal": "^3.16.1",
     "react-paginate": "^8.2.0",
     "react-share": "^4.4.1",
     "react-use": "^17.4.0",
