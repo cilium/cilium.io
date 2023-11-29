@@ -690,6 +690,17 @@ export default {
       },
     ],
   },
+  ilionx: {
+    iconName: 'ilionx',
+    text: '<b>ilionx</b> is using Cilium as their preferred networking, observability and security solution ',
+    links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/ilionx/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   cybozu: {
     iconName: 'cybozu',
     text: '<b>Cybozu</b> uses Cilium as a CNI in their on-prem Kubernetes clusters',
