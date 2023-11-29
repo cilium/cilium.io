@@ -160,12 +160,6 @@ const plugins = [
     },
   },
   {
-    resolve: 'gatsby-plugin-google-tagmanager',
-    options: {
-      id: 'GTM-M533ZSF',
-    },
-  },
-  {
     resolve: `gatsby-plugin-feed`,
     options: {
       query: `
