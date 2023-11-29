@@ -51,7 +51,7 @@ const Search = ({ buttonClassName, indices }) => {
         isOpen={isOpen}
         ariaHideApp={false}
         bodyOpenClassName="overflow-hidden touch-none"
-        className="relative top-1/2 left-1/2 h-full max-h-[560px] w-[95%] max-w-[600px] -translate-x-1/2 -translate-y-1/2 border-none bg-white pt-3 rounded-xl overflow-hidden flex flex-col items-center"
+        className="relative top-1/2 left-1/2 h-[95%] max-h-[560px] w-[95%] max-w-[600px] -translate-x-1/2 -translate-y-1/2 border-none bg-white pt-3 rounded-xl overflow-hidden flex flex-col items-center"
         closeTimeoutMS={200}
         shouldCloseOnOverlayClick
         onRequestClose={closeModal}

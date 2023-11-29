@@ -104,7 +104,6 @@ const Header = ({
       </Container>
     </header>
     <MobileMenu
-      isBlogPage={showSearch}
       navigation={navigation}
       isOpen={isMobileMenuOpen}
       handleOverlay={handleOverlay}
