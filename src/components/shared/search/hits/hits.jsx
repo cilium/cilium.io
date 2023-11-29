@@ -7,7 +7,7 @@ import {
   Snippet,
 } from 'react-instantsearch-dom';
 
-import Link from '../link';
+import Link from 'components/shared/link';
 
 const HitCount = connectStateResults(({ searchResults }) => {
   const hitCount = searchResults?.nbHits;
@@ -23,24 +23,22 @@ const HitCount = connectStateResults(({ searchResults }) => {
 });
 
 const PageHit = ({ hit }) => (
-  <div>
-    <Link to={hit.path || hit.externalUrl}>
-      <h4 className="highlight-text text-sm font-medium">
-        <Highlight attribute="title" hit={hit} tagName="mark" />
-      </h4>
-    </Link>
+  <Link to={hit.path || hit.externalUrl}>
+    <h4 className="text-sm font-medium highlight-text">
+      <Highlight attribute="title" hit={hit} tagName="mark" />
+    </h4>
     <Snippet
       className="highlight-text mt-1.5 block text-xs leading-relaxed text-gray-1"
       attribute="excerpt"
       hit={hit}
       tagName="mark"
     />
-  </div>
+  </Link>
 );
 
 const Hits = connectHits(({ hits, showAll }) =>
   hits?.length ? (
-    <ul className="divide-y divide-gray-3 px-3">
+    <ul className="px-3 divide-y divide-gray-3">
       {hits.slice(0, showAll ? hits.length : 5).map((hit) => (
         <li className="py-2.5 first:pt-1.5" key={hit.objectID}>
           <PageHit hit={hit} />

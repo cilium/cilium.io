@@ -5,10 +5,12 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { InstantSearch } from 'react-instantsearch-dom';
 import ReactModal from 'react-modal';
 
+import Link from 'components/shared/link';
 import SearchIcon from 'images/search.inline.svg';
 
-import Footer from './footer';
-import HitsInIndex from './hits-in-index';
+import Hits from './hits';
+import AlgoliaLogo from './images/algolia.inline.svg';
+import ChevronIcon from './images/chevron.inline.svg';
 import SearchInput from './input';
 
 const Search = ({ buttonClassName, indices }) => {
@@ -24,7 +26,7 @@ const Search = ({ buttonClassName, indices }) => {
     setIsOpen(true);
   };
 
-  const CloseModal = (e) => {
+  const closeModal = (e) => {
     e.stopPropagation();
     setQuery(null);
     setIsOpen(false);
@@ -41,7 +43,7 @@ const Search = ({ buttonClassName, indices }) => {
         type="button"
         onClick={openModal}
       >
-        <SearchIcon className="h-5 w-5" />
+        <SearchIcon className="w-5 h-5" />
       </button>
       <ReactModal
         style={{
@@ -58,7 +60,7 @@ const Search = ({ buttonClassName, indices }) => {
         className="relative top-1/2 left-1/2 h-full max-h-[560px] w-[95%] max-w-[600px] -translate-x-1/2 -translate-y-1/2 border-none bg-white pt-3 rounded-xl overflow-hidden flex flex-col items-center"
         closeTimeoutMS={200}
         shouldCloseOnOverlayClick
-        onRequestClose={CloseModal}
+        onRequestClose={closeModal}
       >
         <InstantSearch
           searchClient={searchClient}
@@ -66,23 +68,42 @@ const Search = ({ buttonClassName, indices }) => {
           onSearchStateChange={({ query }) => setQuery(query)}
         >
           <SearchInput className="flex w-full" />
-          <div className="overflow-y-scroll w-full h-full flex flex-col items-center">
+          <div className="flex flex-col items-center w-full h-full overflow-y-scroll">
             {query ? (
               indices.map((index) => (
-                <HitsInIndex allResultsShown={allResultsShown} index={index} key={index.name} />
+                <Hits allResultsShown={allResultsShown} index={index} key={index.name} />
               ))
             ) : (
-              <span className="text-lg leading-none text-black mt-16">
+              <span className="mt-16 text-lg leading-none text-black">
                 Try searching for something
               </span>
             )}
           </div>
         </InstantSearch>
-        <Footer
-          allResultsShown={allResultsShown}
-          setAllResultsShown={setAllResultsShown}
-          query={query}
-        />
+        <div className="flex w-full px-6 py-3 border-t border-gray-3 bg-gray-4">
+          {!allResultsShown && query && (
+            <button
+              aria-label="View all results"
+              className="flex items-center mr-auto text-xs font-bold leading-none tracking-wider uppercase text-primary-1"
+              type="button"
+              onClick={() => setAllResultsShown((prev) => !prev)}
+            >
+              <span>View all</span>
+              <ChevronIcon className="hidden ml-1 sm:inline-block" />
+            </button>
+          )}
+          <Link
+            className="inline-flex items-center ml-auto space-x-2 group"
+            to="https://www.algolia.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="text-xs leading-none transition-colors duration-200 text-gray-1 group-hover:text-black">
+              Search By Algolia
+            </span>
+            <AlgoliaLogo className="shrink-0" />
+          </Link>
+        </div>
       </ReactModal>
     </>
   );
