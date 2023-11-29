@@ -26,8 +26,8 @@ const Hits = connectHits(({ hits }) =>
   hits?.length ? (
     <ul className="px-6 divide-y divide-gray-3">
       {hits.map((hit) => (
-        <li className="py-3 first:pt-1.5" key={hit.objectID}>
-          <Link to={hit.path || hit.externalUrl}>
+        <li key={hit.objectID}>
+          <Link className="flex flex-col py-3" to={hit.path || hit.externalUrl}>
             <h4 className="text-sm font-medium highlight-text">
               <Highlight attribute="title" hit={hit} tagName="mark" />
             </h4>
