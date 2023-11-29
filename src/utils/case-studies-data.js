@@ -692,7 +692,7 @@ export default {
   },
   ilionx: {
     iconName: 'ilionx',
-    text: '<b>ilionx</b> uses Cilium as their preferred networking, observability and security solution',
+    text: '<b>ilionx</b> uses Cilium as their preferred networking, observability, and security solution',
     links: [
       {
         linkText: 'Case Study',
