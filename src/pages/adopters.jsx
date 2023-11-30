@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  ilionx,
   cybozu,
   ws02,
   singlestore,
@@ -131,6 +132,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    ilionx,
     ws02,
     singlestore,
     deezer,
