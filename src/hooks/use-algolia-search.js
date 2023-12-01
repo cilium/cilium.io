@@ -13,7 +13,7 @@ const useAlgoliaSearch = () => {
     () => ({
       ...algoliaClient,
       search(requests) {
-        if (requests.every(({ params }) => !params.query)) {
+        if (requests.every(({ params }) => !params.query || params.query.length === 0)) {
           return Promise.resolve({
             results: requests.map(() => ({
               hits: [],
@@ -32,7 +32,6 @@ const useAlgoliaSearch = () => {
         return algoliaClient.search(requests);
       },
     }),
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );

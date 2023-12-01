@@ -6,7 +6,7 @@ import useDebounce from 'hooks/use-debounce';
 
 export default connectSearchBox(
   ({ currentRefinement, refine, searchQuery, setSearchQuery, className, ...rest }) => {
-    const debouncedValue = useDebounce(searchQuery, 300);
+    const debouncedValue = useDebounce(searchQuery, 500);
 
     useEffect(() => {
       if (debouncedValue.length) {

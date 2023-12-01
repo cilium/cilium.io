@@ -12,6 +12,7 @@ import Link from 'components/shared/link';
 const HitCount = connectStateResults(({ searchResults }) => {
   const hitCount = searchResults?.nbHits;
   const query = searchResults?.query;
+
   return (
     <div className="px-3 py-2.5 text-xs font-medium">
       <span className="text-gray-2">
