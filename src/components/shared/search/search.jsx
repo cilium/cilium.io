@@ -1,11 +1,11 @@
-import algoliasearch from 'algoliasearch/lite';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { InstantSearch } from 'react-instantsearch-dom';
 import ReactModal from 'react-modal';
 
 import Link from 'components/shared/link';
+import useAlgoliaSearch from 'hooks/use-algolia-search';
 import SearchIcon from 'images/search.inline.svg';
 
 import Hits from './hits';
@@ -14,11 +14,7 @@ import SearchInput from './input';
 
 const Search = ({ buttonClassName, indices }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [query, setQuery] = useState(null);
-  const searchClient = useMemo(
-    () => algoliasearch(process.env.GATSBY_ALGOLIA_APP_ID, process.env.GATSBY_ALGOLIA_SEARCH_KEY),
-    []
-  );
+  const { searchClient, searchQuery, setSearchQuery, onSearchStateChange } = useAlgoliaSearch();
 
   const openModal = () => {
     setIsOpen(true);
@@ -26,7 +22,7 @@ const Search = ({ buttonClassName, indices }) => {
 
   const closeModal = (e) => {
     e.stopPropagation();
-    setQuery(null);
+    setSearchQuery('');
     setIsOpen(false);
   };
 
@@ -59,11 +55,11 @@ const Search = ({ buttonClassName, indices }) => {
         <InstantSearch
           searchClient={searchClient}
           indexName={indices[0].name}
-          onSearchStateChange={({ query }) => setQuery(query)}
+          onSearchStateChange={onSearchStateChange}
         >
-          <SearchInput className="flex w-full" />
+          <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
           <div className="flex flex-col items-center w-full h-full overflow-y-scroll">
-            {query ? (
+            {searchQuery?.length ? (
               indices.map((index) => <Hits index={index} key={index.name} />)
             ) : (
               <span className="mt-16 text-lg leading-none text-black">
