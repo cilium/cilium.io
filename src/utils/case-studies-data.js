@@ -66,6 +66,11 @@ export default {
           'https://www.youtube.com/watch?v=9_hEEk3vUW8&list=PLDg_GiBbAx-l7kyTSyrmVMeTwneGziVQ3&index=15',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Talk 3',
+        linkUrl: 'https://www.youtube.com/watch?v=9_hEEk3vUW8',
+        linkTarget: '_blank',
+      },
     ],
   },
   ect888: {
@@ -115,6 +120,11 @@ export default {
       },
       {
         linkText: 'Talk 3',
+        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 4',
         linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
         linkTarget: '_blank',
       },
@@ -181,7 +191,7 @@ export default {
     text: 'PostFinance uses Cilium as their CNI for all mission critical, on premise k8s clusters',
     links: [
       {
-        linkText: 'Case Study',
+        linkText: 'Read Case Study',
         linkUrl: 'https://isovalent.com/data/isovalent-case-study-postfinance.pdf',
         linkTarget: '_blank',
       },
@@ -216,17 +226,17 @@ export default {
         linkUrl: 'https://www.cncf.io/case-studies/trip-com-group/',
       },
       {
+        linkText: 'Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=NIsU4I950l4',
+        linkTarget: '_blank',
+      },
+      {
         linkText: 'Blog 1',
         linkUrl: 'https://cilium.io/blog/2020/02/05/how-trip-com-uses-cilium/',
       },
       {
         linkText: 'Blog 2',
         linkUrl: 'https://arthurchiao.art/blog/trip-first-step-towards-cloud-native-security/',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk',
-        linkUrl: 'https://www.youtube.com/watch?v=NIsU4I950l4',
         linkTarget: '_blank',
       },
     ],
@@ -366,6 +376,11 @@ export default {
     text: 'Datadog uses Cilium in AWS (self-hosted k8s)',
     links: [
       {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/datadog/',
+        linkTarget: '_blank',
+      },
+      {
         linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=6mTVuZUHLBg',
         linkTarget: '_blank',
@@ -377,8 +392,8 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Case Study',
-        linkUrl: 'https://www.cncf.io/case-studies/datadog/',
+        linkText: 'Talk 2',
+        linkUrl: 'https://youtu.be/tw0F-LexNRA?si=2eYpFNGQnsf-NTdv',
         linkTarget: '_blank',
       },
     ],
@@ -393,8 +408,13 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Talk',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=DSkf9Y06-lE',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 2',
+        linkUrl: 'https://www.youtube.com/watch?v=WgEEpbi_AaI',
         linkTarget: '_blank',
       },
     ],
@@ -532,6 +552,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=jevKiqz7dNU',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Talk 2',
+        linkUrl: 'https://www.youtube.com/watch?v=jevKiqz7dNU',
+        linkTarget: '_blank',
+      },
     ],
   },
   eficode: {
@@ -573,7 +598,7 @@ export default {
     text: 'Trendyol uses Cilium as the default CNI for its Kubernetes Clusters',
     links: [
       {
-        linkText: 'Case Study',
+        linkText: 'Read Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/trendyol/',
         linkTarget: '_blank',
       },
@@ -609,6 +634,11 @@ export default {
         linkText: 'Read Blog',
         linkUrl:
           'https://blog.palantir.com/hardening-palantirs-kubernetes-infrastructure-with-cilium-1c40d4c7ef0',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=UlLmHc4PfhM',
         linkTarget: '_blank',
       },
     ],
@@ -695,8 +725,19 @@ export default {
     text: '<b>ilionx</b> uses Cilium as their preferred networking, observability, and security solution',
     links: [
       {
-        linkText: 'Case Study',
+        linkText: 'Read Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/ilionx/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  superorbital: {
+    iconName: 'superorbital',
+    text: '<b>Superorbital</b> uses Cilium in their customer engagements',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=b-3AyOBBRU4&t=404s',
         linkTarget: '_blank',
       },
     ],
@@ -860,10 +901,6 @@ export default {
   sproutfi: {
     iconName: 'sproutfi',
     text: '<b>Sproutfi</b> uses Cilium as the CNI on its GKE based clusters',
-  },
-  superorbital: {
-    iconName: 'superorbital',
-    text: '<b>Superorbital</b> uses Cilium in their customer engagements',
   },
   tsi: {
     iconName: 'tsi',

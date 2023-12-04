@@ -132,6 +132,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    superorbital,
     ilionx,
     ws02,
     singlestore,
@@ -240,7 +241,6 @@ const userCommunity2 = {
     bytedance,
     kubeOvn,
     kryptos,
-    superorbital,
     giantSwarm,
     immerok,
     magicLeap,
