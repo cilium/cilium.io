@@ -177,7 +177,7 @@ export default {
   },
   vshn: {
     iconName: 'vshn',
-    text: 'VSHN uses Cilium for multi-tenant networking on APPUiO Cloud and Open Shift',
+    text: 'VSHN uses Cilium for multi-tenant networking on APPUiO Cloud and OpenShift',
     links: [
       {
         linkText: 'Read case study',
