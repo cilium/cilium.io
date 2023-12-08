@@ -177,11 +177,16 @@ export default {
   },
   vshn: {
     iconName: 'vshn',
-    text: 'VSHN uses Cilium for multi-tenant networking on APPUiO Cloud',
+    text: 'VSHN uses Cilium for multi-tenant networking on APPUiO Cloud and OpenShift',
     links: [
       {
         linkText: 'Read case study',
         linkUrl: 'https://isovalent.com/data/isovalent-case-study-VSHN.pdf',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Video',
+        linkUrl: 'https://www.youtube.com/watch?v=m_pLj5pqH3A',
         linkTarget: '_blank',
       },
     ],
