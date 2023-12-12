@@ -10,6 +10,9 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  jsyk,
+  vkcloud,
+  sianalytics,
   ilionx,
   cybozu,
   ws02,
@@ -132,6 +135,8 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    jsyk,
+    vkcloud,
     superorbital,
     ilionx,
     ws02,
@@ -196,6 +201,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    sianalytics,
     cybozu,
     plusserver,
     twilio,
@@ -284,6 +290,7 @@ const logos1 = {
     'appuio',
     'hetzner',
     'azure',
+    'vkcloud',
   ],
   spaceXSize: 'sm',
 };

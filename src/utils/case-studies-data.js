@@ -747,6 +747,33 @@ export default {
       },
     ],
   },
+  vkcloud: {
+    iconName: 'vkcloud',
+    text: '<b>VK Cloud</b> uses Cilium in their Kubernetes Clusters for high performance networking and security',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=udPCzFEuDJ0',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  jsyk: {
+    iconName: 'jysk',
+    text: '<b>JSYK</b> uses Cilium and Hubble in their Kubernetes edge Clusters for advanced networking, security and observability',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://jysk.tech/unleashing-the-power-of-k3s-for-edge-computing-deploying-3000-in-store-kubernetes-clusters-part-77ecc5378d31',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  sianalytics: {
+    iconName: 'sianalytics',
+    text: '<b>SI Analytics</b> uses Cilium as the CNI for both their self-managed Kubernetes clusters in on-prem data centers and in their GKE dataplane v2-based clusters',
+  },
   cybozu: {
     iconName: 'cybozu',
     text: '<b>Cybozu</b> uses Cilium as a CNI in their on-prem Kubernetes clusters',
