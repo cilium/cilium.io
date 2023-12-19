@@ -22,7 +22,7 @@ const heroContent = {
 };
 
 const sectionContent1 = {
-  title: 'What does Cilium provides?',
+  title: 'What does Cilium provide?',
   description:
     'Cilium provides a straightforward solution for enabling the encryption of all node-to-node traffic with just one switch, no application changes or additional proxies. Cilium features automatic key rotation with overlapping keys, efficient datapath encryption through in-kernel IPsec or WireGuard, and can encrypt all traffic, including non-standard traffic like UDP. Simply configuring all nodes across all clusters with a common key and all communication between nodes is automatically encrypted.  ',
   videoSrc: 'https://www.youtube.com/embed/RAmJXsMeACU',

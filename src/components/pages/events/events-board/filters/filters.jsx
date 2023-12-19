@@ -10,7 +10,7 @@ const Filters = ({ eventFilters, activeFilters, handleFilters }) => {
   const isRegionsSelected = regions.length > 0;
 
   return (
-    <div className="mt-8 flex gap-x-7 md:mt-14 [@media(max-width:550px)]:flex-col [@media(max-width:550px)]:space-y-5 [@media(max-width:550px)]:space-x-0">
+    <div className="flex gap-x-7 [@media(max-width:550px)]:flex-col [@media(max-width:550px)]:space-y-5 [@media(max-width:550px)]:space-x-0">
       <DropdownSelect
         {...type}
         isSelected={isTypesSelected}

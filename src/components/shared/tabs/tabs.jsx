@@ -3,14 +3,12 @@ import { Link as GatsbyLink } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import filterToSlug from 'utils/filter-to-slug';
-
 const alignStyles = {
   left: 'justify-start',
   center: 'justify-start sm:justify-center',
 };
 
-const Tabs = ({ id, type, items, active, defaultTabTitle, align, className }) => (
+const Tabs = ({ id, items, activeLabel, defaultTabTitle, align, className }) => (
   <div
     id={id}
     className={classNames(
@@ -20,10 +18,9 @@ const Tabs = ({ id, type, items, active, defaultTabTitle, align, className }) =>
     )}
   >
     <div className="relative inline-flex flex-row gap-x-3 after:absolute after:inset-x-0 after:bottom-0 after:-z-10 after:h-[1px] after:w-full after:bg-gray-3">
-      {items.map((tab, index) => {
-        const isActive = active === tab;
-        const isDefault = tab === '*';
-        const href = filterToSlug(tab, type);
+      {items.map(({ label, basePath }, index) => {
+        const isActive = activeLabel === label;
+        const isDefault = label === '*';
 
         return (
           <GatsbyLink
@@ -33,10 +30,10 @@ const Tabs = ({ id, type, items, active, defaultTabTitle, align, className }) =>
                 ? 'text-primary-1 after:absolute after:inset-x-0 after:bottom-0 after:z-0 after:h-0.5 after:w-full after:bg-primary-1'
                 : 'text-black hover:text-primary-1'
             )}
-            to={href}
+            to={basePath}
             key={index}
           >
-            {isDefault ? defaultTabTitle : tab}
+            {isDefault ? defaultTabTitle : label}
           </GatsbyLink>
         );
       })}
@@ -46,9 +43,13 @@ const Tabs = ({ id, type, items, active, defaultTabTitle, align, className }) =>
 
 Tabs.propTypes = {
   id: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
-  active: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string,
+      basePath: PropTypes.string,
+    })
+  ).isRequired,
+  activeLabel: PropTypes.string.isRequired,
   defaultTabTitle: PropTypes.string,
   align: PropTypes.oneOf(['left', 'center']),
   className: PropTypes.string,

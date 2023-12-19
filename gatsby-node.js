@@ -2,7 +2,7 @@ const fetch = require(`node-fetch`);
 const Path = require('path');
 
 const { createEventFilters } = require('./src/utils/event-filters');
-const { EVENT_REGEX } = require('./src/utils/events');
+const { EVENT_REGEX, EVENT_PER_PAGE } = require('./src/utils/events');
 const { EVENTS_BASE_PATH } = require('./src/utils/routes');
 const { slugify } = require('./src/utils/slugify');
 
@@ -10,7 +10,7 @@ const DRAFT_FILTER = process.env.NODE_ENV === 'production' ? [false] : [true, fa
 
 const BLOG_POSTS_PER_PAGE = 9;
 const slugifyCategory = (item, pagePath) =>
-  item === '*' ? `${pagePath}/` : `${pagePath}/categories/${slugify(item)}/`;
+  item === '*' ? `/${pagePath}/` : `/${pagePath}/categories/${slugify(item)}/`;
 
 // Create Blog Posts
 async function createBlogPosts({ graphql, actions }) {
@@ -114,11 +114,16 @@ async function createBlogPages({ graphql, actions, reporter }) {
     );
   }
 
-  const categories = ['*'].concat(allCategories.map((category) => category.fieldValue));
+  const categories = ['*']
+    .concat(allCategories.map((category) => category.fieldValue))
+    .map((category) => ({
+      label: category,
+      basePath: slugifyCategory(category, 'blog'),
+    }));
 
   // Create category pages
   await Promise.all(
-    categories.map(async (category) =>
+    categories.map(async ({ label, basePath }) =>
       graphql(
         `
           query CategoryPostsQuery($tag: String!, $draftFilter: [Boolean]!) {
@@ -141,15 +146,14 @@ async function createBlogPages({ graphql, actions, reporter }) {
             }
           }
         `,
-        { tag: category, draftFilter: DRAFT_FILTER }
+        { tag: label, draftFilter: DRAFT_FILTER }
       ).then((result) => {
         if (result.errors) throw result.errors;
         const posts = result.data.allMdx.edges;
         const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
-        const pathBase = slugifyCategory(category, 'blog');
 
         Array.from({ length: numPages }).forEach((_, i) => {
-          const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
+          const path = i === 0 ? basePath : `${basePath}${i + 1}`;
           createPage({
             path,
             component: Path.resolve('./src/templates/blog.jsx'),
@@ -158,11 +162,11 @@ async function createBlogPages({ graphql, actions, reporter }) {
               skip: i * BLOG_POSTS_PER_PAGE,
               numPages,
               currentPage: i + 1,
-              currentCategory: category,
+              basePath,
+              currentCategory: label,
               categories,
               // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
               draftFilter: DRAFT_FILTER,
-              slug: path,
             },
           });
         });
@@ -252,7 +256,6 @@ async function createEventsPage({ graphql, actions }) {
 
   if (result.errors) throw new Error(result.errors);
 
-  const { totalCount } = result.data.allMdx;
   const {
     featuredPost: { nodes: featuredPost },
     allPosts: { nodes: allEvents },
@@ -275,17 +278,24 @@ async function createEventsPage({ graphql, actions }) {
   const regions = allRegions.reduce((acc, type) => [...acc, type.fieldValue], []);
   const eventFilters = createEventFilters(types, regions);
   const initialFilters = getInitialFilters(eventFilters);
+  const totalPageCount = Math.ceil(postEvents.length / EVENT_PER_PAGE);
 
-  createPage({
-    path: EVENTS_BASE_PATH,
-    component: Path.resolve('./src/templates/events.jsx'),
-    context: {
-      featuredEvent,
-      postEvents,
-      totalCount,
-      eventFilters,
-      initialFilters,
-    },
+  Array.from({ length: totalPageCount }).forEach((_, i) => {
+    const path = i === 0 ? EVENTS_BASE_PATH : `${EVENTS_BASE_PATH}${i + 1}`;
+    createPage({
+      path,
+      component: Path.resolve('./src/templates/events.jsx'),
+      context: {
+        limit: EVENT_PER_PAGE,
+        skip: i * EVENT_PER_PAGE,
+        totalPageCount,
+        currentPage: i + 1,
+        featuredEvent,
+        postEvents,
+        eventFilters,
+        initialFilters,
+      },
+    });
   });
 }
 
@@ -333,6 +343,10 @@ async function createLabsPage({ graphql, actions }) {
   } = result.data;
 
   const categories = ['*'].concat(allCategories.map((category) => category.fieldValue));
+  const categoriesWithBasePath = categories.map((category) => ({
+    label: category,
+    basePath: slugifyCategory(category, 'labs'),
+  }));
   const labList = result.data.allMdx.edges.map(({ node: { frontmatter: lab } }) => ({ ...lab }));
 
   const promiseList = [];
@@ -402,7 +416,8 @@ async function createLabsPage({ graphql, actions }) {
             component: template,
             context: {
               labs,
-              categories,
+              basePath: pathBase,
+              categories: categoriesWithBasePath,
               currentCategory: category,
               totalPageCount,
               currentPage: i + 1,

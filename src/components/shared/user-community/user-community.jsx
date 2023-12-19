@@ -42,6 +42,7 @@ import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
+import CybozuLogo from './images/cybozu.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
 import DbschenkerLogo from './images/dbschenker.inline.svg';
@@ -56,11 +57,13 @@ import Form3Logo from './images/form3.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
+import IlionxLogo from './images/ilionx.inline.svg';
 import ImmerokLogo from './images/immerok.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
 import InnoqLogo from './images/innoq.inline.svg';
 import IsovalentLogo from './images/isovalent.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
+import JyskLogo from './images/jysk-tech.inline.svg';
 import KiloLogo from './images/kilo.inline.svg';
 import KryptosLogo from './images/kryptos.inline.svg';
 import KubehetznerLogo from './images/kube-hetzner.inline.svg';
@@ -96,6 +99,7 @@ import SapLogo from './images/sap.inline.svg';
 import SapianLogo from './images/sapian.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SchubergPhilisLogo from './images/schuberg-philis.inline.svg';
+import SianalyticsLogo from './images/sianalytics.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
 import SinglestoreLogo from './images/singlestore.inline.svg';
 import SkybetLogo from './images/skybet.inline.svg';
@@ -115,10 +119,16 @@ import TwilioLogo from './images/twilio.inline.svg';
 import UngleichLogo from './images/ungleich.inline.svg';
 import UnitedCloudLogo from './images/unitedcloud.inline.svg';
 import UtmostLogo from './images/utmost.inline.svg';
+import VkcloudLogo from './images/vkcloud.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  jysk: JyskLogo,
+  vkcloud: VkcloudLogo,
+  sianalytics: SianalyticsLogo,
+  ilionx: IlionxLogo,
+  cybozu: CybozuLogo,
   ws02: Ws02Logo,
   singlestore: SinglestoreLogo,
   deezer: DeezerLogo,

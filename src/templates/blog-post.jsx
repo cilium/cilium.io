@@ -13,15 +13,13 @@ const BlogPostPage = (props) => {
   const {
     data: { mdx: postData },
     children,
-    location: { pathname },
   } = props;
   const {
     frontmatter: { path, title, date, tags, ogSummary },
   } = postData;
-  const isBlogPage = pathname.startsWith('/blog');
 
   return (
-    <MainLayout isBlogPage={isBlogPage}>
+    <MainLayout headerWithSearch>
       <Content
         path={path}
         content={children}

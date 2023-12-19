@@ -66,6 +66,11 @@ export default {
           'https://www.youtube.com/watch?v=9_hEEk3vUW8&list=PLDg_GiBbAx-l7kyTSyrmVMeTwneGziVQ3&index=15',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Talk 3',
+        linkUrl: 'https://www.youtube.com/watch?v=9_hEEk3vUW8',
+        linkTarget: '_blank',
+      },
     ],
   },
   ect888: {
@@ -118,6 +123,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Talk 4',
+        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
+        linkTarget: '_blank',
+      },
     ],
   },
   capitalOne: {
@@ -167,21 +177,26 @@ export default {
   },
   vshn: {
     iconName: 'vshn',
-    text: 'VSHN uses Cilium for multi-tenant networking on APPUiO Cloud',
+    text: 'VSHN uses Cilium for multi-tenant networking on APPUiO Cloud and OpenShift',
     links: [
       {
         linkText: 'Read case study',
         linkUrl: 'https://isovalent.com/data/isovalent-case-study-VSHN.pdf',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Video',
+        linkUrl: 'https://www.youtube.com/watch?v=m_pLj5pqH3A',
+        linkTarget: '_blank',
+      },
     ],
   },
   postfinance: {
     iconName: 'postfinance',
-    text: 'PostFinance is using Cilium as their CNI for all mission critical, on premise k8s clusters',
+    text: 'PostFinance uses Cilium as their CNI for all mission critical, on premise k8s clusters',
     links: [
       {
-        linkText: 'Case Study',
+        linkText: 'Read Case Study',
         linkUrl: 'https://isovalent.com/data/isovalent-case-study-postfinance.pdf',
         linkTarget: '_blank',
       },
@@ -216,17 +231,17 @@ export default {
         linkUrl: 'https://www.cncf.io/case-studies/trip-com-group/',
       },
       {
+        linkText: 'Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=NIsU4I950l4',
+        linkTarget: '_blank',
+      },
+      {
         linkText: 'Blog 1',
         linkUrl: 'https://cilium.io/blog/2020/02/05/how-trip-com-uses-cilium/',
       },
       {
         linkText: 'Blog 2',
         linkUrl: 'https://arthurchiao.art/blog/trip-first-step-towards-cloud-native-security/',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk',
-        linkUrl: 'https://www.youtube.com/watch?v=NIsU4I950l4',
         linkTarget: '_blank',
       },
     ],
@@ -363,8 +378,13 @@ export default {
   },
   datadog: {
     iconName: 'datadog',
-    text: 'Datadog is using Cilium in AWS (self-hosted k8s)',
+    text: 'Datadog uses Cilium in AWS (self-hosted k8s)',
     links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/datadog/',
+        linkTarget: '_blank',
+      },
       {
         linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=6mTVuZUHLBg',
@@ -377,8 +397,8 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Case Study',
-        linkUrl: 'https://www.cncf.io/case-studies/datadog/',
+        linkText: 'Talk 2',
+        linkUrl: 'https://youtu.be/tw0F-LexNRA?si=2eYpFNGQnsf-NTdv',
         linkTarget: '_blank',
       },
     ],
@@ -393,15 +413,20 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Talk',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=DSkf9Y06-lE',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 2',
+        linkUrl: 'https://www.youtube.com/watch?v=WgEEpbi_AaI',
         linkTarget: '_blank',
       },
     ],
   },
   meltwater: {
     iconName: 'meltwater',
-    text: 'Meltwater is using Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
+    text: 'Meltwater uses Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
     links: [
       {
         linkText: 'User Story',
@@ -417,7 +442,7 @@ export default {
   },
   utmost: {
     iconName: 'utmost',
-    text: 'Utmost is using Cilium in all tiers of its Kubernetes ecosystem to implement zero trust networking',
+    text: 'Utmost uses Cilium in all tiers of its Kubernetes ecosystem to implement zero trust networking',
     links: [
       {
         linkText: 'User Story',
@@ -441,7 +466,7 @@ export default {
   },
   form3: {
     iconName: 'form3',
-    text: 'Form3 is using Cilium in their production clusters (self-hosted, bare-metal, private cloud)',
+    text: 'Form3 uses Cilium in their production clusters (self-hosted, bare-metal, private cloud)',
     links: [
       {
         linkText: 'Watch Talk',
@@ -532,6 +557,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=jevKiqz7dNU',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Talk 2',
+        linkUrl: 'https://www.youtube.com/watch?v=jevKiqz7dNU',
+        linkTarget: '_blank',
+      },
     ],
   },
   eficode: {
@@ -547,7 +577,7 @@ export default {
   },
   yahoo: {
     iconName: 'yahoo',
-    text: '<b>Yahoo</b> is using Cilium for L4 North-South Load Balancing for Kubernetes Services',
+    text: '<b>Yahoo</b> uses Cilium for L4 North-South Load Balancing for Kubernetes Services',
     links: [
       {
         linkText: 'Watch Talk',
@@ -573,7 +603,7 @@ export default {
     text: 'Trendyol uses Cilium as the default CNI for its Kubernetes Clusters',
     links: [
       {
-        linkText: 'Case Study',
+        linkText: 'Read Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/trendyol/',
         linkTarget: '_blank',
       },
@@ -609,6 +639,11 @@ export default {
         linkText: 'Read Blog',
         linkUrl:
           'https://blog.palantir.com/hardening-palantirs-kubernetes-infrastructure-with-cilium-1c40d4c7ef0',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=UlLmHc4PfhM',
         linkTarget: '_blank',
       },
     ],
@@ -681,7 +716,7 @@ export default {
   },
   ws02: {
     iconName: 'ws02',
-    text: '<b>WS02</b> is using Cilium to implement zero trust networking within their internal developer platform as a service',
+    text: '<b>WS02</b> uses Cilium to implement zero trust networking within their internal developer platform as a service',
     links: [
       {
         linkText: 'Read Blog',
@@ -690,9 +725,62 @@ export default {
       },
     ],
   },
+  ilionx: {
+    iconName: 'ilionx',
+    text: '<b>ilionx</b> uses Cilium as their preferred networking, observability, and security solution',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/ilionx/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  superorbital: {
+    iconName: 'superorbital',
+    text: '<b>Superorbital</b> uses Cilium in their customer engagements',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=b-3AyOBBRU4&t=404s',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  vkcloud: {
+    iconName: 'vkcloud',
+    text: '<b>VK Cloud</b> uses Cilium in their Kubernetes Clusters for high performance networking and security',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=udPCzFEuDJ0',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  jsyk: {
+    iconName: 'jysk',
+    text: '<b>JSYK</b> uses Cilium and Hubble in their Kubernetes edge Clusters for advanced networking, security and observability',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://jysk.tech/unleashing-the-power-of-k3s-for-edge-computing-deploying-3000-in-store-kubernetes-clusters-part-77ecc5378d31',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  sianalytics: {
+    iconName: 'sianalytics',
+    text: '<b>SI Analytics</b> uses Cilium as the CNI for both their self-managed Kubernetes clusters in on-prem data centers and in their GKE dataplane v2-based clusters',
+  },
+  cybozu: {
+    iconName: 'cybozu',
+    text: '<b>Cybozu</b> uses Cilium as a CNI in their on-prem Kubernetes clusters',
+  },
   twilio: {
     iconName: 'twilio',
-    text: '<b>Twilio Segment</b>  is using Cilium across their Kubernetes based compute platform',
+    text: '<b>Twilio Segment</b> uses Cilium across their Kubernetes based compute platform',
   },
   kubesphere: {
     iconName: 'kubesphere',
@@ -704,7 +792,7 @@ export default {
   },
   sportradar: {
     iconName: 'sportradar',
-    text: '<b>Sportradar</b> is using Cilium as their main CNI plugin in AWS (using kops)',
+    text: '<b>Sportradar</b> uses Cilium as their main CNI plugin in AWS (using kops)',
   },
   accuknox: {
     iconName: 'accuknox',
@@ -846,10 +934,6 @@ export default {
     iconName: 'sproutfi',
     text: '<b>Sproutfi</b> uses Cilium as the CNI on its GKE based clusters',
   },
-  superorbital: {
-    iconName: 'superorbital',
-    text: '<b>Superorbital</b> uses Cilium in their customer engagements',
-  },
   tsi: {
     iconName: 'tsi',
     text: `<b>TSI</b> uses Cilium for it's Open Sovereign Cloud product`,
@@ -897,11 +981,11 @@ export default {
   },
   daimlertruck: {
     iconName: 'daimlertruck',
-    text: '<b>Daimler Truck</b> is maintaining an AKS k8s cluster as a shared resource for DevOps crews and is using Cilium as the default CNI',
+    text: '<b>Daimler Truck</b> is maintaining an AKS k8s cluster as a shared resource for DevOps crews and uses Cilium as the default CNI',
   },
   proton: {
     iconName: 'proton',
-    text: '<b>Proton</b> is using Cilium as their CNI for all their Kubernetes clusters',
+    text: '<b>Proton</b> uses Cilium as their CNI for all their Kubernetes clusters',
   },
   plusserver: {
     iconName: 'plusserver',
@@ -917,6 +1001,6 @@ export default {
   },
   unitedcloud: {
     iconName: 'unitedcloud',
-    text: '<b>United Cloud</b> is using Cilium for all non-production and production clusters (on-premises)',
+    text: '<b>United Cloud</b> uses Cilium for all non-production and production clusters (on-premises)',
   },
 };
