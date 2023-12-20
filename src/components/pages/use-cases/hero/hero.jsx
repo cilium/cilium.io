@@ -30,6 +30,8 @@ const Hero = ({
   description,
   imageSrc,
   imageAlt,
+  imageWidth,
+  imageHeight,
   videoSrc,
 }) => (
   <section className="mb-10 bg-gray-4 md:mb-20 lg:mb-28">
@@ -67,8 +69,8 @@ const Hero = ({
           {imageSrc && (
             <img
               className="max-h-[350px]"
-              // width={592}
-              height={350}
+              width={imageWidth}
+              height={imageHeight}
               src={imageSrc}
               alt={imageAlt}
               loading="eager"
@@ -91,12 +93,6 @@ const Hero = ({
   </section>
 );
 
-Hero.defaultProps = {
-  videoSrc: null,
-  imageSrc: null,
-  imageAlt: null,
-};
-
 Hero.propTypes = {
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -105,7 +101,17 @@ Hero.propTypes = {
   description: PropTypes.string.isRequired,
   imageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
+  imageWidth: PropTypes.number,
+  imageHeight: PropTypes.number,
   videoSrc: PropTypes.string,
+};
+
+Hero.defaultProps = {
+  videoSrc: null,
+  imageSrc: null,
+  imageAlt: null,
+  imageWidth: 592,
+  imageHeight: 350,
 };
 
 export default Hero;

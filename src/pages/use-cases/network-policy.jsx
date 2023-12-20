@@ -22,6 +22,9 @@ const heroContent = {
   description:
     "Kubernetes network policies provide an application-centric construct for defining security policies at L3/L4 level. One of the primary challenges is how to effectively enforce security policies when traditional IP rules don't apply. Modern systems often churn IPs dynamically making it difficult to rely entirely on TCP/UDP ports and IP addresses for scaling security policies. ",
   imageSrc: SecurityBee,
+  imageAlt: 'Security illustration',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

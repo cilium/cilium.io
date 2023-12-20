@@ -19,6 +19,8 @@ const heroContent = {
     'Many compliance frameworks require encryption, but Kubernetes lacks native pod-to-pod encryption. Two common solutions to this problem are embedding encryption within the application or using a service mesh. Embedding encryption within the app is complex and requires application and security expertise. On the other hand, most service mesh implementations are very complex and challenging to manage and operate.  ',
   imageSrc: JeediBee,
   imageAlt: 'Jeedi Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

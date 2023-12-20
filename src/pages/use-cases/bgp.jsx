@@ -20,6 +20,8 @@ const heroContent = {
     "Traditional IP routing can be static and inflexible, especially in cloud native environments where workloads are constantly being created, moved, and deleted. BGP's inherent ability to manage complex network topologies and routing data makes it an excellent fit for the dynamic and distributed nature of modern cloud native environments.  ",
   imageSrc: TravelBee,
   imageAlt: 'Travel Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

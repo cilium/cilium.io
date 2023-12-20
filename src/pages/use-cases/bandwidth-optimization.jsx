@@ -21,6 +21,8 @@ const heroContent = {
     "Kubernetes lacks native traffic control capabilities, making Traffic Rate-Limiting essential for optimal resource consumption and to prevent bandwidth exhaustion. While Kubernetes does offer Bandwidth Rate-Limiting, it is still experimental and can have detrimental effects on latency. Furthermore, connecting to external-facing Kubernetes clusters may result in a poor user experience due to most TCP congestion protocols not being designed for today's diverse networks.",
   imageSrc: BandWidthImage1,
   imageAlt: 'bandwidth illustration',
+  imageWidth: 560,
+  imageHeight: 272,
 };
 
 const sectionContent1 = {

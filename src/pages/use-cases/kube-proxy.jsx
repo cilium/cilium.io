@@ -22,6 +22,8 @@ const heroContent = {
     'IPtables and Netfilter are the two foundational technologies of kube-proxy for implementing the Service abstraction. They carry legacy accumulated over 20 years of development grounded in more traditional networking environments that are typically far more static than your average Kubernetes cluster. In the age of cloud native, they are no longer the best tool for the job, especially in terms of performance, reliability, scalability, and operations.',
   imageSrc: ElectricianBee,
   imageAlt: 'Electrician Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

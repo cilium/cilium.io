@@ -24,6 +24,8 @@ const heroContent = {
     'Multi-cluster Kubernetes setups are often adopted for reasons like fault isolation, scalability, and geographical distribution. This approach can lead to networking complexities. Traditional networking models, in this context, struggle with service discovery, network segmentation, policy enforcement, and load balancing across clusters. Additionally, managing security protocols and policies across multiple environments can be a challenging endeavour due to the distributed nature of services.',
   imageSrc: AstronautBee,
   imageAlt: 'Astronaut Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

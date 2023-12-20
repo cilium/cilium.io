@@ -20,6 +20,8 @@ const heroContent = {
     'Traditional network observability tools provide packet-level visibility, which can be insufficient in cloud native and other environments with complex communication patterns and diverse application protocols. In such scenarios, troubleshooting network issues can be challenging, and gaining protocol-level visibility becomes critical to ensure observability and security.',
   imageSrc: NewBee,
   imageAlt: 'Astronaut Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

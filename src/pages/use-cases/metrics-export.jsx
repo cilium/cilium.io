@@ -21,6 +21,8 @@ const heroContent = {
     'Metrics alone may lack context for effective issue diagnosis. Configuring metrics exporters and integrating them with monitoring systems can be error-prone and manual. Inadequate, inconsistent, or incorrect metrics can  be misleading, resulting in incorrect conclusions about the application state. Troubleshooting often requires correlating metrics with traces for a comprehensive system understanding.  ',
   imageSrc: ExcelBee,
   imageAlt: 'Kubernetes Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

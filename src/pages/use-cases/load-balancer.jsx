@@ -19,6 +19,8 @@ const heroContent = {
     'Configuring and managing load balancing into your cluster can be challenging due to the complexity involved in setting up connectivity and synchronization between the clusters and the outside world. Traditional hardware load balancers can be very costly while software load balancers may not provide the performance you need. External-to-Pod (North-South) LB also typically requires additional tooling, adding more complexity, cost, and overhead. ',
   imageSrc: DetectiveBeeImage,
   imageAlt: 'Electrician Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

@@ -20,6 +20,8 @@ const heroContent = {
     'Cloud native environments are often dynamic and distributed, requiring a security approach that encompasses detection and prevention. Observing and filtering events in user space can be resource-intensive and lead to blind spots in security monitoring, leaving systems vulnerable to attacks.',
   imageSrc: TetragonShield,
   imageAlt: 'Tetragon Shield',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

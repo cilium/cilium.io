@@ -20,6 +20,8 @@ const heroContent = {
     'Pods typically have ever-changing IP addresses in Kubernetes environments. Even if masquerading is used to mitigate this, the IP addresses of nodes can also change frequently. Egress gateways provide a way to route all outbound traffic from certain pods through a specific node with a predictable IP address. This predictable IP can be useful for scenarios where the traffic destination requires a known source IP, for instance, when working with legacy systems or firewall rules.',
   imageSrc: BeeKeeperBee,
   imageAlt: 'Astronaut Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

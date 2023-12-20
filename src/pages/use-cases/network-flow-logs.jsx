@@ -20,6 +20,8 @@ const heroContent = {
     'Traditional network flow logs often lack the necessary level of detail and context needed to monitor and troubleshoot network issues in complex environments making it difficult to trace traffic back to specific workloads. This makes debugging difficult and time-consuming and makes it challenging to identify the source and scope of security incidents.',
   imageSrc: AuditBee,
   imageAlt: 'Audit Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {

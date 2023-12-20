@@ -21,6 +21,8 @@ const heroContent = {
     'When troubleshooting cloud native environments, the issue could be lurking between any layer of the network, environment, or its dependencies. For instance, it may be difficult to determine if DNS is working properly, or if an application is failing due to policy-related issues. Identifying the latest policy-related drops or determining if essential traffic between service components is being blocked can also prove to be challenging. On the other hand, examining logs for answers can be a difficult and time-consuming process.',
   imageSrc: KubernetesBee,
   imageAlt: 'Kubernetes Bee',
+  imageWidth: 452,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {
