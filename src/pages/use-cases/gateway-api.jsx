@@ -4,7 +4,7 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import SEO from 'components/shared/seo';
-import GatewayImage1 from 'images/pages/usecase/gateway-1.webp';
+import GatewayImage1 from 'images/pages/usecase/gateway-1.png';
 import GatewayImage2 from 'images/pages/usecase/gateway-2.png';
 import MainLayout from 'layouts/main/main';
 
@@ -17,6 +17,8 @@ const heroContent = {
     'Gateway API addresses the limitations of the Kubernetes Ingress API, which has traditionally been used to route traffic into Kubernetes clusters. While the Ingress API supports basic routing based on path and host rules, it lacks support for advanced routing features, only supports HTTP and HTTPS traffic, doesn’t separate out user/operator concerns, and can lead to inconsistencies due to vendor-specific annotations. Gateway API overcomes these constraints, providing a more robust, extensible, and role-oriented approach to traffic engineering.​',
   imageSrc: GatewayImage1,
   imageAlt: 'cilium gateway api illustration',
+  imageWidth: 560,
+  imageHeight: 277,
 };
 
 const sectionContent1 = {
@@ -31,6 +33,8 @@ const sectionContent2 = {
   description:
     'Cilium’s Gateway API implementation was designed with different operational roles in mind, such as Infrastructure Providers, Cluster Operators, and Application Developers. By decomposing the Ingress API into several Gateway API objects, different personas can be assigned the appropriate access and privileges according to their responsibilities. This means that, for example, application developers would be allowed to create Route objects in a specified namespace, but would not be able to modify the Gateway configuration or edit Route objects in other namespaces.​',
   imageSrc: GatewayImage2,
+  imageWidth: 624,
+  imageHeight: 464,
   imageAlt: 'cilium gateway API TLS termination illustration',
   imageRight: false,
 };
@@ -43,7 +47,7 @@ const sectionContent3 = {
 };
 
 const GatewayAPIPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

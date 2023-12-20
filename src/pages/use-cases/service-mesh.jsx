@@ -4,7 +4,7 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import SEO from 'components/shared/seo';
-import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.webp';
+import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.png';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
@@ -30,6 +30,8 @@ const sectionContent2 = {
   description:
     'At the heart of Cilium is eBPF, a revolutionary technology built into the Linux kernel. With eBPF, Cilium delivers lightning-fast, efficient, and scalable networking. This bypasses the performance drawbacks of traditional proxies, enabling direct and efficient communication between your services.',
   imageSrc: ServiceMeshImage1,
+  imageWidth: 624,
+  imageHeight: 318,
   imageAlt: 'eBPF powered service mesh illustration',
   imageRight: false,
 };
@@ -50,7 +52,7 @@ const sectionContent4 = {
 };
 
 const ServiceMeshPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

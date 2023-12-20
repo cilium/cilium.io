@@ -8,7 +8,7 @@ import SEO from 'components/shared/seo';
 import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import AuditBee from 'images/pages/usecase/audit-bee.png';
-import FlowImage1 from 'images/pages/usecase/flow-1.webp';
+import FlowImage1 from 'images/pages/usecase/flow-1.png';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
@@ -20,6 +20,8 @@ const heroContent = {
     'Traditional network flow logs often lack the necessary level of detail and context needed to monitor and troubleshoot network issues in complex environments making it difficult to trace traffic back to specific workloads. This makes debugging difficult and time-consuming and makes it challenging to identify the source and scope of security incidents.',
   imageSrc: AuditBee,
   imageAlt: 'Audit Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {
@@ -34,6 +36,8 @@ const sectionContent2 = {
   description:
     'Cilium enhances network flow logs with additional information about the identity of the Kubernetes workloads generating or receiving the traffic. This identity information is based on the Kubernetes labels and annotations assigned to the workloads, as well as any other metadata that can be retrieved from the Kubernetes API server.',
   imageSrc: FlowImage1,
+  imageWidth: 624,
+  imageHeight: 527,
   imageAlt: 'cilium metrics and tracing with grafana illustration',
   imageRight: false,
 };
@@ -62,7 +66,7 @@ const testimonials = [
 ];
 
 const NetworkFlowLogsPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

@@ -9,7 +9,7 @@ import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import KubermaticLogo from 'icons/logo-kubermatic.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
 import ElectricianBee from 'images/pages/usecase/electrician-bee.png';
-import KubeProxyImage1 from 'images/pages/usecase/kubeproxy-1.webp';
+import KubeProxyImage1 from 'images/pages/usecase/kubeproxy-1.png';
 import KubeProxyImage2 from 'images/pages/usecase/kubeproxy-2.png';
 import MainLayout from 'layouts/main/main';
 
@@ -22,6 +22,8 @@ const heroContent = {
     'IPtables and Netfilter are the two foundational technologies of kube-proxy for implementing the Service abstraction. They carry legacy accumulated over 20 years of development grounded in more traditional networking environments that are typically far more static than your average Kubernetes cluster. In the age of cloud native, they are no longer the best tool for the job, especially in terms of performance, reliability, scalability, and operations.',
   imageSrc: ElectricianBee,
   imageAlt: 'Electrician Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {
@@ -36,6 +38,8 @@ const sectionContent2 = {
   description:
     'If you already have kube-proxy running as a DaemonSet, transitioning to Cilium is a breeze. Replacing kube-proxy with Cilium is a straightforward process, as Cilium provides a Kubernetes-native implementation that is fully compatible with the Kubernetes API. Existing Kubernetes applications and configurations can continue to work seamlessly with Cilium. ',
   imageSrc: KubeProxyImage1,
+  imageWidth: 624,
+  imageHeight: 260,
   imageAlt: 'kube proxy illustration',
 };
 
@@ -44,6 +48,8 @@ const sectionContent3 = {
   description:
     "Cilium's kube-proxy replacement offers advanced configuration modes to cater to your specific needs. Features like client source IP preservation ensure that your service connections remain intact, while Maglev Consistent Hashing enhances load balancing and resiliency. With support for Direct Server Return (DSR) and Hybrid DSR/SNAT modes, you can optimize traffic routing and improve performance.  ",
   imageSrc: KubeProxyImage2,
+  imageWidth: 624,
+  imageHeight: 318,
   imageAlt: 'kube-proxy with direct server return mode illustration',
   imageRight: false,
 };
@@ -76,7 +82,7 @@ const testimonials = [
 ];
 
 const KubeProxyReplacementPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

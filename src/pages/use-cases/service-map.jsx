@@ -21,6 +21,8 @@ const heroContent = {
     'When troubleshooting cloud native environments, the issue could be lurking between any layer of the network, environment, or its dependencies. For instance, it may be difficult to determine if DNS is working properly, or if an application is failing due to policy-related issues. Identifying the latest policy-related drops or determining if essential traffic between service components is being blocked can also prove to be challenging. On the other hand, examining logs for answers can be a difficult and time-consuming process.',
   imageSrc: KubernetesBee,
   imageAlt: 'Kubernetes Bee',
+  imageWidth: 452,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {
@@ -35,6 +37,8 @@ const sectionContent2 = {
   description:
     'Simply looking at `kubectl get pods` does not indicate dependencies between each service or external APIs or databases. Hubble offers effortless automatic discovery of service dependencies within Kubernetes Clusters at L3/L4 and L7 levels. This allows for user-friendly visualization and filtering of dataflows as a Service Map, enabling easy management of service dependencies.  ',
   imageSrc: ServiceMapImage1,
+  imageWidth: 624,
+  imageHeight: 280,
   imageAlt: 'multi-cluster illustration',
 };
 
@@ -62,7 +66,7 @@ const testimonials = [
 ];
 
 const ServiceMapPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

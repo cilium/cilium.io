@@ -9,6 +9,8 @@ const FeatureSection = ({
   title,
   description,
   imageSrc,
+  imageWidth,
+  imageHeight,
   imageAlt,
   imageRight,
   videoSrc,
@@ -24,7 +26,7 @@ const FeatureSection = ({
     >
       <div
         className={classNames(
-          'col-span-full lg:col-span-5',
+          'col-span-full lg:col-span-5 flex flex-col justify-center',
           !imageRight ? 'lg:col-start-8' : 'lg:col-start-1'
         )}
       >
@@ -47,10 +49,11 @@ const FeatureSection = ({
       >
         {imageSrc && (
           <img
-            className="max-h-full w-full lg:max-h-[350px]"
-            width={592}
-            height={350}
+            className="h-auto w-full"
+            width={imageWidth}
+            height={imageHeight}
             src={imageSrc}
+            loading="lazy"
             alt={imageAlt}
           />
         )}
@@ -74,6 +77,8 @@ FeatureSection.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   imageSrc: PropTypes.string,
+  imageWidth: PropTypes.number,
+  imageHeight: PropTypes.number,
   imageAlt: PropTypes.string,
   imageRight: PropTypes.bool,
   withBackground: PropTypes.bool,
@@ -85,6 +90,8 @@ FeatureSection.defaultProps = {
   imageRight: true,
   withBackground: false,
   videoSrc: null,
+  imageWidth: 592,
+  imageHeight: 350,
   imageSrc: null,
   imageAlt: null,
   className: null,

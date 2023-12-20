@@ -20,6 +20,8 @@ const heroContent = {
     'Traditional network observability tools provide packet-level visibility, which can be insufficient in cloud native and other environments with complex communication patterns and diverse application protocols. In such scenarios, troubleshooting network issues can be challenging, and gaining protocol-level visibility becomes critical to ensure observability and security.',
   imageSrc: NewBee,
   imageAlt: 'Astronaut Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {
@@ -27,6 +29,8 @@ const sectionContent1 = {
   description:
     "Cilium's protocol-aware visibility provides application owners with deep insights into their workload’s communications at the protocol level. This means that Cilium is capable of native understanding of various application protocols, such as TLS, gRPC, Kafka, DNS, and HTTP, and other ones like SCTP enabling fine-grained observability of API-specific endpoints and DNS-identities for external endpoints.",
   imageSrc: ProtocolImage1,
+  imageWidth: 624,
+  imageHeight: 528,
   imageAlt: 'hubble insights illustration',
   imageRight: false,
 };
@@ -60,7 +64,7 @@ const testimonials = [
 ];
 
 const ProtocolVisibilityPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

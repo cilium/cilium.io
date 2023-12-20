@@ -21,6 +21,8 @@ const heroContent = {
     'Metrics alone may lack context for effective issue diagnosis. Configuring metrics exporters and integrating them with monitoring systems can be error-prone and manual. Inadequate, inconsistent, or incorrect metrics can  be misleading, resulting in incorrect conclusions about the application state. Troubleshooting often requires correlating metrics with traces for a comprehensive system understanding.  ',
   imageSrc: ExcelBee,
   imageAlt: 'Kubernetes Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {
@@ -35,6 +37,8 @@ const sectionContent2 = {
   description:
     'Cilium captures a plethora of metrics, including latency, request rates, and error rates for your applications. These metrics are exported in a standardized Prometheus format, which can be easily integrated with your existing monitoring and visualization tools, enabling you to track your network performance in real-time.',
   imageSrc: MetricsImage1,
+  imageWidth: 624,
+  imageHeight: 474,
   imageAlt: 'cilium metrics and tracing with grafana illustration',
   imageRight: false,
 };
@@ -64,7 +68,7 @@ const testimonials = [
 ];
 
 const MetricsExportPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

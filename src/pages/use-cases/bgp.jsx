@@ -20,6 +20,8 @@ const heroContent = {
     "Traditional IP routing can be static and inflexible, especially in cloud native environments where workloads are constantly being created, moved, and deleted. BGP's inherent ability to manage complex network topologies and routing data makes it an excellent fit for the dynamic and distributed nature of modern cloud native environments.  ",
   imageSrc: TravelBee,
   imageAlt: 'Travel Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {
@@ -27,6 +29,8 @@ const sectionContent1 = {
   description:
     "Cilium amplifies the power of BGP - the backbone of the internet - to bring you high-speed, scalable, and secure routing for your cloud environments. Seamlessly integrating with existing infrastructure, Cilium's BGP is perfect for a range of deployments, from hybrid to multi cloud to edge. With advanced traffic engineering features, you'll have granular control over your network traffic, optimizing your network's performance and security.",
   imageSrc: BGPImage1,
+  imageWidth: 624,
+  imageHeight: 509,
   imageAlt: 'multi-cluster illustration',
 };
 
@@ -59,7 +63,7 @@ const testimonials = [
 ];
 
 const BGPPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

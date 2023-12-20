@@ -7,7 +7,7 @@ import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 import BandWidthImage1 from 'images/pages/usecase/bandwidth-1.png';
-import BandWidthImage2 from 'images/pages/usecase/bandwidth-2.webp';
+import BandWidthImage2 from 'images/pages/usecase/bandwidth-2.png';
 import BandWidthImage3 from 'images/pages/usecase/bandwidth-3.png';
 import MainLayout from 'layouts/main/main';
 
@@ -21,6 +21,8 @@ const heroContent = {
     "Kubernetes lacks native traffic control capabilities, making Traffic Rate-Limiting essential for optimal resource consumption and to prevent bandwidth exhaustion. While Kubernetes does offer Bandwidth Rate-Limiting, it is still experimental and can have detrimental effects on latency. Furthermore, connecting to external-facing Kubernetes clusters may result in a poor user experience due to most TCP congestion protocols not being designed for today's diverse networks.",
   imageSrc: BandWidthImage1,
   imageAlt: 'bandwidth illustration',
+  imageWidth: 560,
+  imageHeight: 272,
 };
 
 const sectionContent1 = {
@@ -28,6 +30,8 @@ const sectionContent1 = {
   description:
     'Cilium’s Bandwidth Manager allows rate-limiting per Pod with just one line of YAML. Compared to other alternatives, the Bandwidth Manager provides a 4x reduction in latency, ensuring a smooth network experience and isn’t detrimental to performances and is designed for multi-queue and multi-core NICs. ',
   imageSrc: BandWidthImage2,
+  imageWidth: 624,
+  imageHeight: 225,
   imageAlt: 'Cilium bandwidth manager illustration',
 };
 
@@ -36,6 +40,8 @@ const sectionContent2 = {
   description:
     'Cilium supports BBR, a congestion control algorithm developed by Google, making it the first platform to do so. Google observed up to 2,700x improvement in throughput when testing BBR, making it a valuable addition for optimizing network performance. Cilium’s BBR provides exceptional improvements in throughput and latency for external-facing applications, offering consumers a delightful user experience',
   imageSrc: BandWidthImage3,
+  imageWidth: 624,
+  imageHeight: 288,
   imageAlt: 'Cilium bandwidth manager illustration',
   imageRight: false,
 };
@@ -59,7 +65,7 @@ const testimonials = [
 ];
 
 const BandwidthLatencyPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

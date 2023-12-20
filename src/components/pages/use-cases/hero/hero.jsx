@@ -30,6 +30,8 @@ const Hero = ({
   description,
   imageSrc,
   imageAlt,
+  imageWidth,
+  imageHeight,
   videoSrc,
 }) => (
   <section className="mb-10 bg-gray-4 md:mb-20 lg:mb-28">
@@ -41,7 +43,7 @@ const Hero = ({
       >
         <Label category={category} />
         <Heading
-          className="mt-2.5 mb-3 leading-tight lg:leading-tight xl:!text-44 xl:leading-tight"
+          className="mt-6 mb-3 leading-tight lg:leading-tight xl:!text-44 xl:leading-tight"
           tag="h1"
           size="md"
         >
@@ -49,7 +51,7 @@ const Hero = ({
         </Heading>
         <small className="text-xl leading-normal ">{tagline}</small>
         <Heading
-          className="mt-5 mb-2 border-t border-gray-3 pt-5 font-semibold"
+          className="pt-5 mt-5 mb-2 font-semibold border-t border-gray-3"
           tag="h2"
           size="3xs"
         >
@@ -67,10 +69,11 @@ const Hero = ({
           {imageSrc && (
             <img
               className="max-h-[350px]"
-              // width={592}
-              height={350}
+              width={imageWidth}
+              height={imageHeight}
               src={imageSrc}
               alt={imageAlt}
+              loading="eager"
             />
           )}
           {videoSrc && (
@@ -90,12 +93,6 @@ const Hero = ({
   </section>
 );
 
-Hero.defaultProps = {
-  videoSrc: null,
-  imageSrc: null,
-  imageAlt: null,
-};
-
 Hero.propTypes = {
   category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -104,7 +101,17 @@ Hero.propTypes = {
   description: PropTypes.string.isRequired,
   imageSrc: PropTypes.string,
   imageAlt: PropTypes.string,
+  imageWidth: PropTypes.number,
+  imageHeight: PropTypes.number,
   videoSrc: PropTypes.string,
+};
+
+Hero.defaultProps = {
+  videoSrc: null,
+  imageSrc: null,
+  imageAlt: null,
+  imageWidth: 592,
+  imageHeight: 350,
 };
 
 export default Hero;

@@ -20,6 +20,8 @@ const heroContent = {
     'Pods typically have ever-changing IP addresses in Kubernetes environments. Even if masquerading is used to mitigate this, the IP addresses of nodes can also change frequently. Egress gateways provide a way to route all outbound traffic from certain pods through a specific node with a predictable IP address. This predictable IP can be useful for scenarios where the traffic destination requires a known source IP, for instance, when working with legacy systems or firewall rules.',
   imageSrc: BeeKeeperBee,
   imageAlt: 'Astronaut Bee',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {
@@ -34,6 +36,8 @@ const sectionContent2 = {
   description:
     "The egress gateway allows fine-grained control over which pods' traffic should be routed through the gateway node. This is done by applying egress gateway policies that use label selectors to target specific pods. This selective routing can help in implementing security policies, achieving network isolation, and managing network costs.",
   imageSrc: EgressImage1,
+  imageWidth: 624,
+  imageHeight: 315,
   imageAlt: 'selective traffic for egress gateway illustration',
   imageRight: false,
 };
@@ -43,6 +47,8 @@ const sectionContent3 = {
   description:
     'In multi-tenant Kubernetes clusters, different workloads might need to interact with different external systems that have specific network requirements. Egress gateways can help meet these requirements by allowing the configuration of workload-specific routing rules.',
   imageSrc: EgressImage3,
+  imageWidth: 624,
+  imageHeight: 618,
   imageAlt: 'workload routing with egress gateway illustration',
 };
 
@@ -58,7 +64,7 @@ const testimonials = [
 ];
 
 const egressPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />

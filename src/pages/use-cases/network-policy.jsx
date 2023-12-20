@@ -22,6 +22,9 @@ const heroContent = {
   description:
     "Kubernetes network policies provide an application-centric construct for defining security policies at L3/L4 level. One of the primary challenges is how to effectively enforce security policies when traditional IP rules don't apply. Modern systems often churn IPs dynamically making it difficult to rely entirely on TCP/UDP ports and IP addresses for scaling security policies. ",
   imageSrc: SecurityBee,
+  imageAlt: 'Security illustration',
+  imageWidth: 350,
+  imageHeight: 350,
 };
 
 const sectionContent1 = {
@@ -36,6 +39,8 @@ const sectionContent2 = {
   description:
     'Cilium decouples security from network addressing using workload identity derived from labels and metadata, allowing for more flexible and efficient scaling without constant security rule updates. ',
   imageSrc: NetworkPolicyImage1,
+  imageWidth: 624,
+  imageHeight: 431,
   imageAlt: 'identities with cilium',
   imageRight: false,
 };
@@ -45,6 +50,8 @@ const sectionContent3 = {
   description:
     'Cilium provides a simple and intuitive network policy editor UI easing the cognitive overhead of writing network policies. It can often be painful to get the YAML syntax and formatting right when implementing network policies. There are many subtleties in the behavior of the network policy specification (e.g. default allow/deny, namespacing, wildcarding, rules combination, etc) that can result in misconfiguration. ',
   imageSrc: NetworkPolicyImage2,
+  imageWidth: 624,
+  imageHeight: 424,
   imageAlt: 'Cilium network policy editor UI',
 };
 
@@ -53,6 +60,8 @@ const sectionContent4 = {
   description:
     "Cluster Mesh, Cilium's multi-cluster implementation features Network policy enforcement spanning multiple clusters. The same policy enforcement you are familiar with from a single cluster simply expands and works across multiple clusters. ",
   imageSrc: NetworkPolicyImage3,
+  imageWidth: 624,
+  imageHeight: 362,
   imageAlt: 'cilium multi cluster illustration',
   imageRight: false,
 };
@@ -62,6 +71,8 @@ const sectionContent5 = {
   description:
     'Cilium also features cluster wide policies which are non-namespaced and cluster scoped via the extended  CiliumClusterwideNetworkPolicy CRD. Using cluster-wide policies, administrators can enforce consistent policies across all namespaces, simplifying network management. ',
   imageSrc: NetworkPolicyImage4,
+  imageWidth: 624,
+  imageHeight: 420,
   imageAlt: 'Cilium network policy editor UI',
 };
 
@@ -85,7 +96,7 @@ const testimonials = [
 ];
 
 const NetworkPolicyPage = () => (
-  <MainLayout>
+  <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
