@@ -31,7 +31,7 @@ const sectionContent1 = {
     'Cilium’s control and data plane has been built from the ground up for large-scale and highly dynamic cloud native environments where 100s and even 1000s of containers are created and destroyed within seconds. Cilium’s control plane is highly optimized, running in Kubernetes clusters with 1,000s of nodes and 100K pods. Cilium’s data plane uses eBPF for efficient load-balancing and incremental updates, avoiding the pitfalls of large iptables rulesets. ',
   imageSrc: CNIImage1,
   imageWidth: 624,
-  imageHeight: 350,
+  imageHeight: 294,
   imageAlt: 'cilium cni illustration',
   imageRight: false,
 };
@@ -42,7 +42,7 @@ const sectionContent2 = {
     "Cilium is built to scale. Whether you're running a few nodes or managing a cluster with thousands, Cilium can handle it. Cilium’s eBPF-powered networking is optimized for large scale operations. This means you can grow your operations without worrying about the network becoming a bottleneck.",
   imageSrc: CNIImage2,
   imageWidth: 624,
-  imageHeight: 465,
+  imageHeight: 256,
   imageAlt: 'cilium scalability illustration',
 };
 
@@ -52,7 +52,7 @@ const sectionContent3 = {
     "Cilium doesn't just excel in performance—it also brings robust security features. With identity-based security that goes beyond traditional IP address-based ACLs, Cilium provides fine-grained policy enforcement. This allows you to control who can talk to whom, reducing the attack surface and helping secure your cloud native applications.",
   imageSrc: CNIImage3,
   imageWidth: 624,
-  imageHeight: 528,
+  imageHeight: 399,
   imageAlt: ' illustration',
   imageRight: false,
 };

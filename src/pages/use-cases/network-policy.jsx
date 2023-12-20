@@ -48,7 +48,7 @@ const sectionContent3 = {
     'Cilium provides a simple and intuitive network policy editor UI easing the cognitive overhead of writing network policies. It can often be painful to get the YAML syntax and formatting right when implementing network policies. There are many subtleties in the behavior of the network policy specification (e.g. default allow/deny, namespacing, wildcarding, rules combination, etc) that can result in misconfiguration. ',
   imageSrc: NetworkPolicyImage2,
   imageWidth: 624,
-  imageHeight: 589,
+  imageHeight: 424,
   imageAlt: 'Cilium network policy editor UI',
 };
 
@@ -69,7 +69,7 @@ const sectionContent5 = {
     'Cilium also features cluster wide policies which are non-namespaced and cluster scoped via the extended  CiliumClusterwideNetworkPolicy CRD. Using cluster-wide policies, administrators can enforce consistent policies across all namespaces, simplifying network management. ',
   imageSrc: NetworkPolicyImage4,
   imageWidth: 624,
-  imageHeight: 389,
+  imageHeight: 420,
   imageAlt: 'Cilium network policy editor UI',
 };
 

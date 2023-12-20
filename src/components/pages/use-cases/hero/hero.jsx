@@ -49,7 +49,7 @@ const Hero = ({
         </Heading>
         <small className="text-xl leading-normal ">{tagline}</small>
         <Heading
-          className="mt-5 mb-2 border-t border-gray-3 pt-5 font-semibold"
+          className="pt-5 mt-5 mb-2 font-semibold border-t border-gray-3"
           tag="h2"
           size="3xs"
         >
@@ -71,6 +71,7 @@ const Hero = ({
               height={350}
               src={imageSrc}
               alt={imageAlt}
+              loading="eager"
             />
           )}
           {videoSrc && (
