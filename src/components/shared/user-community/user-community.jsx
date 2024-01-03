@@ -95,6 +95,7 @@ import RadioFranceLogo from './images/radiofrance.inline.svg';
 import RafayLogo from './images/rafay.inline.svg';
 import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
 import RobinhoodLogo from './images/robinhood.inline.svg';
+import SantaLogo from './images/santa.inline.svg';
 import SapLogo from './images/sap.inline.svg';
 import SapianLogo from './images/sapian.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
@@ -124,6 +125,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  santa: SantaLogo,
   jysk: JyskLogo,
   vkcloud: VkcloudLogo,
   sianalytics: SianalyticsLogo,
