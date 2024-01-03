@@ -730,8 +730,13 @@ export default {
     text: '<b>ilionx</b> uses Cilium as their preferred networking, observability, and security solution',
     links: [
       {
-        linkText: 'Read Case Study',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/ilionx/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=FWdfOwpZWxY',
         linkTarget: '_blank',
       },
     ],
@@ -766,6 +771,17 @@ export default {
         linkText: 'Read Blog',
         linkUrl:
           'https://jysk.tech/unleashing-the-power-of-k3s-for-edge-computing-deploying-3000-in-store-kubernetes-clusters-part-77ecc5378d31',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  santa: {
+    iconName: 'santa',
+    text: '<b>Santa and the Elves</b> uses Cilium and Hubble in their Kubernetes edge Clusters for advanced networking, security and observability',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://qmonnet.github.io/whirl-offload/2024/01/02/santa-switches-to-cilium/',
         linkTarget: '_blank',
       },
     ],

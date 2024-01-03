@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  santa,
   jsyk,
   vkcloud,
   sianalytics,
@@ -135,6 +136,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    santa,
     jsyk,
     vkcloud,
     superorbital,
