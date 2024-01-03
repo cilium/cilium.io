@@ -777,7 +777,7 @@ export default {
   },
   santa: {
     iconName: 'santa',
-    text: '<b>Santa and the Elves</b> uses Cilium to upgrade their Christmas operations. Cilium helps Santa in connecting clusters more efficiently, enhance overall performance, and secure data',
+    text: '<b>Santa and the Elves</b> uses Cilium to enhance their Christmas operations by efficiently connecting clusters and securing data',
     links: [
       {
         linkText: 'Read Blog',
