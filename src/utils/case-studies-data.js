@@ -777,7 +777,7 @@ export default {
   },
   santa: {
     iconName: 'santa',
-    text: '<b>Santa and the Elves</b> uses Cilium and Hubble in their Kubernetes edge Clusters for advanced networking, security and observability',
+    text: '<b>Santa and the Elves</b> uses Cilium to upgrade their Christmas operations. Cilium helps Santa in connecting clusters more efficiently, enhance overall performance, and secure data',
     links: [
       {
         linkText: 'Read Blog',
