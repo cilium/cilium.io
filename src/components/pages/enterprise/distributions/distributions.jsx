@@ -23,7 +23,7 @@ const enterprise = {
 };
 
 const gloo = {
-  title: 'Gloo Network',
+  title: 'Gloo Network for Cilium',
   description: 'Enterprise Cilium CNI maintained by the co-creators of Istio Service Mesh.',
   linkUrl: 'https://www.solo.io/products/gloo-network/',
   linkTarget: '_blank',
