@@ -2,6 +2,7 @@
 import React from 'react';
 
 import Architecture from 'components/pages/get-started/architecture';
+import Hero from 'components/pages/get-started/hero/hero';
 import Learn from 'components/pages/get-started/learn';
 import News from 'components/pages/get-started/news';
 import RelatedProjects from 'components/pages/get-started/related-projects';
@@ -9,7 +10,6 @@ import Highlights from 'components/pages/home/highlights';
 import CNCFBanner from 'components/shared/cncf-banner';
 import Community from 'components/shared/community';
 import HandsOn from 'components/shared/hands-on';
-import Hero from 'components/shared/hero';
 import SEO from 'components/shared/seo';
 import UserCommunity from 'components/shared/user-community';
 import illustration from 'images/pages/get-started/hero/illustration.svg';
@@ -39,7 +39,7 @@ const datadog = {
 const { google, bell, gitlab, aws, sky, adobe, capitalOne } = caseStudiesData;
 
 const userCommunity = {
-  title: 'Use cases',
+  title: 'User Community',
   items: [aws, google, bell, sky, adobe, capitalOne, datadog, gitlab],
 };
 
