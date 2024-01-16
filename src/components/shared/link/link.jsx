@@ -30,9 +30,8 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
   );
 
   const smoothScroll = (to) => {
-    const elementId = to.slice(2);
-    const section = document.getElementById(elementId);
-    section.scrollIntoView({ behavior: smooth });
+    const section = document.querySelector(to);
+    section.scrollIntoView({ behavior: 'smooth' });
   };
 
   const content = type === 'arrow' ? <span>{children}</span> : children;

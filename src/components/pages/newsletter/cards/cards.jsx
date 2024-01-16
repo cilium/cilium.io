@@ -64,7 +64,7 @@ const Cards = () => {
     },
   ];
   return (
-    <div className="bg-gray-4 py-10 md:pb-20 lg:pt-20 lg:pb-28">
+    <div className="py-10 bg-gray-4 md:pb-20 lg:pt-20 lg:pb-28">
       <Container className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {items.map(({ title, description, links, image, isSvg }, index) => (
           <div
@@ -83,7 +83,7 @@ const Cards = () => {
               className="with-black-link flat-breaks xl:flat-none mt-2.5 mb-6"
               dangerouslySetInnerHTML={{ __html: description }}
             />
-            <div className="mt-auto mb-6 flex flex-col space-y-3 xs:flex-row xs:space-y-0 xs:space-x-3 lg:flex-col lg:space-y-3 lg:space-x-0 xl:mb-0 xl:flex-row xl:space-x-3 xl:space-y-0">
+            <div className="flex flex-col mt-auto mb-6 space-y-3 xs:flex-row xs:space-y-0 xs:space-x-3 lg:flex-col lg:space-y-3 lg:space-x-0 xl:mb-0 xl:flex-row xl:space-x-3 xl:space-y-0">
               {links.map(({ title, url, target }, index) => (
                 <Button
                   className="lg:text-base"
