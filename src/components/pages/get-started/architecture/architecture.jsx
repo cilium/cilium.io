@@ -15,7 +15,7 @@ const Architecture = () => (
         </Heading>
         <p className="mt-5 md:text-lg">{description}</p>
       </div>
-      <div className="flex flex-col justify-center items-center lg:items-start lg:col-span-7">
+      <div className="flex flex-col justify-center it..ems-center lg:items-start lg:col-span-7">
         <iframe
           className="xl:max-w-[664px] w-full"
           width="560"
