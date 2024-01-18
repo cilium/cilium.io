@@ -4,7 +4,7 @@ date: '2023-01-18T17:00:00.000Z'
 title: 'Cilium in Paris! See you at KubeCon Europe 2024'
 isFeatured: false
 ogImage: KubeConParis.png
-ogSummary: 'There's an amazing lineup of Cilium activities at KubeCon + CloudNativeCon'
+ogSummary: 'There is an amazing lineup of Cilium activities at KubeCon + CloudNativeCon'
 categories:
   - Community
 ---
