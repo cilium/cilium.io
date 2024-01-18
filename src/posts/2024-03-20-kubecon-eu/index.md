@@ -7,9 +7,6 @@ ogImage: KubeConParis.png
 ogSummary: 'There's an amazing lineup of Cilium activities at KubeCon + CloudNativeCon'
 categories:
   - Community
-tags:
-  - Cilium
-  - KubeCon
 ---
 
 There will be lots of Cilium-related activity at KubeCon + CloudNativeCon Europe
