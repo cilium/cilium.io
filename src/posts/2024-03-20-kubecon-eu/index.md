@@ -1,6 +1,6 @@
 ---
 path: '/blog/2024/01/18/cilium-kubecon-eu-2024'
-date: '2023-01-18T12:00:00.000Z'
+date: '2024-01-18T12:00:00.000Z'
 title: 'Cilium in Paris! See you at KubeCon Europe 2024'
 isFeatured: false
 ogImage: KubeConParis.png
