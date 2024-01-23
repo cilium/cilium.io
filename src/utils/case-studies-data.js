@@ -738,8 +738,8 @@ export default {
         linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=FWdfOwpZWxY',
       },
-  ],
-},
+    ],
+  },
   giantSwarm: {
     iconName: 'giantSwarm',
     text: '<b>Giant Swarm</b> uses Cilium as the CNI in their Cluster API based managed Kubernetes service',
@@ -758,12 +758,12 @@ export default {
       {
         linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=b-3AyOBBRU4&t=404s',
-      }
+      },
     ],
   },
   viasat: {
     iconName: 'viasat',
-    text: '<b>Viasat</b> uses Cilium and Tetragon for containter networking, observability and runtime enforcement',
+    text: '<b>Viasat</b> uses Cilium and Tetragon for networking, observability and runtime enforcement',
     links: [
       {
         linkText: 'Watch Video',
