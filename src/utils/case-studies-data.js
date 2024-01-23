@@ -763,7 +763,7 @@ export default {
   },
   viasat: {
     iconName: 'viasat',
-    text: '<b>Viasat</b> uses Cilium and Tetragon for networking, observability and runtime enforcement',
+    text: '<b>Viasat</b> uses Cilium and Tetragon for networking, observability, and runtime enforcement',
     links: [
       {
         linkText: 'Watch Video',
