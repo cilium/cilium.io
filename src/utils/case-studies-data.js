@@ -737,6 +737,16 @@ export default {
       {
         linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=FWdfOwpZWxY',
+      },
+  ],
+},
+  giantSwarm: {
+    iconName: 'giantSwarm',
+    text: '<b>Giant Swarm</b> uses Cilium as the CNI in their Cluster API based managed Kubernetes service',
+    links: [
+      {
+        linkText: 'Watch Video',
+        linkUrl: 'https://youtube.com/shorts/tJ0SN-JEFmE?si=LkCteB7mekLHH1yL',
         linkTarget: '_blank',
       },
     ],
@@ -748,6 +758,16 @@ export default {
       {
         linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=b-3AyOBBRU4&t=404s',
+      }
+    ],
+  },
+  viasat: {
+    iconName: 'viasat',
+    text: '<b>Viasat</b> uses Cilium and Tetragon for containter networking, observability and runtime enforcement',
+    links: [
+      {
+        linkText: 'Watch Video',
+        linkUrl: 'https://youtube.com/shorts/HqJCDAXDkUE?si=2F-foPWY9GB7OKSa',
         linkTarget: '_blank',
       },
     ],
@@ -959,10 +979,6 @@ export default {
     text: '<b>Tailor Brands</b> uses Cilium in their EKS clusters',
   },
 
-  giantSwarm: {
-    iconName: 'giantSwarm',
-    text: '<b>Giant Swarm</b> uses Cilium as the CNI in their Cluster API based managed Kubernetes service',
-  },
   immerok: {
     iconName: 'immerok',
     text: '<b>Immerok</b> uses Cilium for cross-cluster communication and network isolation for their serverless Apache Flink cloud',
