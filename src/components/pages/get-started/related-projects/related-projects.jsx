@@ -17,6 +17,14 @@ const items = [
     linkText: 'Learn more',
   },
   {
+    imageName: 'image4',
+    title: 'Tetragon',
+    text: 'Tetragon is a flexible Kubernetes-aware security observability and runtime enforcement tool that applies policy and filtering directly with eBPF, allowing for reduced observation overhead, tracking of any process, and real-time enforcement of policies.',
+    linkUrl: 'https://tetragon.io',
+    linkTarget: '_blank',
+    linkText: 'Learn more',
+  },
+  {
     imageName: 'image2',
     title: 'Network Policy Editor',
     text: 'Over the years, we have learned a lot about the common challenges while working with many of you in the Cilium community implementing Kubernetes Network Policy. Networkpolicy.io is a free tool to assist you in your journey to assist you with Kubernetes NetworkPolicy.',
@@ -24,6 +32,7 @@ const items = [
     linkTarget: '_blank',
     linkText: 'Learn more',
   },
+
   {
     imageName: 'image3',
     title: 'eBPF Library for Go',
@@ -35,7 +44,7 @@ const items = [
 ];
 
 const RelatedProjects = () => {
-  const { image1, image2, image3 } = useStaticQuery(graphql`
+  const { image1, image2, image3, image4 } = useStaticQuery(graphql`
     query {
       image1: file(relativePath: { eq: "pages/get-started/related-projects/image-1.jpg" }) {
         childImageSharp {
@@ -52,9 +61,14 @@ const RelatedProjects = () => {
           gatsbyImageData(width: 592)
         }
       }
+      image4: file(relativePath: { eq: "pages/get-started/related-projects/image-4.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(width: 592)
+        }
+      }
     }
   `);
-  const images = { image1, image2, image3 };
+  const images = { image1, image2, image3, image4 };
   return (
     <section className="mt-20 md:mt-20 lg:mt-32">
       <Container>

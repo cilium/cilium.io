@@ -10,15 +10,22 @@ import svgIllustration1 from 'images/weekly-introduction.svg';
 const title = 'Get Hands-On With Cilium';
 
 const HandsOn = () => {
-  const { imageIllustration1 } = useStaticQuery(graphql`
+  const { imageIllustration1, imageIllustration2 } = useStaticQuery(graphql`
     query {
       imageIllustration1: file(relativePath: { eq: "pages/get-started/hands-on/bee.png" }) {
         childImageSharp {
           gatsbyImageData(width: 92, quality: 95)
         }
       }
+
+      imageIllustration2: file(relativePath: { eq: "pages/get-started/hands-on/bee1.png" }) {
+        childImageSharp {
+          gatsbyImageData(width: 92, quality: 95)
+        }
+      }
     }
   `);
+
   const items = [
     {
       imageData: {
@@ -39,6 +46,7 @@ const HandsOn = () => {
         },
       ],
     },
+
     {
       svgData: {
         width: 384,
@@ -57,6 +65,25 @@ const HandsOn = () => {
         {
           url: '/enterprise#trainings',
           title: 'Tutorials',
+          theme: 'outline-gray-dark',
+        },
+      ],
+    },
+
+    {
+      imageData: {
+        width: 384,
+        height: 224,
+        imageSrc: svgIllustration1,
+        gatsbyImage: imageIllustration2,
+        gatsbyImageWidth: 92,
+      },
+      name: 'Interactive Labs',
+      text: 'Deep dive into Cilium and its features with labs provided by companies within the Cilium ecosystem',
+      buttons: [
+        {
+          url: '/labs',
+          title: 'Check out the labs',
           theme: 'outline-gray-dark',
         },
       ],

@@ -21,6 +21,8 @@ import ServiceMeshIcon from 'icons/highlights/service-mesh.inline.svg';
 
 import ItemCard from './item/item-card';
 
+const title = 'Use Cases';
+
 const list = [
   {
     title: 'Networking',
@@ -125,9 +127,12 @@ const list = [
 const Highlights = () => (
   <section className="mb-20 md:mb-0" id="use-cases">
     <Container>
+      <Heading className="text-center pt-20" tag="h2">
+        {title}
+      </Heading>
       {list.map(({ title, items }, index) => (
         <div key={index} id={title.toLowerCase()}>
-          <Heading className="pt-20 pb-10 md:pb-14 md:pt-28" tag="h2" size="sm">
+          <Heading className="pb-20 md:pb-14 md:pt-14" tag="h2" size="sm">
             {title}
           </Heading>
           <ul className="grid grid-cols-1 gap-6 md:auto-rows-fr md:grid-cols-2 md:gap-8 lg:grid lg:auto-rows-fr lg:grid-cols-3">
