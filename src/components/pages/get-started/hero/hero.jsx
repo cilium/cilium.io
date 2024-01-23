@@ -38,7 +38,7 @@ const Hero = ({ className, title, description, theme, size }) => (
       <div className="relative flex flex-1 justify-center pt-10">
         <iframe
           className="w-full"
-          src="https://www.youtube.com/embed/yjLJ2mib2zI?si=ry_mku6SshRhOIpb"
+          src="https://www.youtube.com/embed/80OYrzS1dCA?si=PK9YeErJO3QF_C-I"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
