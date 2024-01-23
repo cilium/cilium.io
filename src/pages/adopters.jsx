@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  viasat,
   ws02,
   singlestore,
   deezer,
@@ -130,6 +131,8 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    viasat,
+    giantSwarm,
     ws02,
     singlestore,
     deezer,
@@ -237,7 +240,6 @@ const userCommunity2 = {
     kubeOvn,
     kryptos,
     superorbital,
-    giantSwarm,
     immerok,
     magicLeap,
     sapian,
