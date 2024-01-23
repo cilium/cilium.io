@@ -120,6 +120,7 @@ import TwilioLogo from './images/twilio.inline.svg';
 import UngleichLogo from './images/ungleich.inline.svg';
 import UnitedCloudLogo from './images/unitedcloud.inline.svg';
 import UtmostLogo from './images/utmost.inline.svg';
+import ViasatLogo from './images/viasat.inline.svg';
 import VkcloudLogo from './images/vkcloud.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
@@ -131,6 +132,7 @@ const icons = {
   sianalytics: SianalyticsLogo,
   ilionx: IlionxLogo,
   cybozu: CybozuLogo,
+  viasat: ViasatLogo,
   ws02: Ws02Logo,
   singlestore: SinglestoreLogo,
   deezer: DeezerLogo,
