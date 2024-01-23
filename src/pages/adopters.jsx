@@ -253,7 +253,6 @@ const userCommunity2 = {
     kubeOvn,
     kryptos,
     giantSwarm,
-    superorbital,
     immerok,
     magicLeap,
     sapian,
