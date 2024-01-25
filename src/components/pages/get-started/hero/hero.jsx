@@ -35,9 +35,9 @@ const Hero = ({ className, title, description, theme, size }) => (
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </div>
-      <div className="relative flex flex-1 justify-center pt-10">
+      <div className="relative flex justify-center flex-1 pt-10">
         <iframe
-          className="w-full"
+          className="w-full aspect-video"
           src="https://www.youtube.com/embed/80OYrzS1dCA?si=PK9YeErJO3QF_C-I"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
