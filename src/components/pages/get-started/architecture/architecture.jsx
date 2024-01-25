@@ -21,6 +21,7 @@ const Architecture = () => (
           src="https://www.youtube.com/embed/LCQ89uBB7zE?si=udmn0u7mTWY_dbqK"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          loading="lazy"
           allowFullScreen
         />
       </div>
