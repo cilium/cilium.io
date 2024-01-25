@@ -96,7 +96,7 @@ const HandsOn = () => {
         <Heading className="text-center" tag="h2">
           {title}
         </Heading>
-        <ul className="mt-6 grid gap-y-8 md:mt-10 md:grid-cols-2 md:gap-x-8 lg:mt-14">
+        <ul className="grid mt-6 gap-y-8 md:mt-10 md:grid-cols-2 md:gap-x-8 lg:mt-14">
           {items.map((item, index) => (
             <CardItem {...item} key={index} />
           ))}
