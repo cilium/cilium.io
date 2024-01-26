@@ -68,35 +68,52 @@ const testimonials = [
   {
     logo: AWSLogo,
     title: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
-    CTAtext: 'Read The Blog Post',
-    url: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/',
+      },
+    ],
     description:
       "AWS selected Cilium as the default networking and security solution for their EKS Anywhere platform, which manages on-premises Kubernetes clusters. Cilium's ability to integrate seamlessly with cloud-native and traditional technologies and its foundation in eBPF technology makes it an ideal choice. This decision aligns AWS with other major cloud providers and ensures a consistent user experience while enabling portability across different cloud environments.",
   },
   {
     title: 'Cilium in Anthos and Google Kubernetes Engine (GKE) as Dataplane V2',
     logo: GoogleLogo,
-    CTAtext: 'Read The Blog Post',
-    url: 'https://cilium.io/blog/2020/08/19/google-chooses-cilium-for-gke-networking/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://cilium.io/blog/2020/08/19/google-chooses-cilium-for-gke-networking/',
+      },
+    ],
     description:
       "Cilium is a key component in Anthos and Google Kubernetes Engine (GKE) as Dataplane V2. It provides advanced networking, security, and performance capabilities. With Cilium's integration with eBPF technology, Anthos and GKE users benefit from dynamic security, high-performance networking, load balancing, encryption, and robust network security features. Cilium serves as the underlying solution for efficient communication and enhanced security in Kubernetes workloads on these platforms.",
   },
   {
     logo: AzureLogo,
     title: 'Azure CNI Powered by Cilium in Azure Kubernetes Service',
-    url: 'https://isovalent.com/blog/post/azure-cni-cilium/',
+
     description:
       'Azure CNI Powered by Cilium combines the robust control plane of Azure CNI with the dataplane of Cilium to provide high-performance networking and security. Azure CNI Powered by Cilium is able to provide functionality equivalent to existing Azure CNI and Azure CNI Overlay plugins, offering faster service routing, more efficient network policy enforcement, better observability of cluster traffic, and support for larger clusters with increased numbers of nodes, pods, and services.',
-    CTAtext: 'Read The Blog Post',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://isovalent.com/blog/post/azure-cni-cilium/',
+      },
+    ],
   },
 
   {
     logo: CiliumLogo,
     title: 'CNI Benchmark: Understanding Cilium Network Performance',
-    url: 'https://cilium.io/blog/2021/05/11/cni-benchmark/',
     description:
       'This blog explores the performance characteristics of Cilium based on extensive benchmarks across throughput, eBPF host-routing, latency, flamegraphs, rate of new connections, and the cost of encryption.',
-    CTAtext: 'Read The Blog Post',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://cilium.io/blog/2021/05/11/cni-benchmark/',
+      },
+    ],
   },
 ];
 

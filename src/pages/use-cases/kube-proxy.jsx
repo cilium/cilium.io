@@ -58,24 +58,36 @@ const testimonials = [
   {
     logo: PostFinanceLogo,
     title: 'Post Finance picks Isovalent Cilium for Cloud Native Networking',
-    CTAtext: 'Read The Case Study',
-    url: 'https://isovalent.com/data/isovalent-case-study-postfinance.pdf',
+    CTAs: [
+      {
+        CTAtext: 'Read Case Study',
+        url: 'https://isovalent.com/data/isovalent-case-study-postfinance.pdf',
+      },
+    ],
     description:
       'Cilium helped our team to build a scalable Kubernetes platform which meets our demanding requirements to run mission-critical banking software in production. We were able to solve the scale issues of our previous CNI plugin and to simplify our Kubernetes setup by eliminating the need for kube-proxy.',
   },
   {
     title: 'Service Load-Balancing Without Kube-Proxy on Kubermatic',
     logo: KubermaticLogo,
-    CTAtext: 'Read The Blog Post',
-    url: 'https://www.kubermatic.com/blog/cilium-cni-integration-in-kubermatic-kubernetes-platform/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://www.kubermatic.com/blog/cilium-cni-integration-in-kubermatic-kubernetes-platform/',
+      },
+    ],
     description:
       'We use Cilium because it uses eBPF and provides high throughput, lower latency, and less resource consumption, especially when the number of services is large. It also works well across all three major cloud providers, including Google GKE and Azure AKS, which was a critical factor in our choice.',
   },
   {
     title: 'Why is the kernel community replacing iptables with BPF?',
     logo: CiliumLogo,
-    CTAtext: 'Read The Blog Post',
-    url: 'https://cilium.io/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://cilium.io/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables/',
+      },
+    ],
     description:
       'Read the history of iptables in the kernel and the advantages of replacing it with eBPF',
   },

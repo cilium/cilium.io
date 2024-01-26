@@ -56,8 +56,12 @@ const testimonials = [
   {
     logo: CiliumLogo,
     title: 'Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev Teams)',
-    CTAtext: 'Read The Blog Post',
-    url: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
+      },
+    ],
     description:
       "A telecommunications company implemented a zero-trust networking model on their Kubernetes platform using Cilium's egress gateway. They employed FQDN-based rulesets for flexible blocklisting and a default deny egress policy. To comply with corporate policy, they used a PR-based approval workflow for tenant self-service, underpinned by a two-tier system of CiliumNetworkPolicies (CNPs) and Custom Resource Definitions (CRDs).",
   },

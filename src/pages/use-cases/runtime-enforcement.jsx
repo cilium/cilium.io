@@ -45,9 +45,13 @@ const sectionContent2 = {
 const testimonials = [
   {
     logo: FRSCALogo,
-    CTAtext: 'Check Out The Project',
+    CTAs: [
+      {
+        CTAtext: 'Check Out The Project',
+        url: 'https://buildsec.github.io/frsca/',
+      },
+    ],
     title: 'Integrating Tetragon  for Secured Build Pipelines',
-    url: 'https://buildsec.github.io/frsca/',
     description:
       'Factory for Repeatable Secure Creation of Artifacts FRSCA is utilizing tetragon integrated with Tekton to create runtime attestation to attest artifact and builder attributes. ',
   },

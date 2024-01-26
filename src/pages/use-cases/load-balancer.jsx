@@ -43,16 +43,24 @@ const testimonials = [
     logo: SeznamLogo,
     title:
       'Efficiently handling production traffic with Cilium Standalone Layer 4 Load Balancer XDP',
-    CTAtext: 'Read The Blog Post',
-    url: 'https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/',
+      },
+    ],
     description:
       'Seznam previously used a multiple tier setup - ECMP routing as the first tier + IPVS as the second tier (L4 load balancer (L4LB)) + Envoy proxy as the third tier (L7 load balancer). They experienced increased traffic during COVID and needed a way to utilize hardware efficiently. Using  L4LB XDP consumed only half of a single CPU compared to 2x18 CPUs when IPVS was handling the traffic. By switching to L4LB XDP at the driver layer, Seznam was able to save 36 CPUs while doubling throughput.',
   },
   {
     title: 'Software L4 Load Balancing for Kubernetes Services at Yahoo',
     logo: YahooLogo,
-    CTAtext: 'Watch the Talk',
-    url: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
+    CTAs: [
+      {
+        CTAtext: 'Watch the Talk',
+        url: 'https://www.youtube.com/watch?v=-C86fBMcp5Q',
+      },
+    ],
     description:
       'Yahoo needed a way to solve LB APIs not being optimized for dynamic updates, the absence of autoscaling, and a severe performance degradation with large number of cluster services. Switching to Cilium L4 LB powered by XDP provided Yahoo with performance on par with hardware LBs, ability to hook into Kubernetes to dynamically configure backends, support for direct return mode, high availability, and resiliency through Maglev consistent hashing.',
   },

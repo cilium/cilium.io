@@ -46,16 +46,24 @@ const testimonials = [
   {
     logo: PalantirLogo,
     title: 'Enhanced observability with Hubble',
-    CTAtext: 'Watch The Talk',
-    url: 'https://www.youtube.com/watch?v=3K5WJ_h5PhI&t=40s',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://www.youtube.com/watch?v=3K5WJ_h5PhI&t=40s',
+      },
+    ],
     description:
       'One area Palantir gets a lot of mileage from Cilium is observing DNS traffic. In the words of Vlad Ungureanu, a Backend Software Developer at Palantir. “With Cilium, we can get 3600 traceability of network calls associated with a Kubernetes pod. In the past, we were able to observe network flows just at the edge, now we can observe network flows at the host level.”    ',
   },
   {
     title: 'A more consumable network infrastructure with Cilium at Ikea',
     logo: CiliumLogo,
-    CTAtext: 'Watch The Talk',
-    url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
+      },
+    ],
     description:
       "Ikea picked Cilium for its networking stack because they had the requirement of using open source and needed a solution that was easy to scale out, debug, and integrate with legacy systems. “We wanted to get out of the classical networking challenges where you're always pointing fingers at someone else. It's the networking team to blame, or the firewall, or DNS. We wanted a more consumable networking infrastructure with a cloud-like development experience on-prem in order to unlock development teams.",
     quote: true,
