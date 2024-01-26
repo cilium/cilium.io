@@ -11,6 +11,8 @@ categories:
 
 ![](cover.png)
 
+_Author: Shedrack Akintayo, Isovalent_
+
 ## Introduction
 
 As the cloud native ecosystem has matured, simplifying complexities without compromising useability or performance is key. Cilium is a cloud native networking, observability and security platform built to address these challenges, even as the scale and challenges of the platform grow.
