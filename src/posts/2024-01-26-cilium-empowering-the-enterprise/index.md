@@ -4,7 +4,7 @@ date: '2024-01-26T12:00:00.000Z'
 title: 'Cilium - Empowering the Enterprise'
 isFeatured: false
 ogImage: cover.png
-ogSummary: 'This article aims to trace Cilium’s journey from its early days to becoming a go-to solution for enterprises in search of a rock-solid networking, observability and security solution.'
+ogSummary: 'This article aims to trace Cilium’s journey from its early days to becoming a go-to solution for enterprises in search of a rock-solid networking, observability, and security solution.'
 categories:
   - Technology
 ---
