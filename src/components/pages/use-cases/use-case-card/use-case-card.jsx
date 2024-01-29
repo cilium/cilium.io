@@ -45,7 +45,7 @@ const UseCaseCard = ({ heading, testimonials }) => (
               <p className="mb-6 leading-normal">{description}</p>
             )}
             {CTAs && (
-              <div className="pt-6 mt-auto border-t border-gray-3 flex">
+              <div className="flex flex-col gap-4 pt-6 mt-auto border-t md:flex-row border-gray-3">
                 {CTAs.map(({ CTAtext, url }, ctaIndex) => (
                   <Link
                     key={ctaIndex}
@@ -54,7 +54,6 @@ const UseCaseCard = ({ heading, testimonials }) => (
                     rel="noopener noreferrer"
                     type="text"
                     theme="primary"
-                    className="mr-4 last:mr-0" // Add margin-right to all but the last item
                   >
                     {CTAtext}
                   </Link>
