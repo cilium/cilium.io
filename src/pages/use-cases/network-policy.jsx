@@ -80,16 +80,24 @@ const testimonials = [
   {
     logo: UtmostLogo,
     title: 'Observability for a highly available multi cluster environment with Hubble',
-    CTAtext: 'Read The Case Study',
-    url: 'https://www.cncf.io/case-studies/utmost/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/utmost/',
+      },
+    ],
     description:
       ' Utmost achieved Zero Trust Networking by replacing their existing CNI with Cilium to address networking, security, and visibility for container workloads. Utmost processes 1207 flows per second, each validated against a multitude of network policies to approve or deny access.',
   },
   {
     logo: ClickHouseLogo,
     title: 'How ClickHouse is Using Cilium to Implement Efficient Network Policies',
-    CTAtext: 'Read The Case Study',
-    url: 'https://www.cncf.io/case-studies/clickhouse/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/clickhouse/',
+      },
+    ],
     description:
       'ClickHouse turned to Cilium as their preferred networking solution to take advantage of eBPF performance and simplify the process of isolating customers from each other. Cilium enabled them to create dedicated CiliumNetworkPolicies for each customer’s Kubernetes namespace to control access to specific resources, even if a customer manages to break into their Kubernetes pods.',
   },

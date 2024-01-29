@@ -18,48 +18,50 @@ const UseCaseCard = ({ heading, testimonials }) => (
         {heading}
       </Heading>
       <ul className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-        {testimonials.map(
-          ({ logo: Logo, url, CTAtext, description, title, quote, person }, index) => (
-            <li
-              className="relative flex flex-col p-8 bg-white rounded-xl shadow-primary"
-              key={title + index}
-            >
-              <Logo className="h-12 mb-5 lg:mb-7" />
-              <Heading className="mb-2.5" tag="h3" size="xs">
-                {title}
-              </Heading>
-              {quote ? (
-                <>
-                  <p className="italic">{description}</p>
-                  {person && <p className="mt-5 mb-6 font-semibold">{person}</p>}
-                  <img
-                    className="absolute hidden w-32 h-auto right-8 top-7 sm:block lg:top-12"
-                    src={quotes}
-                    width={248}
-                    height={180}
-                    alt="Quote Icon"
-                    loading="lazy"
-                    aria-hidden
-                  />
-                </>
-              ) : (
-                <p className="mb-6 leading-normal">{description}</p>
-              )}
-              {url && (
-                <Link
-                  to={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  type="text"
-                  theme="primary"
-                  className="pt-6 mt-auto border-t border-gray-3"
-                >
-                  {CTAtext}
-                </Link>
-              )}
-            </li>
-          )
-        )}
+        {testimonials.map(({ logo: Logo, CTAs, description, title, quote, person }, index) => (
+          <li
+            className="relative flex flex-col p-8 bg-white rounded-xl shadow-primary"
+            key={title + index}
+          >
+            <Logo className="h-12 mb-5 lg:mb-7" />
+            <Heading className="mb-2.5" tag="h3" size="xs">
+              {title}
+            </Heading>
+            {quote ? (
+              <>
+                <p className="italic">{description}</p>
+                {person && <p className="mt-5 mb-6 font-semibold">{person}</p>}
+                <img
+                  className="absolute hidden w-32 h-auto right-8 top-7 sm:block lg:top-12"
+                  src={quotes}
+                  width={248}
+                  height={180}
+                  alt="Quote Icon"
+                  loading="lazy"
+                  aria-hidden
+                />
+              </>
+            ) : (
+              <p className="mb-6 leading-normal">{description}</p>
+            )}
+            {CTAs && (
+              <div className="flex flex-col gap-4 pt-6 mt-auto border-t md:flex-row border-gray-3">
+                {CTAs.map(({ CTAtext, url }, ctaIndex) => (
+                  <Link
+                    key={ctaIndex}
+                    to={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    type="text"
+                    theme="primary"
+                  >
+                    {CTAtext}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </li>
+        ))}
       </ul>
     </Container>
   </section>
@@ -73,8 +75,12 @@ UseCaseCard.propTypes = {
     PropTypes.shape({
       logo: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-      CTAtext: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
+      CTAs: PropTypes.arrayOf(
+        PropTypes.shape({
+          CTAtext: PropTypes.string.isRequired,
+          url: PropTypes.string.isRequired,
+        })
+      ).isRequired,
       description: PropTypes.string.isRequired,
       quote: PropTypes.bool,
       person: PropTypes.string,

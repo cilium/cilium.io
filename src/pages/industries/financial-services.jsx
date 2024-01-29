@@ -15,6 +15,7 @@ import CapitalOnefficeImage from 'images/pages/industries/financial-services/cap
 import FinanceImage1 from 'images/pages/industries/financial-services/finance-1.png';
 import FinanceImage2 from 'images/pages/industries/financial-services/finance-2.png';
 import FinanceImage3 from 'images/pages/industries/financial-services/finance-3.png';
+import From3Image from 'images/pages/industries/financial-services/form3.jpeg';
 import PostFinanceOfficeImage from 'images/pages/industries/financial-services/postfinanceoffice.png';
 import RobinhoodOfficeImage from 'images/pages/industries/financial-services/robinhoodoffice.png';
 import ExecelBee from 'images/pages/usecase/excel-bee.png';
@@ -177,6 +178,15 @@ const financialResources = [
     buttonText: 'Watch The Talk',
     description:
       "Robinhood's war stories from running Cilium in a high-churn near-production environment, learn how they overcame challenges by better understanding and tuning Cilium.",
+  },
+  {
+    imageSrc: From3Image,
+    imageAlt: 'form3 office building',
+    title: 'Building a Resilient Payments Platform with Cilium ',
+    buttonLink: 'https://www.cncf.io/case-studies/form3/',
+    buttonText: 'Read The Case Study',
+    description:
+      ' Form3 integrated Cilium into their platform as their primary solution for networking, security, and observability, enabling them to meet their FPS gateway business requirement of seamlessly switching between data centers without any downtime.',
   },
 ];
 

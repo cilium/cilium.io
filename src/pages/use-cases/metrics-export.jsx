@@ -54,8 +54,12 @@ const testimonials = [
   {
     logo: GrafanaLogo,
     title: 'eBPF-powered observability for Kubernetes and cloud native infrastructure',
-    CTAtext: 'Read The Blog Post',
-    url: 'https://grafana.com/blog/2022/10/24/grafana-and-cilium-deep-ebpf-powered-observability-for-kubernetes-and-cloud-native-infrastructure/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://grafana.com/blog/2022/10/24/grafana-and-cilium-deep-ebpf-powered-observability-for-kubernetes-and-cloud-native-infrastructure/',
+      },
+    ],
     description:
       'Cilium generates a rich stream of service-identity-aware connectivity metrics and events, which makes backend observability like the Grafana LGTM stack or Grafana Cloud the natural complement to Cilium’s robust connectivity observability capabilities. ',
   },

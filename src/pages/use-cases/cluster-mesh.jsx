@@ -88,8 +88,16 @@ const testimonials = [
   {
     logo: Form3Logo,
     title: 'Multi-cluster networking with Cilium at Form3',
-    CTAtext: 'Watch The Talk',
-    url: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
+      },
+      {
+        CTAtext: 'Read Case Study',
+        url: 'https://www.cncf.io/case-studies/form3/', // Replace with actual case study URL
+      },
+    ],
     description:
       'We have payment services deployed on GCP, Azure, and AWS on their managed Kubernetes offerings. Due to regulatory requirements, we also have FPS services deployed on bare metal Kubernetes clusters across two data centers clustered using Cilium Cluster Mesh. Our engineers only need to support and understand only one technology. Cilium is the company standard for networking and security, it has allowed us to secure our environment and gives us the possibility to merge our cloud services in the future.',
     quote: true,
@@ -98,8 +106,12 @@ const testimonials = [
   {
     title: 'Building ClickHouse Cloud From Scratch in a Year',
     logo: ClickHouseLogo,
-    CTAtext: 'Read The Blog Post',
-    url: 'https://www.cncf.io/case-studies/clickhouse/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://www.cncf.io/case-studies/clickhouse/',
+      },
+    ],
     description:
       'We didn’t plan to use ClusterMesh in the beginning, but we later realized that we have another great feature that we leverage for Ingress.',
     quote: true,
@@ -108,10 +120,14 @@ const testimonials = [
   {
     logo: WildLifeLogo,
     title: 'How Wildlife Studios built a Global Multi Cluster Gaming Infrastructure with Cilium',
-    url: 'https://cilium.io/blog/2020/09/03/wildlife-studios-multi-cluster-gaming-platform/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://cilium.io/blog/2020/09/03/wildlife-studios-multi-cluster-gaming-platform/',
+      },
+    ],
     description:
       'Cilium Cluster Mesh configuration was easy, requiring only basic VPC peering, routing tables, and firewalling setup. We directed Cilium to the etcd endpoints in the other clusters, but it now supports CRD-backed IPAM mode. We have deployed Cilium in over 20 Kubernetes production clusters, with at least 3 clusters per game in the same configuration. This infrastructure handles over 50k client requests per second and supports millions of daily active users.',
-    CTAtext: 'Read The Blog Post',
     quote: true,
     person: 'Luan Guimarães -  Site Reliability Engineer, Wildlife Studios',
   },

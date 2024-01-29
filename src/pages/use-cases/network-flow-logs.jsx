@@ -46,8 +46,12 @@ const testimonials = [
   {
     logo: NewYorkTimesLogo,
     title: 'Observability for a highly available multi cluster environment with Hubble',
-    CTAtext: 'Watch The Talk',
-    url: 'https://www.youtube.com/embed/9FDpMNvPrCw',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://www.youtube.com/embed/9FDpMNvPrCw',
+      },
+    ],
     description:
       'Perhaps the most important feature from Hubble UI is the network flow itself. If you look deeper into the  flow you’ll see full deep rich information about every single packet traversed between different services. And that’s important so that we can build understanding of how traffic is flung between services.',
     quote: true,
@@ -56,8 +60,16 @@ const testimonials = [
   {
     logo: BloombergLogo,
     title: 'Building Data Sandboxes at Bloomberg',
-    CTAtext: 'Watch The Talk',
-    url: 'https://www.youtube.com/embed/8fiYVyISyz4',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://www.youtube.com/embed/8fiYVyISyz4',
+      },
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/bloomberg-2/',
+      },
+    ],
     description:
       '“We definitely love Hubble, provides us with a lot of observability which is very helpful not only to have that application and network visibility as we’re looking into what’s happening in our client cluster but we’ve also found out that this is a really beneficial learning tool for people in our team that are new to Cilium or new to the team to able to see the network flows  to see what’s happening to trafiic as it is coming in and out of our workloads has been a really powerful way to visualize how things work together”',
     quote: true,

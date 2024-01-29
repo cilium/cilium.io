@@ -46,8 +46,12 @@ const testimonials = [
   {
     logo: CapitalOneLogo,
     title: 'Building a Secure and Maintainable PaaS',
-    CTAtext: 'Watch The Talk',
-    url: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w',
+      },
+    ],
     description:
       'Capital One leverages Cilium in its internal PaaS to provide network visibility for teams in a multi-tenant Kubernetes cluster  “We do hundreds of deployments per day and we have clusters that have thousands of pods. This stack has allowed to provide less friction to more teams while using modern technology to meet our security and regulatory requirements.”',
     quote: true,
@@ -56,8 +60,12 @@ const testimonials = [
   {
     title: 'Saving Cost and Accelerating Insights with Hubble',
     logo: AscendLogo,
-    CTAtext: 'Read The Blog Post',
-    url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://clickhouse.com/blog/building-clickhouse-cloud-from-scratch-in-a-year',
+      },
+    ],
     description:
       'Trying to understand what’s going on with traditional tooling means, you probably throw three engineers at the problem for five hours while with Hubble you know what’s happening in about three seconds. It was one of those very easy trade offs to explain to my CEO. We’re going to encounter the cost of debugging, let’s make it a lot less expensive.',
     quote: true,

@@ -34,16 +34,24 @@ const testimonials = [
   {
     logo: AscendLogo,
     title: 'Achieving HIPAA compliance with Cilium’s transparent encryption',
-    CTAtext: 'Read The Case Study',
-    url: 'https://www.cncf.io/case-studies/ascend/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/ascend/',
+      },
+    ],
     description:
       'Ascend switched to using Cilium as their solution for data encryption and has since experienced significant improvements. With Cilium, Ascend was able to simplify the encryption process, eliminating the need for and mitiagting issues with certificate-init-containers and application based encryption. This transition has allowed Ascend to achieve seamless data encryption and maintain HIPAA compliance with ease.',
   },
   {
     logo: CosmonicLogo,
     title: 'Seamless Network Security and Privacy with Cilium',
-    CTAtext: 'Read The Blog Post',
-    url: 'https://cilium.io/blog/2023/01/18/cosmonic-user-story/',
+    CTAs: [
+      {
+        CTAtext: 'Read The Blog Post',
+        url: 'https://cilium.io/blog/2023/01/18/cosmonic-user-story/',
+      },
+    ],
     description:
       'The Cosmonic team uses Cilium for transparent encryption. In the words of Dan Norris, the infrastucture team for Cosmonic. “With WireGuard, all the internal traffic is encrypted. I don’t have to worry about it and I don’t have to manage a PKI infrastructure. That was the killer feature. I don’t have to worry about a service mesh. I’ve run service meshes before. It’s great but that’s yet another system to manage. [With Cilium], you can just toggle that flag and you’re done.”',
   },
