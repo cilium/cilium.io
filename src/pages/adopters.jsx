@@ -300,6 +300,8 @@ const logos1 = {
     'hetzner',
     'azure',
     'vkcloud',
+    'sealos',
+    'netways',
   ],
   spaceXSize: 'sm',
 };

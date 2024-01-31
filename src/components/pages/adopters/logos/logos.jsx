@@ -32,16 +32,20 @@ import KubekeyLogo from './images/kubekey.inline.svg';
 import KubeliftLogo from './images/kubelift.inline.svg';
 import KubeoneLogo from './images/kubeone.inline.svg';
 import KubesprayLogo from './images/kuberspray.inline.svg';
+import NetwaysLogo from './images/netways.inline.svg';
 import NineLogo from './images/nine.inline.svg';
 import OpenShiftLogo from './images/openshift.inline.svg';
 import OpenStackLogo from './images/openstack.inline.svg';
 import Rke2Logo from './images/rke2.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
+import SealosLogo from './images/sealos.inline.svg';
 import SovereignLogo from './images/sovereign.inline.svg';
 import TencentCloudLogo from './images/tencent-cloud.inline.svg';
 import VKCloudLogo from './images/vkcloud.inline.svg';
 
 const logos = {
+  netways: NetwaysLogo,
+  sealos: SealosLogo,
   vkcloud: VKCloudLogo,
   aws: AWSLogo,
   constellation: ConstellationLogo,
