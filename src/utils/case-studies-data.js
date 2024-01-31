@@ -806,6 +806,14 @@ export default {
       },
     ],
   },
+  netways: {
+    iconName: 'netways',
+    text: '<b>Netways</b> uses Cilium as a CNI option in their Managed Kubernetes clusters',
+  },
+  sealos: {
+    iconName: 'sealos',
+    text: '<b>Sealos</b> uses Cilium as a CNI for their Sealos Cloud offering ',
+  },
   sianalytics: {
     iconName: 'sianalytics',
     text: '<b>SI Analytics</b> uses Cilium as the CNI for both their self-managed Kubernetes clusters in on-prem data centers and in their GKE dataplane v2-based clusters',

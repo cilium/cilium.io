@@ -77,6 +77,7 @@ import MeltwaterLogo from './images/meltwater.inline.svg';
 import MobilabLogo from './images/mobilab.inline.svg';
 import MuxLogo from './images/mux.inline.svg';
 import MyFitnessPalLogo from './images/myfitnesspal.inline.svg';
+import NetwaysLogo from './images/netways.inline.svg';
 import NexxiotLogo from './images/nexxiot.inline.svg';
 import NineLogo from './images/nine.inline.svg';
 import NorthflankLogo from './images/northflank.inline.svg';
@@ -100,6 +101,7 @@ import SapLogo from './images/sap.inline.svg';
 import SapianLogo from './images/sapian.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SchubergPhilisLogo from './images/schuberg-philis.inline.svg';
+import SealosLogo from './images/sealos.inline.svg';
 import SianalyticsLogo from './images/sianalytics.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
 import SinglestoreLogo from './images/singlestore.inline.svg';
@@ -126,6 +128,8 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  netways: NetwaysLogo,
+  sealos: SealosLogo,
   santa: SantaLogo,
   jysk: JyskLogo,
   vkcloud: VkcloudLogo,

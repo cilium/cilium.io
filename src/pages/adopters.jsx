@@ -10,6 +10,8 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  netways,
+  sealos,
   santa,
   jsyk,
   vkcloud,
@@ -206,6 +208,8 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    netways,
+    sealos,
     sianalytics,
     cybozu,
     plusserver,
