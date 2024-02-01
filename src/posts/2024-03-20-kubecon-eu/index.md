@@ -19,7 +19,7 @@ in Paris! We'll keep this page updated with more details as they are published.
 
 - Attend the Maintainers' Track session
 
-  These are the details for our maintainer track session, we hope to see you there :)
+  These are the details for our maintainer track session, we hope to see you there!
 
   [Cilium: Connecting, Observing, and Securing Service Mesh and Beyond with EBPF - Liz Rice & Maartje Eyskens, Isovalent; Nico Meisenzahl, white duck; Vlad Ungureanu, Palantir Technologies](https://kccnceu2024.sched.com/event/1Yhfl/cilium-connecting-observing-and-securing-service-mesh-and-beyond-with-ebpf-liz-rice-maartje-eyskens-isovalent-nico-meisenzahl-white-duck-vlad-ungureanu-palantir-technologies?iframe=no&w=100%&sidebar=yes&bg=no)
 
@@ -31,6 +31,8 @@ in Paris! We'll keep this page updated with more details as they are published.
   the event
 
 ## Cilium Talks at KubeCon EU 2024 Full Schedule
+
+Below is a list of some Cilium talks at KubeCon EU including Cilium + eBPF Day, Observability Day and Istio Day.
 
 [Connecting Cloud Native: Cilium + eBPF Day - Laurent Bernaille, Datadog & Bill Mulligan, Isovalent](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/cncf-hosted-co-located-schedule/)
 
@@ -110,6 +112,6 @@ Tuesday, March 19, 2024, 17:20 - 17:30 CET
 
 The Closing Session for Cilium + eBPF Day EU 2024
 
-You can find the complete schedule in this [blog post](/).
+You can find the complete schedule in this [blog post](https://cilium.io/blog/2024/02/02/cilium-at-kube-con-na).
 
 À bientôt à Paris!
