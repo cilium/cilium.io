@@ -112,6 +112,6 @@ Tuesday, March 19, 2024, 17:20 - 17:30 CET
 
 The Closing Session for Cilium + eBPF Day EU 2024
 
-You can find the complete schedule in this [blog post](https://cilium.io/blog/2024/02/02/cilium-at-kube-con-na).
+You can find the complete schedule in this [blog post](https://cilium.io/blog/2024/02/02/cilium-at-kube-con-eu-2024).
 
 À bientôt à Paris!
