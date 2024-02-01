@@ -2,7 +2,7 @@
 path: '/blog/2024/01/18/cilium-kubecon-eu-2024'
 date: '2024-01-18T12:00:00.000Z'
 title: 'Cilium in Paris! See you at KubeCon Europe 2024'
-isFeatured: true
+isPopular: true
 ogImage: KubeConParis.png
 ogSummary: 'There is an amazing lineup of Cilium activities at KubeCon + CloudNativeCon'
 categories:
