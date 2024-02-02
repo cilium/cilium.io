@@ -1,7 +1,7 @@
 ---
 path: '/blog/2024/02/02/cilium-at-kube-con-eu-2024'
 date: '2024-02-02T12:00:00.000Z'
-title: 'Cilium Talks at KubeCon NA 2024'
+title: 'Cilium Talks at KubeCon EU 2024'
 ogImage: talks.png
 ogSummary: 'A list of all Cilium talks and sessions at KubeCon EU 2024'
 categories:
