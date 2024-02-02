@@ -19,7 +19,6 @@ in Paris! We'll keep this page updated with more details as they are published.
 
 - Attend the Maintainers' Track session
 
-
   [Cilium: Connecting, Observing, and Securing Service Mesh and Beyond with EBPF - Liz Rice & Maartje Eyskens, Isovalent; Nico Meisenzahl, white duck; Vlad Ungureanu, Palantir Technologies](https://kccnceu2024.sched.com/event/1Yhfl/cilium-connecting-observing-and-securing-service-mesh-and-beyond-with-ebpf-liz-rice-maartje-eyskens-isovalent-nico-meisenzahl-white-duck-vlad-ungureanu-palantir-technologies?iframe=no&w=100%&sidebar=yes&bg=no)
 
   Wednesday March 20, 2024 15:25 - 16:00 CET
@@ -35,6 +34,6 @@ Below is a list of some Cilium talks at KubeCon EU including Cilium + eBPF Day, 
 
 ![](./talks.png)
 
-You can find the complete schedule in this [blog post](https://cilium.io/blog/2024/02/02/cilium-at-kube-con-eu-2024).
+You can find more details about each talk in this [blog post](https://cilium.io/blog/2024/02/02/cilium-at-kube-con-eu-2024).
 
 À bientôt à Paris!
