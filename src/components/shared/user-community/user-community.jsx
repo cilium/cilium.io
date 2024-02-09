@@ -92,6 +92,7 @@ import PolarSignalsLogo from './images/polarsignals.inline.svg';
 import PolverioLogo from './images/polverio.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
 import ProtonLogo from './images/proton.inline.svg';
+import RabobankLogo from './images/rabobank.inline.svg';
 import RadioFranceLogo from './images/radiofrance.inline.svg';
 import RafayLogo from './images/rafay.inline.svg';
 import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
@@ -128,6 +129,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  rabobank: RabobankLogo,
   netways: NetwaysLogo,
   sealos: SealosLogo,
   santa: SantaLogo,

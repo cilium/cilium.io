@@ -57,6 +57,7 @@ import PlusserverLogo from './images/plusserver.inline.svg';
 import PostFinanceLogo from './images/postfinance.inline.svg';
 import ProtonLogo from './images/proton.inline.svg';
 import QwistLogo from './images/qwist.inline.svg';
+import RabobankLogo from './images/rabobank.inline.svg';
 import RadiofranceLogo from './images/radiofrance.inline.svg';
 import RobinhoodLogo from './images/robinhood.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
@@ -107,6 +108,7 @@ const logos = {
   et888: Et888Logo,
   f5: F5Logo,
   form3: Form3Logo,
+  rabobank: RabobankLogo,
   frsca: FRSCALogo,
   gdata: GdataLogo,
   gitlab: Gitlab,
