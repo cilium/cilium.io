@@ -808,7 +808,7 @@ export default {
   },
   rabobank: {
     iconName: 'rabobank',
-    text: '<b>Rabobank</b> uses Cilium to enhance their Christmas operations by efficiently connecting clusters and securing data',
+    text: '<b>Rabobank</b> uses Cilium to implement zero trust networking in their API platform',
     links: [
       {
         linkText: 'Read Case Study',
