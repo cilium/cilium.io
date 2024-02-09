@@ -196,7 +196,7 @@ const financialResources = [
     buttonLink: 'https://www.cncf.io/case-studies/rabobank/',
     buttonText: 'Read The Case Study',
     description:
-      'Rabobank turned to Cilium as their preferred network security and observability solution, enabling them to implement zero-trust networking and create a self-service environment for their teams.',
+      'Rabobank leverage Cilium to enable zero-trust networking, significantly improving the security and enabling self-service in their financial API platform',
   },
 ];
 
