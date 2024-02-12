@@ -16,6 +16,7 @@ const plugins = [
     options: {
       name: `posts`,
       path: `${__dirname}/src/posts`,
+      ignore: [`**/2024-02-12-how-software-networking-is-taking-over-the-world`],
     },
   },
   {
