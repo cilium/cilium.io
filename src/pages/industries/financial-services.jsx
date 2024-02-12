@@ -17,6 +17,7 @@ import FinanceImage2 from 'images/pages/industries/financial-services/finance-2.
 import FinanceImage3 from 'images/pages/industries/financial-services/finance-3.png';
 import From3Image from 'images/pages/industries/financial-services/form3.jpeg';
 import PostFinanceOfficeImage from 'images/pages/industries/financial-services/postfinanceoffice.png';
+import RabobankOfficeImage from 'images/pages/industries/financial-services/rabobank-office.jpeg';
 import RobinhoodOfficeImage from 'images/pages/industries/financial-services/robinhoodoffice.png';
 import ExecelBee from 'images/pages/usecase/excel-bee.png';
 import MainLayout from 'layouts/main';
@@ -188,9 +189,27 @@ const financialResources = [
     description:
       ' Form3 integrated Cilium into their platform as their primary solution for networking, security, and observability, enabling them to meet their FPS gateway business requirement of seamlessly switching between data centers without any downtime.',
   },
+  {
+    imageSrc: RabobankOfficeImage,
+    imageAlt: 'Rabobank office building',
+    title: 'Self-service, Zero Trust Network Security',
+    buttonLink: 'https://www.cncf.io/case-studies/rabobank/',
+    buttonText: 'Read The Case Study',
+    description:
+      'Rabobank leverages Cilium to enable zero-trust networking, significantly improving the security and enabling self-service in their financial API platform.',
+  },
 ];
 
-const financeLogos = ['sandp', 'postfinance', 'robinhood', 'bloomberg', 'form3', 'et888', 'qwist'];
+const financeLogos = [
+  'sandp',
+  'postfinance',
+  'robinhood',
+  'bloomberg',
+  'form3',
+  'et888',
+  'qwist',
+  'rabobank',
+];
 
 const FinancialServicesPage = () => (
   <MainLayout theme="gray">

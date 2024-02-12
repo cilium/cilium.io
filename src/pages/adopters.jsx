@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  rabobank,
   netways,
   sealos,
   santa,
@@ -139,6 +140,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    rabobank,
     santa,
     jsyk,
     vkcloud,
@@ -256,7 +258,6 @@ const userCommunity2 = {
     bytedance,
     kubeOvn,
     kryptos,
-    giantSwarm,
     immerok,
     magicLeap,
     sapian,

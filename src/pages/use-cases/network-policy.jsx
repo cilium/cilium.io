@@ -7,6 +7,7 @@ import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
+import RabobankLogo from 'icons/rabobank.inline.svg';
 import NetworkPolicyImage1 from 'images/pages/usecase/network-1.png';
 import NetworkPolicyImage2 from 'images/pages/usecase/network-2.png';
 import NetworkPolicyImage3 from 'images/pages/usecase/network-3.png';
@@ -100,6 +101,18 @@ const testimonials = [
     ],
     description:
       'ClickHouse turned to Cilium as their preferred networking solution to take advantage of eBPF performance and simplify the process of isolating customers from each other. Cilium enabled them to create dedicated CiliumNetworkPolicies for each customer’s Kubernetes namespace to control access to specific resources, even if a customer manages to break into their Kubernetes pods.',
+  },
+  {
+    logo: RabobankLogo,
+    title: 'Self-service, Zero Trust Network Security',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/rabobank/',
+      },
+    ],
+    description:
+      'Rabobank turned to Cilium as their preferred network security solution. Cilium is the default Container Network Interface (CNI) for Rabobank’s API platform team, enabling them to configure network policies easily, allowing for automated allow listing of their API providers. The shift from IP allow listing to using FQDN has significantly eased the maintenance and troubleshooting of their platform.',
   },
 ];
 

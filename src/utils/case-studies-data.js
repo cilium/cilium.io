@@ -806,6 +806,17 @@ export default {
       },
     ],
   },
+  rabobank: {
+    iconName: 'rabobank',
+    text: '<b>Rabobank</b> uses Cilium to implement zero trust networking in their API platform',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/rabobank/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   netways: {
     iconName: 'netways',
     text: '<b>Netways</b> uses Cilium as a CNI option in their Managed Kubernetes clusters',
