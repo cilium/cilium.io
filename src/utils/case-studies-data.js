@@ -817,6 +817,10 @@ export default {
       },
     ],
   },
+  veepee: {
+    iconName: 'veepee',
+    text: '<b>Veepee</b> uses Cilium in their on-premise Kubernetes clusters hosting the majority of their applications',
+  },
   netways: {
     iconName: 'netways',
     text: '<b>Netways</b> uses Cilium as a CNI option in their Managed Kubernetes clusters',
