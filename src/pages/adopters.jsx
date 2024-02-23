@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  veepee,
   rabobank,
   netways,
   sealos,
@@ -210,6 +211,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    veepee,
     netways,
     sealos,
     sianalytics,
