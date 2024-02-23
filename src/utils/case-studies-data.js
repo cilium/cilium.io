@@ -819,7 +819,7 @@ export default {
   },
   veepee: {
     iconName: 'veepee',
-    text: '<b>Veepee</b> uses Cilium in their on-premise Kubernetes clusters hosting majority of their applications',
+    text: '<b>Veepee</b> uses Cilium in their on-premise Kubernetes clusters hosting the majority of their applications',
   },
   netways: {
     iconName: 'netways',
