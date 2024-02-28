@@ -1,9 +1,9 @@
 ---
 path: '/blog/2024/02/29/cilium-on-digital-ocean'
 date: '2024-02-29T12:00:00.000Z'
-title: 'Hubble Integration Added to DigitalOcean Kubernetes'
+title: 'Interview: Hubble Integration Added to DigitalOcean Kubernetes'
 isPopular: true
-ogImage: Cilium-on-Digital-Ocean.png
+ogImage: cilium_on_digitalocean.png
 ogSummary: 'Exclusive Interview with DigitalOcean on Integrating Hubble into their Kubernetes Offering'
 categories:
   - Community
