@@ -16,6 +16,7 @@ const plugins = [
     options: {
       name: `posts`,
       path: `${__dirname}/src/posts`,
+      ignore: [`**/2024/03/07/cloud-provider-user-story/`],
     },
   },
   {
