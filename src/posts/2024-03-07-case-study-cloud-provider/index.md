@@ -18,15 +18,17 @@ _This User Story comes from a company in the cloud industry_
 
 Cloud providers give customers a simple way to access and use a wide range of cloud services including analytics, storage, and networking. These solutions in turn need to keep up with customer demands while still being manageable for the cloud provider themselves. This Cilium user story tells the story of why one cloud provider turned to Cilium for the networking layer in their managed Kubernetes offering.
 
+### Challenge
+
 They originally built the networking layer on their own iptables-based Container Network Interface(CNI). However, as customers started growing their clusters, they began facing scalability challenges with their iptables based rules in kube-proxy. To handle the increasing number of services and backends and network policies, they needed a solution that would help them to grow and meet customer demands.
 
-## Solution
+### Solution
 
 After evaluating several options, the cloud provider decided to take a collaborative approach with the community. They chose to integrate Cilium as a CNI into their managed Kubernetes offering because it addressed their scalability challenges, was feature-rich, and backed by an active and growing community
 
 This integration allowed them to pivot their networking dataplane from iptables to eBPF, making it faster and more scalable. Cilium also enabled them to add additional features for their customers like advanced network policy and a kube-proxy replacement. Their customers were looking for a cloud-agnostic solution that would work wherever their workloads needed to connect and found that with Cilium.
 
-## Impact
+### Impact
 
 By switching the dataplane of their managed Kubernetes service from iptables to Cilium powered by eBPF, their customers have more scalability, performance, and features for their Kubernetes networking layer. The Cilium community has also benefited from this cloud provider's contributions back to the project. These contributions back to the open source community have also helped build trust and confidence with their customers.
 
