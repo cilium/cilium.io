@@ -46,7 +46,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Read Blog',
+        linkText: 'Read Case Study',
         linkUrl: 'https://isovalent.com/blog/post/eliminnate-team-silos-with-cilium/',
         linkTarget: '_blank',
       },
