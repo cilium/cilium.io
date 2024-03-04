@@ -45,6 +45,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=6CZ_SSTqb4g',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://isovalent.com/blog/post/eliminnate-team-silos-with-cilium/',
+        linkTarget: '_blank',
+      },
     ],
   },
   seznam: {
@@ -813,6 +818,29 @@ export default {
       {
         linkText: 'Read Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/rabobank/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  netbird: {
+    iconName: 'netbird',
+    text: '<b>Netbird</b> uses Cilium to compile BPF to Go for cross-platform DNS management and NAT traversal',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://netbird.io/knowledge-hub/using-xdp-ebpf-to-share-default-dns-port-between-resolvers',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  gcore: {
+    iconName: 'gcore',
+    text: '<b>Gcore</b> uses Cilium as a CNI option in their Managed Kubernetes offering',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://gcore.com/news/cilium-cni-support/',
         linkTarget: '_blank',
       },
     ],
