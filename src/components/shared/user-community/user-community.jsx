@@ -55,6 +55,7 @@ import F5Logo from './images/f5.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
+import GcoreLogo from './images/gcore.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
 import IlionxLogo from './images/ilionx.inline.svg';
@@ -77,6 +78,7 @@ import MeltwaterLogo from './images/meltwater.inline.svg';
 import MobilabLogo from './images/mobilab.inline.svg';
 import MuxLogo from './images/mux.inline.svg';
 import MyFitnessPalLogo from './images/myfitnesspal.inline.svg';
+import NetbirdLogo from './images/netbird.inline.svg';
 import NetwaysLogo from './images/netways.inline.svg';
 import NexxiotLogo from './images/nexxiot.inline.svg';
 import NineLogo from './images/nine.inline.svg';
@@ -130,6 +132,8 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  gcore: GcoreLogo,
+  netbird: NetbirdLogo,
   veepee: VeepeeLogo,
   rabobank: RabobankLogo,
   netways: NetwaysLogo,

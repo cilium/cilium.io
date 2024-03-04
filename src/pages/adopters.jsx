@@ -10,6 +10,8 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  gcore,
+  netbird,
   veepee,
   rabobank,
   netways,
@@ -141,6 +143,8 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    gcore,
+    netbird,
     rabobank,
     santa,
     jsyk,
@@ -305,6 +309,7 @@ const logos1 = {
     'vkcloud',
     'netways',
     'sealos',
+    'gcore',
   ],
   spaceXSize: 'sm',
 };

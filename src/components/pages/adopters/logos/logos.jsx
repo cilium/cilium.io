@@ -21,6 +21,7 @@ import DigitalOceanLogo from './images/digitalocean.inline.svg';
 import EquinixLogo from './images/equinix.inline.svg';
 import ExoscaleLogo from './images/exoscale.inline.svg';
 import GardernerLogo from './images/gardener.inline.svg';
+import GcoreLogo from './images/gcore.inline.svg';
 import GoogleKeLogo from './images/gke.inline.svg';
 import GoogleCloudLogo from './images/google-cloud.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
@@ -44,6 +45,7 @@ import TencentCloudLogo from './images/tencent-cloud.inline.svg';
 import VKCloudLogo from './images/vkcloud.inline.svg';
 
 const logos = {
+  gcore: GcoreLogo,
   netways: NetwaysLogo,
   sealos: SealosLogo,
   vkcloud: VKCloudLogo,
