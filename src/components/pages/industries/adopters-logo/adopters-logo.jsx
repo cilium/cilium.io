@@ -33,6 +33,7 @@ import Et888Logo from './images/et888.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
+import GcoreLogo from './images/gcore.inline.svg';
 import GdataLogo from './images/gdata.inline.svg';
 import Gitlab from './images/gitlab.inline.svg';
 import GooglecloudLogo from './images/google.inline.svg';
@@ -45,6 +46,7 @@ import LiquidReplyLogo from './images/liquid.inline.svg';
 import SandPLogo from './images/logo-s&p.inline.svg';
 import MasmovilLogo from './images/masmovil.inline.svg';
 import MobilabLogo from './images/mobilab.inline.svg';
+import NetwaysLogo from './images/netways.inline.svg';
 import NewYorkTimesLogo from './images/newyork.inline.svg';
 import NineNavigatorsLogo from './images/nine.inline.svg';
 import OpenshiftLogo from './images/openshift.inline.svg';
@@ -62,6 +64,7 @@ import RadiofranceLogo from './images/radiofrance.inline.svg';
 import RobinhoodLogo from './images/robinhood.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SchubergLogo from './images/schuberg.inline.svg';
+import SealosLogo from './images/sealos.inline.svg';
 import SeznamLogo from './images/seznam.inline.svg';
 import SkyBetLogo from './images/skybet.inline.svg';
 import SovereignCloud from './images/sovereign.inline.svg';
@@ -76,6 +79,7 @@ import TrendyolLogo from './images/trendyol.inline.svg';
 import TripLogo from './images/trip.inline.svg';
 import TsystemsLogo from './images/tsystems.inline.svg';
 import USwitchLogo from './images/uswitch.inline.svg';
+import vkCloudLogo from './images/vkcloud.inline.svg';
 import WildLifeLogo from './images/wildlife.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
@@ -108,6 +112,7 @@ const logos = {
   et888: Et888Logo,
   f5: F5Logo,
   form3: Form3Logo,
+  gcore: GcoreLogo,
   rabobank: RabobankLogo,
   frsca: FRSCALogo,
   gdata: GdataLogo,
@@ -123,6 +128,7 @@ const logos = {
   mobilab: MobilabLogo,
   newyorktimes: NewYorkTimesLogo,
   nine: NineNavigatorsLogo,
+  netways: NetwaysLogo,
   openshift: OpenshiftLogo,
   openstack: OpenStackLogo,
   overstock: OverstockLogo,
@@ -136,6 +142,7 @@ const logos = {
   radiofrance: RadiofranceLogo,
   robinhood: RobinhoodLogo,
   sandp: SandPLogo,
+  sealos: SealosLogo,
   scaleway: ScalewayLogo,
   schuberg: SchubergLogo,
   seznam: SeznamLogo,
@@ -151,6 +158,7 @@ const logos = {
   trendyol: TrendyolLogo,
   trip: TripLogo,
   uswitch: USwitchLogo,
+  vkcloud: vkCloudLogo,
   wildlife: WildLifeLogo,
   yahoo: YahooLogo,
   tsystems: TsystemsLogo,

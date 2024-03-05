@@ -120,6 +120,10 @@ const cloudAdoptersLogo = [
   'sovereigncloud',
   'openstack',
   'plusserver',
+  'vkcloud',
+  'netways',
+  'sealos',
+  'gcore',
 ];
 
 const cloudResouces = [
