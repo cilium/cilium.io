@@ -2,13 +2,13 @@
 path: '/blog/2024/02/02/cilium-at-kube-con-eu-2024'
 date: '2024-02-02T12:00:00.000Z'
 title: 'Cilium Talks at KubeCon EU 2024'
-ogImage: talks.png
+ogImage: cover.png
 ogSummary: 'A list of all Cilium talks and sessions at KubeCon EU 2024'
 categories:
   - Community
 ---
 
-![cover image](./talks.png)
+![cover image](./cover.png)
 KubeCon + CloudNativeCon EU 2024 is nearly here, and it's packed with activities centered around Cilium. As the standard for high-performance networking, observability, and security in the Cloud Native ecosystem, Cilium is set to be a major point of discussion throughout the event, especially following the recent release of [Cilium 1.15](https://github.com/cilium/cilium/releases/tag/v1.15.0).
 
 Starting with [Cilium + eBPF Day](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/cilium-ebpf-day/), the agenda features talks from end users like the New York Times, Roche, and Datadog, who will showcase the benefits they've achieved with the scalability, performance, and security capabilities of Cilium and eBPF. Cilium maintainers will also be diving into the architecture of the project and discussing where it is going next.

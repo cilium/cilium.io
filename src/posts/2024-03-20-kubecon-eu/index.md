@@ -30,7 +30,7 @@ in Paris! We'll keep this page updated with more details as they are published.
 
 ## Cilium Talks at KubeCon EU 2024 Full Schedule
 
-Below is a list of some Cilium talks at KubeCon EU including Cilium + eBPF Day, Observability Day and Istio Day.
+Below is a list of some Cilium talks at KubeCon EU including Cilium + eBPF Day and Observability Day.
 
 ![](./talks.png)
 
