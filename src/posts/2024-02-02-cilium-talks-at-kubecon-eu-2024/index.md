@@ -2,13 +2,13 @@
 path: '/blog/2024/02/02/cilium-at-kube-con-eu-2024'
 date: '2024-02-02T12:00:00.000Z'
 title: 'Cilium Talks at KubeCon EU 2024'
-ogImage: talks.png
+ogImage: cover.png
 ogSummary: 'A list of all Cilium talks and sessions at KubeCon EU 2024'
 categories:
   - Community
 ---
 
-![cover image](./talks.png)
+![cover image](./cover.png)
 KubeCon + CloudNativeCon EU 2024 is nearly here, and it's packed with activities centered around Cilium. As the standard for high-performance networking, observability, and security in the Cloud Native ecosystem, Cilium is set to be a major point of discussion throughout the event, especially following the recent release of [Cilium 1.15](https://github.com/cilium/cilium/releases/tag/v1.15.0).
 
 Starting with [Cilium + eBPF Day](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/cilium-ebpf-day/), the agenda features talks from end users like the New York Times, Roche, and Datadog, who will showcase the benefits they've achieved with the scalability, performance, and security capabilities of Cilium and eBPF. Cilium maintainers will also be diving into the architecture of the project and discussing where it is going next.
@@ -112,14 +112,6 @@ The Closing Session for Cilium + eBPF Day EU 2024
 Tuesday, March 19, 2024, 16:25 - 16:50 CET
 
 Discover the power of Cilium Hubble in this session dedicated to cloud native observability. I'll introduce you to Hubbe, an open source tool that is transforming the way we observe and understand network traffic in cloud-native systems with the power of eBPF. In this session, we’ll deep dive into Hubble and how Hubble leverages eBPF technology for deep visibility at the kernel level. Key features like real-time monitoring, comprehensive network flow visibility, and security enforcement, crucial for today's cloud-native applications, will be highlighted. The talk includes a straightforward demo, showcasing Hubble's efficiency in understanding and reading your network traffic, and its intuitive interface. Finally, I'll walk you through the initial steps to get started with Cilium Hubble. Whether you're a developer, system administrator, or simply interested in cloud-native technologies, this talk will equip you with the knowledge to use Hubble for enhanced network observability.
-
-## Istio Day
-
-[End-to-End ID-Based Network Policy Enforcement for Traffic via XDP Load Balancer and Service Mesh - Vinay Kulkarni & Naji Mohamed Abdulla, eBay](https://colocatedeventseu2024.sched.com/event/1YFfS?iframe=no)
-
-Tuesday, March 19, 2024, 11:05 - 11:30 CET
-
-eBay consistently ranks amongst the most visited e-commerce sites, requiring the ability to efficiently handle lots of traffic. Service mesh is crucial in helping scale effectively and meet such traffic needs. In the pursuit of building a highly scalable eBPF-powered identity-based network policy solution, we faced a unique challenge with multiplexed HTTP/1.x connections between the Istio ingress gateway and application sidecar proxy. In this talk, Naji will introduce eBay's high-scale traffic ingress infra built with Cilium XDP load balancer and Istio service mesh, and describe how traffic source identity is transmitted end-to-end. Vinay will cover the journey of building an identity-based network policy enforcement solution, discuss initial design choices, security hurdles encountered in the quest for lowest latency solution, and trade-offs made to achieve a balance between security and low latency. He will conclude with a demo showcasing this network policy enforcement solution.
 
 ## KubeCon + CloudNativeCon
 
