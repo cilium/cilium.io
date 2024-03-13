@@ -1,6 +1,6 @@
 ---
 date: '2023-02-03T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/l7-lb-kubernetes-annotations/'
+externalUrl: 'https://isovalent.com/labs/l7-lb-kubernetes-annotations/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
 ogImage: cover.jpg
 categories:
   - Networking

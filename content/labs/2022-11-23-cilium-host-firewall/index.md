@@ -1,6 +1,6 @@
 ---
 date: '2022-11-23T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/cilium-host-firewall/'
+externalUrl: 'https://isovalent.com/labs/cilium-host-firewall/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
 ogImage: cover.jpg
 categories:
   - Security

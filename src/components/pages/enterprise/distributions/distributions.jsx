@@ -12,7 +12,7 @@ import SupportIcon from './images/support.inline.svg';
 const enterprise = {
   title: 'Isovalent Enterprise for Cilium',
   description: 'Enterprise Distribution maintained by the creators of Cilium.',
-  linkUrl: 'https://bit.ly/3hOKaXj',
+  linkUrl: 'https://isovalent.com/product/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise',
   linkTarget: '_blank',
   linkText: 'Learn more',
 };

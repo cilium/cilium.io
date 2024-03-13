@@ -27,7 +27,7 @@ On the other hand, my journey into programming began with the C language. Naviga
 
 ## How did you get into open source?
 
-Before I joined [Isovalent](https://isovalent.com/), the creators of Cilium, I was only using open source software instead of contributing to it. Joining Isovalent gave me the chance to actively participate and contribute to the Cilium and eBPF communities.
+Before I joined [Isovalent](https://isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise), the creators of Cilium, I was only using open source software instead of contributing to it. Joining Isovalent gave me the chance to actively participate and contribute to the Cilium and eBPF communities.
 
 Cilium sits at an interesting boundary between Kubernetes and the Linux kernel. It interfaces with Kubernetes on the control plane side of things and it programs the data path in Linux to provide networking and security. In order to support Cilium’s use cases, I've contributed to the Kubernetes and the Linux kernel projects.
 

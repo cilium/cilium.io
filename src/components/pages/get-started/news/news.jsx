@@ -21,7 +21,7 @@ const featuredBlogs = {
       linkText: 'Cilium joins the CNCF',
     },
     {
-      linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium',
+      linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
       linkText: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
       linkTarget: '_blank',
     },

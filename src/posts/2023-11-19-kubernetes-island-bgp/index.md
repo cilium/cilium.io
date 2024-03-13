@@ -5,7 +5,7 @@ ogImage: ogimage.webp
 ogSummary: 'Learn about Cilium’s BGP and LB IPAM features, their technical properties and the business value they bring to modern, cloud native infrastructures'
 categories:
   - Technology
-externalUrl: 'https://isovalent.com/blog/post/connecting-your-kubernetes-island-to-your-network-with-cilium-bgp/'
+externalUrl: 'https://isovalent.com/blog/post/connecting-your-kubernetes-island-to-your-network-with-cilium-bgp/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog'
 tags:
   - Community
 ---

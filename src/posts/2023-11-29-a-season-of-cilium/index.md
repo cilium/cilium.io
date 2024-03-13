@@ -5,7 +5,7 @@ ogImage: ogimage.webp
 ogSummary: 'Join the Season of Cilium festive challenge: learn one new thing about Cilium every day for the next 24 days, and enter the new year ready to tackle your platform challenges'
 categories:
   - Community
-externalUrl: 'https://isovalent.com/blog/post/a-season-of-cilium-one-surprise-per-day/'
+externalUrl: 'https://isovalent.com/blog/post/a-season-of-cilium-one-surprise-per-day/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog'
 tags:
   - Community
 ---

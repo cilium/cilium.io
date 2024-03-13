@@ -1,6 +1,6 @@
 ---
 date: '2022-11-21T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/getting-started-with-cilium/'
+externalUrl: 'https://isovalent.com/labs/getting-started-with-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
 ogImage: cover.jpg
 categories:
   - Getting Started

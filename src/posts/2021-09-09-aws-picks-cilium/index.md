@@ -6,5 +6,5 @@ ogSummary: 'AWS has just announced the availability of EKS Anywhere to manage on
 categories:
   - Community
 isPopular: true
-externalUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium'
+externalUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog'
 ---
