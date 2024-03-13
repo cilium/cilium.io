@@ -1,6 +1,6 @@
 ---
 date: '2023-09-29T14:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/cilium-big-tcp/'
+externalUrl: 'https://isovalent.com/labs/cilium-big-tcp/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
 ogImage: cover.png
 categories:
   - Networking

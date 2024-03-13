@@ -35,7 +35,7 @@ const items = [
     description:
       'Quickly get started with Cilium in our interactive tutorials with a live environment.',
     buttonText: 'Explore Tutorials',
-    buttonLink: 'https://isovalent.com/labs/',
+    buttonLink: 'https://isovalent.com/resource-library/labs/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab',
     buttonTarget: '_blank',
   },
   {

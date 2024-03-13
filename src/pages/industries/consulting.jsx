@@ -103,7 +103,7 @@ const consultingResources = [
     title: 'Reducing Kubernetes tool sprawl: Tietoevry uses Cilium and Hubble',
     description:
       'Tietroevry Industries reduced Kubernetes tool sprawl using Cilium, greatly simplifying its overall Kubernetes administration.',
-    buttonLink: 'https://isovalent.com/blog/post/kubernetes-tool-sprawl/',
+    buttonLink: 'https://isovalent.com/blog/post/kubernetes-tool-sprawl/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
     imageSrc: TieToevryOfficeImage,
     imageAlt: 'tieotvry office building',
     buttonText: 'Watch the Talk',

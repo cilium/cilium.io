@@ -131,7 +131,7 @@ const cloudResouces = [
     title: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
     description:
       'AWS picked Cilium as the built-in default for networking and security. As you create your first EKS Anywhere (EKS-A) cluster, you will automatically have Cilium installed.',
-    buttonLink: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/',
+    buttonLink: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
     imageSrc: AWSOfficeImage,
     imageAlt: 'aws office building',
   },

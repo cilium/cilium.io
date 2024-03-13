@@ -1,6 +1,6 @@
 ---
 date: '2022-11-22T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/gateway-api/'
+externalUrl: 'https://isovalent.com/labs/gateway-api/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
 ogImage: cover.jpg
 categories:
   - Networking

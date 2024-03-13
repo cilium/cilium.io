@@ -4,7 +4,7 @@ title: 'Cisco to Acquire Cloud Native Networking & Security Leader Isovalent'
 ogImage: ogimage.webp
 isPopular: true
 ogSummary: "Learn about Cisco's planned acquisition of Isovalent and explore Isovalent's future vision with Cisco"
-externalUrl: 'https://isovalent.com/blog/post/cisco-acquires-isovalent/'
+externalUrl: 'https://isovalent.com/blog/post/cisco-acquires-isovalent/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog'
 categories:
   - Technology
 ---

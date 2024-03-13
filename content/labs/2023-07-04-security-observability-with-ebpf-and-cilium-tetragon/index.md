@@ -1,6 +1,6 @@
 ---
 date: '2023-07-04T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/security-observability-with-ebpf-and-cilium-tetragon/'
+externalUrl: 'https://isovalent.com/labs/security-observability-with-ebpf-and-cilium-tetragon/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
 ogImage: cover.jpg
 categories:
   - Getting Started

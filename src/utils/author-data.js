@@ -1,12 +1,12 @@
 export default {
   thomasGraf: {
     header: 'Thomas Graf',
-    bio: `Thomas Graf is a Co-Founder of Cilium and the CTO & Co-Founder of <a href="https://isovalent.com">Isovalent</a>, the company behind Cilium. Before that, Thomas spent 15 years as
+    bio: `Thomas Graf is a Co-Founder of Cilium and the CTO & Co-Founder of <a href="https://isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise">Isovalent</a>, the company behind Cilium. Before that, Thomas spent 15 years as
     a kernel developer working on the <a href="https://kernel.org">Linux kernel</a> in networking, security and eventually eBPF.`,
   },
   lizRice: {
     header: `<a href="https://twitter.com/lizrice">Liz Rice</a>`,
-    bio: `Liz is Chief Open Source Officer at <a href="https://isovalent.com" target="_blank">Isovalent</a>, the company behind Cilium. She is also chair of the CNCF's Technical Oversight Committee, and the author of Container Security published by O'Reilly.`,
+    bio: `Liz is Chief Open Source Officer at <a href="https://isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise" target="_blank">Isovalent</a>, the company behind Cilium. She is also chair of the CNCF's Technical Oversight Committee, and the author of Container Security published by O'Reilly.`,
   },
   luanGuimaraes: {
     header: `Luan Guimarães`,

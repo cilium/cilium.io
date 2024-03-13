@@ -71,7 +71,7 @@ const testimonials = [
     CTAs: [
       {
         CTAtext: 'Read The Blog Post',
-        url: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/',
+        url: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
       },
     ],
     description:
@@ -98,7 +98,7 @@ const testimonials = [
     CTAs: [
       {
         CTAtext: 'Read The Blog Post',
-        url: 'https://isovalent.com/blog/post/azure-cni-cilium/',
+        url: 'https://isovalent.com/blog/post/azure-cni-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
       },
     ],
   },
