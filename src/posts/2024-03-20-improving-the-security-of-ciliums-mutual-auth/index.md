@@ -1,9 +1,9 @@
 ---
 path: '/blog/2024/01/20/improving-mutual-auth-security'
 date: '2024-03-20T14:00:05.000Z'
-title: 'Improving the security of Cilium's Mutual Authentication'
-ogImage: 'mutual-auth-diagram.png'
-ogSummary: 'Updates on how Cilium Service Mesh is improving the Mutual Authentication feature's security'
+title: 'Improving the security of Cilium Mutual Authentication'
+ogImage: mutualAuthDiagram.png
+ogSummary: "Updates on how Cilium Service Mesh is improving the Mutual Authentication feature's security"
 categories:
   - Technology
 ---
@@ -11,7 +11,7 @@ categories:
 
 Traditionally, service meshes have achieved mutual authentication and encryption by setting up an mTLS connection between workload proxies running in sidecar containers within the pods at either end of the connection. As you might recall if you've been following this space, last year Cilium introduced an innovative approach to providing [mutual authentication between workloads](https://docs.cilium.io/en/stable/network/servicemesh/mutual-authentication/mutual-authentication/). It splits mutual authentication and encryption (the two fundamentals of mutual TLS) into two separate channels. This removes the overhead of per-pod proxy sidecars, and opens up the possibility of authenticating traffic that uses protocols other than TCP.
 
-![Cilium Mutual Authentication design diagram](mutual-auth-diagram.png)
+![Cilium Mutual Authentication design diagram](mutualAuthDiagram.png)
 
 From the original CFP:
 
