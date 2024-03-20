@@ -1,5 +1,5 @@
 ---
-path: '/blog/2024/01/20/improving-mutual-auth-security'
+path: '/blog/2024/03/20/improving-mutual-auth-security'
 date: '2024-03-20T14:00:05.000Z'
 title: 'Improving the security of Cilium Mutual Authentication'
 ogImage: mutualAuthDiagram.png
