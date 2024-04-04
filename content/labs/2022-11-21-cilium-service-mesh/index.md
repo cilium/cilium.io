@@ -1,7 +1,7 @@
 ---
 date: '2022-11-21T12:00:00.000Z'
 externalUrl: 'https://isovalent.com/labs/cilium-service-mesh/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
-ogImage: cover.jpg
+ogImage: cover.png
 categories:
   - Networking
 place: Online
