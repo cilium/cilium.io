@@ -333,7 +333,8 @@ export default {
     links: [
       {
         linkText: 'Read blog',
-        linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
+        linkUrl:
+          'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
         linkTarget: '_blank',
       },
     ],
@@ -490,9 +491,13 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Talk',
-        linkUrl:
-          'https://www.youtube.com/watch?v=9FDpMNvPrCw&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=5',
+        linkText: 'Talk 1',
+        linkUrl: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 2',
+        linkUrl: 'https://youtu.be/rfImX3V711Q',
         linkTarget: '_blank',
       },
     ],
@@ -521,6 +526,11 @@ export default {
         linkText: 'Watch Talk',
         linkUrl:
           'https://www.youtube.com/watch?v=y3z6s-CTtU0&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=2',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Story',
+        linkUrl: 'https://cilium.io/blog/2024/03/07/cloud-provider-user-story/',
         linkTarget: '_blank',
       },
     ],
@@ -845,6 +855,39 @@ export default {
       },
     ],
   },
+  sicredi: {
+    iconName: 'sicredi',
+    text: '<b>Sicredi</b> uses Cilium as their CNI and for network security across their Kubernetes clusters',
+    links: [
+      {
+        linkText: 'Watch the Talk',
+        linkUrl: 'https://youtu.be/MSqI-gBiCrc?si=I8QMmlSB7cnYe0BQ',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  schubergPhilis: {
+    iconName: 'schubergPhilis',
+    text: '<b>Schuberg Philis</b> uses Cilium as the CNI for mission critical Kubernetes clusters they run for their customers',
+    links: [
+      {
+        linkText: 'Watch the Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=OiO7ySxWiQs',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  roche: {
+    iconName: 'roche',
+    text: '<b>Roche</b> uses Cilium for managing the network connectivity of their edge clusters',
+    links: [
+      {
+        linkText: 'Watch the Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=kC8efabCH6s',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   veepee: {
     iconName: 'veepee',
     text: '<b>Veepee</b> uses Cilium in their on-premise Kubernetes clusters hosting the majority of their applications',
@@ -992,10 +1035,6 @@ export default {
   sap: {
     iconName: 'sap',
     text: '<b>SAP</b> uses Cilium for projects across AWS, Azure, GCP, and OpenStack',
-  },
-  schubergPhilis: {
-    iconName: 'schubergPhilis',
-    text: '<b>Schuberg Philis</b> uses Cilium as the CNI for mission critical Kubernetes clusters they run for their customers',
   },
   simple: {
     iconName: 'simple',

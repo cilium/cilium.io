@@ -19,6 +19,7 @@ import From3Image from 'images/pages/industries/financial-services/form3.jpeg';
 import PostFinanceOfficeImage from 'images/pages/industries/financial-services/postfinanceoffice.png';
 import RabobankOfficeImage from 'images/pages/industries/financial-services/rabobank-office.jpeg';
 import RobinhoodOfficeImage from 'images/pages/industries/financial-services/robinhoodoffice.png';
+import SicrediOfficeImage from 'images/pages/industries/financial-services/sicredi-office.webp';
 import ExecelBee from 'images/pages/usecase/excel-bee.png';
 import MainLayout from 'layouts/main';
 
@@ -181,6 +182,15 @@ const financialResources = [
       "Robinhood's war stories from running Cilium in a high-churn near-production environment, learn how they overcame challenges by better understanding and tuning Cilium.",
   },
   {
+    imageSrc: SicrediOfficeImage,
+    imageAlt: 'Sicredi logo on a wall',
+    title: 'Strengthening Security Across Distributed Kubernetes Clusters',
+    buttonLink: 'https://www.youtube.com/watch?v=MSqI-gBiCrc',
+    buttonText: 'Watch the Talk',
+    description:
+      "Sicredi, Brazil's largest credit union, leveraged Cilium to implement a full security policy across its infrastructure.",
+  },
+  {
     imageSrc: From3Image,
     imageAlt: 'form3 office building',
     title: 'Building a Resilient Payments Platform with Cilium ',
@@ -209,6 +219,7 @@ const financeLogos = [
   'et888',
   'qwist',
   'rabobank',
+  'sicredi',
 ];
 
 const FinancialServicesPage = () => (
