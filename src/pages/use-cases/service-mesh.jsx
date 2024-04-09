@@ -66,7 +66,7 @@ const testimonials = [
       },
     ],
     description:
-      "The Roche team utilized Cilium's service mesh as a solution for managing network connectivity across their edge clusters. Cilium enabled them to have more fine-grained traffic control, and simplified the operations and configuration of network policies using a GitOps approach, alongside the deployment of workloads",
+      "The Roche team utilized Cilium's service mesh as a solution for managing network connectivity across their edge clusters. Cilium enabled them to have more fine-grained traffic control, and simplified the operations and configuration of network policies using a GitOps approach, alongside the deployment of workloads.",
   },
   {
     logo: SicrediLogo,

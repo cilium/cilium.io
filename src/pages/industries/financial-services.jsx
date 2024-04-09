@@ -188,7 +188,7 @@ const financialResources = [
     buttonLink: 'https://www.youtube.com/watch?v=MSqI-gBiCrc',
     buttonText: 'Watch the Talk',
     description:
-      "Sicredi, Brazil's largest credit union, leveraged Cilium to implement a full security policy across its infrastructure.",
+      "Sicredi, Brazil's largest credit union, leverages Cilium to reduced operational and maintenance complexity while increasing performance across clouds and on premise.",
   },
   {
     imageSrc: From3Image,
