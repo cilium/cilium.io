@@ -66,6 +66,7 @@ import ScalewayLogo from './images/scaleway.inline.svg';
 import SchubergLogo from './images/schuberg.inline.svg';
 import SealosLogo from './images/sealos.inline.svg';
 import SeznamLogo from './images/seznam.inline.svg';
+import SicrediLogo from './images/sicredi.inline.svg';
 import SkyBetLogo from './images/skybet.inline.svg';
 import SovereignCloud from './images/sovereign.inline.svg';
 import SportRadarLogo from './images/sportradar.inline.svg';
@@ -146,6 +147,7 @@ const logos = {
   scaleway: ScalewayLogo,
   schuberg: SchubergLogo,
   seznam: SeznamLogo,
+  sicredi: SicrediLogo,
   skybet: SkyBetLogo,
   sovereigncloud: SovereignCloud,
   sportradar: SportRadarLogo,

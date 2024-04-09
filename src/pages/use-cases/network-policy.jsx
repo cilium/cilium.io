@@ -5,6 +5,7 @@ import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
+import ebayLogo from 'icons/ebay.inline.svg';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import RabobankLogo from 'icons/rabobank.inline.svg';
@@ -113,6 +114,18 @@ const testimonials = [
     ],
     description:
       'Rabobank turned to Cilium as their preferred network security solution. Cilium is the default Container Network Interface (CNI) for Rabobank’s API platform team, enabling them to configure network policies easily, allowing for automated allow listing of their API providers. The shift from IP allow listing to using FQDN has significantly eased the maintenance and troubleshooting of their platform.',
+  },
+  {
+    logo: ebayLogo,
+    title: 'Enforcing Network Policies for Host Processes via eBPF',
+    CTAs: [
+      {
+        CTAtext: 'Watch the Talk',
+        url: 'https://www.youtube.com/watch?v=AWAf3H4Qwq8',
+      },
+    ],
+    description:
+      'Cilium network policies can secure communication between the Kubernetes API server and the kubelet by assigning them identities and using a CiliumNetworkPolicy to ensure that only traffic from the API server is allowed to reach the kubelet. eBPF provides an efficient means to enforce network policies for host processes. Cilium utilizes eBPF programs that attach to network interfaces to identify the source of network traffic. These programs insert the identity of the sending process into the packet header, which the receiving host can use to determine whether to allow the traffic.',
   },
 ];
 

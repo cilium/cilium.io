@@ -3,8 +3,12 @@ import React from 'react';
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
+import NYTimesLogo from 'images/pages/usecase/nyt.inline.svg';
+import RocheLogo from 'images/pages/usecase/roche.inline.svg';
 import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.png';
+import SicrediLogo from 'images/pages/usecase/sicredi.inline.svg';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
@@ -51,6 +55,51 @@ const sectionContent4 = {
   imageRight: false,
 };
 
+const testimonials = [
+  {
+    logo: RocheLogo,
+    title: 'How Roche Manages Network Connectivity for 1000+ Edge Clusters',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
+      },
+    ],
+    description:
+      "The Roche team utilized Cilium's service mesh as a solution for managing network connectivity across their edge clusters. Cilium enabled them to have more fine-grained traffic control, and simplified the operations and configuration of network policies using a GitOps approach, alongside the deployment of workloads.",
+  },
+  {
+    logo: SicrediLogo,
+    title: 'Strengthening Security Across Distributed Kubernetes Clusters',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://youtu.be/MSqI-gBiCrc?si=ktIHXkxhuHpuwC6a',
+      },
+      // {
+      //   CTAtext: 'Read Case Study',
+      //   url: '',
+      // },
+    ],
+    description:
+      "We started using Cilium in our EKS clusters and encountered security challenges. So many microservices were running without any kind of authentication or encryption. This prompted us to start doing a service mesh proof of concept. Although we already had Cilium available, we also evaluated Consul Connect, Kong Mesh, and Istio. Cilium stood out as it did not require sidecars, appealing to us not only for resource savings but also to avoid potential load issues caused by additional software. Cilium's sidecar-less approach did call our attention, leading us to adopt it to provide security across all our microservices.",
+    quote: true,
+    person: 'Matheus Morais - IT Infrastructure Analyst, Sicredi',
+  },
+  {
+    logo: NYTimesLogo,
+    title: 'Revolutionizing Mesh Layers: Transitioning from Istio to Cilium at the New York Times',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://www.youtube.com/watch?v=rfImX3V711Q',
+      },
+    ],
+    description:
+      "The New York Times migrated from Istio to Cilium service mesh to simplify their multi-tenant Kubernetes clusters on Amazon EKS. Cilium's service mesh capabilities reduced management complexity, improved manageability with a smaller footprint, and offered a more user-friendly experience for defining network policies. This shift streamlined network operations and enhanced security for their cloud-native applications.",
+  },
+];
+
 const ServiceMeshPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} />
@@ -58,6 +107,7 @@ const ServiceMeshPage = () => (
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
     <FeatureSection {...sectionContent4} />
+    <UseCaseCard heading="Who’s using Cilium's Service Mesh" testimonials={testimonials} />
     <JoinUsCard className="pt-10 md:pt-20 lg:pt-28" />
   </MainLayout>
 );

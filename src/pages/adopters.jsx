@@ -10,6 +10,8 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  roche,
+  sicredi,
   gcore,
   netbird,
   veepee,
@@ -143,6 +145,9 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    roche,
+    schubergPhilis,
+    sicredi,
     gcore,
     netbird,
     rabobank,
@@ -242,7 +247,6 @@ const userCommunity2 = {
     sportradar,
     plaid,
     isovalent,
-    schubergPhilis,
     spherity,
     ayedo,
     cognite,

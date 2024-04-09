@@ -99,6 +99,7 @@ import RadioFranceLogo from './images/radiofrance.inline.svg';
 import RafayLogo from './images/rafay.inline.svg';
 import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
 import RobinhoodLogo from './images/robinhood.inline.svg';
+import RocheLogo from './images/roche.inline.svg';
 import SantaLogo from './images/santa.inline.svg';
 import SapLogo from './images/sap.inline.svg';
 import SapianLogo from './images/sapian.inline.svg';
@@ -106,6 +107,7 @@ import ScalewayLogo from './images/scaleway.inline.svg';
 import SchubergPhilisLogo from './images/schuberg-philis.inline.svg';
 import SealosLogo from './images/sealos.inline.svg';
 import SianalyticsLogo from './images/sianalytics.inline.svg';
+import SicrediLogo from './images/sicredi.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
 import SinglestoreLogo from './images/singlestore.inline.svg';
 import SkybetLogo from './images/skybet.inline.svg';
@@ -132,6 +134,8 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  roche: RocheLogo,
+  sicredi: SicrediLogo,
   gcore: GcoreLogo,
   netbird: NetbirdLogo,
   veepee: VeepeeLogo,

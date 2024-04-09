@@ -8,6 +8,7 @@ import SEO from 'components/shared/seo';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import Form3Logo from 'icons/logo-form3.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
+import SicrediLogo from 'icons/sicredi.inline.svg';
 import AstronautBee from 'images/pages/usecase/astronaut-bee.png';
 import ClusterMeshImage1 from 'images/pages/usecase/clustermesh-1.png';
 import ClusterMeshImage2 from 'images/pages/usecase/clustermesh-2.png';
@@ -95,7 +96,7 @@ const testimonials = [
       },
       {
         CTAtext: 'Read Case Study',
-        url: 'https://www.cncf.io/case-studies/form3/', // Replace with actual case study URL
+        url: 'https://www.cncf.io/case-studies/form3/',
       },
     ],
     description:
@@ -130,6 +131,24 @@ const testimonials = [
       'Cilium Cluster Mesh configuration was easy, requiring only basic VPC peering, routing tables, and firewalling setup. We directed Cilium to the etcd endpoints in the other clusters, but it now supports CRD-backed IPAM mode. We have deployed Cilium in over 20 Kubernetes production clusters, with at least 3 clusters per game in the same configuration. This infrastructure handles over 50k client requests per second and supports millions of daily active users.',
     quote: true,
     person: 'Luan Guimarães -  Site Reliability Engineer, Wildlife Studios',
+  },
+  {
+    logo: SicrediLogo,
+    title: 'Strengthening Security Across Distributed Kubernetes Clusters',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://youtu.be/MSqI-gBiCrc?si=ktIHXkxhuHpuwC6a',
+      },
+      // {
+      //   CTAtext: 'Read Case Study',
+      //   url: '',
+      // },
+    ],
+    description:
+      "Cilium Cluster Mesh gave us possibilities that we didn't have before. We can run the same application across our data centers and AWS. It provides us with a consistent networking experience wherever we need to go. Applications in different clusters can communicate with each other without needing to go through an ingress controller. We are expanding this capability for more applications because this value is already proven. Cluster Mesh works, it's fast, and it's reliable",
+    quote: true,
+    person: 'Matheus Morais - IT Infrastructure Analyst, Sicredi',
   },
 ];
 
