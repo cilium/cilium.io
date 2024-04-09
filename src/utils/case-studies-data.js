@@ -868,7 +868,7 @@ export default {
   },
   schubergPhilis: {
     iconName: 'schubergPhilis',
-    text: '<b>Schuberg Philis</b> uses Cilium as the CNI for mission critical Kubernetes clusters they run for their customers',
+    text: '<b>Schuberg Philis</b> uses Cilium as the CNI for PCI-DSS compliant kubernetes clusters they run for their customers',
     links: [
       {
         linkText: 'Watch the Talk',
