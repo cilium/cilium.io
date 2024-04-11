@@ -65,7 +65,7 @@ const testimonials = [
         url: 'https://youtu.be/ejkJiq7AMHs',
       },
     ],
-    title: 'Pollenating Build Attestations on Kubernetes with Tetragon and EBPF',
+    title: 'Pollenating Build Attestations on Kubernetes with Tetragon and eBPF',
     description:
       'Attestagon is a Kubernetes controller that utilizes Tetragon to generate build provenance provenance for artifacts built inside Kubernetes pods',
   },
