@@ -6,6 +6,8 @@ import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
+import PalantirLogo from 'icons/palantir.inline.svg';
+import TestifyLogo from 'icons/testifysec.inline.svg';
 import TetragonIllustration from 'images/pages/usecase/tetragon-illustration.png';
 import TetragonShield from 'images/pages/usecase/tetragon-shield.png';
 import MainLayout from 'layouts/main/main';
@@ -53,7 +55,31 @@ const testimonials = [
     ],
     title: 'Integrating Tetragon  for Secured Build Pipelines',
     description:
-      'Factory for Repeatable Secure Creation of Artifacts FRSCA is utilizing tetragon integrated with Tekton to create runtime attestation to attest artifact and builder attributes. ',
+      'Factory for Repeatable Secure Creation of Artifacts (FRSCA) is utilizing tetragon integrated with Tekton to create runtime attestation to attest artifact and builder attributes. ',
+  },
+  {
+    logo: TestifyLogo,
+    CTAs: [
+      {
+        CTAtext: 'Watch Talk',
+        url: 'https://youtu.be/ejkJiq7AMHs',
+      },
+    ],
+    title: 'Pollenating Build Attestations on Kubernetes with Tetragon and EBPF',
+    description:
+      'Attestagon is a Kubernetes controller that utilizes Tetragon to generate build provenance provenance for artifacts built inside Kubernetes pods',
+  },
+  {
+    logo: PalantirLogo,
+    CTAs: [
+      {
+        CTAtext: 'Watch Talk',
+        url: 'https://youtu.be/wq1TxZw1AaY?si=b4na-h34P9qhsmMC&t=1093',
+      },
+    ],
+    title: 'Hubble + Tetragon at Palantir',
+    description:
+      'Palantir utilizes Hubble and Tetragon for runtime enforcement and security observability in their Kubernetes clusters',
   },
 ];
 
