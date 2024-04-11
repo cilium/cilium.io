@@ -479,6 +479,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/form3/',
+        linkTarget: '_blank',
+      },
     ],
   },
   theNewYorkTimes: {
