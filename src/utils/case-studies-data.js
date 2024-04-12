@@ -895,7 +895,7 @@ export default {
   },
   smartnews: {
     iconName: 'smartnews',
-    text: '<b>Smart News</b> uses Cilium in their Kubernetes clusters for high performance and scalability',
+    text: '<b>SmartNews</b> uses Cilium in their Kubernetes clusters for high performance and scalability',
     links: [
       {
         linkText: 'Read Case Study',
