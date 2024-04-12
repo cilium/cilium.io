@@ -111,6 +111,7 @@ import SicrediLogo from './images/sicredi.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
 import SinglestoreLogo from './images/singlestore.inline.svg';
 import SkybetLogo from './images/skybet.inline.svg';
+import SmartNewsLogo from './images/smartnews.inline.svg';
 import SmileLogo from './images/smile.inline.svg';
 import SnappLogo from './images/snapp.inline.svg';
 import SoloLogo from './images/solo.inline.svg';
@@ -134,6 +135,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  smartnews: SmartNewsLogo,
   roche: RocheLogo,
   sicredi: SicrediLogo,
   gcore: GcoreLogo,

@@ -893,6 +893,17 @@ export default {
       },
     ],
   },
+  smartnews: {
+    iconName: 'smartnews',
+    text: '<b>Smart News</b> uses Cilium in their Kubernetes clusters for high performance and scalability',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/smartnews/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   veepee: {
     iconName: 'veepee',
     text: '<b>Veepee</b> uses Cilium in their on-premise Kubernetes clusters hosting the majority of their applications',

@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  smartnews,
   roche,
   sicredi,
   gcore,
@@ -145,6 +146,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    smartnews,
     roche,
     schubergPhilis,
     sicredi,
