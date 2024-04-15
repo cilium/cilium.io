@@ -56,6 +56,7 @@ import FinleapLogo from './images/finleap.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
 import GcoreLogo from './images/gcore.inline.svg';
+import GdataLogo from './images/gdata.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
 import IlionxLogo from './images/ilionx.inline.svg';
@@ -135,6 +136,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  gdata: GdataLogo,
   smartnews: SmartNewsLogo,
   roche: RocheLogo,
   sicredi: SicrediLogo,

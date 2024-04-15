@@ -6,6 +6,7 @@ import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import ebayLogo from 'icons/ebay.inline.svg';
+import GDataLogo from 'icons/gdata.inline.svg';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import RabobankLogo from 'icons/rabobank.inline.svg';
@@ -126,6 +127,18 @@ const testimonials = [
     ],
     description:
       'Cilium network policies can secure communication between the Kubernetes API server and the kubelet by assigning them identities and using a CiliumNetworkPolicy to ensure that only traffic from the API server is allowed to reach the kubelet. eBPF provides an efficient means to enforce network policies for host processes. Cilium utilizes eBPF programs that attach to network interfaces to identify the source of network traffic. These programs insert the identity of the sending process into the packet header, which the receiving host can use to determine whether to allow the traffic.',
+  },
+  {
+    logo: GDataLogo,
+    title: 'Migrating to Cilium for Better Networking, Visibility and Security',
+    CTAs: [
+      {
+        CTAtext: 'Read Case Study',
+        url: 'https://www.cncf.io/case-studies/g-data-cyberdefense/',
+      },
+    ],
+    description:
+      'G DATA chose Cilium as their preferred solution for networking, observability, and security to benefit from its enhanced network policy visibility. Cilium allows their development teams to self service network policies without needing to involve the IT team.',
   },
 ];
 
