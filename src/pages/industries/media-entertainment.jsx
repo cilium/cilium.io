@@ -13,6 +13,7 @@ import MediaImage2 from 'images/pages/industries/media-entertainment/media-2.png
 import NewyorkTimeOfficeImage from 'images/pages/industries/media-entertainment/newyorkoffice.png';
 import PublicSPeakingBee from 'images/pages/industries/media-entertainment/public-speaking-bee.png';
 import SkyOfficeImage from 'images/pages/industries/media-entertainment/skyoffice.png';
+import SmartNewsOfficeImage from 'images/pages/industries/media-entertainment/smartnewsOffice.png';
 import YahooOfficeImage from 'images/pages/industries/media-entertainment/yahoooffice.png';
 import MainLayout from 'layouts/main';
 
@@ -100,6 +101,15 @@ const mediaResources = [
     description:
       'Sky required a performant and secure solution to help them implement zero-trust network security and landed on leveraging additional features in Cilium as the answer.',
   },
+  {
+    imageSrc: SmartNewsOfficeImage,
+    imageAlt: 'smartnews office building',
+    title: 'Scaling Network Performance and Cutting Costs with Cilium',
+    buttonText: 'Read Case Study',
+    buttonLink: 'https://www.cncf.io/case-studies/smartnews/',
+    description:
+      "Cilium has become the go-to solution for replacing kube-proxy in SmartNews' new Kubernetes clusters. It boosted their network performance and offered a cost-efficient solution during peak loads. Overall, Cilium has significantly improved the team's capability to offer a secure and high-performance Kubernetes platform, enhancing user experience.",
+  },
 ];
 
 const companyLogos = [
@@ -111,6 +121,7 @@ const companyLogos = [
   'radiofrance',
   'wildlife',
   'yahoo',
+  'smartnews',
 ];
 
 const mediaUsecases = [

@@ -8,6 +8,7 @@ import SEO from 'components/shared/seo';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import KubermaticLogo from 'icons/logo-kubermatic.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
+import SmartNewsLogo from 'icons/smartnews.inline.svg';
 import ElectricianBee from 'images/pages/usecase/electrician-bee.png';
 import KubeProxyImage1 from 'images/pages/usecase/kubeproxy-1.png';
 import KubeProxyImage2 from 'images/pages/usecase/kubeproxy-2.png';
@@ -66,6 +67,18 @@ const testimonials = [
     ],
     description:
       'Cilium helped our team to build a scalable Kubernetes platform which meets our demanding requirements to run mission-critical banking software in production. We were able to solve the scale issues of our previous CNI plugin and to simplify our Kubernetes setup by eliminating the need for kube-proxy.',
+  },
+  {
+    title: 'SmartNews leverages Cilium to improve performance and scaling',
+    logo: SmartNewsLogo,
+    CTAs: [
+      {
+        CTAtext: 'Read Case Study',
+        url: 'https://www.cncf.io/case-studies/smartnews/',
+      },
+    ],
+    description:
+      'Cilium has become the go-to solution for replacing kube-proxy in SmartNews new Kubernetes clusters. It boosted their network performance and offered a cost-efficient solution during peak loads.',
   },
   {
     title: 'Service Load-Balancing Without Kube-Proxy on Kubermatic',

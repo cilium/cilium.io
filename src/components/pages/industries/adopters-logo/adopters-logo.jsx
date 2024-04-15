@@ -68,6 +68,7 @@ import SealosLogo from './images/sealos.inline.svg';
 import SeznamLogo from './images/seznam.inline.svg';
 import SicrediLogo from './images/sicredi.inline.svg';
 import SkyBetLogo from './images/skybet.inline.svg';
+import SmartNewsLogo from './images/smartnews.inline.svg';
 import SovereignCloud from './images/sovereign.inline.svg';
 import SportRadarLogo from './images/sportradar.inline.svg';
 import SuperOrbitalLogo from './images/superorbital.inline.svg';
@@ -148,6 +149,7 @@ const logos = {
   schuberg: SchubergLogo,
   seznam: SeznamLogo,
   sicredi: SicrediLogo,
+  smartnews: SmartNewsLogo,
   skybet: SkyBetLogo,
   sovereigncloud: SovereignCloud,
   sportradar: SportRadarLogo,
