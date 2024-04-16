@@ -154,21 +154,22 @@ const softwareResources = [
       'WSO2 leveraged Cilium to implement zero trust security in their internal Developer Platform as a Service, Choreo ',
     buttonLink: 'https://www.cncf.io/case-studies/ws02/',
     imageSrc: wso2OfficeImage,
-    imageAlt: 'clickhouse banner',
+    imageAlt: 'wso2 banner',
   },
 ];
 
 const softwareLogos = [
   'adobe',
   'arrango',
-  'clickhouse',
+  'cosmonic',
   'ascend',
   'datadog',
   'palantir',
-  'canonical',
-  'cosmonic',
+  'wso2',
+  'clickhouse',
   'gitlab',
   'planetscale',
+  'canonical',
 ];
 
 const SoftwarePage = () => (
