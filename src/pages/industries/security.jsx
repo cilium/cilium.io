@@ -194,7 +194,7 @@ const SecurityPage = () => (
     <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection2} className="my-10 md:my-20 lg:my-32" />
     <FeaturedTalks talks={securityTalks} />
-    <AdoptersLogo items={securityLogos} className="mt-10 md:mt-20 lg:mt-32" />
+    <AdoptersLogo items={securityLogos} className="mt-10 md:mt-20 lg:mt-32 p-6" />
     <UseCaseCard
       heading="Who's Using Cilium in The Security Industry?"
       testimonials={testimonials}

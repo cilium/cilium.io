@@ -920,6 +920,10 @@ export default {
       },
     ],
   },
+  spectrocloud: {
+    iconName: 'spectrocloud',
+    text: '<b>spectrocloud</b> uses Cilium in Kubernetes clusters in its Kubernetes management platform',
+  },
   veepee: {
     iconName: 'veepee',
     text: '<b>Veepee</b> uses Cilium in their on-premise Kubernetes clusters hosting the majority of their applications',
