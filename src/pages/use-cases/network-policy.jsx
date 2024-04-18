@@ -152,7 +152,7 @@ const testimonials = [
         url: 'https://www.cncf.io/case-studies/ws02/',
       },
     ],
-    description: `"We migrated all our clusters to Cilium, enhancing our cell-based architecture with Cilium's advanced Layer 3 and Layer 4 network policies. Our setup also includes Hubble, integrated with Layer 3 policies for observability within the cell. We encrypted our network traffic with Cilium's IPsec transparent encryption, ensuring all our outbound data transfers are encrypted. Cilium's transparent encryption distinctive advantage lies in its kernel-level operation which provides it with a significant edge in performance over user-space solutions."`,
+    description: `"We migrated all our clusters to Cilium, enhancing our cell-based architecture with Cilium's advanced Layer 3 and Layer 4 network policies. Our setup also includes Hubble, integrated with Cilium Layer 3 network policies for observability within the cell."`,
     quote: true,
     person: 'Lakmal Warusawithana, Senior Director - Cloud Architecture, WSO',
   },
