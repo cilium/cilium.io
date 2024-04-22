@@ -10,14 +10,8 @@ import svgIllustration1 from 'images/weekly-introduction.svg';
 const title = 'Get Hands-On With Cilium';
 
 const HandsOn = () => {
-  const { imageIllustration1, imageIllustration2 } = useStaticQuery(graphql`
+  const { imageIllustration2 } = useStaticQuery(graphql`
     query {
-      imageIllustration1: file(relativePath: { eq: "pages/get-started/hands-on/bee.png" }) {
-        childImageSharp {
-          gatsbyImageData(width: 92, quality: 95)
-        }
-      }
-
       imageIllustration2: file(relativePath: { eq: "pages/get-started/hands-on/bee1.png" }) {
         childImageSharp {
           gatsbyImageData(width: 92, quality: 95)
@@ -27,26 +21,6 @@ const HandsOn = () => {
   `);
 
   const items = [
-    {
-      imageData: {
-        width: 384,
-        height: 224,
-        imageSrc: svgIllustration1,
-        gatsbyImage: imageIllustration1,
-        gatsbyImageWidth: 92,
-      },
-      name: 'Interactive Cilium<br/>Introduction and Live Q&A',
-      text: 'With a Cilium and eBPF expert',
-      buttons: [
-        {
-          url: 'https://calendly.com/cilium-events/cilium-introduction',
-          title: 'Book your seat',
-          isPopup: true,
-          theme: 'outline-gray-dark',
-        },
-      ],
-    },
-
     {
       svgData: {
         width: 384,
@@ -69,7 +43,6 @@ const HandsOn = () => {
         },
       ],
     },
-
     {
       imageData: {
         width: 384,
