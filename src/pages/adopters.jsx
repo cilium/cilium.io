@@ -10,6 +10,8 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  spectrocloud,
+  gdata,
   smartnews,
   roche,
   sicredi,
@@ -146,6 +148,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    gdata,
     smartnews,
     roche,
     schubergPhilis,
@@ -222,6 +225,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    spectrocloud,
     veepee,
     netways,
     sealos,

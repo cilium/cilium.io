@@ -7,8 +7,10 @@ import FeaturedTalks from 'components/pages/industries/featured-talks';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase/industry-usecase';
 import Testimonial from 'components/pages/industries/testimonial';
+import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
+import GDataLogo from 'images/pages/industries/security/gdata.inline.svg';
 import GuardianBee from 'images/pages/industries/security/guardian-bee.png';
 import SecurityImage1 from 'images/pages/industries/security/security-1.webp';
 import SecurityImage2 from 'images/pages/industries/security/security-2.png';
@@ -87,7 +89,7 @@ const bulletSection3 = {
 };
 const bulletSection2 = {
   heading:
-    'Ease Integration with Traditional Firewall Systems Using Cilium’s Static Egress Gateway',
+    "Ease Integration with Traditional Firewall Systems Using Cilium's Static Egress Gateway",
   paragraphs: [
     "With Cilium's Static Egress Gateway, cloud native workloads can be presented from stable IP addresses, easing integration with traditional firewall systems. This approach ensures that firewall requirements remain consistent even as workloads scale, fostering a bridge between cloud native and conventional environments. ",
   ],
@@ -140,6 +142,23 @@ const securityLogos = [
   'f5',
 ];
 
+const testimonials = [
+  {
+    logo: GDataLogo,
+    title: 'Migrating to Cilium for Better Networking, Visibility and Security',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/g-data-cyberdefense/',
+      },
+    ],
+    description:
+      'In the beginning, it was hard for our developers to write network policies because we were in our early Kubernetes adoption phase. Everyone had to learn a lot of stuff in Kubernetes and then also had to learn how to write network policies. Cilium helped reduce the mental overhead and helped speed up our development process so that we can bring new features to customers faster.',
+    quote: true,
+    person: 'Jan Jansen, Platform Engineer, G DATA',
+  },
+];
+
 const securityUsecases = [
   {
     icon: 'encryption',
@@ -175,8 +194,12 @@ const SecurityPage = () => (
     <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection2} className="my-10 md:my-20 lg:my-32" />
     <FeaturedTalks talks={securityTalks} />
-    <AdoptersLogo items={securityLogos} className="mt-10 md:mt-20 lg:mt-32" />
-    <IndustryUseCases heading="Cilium’s Security Focused Use Cases" usecases={securityUsecases} />
+    <AdoptersLogo items={securityLogos} className="p-6 my-10 md:my-20 lg:my-32" />
+    <UseCaseCard
+      heading="Who's Using Cilium in The Security Industry?"
+      testimonials={testimonials}
+    />
+    <IndustryUseCases heading="Cilium's Security Focused Use Cases" usecases={securityUsecases} />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );

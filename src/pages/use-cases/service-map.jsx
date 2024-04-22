@@ -7,6 +7,7 @@ import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import CapitalOneLogo from 'icons/logo-capitalone.inline.svg';
+import Wso2Logo from 'icons/wso2.inline.svg';
 import KubernetesBee from 'images/pages/usecase/k8s-bee.png';
 import ServiceMapImage1 from 'images/pages/usecase/servicemap-1.png';
 import MainLayout from 'layouts/main/main';
@@ -70,6 +71,19 @@ const testimonials = [
       'Trying to understand what’s going on with traditional tooling means, you probably throw three engineers at the problem for five hours while with Hubble you know what’s happening in about three seconds. It was one of those very easy trade offs to explain to my CEO. We’re going to encounter the cost of debugging, let’s make it a lot less expensive.',
     quote: true,
     person: 'Joe Stevens - Member of the Technical Staff, Ascend',
+  },
+  {
+    title: 'Providing Observability to Customers With Hubble',
+    logo: Wso2Logo,
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/wso2/',
+      },
+    ],
+    description: `"We use Hubble in two scenarios. One is to provide an observability view to our customers, which we call our cell-based observability view. They can come to our Choreo dashboard and view their observable data like error count, request count, latency and the different HTTP status codes. All this data is captured from Hubble relay, which we collect and store in Azure ADX and then visualize. Second, if a customer has some performance issues, we directly use the Hubble CLI to look at the Layer 3 packets to see where things are failing and what optimization we can do. Ultimately, we use Hubble CLI and its observability data to optimize our network traffic, find out issues, and resolve them."`,
+    quote: true,
+    person: 'Lakmal Warusawithana, Senior Director - Cloud Architecture, WSO2',
   },
 ];
 

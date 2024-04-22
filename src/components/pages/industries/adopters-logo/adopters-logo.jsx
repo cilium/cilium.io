@@ -83,6 +83,7 @@ import TsystemsLogo from './images/tsystems.inline.svg';
 import USwitchLogo from './images/uswitch.inline.svg';
 import vkCloudLogo from './images/vkcloud.inline.svg';
 import WildLifeLogo from './images/wildlife.inline.svg';
+import Wso2Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const logos = {
@@ -164,6 +165,7 @@ const logos = {
   uswitch: USwitchLogo,
   vkcloud: vkCloudLogo,
   wildlife: WildLifeLogo,
+  wso2: Wso2Logo,
   yahoo: YahooLogo,
   tsystems: TsystemsLogo,
 };

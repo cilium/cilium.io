@@ -743,6 +743,11 @@ export default {
         linkUrl: 'https://wso2.com/library/blogs/how-we-implemented-zero-trust-in-choreo/',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/ws02/',
+        linkTarget: '_blank',
+      },
     ],
   },
   ilionx: {
@@ -903,6 +908,21 @@ export default {
         linkTarget: '_blank',
       },
     ],
+  },
+  gdata: {
+    iconName: 'gdata',
+    text: '<b>G Data</b> uses Cilium in their Kubernetes clusters for networking, security and observability',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/g-data-cyberdefense/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  spectrocloud: {
+    iconName: 'spectrocloud',
+    text: '<b>spectrocloud</b> uses Cilium in Kubernetes clusters in its Kubernetes management platform',
   },
   veepee: {
     iconName: 'veepee',

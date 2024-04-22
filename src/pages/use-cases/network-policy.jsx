@@ -6,9 +6,11 @@ import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import ebayLogo from 'icons/ebay.inline.svg';
+import GDataLogo from 'icons/gdata.inline.svg';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import RabobankLogo from 'icons/rabobank.inline.svg';
+import WSO2Logo from 'icons/wso2.inline.svg';
 import NetworkPolicyImage1 from 'images/pages/usecase/network-1.png';
 import NetworkPolicyImage2 from 'images/pages/usecase/network-2.png';
 import NetworkPolicyImage3 from 'images/pages/usecase/network-3.png';
@@ -126,6 +128,33 @@ const testimonials = [
     ],
     description:
       'Cilium network policies can secure communication between the Kubernetes API server and the kubelet by assigning them identities and using a CiliumNetworkPolicy to ensure that only traffic from the API server is allowed to reach the kubelet. eBPF provides an efficient means to enforce network policies for host processes. Cilium utilizes eBPF programs that attach to network interfaces to identify the source of network traffic. These programs insert the identity of the sending process into the packet header, which the receiving host can use to determine whether to allow the traffic.',
+  },
+  {
+    logo: GDataLogo,
+    title: 'Migrating to Cilium for Better Networking, Visibility and Security',
+    CTAs: [
+      {
+        CTAtext: 'Read Case Study',
+        url: 'https://www.cncf.io/case-studies/g-data-cyberdefense/',
+      },
+    ],
+    description:
+      '"In the beginning, it was hard for our developers to write network policies because we were in our early Kubernetes adoption phase. Everyone had to learn a lot of stuff in Kubernetes and then also had to learn how to write network policies. Cilium helped reduce the mental overhead and helped speed up our development process so that we can bring new features to customers faster."',
+    quote: true,
+    person: 'Jan Jansen, Platform Engineer, G DATA',
+  },
+  {
+    logo: WSO2Logo,
+    title: 'Implementing Zero Trust Security with Cilium',
+    CTAs: [
+      {
+        CTAtext: 'Read Case Study',
+        url: 'https://www.cncf.io/case-studies/ws02/',
+      },
+    ],
+    description: `"We migrated all our clusters to Cilium, enhancing our cell-based architecture with Cilium's advanced Layer 3 and Layer 4 network policies. Our setup also includes Hubble, integrated with Cilium Layer 3 network policies for observability within the cell."`,
+    quote: true,
+    person: 'Lakmal Warusawithana, Senior Director - Cloud Architecture, WSO',
   },
 ];
 

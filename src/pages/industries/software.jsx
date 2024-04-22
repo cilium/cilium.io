@@ -15,6 +15,7 @@ import ClickhouseOfficeImage from 'images/pages/industries/software/clickhouseof
 import SoftwareImage1 from 'images/pages/industries/software/software-1.png';
 import SoftwareImage2 from 'images/pages/industries/software/software-2.webp';
 import SoftwareImage3 from 'images/pages/industries/software/software-3.webp';
+import wso2OfficeImage from 'images/pages/industries/software/wso2OfficeImage.jpeg';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
@@ -142,24 +143,33 @@ const softwareResources = [
   {
     title: 'How ClickHouse is Using Cilium to Implement Efficient Network Policies',
     description:
-      'Clickhouse leveragd Cilium in bulding its serverless SaaS offering, Clickhouse Cloud',
+      'Clickhouse leveraged Cilium in building its serverless SaaS offering, Clickhouse Cloud',
     buttonLink: 'https://www.cncf.io/case-studies/clickhouse/',
     imageSrc: ClickhouseOfficeImage,
     imageAlt: 'clickhouse banner',
+  },
+  {
+    title: 'Implementing Zero Trust Security with Cilium',
+    description:
+      'WSO2 leveraged Cilium to implement zero trust security in their internal Developer Platform as a Service, Choreo ',
+    buttonLink: 'https://www.cncf.io/case-studies/ws02/',
+    imageSrc: wso2OfficeImage,
+    imageAlt: 'wso2 banner',
   },
 ];
 
 const softwareLogos = [
   'adobe',
-  'clickhouse',
-  'palantir',
+  'arrango',
+  'cosmonic',
   'ascend',
   'datadog',
-  'planetscale',
-  'arrango',
+  'palantir',
+  'wso2',
+  'clickhouse',
   'gitlab',
+  'planetscale',
   'canonical',
-  'cosmonic',
 ];
 
 const SoftwarePage = () => (
