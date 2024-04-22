@@ -6,7 +6,7 @@
   "author": "Cilium",
   "scripts": {
     "start": "npm run develop",
-    "develop": "NODE_OPTIONS=--max_old_space_size=8192 gatsby develop",
+    "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
