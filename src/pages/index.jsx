@@ -52,7 +52,6 @@ const talks = [
       ' Why eBPF matters and why it exists. What it can do. What it can’t do. Who uses it for what. And finally, what the future holds.',
     videoSrc: 'https://www.youtube.com/embed/KhPrMW5Rbbc?si=QnUMF1UcU4HjMeve',
   },
-
   {
     title: 'Introduction to Cilium with Liz Rice & Thomas Graf',
     description:
@@ -63,12 +62,12 @@ const talks = [
 const IndexPage = () => (
   <MainLayout theme="gray">
     <Hero />
-    <UserCommunity className="pb-10 pt-8 md:pb-20 lg:pb-32" theme="gray" {...userCommunity1} />
+    <UserCommunity className="pt-8 pb-10 md:pb-20 lg:pb-32" theme="gray" {...userCommunity1} />
     <Highlights />
     <CNCFBanner />
     <HandsOn />
     <UserCommunity
-      className="mt-10 py-10 md:mt-20 md:py-20 lg:mt-28 lg:py-32"
+      className="py-10 mt-10 md:mt-20 md:py-20 lg:mt-28 lg:py-32"
       theme="gray"
       {...userCommunity2}
     />
