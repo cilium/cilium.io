@@ -5,13 +5,19 @@ import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
-import { ciliumLogos, hubbleLogos } from './data/logos';
+import { ciliumLogos, hubbleLogos, tetragonLogos } from './data/logos';
 import LogosRow from './logos-row';
+
+const logos = {
+  cilium: ciliumLogos,
+  hubble: hubbleLogos,
+  tetragon: tetragonLogos,
+};
 
 const Logos = ({ title, description, downloadLink, brand = 'cilium', titleSize = 'md' }) => (
   <section className="mt-16 md:mt-24 lg:mt-32">
     <Container>
-      <header className="flex flex-col items-start justify-between gap-y-5 border-b border-gray-3 pb-10 lg:flex-row">
+      <header className="flex flex-col items-start justify-between pb-10 border-b gap-y-5 border-gray-3 lg:flex-row">
         <div className="flex flex-col gap-y-3">
           <Heading tag="h2" size={titleSize}>
             {title}
@@ -31,17 +37,8 @@ const Logos = ({ title, description, downloadLink, brand = 'cilium', titleSize =
           Download Logo ZIP
         </Button>
       </header>
-      <LogosRow
-        className="mt-10"
-        title="Light background"
-        logos={brand === 'cilium' ? ciliumLogos.light : hubbleLogos.light}
-      />
-      <LogosRow
-        className="mt-12"
-        title="Dark background"
-        logos={brand === 'cilium' ? ciliumLogos.dark : hubbleLogos.dark}
-        isDark
-      />
+      <LogosRow className="mt-10" title="Light background" logos={logos[brand].light} />
+      <LogosRow className="mt-12" title="Dark background" logos={logos[brand].dark} isDark />
     </Container>
   </section>
 );
@@ -51,7 +48,7 @@ Logos.propTypes = {
   description: PropTypes.string.isRequired,
   downloadLink: PropTypes.string.isRequired,
   titleSize: PropTypes.oneOf(['md', 'lg']),
-  brand: PropTypes.oneOf(['cilium', 'hubble']).isRequired,
+  brand: PropTypes.oneOf(['cilium', 'hubble', 'tetragon']).isRequired,
 };
 
 export default Logos;

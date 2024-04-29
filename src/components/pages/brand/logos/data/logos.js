@@ -14,6 +14,14 @@ import hubbleLight1 from '../images/hubble-light-1.svg';
 import hubbleLight2 from '../images/hubble-light-2.svg';
 import hubbleLight3 from '../images/hubble-light-3.svg';
 import hubbleLight4 from '../images/hubble-light-4.svg';
+import tetragonDark1 from '../images/tetragon-dark-1.svg';
+import tetragonDark2 from '../images/tetragon-dark-2.svg';
+import tetragonDark3 from '../images/tetragon-dark-3.svg';
+import tetragonDark4 from '../images/tetragon-dark-4.svg';
+import tetragonLight1 from '../images/tetragon-light-1.svg';
+import tetragonLight2 from '../images/tetragon-light-2.svg';
+import tetragonLight3 from '../images/tetragon-light-3.svg';
+import tetragonLight4 from '../images/tetragon-light-4.svg';
 
 const ciliumLogos = {
   dark: [
@@ -109,4 +117,51 @@ const hubbleLogos = {
   ],
 };
 
-export { ciliumLogos, hubbleLogos };
+const tetragonLogos = {
+  dark: [
+    {
+      src: tetragonDark1,
+      width: 116,
+      height: 112,
+    },
+    {
+      src: tetragonDark2,
+      width: 116,
+      height: 132,
+    },
+    {
+      src: tetragonDark3,
+      width: 192,
+      height: 64,
+    },
+    {
+      src: tetragonDark4,
+      width: 192,
+      height: 64,
+    },
+  ],
+  light: [
+    {
+      src: tetragonLight1,
+      width: 116,
+      height: 112,
+    },
+    {
+      src: tetragonLight2,
+      width: 116,
+      height: 112,
+    },
+    {
+      src: tetragonLight3,
+      width: 192,
+      height: 64,
+    },
+    {
+      src: tetragonLight4,
+      width: 192,
+      height: 64,
+    },
+  ],
+};
+
+export { ciliumLogos, hubbleLogos, tetragonLogos };

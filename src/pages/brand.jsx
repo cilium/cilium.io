@@ -55,6 +55,20 @@ const hubbleColors = {
   ],
 };
 
+const tetragonColors = {
+  logos: [
+    { color: '#333333', hex: '333333', rgb: '51,51,51', cmyk: '69,63,62,58' },
+    { color: '#F3C018', hex: 'F3C018', rgb: '243,192,24', cmyk: '0,21,90,5' },
+    { color: '#EB7525', hex: 'EB7525', rgb: '235,117,37', cmyk: '0,50,84,8' },
+    { color: '#E3262B', hex: 'E3262B', rgb: '227,38,43', cmyk: '0,83,81,11' },
+    { color: '#C6D872', hex: 'C6D872', rgb: '198,216,114', cmyk: '8,0,47,15' },
+    { color: '#92C53F', hex: '92C53F', rgb: '146,197,63', cmyk: '26,0,68,23' },
+    { color: '#6284C1', hex: '6284C1', rgb: '98,132,193', cmyk: '49,32,0,24' },
+    { color: '#8061A5', hex: '8061A5', rgb: '128,97,165', cmyk: '22,41,0,35' },
+    { color: '#FFFFFF', hex: 'FFFFFF', rgb: '255,255,255', cmyk: '0,0,0,0' },
+  ],
+};
+
 const Brand = () => (
   <MainLayout pageMetadata={seo} theme="gray" footerWithTopBorder>
     <Hero />
@@ -81,6 +95,18 @@ const Brand = () => (
       title="Hubble Colors"
       description="Here are all of the colors of the Hubble logo. <br />Please note that the colors for the logo are highlighted separately."
       colors={hubbleColors}
+    />
+    <Logos
+      title="Tetragon"
+      description="Tetragon is a sub-project of Cilium. <br />Within this section, you'll discover all the essential brand materials."
+      downloadLink="/data/tetragon-logos.zip"
+      titleSize="lg"
+      brand="tetragon"
+    />
+    <Colors
+      title="Tetragon Colors"
+      description="Here are all of the colors of the Tetragon logo. <br />Please note that the colors for the logo are highlighted separately."
+      colors={tetragonColors}
     />
     <LegalBox />
     <Community theme="gray" isTitleCentered />
