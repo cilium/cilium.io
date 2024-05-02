@@ -121,6 +121,7 @@ import SpherityLogo from './images/spherity.inline.svg';
 import SportradarLogo from './images/sportradar.inline.svg';
 import SproutfiLogo from './images/sproutfi.inline.svg';
 import SuperorbitalLogo from './images/superorbital.inline.svg';
+import SyselfLogo from './images/syself.inline.svg';
 import TSILogo from './images/t-systems.inline.svg';
 import TailorBrandsLogo from './images/tailor-brands.inline.svg';
 import TestifysecLogo from './images/testifysec.inline.svg';
@@ -137,6 +138,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  syself: SyselfLogo,
   spectrocloud: SpectroCloudLogo,
   gdata: GdataLogo,
   smartnews: SmartNewsLogo,

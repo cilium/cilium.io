@@ -881,8 +881,13 @@ export default {
     text: '<b>Schuberg Philis</b> uses Cilium as the CNI for PCI-DSS compliant kubernetes clusters they run for their customers',
     links: [
       {
-        linkText: 'Watch the Talk',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=OiO7ySxWiQs',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 2',
+        linkUrl: 'https://www.youtube.com/watch?v=uX08fxp0iPE',
         linkTarget: '_blank',
       },
     ],
@@ -919,6 +924,10 @@ export default {
         linkTarget: '_blank',
       },
     ],
+  },
+  syself: {
+    iconName: 'syself',
+    text: '<b>Syself</b> uses Cilium as a CNI in its managed Kubernetes platform',
   },
   spectrocloud: {
     iconName: 'spectrocloud',
