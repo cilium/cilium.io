@@ -703,7 +703,7 @@ export default {
   },
   parseable: {
     iconName: 'parseable',
-    text: '<b>Parseable</b> uses Tertragon for collecting and ingesting eBPF logs for Kubernetes clusters',
+    text: '<b>Parseable</b> uses Tetragon for collecting and ingesting eBPF logs for Kubernetes clusters',
     links: [
       {
         linkText: 'Read Blog',
