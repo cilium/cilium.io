@@ -59,10 +59,15 @@ const Footer = ({ withTopBorder }) => (
       <div className="with-link-primary-light mt-8 space-y-3 border-t border-gray-3 pt-8 text-sm text-gray-1 md:mt-10 lg:mt-12">
         <p>© {new Date().getFullYear()} The Cilium Authors.</p>
         <p>
-          The content of the <span className="text-black">cilium.io</span> website is licensed under
-          a{' '}
-          <span className="text-black">
-            Creative Commons Attribution 4.0 International License.
+          The content of the{' '}
+          <span>
+            <a href="https://cilium.io">cilium.io</a>
+          </span>{' '}
+          website is licensed under a{' '}
+          <span>
+            <a href="https://creativecommons.org/licenses/by/4.0/">
+              Creative Commons Attribution 4.0 International License.
+            </a>
           </span>
         </p>
         <p>
