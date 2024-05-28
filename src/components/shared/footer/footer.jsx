@@ -57,7 +57,14 @@ const Footer = ({ withTopBorder }) => (
         </div>
       </div>
       <div className="with-link-primary-light mt-8 space-y-3 border-t border-gray-3 pt-8 text-sm text-gray-1 md:mt-10 lg:mt-12">
-        <p>Copyright The Cilium Authors. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} The Cilium Authors.</p>
+        <p>
+          The content of the <span className="text-black">cilium.io</span> website is licensed under
+          a{' '}
+          <span className="text-black">
+            Creative Commons Attribution 4.0 International License.
+          </span>
+        </p>
         <p>
           The Linux Foundation has registered trademarks and uses trademarks. For a list of
           trademarks of The Linux Foundation, please see our{' '}
