@@ -925,6 +925,10 @@ export default {
       },
     ],
   },
+  aenix: {
+    iconName: 'aenix',
+    text: '<b>Ænix</b> uses cilium as a CNI in their PaaS platform',
+  },
   syself: {
     iconName: 'syself',
     text: '<b>Syself</b> uses Cilium as a CNI in its managed Kubernetes platform',
