@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  aenix,
   syself,
   spectrocloud,
   gdata,
@@ -226,6 +227,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    aenix,
     syself,
     spectrocloud,
     veepee,

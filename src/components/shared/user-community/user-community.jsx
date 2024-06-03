@@ -32,6 +32,7 @@ import Button from '../button';
 
 import AccuKnoxLogo from './images/accuknox.inline.svg';
 import AcossLogo from './images/acoss.inline.svg';
+import AenixLogo from './images/aenix.inline.svg';
 import ArangoDbLogo from './images/arangodb.inline.svg';
 import AyedoLogo from './images/ayedo.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
@@ -138,6 +139,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  aenix: AenixLogo,
   syself: SyselfLogo,
   spectrocloud: SpectroCloudLogo,
   gdata: GdataLogo,
