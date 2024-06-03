@@ -49,7 +49,27 @@ Not regularly updating or fleshing out your current practices can make the proce
 
 ---
 
-I want to thank my mentor Bill Mulligan and the Cilium project for having me on as a mentee, as well as the LFX Mentorship program as a whole for providing this great opportunity to become immersed in open source. I am happy to have contributed by adding clarification and editorial changes to Cilium’s governance and contributor ladder docs, proposing repository lifecycle docs with a sub-project voting system, documenting admins for the various tools that Cilium uses, as well as contributing to the Cilium Feature Proposal (CFP) approval process. These changes will hopefully allow the project to run more efficiently through enhanced knowledge sharing and systems.
+I want to thank my mentor Bill Mulligan and the Cilium project for having me on as a mentee, as well as the LFX Mentorship program as a whole for providing this great opportunity to become immersed in open source. The PRs I was able to work on and merge will hopefully allow the project to run more efficiently through enhanced knowledge sharing and systems. 
+
+I am happy to share that I have contributed in the following ways:
+
+  - Moved governance docs into the community repo
+    - cilium/cilium - [#31692](https://github.com/cilium/cilium/pull/31692)
+    - cilium/community - [#93](https://github.com/cilium/community/pull/93)
+    - cilium/.github - [#9](https://github.com/cilium/.github/pull/9)
+
+  - Documented admins for the various tools that Cilium uses
+    - cilium/community - [#97](https://github.com/cilium/community/pull/97)
+
+  - Added clarification and editorial changes to Cilium’s governance and contributor ladder docs 
+    - cilium/community - [#100](https://github.com/cilium/community/pull/100), [#114](https://github.com/cilium/community/pull/114), [#122](https://github.com/cilium/community/pull/122)
+  
+  - Added repository lifecycle docs, including a list of all repositories within the Cilium organization and their scope, issue form templates, and a sub-project voting system  
+    - cilium/community - [#105](https://github.com/cilium/community/pull/105)
+
+  - Proposed changes to streamline the Cilium Feature Proposal (CFP) approval process 
+    - cilium/design-cfps - [#37](https://github.com/cilium/design-cfps/pull/37)
+    - cilium/cilium - [#32477](https://github.com/cilium/cilium/pull/32477)
 
 I have enjoyed my experience and have learned a lot, and would encourage anyone thinking about participating to apply. There are a wide range of skillsets needed in open source projects, so don’t count yourself out on the basis of not having what you have deemed are the *right* knowledge base or *right* experience. If you are interested in it and ready to learn, you can likely carve out a space for yourself. Good luck, and I hope to see you participating in a future term!
 
