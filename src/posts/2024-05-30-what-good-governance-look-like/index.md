@@ -6,6 +6,7 @@ categories:
   - Community
 tags:
   - cilium
+ogImage: ogimage.webp
 ogSummary: "When I was early in my programming journey and learned what open source was, I immediately knew I wanted to eventually get involved in some capacity. There are many aspects I love about it: the sense of community, the collaboration of talented people pushing forward new technological innovations, the creation of software that is free and available for anyone to use. I knew there was a potential for me to learn and grow through my own involvement as well as contribute to an ecosystem I valued." 
 ---
 
