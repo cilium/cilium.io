@@ -201,8 +201,13 @@ export default {
     text: 'PostFinance uses Cilium as their CNI for all mission critical, on premise k8s clusters',
     links: [
       {
-        linkText: 'Read Case Study',
+        linkText: 'Case Study 1',
         linkUrl: 'https://isovalent.com/data/isovalent-case-study-postfinance.pdf',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Case Study 2',
+        linkUrl: 'https://www.cncf.io/case-studies/postfinance/',
         linkTarget: '_blank',
       },
       {
@@ -870,7 +875,12 @@ export default {
     text: '<b>Sicredi</b> uses Cilium as their CNI and for network security across their Kubernetes clusters',
     links: [
       {
-        linkText: 'Watch the Talk',
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/sicredi/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk',
         linkUrl: 'https://youtu.be/MSqI-gBiCrc?si=I8QMmlSB7cnYe0BQ',
         linkTarget: '_blank',
       },
@@ -924,6 +934,10 @@ export default {
         linkTarget: '_blank',
       },
     ],
+  },
+  linkpool: {
+    iconName: 'linkpool',
+    text: '<b>LinkPool</b> uses Cilium as the CNI for its on-premise production clusters',
   },
   aenix: {
     iconName: 'aenix',
