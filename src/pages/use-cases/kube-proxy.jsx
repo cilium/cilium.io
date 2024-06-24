@@ -58,11 +58,15 @@ const sectionContent3 = {
 const testimonials = [
   {
     logo: PostFinanceLogo,
-    title: 'Post Finance picks Isovalent Cilium for Cloud Native Networking',
+    title: 'Post Finance picks Cilium for Cloud Native Networking',
     CTAs: [
       {
-        CTAtext: 'Read Case Study',
+        CTAtext: 'Case Study 1',
         url: 'https://isovalent.com/data/isovalent-case-study-postfinance.pdf',
+      },
+      {
+        CTAtext: 'Case Study 2',
+        url: 'https://www.cncf.io/case-studies/postfinance/',
       },
     ],
     description:

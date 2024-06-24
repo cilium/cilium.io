@@ -12,6 +12,7 @@ import AstronautBee from 'images/pages/industries/cloud-providers/astronaut-bee.
 import AWSOfficeImage from 'images/pages/industries/cloud-providers/awsoffice.png';
 import CloudImage1 from 'images/pages/industries/cloud-providers/cloud-1.png';
 import CloudImage2 from 'images/pages/industries/cloud-providers/cloud-2.png';
+import DigitalOceanOffice from 'images/pages/industries/cloud-providers/DigitalOceanOffice.png';
 import GoogleOfficeImage from 'images/pages/industries/cloud-providers/googleoffice.png';
 import MicrosoftOffice from 'images/pages/industries/cloud-providers/microsoftoffice.png';
 import MainLayout from 'layouts/main/main';
@@ -131,7 +132,8 @@ const cloudResouces = [
     title: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
     description:
       'AWS picked Cilium as the built-in default for networking and security. As you create your first EKS Anywhere (EKS-A) cluster, you will automatically have Cilium installed.',
-    buttonLink: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
+    buttonLink:
+      'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
     imageSrc: AWSOfficeImage,
     imageAlt: 'aws office building',
   },
@@ -150,6 +152,14 @@ const cloudResouces = [
     buttonLink: 'https://www.youtube.com/watch?v=8it8Hm2F_GM',
     imageSrc: MicrosoftOffice,
     imageAlt: 'microsoft office buidling',
+  },
+  {
+    title: 'DigitalOcean Picks Cilium as the Preferred Networking Solution for DOKS',
+    description:
+      'DigitalOcean chose Cilium as the preferred networking, security, and observability solution for their DOKS platform due to its prominent role in the cloud native ecosystem, its capabilities in IP Address Management (IPAM), and its powerful network policies.',
+    buttonLink: 'https://www.cncf.io/case-studies/digitalocean/',
+    imageSrc: DigitalOceanOffice,
+    imageAlt: 'DigitalOcean office buidling',
   },
 ];
 

@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  nemlig,
   linkpool,
   aenix,
   syself,
@@ -151,6 +152,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    nemlig,
     gdata,
     smartnews,
     roche,

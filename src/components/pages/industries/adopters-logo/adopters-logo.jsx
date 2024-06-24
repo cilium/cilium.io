@@ -46,6 +46,7 @@ import LiquidReplyLogo from './images/liquid.inline.svg';
 import SandPLogo from './images/logo-s&p.inline.svg';
 import MasmovilLogo from './images/masmovil.inline.svg';
 import MobilabLogo from './images/mobilab.inline.svg';
+import NemligLogo from './images/nemlig.inline.svg';
 import NetwaysLogo from './images/netways.inline.svg';
 import NewYorkTimesLogo from './images/newyork.inline.svg';
 import NineNavigatorsLogo from './images/nine.inline.svg';
@@ -131,6 +132,7 @@ const logos = {
   mobilab: MobilabLogo,
   newyorktimes: NewYorkTimesLogo,
   nine: NineNavigatorsLogo,
+  nemlig: NemligLogo,
   netways: NetwaysLogo,
   openshift: OpenshiftLogo,
   openstack: OpenStackLogo,

@@ -272,6 +272,11 @@ export default {
     text: 'Managed Kubernetes: 1.5 Years of Cilium Usage at DigitalOcean',
     links: [
       {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/digitalocean/',
+        linkTarget: '_blank',
+      },
+      {
         linkText: 'Watch Talk',
         linkUrl: 'https://youtu.be/jw8tEPP6jwQ?t=7885',
         linkTarget: '_blank',
@@ -931,6 +936,17 @@ export default {
       {
         linkText: 'Read Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/g-data-cyberdefense/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  nemlig: {
+    iconName: 'nemlig',
+    text: '<b>Nemlig</b> uses Cilium in their Kubernetes clusters for networking, security and observability',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/nemlig/',
         linkTarget: '_blank',
       },
     ],

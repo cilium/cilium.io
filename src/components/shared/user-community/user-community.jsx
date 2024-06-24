@@ -81,6 +81,7 @@ import MeltwaterLogo from './images/meltwater.inline.svg';
 import MobilabLogo from './images/mobilab.inline.svg';
 import MuxLogo from './images/mux.inline.svg';
 import MyFitnessPalLogo from './images/myfitnesspal.inline.svg';
+import NemligLogo from './images/nemlig.inline.svg';
 import NetbirdLogo from './images/netbird.inline.svg';
 import NetwaysLogo from './images/netways.inline.svg';
 import NexxiotLogo from './images/nexxiot.inline.svg';
@@ -140,6 +141,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  nemlig: NemligLogo,
   linkpool: LinkPoolLogo,
   aenix: AenixLogo,
   syself: SyselfLogo,
