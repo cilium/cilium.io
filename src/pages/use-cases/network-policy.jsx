@@ -5,6 +5,7 @@ import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
+import DigitalOceanLogo from 'icons/digitalocean.inline.svg';
 import ebayLogo from 'icons/ebay.inline.svg';
 import GDataLogo from 'icons/gdata.inline.svg';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
@@ -81,6 +82,18 @@ const sectionContent5 = {
 };
 
 const testimonials = [
+  {
+    logo: DigitalOceanLogo,
+    title: 'Scaling for the future with Cilium',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/digitalocean/',
+      },
+    ],
+    description:
+      'Switching the dataplane of DOKS and their internal Kubernetes clusters from Flannel to Cilium, powered by eBPF, enabled DigitalOcean to onboard more sophisticated customers, scale to meet their demands, and secure their multi-tenant environment. The performance, security, and observability provided by Cilium allowed them to meet the critical requirements necessary for these customers to use their platform.',
+  },
   {
     logo: UtmostLogo,
     title: 'Observability for a highly available multi cluster environment with Hubble',
