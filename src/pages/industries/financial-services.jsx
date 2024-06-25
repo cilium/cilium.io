@@ -157,8 +157,8 @@ const financialResources = [
     imageSrc: PostFinanceOfficeImage,
     imageAlt: 'post finance office',
     title: ' Post Finance picks Cilium for Cloud Native Networking',
-    buttonLink: 'https://www.youtube.com/watch?v=fjhKw49YcY4',
-    buttonText: 'Watch The Case Study',
+    buttonLink: 'https://www.cncf.io/case-studies/postfinance/',
+    buttonText: 'Read The Case Study',
     description:
       'Cilium helped the Post Finance team build a scalable Kubernetes platform which meets the demanding requirements to run mission-critical banking software in production.',
   },

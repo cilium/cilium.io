@@ -16,6 +16,7 @@ import DbIcon from 'images/pages/industries/e-commerce/db.inline.svg';
 import EcommerceImage1 from 'images/pages/industries/e-commerce/ecommerce-1.png';
 import IkeaOfficeImage from 'images/pages/industries/e-commerce/ikeaoffice.png';
 import LockIcon from 'images/pages/industries/e-commerce/lock.inline.svg';
+import NemligOfficeImage from 'images/pages/industries/e-commerce/nemlig.png';
 import TravelBee from 'images/pages/industries/e-commerce/travel-bee.png';
 import TrendyolOfficeImage from 'images/pages/industries/e-commerce/trendyoloffice.png';
 import TripOfficeImage from 'images/pages/industries/e-commerce/tripoffice.png';
@@ -96,7 +97,7 @@ const commerceResources = [
     imageSrc: TrendyolOfficeImage,
     imageAlt: 'holding a trenydol shipping box',
     title: 'Unleashing the Power of Cilium CNI to Propel Trendyol’s Performance Up to 40%!',
-    buttonText: 'Read the case study',
+    buttonText: 'Read The Case Study',
     buttonLink: 'https://www.cncf.io/case-studies/trendyol/',
     description:
       'Recognizing the need to enhance their clusters and unlock new capabilities, Trendyol switched from flannel and implemented Cilium as the default CNI for the Kubernetes cluster resulting in an up to 40% increase in performance.',
@@ -106,7 +107,7 @@ const commerceResources = [
     imageSrc: IkeaOfficeImage,
     imageAlt: 'newyork times  office building',
     title: 'IKEA Private Cloud: Connecting 390+ Stores and 4.3 Billion Website Visitors',
-    buttonText: 'Watch the Talk',
+    buttonText: 'Watch The Talk',
     buttonLink: 'https://www.youtube.com/watch?v=mRbsXkdWUNU',
     description:
       'Cilium has become a key piece connecting the vast cloud native estate of IKEA Retail (Ingka Group) encompassing both public and private cloud Kubernetes clusters.',
@@ -116,10 +117,19 @@ const commerceResources = [
     imageSrc: TripOfficeImage,
     imageAlt: 'trip.com office building',
     title: 'How Trip.com Group switched to Cilium For Scalable and Cloud Native Networking',
-    buttonText: 'Read The Blog Post',
+    buttonText: 'Read The Case Study',
     buttonLink: 'https://www.cncf.io/case-studies/trip-com-group/',
     description:
       'Trip.com looked at several options to pick its next-generation networking platform. Cilium provided them with an extremely scalable and stable networking solution.',
+  },
+  {
+    imageSrc: NemligOfficeImage,
+    imageAlt: 'nemlig building',
+    title: 'Building a Kubernetes Platform with Cilium',
+    buttonText: 'Read The Case Study',
+    buttonLink: 'https://www.cncf.io/case-studies/nemlig/',
+    description:
+      'Implementing Cilium in their Kubernetes platform enabled Nemlig to enhance agility, replace kube-proxy and iptables in their clusters, and reduce the operational burden of managing their network.',
   },
 ];
 
@@ -127,6 +137,7 @@ const ecommerceLogos = [
   'trip',
   'trendyol',
   'backmarket',
+  'nemlig',
   'uswitch',
   'elasticpath',
   'dbschenker',
