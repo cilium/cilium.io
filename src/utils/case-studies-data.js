@@ -269,7 +269,7 @@ export default {
   },
   digitalOcean: {
     iconName: 'digitalOcean',
-    text: 'Managed Kubernetes: 1.5 Years of Cilium Usage at DigitalOcean',
+    text: 'DigitalOcean uses Cilium as the preferred networking, security, and observability solution for their DOKS platform and internal Kubernetes clusters',
     links: [
       {
         linkText: 'Case Study',
@@ -942,7 +942,7 @@ export default {
   },
   nemlig: {
     iconName: 'nemlig',
-    text: '<b>Nemlig</b> uses Cilium in their Kubernetes clusters for networking, security and observability',
+    text: '<b>Nemlig</b> uses Cilium in their Kubernetes clusters for networking, security, and observability',
     links: [
       {
         linkText: 'Read Case Study',

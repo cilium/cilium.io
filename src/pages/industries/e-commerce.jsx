@@ -129,7 +129,7 @@ const commerceResources = [
     buttonText: 'Read The Case Study',
     buttonLink: 'https://www.cncf.io/case-studies/nemlig/',
     description:
-      'Implementing Cilium in their Kubernetes platform has enabled Nemlig to enhance agility, replace kube-proxy and iptables in their clusters, and reduce the operational burden of managing their network.',
+      'Implementing Cilium in their Kubernetes platform enabled Nemlig to enhance agility, replace kube-proxy and iptables in their clusters, and reduce the operational burden of managing their network.',
   },
 ];
 
