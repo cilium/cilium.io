@@ -912,7 +912,12 @@ export default {
     text: '<b>Roche</b> uses Cilium for managing the network connectivity of their edge clusters',
     links: [
       {
-        linkText: 'Watch the Talk',
+        linkText: 'Case Study',
+        linkUrl: 'https://isovalent.com/blog/post/roche-improves-device-management-with-cilium/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk',
         linkUrl: 'https://www.youtube.com/watch?v=kC8efabCH6s',
         linkTarget: '_blank',
       },
