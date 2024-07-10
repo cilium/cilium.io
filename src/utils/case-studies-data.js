@@ -159,7 +159,7 @@ export default {
       {
         linkText: 'Blog 2',
         linkUrl:
-          'https://cilium.io/blog/2020/10/09/cilium-in-alibaba-cloud/How Alibaba Cloud uses Cilium for High-Performance Cloud-Native Networking',
+          'https://cilium.io/blog/2020/10/09/cilium-in-alibaba-cloud/',
         linkTarget: '_blank',
       },
     ],
