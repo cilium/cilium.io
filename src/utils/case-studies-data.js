@@ -151,9 +151,15 @@ export default {
     text: 'Building High-Performance Cloud Native Pod Networks',
     links: [
       {
-        linkText: 'Read blog',
+        linkText: 'Blog 1',
         linkUrl:
           'https://www.alibabacloud.com/blog/how-does-alibaba-cloud-build-high-performance-cloud-native-pod-networks-in-production-environments_596590',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Blog 2',
+        linkUrl:
+          'https://cilium.io/blog/2020/10/09/cilium-in-alibaba-cloud/How Alibaba Cloud uses Cilium for High-Performance Cloud-Native Networking',
         linkTarget: '_blank',
       },
     ],
@@ -912,12 +918,7 @@ export default {
     text: '<b>Roche</b> uses Cilium for managing the network connectivity of their edge clusters',
     links: [
       {
-        linkText: 'Case Study',
-        linkUrl: 'https://isovalent.com/blog/post/roche-improves-device-management-with-cilium/',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=kC8efabCH6s',
         linkTarget: '_blank',
       },
