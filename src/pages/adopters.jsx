@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  bitnami,
   nemlig,
   linkpool,
   aenix,
@@ -230,6 +231,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    bitnami,
     linkpool,
     aenix,
     syself,

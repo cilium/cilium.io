@@ -158,8 +158,7 @@ export default {
       },
       {
         linkText: 'Blog 2',
-        linkUrl:
-          'https://cilium.io/blog/2020/10/09/cilium-in-alibaba-cloud/',
+        linkUrl: 'https://cilium.io/blog/2020/10/09/cilium-in-alibaba-cloud/',
         linkTarget: '_blank',
       },
     ],
@@ -956,6 +955,10 @@ export default {
         linkTarget: '_blank',
       },
     ],
+  },
+  bitnami: {
+    iconName: 'bitnami',
+    text: '<b>Bitnami</b> offers Cilium to their customers as a deployment offering for cloud native networking, observability and security',
   },
   linkpool: {
     iconName: 'linkpool',

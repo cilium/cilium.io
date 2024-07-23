@@ -36,6 +36,7 @@ import AenixLogo from './images/aenix.inline.svg';
 import ArangoDbLogo from './images/arangodb.inline.svg';
 import AyedoLogo from './images/ayedo.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
+import BitnamiLogo from './images/bitnami.inline.svg';
 import BloombergLogo from './images/bloomberg.inline.svg';
 import BytedanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
@@ -141,6 +142,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  bitnami: BitnamiLogo,
   nemlig: NemligLogo,
   linkpool: LinkPoolLogo,
   aenix: AenixLogo,
