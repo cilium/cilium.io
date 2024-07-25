@@ -88,7 +88,7 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, handleCloseClick }) => 
           <GithubStars className="bg-white" />
           <Button
             className="inline-flex items-center leading-none bg-white"
-            to="https://cilium.herokuapp.com/"
+            to="https://slack.cilium.io"
             target="_blank"
             rel="noopener noreferrer"
             theme="outline-gray"

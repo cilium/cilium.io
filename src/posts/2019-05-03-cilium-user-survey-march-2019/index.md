@@ -209,5 +209,5 @@ A big thank you to everyone who filled out the survey. It has helped us in
 great length to plan the roadmap of the coming months. We will be repeating the
 survey in 6 months interval.
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io
 [cilium-etcd-operator]: https://github.com/cilium/cilium-etcd-operator

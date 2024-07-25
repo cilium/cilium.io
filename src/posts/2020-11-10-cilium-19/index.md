@@ -655,7 +655,7 @@ Feel free to ping us on [Slack] if you have any questions.
 - Release Notes: [1.9.0](https://github.com/cilium/cilium/releases/tag/v1.9.0)
 - Container images: `quay.io/cilium/cilium:v1.9.0`, `docker.io/cilium/cilium:v1.9.0`
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io
 [getting started guides]: https://docs.cilium.io/en/v1.9/gettingstarted
 [upgrade guide]: https://cilium.readthedocs.io/en/v1.9/operations/upgrade/#upgrading-minor-versions
 [introduction to cilium]: https://docs.cilium.io/en/v1.9/intro/

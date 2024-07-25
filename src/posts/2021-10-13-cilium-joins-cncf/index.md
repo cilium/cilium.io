@@ -92,7 +92,7 @@ Because Cilium has long been run by its community, we don't expect to see any
 dramatic overnight changes in the way you use, interact with or contribute to
 it.
 
-- The best place to start is our [Slack community](https://cilium.herokuapp.com/) where you'll find thousands of
+- The best place to start is our [Slack community](https://slack.cilium.io) where you'll find thousands of
   people and a lot of help, should you need it
 
 - One new initiative is our weekly [Cilium InstallFest](https://cilium.io/learn) - book your place today!

@@ -540,7 +540,7 @@ to upgrade your Cilium deployment. Feel free to ping us on
 - Release Notes & Binaries: [1.6.0](https://github.com/cilium/cilium/releases/tag/v1.6.0)
 - Container image: `docker.io/cilium/cilium:v1.6.0`
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io
 [helm]: https://helm.sh/
 [external ips]: https://kubernetes.io/docs/concepts/services-networking/service/#external-ips
 [cni chaining mode]: http://docs.cilium.io/en/v1.6/gettingstarted/cni-chaining/

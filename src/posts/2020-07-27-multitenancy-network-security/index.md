@@ -77,7 +77,7 @@ Cilium running in kube-proxy replacement mode is protected against the recent `k
 
 Multitenancy brings many advantages but also risks to a Kubernetes environment. Cilium has created a network model where workloads are protected from attacks originating inside or outside of the network perimeter, which therefore moves Kubernetes closer to the future of the Zero-Trust Network. We developed Cilium from the ground up with secure multitenancy built into the design. eBPF gives us the power to realize this in ways that existing implementations simply couldn't.
 
-If you're using (or are looking to use) Cilium for secure multitenancy, head over to our [Slack channel](https://cilium.herokuapp.com/) and let us know or ask a question. We have a growing and knowledgable community and we're always interested in helping steer you in the right direction.
+If you're using (or are looking to use) Cilium for secure multitenancy, head over to our [Slack channel](https://slack.cilium.io) and let us know or ask a question. We have a growing and knowledgable community and we're always interested in helping steer you in the right direction.
 
 ## Image Attribution
 

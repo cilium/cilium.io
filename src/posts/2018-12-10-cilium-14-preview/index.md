@@ -181,4 +181,4 @@ the community.
 
 See you all at KubeCon in Seattle!
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io

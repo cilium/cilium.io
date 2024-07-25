@@ -396,7 +396,7 @@ and disable IPv6 to optimize the memory footprint.
 A big thank-you again to Alexis Ducastel for sharing the results. Feedback like
 this helps everybody improve.
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io
 [cilium]: https://github.com/cilium/cilium
 [benchmark]: https://itnext.io/benchmark-results-of-kubernetes-network-plugins-cni-over-10gbit-s-network-36475925a560
 [pr #6357]: https://github.com/cilium/cilium/pull/6357

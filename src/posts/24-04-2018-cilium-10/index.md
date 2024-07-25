@@ -240,7 +240,7 @@ Cilium releases.
 [http]: http://docs.cilium.io/en/doc-1.0/gettingstarted/minikube/
 [grpc]: http://docs.cilium.io/en/doc-1.0/gettingstarted/grpc/
 [kafka]: http://docs.cilium.io/en/doc-1.0/gettingstarted/kafka/
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io
 [github]: https://github.com/cilium/cilium/issues/new
 [google]: https://www.socallinuxexpo.org/sites/default/files/presentations/bcc-scale.pdf
 [facebook]: https://www.netdevconf.org/2.1/slides/apr6/zhou-netdev-xdp-2017.pdf

@@ -64,7 +64,7 @@ const Header = ({
                     'ml-4 items-center bg-white leading-none ',
                     withSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                   )}
-                  to="https://cilium.herokuapp.com/"
+                  to="https://slack.cilium.io"
                   target="_blank"
                   rel="noopener noreferrer"
                   theme="outline-gray"

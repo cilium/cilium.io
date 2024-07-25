@@ -57,6 +57,6 @@ In Cilium v0.10, we implemented the CNI 0.2.x specification to enable Mesos inte
 
 If you’re using Mesos and want to try out Cilium L7 policy enforcement, try our Getting Started Guide ([www.cilium.io/try-mesos](http://www.cilium.io/try-mesos)) for a quick intro to our functionality in a self-contained Mesos environment. All you need is somewhere to install a Vagrant VM and we help you get set up with the rest!
 
-As always, we’re here to help with any questions on [Cilium Slack](https://cilium.herokuapp.com/) or file any [issues](https://github.com/cilium/cilium/issues) for the project on [github](https://github.com/cilium/cilium). You can tweet to us [@ciliumproject](https://twitter.com/ciliumproject) and follow us on Twitter for more updates. Stay tuned for upcoming blogs on XDP and our Troubleshooting series!
+As always, we’re here to help with any questions on [Cilium Slack](https://slack.cilium.io) or file any [issues](https://github.com/cilium/cilium/issues) for the project on [github](https://github.com/cilium/cilium). You can tweet to us [@ciliumproject](https://twitter.com/ciliumproject) and follow us on Twitter for more updates. Stay tuned for upcoming blogs on XDP and our Troubleshooting series!
 
 ~ The Cilium Team
