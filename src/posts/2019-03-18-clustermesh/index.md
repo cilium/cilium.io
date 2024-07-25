@@ -342,6 +342,6 @@ join our [Slack] channel to ask questions and brag about your setup.
 - [Cilium 1.4 release blog](https://cilium.io/blog/2019/02/12/cilium-14/)
   which was the release that introduced multi-cluster service discovery.
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io
 [etcd]: https://github.com/etcd-io/etcd
 [services]: https://kubernetes.io/docs/concepts/services-networking/service/

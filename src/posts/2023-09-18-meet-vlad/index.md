@@ -41,7 +41,7 @@ When I relocated from the London office to the Seattle office, I discovered anot
 
 Using Calico and troubleshooting networking issues was challenging which prompted us to explore alternative CNI options approximately two years after adopting Calico. We were particularly interested in moving away from running an overlay network in our Kubernetes clusters. It was during this search that I came across Cilium.
 
-To gather more information about Cilium and its capabilities, I reached out to the Cilium community on [Slack](https://cilium.herokuapp.com/) and inquired about native routing. Through this process, I connected with Thomas Graf and although native routing was not available at the time, I suggested that we work on its development.
+To gather more information about Cilium and its capabilities, I reached out to the Cilium community on [Slack](https://slack.cilium.io) and inquired about native routing. Through this process, I connected with Thomas Graf and although native routing was not available at the time, I suggested that we work on its development.
 
 This marked the beginning of my involvement with Cilium and my relationship with the project has since evolved and grown stronger.
 
@@ -71,4 +71,4 @@ It's also highly beneficial to use the GitHub label "first good issue" to discov
 
 During winter, I enjoy skiing and in summer I find pleasure in hiking. Aside from these activities, I have a fondness for traveling to warm destinations, especially during the winter, to escape the cold. I also recently rekindled an old passion of mine – flying model airplanes, specifically RC airplanes. I used to do this during high school but had to put it on hold when I entered university.
 
-To engage with the Cilium community and contribute to the project, follow Vlad's lead: join our [Slack](https://cilium.herokuapp.com/), check out a [good first issue](https://github.com/cilium/cilium/issues?q=is%3Aopen+is%3Aissue+label%3Agood-first-issue) you can work on, and explore our [community page](https://cilium.io/get-involved/) for more information.
+To engage with the Cilium community and contribute to the project, follow Vlad's lead: join our [Slack](https://slack.cilium.io), check out a [good first issue](https://github.com/cilium/cilium/issues?q=is%3Aopen+is%3Aissue+label%3Agood-first-issue) you can work on, and explore our [community page](https://cilium.io/get-involved/) for more information.

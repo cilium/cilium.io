@@ -577,4 +577,4 @@ for identity allocation which will make etcd entirely optional for operations.
 As outlined in the scalability section, we will still require etcd to guarantee
 performance above a certain cluster size.
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io

@@ -956,6 +956,6 @@ to upgrade your Cilium deployment. Feel free to ping us on [Slack].
 - Release Notes & Binaries: [1.8.0](https://github.com/cilium/cilium/releases/tag/v1.8.0)
 - Container image: `docker.io/cilium/cilium:v1.8.0`
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io
 [publication]: https://dl.acm.org/doi/10.1145/3281411.3281443
 [ip fragmentation documentation]: https://docs.cilium.io/en/v1.8/concepts/networking/fragmentation

@@ -497,5 +497,5 @@ to upgrade your Cilium deployment. Feel free to ping us on
 - Release Notes & Binaries: [1.4.0](https://github.com/cilium/cilium/releases/tag/1.4.0)
 - Container image: `docker.io/cilium/cilium:v1.4.0`
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io
 [cilium-etcd-operator]: https://github.com/cilium/cilium-etcd-operator

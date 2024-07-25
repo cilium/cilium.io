@@ -32,6 +32,6 @@ In the coming weeks we'll use this blog to provide deep dives into some of these
 
 The v0.9 release was also milestone for the Cilium community as it passed 2,000 total commits.   In just the past ~2 months the community has added 14 contributors to bring the total to 24 and reached 600 github stars (about double what we had just three months ago). Have you [starred us](https://github.com/cilium/cilium) yet?
 
-We hope you have fun trying out the v0.9 release.   As we shift focus toward the next release, we'd love your input on bugs or new features by adding [issues on github](https://github.com/cilium/cilium/issues), pinging us on [Cilium Slack](https://cilium.herokuapp.com/) , or tweeting us [@ciliumproject](https://twitter.com/ciliumproject) .
+We hope you have fun trying out the v0.9 release.   As we shift focus toward the next release, we'd love your input on bugs or new features by adding [issues on github](https://github.com/cilium/cilium/issues), pinging us on [Cilium Slack](https://slack.cilium.io) , or tweeting us [@ciliumproject](https://twitter.com/ciliumproject) .
 
 ~ The Cilium Team

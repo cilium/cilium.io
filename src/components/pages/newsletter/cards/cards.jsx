@@ -51,7 +51,7 @@ const Cards = () => {
       links: [
         {
           title: 'Send on Slack',
-          url: 'https://cilium.herokuapp.com/',
+          url: 'https://slack.cilium.io',
           target: '_blank',
         },
         {

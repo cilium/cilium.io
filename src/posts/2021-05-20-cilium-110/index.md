@@ -667,7 +667,7 @@ Feel free to ping us on [Slack] if you have any questions.
 
 - Release Notes: [1.10.0](https://github.com/cilium/cilium/releases/tag/v1.10.0)
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io
 [introduction to cilium]: https://docs.cilium.io/en/v1.10/intro/
 [getting started guides]: https://docs.cilium.io/en/v1.10/gettingstarted
 [upgrade guide]: https://cilium.readthedocs.io/en/v1.10/operations/upgrade/#upgrading-minor-versions

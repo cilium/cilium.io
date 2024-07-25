@@ -245,7 +245,7 @@ The real transition will be to BPF native tooling as well as move away from
 traditional IP address/port centric constructs.
 
 Interested in learning more about BPF or Cilium? Talk to us on
-[Slack](https://cilium.herokuapp.com/)
+[Slack](https://slack.cilium.io)
 
 [ipset]: http://ipset.netfilter.org/
 [bcc]: https://github.com/iovisor/bcc

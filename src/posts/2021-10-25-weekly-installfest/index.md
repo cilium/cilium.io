@@ -69,4 +69,4 @@ confirmation to the event
 # Further Reading
 
 - [Learn more about Cilium](https://cilium.io/learn)
-- [Join the Cilium Slack](https://cilium.herokuapp.com/)
+- [Join the Cilium Slack](https://slack.cilium.io)

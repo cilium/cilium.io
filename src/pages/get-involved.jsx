@@ -20,7 +20,7 @@ const cardItems1 = [
     title: 'Slack',
     description: 'For live conversation and quick questions, join the Cilium Slack workspace.',
     buttonText: 'Join slack workspace',
-    buttonUrl: 'https://cilium.herokuapp.com/',
+    buttonUrl: 'https://slack.cilium.io',
     buttonTarget: '_blank',
   },
   {

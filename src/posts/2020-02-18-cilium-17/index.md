@@ -162,7 +162,7 @@ Hubble UI enables zero-effort automatic discovery of the service dependency grap
 
 We are happy to announce, Hubble UI code is now open sourced and available under Cilium's GitHub organization: [https://github.com/cilium/hubble-ui](https://github.com/cilium/hubble-ui)
 
-During Cilium 1.7 development cycle several performance improvements were made to Hubble UI to work better in small multi-node clusters; however we still consider Hubble UI in preview release stage and encourage the community to provide feedback on [Hubble Github page](https://github.com/cilium/hubble/issues) or [Cilium Slack #hubble channel](https://cilium.herokuapp.com/).
+During Cilium 1.7 development cycle several performance improvements were made to Hubble UI to work better in small multi-node clusters; however we still consider Hubble UI in preview release stage and encourage the community to provide feedback on [Hubble Github page](https://github.com/cilium/hubble/issues) or [Cilium Slack #hubble channel](https://slack.cilium.io).
 
 <a name="ccnp"></a>
 <a name="cilium-cluster-wide-network-policies"></a>
@@ -793,7 +793,7 @@ to upgrade your Cilium deployment. Feel free to ping us on
 - Release Notes & Binaries: [1.7.0](https://github.com/cilium/cilium/releases/tag/v1.7.0)
 - Container image: `docker.io/cilium/cilium:v1.7.0`
 
-[slack]: https://cilium.herokuapp.com/
+[slack]: https://slack.cilium.io
 [hubble]: https://github.com/cilium/hubble/
 [helm3]: https://helm.sh/blog/helm-3-released/
 [kubecon us 2019]: https://www.youtube.com/watch?v=bIRwSIwNHC0

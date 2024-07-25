@@ -35,6 +35,6 @@ You can also check out the [Kafka Getting Started Guide](http://docs.cilium.io/e
 
 We’ve also grown our documentation to include several specifics varying from policy enforcement and rules to BPF debugging datapath and developer documentation in the Contributor guide. Take a closer look at our [Docs](http://cilium.readthedocs.io/en/stable/) page.
 
-As always, we’re here to help with any questions on [Cilium Slack](https://cilium.herokuapp.com/) or file any issues for the project on [GitHub](https://github.com/cilium/cilium/issues). You can tweet to us [@ciliumproject](https://twitter.com/ciliumproject) and follow us on Twitter for more updates.
+As always, we’re here to help with any questions on [Cilium Slack](https://slack.cilium.io) or file any issues for the project on [GitHub](https://github.com/cilium/cilium/issues). You can tweet to us [@ciliumproject](https://twitter.com/ciliumproject) and follow us on Twitter for more updates.
 
 ~ The Cilium Team

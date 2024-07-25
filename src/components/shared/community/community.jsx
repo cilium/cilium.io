@@ -16,7 +16,7 @@ const items = [
     icon: SlackIcon,
     logoName: 'Slack',
     title: 'Join our Slack channel',
-    url: 'https://cilium.herokuapp.com/',
+    url: 'https://slack.cilium.io',
     target: '_blank',
   },
   {
