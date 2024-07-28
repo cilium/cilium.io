@@ -128,6 +128,7 @@ import SuperorbitalLogo from './images/superorbital.inline.svg';
 import SyselfLogo from './images/syself.inline.svg';
 import TSILogo from './images/t-systems.inline.svg';
 import TailorBrandsLogo from './images/tailor-brands.inline.svg';
+import TanzuLogo from './images/tanzu.inline.svg';
 import TestifysecLogo from './images/testifysec.inline.svg';
 import TietoevryLogo from './images/tietoevry.inline.svg';
 import TrendyolLogo from './images/trendyol.inline.svg';
@@ -142,6 +143,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  tanzu: TanzuLogo,
   bitnami: BitnamiLogo,
   nemlig: NemligLogo,
   linkpool: LinkPoolLogo,
