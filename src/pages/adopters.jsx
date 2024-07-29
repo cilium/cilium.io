@@ -10,6 +10,12 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+<<<<<<< HEAD
+=======
+  samsungads,
+  VMwareTanzu,
+  bitnami,
+>>>>>>> 3349d529 (chore: add samsung b)
   nemlig,
   linkpool,
   aenix,
@@ -152,6 +158,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    samsungads,
     nemlig,
     gdata,
     smartnews,

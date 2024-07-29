@@ -957,6 +957,26 @@ export default {
       },
     ],
   },
+  samsungads: {
+    iconName: 'samsungads',
+    text: '<b>Samsung Ads</b> uses Cilium as the default CNI for its Kubernetes Clusters',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://samsungads.ca/engineering-blog/live-migrating-production-clusters-from-calico-to-cilium/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  VMwareTanzu: {
+    iconName: 'VMwareTanzu',
+    text: '<b>VMware Tanzu</b> offers Cilium as part of the Tanzu Application Catalogue',
+  },
+  bitnami: {
+    iconName: 'bitnami',
+    text: '<b>Bitnami</b> offers Cilium to their customers in their application catalogue',
+  },
   linkpool: {
     iconName: 'linkpool',
     text: '<b>LinkPool</b> uses Cilium as the CNI for its on-premise production clusters',
