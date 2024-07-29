@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  samsungads,
   VMwareTanzu,
   bitnami,
   nemlig,
@@ -154,6 +155,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    samsungads,
     nemlig,
     gdata,
     smartnews,
