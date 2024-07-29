@@ -158,8 +158,7 @@ export default {
       },
       {
         linkText: 'Blog 2',
-        linkUrl:
-          'https://cilium.io/blog/2020/10/09/cilium-in-alibaba-cloud/',
+        linkUrl: 'https://cilium.io/blog/2020/10/09/cilium-in-alibaba-cloud/',
         linkTarget: '_blank',
       },
     ],
@@ -956,6 +955,14 @@ export default {
         linkTarget: '_blank',
       },
     ],
+  },
+  VMwareTanzu: {
+    iconName: 'VMwareTanzu',
+    text: '<b>VMware Tanzu</b> offers Cilium as part of the Tanzu Application Catalogue',
+  },
+  bitnami: {
+    iconName: 'bitnami',
+    text: '<b>Bitnami</b> offers Cilium to their customers in their application catalogue',
   },
   linkpool: {
     iconName: 'linkpool',
