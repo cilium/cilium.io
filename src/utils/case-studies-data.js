@@ -956,9 +956,9 @@ export default {
       },
     ],
   },
-  tanzu: {
-    iconName: 'tanzu',
-    text: '<b>VMWare Tanzu</b> offers Cilium as part of the Tanzu Application Catalogue',
+  VMwareTanzu: {
+    iconName: 'VMwareTanzu',
+    text: '<b>VMware Tanzu</b> offers Cilium as part of the Tanzu Application Catalogue',
   },
   bitnami: {
     iconName: 'bitnami',

@@ -143,7 +143,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
-  tanzu: TanzuLogo,
+  VMwareTanzu: TanzuLogo,
   bitnami: BitnamiLogo,
   nemlig: NemligLogo,
   linkpool: LinkPoolLogo,
