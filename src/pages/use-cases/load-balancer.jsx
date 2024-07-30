@@ -48,6 +48,10 @@ const testimonials = [
         CTAtext: 'Read The Blog Post',
         url: 'https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/',
       },
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/seznam/',
+      },
     ],
     description:
       'Seznam previously used a multiple tier setup - ECMP routing as the first tier + IPVS as the second tier (L4 load balancer (L4LB)) + Envoy proxy as the third tier (L7 load balancer). They experienced increased traffic during COVID and needed a way to utilize hardware efficiently. Using  L4LB XDP consumed only half of a single CPU compared to 2x18 CPUs when IPVS was handling the traffic. By switching to L4LB XDP at the driver layer, Seznam was able to save 36 CPUs while doubling throughput.',
