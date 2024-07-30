@@ -958,7 +958,7 @@ export default {
   },
   samsungads: {
     iconName: 'samsungads',
-    text: '<b>Samsung Ads</b> uses Cilium as the default CNI for its Kubernetes Clusters',
+    text: '<b>Samsung Ads</b> uses Cilium as the default CNI for their Kubernetes clusters',
     links: [
       {
         linkText: 'Read Blog',
