@@ -105,6 +105,7 @@ import RafayLogo from './images/rafay.inline.svg';
 import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
 import RobinhoodLogo from './images/robinhood.inline.svg';
 import RocheLogo from './images/roche.inline.svg';
+import SamsungAdsLogo from './images/samsungads.inline.svg';
 import SantaLogo from './images/santa.inline.svg';
 import SapLogo from './images/sap.inline.svg';
 import SapianLogo from './images/sapian.inline.svg';
@@ -143,6 +144,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  samsungads: SamsungAdsLogo,
   VMwareTanzu: TanzuLogo,
   bitnami: BitnamiLogo,
   nemlig: NemligLogo,
