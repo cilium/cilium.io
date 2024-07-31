@@ -54,7 +54,7 @@ const testimonials = [
       },
     ],
     description:
-      'Seznam previously used a multiple tier setup - ECMP routing as the first tier + IPVS as the second tier (L4 load balancer (L4LB)) + Envoy proxy as the third tier (L7 load balancer). They experienced increased traffic during COVID and needed a way to utilize hardware efficiently. Using  L4LB XDP consumed only half of a single CPU compared to 2x18 CPUs when IPVS was handling the traffic. By switching to L4LB XDP at the driver layer, Seznam was able to save 36 CPUs while doubling throughput.',
+      "Seznam.cz previously used a multi tier load balancer set up - ECMP routing as the first tier, IPVS as the second tier (L4 load balancer (L4LB)), and Envoy proxy as the third tier (L7 load balancer). They experienced increased traffic during COVID and needed a way to utilize hardware more efficiently. Using Cilium's L4LB XDP allowed Seznam.cz to reduce CPU consumption by 72x while doubling throughput.",
   },
   {
     title: 'Software L4 Load Balancing for Kubernetes Services at Yahoo',

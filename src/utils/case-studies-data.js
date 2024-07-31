@@ -46,7 +46,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'watch Talk',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=6CZ_SSTqb4g',
         linkTarget: '_blank',
       },
@@ -59,10 +59,12 @@ export default {
       {
         linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/seznam/',
+        linkTarget: '_blank',
       },
       {
         linkText: 'Blog',
         linkUrl: 'https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/',
+        linkTarget: '_blank',
       },
       {
         linkText: 'Talk 1',
@@ -980,7 +982,7 @@ export default {
   },
   kakao: {
     iconName: 'kakao',
-    text: '<b>kakao</b> uses Cilium as a CNI for their Kubernetes clusters',
+    text: '<b>kakao</b> uses Cilium as a CNI to improve network performance and lower costs',
     links: [
       {
         linkText: 'Read Case Study',
