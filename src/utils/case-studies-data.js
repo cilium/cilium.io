@@ -905,6 +905,12 @@ export default {
     text: '<b>Schuberg Philis</b> uses Cilium as the CNI for PCI-DSS compliant kubernetes clusters they run for their customers',
     links: [
       {
+        linkText: 'Case Study',
+        linkUrl:
+          'https://isovalent.com/blog/post/achieving-pci-dss-compliance-with-isovalent-cilium-and-zero-trust/',
+        linkTarget: '_blank',
+      },
+      {
         linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=OiO7ySxWiQs',
         linkTarget: '_blank',
