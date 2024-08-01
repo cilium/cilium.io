@@ -5,6 +5,7 @@ import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
+import KakaoLogo from 'icons/kakao.inline.svg';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import KubermaticLogo from 'icons/logo-kubermatic.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
@@ -95,6 +96,18 @@ const testimonials = [
     ],
     description:
       'We use Cilium because it uses eBPF and provides high throughput, lower latency, and less resource consumption, especially when the number of services is large. It also works well across all three major cloud providers, including Google GKE and Azure AKS, which was a critical factor in our choice.',
+  },
+  {
+    title: 'Kakao improves network performance and lowers costs with Cilium',
+    logo: KakaoLogo,
+    CTAs: [
+      {
+        CTAtext: 'Read Case Study',
+        url: 'https://www.cncf.io/case-studies/kakao/',
+      },
+    ],
+    description:
+      "Leveraging Cilium and its kube-proxy replacement in their Kubernetes platform has lowered Kakao's network and performance costs, and enabled faster debugging of network issues.",
   },
   {
     title: 'Why is the kernel community replacing iptables with BPF?',

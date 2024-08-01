@@ -30,7 +30,7 @@ export default {
     text: 'Ascend uses Cilium as their one CNI across multiple cloud providers',
     links: [
       {
-        linkText: 'Read User Story',
+        linkText: 'Read Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/ascend/',
         linkTarget: '_blank',
       },
@@ -41,13 +41,13 @@ export default {
     text: 'S&P Global uses Cilium as its CNI',
     links: [
       {
-        linkText: 'Watch Talk',
-        linkUrl: 'https://www.youtube.com/watch?v=6CZ_SSTqb4g',
+        linkText: 'Case Study',
+        linkUrl: 'https://isovalent.com/blog/post/eliminnate-team-silos-with-cilium/',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Read Case Study',
-        linkUrl: 'https://isovalent.com/blog/post/eliminnate-team-silos-with-cilium/',
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=6CZ_SSTqb4g',
         linkTarget: '_blank',
       },
     ],
@@ -57,8 +57,14 @@ export default {
     text: 'Seznam.cz uses Cilium for Layer 4 Load Balancing with XDP',
     links: [
       {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/seznam/',
+        linkTarget: '_blank',
+      },
+      {
         linkText: 'Blog',
         linkUrl: 'https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/',
+        linkTarget: '_blank',
       },
       {
         linkText: 'Talk 1',
@@ -179,7 +185,7 @@ export default {
     text: 'Nexxiot using Cilium as the CNI plugin on EKS for its IoT SaaS',
     links: [
       {
-        linkText: 'Read User Story',
+        linkText: 'Read Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/nexxiot/',
         linkTarget: '_blank',
       },
@@ -293,13 +299,13 @@ export default {
     text: 'Google chooses Cilium for Google Kubernetes Engine (GKE) networking',
     links: [
       {
-        linkText: 'Blog',
+        linkText: 'Read Blog',
         linkUrl:
           'https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebfp-and-cilium-to-google-kubernetes-engine',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Talk',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=26KbW5-BeNA',
         linkTarget: '_blank',
       },
@@ -402,7 +408,7 @@ export default {
     text: 'Datadog uses Cilium in AWS (self-hosted k8s)',
     links: [
       {
-        linkText: 'Read Case Study',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/datadog/',
         linkTarget: '_blank',
       },
@@ -418,7 +424,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Talk 2',
+        linkText: 'Talk 3',
         linkUrl: 'https://youtu.be/tw0F-LexNRA?si=2eYpFNGQnsf-NTdv',
         linkTarget: '_blank',
       },
@@ -429,7 +435,7 @@ export default {
     text: "Cilium is the CNI for Cosmonic's Nomad based PaaS",
     links: [
       {
-        linkText: 'User Story',
+        linkText: 'Case Study',
         linkUrl: 'https://cilium.io/blog/2023/01/18/cosmonic-user-story/',
         linkTarget: '_blank',
       },
@@ -450,7 +456,7 @@ export default {
     text: 'Meltwater uses Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
     links: [
       {
-        linkText: 'User Story',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/meltwater/',
         linkTarget: '_blank',
       },
@@ -466,7 +472,7 @@ export default {
     text: 'Utmost uses Cilium in all tiers of its Kubernetes ecosystem to implement zero trust networking',
     links: [
       {
-        linkText: 'User Story',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/utmost/',
         linkTarget: '_blank',
       },
@@ -490,13 +496,13 @@ export default {
     text: 'Form3 uses Cilium in their production clusters (self-hosted, bare-metal, private cloud)',
     links: [
       {
-        linkText: 'Watch Talk',
-        linkUrl: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/form3/',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Case Study',
-        linkUrl: 'https://www.cncf.io/case-studies/form3/',
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=vKgRf4OzTIE',
         linkTarget: '_blank',
       },
     ],
@@ -527,12 +533,12 @@ export default {
     text: 'Bloomberg leverages Cilium to construct data sandboxes that restrict users from distributing data outside the sandbox',
     links: [
       {
-        linkText: 'Talk',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=8fiYVyISyz4/',
         linkTarget: '_blank',
       },
       {
-        linkText: 'User Story',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/bloomberg-2/',
         linkTarget: '_blank',
       },
@@ -549,7 +555,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Story',
+        linkText: 'User Story',
         linkUrl: 'https://cilium.io/blog/2024/03/07/cloud-provider-user-story/',
         linkTarget: '_blank',
       },
@@ -583,7 +589,7 @@ export default {
     text: 'ClickHouse uses Cilium and Hubble across multiple clouds',
     links: [
       {
-        linkText: 'Read Case Study',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/clickhouse/',
         linkTarget: '_blank',
       },
@@ -638,12 +644,12 @@ export default {
     text: 'Trendyol uses Cilium as the default CNI for its Kubernetes Clusters',
     links: [
       {
-        linkText: 'Read Case Study',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/trendyol/',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Read Blog',
+        linkText: 'Blog',
         linkUrl: 'https://medium.com/trendyol-tech/trendyols-cilium-transformation-ff064ff79fce',
         linkTarget: '_blank',
       },
@@ -890,7 +896,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Talk',
+        linkText: 'Watch Talk',
         linkUrl: 'https://youtu.be/MSqI-gBiCrc?si=I8QMmlSB7cnYe0BQ',
         linkTarget: '_blank',
       },
@@ -900,6 +906,12 @@ export default {
     iconName: 'schubergPhilis',
     text: '<b>Schuberg Philis</b> uses Cilium as the CNI for PCI-DSS compliant kubernetes clusters they run for their customers',
     links: [
+      {
+        linkText: 'Case Study',
+        linkUrl:
+          'https://isovalent.com/blog/post/achieving-pci-dss-compliance-with-isovalent-cilium-and-zero-trust/',
+        linkTarget: '_blank',
+      },
       {
         linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=OiO7ySxWiQs',
@@ -964,6 +976,17 @@ export default {
         linkText: 'Read Blog',
         linkUrl:
           'https://samsungads.ca/engineering-blog/live-migrating-production-clusters-from-calico-to-cilium/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  kakao: {
+    iconName: 'kakao',
+    text: '<b>kakao</b> uses Cilium as a CNI to improve network performance and lower costs',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/kakao/',
         linkTarget: '_blank',
       },
     ],

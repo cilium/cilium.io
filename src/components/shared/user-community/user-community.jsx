@@ -68,6 +68,7 @@ import InnoqLogo from './images/innoq.inline.svg';
 import IsovalentLogo from './images/isovalent.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
 import JyskLogo from './images/jysk-tech.inline.svg';
+import kakaoLogo from './images/kakao.inline.svg';
 import KiloLogo from './images/kilo.inline.svg';
 import KryptosLogo from './images/kryptos.inline.svg';
 import KubehetznerLogo from './images/kube-hetzner.inline.svg';
@@ -144,6 +145,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  kakao: kakaoLogo,
   samsungads: SamsungAdsLogo,
   VMwareTanzu: TanzuLogo,
   bitnami: BitnamiLogo,

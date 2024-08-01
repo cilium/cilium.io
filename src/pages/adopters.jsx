@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  kakao,
   samsungads,
   VMwareTanzu,
   bitnami,
@@ -155,6 +156,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    kakao,
     samsungads,
     nemlig,
     gdata,
