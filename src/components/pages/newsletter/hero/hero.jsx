@@ -10,7 +10,7 @@ import RSSIcon from './images/rss.inline.svg';
 
 const title = 'Subscribe to bi-weekly eCHO News';
 const description =
-  'eCHO news in your bi-weekly wrap up of all things eBPF and Cilium. If you want to keep up on the latest in cloud native networking, observability, and security this is your source';
+  'eCHO news is your bi-weekly wrap up of all things eBPF and Cilium. If you want to keep up on the latest in cloud native networking, observability, and security this is your source';
 
 const Hero = () => (
   <section className="relative bg-gray-4 pt-10 md:pt-20">
