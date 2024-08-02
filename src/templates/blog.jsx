@@ -21,7 +21,7 @@ const cardItems = [
   },
   {
     iconName: 'twitter',
-    title: 'Twitter',
+    title: 'X',
     description: 'Follow Cilium on X for the latest news and announcements.',
     buttonText: 'Follow Cilium on X',
     buttonUrl: 'https://x.com/ciliumproject',
