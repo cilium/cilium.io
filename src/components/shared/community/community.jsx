@@ -29,8 +29,8 @@ const items = [
   {
     icon: TwitterIcon,
     logoName: 'Twitter',
-    title: 'Follow us on Twitter',
-    url: 'https://twitter.com/ciliumproject',
+    title: 'Follow us on X',
+    url: 'https://x.com/ciliumproject',
     target: '_blank',
   },
   {

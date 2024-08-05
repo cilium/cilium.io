@@ -59,7 +59,7 @@ Which is a place where people can talk about getting up to speed with setting up
 
 You can subscribe by sending a email to `majordomo@vger.kernel.org`, with a message body containing `subscribe xdp-newbies`. No subject is needed, but you can of course add one if you like.
 
-## [Random cool note](https://twitter.com/davem_dokebi/status/855595121424859138)
+## [Random cool note](https://x.com/davem_dokebi/status/855595121424859138)
 
 > The JSET cBPF instruction is for parsing DECNET packet headers. See Acknowledgements section of: [http://www.tcpdump.org/papers/bpf-usenix93.pdf](http://www.tcpdump.org/papers/bpf-usenix93.pdf)
 

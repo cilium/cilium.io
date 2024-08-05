@@ -25,10 +25,10 @@ const cardItems1 = [
   },
   {
     iconName: 'twitter',
-    title: 'Twitter',
-    description: "Don't forget to follow Cilium on Twitter for the latest news and announcements.",
-    buttonText: 'Follow on twitter',
-    buttonUrl: 'https://twitter.com/ciliumproject',
+    title: 'X',
+    description: "Don't forget to follow Cilium on X for the latest news and announcements.",
+    buttonText: 'Follow on X',
+    buttonUrl: 'https://x.com/ciliumproject',
     buttonTarget: '_blank',
   },
   {
