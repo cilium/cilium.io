@@ -37,8 +37,8 @@ const Cards = () => {
       description: 'Bill Mulligan is working to grow the <br> Cilium community',
       links: [
         {
-          title: 'Follow on X',
-          url: 'https://x.com/breakawaybilly',
+          title: 'Follow on LinkedIn',
+          url: 'https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=6937495018668482560',
           target: '_blank',
         },
       ],
