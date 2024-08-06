@@ -5,6 +5,7 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
+import ArcherLogo from 'icons/archer.inline.svg';
 import BellLogo from 'icons/bell.inline.svg';
 import CapitalOneLogo from 'icons/capitalone.inline.svg';
 import DatadogLogo from 'icons/datadog.inline.svg';
@@ -68,7 +69,7 @@ import InnoqLogo from './images/innoq.inline.svg';
 import IsovalentLogo from './images/isovalent.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
 import JyskLogo from './images/jysk-tech.inline.svg';
-import kakaoLogo from './images/kakao.inline.svg';
+import KakaoLogo from './images/kakao.inline.svg';
 import KiloLogo from './images/kilo.inline.svg';
 import KryptosLogo from './images/kryptos.inline.svg';
 import KubehetznerLogo from './images/kube-hetzner.inline.svg';
@@ -145,7 +146,8 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
-  kakao: kakaoLogo,
+  archer: ArcherLogo,
+  kakao: KakaoLogo,
   samsungads: SamsungAdsLogo,
   VMwareTanzu: TanzuLogo,
   bitnami: BitnamiLogo,

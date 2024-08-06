@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  archer,
   kakao,
   samsungads,
   VMwareTanzu,
@@ -236,6 +237,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    archer,
     VMwareTanzu,
     bitnami,
     linkpool,
