@@ -991,6 +991,10 @@ export default {
       },
     ],
   },
+  archer: {
+    iconName: 'archer',
+    text: '<b>Archer Aviation</b> uses Cilium in their Kubernetes cluster',
+  },
   VMwareTanzu: {
     iconName: 'VMwareTanzu',
     text: '<b>VMware Tanzu</b> offers Cilium as part of the Tanzu Application Catalogue',
