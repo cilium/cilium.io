@@ -1,0 +1,40 @@
+@layer components {
+  .slick-slider {
+    & .slick-slide > div {
+      @apply h-full;
+    }
+
+    & .slick-slide {
+      @apply float-none !flex h-auto;
+    }
+
+    & .slick-track {
+      @apply flex before:hidden after:hidden;
+      /* lg:gap-8 md:gap-5 sm:gap-4; */
+
+      & > div {
+        @apply py-4 lg:px-4 md:px-2.5 sm:px-2 w-full px-4;
+      }
+    }
+
+    & .slick-dots {
+      @apply -bottom-7 justify-center !flex;
+
+      & li {
+        @apply mx-0 flex items-center justify-center;
+
+        & button {
+          @apply flex h-5 w-5 items-center justify-center;
+
+          &::before {
+            @apply left-1/2 top-1/2 h-2 w-2 shrink-0 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gray-500/50 text-[0px] opacity-100;
+          }
+        }
+
+        &.slick-active button::before {
+          @apply border-none bg-primary-1 opacity-100;
+        }
+      }
+    }
+  }
+}
