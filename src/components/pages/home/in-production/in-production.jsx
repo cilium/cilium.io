@@ -18,37 +18,37 @@ const ITEMS = [
   {
     icon: { src: digitalOcean, width: 219, alt: 'Digital Ocean' },
     text: 'Cilium enabled us to acquire more sophisticated customers.',
-    link: '#',
+    link: 'https://www.cncf.io/case-studies/digitalocean/',
   },
   {
     icon: { src: tripcom, width: 158, alt: 'Trip.com' },
     text: 'Cilium is just stable. We have been running it in production for almost 5 years and we haven’t had any major incidents in the dataplane which is very important for our applications.',
-    link: '#',
+    link: 'https://www.cncf.io/case-studies/trip-com-group/',
   },
   {
     icon: { src: wso2, width: 107, alt: 'WSO2' },
     text: 'To us, Cilium is a single solution that covers a large number of our platform feature requirements. Before, we couldn’t find a single solution to all of our challenges but when we used Cilium, it was a perfect match.',
-    link: '#',
+    link: 'https://www.cncf.io/case-studies/wso2/',
   },
   {
     icon: { src: postFinance, width: 142, alt: 'Post Finance' },
     text: 'With Cilium, our pods start up much faster, scale faster, and more. We’ve rarely had issues with Cilium, or had it be the cause of an incident which is a good thing because if you don’t notice something then it is not in the way and working as intended.',
-    link: '#',
+    link: 'https://www.cncf.io/case-studies/postfinance/',
   },
   {
     icon: { src: form3, width: 133, alt: 'Form3' },
     text: 'The value Cilium added to our FPS platform was massively simplifying our problem. If Cilium did not exist, it would have been much tougher to solve that requirement of being able to switch off one data center and have everything carry on running.',
-    link: '#',
+    link: 'https://www.cncf.io/case-studies/form3/ ',
   },
   {
     icon: { src: bloomberg, width: 181, alt: 'Bloomberg' },
     text: 'We introduced Cilium initially as our CNI, and we’ve been able to build a lot of really valuable functionality on top of it for our data sandbox and our sandbox storage functionality.',
-    link: '#',
+    link: 'https://www.cncf.io/case-studies/bloomberg-2/',
   },
   {
     icon: { src: datadog, width: 163, alt: 'Datadog' },
     text: 'eBPF and Cilium helped us to push the boundaries both within operations and also with product development. To do things safer, faster, and more easily than what we could have with traditional techniques.',
-    link: '#',
+    link: 'https://www.cncf.io/case-studies/datadog/',
   },
 ];
 
@@ -69,7 +69,15 @@ const InProduction = () => (
               <p className="mt-7 mb-5">“{text}”</p>
             </div>
             <div className="mt-auto flex border-t border-gray-3 pt-6 leading-none">
-              <Link className="relative" key={index} type="text" theme="primary" to={link}>
+              <Link
+                className="relative"
+                key={index}
+                type="text"
+                theme="primary"
+                to={link}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 Read case study
               </Link>
             </div>
