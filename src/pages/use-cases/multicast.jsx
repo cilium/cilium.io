@@ -33,7 +33,7 @@ const sectionContent1 = {
 };
 
 const sectionContent2 = {
-  title: 'Bringing the eBPF revolution to Multicast',
+  title: 'Bringing the eBPF Revolution to Multicast',
   description:
     "Cilium's multicast implementation is not just efficient, it's also technically advanced. It's based on eBPF, a technology known for its exceptional efficiency and performance. By leveraging eBPF, Cilium ensures that the same level of optimization is brought to multicast as it does to a variety of other networking use cases. ",
   imageSrc: MulticastImage2,
