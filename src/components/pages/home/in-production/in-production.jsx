@@ -61,7 +61,7 @@ const ITEMS = [
 
 const InProduction = () => (
   <section className="in-production bg-gray-4 py-10 mt-10 md:mt-20 md:py-20 lg:mt-28 lg:pt-32 lg:pb-[136px]">
-    <Container className="flex flex-col 2xl:max-w-[1248px] md:max-w-[calc(100%-4.5rem)] sm:max-w-[calc(100%-10rem)] max-w-full xl:max-w-[calc(100%-8rem)] !px-0">
+    <Container className="flex flex-col 2xl:max-w-[1248px] md:max-w-[calc(100%-8rem)] xl:max-w-[calc(100%-8rem)] !px-0">
       <Heading className="mb-2 self-center text-center px-4 md:mb-6 lg:mb-12" tag="h2">
         Cilium in Production
       </Heading>
@@ -94,7 +94,7 @@ const InProduction = () => (
         ))}
       </Slider>
       <Button
-        className="w-full xs:w-[238px] mx-auto max-w-[calc(100%-40px)] !rounded-md mt-12 sm:mt-5"
+        className="w-full xs:w-[238px] mx-auto max-w-[calc(100%-40px)] !rounded-md mt-12 md:mt-5"
         theme="primary-1"
         to="#use-cases"
       >

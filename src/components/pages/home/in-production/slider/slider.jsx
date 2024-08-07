@@ -57,7 +57,7 @@ const Slider = ({ children, className }) => {
         },
       },
       {
-        breakpoint: 640,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           dots: true,

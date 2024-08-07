@@ -1,7 +1,7 @@
 @layer components {
   .slick-slider {
     & .slick-slide > div {
-      @apply h-full;
+      @apply h-full w-full;
     }
 
     & .slick-slide {
@@ -10,10 +10,9 @@
 
     & .slick-track {
       @apply flex before:hidden after:hidden;
-      /* lg:gap-8 md:gap-5 sm:gap-4; */
 
       & > div {
-        @apply py-4 lg:px-4 md:px-2.5 sm:px-2 w-full px-4;
+        @apply py-4 lg:px-4 md:px-2.5 w-full px-4;
       }
     }
 
