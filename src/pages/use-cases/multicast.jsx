@@ -15,7 +15,9 @@ const heroContent = {
   tagline: 'eBPF-Powered Efficiency for Multicast in Kubernetes',
   subHeading: 'Smarter Network Utilization',
   description:
-    'Multicast addresses the technical challenge of efficiently delivering data from a single source to multiple recipients simultaneously over a network. Multicast has found its use case in traditional networking, but Kubernetes networking often relies on unicast and broadcast methods. In data transmission to containers within a Kubernetes cluster, packets are replicated and sent to every container regardless of their need. This approach might not be ideal for some applications with specific requirements and can lead to significant network congestion, high bandwidth, and overhead.',
+    'IP multicast is a bandwidth-conserving technology that reduces traffic by simultaneously delivering a single stream of information to potentially thousands of corporate recipients or consumers. Multicast addresses the technical challenge of efficiently delivering data from a single source to multiple recipients simultaneously over a network. Multicast has found its use case in traditional networking, but Kubernetes networking often relies on unicast and broadcast methods.
+    
+In data transmission to containers within a Kubernetes cluster, packets are replicated and sent to every container regardless of their need. This approach might not be ideal for some applications with specific requirements and can lead to significant network congestion, high bandwidth, and overhead.',
   imageSrc: CaptaineBee,
   imageAlt: 'Travel Bee',
   imageWidth: 350,
