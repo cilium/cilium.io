@@ -72,7 +72,7 @@ const InProduction = () => (
             key={index}
           >
             <div>
-              <img src={icon.src} alt={title} height={40} width={icon.width} />
+              <img src={icon.src} alt={title} height={40} width={icon.width} loading="lazy" />
               <blockquote className="mt-7 mb-5" cite={link}>
                 <p>“{text}”</p>
               </blockquote>
@@ -96,7 +96,7 @@ const InProduction = () => (
       <Button
         className="w-full xs:w-[238px] mx-auto max-w-[calc(100%-40px)] !rounded-md mt-12 md:mt-5"
         theme="primary-1"
-        to="#use-cases"
+        to="/adopters"
       >
         See All Case Studies
       </Button>
