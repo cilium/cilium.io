@@ -4,6 +4,7 @@ import React from 'react';
 import FeaturedTalks from 'components/pages/home/featured-talks';
 import Hero from 'components/pages/home/hero';
 import Highlights from 'components/pages/home/highlights';
+import InProduction from 'components/pages/home/in-production';
 import Learn from 'components/pages/home/learn';
 import TwitterCards from 'components/pages/home/twitter-cards';
 import CNCFBanner from 'components/shared/cncf-banner';
@@ -14,29 +15,10 @@ import UserCommunity from 'components/shared/user-community';
 import MainLayout from 'layouts/main';
 import caseStudiesData from 'utils/case-studies-data';
 
-const {
-  google,
-  bell,
-  homeRetailer,
-  aws,
-  wildLife,
-  adobe,
-  capitalOne,
-  alibabaCloud,
-  masmovil,
-  trip,
-  cengn,
-  digitalOcean,
-} = caseStudiesData;
+const { google, bell, aws, adobe } = caseStudiesData;
 
-const userCommunity1 = {
+const userCommunity = {
   items: [google, bell, adobe, aws],
-};
-
-const userCommunity2 = {
-  title: 'User community',
-  isTitleCentered: true,
-  items: [wildLife, adobe, capitalOne, alibabaCloud, masmovil, trip, cengn, digitalOcean],
 };
 
 const talks = [
@@ -62,15 +44,11 @@ const talks = [
 const IndexPage = () => (
   <MainLayout theme="gray">
     <Hero />
-    <UserCommunity className="pt-8 pb-10 md:pb-20 lg:pb-32" theme="gray" {...userCommunity1} />
+    <UserCommunity className="pt-8 pb-10 md:pb-20 lg:pb-32" theme="gray" {...userCommunity} />
     <Highlights />
     <CNCFBanner />
     <HandsOn />
-    <UserCommunity
-      className="py-10 mt-10 md:mt-20 md:py-20 lg:mt-28 lg:py-32"
-      theme="gray"
-      {...userCommunity2}
-    />
+    <InProduction />
     <FeaturedTalks talks={talks} />
     <Learn />
     <TwitterCards title="What people think about Cilium" />

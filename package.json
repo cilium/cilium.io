@@ -54,8 +54,10 @@
     "react-modal": "^3.16.1",
     "react-paginate": "^8.2.0",
     "react-share": "^4.4.1",
+    "react-slick": "^0.30.2",
     "react-use": "^17.4.0",
     "remark-gfm": "^1.0.0",
+    "slick-carousel": "^1.8.1",
     "yup": "^1.2.0"
   },
   "devDependencies": {

@@ -7,5 +7,6 @@
 @import './link-primary';
 @import './flat-breaks';
 @import './remove-autocomplete-styles';
+@import './slick';
 
 @import './checkbox.css';
