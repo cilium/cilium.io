@@ -57,7 +57,7 @@ const Hero = ({
         >
           {subHeading}
         </Heading>
-        <p className="text-base leading-normal">{description}</p>
+        <p className="text-base leading-normal" dangerouslySetInnerHTML={{ __html: description }} />
       </div>
       {(imageSrc || videoSrc) && (
         <div

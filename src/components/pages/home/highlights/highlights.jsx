@@ -10,6 +10,7 @@ import EgressGatewayIcon from 'icons/highlights/egress-gateway.inline.svg';
 import EncryptionIcon from 'icons/highlights/encryption.inline.svg';
 import KubeProxyIcon from 'icons/highlights/kubeproxy.inline.svg';
 import MetricsIcon from 'icons/highlights/metrics-export.inline.svg';
+import MulticastIcon from 'icons/highlights/multicast.inline.svg';
 import NativeSupportIcon from 'icons/highlights/native-support.inline.svg';
 import NetworkFlowLogs from 'icons/highlights/network-flow.inline.svg';
 import NetworkPolicyIcon from 'icons/highlights/network-policy.inline.svg';
@@ -71,6 +72,11 @@ const list = [
         icon: AuditIcon,
         title: 'Gateway API',
         path: 'gateway-api',
+      },
+      {
+        icon: MulticastIcon,
+        title: 'Multicast',
+        path: 'multicast',
       },
     ],
   },
