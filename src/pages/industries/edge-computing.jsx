@@ -6,9 +6,10 @@ import Hero from 'components/pages/industries/hero';
 import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import CloudImage1 from 'images/pages/industries/cloud-providers/cloud-1.png';
-import CloudImage2 from 'images/pages/industries/cloud-providers/cloud-2.png';
-import RouterBee from 'images/pages/industries/edge-computing/router-bee.png';
+import EdgeImage1 from 'images/pages/industries/edge-computing/edge-1.webp';
+import EdgeImage2 from 'images/pages/industries/edge-computing/edge-2.webp';
+import EdgeImage3 from 'images/pages/industries/edge-computing/edge-3.webp';
+import RouterBee from 'images/pages/industries/edge-computing/multinetwork-bee.png';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
@@ -24,10 +25,11 @@ const heroContent = {
 const kubeEdgeTestimonial = {
   logo: 'kubeedge',
   description:
-    'KubeEdge is an open source system for extending native containerized application orchestration capabilities to hosts at Edge.',
+    'KubeEdge extends cluster orchestration capabilities down to edge environments to provide unified cluster management and sophisticated edge-specific features.',
   quotedText:
     'Enabling Cilium allows us to take advantage its benefits in edge computing environments. We can deploy the application containers where is EdgeCore running and bind Cilium to connect with workloads in the cloud infrastructure. This is because Cilium can also enable WireGuard VPN with transparent encryption of traffic between Cilium-managed endpoints. We can also rely on Cilium Tetragon Security Observability and Runtime Enforcement to confine security risk and vulnerability in edge environment.',
   withPerson: true,
+  CTAtext: 'Read The Blog Post',
   name: 'Tomoya Fujita',
   role: 'Software Engineer, KubeEgde',
   url: 'https://kubeedge.io/blog/enable-cilium/',
@@ -36,10 +38,10 @@ const kubeEdgeTestimonial = {
 const bulletSection1 = {
   heading: 'Deep Visibility for Edge Operations',
   paragraphs: [
-    "Cilium revolutionizes observability in complex edge environments where traditional monitoring tools fall short. By leveraging Hubble for real-time network flow analysis and Tetragon for security event monitoring, Cilium provides unprecedented security and visibility across distributed edge topologies. Cilium's seamless integration with SIEM and monitoring platforms allows organizations to maintain consistency in their security and observability practices from cloud to edge. ",
+    "Cilium revolutionizes observability in complex edge environments where traditional monitoring tools fall short. By leveraging Hubble for real-time network flow analysis and Tetragon for security event monitoring, Cilium provides deep security and visibility across distributed edge topologies. Cilium's seamless integration with SIEM and monitoring platforms allows organizations to maintain consistency in their security and observability practices from cloud to edge. ",
     'With Cilium, operators gain deep, actionable insights into their edge infrastructure, empowering them to quickly identify, troubleshoot, and resolve issues across their entire network, thereby maintaining optimal performance and security in even the most challenging edge computing scenarios.',
   ],
-  imageSrc: CloudImage1,
+  imageSrc: EdgeImage1,
   imageAlt: 'cilium big tcp stats',
   imageRight: false,
 };
@@ -50,7 +52,7 @@ const bulletSection2 = {
     'Edge computing often means working with limited resources. Cilium is designed to be lightweight and efficient, leveraging cutting-edge eBPF technology to deliver unparalleled performance and efficiency in resource-constrained edge environments. Cilium is optimized for both x86 and ARM-based architectures. By implementing load balancing directly in XDP, Cilium achieves remarkable resource efficiency.',
     'With Cilium, businesses can maximize the potential of their edge infrastructure, handling more traffic with fewer resources. This efficiency translates to reduced hardware costs, improved energy consumption, and the ability to deploy more powerful edge applications on existing hardware.',
   ],
-  imageSrc: CloudImage2,
+  imageSrc: EdgeImage2,
   imageAlt: 'hetzner cilium test illustration',
 };
 
@@ -60,7 +62,7 @@ const bulletSection3 = {
     "Cilium's ClusterMesh feature revolutionizes edge computing by seamlessly extending Cilium's powerful networking and security capabilities across multiple clusters. It enables secure, high-performance connectivity between edge locations, data centers, and cloud resources without complex VPN setups. ClusterMesh facilitates global service discovery, unified security policies, and intelligent cross-cluster load balancing, ensuring consistent protection and optimal performance across your entire edge infrastructure.",
     'This unified approach significantly reduces operational complexity while enhancing the resilience and efficiency of distributed edge applications.',
   ],
-  imageSrc: CloudImage2,
+  imageSrc: EdgeImage3,
   imageAlt: 'hetzner cilium test illustration',
 };
 
@@ -69,10 +71,10 @@ const cloudTalks = [
     title: 'Which Edge Are You on? Service Affinity with Cilium Cluster Mesh',
     videoSrc: 'https://www.youtube.com/embed/Chk2PTS2Bwc',
     description:
-      'Cluster Mesh allows endpoints in connected clusters to communicate while providing full security policy enforcement. This talk equips the audience with an appreciation for how eBPF can ensure you communicate right on the edge.',
+      'This talk equips the audience with an appreciation for how eBPF can ensure you communicate right on the edge.',
   },
   {
-    title: 'Connecting Klusters on the Edge with Deep Dive into Cilium Cluster Mesh',
+    title: 'Connecting Clusters on the Edge with Deep Dive into Cilium Cluster Mesh',
     videoSrc: 'https://www.youtube.com/embed/UcsEVnFtrLY',
     description:
       ' This talk explores how Cluster Mesh allows endpoints in connected clusters to communicate while providing full security policy enforcement',
@@ -85,19 +87,19 @@ const cloudTalks = [
   },
 ];
 
-const MediaEntertainmentPage = () => (
+const EdgeComputingPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} imageStyle="h-auto lg:w-[350px]" />
     <Testimonial {...kubeEdgeTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection3} className="mt-10 md:mt-20 lg:mt-32" />
-    <FeaturedTalks talks={cloudTalks} />
+    <FeaturedTalks talks={cloudTalks} useDefaultBg={false} />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 
-export default MediaEntertainmentPage;
+export default EdgeComputingPage;
 
 // eslint-disable-next-line react/prop-types
 export const Head = ({ location: { pathname } }) => {

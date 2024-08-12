@@ -5,8 +5,12 @@ import React from 'react';
 import Container from 'components/shared/container/container';
 import Heading from 'components/shared/heading';
 
-const FeaturedTalks = ({ heading, talks, className }) => (
-  <div className={classNames('featured-talks bg-[#F6F7F8] py-10 md:py-20 lg:py-32', className)}>
+const FeaturedTalks = ({ heading, talks, className, useDefaultBg = true }) => (
+  <div
+    className={classNames('featured-talks py-10 md:py-20 lg:py-32', className, {
+      'bg-[#F6F7F8]': useDefaultBg,
+    })}
+  >
     <Container>
       <Heading tag="h2" className="text-center">
         {heading}
@@ -35,6 +39,7 @@ const FeaturedTalks = ({ heading, talks, className }) => (
 FeaturedTalks.propTypes = {
   heading: PropTypes.string,
   className: PropTypes.string,
+  useDefaultBg: PropTypes.bool.isRequired,
   talks: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
