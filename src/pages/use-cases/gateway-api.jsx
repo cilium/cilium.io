@@ -45,6 +45,13 @@ const sectionContent3 = {
     'Cilium aims to simplify operations by reducing the number of cloud native networking, observability, and security tools required. It natively supports not just the Gateway API but also features like a sidecar-less Service Mesh, Transparent Encryption, Network Policies, and built-in observability with Hubble. This approach makes life easier for cluster operators, who only need a single tool to manage and upgrade for many, if not all, of their Kubernetes networking needs​​.',
   videoSrc: 'https://www.youtube.com/embed/48ej2qIP92Y',
 };
+const sectionContent4 = {
+  title: 'Gateway API for Service Mesh (GAMMA)',
+  imageRight: false,
+  description:
+    'By leveraging the standard Kubernetes Gateway API for Mesh Management and Administration(GAMMA), Cilium can be used for sophisticated East-West traffic management within the cluster. This is a step forward from its pre-existing mechanism, which relies on customizing the onboard envoy proxy. Cilium support for GAMMA translates into simplicity for operators while providing advanced traffic management.',
+  videoSrc: 'https://www.youtube.com/embed/OAftVdKllak',
+};
 
 const GatewayAPIPage = () => (
   <MainLayout theme="gray">
@@ -52,6 +59,7 @@ const GatewayAPIPage = () => (
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
+    <FeatureSection {...sectionContent4} />
     <JoinUsCard className="pt-10 md:pt-20 lg:pt-28" />
   </MainLayout>
 );
