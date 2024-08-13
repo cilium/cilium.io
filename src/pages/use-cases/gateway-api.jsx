@@ -49,7 +49,7 @@ const sectionContent4 = {
   title: 'Gateway API for Service Mesh (GAMMA)',
   imageRight: false,
   description:
-    'By leveraging the standard Kubernetes Gateway API for Mesh Management and Administration(GAMMA), Cilium can be used for sophisticated East-West traffic management within the cluster. This is a step forward from its pre-existing mechanism, which relies on customizing the onboard envoy proxy. Cilium support for GAMMA translates into simplicity for operators while providing advanced traffic management.',
+    'By leveraging the standard Kubernetes Gateway API for Mesh Management and Administration(GAMMA), Cilium can be used for sophisticated East-West traffic management within the cluster. Cilium support for GAMMA translates into simplicity for operators while providing advanced traffic management.',
   videoSrc: 'https://www.youtube.com/embed/OAftVdKllak',
 };
 
