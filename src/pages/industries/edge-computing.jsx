@@ -27,7 +27,7 @@ const kubeEdgeTestimonial = {
   description:
     'KubeEdge extends cluster orchestration capabilities down to edge environments to provide unified cluster management and sophisticated edge-specific features.',
   quotedText:
-    'Enabling Cilium allows us to take advantage its benefits in edge computing environments. We can deploy the application containers where is EdgeCore running and bind Cilium to connect with workloads in the cloud infrastructure. This is because Cilium can also enable WireGuard VPN with transparent encryption of traffic between Cilium-managed endpoints. We can also rely on Cilium Tetragon Security Observability and Runtime Enforcement to confine security risk and vulnerability in edge environment.',
+    'Enabling Cilium allows us to take advantage of its benefits in edge computing environments. We can deploy the application containers where EdgeCore is running and use Cilium to connect with workloads in the cloud. Cilium can also enable WireGuard VPN for transparent encryption of traffic between Cilium-managed endpoints. We also rely on Cilium Tetragon for security observability and runtime enforcement to confine security risks and vulnerabilities in edge environments.',
   withPerson: true,
   CTAtext: 'Read The Blog Post',
   name: 'Tomoya Fujita',
