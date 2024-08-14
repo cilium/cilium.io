@@ -31,7 +31,7 @@ const kubeEdgeTestimonial = {
   withPerson: true,
   CTAtext: 'Read The Blog Post',
   name: 'Tomoya Fujita',
-  role: 'Software Engineer, KubeEgde',
+  role: 'Software Engineer, Sony',
   url: 'https://kubeedge.io/blog/enable-cilium/',
 };
 
