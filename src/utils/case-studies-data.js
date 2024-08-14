@@ -154,7 +154,7 @@ export default {
   },
   alibabaCloud: {
     iconName: 'alibabaCloud',
-    text: 'Alibaba Cloud uses Cilium together with their open source CNI as a high-performance ENI dataplane',
+    text: 'Alibaba Cloud uses Cilium as the CNI for their managed Kubernetes offering',
     links: [
       {
         linkText: 'Case Study',

@@ -108,7 +108,7 @@ const testimonials = [
     title: 'Alibaba Cloud turns to Cilium for improved Network Performance and Scalability',
 
     description:
-      'Alibaba Cloud turned to Cilium for it use of eBPF to provide faster networking and additional network policy functionalities. They chained Cilium with their open source CNI, Terway, to solve their latency issues and provide network policy capabilities, eliminating the need for an additional CNI.',
+      'Alibaba Cloud turned to Cilium for it use of eBPF to provide faster networking and additional network policy functionalities in their managed Kubernetes offering. They chained Cilium with their open source CNI, Terway, to solve their latency issues and provide network policy capabilities.',
     CTAs: [
       {
         CTAtext: 'Read The Case Study',

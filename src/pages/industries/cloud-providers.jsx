@@ -155,9 +155,9 @@ const cloudResouces = [
     imageAlt: 'microsoft office buidling',
   },
   {
-    title: 'Alibaba Cloud turns to Cilium for improved Network Performance and Scalability',
+    title: 'Alibaba Cloud Turns to Cilium for Improved Network Performance and Scalability',
     description:
-      'Alibaba cloud integrated Cilium into their Container Service for Kubernetes (ACK) network infrastructure tosolve their service and network latency issues. Additionally, Cilium also delivered significant performance improvements to their network.',
+      'Alibaba cloud integrated Cilium into their Container Service for Kubernetes (ACK) network infrastructure to solve their service and network latency issues. Additionally, Cilium also delivered significant performance improvements to their network and added network policy capabilities.',
     buttonLink: 'https://www.cncf.io/case-studies/alibaba/',
     imageSrc: AlibabaCloudOffice,
     imageAlt: 'Alibaba office buidling',
