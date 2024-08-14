@@ -8,6 +8,7 @@ import ResourcesCard from 'components/pages/industries/resources';
 import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
+import AlibabaCloudOffice from 'images/pages/industries/cloud-providers/alibabacloud-office.jpg';
 import AstronautBee from 'images/pages/industries/cloud-providers/astronaut-bee.png';
 import AWSOfficeImage from 'images/pages/industries/cloud-providers/awsoffice.png';
 import CloudImage1 from 'images/pages/industries/cloud-providers/cloud-1.png';
@@ -152,6 +153,14 @@ const cloudResouces = [
     buttonLink: 'https://www.youtube.com/watch?v=8it8Hm2F_GM',
     imageSrc: MicrosoftOffice,
     imageAlt: 'microsoft office buidling',
+  },
+  {
+    title: 'Alibaba Cloud turns to Cilium for improved Network Performance and Scalability',
+    description:
+      'Alibaba cloud integrated Cilium into their Container Service for Kubernetes (ACK) network infrastructure tosolve their service and network latency issues. Additionally, Cilium also delivered significant performance improvements to their network.',
+    buttonLink: 'https://www.cncf.io/case-studies/alibaba/',
+    imageSrc: AlibabaCloudOffice,
+    imageAlt: 'Alibaba office buidling',
   },
   {
     title: 'DigitalOcean Picks Cilium as the Preferred Networking Solution for DOKS',

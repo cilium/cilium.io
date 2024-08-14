@@ -154,8 +154,13 @@ export default {
   },
   alibabaCloud: {
     iconName: 'alibabaCloud',
-    text: 'Building High-Performance Cloud Native Pod Networks',
+    text: 'Alibaba Cloud uses Cilium together with their open source CNI as a high-performance ENI dataplane',
     links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/alibaba/',
+        linkTarget: '_blank',
+      },
       {
         linkText: 'Blog 1',
         linkUrl:
