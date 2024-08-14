@@ -50,7 +50,7 @@ const bulletSection2 = {
   heading: 'Optimized for Resource-Constrained Environments',
   paragraphs: [
     'Edge computing often means working with limited resources. Cilium is designed to be lightweight and efficient, leveraging cutting-edge eBPF technology to deliver unparalleled performance and efficiency in resource-constrained edge environments. Cilium is optimized for both x86 and ARM-based architectures. By implementing load balancing directly in XDP, Cilium achieves remarkable resource efficiency.',
-    'With Cilium, businesses can maximize the potential of their edge infrastructure, handling more traffic with fewer resources. This efficiency translates to reduced hardware costs, improved energy consumption, and the ability to deploy more powerful edge applications on existing hardware.',
+    'With Cilium, businesses can maximize the potential of their edge infrastructure, handling more traffic with fewer resources. This efficiency translates to reduced hardware costs, lower energy consumption, and the ability to deploy more powerful edge applications on existing hardware.',
   ],
   imageSrc: EdgeImage2,
   imageAlt: 'hetzner cilium test illustration',
