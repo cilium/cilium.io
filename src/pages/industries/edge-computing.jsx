@@ -16,7 +16,7 @@ const heroContent = {
   heading: 'Edge Computing',
   texts: [
     'Edge computing is transforming how businesses deploy and manage applications across distributed environments. As workloads move closer to data sources and end-users, Cilium emerges as the ideal networking solution to address the unique challenges of edge infrastructures.',
-    'In the race to bring computing power closer to data sources and users, edge deployments face security, observability, and network efficiency challenges across distributed environments. By leveraging the power of eBPF, Cilium tackles these hurdles head-on, providing a unified networking solution that secures edge infrastructures, delivers deep visibility, and optimizes performance—even in resource-constrained environments. ',
+    'In the race to bring computing power closer to data sources and users, edge deployments face security, observability, and network efficiency challenges. By leveraging the power of eBPF, Cilium tackles these hurdles head-on, providing a unified networking solution that secures edge infrastructures, delivers deep visibility, and optimizes performance—even in resource-constrained environments.',
   ],
   imageSrc: RouterBee,
   imageAlt: 'router bee',
