@@ -5,6 +5,7 @@ import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
+import AlibabCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
 import AWSLogo from 'icons/logo-aws.inline.svg';
 import AzureLogo from 'icons/logo-azure.inline.svg';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
@@ -99,6 +100,19 @@ const testimonials = [
       {
         CTAtext: 'Read The Blog Post',
         url: 'https://isovalent.com/blog/post/azure-cni-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
+      },
+    ],
+  },
+  {
+    logo: AlibabCloudLogo,
+    title: 'Alibaba Cloud turns to Cilium for improved Network Performance and Scalability',
+
+    description:
+      'Alibaba Cloud turned to Cilium for it use of eBPF to provide faster networking and additional network policy functionalities in their managed Kubernetes offering. They chained Cilium with their open source CNI, Terway, to solve their latency issues and provide network policy capabilities.',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/alibaba/',
       },
     ],
   },
