@@ -91,7 +91,7 @@ const Community = ({ className, theme, isTitleCentered }) => (
             <Icon className="shrink-0 h-9 w-9 md:h-11 md:w-11" aria-label={`${logoName} logo`} />
             <span
               className={classNames(
-                'ml-4 text-center font-semibold leading-snug truncate md:m-0 md:mt-[18px] md:text-lg md:leading-snug lg:whitespace-normal xl:leading-none',
+                'ml-4 text-center font-semibold leading-snug truncate md:m-0 md:mt-[18px] md:text-lg md:leading-snug lg:whitespace-normal xl:leading-tight',
                 titleWidth
               )}
             >
