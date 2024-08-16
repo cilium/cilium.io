@@ -31,7 +31,7 @@ const items = [
     icon: TwitterIcon,
     logoName: 'Twitter',
     title: 'Follow us on X',
-    titleWidth: 'lg:w-24',
+    titleWidth: 'xl:w-24',
     url: 'https://x.com/ciliumproject',
     target: '_blank',
   },
@@ -46,7 +46,7 @@ const items = [
     icon: LinkedinIcon,
     logoName: 'LinkedIn',
     title: 'Network with us on LinkedIn',
-    titleWidth: 'lg:w-40',
+    titleWidth: 'xl:w-40',
     url: 'https://www.linkedin.com/company/cilium/',
     target: '_blank',
   },
@@ -75,13 +75,13 @@ const Community = ({ className, theme, isTitleCentered }) => (
       <Heading className={classNames(isTitleCentered && 'text-center')} tag="h2">
         {title}
       </Heading>
-      <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-10 md:gap-5 lg:mt-14 lg:grid-cols-5">
+      <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-10 md:gap-5 lg:mt-14 lg:grid-cols-3 xl:grid-cols-5">
         {items.map(({ icon: Icon, logoName, title, url, target, titleWidth }, index) => (
           <Link
             to={url}
             target={target}
             className={classNames(
-              'flex items-center rounded-lg  p-6 md:flex-col md:px-7 md:pb-8 md:pt-7 lg:pb-10',
+              'flex items-center rounded-lg p-6 md:flex-col md:pb-8 md:pt-7 lg:pb-10 xl:px-7',
               themeClassNames[theme].card
             )}
             key={index}
