@@ -6,6 +6,7 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import GithubIcon from 'icons/github.inline.svg';
+import LinkedinIcon from 'icons/linkedin-square.inline.svg';
 import SlackIcon from 'icons/slack.inline.svg';
 import TwitterIcon from 'icons/twitter.inline.svg';
 import YoutubeIcon from 'icons/youtube.inline.svg';
@@ -30,6 +31,7 @@ const items = [
     icon: TwitterIcon,
     logoName: 'Twitter',
     title: 'Follow us on X',
+    titleWidth: 'lg:w-24',
     url: 'https://x.com/ciliumproject',
     target: '_blank',
   },
@@ -38,6 +40,14 @@ const items = [
     logoName: 'YouTube',
     title: 'Watch Echo Livestream',
     url: 'https://www.youtube.com/channel/UCJFUxkVQTBJh3LD1wYBWvuQ',
+    target: '_blank',
+  },
+  {
+    icon: LinkedinIcon,
+    logoName: 'LinkedIn',
+    title: 'Network with us on LinkedIn',
+    titleWidth: 'lg:w-40',
+    url: 'https://www.linkedin.com/company/cilium/',
     target: '_blank',
   },
 ];
@@ -65,8 +75,8 @@ const Community = ({ className, theme, isTitleCentered }) => (
       <Heading className={classNames(isTitleCentered && 'text-center')} tag="h2">
         {title}
       </Heading>
-      <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-10 md:gap-6 lg:mt-14 lg:grid-cols-4 lg:gap-8">
-        {items.map(({ icon: Icon, logoName, title, url, target }, index) => (
+      <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-10 md:gap-5 lg:mt-14 lg:grid-cols-5">
+        {items.map(({ icon: Icon, logoName, title, url, target, titleWidth }, index) => (
           <Link
             to={url}
             target={target}
@@ -78,8 +88,13 @@ const Community = ({ className, theme, isTitleCentered }) => (
             type="text"
             theme="black"
           >
-            <Icon className="h-9 w-9 md:h-11 md:w-11" aria-label={`${logoName} logo`} />
-            <span className="ml-4 text-center font-semibold leading-snug md:m-0 md:mt-[18px] md:text-lg md:leading-snug xl:leading-none">
+            <Icon className="shrink-0 h-9 w-9 md:h-11 md:w-11" aria-label={`${logoName} logo`} />
+            <span
+              className={classNames(
+                'ml-4 text-center font-semibold leading-snug truncate md:m-0 md:mt-[18px] md:text-lg md:leading-snug lg:whitespace-normal xl:leading-none',
+                titleWidth
+              )}
+            >
               {title}
             </span>
           </Link>
