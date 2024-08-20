@@ -5,11 +5,11 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
-import githubIcon from 'images/pages/home/community/github.svg';
-import linkedinIcon from 'images/pages/home/community/linkedin.svg';
-import slackIcon from 'images/pages/home/community/slack.svg';
-import xIcon from 'images/pages/home/community/x.svg';
-import youtubeIcon from 'images/pages/home/community/youtube.svg';
+import githubIcon from 'images/social/github.svg';
+import linkedinIcon from 'images/social/linkedin.svg';
+import slackIcon from 'images/social/slack.svg';
+import xIcon from 'images/social/x.svg';
+import youtubeIcon from 'images/social/youtube.svg';
 
 const title = 'Community';
 const items = [
@@ -42,8 +42,8 @@ const items = [
   },
   {
     icon: linkedinIcon,
-    title: 'Network with us on LinkedIn',
-    titleWidth: 'xl:w-40',
+    title: 'Follow us on LinkedIn',
+    titleWidth: 'xl:w-[106px]',
     url: 'https://www.linkedin.com/company/cilium/',
     target: '_blank',
   },
