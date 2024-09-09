@@ -14,8 +14,10 @@ import DbSchenkerLogo from 'icons/logo-dbschenker.inline.svg';
 import EficodeLogo from 'icons/logo-efficode.inline.svg';
 import GoogleCloudLogo from 'icons/logo-googlecloud.inline.svg';
 import HetznerLogo from 'icons/logo-hetzner.inline.svg';
+import KubeEdgeLogo from 'icons/logo-kubeedge.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import PalarkLogo from 'icons/logo-palark.inline.svg';
+import RocheLogo from 'icons/logo-roche.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
 import QuoteIcon from 'icons/quote.inline.svg';
@@ -35,6 +37,8 @@ const logos = {
   azure: AzureLogo,
   googleCloud: GoogleCloudLogo,
   hetzner: HetznerLogo,
+  kubeedge: KubeEdgeLogo,
+  roche: RocheLogo,
 };
 
 const AdopterTestimonial = ({

@@ -34,6 +34,7 @@ const navigation = [
       { name: 'E-commerce', href: '/industries/e-commerce' },
       { name: 'Consulting', href: '/industries/consulting' },
       { name: 'Security', href: '/industries/security' },
+      { name: 'Edge Computing', href: '/industries/edge-computing' },
     ],
   },
 
