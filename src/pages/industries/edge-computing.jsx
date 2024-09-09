@@ -35,14 +35,27 @@ const kubeEdgeTestimonial = {
   url: 'https://kubeedge.io/blog/enable-cilium/',
 };
 
+const rocheTestimonial = {
+  logo: 'roche',
+  description:
+    'Roche, one of the largest global healthcare companies, has embarked on the challenging journey of building a modern, cloud native edge compute platform that helps run applications on customer premises, such as laboratories or hospitals.',
+  quotedText:
+    "We migrated to Cilium; all of our edge clusters are running Cilium today. With that, we've increased our network performance and leveled up our network security and observability with Hubble. At the very end, we brought the firewall closer to the workloads and managed edge-to-network traffic securely using a GitOps approach. ",
+  withPerson: true,
+  CTAtext: 'Watch The Talk',
+  name: 'Hector Monsalve',
+  role: 'Kubernetes Platform Engineer, Roche',
+  url: 'https://www.youtube.com/watch?v=kC8efabCH6s',
+};
+
 const bulletSection1 = {
   heading: 'Deep Visibility for Edge Operations',
   paragraphs: [
     "Cilium revolutionizes observability in complex edge environments where traditional monitoring tools fall short. By leveraging Hubble for real-time network flow analysis and Tetragon for security event monitoring, Cilium provides deep security and visibility across distributed edge topologies. Cilium's seamless integration with SIEM and monitoring platforms allows organizations to maintain consistency in their security and observability practices from cloud to edge. ",
     'With Cilium, operators gain deep, actionable insights into their edge infrastructure, empowering them to quickly identify, troubleshoot, and resolve issues across their entire network, thereby maintaining optimal performance and security in even the most challenging edge computing scenarios.',
   ],
-  imageSrc: EdgeImage1,
-  imageAlt: 'cilium big tcp stats',
+  imageSrc: EdgeImage2,
+  imageAlt: 'cilium mesh illustration',
   imageRight: false,
 };
 
@@ -52,8 +65,8 @@ const bulletSection2 = {
     'Edge computing often means working with limited resources. Cilium is designed to be lightweight and efficient, leveraging cutting-edge eBPF technology to deliver unparalleled performance and efficiency in resource-constrained edge environments. Cilium is optimized for both x86 and ARM-based architectures. By implementing load balancing directly in XDP, Cilium achieves remarkable resource efficiency.',
     'With Cilium, businesses can maximize the potential of their edge infrastructure, handling more traffic with fewer resources. This efficiency translates to reduced hardware costs, improved energy consumption, and the ability to deploy more powerful edge applications on existing hardware.',
   ],
-  imageSrc: EdgeImage2,
-  imageAlt: 'hetzner cilium test illustration',
+  imageSrc: EdgeImage1,
+  imageAlt: 'cilium multi-cluster illustration',
 };
 
 const bulletSection3 = {
@@ -80,20 +93,21 @@ const cloudTalks = [
       ' This talk explores how Cluster Mesh allows endpoints in connected clusters to communicate while providing full security policy enforcement',
   },
   {
-    title: 'Enabling eBPF Super Powers on ARM64 with Cilium',
-    videoSrc: 'https://www.youtube.com/embed/Sk_Kn-1pWt8',
+    title: 'Meshing It up Securely: How Roche Manages Network Connectivity for 1000+ Edge Clusters',
+    videoSrc: 'https://www.youtube.com/embed/kC8efabCH6s?si=Pbs7_jaDxplL9s6-"',
     description:
-      'This talk from Jianlin Lv provides some historical into the work done to support Cilium on Arm64',
+      'This talk discuss the challenges of highly protected environments and show how leveraging Cilium Service Mesh can bring “the firewall” closer to the workloads',
   },
 ];
 
 const EdgeComputingPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} imageStyle="h-auto lg:w-[350px]" />
-    <Testimonial {...kubeEdgeTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
-    <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
-    <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
+    <Testimonial {...rocheTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection3} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
+    <Testimonial {...kubeEdgeTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
     <FeaturedTalks talks={cloudTalks} useDefaultBg={false} />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
