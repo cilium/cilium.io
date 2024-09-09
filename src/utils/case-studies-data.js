@@ -996,6 +996,18 @@ export default {
       },
     ],
   },
+  cloutomate: {
+    iconName: 'cloutomate',
+    text: '<b>Cloutomate</b> uses Cilium as CNI for itself and its customers installations',
+  },
+  qpoint: {
+    iconName: 'qpoint',
+    text: '<b>Qpoint</b> uses Cilium as a CNI for their eBPF-based egress observability platform',
+  },
+  seatgeek: {
+    iconName: 'seatgeek',
+    text: '<b>SeatGeek</b> uses Cilium as the default CNI for their AWS-hosted clusters',
+  },
   archer: {
     iconName: 'archer',
     text: '<b>Archer Aviation</b> uses Cilium in their Kubernetes cluster',
