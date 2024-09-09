@@ -65,7 +65,7 @@ const bulletSection2 = {
     'Edge computing often means working with limited resources. Cilium is designed to be lightweight and efficient, leveraging cutting-edge eBPF technology to deliver unparalleled performance and efficiency in resource-constrained edge environments. Cilium is optimized for both x86 and ARM-based architectures. By implementing load balancing directly in XDP, Cilium achieves remarkable resource efficiency.',
     'With Cilium, businesses can maximize the potential of their edge infrastructure, handling more traffic with fewer resources. This efficiency translates to reduced hardware costs, lower energy consumption, and the ability to deploy more powerful edge applications on existing hardware.',
   ],
-  imageSrc: EdgeImage1,
+  imageSrc: EdgeImage3,
   imageAlt: 'cilium multi-cluster illustration',
 };
 
@@ -75,7 +75,7 @@ const bulletSection3 = {
     "Cilium's ClusterMesh feature revolutionizes edge computing by seamlessly extending Cilium's powerful networking and security capabilities across multiple clusters. It enables secure, high-performance connectivity between edge locations, data centers, and cloud resources without complex VPN setups. ClusterMesh facilitates global service discovery, unified security policies, and intelligent cross-cluster load balancing, ensuring consistent protection and optimal performance across your entire edge infrastructure.",
     'This unified approach significantly reduces operational complexity while enhancing the resilience and efficiency of distributed edge applications.',
   ],
-  imageSrc: EdgeImage3,
+  imageSrc: EdgeImage1,
   imageAlt: 'hetzner cilium test illustration',
 };
 
