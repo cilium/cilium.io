@@ -1002,7 +1002,7 @@ export default {
   },
   qpoint: {
     iconName: 'qpoint',
-    text: '<b>Qpoint</b> uses Cilium as a CNI for their eBPF-based egress observability platform',
+    text: '<b>Qpoint</b> uses Cilium as the CNI for their eBPF-based egress observability platform',
   },
   seatgeek: {
     iconName: 'seatgeek',
