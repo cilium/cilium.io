@@ -998,7 +998,7 @@ export default {
   },
   cloutomate: {
     iconName: 'cloutomate',
-    text: '<b>Cloutomate</b> uses Cilium as CNI for itself and its customers installations',
+    text: '<b>Cloutomate</b> uses Cilium as the CNI for their internal and customer installations',
   },
   qpoint: {
     iconName: 'qpoint',
