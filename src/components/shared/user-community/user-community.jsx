@@ -44,6 +44,7 @@ import CanonicalLogo from './images/canonical.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
+import CloutomateLogo from './images/cloutomate.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
 import CybozuLogo from './images/cybozu.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
@@ -101,6 +102,7 @@ import PolarSignalsLogo from './images/polarsignals.inline.svg';
 import PolverioLogo from './images/polverio.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
 import ProtonLogo from './images/proton.inline.svg';
+import QpointLogo from './images/qpoint.inline.svg';
 import RabobankLogo from './images/rabobank.inline.svg';
 import RadioFranceLogo from './images/radiofrance.inline.svg';
 import RafayLogo from './images/rafay.inline.svg';
@@ -114,6 +116,7 @@ import SapianLogo from './images/sapian.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SchubergPhilisLogo from './images/schuberg-philis.inline.svg';
 import SealosLogo from './images/sealos.inline.svg';
+import SeatGeekLogo from './images/seatgeek.inline.svg';
 import SianalyticsLogo from './images/sianalytics.inline.svg';
 import SicrediLogo from './images/sicredi.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
@@ -146,6 +149,9 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  cloutomate: CloutomateLogo,
+  qpoint: QpointLogo,
+  seatgeek: SeatGeekLogo,
   archer: ArcherLogo,
   kakao: KakaoLogo,
   samsungads: SamsungAdsLogo,

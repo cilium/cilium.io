@@ -10,6 +10,9 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  cloutomate,
+  qpoint,
+  seatgeek,
   archer,
   kakao,
   samsungads,
@@ -237,6 +240,9 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    cloutomate,
+    qpoint,
+    seatgeek,
     archer,
     VMwareTanzu,
     bitnami,
