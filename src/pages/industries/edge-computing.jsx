@@ -40,7 +40,7 @@ const rocheTestimonial = {
   description:
     'Roche, one of the largest global healthcare companies, has embarked on the challenging journey of building a modern, cloud native edge compute platform that helps run applications on customer premises, such as laboratories or hospitals.',
   quotedText:
-    "We migrated to Cilium; all of our edge clusters are running Cilium today. With that, we've increased our network performance and leveled up our network security and observability with Hubble. At the very end, we brought the firewall closer to the workloads and managed edge-to-network traffic securely using a GitOps approach. ",
+    "All of our edge clusters are running Cilium today. With that, we've increased our network performance and leveled up our network security and observability with Hubble. We brought the firewall closer to the workloads and can manage edge-to-network traffic securely using a GitOps approach.",
   withPerson: true,
   CTAtext: 'Watch The Talk',
   name: 'Hector Monsalve',
