@@ -16,7 +16,7 @@ const heroContent = {
   heading: 'Edge Computing',
   texts: [
     'Edge computing is transforming how businesses deploy and manage applications across distributed environments. As workloads move closer to data sources and end-users, Cilium emerges as the ideal networking solution to address the unique challenges of edge infrastructures.',
-    'In the race to bring computing power closer to data sources and users, edge deployments face security, observability, and network efficiency challenges across distributed environments. By leveraging the power of eBPF, Cilium tackles these hurdles head-on, providing a unified networking solution that secures edge infrastructures, delivers deep visibility, and optimizes performance—even in resource-constrained environments. ',
+    'In the race to bring computing power closer to data sources and users, edge deployments face security, observability, and network efficiency challenges. By leveraging the power of eBPF, Cilium tackles these hurdles head-on, providing a unified networking solution that secures edge infrastructures, delivers deep visibility, and optimizes performance—even in resource-constrained environments.',
   ],
   imageSrc: RouterBee,
   imageAlt: 'router bee',
@@ -27,11 +27,11 @@ const kubeEdgeTestimonial = {
   description:
     'KubeEdge extends cluster orchestration capabilities down to edge environments to provide unified cluster management and sophisticated edge-specific features.',
   quotedText:
-    'Enabling Cilium allows us to take advantage its benefits in edge computing environments. We can deploy the application containers where is EdgeCore running and bind Cilium to connect with workloads in the cloud infrastructure. This is because Cilium can also enable WireGuard VPN with transparent encryption of traffic between Cilium-managed endpoints. We can also rely on Cilium Tetragon Security Observability and Runtime Enforcement to confine security risk and vulnerability in edge environment.',
+    'Enabling Cilium allows us to take advantage of its benefits in edge computing environments. We can deploy the application containers where EdgeCore is running and use Cilium to connect with workloads in the cloud. Cilium can also enable WireGuard VPN for transparent encryption of traffic between Cilium-managed endpoints. We also rely on Cilium Tetragon for security observability and runtime enforcement to confine security risks and vulnerabilities in edge environments.',
   withPerson: true,
   CTAtext: 'Read The Blog Post',
   name: 'Tomoya Fujita',
-  role: 'Software Engineer, KubeEgde',
+  role: 'Software Engineer, Sony',
   url: 'https://kubeedge.io/blog/enable-cilium/',
 };
 
@@ -63,7 +63,7 @@ const bulletSection2 = {
   heading: 'Optimized for Resource-Constrained Environments',
   paragraphs: [
     'Edge computing often means working with limited resources. Cilium is designed to be lightweight and efficient, leveraging cutting-edge eBPF technology to deliver unparalleled performance and efficiency in resource-constrained edge environments. Cilium is optimized for both x86 and ARM-based architectures. By implementing load balancing directly in XDP, Cilium achieves remarkable resource efficiency.',
-    'With Cilium, businesses can maximize the potential of their edge infrastructure, handling more traffic with fewer resources. This efficiency translates to reduced hardware costs, improved energy consumption, and the ability to deploy more powerful edge applications on existing hardware.',
+    'With Cilium, businesses can maximize the potential of their edge infrastructure, handling more traffic with fewer resources. This efficiency translates to reduced hardware costs, lower energy consumption, and the ability to deploy more powerful edge applications on existing hardware.',
   ],
   imageSrc: EdgeImage1,
   imageAlt: 'cilium multi-cluster illustration',
