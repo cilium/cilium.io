@@ -996,6 +996,10 @@ export default {
       },
     ],
   },
+  nutanix: {
+    iconName: 'nutanix',
+    text: '<b>Nutanix</b> uses Cilium as the default CNI plugin for NKP (Nutanix Kubernetes Platform)',
+  },
   cloutomate: {
     iconName: 'cloutomate',
     text: '<b>Cloutomate</b> uses Cilium as the CNI for their internal and customer installations',

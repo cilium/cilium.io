@@ -91,6 +91,7 @@ import NetwaysLogo from './images/netways.inline.svg';
 import NexxiotLogo from './images/nexxiot.inline.svg';
 import NineLogo from './images/nine.inline.svg';
 import NorthflankLogo from './images/northflank.inline.svg';
+import NutanixLogo from './images/nutanix.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
@@ -149,6 +150,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  nutanix: NutanixLogo,
   cloutomate: CloutomateLogo,
   qpoint: QpointLogo,
   seatgeek: SeatGeekLogo,

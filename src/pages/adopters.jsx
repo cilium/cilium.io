@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  nutanix,
   cloutomate,
   qpoint,
   seatgeek,
@@ -240,6 +241,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    nutanix,
     cloutomate,
     qpoint,
     seatgeek,
