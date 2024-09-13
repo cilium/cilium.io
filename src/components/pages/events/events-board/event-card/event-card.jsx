@@ -18,7 +18,7 @@ const EventCover = ({ ogImage, title }) => {
 
   return ogImage ? (
     <GatsbyImage
-      imgClassName="self-center rounded-t-lg h-full max-h-[261px] sm:max-h-[221px] lg:max-h-[180px]"
+      className="h-[261px] rounded-t-lg lg:h-[180px] sm:h-[221px]"
       image={getImage(ogImage)}
       objectFit="cover"
       alt={title}
