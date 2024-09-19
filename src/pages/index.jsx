@@ -6,7 +6,6 @@ import Hero from 'components/pages/home/hero';
 import Highlights from 'components/pages/home/highlights';
 import InProduction from 'components/pages/home/in-production';
 import Learn from 'components/pages/home/learn';
-import TwitterCards from 'components/pages/home/twitter-cards';
 import CNCFBanner from 'components/shared/cncf-banner';
 import Community from 'components/shared/community';
 import HandsOn from 'components/shared/hands-on';
@@ -51,7 +50,6 @@ const IndexPage = () => (
     <InProduction />
     <FeaturedTalks talks={talks} />
     <Learn />
-    <TwitterCards title="What people think about Cilium" />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
