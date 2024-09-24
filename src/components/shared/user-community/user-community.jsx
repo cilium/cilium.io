@@ -63,11 +63,13 @@ import GcoreLogo from './images/gcore.inline.svg';
 import GdataLogo from './images/gdata.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
+import IcosLogo from './images/icos.inline.svg';
 import IlionxLogo from './images/ilionx.inline.svg';
 import ImmerokLogo from './images/immerok.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
 import InnoqLogo from './images/innoq.inline.svg';
 import IsovalentLogo from './images/isovalent.inline.svg';
+import JarLogo from './images/jar.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
 import JyskLogo from './images/jysk-tech.inline.svg';
 import KakaoLogo from './images/kakao.inline.svg';
@@ -150,6 +152,8 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  icos: IcosLogo,
+  jar: JarLogo,
   nutanix: NutanixLogo,
   cloutomate: CloutomateLogo,
   qpoint: QpointLogo,
