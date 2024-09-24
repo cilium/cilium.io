@@ -1009,7 +1009,7 @@ export default {
   },
   jar: {
     iconName: 'jar',
-    text: '<b>Jar</b> uses Cilium as the default CNI plugin for all their Kubernetes clusters',
+    text: '<b>Jar</b> uses Cilium as the default CNI plugin for their Kubernetes clusters',
   },
   nutanix: {
     iconName: 'nutanix',
