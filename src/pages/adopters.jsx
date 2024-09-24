@@ -10,6 +10,8 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  icos,
+  jar,
   nutanix,
   cloutomate,
   qpoint,
@@ -161,6 +163,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    icos,
     kakao,
     samsungads,
     nemlig,
@@ -241,6 +244,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    jar,
     nutanix,
     cloutomate,
     qpoint,

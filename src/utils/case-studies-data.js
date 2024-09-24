@@ -996,6 +996,21 @@ export default {
       },
     ],
   },
+  icos: {
+    iconName: 'icos',
+    text: '<b>ICOS project</b> uses Cilium and Tetragon to enhance its network security and visibility, and to create comprehensive audit reports',
+    links: [
+      {
+        linkText: 'Read Blog post',
+        linkUrl: 'https://www.icos-project.eu/blog/security-with-cilium-tetragon',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  jar: {
+    iconName: 'jar',
+    text: '<b>Jar</b> uses Cilium as the default CNI plugin for all their Kubernetes clusters',
+  },
   nutanix: {
     iconName: 'nutanix',
     text: '<b>Nutanix</b> uses Cilium as the default CNI plugin for NKP (Nutanix Kubernetes Platform)',
