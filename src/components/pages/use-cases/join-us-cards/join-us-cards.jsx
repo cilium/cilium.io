@@ -34,12 +34,22 @@ const items = [
     buttonText: 'Get Help',
     buttonLink: '/get-help/',
   },
+  {
+    icon: 'lab',
+    title: 'Try a Lab',
+    description:
+      'Deep dive into Cilium and its features with labs provided by companies within the Cilium ecosystem',
+    buttonText: 'Try a Lab',
+    buttonLink: 'https://cilium.io/labs/categories/getting-started/',
+    buttonTarget: '_blank',
+  },
 ];
 
 const JoinUsCard = ({ className }) => (
   <section className="bg-gray-4">
     <Container
       className={classNames('flex flex-col items-center pb-16 md:pb-20 lg:pb-28', className)}
+      size="lg"
     >
       <Heading
         className="mb-8 max-w-full text-center leading-tight md:mb-10 lg:mb-14 lg:max-w-[70%] lg:leading-tight xl:leading-tight"
@@ -48,11 +58,13 @@ const JoinUsCard = ({ className }) => (
       >
         Want to Learn More?
       </Heading>
-      <div className="flex flex-col flex-wrap gap-8 md:grid md:grid-cols-2 md:gap-8 lg:grid lg:grid-cols-3">
+      <ul className="grid gap-8 grid-cols-1 max-w-[1420px] mx-auto md:grid-cols-2 md:gap-8 2xl:grid-cols-4">
         {items.map((item, index) => (
-          <Card {...item} key={item.title + index} />
+          <li key={item.title + index}>
+            <Card {...item} />
+          </li>
         ))}
-      </div>
+      </ul>
     </Container>
   </section>
 );
