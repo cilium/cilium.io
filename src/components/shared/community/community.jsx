@@ -5,6 +5,7 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
+import labIcon from 'images/lab.svg';
 import githubIcon from 'images/social/github.svg';
 import linkedinIcon from 'images/social/linkedin.svg';
 import slackIcon from 'images/social/slack.svg';
@@ -16,21 +17,21 @@ const items = [
   {
     icon: slackIcon,
     title: 'Join our Slack channel',
-    titleWidth: 'xl:w-[122px]',
+    titleWidth: 'xl:w-32',
     url: 'https://slack.cilium.io',
     target: '_blank',
   },
   {
     icon: githubIcon,
     title: 'Contribute on GitHub',
-    titleWidth: 'xl:w-28',
+    titleWidth: 'xl:w-24',
     url: 'https://github.com/cilium/cilium',
     target: '_blank',
   },
   {
     icon: xIcon,
     title: 'Follow us on X',
-    titleWidth: 'xl:w-24',
+    titleWidth: 'xl:w-20',
     url: 'https://x.com/ciliumproject',
     target: '_blank',
   },
@@ -43,9 +44,15 @@ const items = [
   {
     icon: linkedinIcon,
     title: 'Follow us on LinkedIn',
-    titleWidth: 'xl:w-[106px]',
+    titleWidth: 'xl:w-24',
     url: 'https://www.linkedin.com/company/cilium/',
     target: '_blank',
+  },
+  {
+    icon: labIcon,
+    title: 'Explore Cilium Labs',
+    titleWidth: 'xl:w-32',
+    url: '/labs/categories/getting-started/',
   },
 ];
 
@@ -72,38 +79,39 @@ const Community = ({ className, theme, isTitleCentered }) => (
       <Heading className={classNames(isTitleCentered && 'text-center')} tag="h2">
         {title}
       </Heading>
-      <div className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-10 md:gap-5 lg:mt-12 lg:grid-cols-3 lg:mb-1.5 xl:grid-cols-5">
+      <ul className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-10 md:gap-5 lg:mt-14 lg:grid-cols-3 lg:mb-1.5 xl:grid-cols-6 xl:gap-8">
         {items.map(({ icon, title, url, target, titleWidth }, index) => (
-          <Link
-            to={url}
-            target={target}
-            className={classNames(
-              'flex items-center rounded-lg p-6 md:flex-col md:pb-8 md:pt-7 lg:pt-9 lg:pb-11 xl:px-7',
-              themeClassNames[theme].card
-            )}
-            key={index}
-            type="text"
-            theme="black"
-          >
-            <img
-              className="shrink-0 h-9 w-9 md:h-11 md:w-11"
-              src={icon}
-              alt=""
-              width="36"
-              height="36"
-              loading="lazy"
-            />
-            <span
+          <li key={index}>
+            <Link
+              to={url}
+              target={target}
               className={classNames(
-                'ml-4 text-center font-semibold leading-snug truncate md:m-0 md:mt-[18px] md:text-lg md:leading-snug lg:whitespace-normal xl:leading-tight',
-                titleWidth
+                'flex items-center rounded-lg p-6 md:flex-col md:pb-8 md:pt-7 lg:pt-9 lg:pb-11 xl:p-7',
+                themeClassNames[theme].card
               )}
+              type="text"
+              theme="black"
             >
-              {title}
-            </span>
-          </Link>
+              <img
+                className="shrink-0 h-9 w-9 md:h-11 md:w-11"
+                src={icon}
+                alt=""
+                width="36"
+                height="36"
+                loading="lazy"
+              />
+              <span
+                className={classNames(
+                  'ml-4 text-center font-bold leading-snug truncate md:m-0 md:mt-[18px] md:text-lg md:leading-snug lg:whitespace-normal xl:mt-3.5 xl:text-base xl:leading-tight',
+                  titleWidth
+                )}
+              >
+                {title}
+              </span>
+            </Link>
+          </li>
         ))}
-      </div>
+      </ul>
     </Container>
   </section>
 );
