@@ -6,7 +6,7 @@ categories:
   - Networking
 place: Online
 title: 'Cilium Traffic Optimization'
-ogSummary: 'In this lab, using a Star Wars-inspired theme based on the iconic “These are not the droids you’re looking for” scene, you’ll explore how these features can enhance service performance and reduce latency'
+ogSummary: 'In this lab, using a Star Wars-inspired theme based on the iconic “These are not the droids you’re looking for” scene, you’ll explore how Local Redirect Policies, topology-aware load balancing, and node-local optimizations can enhance service performance and reduce latency'
 draft: false
 from: 'Isovalent'
 ---
