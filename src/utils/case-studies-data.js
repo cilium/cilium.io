@@ -16,7 +16,7 @@ export default {
   },
   palark: {
     iconName: 'palark',
-    text: 'Palark uses Cilium as the CNI for the customer infrastructure that they manage',
+    text: '<b>Palark</b> uses Cilium as the CNI for the customer infrastructure that they manage',
     links: [
       {
         linkText: 'Read Blog',
@@ -27,7 +27,7 @@ export default {
   },
   ascend: {
     iconName: 'ascend',
-    text: 'Ascend uses Cilium as their one CNI across multiple cloud providers',
+    text: '<b>Ascend</b> uses Cilium as their one CNI across multiple cloud providers',
     links: [
       {
         linkText: 'Read Case Study',
@@ -38,7 +38,7 @@ export default {
   },
   sandp: {
     iconName: 'sandp',
-    text: 'S&P Global uses Cilium as its CNI',
+    text: '<b>S&P Global</b> uses Cilium as its CNI',
     links: [
       {
         linkText: 'Case Study',
@@ -54,7 +54,7 @@ export default {
   },
   seznam: {
     iconName: 'seznam',
-    text: 'Seznam.cz uses Cilium for Layer 4 Load Balancing with XDP',
+    text: '<b>Seznam.cz</b> uses Cilium for Layer 4 Load Balancing with XDP',
     links: [
       {
         linkText: 'Case Study',
@@ -86,7 +86,7 @@ export default {
   },
   ect888: {
     iconName: 'ect888',
-    text: 'ect888 uses Cilium as their CNI and for load balancing',
+    text: '<b>ect888</b> uses Cilium as their CNI and for load balancing',
     links: [
       {
         linkText: 'Read blog',
@@ -96,7 +96,7 @@ export default {
   },
   mobilab: {
     iconName: 'mobilab',
-    text: 'Mobilabs uses Cilium as the CNI for their internal cloud',
+    text: '<b>Mobilabs</b> uses Cilium as the CNI for their internal cloud',
     links: [
       {
         linkText: 'Read blog',
@@ -107,7 +107,7 @@ export default {
   },
   skybet: {
     iconName: 'skybet',
-    text: 'Skybet uses Cilium as their CNI',
+    text: '<b>Skybet</b> uses Cilium as their CNI',
     links: [
       {
         linkText: 'Read blog',
@@ -119,6 +119,11 @@ export default {
     iconName: 'adobe',
     text: 'What Makes a Good Multi-tenant Kubernetes Solution',
     links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://isovalent.com/blog/post/adobe-achieves-with-isovalent-and-cilium/',
+        linkTarget: '_blank',
+      },
       {
         linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=7UQ2CU6UEGY&ab_channel=eBPFSummit',
@@ -154,7 +159,7 @@ export default {
   },
   alibabaCloud: {
     iconName: 'alibabaCloud',
-    text: 'Alibaba Cloud uses Cilium as the CNI for their managed Kubernetes offering',
+    text: '<b>Alibaba Cloud</b> uses Cilium as the CNI for their managed Kubernetes offering',
     links: [
       {
         linkText: 'Case Study',
@@ -187,7 +192,7 @@ export default {
   },
   nexxiot: {
     iconName: 'nexxiot',
-    text: 'Nexxiot using Cilium as the CNI plugin on EKS for its IoT SaaS',
+    text: '<b>Nexxiot</b> using Cilium as the CNI plugin on EKS for its IoT SaaS',
     links: [
       {
         linkText: 'Read Case Study',
@@ -198,7 +203,7 @@ export default {
   },
   vshn: {
     iconName: 'vshn',
-    text: 'VSHN uses Cilium for multi-tenant networking on APPUiO Cloud and OpenShift',
+    text: '<b>VSHN</b> uses Cilium for multi-tenant networking on APPUiO Cloud and OpenShift',
     links: [
       {
         linkText: 'Read case study',
@@ -214,7 +219,7 @@ export default {
   },
   postfinance: {
     iconName: 'postfinance',
-    text: 'PostFinance uses Cilium as their CNI for all mission critical, on premise k8s clusters',
+    text: '<b>PostFinance</b> uses Cilium as their CNI for all mission critical, on premise k8s clusters',
     links: [
       {
         linkText: 'Case Study 1',
@@ -235,7 +240,7 @@ export default {
   },
   uswitch: {
     iconName: 'uswitch',
-    text: 'Uswitch uses Cilium Clustermesh for multi cluster networking',
+    text: '<b>Uswitch</b> uses Cilium Clustermesh for multi cluster networking',
     links: [
       {
         linkText: 'Blog',
@@ -250,7 +255,7 @@ export default {
   },
   trip: {
     iconName: 'trip',
-    text: 'Trip.com uses Cilium both on premise and in AWS',
+    text: '<b>Trip.com</b> uses Cilium both on premise and in AWS',
     links: [
       {
         linkText: 'Case Study',
@@ -285,7 +290,7 @@ export default {
   },
   digitalOcean: {
     iconName: 'digitalOcean',
-    text: 'DigitalOcean uses Cilium as the preferred networking, security, and observability solution for their DOKS platform and internal Kubernetes clusters',
+    text: '<b>DigitalOcean</b> uses Cilium as the preferred networking, security, and observability solution for their DOKS platform and internal Kubernetes clusters',
     links: [
       {
         linkText: 'Case Study',
@@ -301,7 +306,7 @@ export default {
   },
   google: {
     iconName: 'google',
-    text: 'Google chooses Cilium for Google Kubernetes Engine (GKE) networking',
+    text: '<b>Google</b> chooses Cilium for Google Kubernetes Engine (GKE) networking',
     links: [
       {
         linkText: 'Read Blog',
@@ -318,7 +323,7 @@ export default {
   },
   hetzner: {
     iconName: 'hetzner',
-    text: 'Hetzner uses Cilium for Ingress and as a CNI for Hetzner Cloud',
+    text: '<b>Hetzner</b> uses Cilium for Ingress and as a CNI for Hetzner Cloud',
     links: [
       {
         linkText: 'Read Blog',
@@ -328,7 +333,7 @@ export default {
   },
   bell: {
     iconName: 'bell',
-    text: 'Bell uses Cilium and eBPF for telco networking',
+    text: '<b>Bell</b> uses Cilium and eBPF for telco networking',
     links: [
       {
         linkText: 'Talk 1',
@@ -355,7 +360,7 @@ export default {
   },
   aws: {
     iconName: 'aws',
-    text: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
+    text: '<b>AWS</b> picks Cilium for Networking & Security on EKS Anywhere',
     links: [
       {
         linkText: 'Read blog',
@@ -389,7 +394,7 @@ export default {
   },
   sky: {
     iconName: 'sky',
-    text: 'Sky uses Cilium as their CNI and for network security',
+    text: '<b>Sky</b> uses Cilium as their CNI and for network security',
     links: [
       {
         linkText: 'Talk 1',
@@ -410,7 +415,7 @@ export default {
   },
   datadog: {
     iconName: 'datadog',
-    text: 'Datadog uses Cilium in AWS (self-hosted k8s)',
+    text: '<b>Datadog</b> uses Cilium in AWS (self-hosted k8s)',
     links: [
       {
         linkText: 'Case Study',
@@ -458,7 +463,7 @@ export default {
   },
   meltwater: {
     iconName: 'meltwater',
-    text: 'Meltwater uses Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
+    text: '<b>Meltwater</b> uses Cilium in AWS on self-hosted multi-tenant k8s clusters as the CNI plugin',
     links: [
       {
         linkText: 'Case Study',
@@ -474,7 +479,7 @@ export default {
   },
   utmost: {
     iconName: 'utmost',
-    text: 'Utmost uses Cilium in all tiers of its Kubernetes ecosystem to implement zero trust networking',
+    text: '<b>Utmost</b> uses Cilium in all tiers of its Kubernetes ecosystem to implement zero trust networking',
     links: [
       {
         linkText: 'Case Study',
@@ -498,7 +503,7 @@ export default {
   },
   form3: {
     iconName: 'form3',
-    text: 'Form3 uses Cilium in their production clusters (self-hosted, bare-metal, private cloud)',
+    text: '<b>Form3</b> uses Cilium in their production clusters (self-hosted, bare-metal, private cloud)',
     links: [
       {
         linkText: 'Case Study',
@@ -514,7 +519,7 @@ export default {
   },
   theNewYorkTimes: {
     iconName: 'theNewYorkTimes',
-    text: 'The New York Times uses Cilium on EKS for multi-region multi-tenant shared clusters',
+    text: '<b>The New York Times</b> uses Cilium on EKS for multi-region multi-tenant shared clusters',
     links: [
       {
         linkText: 'Story',
@@ -535,7 +540,7 @@ export default {
   },
   bloomberg: {
     iconName: 'bloomberg',
-    text: 'Bloomberg leverages Cilium to construct data sandboxes that restrict users from distributing data outside the sandbox',
+    text: '<b>Bloomberg</b> leverages Cilium to construct data sandboxes that restrict users from distributing data outside the sandbox',
     links: [
       {
         linkText: 'Watch Talk',
@@ -551,7 +556,7 @@ export default {
   },
   azure: {
     iconName: 'azure',
-    text: 'Microsoft chooses Cilium for Azure networking',
+    text: '<b>Microsoft</b> chooses Cilium for Azure networking',
     links: [
       {
         linkText: 'Watch Talk',
@@ -568,7 +573,7 @@ export default {
   },
   robinhood: {
     iconName: 'robinhood',
-    text: 'Robinhood uses Cilium for Kubernetes overlay networking',
+    text: '<b>Robinhood</b> uses Cilium for Kubernetes overlay networking',
     links: [
       {
         linkText: 'Watch Talk',
@@ -580,7 +585,7 @@ export default {
   },
   tietoevry: {
     iconName: 'tietoevry',
-    text: 'Tietoevry uses Cilium and Hubble across multiple platforms',
+    text: '<b>Tietoevry</b> uses Cilium and Hubble across multiple platforms',
     links: [
       {
         linkText: 'Read Case Study',
@@ -591,7 +596,7 @@ export default {
   },
   clickhouse: {
     iconName: 'clickhouse',
-    text: 'ClickHouse uses Cilium and Hubble across multiple clouds',
+    text: '<b>ClickHouse</b> uses Cilium and Hubble across multiple clouds',
     links: [
       {
         linkText: 'Case Study',
@@ -612,7 +617,7 @@ export default {
   },
   eficode: {
     iconName: 'eficode',
-    text: 'Eficode uses Cilium and Hubble as the default networking and observability solution for their customers',
+    text: '<b>Eficode</b> uses Cilium and Hubble as the default networking and observability solution for their customers',
     links: [
       {
         linkText: 'Watch Talk',
@@ -646,7 +651,7 @@ export default {
   },
   trendyol: {
     iconName: 'trendyol',
-    text: 'Trendyol uses Cilium as the default CNI for its Kubernetes Clusters',
+    text: '<b>Trendyol</b> uses Cilium as the default CNI for its Kubernetes Clusters',
     links: [
       {
         linkText: 'Case Study',
@@ -663,7 +668,7 @@ export default {
 
   edgelessSystems: {
     iconName: 'edgelessSystems',
-    text: 'Edgeless Systems use Cilium as the CNI for their Kubernetes Distribution',
+    text: '<b>Edgeless Systems</b> uses Cilium as the CNI for their Kubernetes Distribution',
     links: [
       {
         linkText: 'Read Blog',
@@ -679,7 +684,7 @@ export default {
   },
   palantir: {
     iconName: 'palantir',
-    text: 'Palantir uses Cilium as their main CNI plugin in all major cloud providers (self hosted k8s)',
+    text: '<b>Palantir</b> uses Cilium as their main CNI plugin in all major cloud providers (self hosted k8s)',
     links: [
       {
         linkText: 'Read Blog',
@@ -696,7 +701,7 @@ export default {
   },
   testifysec: {
     iconName: 'testifysec',
-    text: 'TestifySec uses Tetragon to provide detailed eBPF traces of a build step in their supply chain security framework',
+    text: '<b>TestifySec</b> uses Tetragon to provide detailed eBPF traces of a build step in their supply chain security framework',
     links: [
       {
         linkText: 'Watch Talk',
@@ -707,7 +712,7 @@ export default {
   },
   dbschenker: {
     iconName: 'dbschenker',
-    text: 'DB Schenker uses Cilium as the default CNI in self-managed Kubernetes clusters running in AWS',
+    text: '<b>DB Schenker</b> uses Cilium as the default CNI in self-managed Kubernetes clusters running in AWS',
     links: [
       {
         linkText: 'Read Blog',
@@ -718,7 +723,7 @@ export default {
   },
   dbraincloud: {
     iconName: 'dbraincloud',
-    text: 'dBrain Cloud uses Cilium as a CNI in their Kubernetes platform',
+    text: '<b>dBrain Cloud</b> uses Cilium as a CNI in their Kubernetes platform',
     links: [
       {
         linkText: 'Read Blog',
@@ -1006,6 +1011,21 @@ export default {
         linkTarget: '_blank',
       },
     ],
+  },
+  syseleven: {
+    iconName: 'syseleven',
+    text: '<b>SysEleven</b> uses Cilium as the preferred networking, security, and observability solution for their internal and external Kubernetes clusters',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/syseleven/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  scigility: {
+    iconName: 'scigility',
+    text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',
   },
   jar: {
     iconName: 'jar',

@@ -10,6 +10,8 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  scigility,
+  syseleven,
   icos,
   jar,
   nutanix,
@@ -163,6 +165,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    syseleven,
     icos,
     kakao,
     samsungads,
@@ -244,6 +247,7 @@ const userCommunity2 = {
   isTitleCentered: true,
   theme: 'gray',
   items: [
+    scigility,
     jar,
     nutanix,
     cloutomate,
