@@ -73,6 +73,7 @@ import SmartNewsLogo from './images/smartnews.inline.svg';
 import SovereignCloud from './images/sovereign.inline.svg';
 import SportRadarLogo from './images/sportradar.inline.svg';
 import SuperOrbitalLogo from './images/superorbital.inline.svg';
+import SysElevenLogo from './images/syseleven.inline.svg';
 import TailorBrandsLogo from './images/tailorbrands.inline.svg';
 import TelenorLogo from './images/telenor.inline.svg';
 import TencentCloudLogo from './images/tencentcloud.inline.svg';
@@ -88,6 +89,7 @@ import Wso2Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const logos = {
+  syseleven: SysElevenLogo,
   adobe: AdobeLogo,
   alibaba: AlibabaCloudLogo,
   arrango: ArangodbLogo,

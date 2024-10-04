@@ -16,6 +16,7 @@ import CloudImage2 from 'images/pages/industries/cloud-providers/cloud-2.png';
 import DigitalOceanOffice from 'images/pages/industries/cloud-providers/DigitalOceanOffice.png';
 import GoogleOfficeImage from 'images/pages/industries/cloud-providers/googleoffice.png';
 import MicrosoftOffice from 'images/pages/industries/cloud-providers/microsoftoffice.png';
+import SysElevenOffice from 'images/pages/industries/cloud-providers/syselvenoffice.jpg';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
@@ -113,9 +114,8 @@ const cloudAdoptersLogo = [
   'azure',
   'alibaba',
   'digitalocean',
-  'scaleway',
+  'syseleven',
   'hetzner',
-  'infomaniak',
   'civo',
   'tencent',
   'openshift',
@@ -126,6 +126,8 @@ const cloudAdoptersLogo = [
   'netways',
   'sealos',
   'gcore',
+  'infomaniak',
+  'scaleway',
 ];
 
 const cloudResouces = [
@@ -169,6 +171,14 @@ const cloudResouces = [
     buttonLink: 'https://www.cncf.io/case-studies/digitalocean/',
     imageSrc: DigitalOceanOffice,
     imageAlt: 'DigitalOcean office buidling',
+  },
+  {
+    title: 'SysEleven Picks Cilium as the Preferred Networking Solution for their Platform',
+    description:
+      'SysEleven selected Cilium as their networking, security, and observability solution for their cloud platform due to its simplicity, native routing capabilities, and prominence in the cloud native ecosystem.',
+    buttonLink: 'https://www.cncf.io/case-studies/syseleven/',
+    imageSrc: SysElevenOffice,
+    imageAlt: 'SysEleven office buidling',
   },
 ];
 
