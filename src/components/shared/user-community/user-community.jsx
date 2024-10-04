@@ -118,6 +118,7 @@ import SapLogo from './images/sap.inline.svg';
 import SapianLogo from './images/sapian.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SchubergPhilisLogo from './images/schuberg-philis.inline.svg';
+import ScigilityLogo from './images/scigility.inline.svg';
 import SealosLogo from './images/sealos.inline.svg';
 import SeatGeekLogo from './images/seatgeek.inline.svg';
 import SianalyticsLogo from './images/sianalytics.inline.svg';
@@ -134,6 +135,7 @@ import SpherityLogo from './images/spherity.inline.svg';
 import SportradarLogo from './images/sportradar.inline.svg';
 import SproutfiLogo from './images/sproutfi.inline.svg';
 import SuperorbitalLogo from './images/superorbital.inline.svg';
+import SyselevenLogo from './images/syseleven.inline.svg';
 import SyselfLogo from './images/syself.inline.svg';
 import TSILogo from './images/t-systems.inline.svg';
 import TailorBrandsLogo from './images/tailor-brands.inline.svg';
@@ -152,6 +154,8 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  scigility: ScigilityLogo,
+  syseleven: SyselevenLogo,
   icos: IcosLogo,
   jar: JarLogo,
   nutanix: NutanixLogo,

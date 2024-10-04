@@ -10,6 +10,7 @@ import AWSLogo from 'icons/logo-aws.inline.svg';
 import AzureLogo from 'icons/logo-azure.inline.svg';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import GoogleLogo from 'icons/logo-google.inline.svg';
+import SysElevenLogo from 'icons/syseleven.inline.svg';
 import CNIImage1 from 'images/pages/usecase/cni-1.png';
 import CNIImage2 from 'images/pages/usecase/cni-2.png';
 import CNIImage3 from 'images/pages/usecase/cni-3.png';
@@ -113,6 +114,19 @@ const testimonials = [
       {
         CTAtext: 'Read The Case Study',
         url: 'https://www.cncf.io/case-studies/alibaba/',
+      },
+    ],
+  },
+  {
+    logo: SysElevenLogo,
+    title: 'SysEleven Picks Cilium as the Preferred Networking Solution for their Platform',
+
+    description:
+      'SysEleven selected Cilium as their networking, security, and observability solution for their cloud platform due to its simplicity, native routing capabilities, and prominence in the cloud native ecosystem.',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/syseleven/',
       },
     ],
   },

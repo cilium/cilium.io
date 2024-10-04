@@ -41,10 +41,12 @@ import Rke2Logo from './images/rke2.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SealosLogo from './images/sealos.inline.svg';
 import SovereignLogo from './images/sovereign.inline.svg';
+import SysElevenLogo from './images/syseleven.inline.svg';
 import TencentCloudLogo from './images/tencent-cloud.inline.svg';
 import VKCloudLogo from './images/vkcloud.inline.svg';
 
 const logos = {
+  syseleven: SysElevenLogo,
   gcore: GcoreLogo,
   netways: NetwaysLogo,
   sealos: SealosLogo,
