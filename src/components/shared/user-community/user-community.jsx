@@ -39,6 +39,7 @@ import AyedoLogo from './images/ayedo.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
 import BitnamiLogo from './images/bitnami.inline.svg';
 import BloombergLogo from './images/bloomberg.inline.svg';
+import BmcLogo from './images/bmc.inline.svg';
 import BytedanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
@@ -74,6 +75,7 @@ import JumoLogo from './images/jumo.inline.svg';
 import JyskLogo from './images/jysk-tech.inline.svg';
 import KakaoLogo from './images/kakao.inline.svg';
 import KiloLogo from './images/kilo.inline.svg';
+import KoyebLogo from './images/koyeb.inline.svg';
 import KryptosLogo from './images/kryptos.inline.svg';
 import KubehetznerLogo from './images/kube-hetzner.inline.svg';
 import KubeOvnLogo from './images/kube-ovn.inline.svg';
@@ -154,6 +156,8 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  koyeb: KoyebLogo,
+  bmc: BmcLogo,
   scigility: ScigilityLogo,
   syseleven: SyselevenLogo,
   icos: IcosLogo,

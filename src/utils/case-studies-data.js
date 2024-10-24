@@ -1023,6 +1023,30 @@ export default {
       },
     ],
   },
+  bmc: {
+    iconName: 'bmc',
+    text: '<b>BMC</b> uses Cilium as a CNI option in their BMC Helix Innovaton Suite and IT Operations Management On Premise',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://community.bmc.com/s/news/aA3Kj000000TV4JKAW/unlocking-the-power-of-ebpf-how-cilium-enhances-bmc-helix-innovation-suite',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  koyeb: {
+    iconName: 'koyeb',
+    text: '<b>Koyeb</b> uses Cilium to power a mesh between its microVMs hosted on its servers',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://www.koyeb.com/blog/70-faster-deployments-and-high-performance-private-network',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',
