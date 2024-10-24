@@ -10,6 +10,8 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  koyeb,
+  bmc,
   scigility,
   syseleven,
   icos,
@@ -165,6 +167,8 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    koyeb,
+    bmc,
     syseleven,
     icos,
     kakao,
