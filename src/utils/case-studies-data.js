@@ -1042,7 +1042,7 @@ export default {
       {
         linkText: 'Read Blog',
         linkUrl:
-          'https://www.koyeb.com/blog/70-faster-deployments-and-high-performance-private-networke',
+          'https://www.koyeb.com/blog/70-faster-deployments-and-high-performance-private-network',
         linkTarget: '_blank',
       },
     ],
