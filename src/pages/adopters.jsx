@@ -10,6 +10,7 @@ import caseStudiesData from 'utils/case-studies-data';
 import { adopters as seo } from 'utils/seo-metadata';
 
 const {
+  FHNW,
   koyeb,
   bmc,
   scigility,
@@ -167,6 +168,7 @@ const hero = {
 const userCommunity1 = {
   theme: 'gray',
   items: [
+    FHNW,
     koyeb,
     bmc,
     syseleven,

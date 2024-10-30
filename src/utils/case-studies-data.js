@@ -1047,6 +1047,17 @@ export default {
       },
     ],
   },
+  FHNW: {
+    iconName: 'fhnw',
+    text: '<b>FHNW</b> uses Cilium for observing network traffic and creating network policies',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=zjyPd4O0wSs',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',

@@ -57,6 +57,7 @@ import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
 import F5Logo from './images/f5.inline.svg';
+import FHNWLogo from './images/fhnw.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
@@ -156,6 +157,7 @@ import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
 const icons = {
+  fhnw: FHNWLogo,
   koyeb: KoyebLogo,
   bmc: BmcLogo,
   scigility: ScigilityLogo,
