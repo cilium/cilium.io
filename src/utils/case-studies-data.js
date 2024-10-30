@@ -1047,6 +1047,17 @@ export default {
       },
     ],
   },
+  FHNW: {
+    iconName: 'fhnw',
+    text: 'Using SBOMs and Cilium in legacy & cloud native applications ',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=zjyPd4O0wSs',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',
