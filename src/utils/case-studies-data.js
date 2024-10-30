@@ -1049,7 +1049,7 @@ export default {
   },
   FHNW: {
     iconName: 'fhnw',
-    text: 'Using SBOMs and Cilium in legacy & cloud native applications ',
+    text: '<b>FHNW</b> uses Cilium for observing network traffic and creating network policies',
     links: [
       {
         linkText: 'Watch Talk',
