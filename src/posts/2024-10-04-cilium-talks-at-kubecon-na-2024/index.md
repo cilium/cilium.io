@@ -3,6 +3,7 @@ path: '/blog/2024/10/04/cilium-kubecon-na-2024'
 date: '2024-10-04T12:00:00.000Z'
 title: 'Cilium Talks at KubeCon NA 2024'
 ogImage: kubeconNA.png
+isPopular: true
 ogSummary: 'Find all the Cilium talks at KubeCon NA 2024'
 categories:
   - Community
