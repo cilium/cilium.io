@@ -68,6 +68,7 @@ import HetznerLogo from './images/hetzner.inline.svg';
 import IcosLogo from './images/icos.inline.svg';
 import IlionxLogo from './images/ilionx.inline.svg';
 import ImmerokLogo from './images/immerok.inline.svg';
+import IncentiveLogo from './images/incentive.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
 import InnoqLogo from './images/innoq.inline.svg';
 import IsovalentLogo from './images/isovalent.inline.svg';
@@ -304,6 +305,7 @@ const icons = {
   ungleich: UngleichLogo,
   vshn: VshnLogo,
   hetzner: HetznerLogo,
+  incentive: IncentiveLogo,
 };
 
 const themeClassNames = {

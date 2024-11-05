@@ -157,6 +157,7 @@ const {
   hetzner,
   ascend,
   palark,
+  incentive,
 } = caseStudiesData;
 
 const hero = {
@@ -327,6 +328,7 @@ const userCommunity2 = {
     proton,
     cistec,
     kubehetzner,
+    incentive,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
