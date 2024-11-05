@@ -1349,6 +1349,6 @@ export default {
   },
   incentive: {
     iconName: 'incentive',
-    text: '<b>Icentive.me</b> uses Cilium, Tetragon and Hubble for enterprise networking, observability, and security of all environments',
+    text: '<b>incentive.me</b> uses Cilium, Tetragon, and Hubble for enterprise networking, observability, and security of all environments',
   },
 };
