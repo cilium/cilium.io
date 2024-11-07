@@ -1347,4 +1347,8 @@ export default {
     iconName: 'unitedcloud',
     text: '<b>United Cloud</b> uses Cilium for all non-production and production clusters (on-premises)',
   },
+  incentive: {
+    iconName: 'incentive',
+    text: '<b>incentive.me</b> uses Cilium, Tetragon, and Hubble for enterprise networking, observability, and security of all environments',
+  },
 };
