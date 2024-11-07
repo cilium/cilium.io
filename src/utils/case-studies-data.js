@@ -945,6 +945,18 @@ export default {
       },
     ],
   },
+  jar: {
+    iconName: 'jar',
+    text: '<b>Jar</b> uses Cilium as the default CNI plugin for their Kubernetes clusters',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://myjar.app/blog/engineering/how-jar-embraced-cilium-for-scalable-secure-networking-on-eks/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   smartnews: {
     iconName: 'smartnews',
     text: '<b>SmartNews</b> uses Cilium in their Kubernetes clusters for high performance and scalability',
@@ -1061,10 +1073,6 @@ export default {
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',
-  },
-  jar: {
-    iconName: 'jar',
-    text: '<b>Jar</b> uses Cilium as the default CNI plugin for their Kubernetes clusters',
   },
   nutanix: {
     iconName: 'nutanix',

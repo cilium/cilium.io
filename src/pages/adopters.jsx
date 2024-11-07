@@ -16,7 +16,6 @@ const {
   scigility,
   syseleven,
   icos,
-  jar,
   nutanix,
   cloutomate,
   qpoint,
@@ -158,6 +157,7 @@ const {
   ascend,
   palark,
   incentive,
+  jar,
 } = caseStudiesData;
 
 const hero = {
@@ -242,6 +242,7 @@ const userCommunity1 = {
     form3,
     ascend,
     palark,
+    jar,
   ],
 };
 
@@ -255,7 +256,6 @@ const userCommunity2 = {
   theme: 'gray',
   items: [
     scigility,
-    jar,
     nutanix,
     cloutomate,
     qpoint,
