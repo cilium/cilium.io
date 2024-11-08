@@ -1102,6 +1102,11 @@ export default {
     iconName: 'bitnami',
     text: '<b>Bitnami</b> offers Cilium to their customers in their application catalogue',
   },
+  virtuozzo: {
+    iconName: 'virtuozzo',
+    text: '<b>Virtuozzo</b> uses Cilium CNI as the default network plugin for Kubernetes clusters within Virtuozzo Hybrid Infrastructure',
+  },
+
   linkpool: {
     iconName: 'linkpool',
     text: '<b>LinkPool</b> uses Cilium as the CNI for its on-premise production clusters',

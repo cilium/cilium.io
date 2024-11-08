@@ -153,6 +153,7 @@ import UnitedCloudLogo from './images/unitedcloud.inline.svg';
 import UtmostLogo from './images/utmost.inline.svg';
 import VeepeeLogo from './images/veepee.inline.svg';
 import ViasatLogo from './images/viasat.inline.svg';
+import VirtuozzoLogo from './images/virtuozzo.inline.svg';
 import VkcloudLogo from './images/vkcloud.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
@@ -306,6 +307,7 @@ const icons = {
   vshn: VshnLogo,
   hetzner: HetznerLogo,
   incentive: IncentiveLogo,
+  virtuozzo: VirtuozzoLogo,
 };
 
 const themeClassNames = {
