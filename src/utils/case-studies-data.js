@@ -1104,7 +1104,7 @@ export default {
   },
   virtuozzo: {
     iconName: 'virtuozzo',
-    text: '<b>Virtuozzo</b> ues Cilium CNI as the default network plugin for Kubernetes clusters within Virtuozzo Hybrid Infrastructure.',
+    text: '<b>Virtuozzo</b> uses Cilium CNI as the default network plugin for Kubernetes clusters within Virtuozzo Hybrid Infrastructure.',
   },
 
   linkpool: {
