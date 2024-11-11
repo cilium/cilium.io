@@ -1364,4 +1364,8 @@ export default {
     iconName: 'incentive',
     text: '<b>incentive.me</b> uses Cilium, Tetragon, and Hubble for enterprise networking, observability, and security of all environments',
   },
+  alauda: {
+    iconName: 'alauda',
+    text: '<b>Alauda</b> uses Cilium in the Alauda Container Platform product to provide high performance network,observability and security.',
+  },
 };

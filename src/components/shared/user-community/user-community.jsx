@@ -34,6 +34,7 @@ import Button from '../button';
 import AccuKnoxLogo from './images/accuknox.inline.svg';
 import AcossLogo from './images/acoss.inline.svg';
 import AenixLogo from './images/aenix.inline.svg';
+import AlaudaLogo from './images/alauda.inline.svg';
 import ArangoDbLogo from './images/arangodb.inline.svg';
 import AyedoLogo from './images/ayedo.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
@@ -308,6 +309,7 @@ const icons = {
   hetzner: HetznerLogo,
   incentive: IncentiveLogo,
   virtuozzo: VirtuozzoLogo,
+  alauda: AlaudaLogo,
 };
 
 const themeClassNames = {
