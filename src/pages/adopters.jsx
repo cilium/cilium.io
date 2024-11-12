@@ -390,6 +390,7 @@ const logos2 = {
     'kubeone',
     'kubespray',
     'deckhouse',
+    'alauda',
     'kubelift',
   ],
   spaceXSize: 'sm',

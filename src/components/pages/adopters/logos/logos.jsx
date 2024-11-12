@@ -6,6 +6,7 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 
+import AlaudaLogo from './images/alauda.inline.svg';
 import AlibabaCloudLogo from './images/alibaba-cloud.inline.svg';
 import AmazonEKSlogo from './images/amazon-eks.inline.svg';
 import AppuioLogo from './images/appuio.inline.svg';
@@ -84,6 +85,7 @@ const logos = {
   openshift: OpenShiftLogo,
   exoscale: ExoscaleLogo,
   hetzner: HetznerLogo,
+  alauda: AlaudaLogo,
 };
 
 const spaceXClassNames = {
