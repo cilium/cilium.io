@@ -1366,6 +1366,6 @@ export default {
   },
   alauda: {
     iconName: 'alauda',
-    text: '<b>Alauda</b> uses Cilium in the Alauda Container Platform product to provide high performance network,observability and security.',
+    text: '<b>Alauda</b> uses Cilium in the Alauda Container Platform product to provide high performance networking, observability, and security',
   },
 };
