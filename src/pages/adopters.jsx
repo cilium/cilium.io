@@ -159,6 +159,7 @@ const {
   incentive,
   jar,
   virtuozzo,
+  alauda,
 } = caseStudiesData;
 
 const hero = {
@@ -331,6 +332,7 @@ const userCommunity2 = {
     kubehetzner,
     incentive,
     virtuozzo,
+    alauda,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -388,6 +390,7 @@ const logos2 = {
     'kubeone',
     'kubespray',
     'deckhouse',
+    'alauda',
     'kubelift',
   ],
   spaceXSize: 'sm',
