@@ -94,6 +94,7 @@ import MuxLogo from './images/mux.inline.svg';
 import MyFitnessPalLogo from './images/myfitnesspal.inline.svg';
 import NemligLogo from './images/nemlig.inline.svg';
 import NetbirdLogo from './images/netbird.inline.svg';
+import NetcloudLogo from './images/netcloud.inline.svg';
 import NetwaysLogo from './images/netways.inline.svg';
 import NexxiotLogo from './images/nexxiot.inline.svg';
 import NineLogo from './images/nine.inline.svg';
@@ -310,6 +311,7 @@ const icons = {
   incentive: IncentiveLogo,
   virtuozzo: VirtuozzoLogo,
   alauda: AlaudaLogo,
+  netcloud: NetcloudLogo,
 };
 
 const themeClassNames = {

@@ -160,6 +160,7 @@ const {
   jar,
   virtuozzo,
   alauda,
+  netcloud,
 } = caseStudiesData;
 
 const hero = {
@@ -333,6 +334,7 @@ const userCommunity2 = {
     incentive,
     virtuozzo,
     alauda,
+    netcloud,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
