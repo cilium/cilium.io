@@ -1368,4 +1368,8 @@ export default {
     iconName: 'alauda',
     text: '<b>Alauda</b> uses Cilium in the Alauda Container Platform product to provide high performance networking, observability, and security',
   },
+  netcloud: {
+    iconName: 'netcloud',
+    text: '<b>Netcloud</b> uses Cilium as the CNI for mission critical, on premise Kubernetes clusters',
+  },
 };
