@@ -7,5 +7,5 @@ ogSummary: 'CiliumCon is a full-day co-located event for Cilium users, contribut
 ogImage: ogimage.jpg
 externalUrl: 'https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/'
 type: Conference
-isFeatured: false
+isFeatured: true
 ---
