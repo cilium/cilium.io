@@ -161,6 +161,9 @@ const {
   virtuozzo,
   alauda,
   netcloud,
+  confluent,
+  ebay,
+  reddit,
 } = caseStudiesData;
 
 const hero = {
@@ -246,6 +249,9 @@ const userCommunity1 = {
     ascend,
     palark,
     jar,
+    confluent,
+    ebay,
+    reddit,
   ],
 };
 
