@@ -608,11 +608,13 @@ export default {
   reddit: {
     iconName: 'reddit',
     text: '<b>Reddit</b> uses Tetragon for security observability and runtime enforcement',
-    links: {
-      linkText: 'Watch Talk',
-      linkUrl: 'https://www.youtube.com/watch?v=YNDp7Id7Bbs',
-      linkTarget: '_blank',
-    },
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=YNDp7Id7Bbs',
+        linkTarget: '_blank',
+      },
+    ],
   },
 
   robinhood: {
