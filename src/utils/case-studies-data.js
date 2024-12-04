@@ -1064,6 +1064,18 @@ export default {
       },
     ],
   },
+  sony: {
+    iconName: 'sony',
+    text: '<b>Sony </b> uses Cilium for connectivity of cluster at the edge',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=M0PincxlHpI',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+
   kakao: {
     iconName: 'kakao',
     text: '<b>kakao</b> uses Cilium as a CNI to improve network performance and lower costs',

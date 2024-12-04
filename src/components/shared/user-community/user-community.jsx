@@ -139,6 +139,7 @@ import SmartNewsLogo from './images/smartnews.inline.svg';
 import SmileLogo from './images/smile.inline.svg';
 import SnappLogo from './images/snapp.inline.svg';
 import SoloLogo from './images/solo.inline.svg';
+import SonyLogo from './images/sony.inline.svg';
 import SpectroCloudLogo from './images/spectrocloud.inline.svg';
 import SpherityLogo from './images/spherity.inline.svg';
 import SportradarLogo from './images/sportradar.inline.svg';
@@ -318,6 +319,7 @@ const icons = {
   confluent: ConfluentLogo,
   ebay: EbayLogo,
   reddit: RedditLogo,
+  sony: SonyLogo,
 };
 
 const themeClassNames = {

@@ -164,6 +164,7 @@ const {
   confluent,
   ebay,
   reddit,
+  sony,
 } = caseStudiesData;
 
 const hero = {
@@ -252,6 +253,7 @@ const userCommunity1 = {
     confluent,
     ebay,
     reddit,
+    sony,
   ],
 };
 
