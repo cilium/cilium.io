@@ -48,11 +48,13 @@ import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CloutomateLogo from './images/cloutomate.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
+import ConfluentLogo from './images/confluent.inline.svg';
 import CybozuLogo from './images/cybozu.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
 import DbschenkerLogo from './images/dbschenker.inline.svg';
 import DeezerLogo from './images/deezer.inline.svg';
+import EbayLogo from './images/ebay.inline.svg';
 import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
@@ -116,6 +118,7 @@ import RabobankLogo from './images/rabobank.inline.svg';
 import RadioFranceLogo from './images/radiofrance.inline.svg';
 import RafayLogo from './images/rafay.inline.svg';
 import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
+import RedditLogo from './images/reddit.inline.svg';
 import RobinhoodLogo from './images/robinhood.inline.svg';
 import RocheLogo from './images/roche.inline.svg';
 import SamsungAdsLogo from './images/samsungads.inline.svg';
@@ -136,6 +139,7 @@ import SmartNewsLogo from './images/smartnews.inline.svg';
 import SmileLogo from './images/smile.inline.svg';
 import SnappLogo from './images/snapp.inline.svg';
 import SoloLogo from './images/solo.inline.svg';
+import SonyLogo from './images/sony.inline.svg';
 import SpectroCloudLogo from './images/spectrocloud.inline.svg';
 import SpherityLogo from './images/spherity.inline.svg';
 import SportradarLogo from './images/sportradar.inline.svg';
@@ -312,6 +316,10 @@ const icons = {
   virtuozzo: VirtuozzoLogo,
   alauda: AlaudaLogo,
   netcloud: NetcloudLogo,
+  confluent: ConfluentLogo,
+  ebay: EbayLogo,
+  reddit: RedditLogo,
+  sony: SonyLogo,
 };
 
 const themeClassNames = {

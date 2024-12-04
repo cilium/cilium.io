@@ -438,6 +438,16 @@ export default {
         linkUrl: 'https://youtu.be/tw0F-LexNRA?si=2eYpFNGQnsf-NTdv',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Talk 4',
+        linkUrl: 'https://www.youtube.com/watch?v=-pOUM1ObAtI',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 5',
+        linkUrl: 'https://www.youtube.com/watch?v=-pOUM1ObAtI&t=8s',
+        linkTarget: '_blank',
+      },
     ],
   },
   cosmonic: {
@@ -559,9 +569,20 @@ export default {
     text: '<b>Microsoft</b> chooses Cilium for Azure networking',
     links: [
       {
-        linkText: 'Watch Talk',
+        linkText: 'Talk 1',
         linkUrl:
           'https://www.youtube.com/watch?v=y3z6s-CTtU0&list=PLj6h78yzYM2Meb36FX-bKd-3fpNvtlzpE&index=2',
+        linkTarget: '_blank',
+      },
+
+      {
+        linkText: 'Talk 2',
+        linkUrl: 'https://www.youtube.com/watch?v=cnNUfQKhYiM',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 3',
+        linkUrl: 'https://www.youtube.com/watch?v=cnNUfQKhYiM',
         linkTarget: '_blank',
       },
       {
@@ -571,6 +592,31 @@ export default {
       },
     ],
   },
+
+  ebay: {
+    iconName: 'ebay',
+    text: '<b>eBay</b> uses Cilium and Hubble for networking, observability and security of their Kubernetes-based fleet of microservices',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=C5eSFAeW4ec',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+
+  reddit: {
+    iconName: 'reddit',
+    text: '<b>Reddit</b> uses Tetragon for security observability and runtime enforcement',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=YNDp7Id7Bbs',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+
   robinhood: {
     iconName: 'robinhood',
     text: '<b>Robinhood</b> uses Cilium for Kubernetes overlay networking',
@@ -796,6 +842,17 @@ export default {
       },
     ],
   },
+  confluent: {
+    iconName: 'confluent',
+    text: '<b>Confluent</b> uses Cilium as the networking, observability and security layer for their multi-cloud data streaming platform',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=vOSiVeBXYpM',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   giantSwarm: {
     iconName: 'giantSwarm',
     text: '<b>Giant Swarm</b> uses Cilium as the CNI in their Cluster API based managed Kubernetes service',
@@ -1000,8 +1057,25 @@ export default {
           'https://samsungads.ca/engineering-blog/live-migrating-production-clusters-from-calico-to-cilium/',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=2KlVTx611bk',
+        linkTarget: '_blank',
+      },
     ],
   },
+  sony: {
+    iconName: 'sony',
+    text: '<b>Sony </b> uses Cilium for connectivity of cluster at the edge',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=M0PincxlHpI',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+
   kakao: {
     iconName: 'kakao',
     text: '<b>kakao</b> uses Cilium as a CNI to improve network performance and lower costs',
