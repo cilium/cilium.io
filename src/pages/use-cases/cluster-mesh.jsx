@@ -5,6 +5,7 @@ import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
+import CNCFLogo from 'icons/cncf.inline.svg';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import Form3Logo from 'icons/logo-form3.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
@@ -87,6 +88,19 @@ const sectionContent6 = {
 
 const testimonials = [
   {
+    logo: CNCFLogo,
+    title: 'Most mature multi cluster application management technology',
+    CTAs: [
+      {
+        CTAtext: 'Read The Survey Insight',
+        url: 'https://www.cncf.io/wp-content/uploads/2024/11/CNCF-Tech-Radar-Custom-Survey-Research-Insights.pdf',
+      },
+    ],
+    description:
+      'In a survey conducted by the Cloud Native Computing Foundation(CNCF), Cilium was voted the most mature multi cluster application management technology. Cilium received the highest usefulness and maturity score, cementing its position as a technology that the community considers both the most useful and mature.',
+  },
+
+  {
     logo: Form3Logo,
     title: 'Multi-cluster networking with Cilium at Form3',
     CTAs: [
@@ -140,10 +154,6 @@ const testimonials = [
         CTAtext: 'Watch The Talk',
         url: 'https://youtu.be/MSqI-gBiCrc?si=ktIHXkxhuHpuwC6a',
       },
-      // {
-      //   CTAtext: 'Read Case Study',
-      //   url: '',
-      // },
     ],
     description:
       "Cilium Cluster Mesh gave us possibilities that we didn't have before. We can run the same application across our data centers and AWS. It provides us with a consistent networking experience wherever we need to go. Applications in different clusters can communicate with each other without needing to go through an ingress controller. We are expanding this capability for more applications because this value is already proven. Cluster Mesh works, it's fast, and it's reliable",
