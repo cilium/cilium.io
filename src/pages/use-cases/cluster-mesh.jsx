@@ -97,7 +97,7 @@ const testimonials = [
       },
     ],
     description:
-      'In a survey conducted by the Cloud Native Computing Foundation(CNCF), Cilium was voted the most mature multi cluster application management technology. Cilium received the highest usefulness and maturity score, cementing its position as a technology that the community considers both the most useful and mature.',
+      'In the technology landscape radar survey conducted by the Cloud Native Computing Foundation(CNCF), Cilium was voted the most mature multi cluster application management technology. Cilium received the highest usefulness and maturity score, cementing its position as a technology that the community considers both the most useful and mature.',
   },
 
   {
