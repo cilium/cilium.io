@@ -15,7 +15,7 @@ const heroContent = {
   tagline: 'Host Security That Scales With Kubernetes',
   subHeading: 'How can I secure the host namespace with same consistent security model?',
   description:
-    'Kubernetes nodes are the backbone of any cluster, but securing them presents unique challenges beyond the capabilities of traditional firewalls. Without granular host-level controls, nodes are vulnerable to unauthorized access, exposing critical cluster components like kube-apiserver or, etcd, to potential breaches. Static firewall rules struggle to adapt to the dynamic nature of Kubernetes environments, leaving gaps in protection during workload changes or updates. Additionally, misconfigurations in restrictive policies can disrupt essential communications, while limited visibility into host-level traffic makes monitoring and troubleshooting difficult. ',
+    'Kubernetes nodes are the backbone of any cluster, but securing them presents unique challenges beyond the capabilities of traditional firewalls. Without granular host-level controls, nodes are vulnerable to unauthorized access, exposing critical cluster components, like kube-apiserver or etcd, to potential breaches. Static firewall rules struggle to adapt to the dynamic nature of Kubernetes environments, leaving gaps in protection during workload changes or updates. Additionally, misconfigurations in restrictive policies can disrupt essential communications, while limited visibility into host-level traffic makes monitoring and troubleshooting difficult.',
   imageSrc: NetworkingBeeImage,
   imageAlt: 'Networking Bee',
   imageWidth: 350,
