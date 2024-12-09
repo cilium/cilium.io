@@ -32,7 +32,7 @@ const sectionContent1 = {
 const sectionContent2 = {
   title: 'Host Security That Scales With Kubernetes',
   description:
-    'Cilium Host Firewall empowers administrators to enforce fine-grained policies for node-level traffic. By matching on node labels, you can create targeted rules that allow or deny traffic based on specific needs, such as permitting only SSH or ICMP traffic to specific nodes. This level of control ensures that your nodes are protected from unauthorized access while maintaining the flexibility required for smooth operations. Cilium host firewall ensures consistent, granular, and adaptable security for every node in your cluster, giving you the confidence to scale securely in even the most demanding environments.',
+    'Cilium Host Firewall empowers administrators to enforce fine-grained policies for node-level traffic. By matching on node labels, you can create targeted rules that allow or deny traffic based on specific needs, such as permitting only SSH or ICMP traffic to specific nodes. This level of control ensures that your nodes are protected from unauthorized access while maintaining the flexibility required for smooth operations. Cilium Host Firewall ensures consistent, granular, and adaptable security for every node in your cluster, giving you the confidence to scale securely in even the most demanding environments.',
   imageSrc: HostFirewallImage1,
   imageRight: false,
 };
