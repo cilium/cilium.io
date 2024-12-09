@@ -78,6 +78,11 @@ const list = [
         title: 'Multicast',
         path: 'multicast',
       },
+      {
+        icon: MulticastIcon,
+        title: 'Host Firewall',
+        path: 'host-firewall',
+      },
     ],
   },
 
