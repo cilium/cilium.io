@@ -92,7 +92,7 @@ const testimonials = [
     title: 'Most mature multi cluster application management technology',
     CTAs: [
       {
-        CTAtext: 'Read The Survey Insight',
+        CTAtext: 'Review The Survey',
         url: 'https://www.cncf.io/wp-content/uploads/2024/11/CNCF-Tech-Radar-Custom-Survey-Research-Insights.pdf',
       },
     ],
