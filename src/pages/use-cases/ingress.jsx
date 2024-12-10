@@ -16,7 +16,7 @@ const heroContent = {
   tagline: 'Enhancing Kubernetes Ingress With Cilium',
   subHeading: 'How can I expose my services with a protocol-aware mechanism?',
   description:
-    'The Kubernetes ecosystem is rich with ingress controllers, yet they often introduce complexity and limitations. Some Kubernetes ingress solutions often fall short when it comes to scalability, visibility, and security in dynamic cloud-native environments. Many rely on iptables or other legacy networking constructs, which can lead to inefficient resource usage, performance bottlenecks, and limited observability. Additionally, ensuring source IP visibility, seamless TLS handling, and integration with advanced network policies often requires complex workarounds or additional tools, complicating operations and increasing overhead.',
+    'The Kubernetes ecosystem is rich with ingress controllers, yet they often introduce complexity and limitations. Kubernetes ingress solutions often fall short when it comes to scalability, visibility, and security in dynamic cloud native environments. Many rely on iptables or other legacy networking constructs, which can lead to inefficient resource usage, performance bottlenecks, and limited observability. Additionally, ensuring source IP visibility, seamless TLS handling, and integration with advanced network policies often requires complex workarounds or additional tools, complicating operations and increasing overhead.',
   imageSrc: BountyHunterBeeImage,
   imageAlt: 'Bounty Hunter Bee',
   imageWidth: 350,
