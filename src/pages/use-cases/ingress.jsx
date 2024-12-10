@@ -26,7 +26,7 @@ const heroContent = {
 const sectionContent1 = {
   title: 'Effortless Load Balancer Management for Scalability',
   description:
-    'Cilium Ingress introduces a flexible load balancer mode, enabling you to choose between dedicated and shared configurations tailored to your needs. In shared mode, resources are conserved by utilizing a single load balancer across all ingress resources. Each ingress receives an independent load balancer in dedicated mode, preventing conflicts like overlapping path prefixes. This adaptability ensures that scaling your application architecture never compromises performance or resource efficiency.',
+    'Cilium Ingress introduces flexible load balancer modes, enabling you to choose between dedicated and shared configurations tailored to your needs. In shared mode, resources are conserved by utilizing a single load balancer across all ingress resources. In dedicated mode, each ingress receives an independent load balancer, preventing conflicts like overlapping path prefixes. This adaptability ensures that scaling your application architecture never compromises performance or resource efficiency.',
   videoSrc: 'https://www.youtube.com/embed/t5nP_JT8qUg',
 };
 
