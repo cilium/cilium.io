@@ -83,6 +83,11 @@ const list = [
         title: 'Host Firewall',
         path: 'host-firewall',
       },
+      {
+        icon: ServiceMapIcon,
+        title: 'Ingress',
+        path: 'ingress',
+      },
     ],
   },
 
