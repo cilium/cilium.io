@@ -13,6 +13,8 @@ tags:
 
 **_Author: Paul Arah, Isovalent_**
 
+![](cover.png)
+
 2024 has been a remarkable year for Tetragon. This year witnessed increased adoption, the release of many exciting features, a record number of conference talks, and exponential growth within the community. As we approach the year's end, we reflect on the progress made as a community and look ahead to the future.
 
 Since the initial release of Tetragon 1.0 last year, the sub-project has continued to set the standard for eBPF-based security observability and runtime enforcement. Platform and security teams worldwide, from small companies to prominent enterprises, use Tetragon to secure their environments efficiently and effectively.
