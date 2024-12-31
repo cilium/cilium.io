@@ -2,14 +2,14 @@
 path: '/blog/2024/12/31/tetragon-2024-year-in-review'
 date: '2024-12-31T12:00:00.000Z'
 title: 'Tetragon: 2024 in Review'
-isFeatured: true
+isFeatured: false
 ogImage: cover.png
-ogSummary: "This blog post zooms in on what the Tetragon community accomplished in 2024".
+ogSummary: 'This blog post zooms in on what the Tetragon community accomplished in 2024'
 categories:
-  - Technology
+  - Community
+tags:
+  - Tetragon
 ---
-
-![](cover.png)
 
 **_Author: Paul Arah, Isovalent_**
 
