@@ -1,6 +1,6 @@
 ---
 date: '2023-01-18T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/sctp-on-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
+externalUrl: 'https://isovalent.com/labs/cilium-sctp/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
 ogImage: cover.jpg
 categories:
   - Networking

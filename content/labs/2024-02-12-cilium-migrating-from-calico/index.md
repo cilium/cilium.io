@@ -1,6 +1,6 @@
 ---
 date: '2024-02-12T14:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/migrating-from-calico/'
+externalUrl: 'https://isovalent.com/labs/cilium-migrating-from-calico/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
 ogImage: cover.png
 categories:
   - Networking
