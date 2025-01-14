@@ -7,6 +7,7 @@ import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
 import PalantirLogo from 'icons/palantir.inline.svg';
+import RedditLogo from 'icons/reddit.inline.svg';
 import TestifyLogo from 'icons/testifysec.inline.svg';
 import TetragonIllustration from 'images/pages/usecase/tetragon-illustration.png';
 import TetragonShield from 'images/pages/usecase/tetragon-shield.png';
@@ -45,6 +46,19 @@ const sectionContent2 = {
 };
 
 const testimonials = [
+  {
+    logo: RedditLogo,
+    CTAs: [
+      {
+        CTAtext: 'Read the blog',
+        url: 'https://www.reddit.com/r/RedditEng/comments/1hv3sc7/tetragon_configuration_gotchas/',
+      },
+    ],
+    title: 'Tetragon Configuration Gotchas',
+    description:
+      'This blog post provides links to our recent presentation during the CiliumDay at Kubecon NA’24 along with a brief background to describe the problem statement.',
+  },
+
   {
     logo: FRSCALogo,
     CTAs: [

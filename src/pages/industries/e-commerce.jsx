@@ -13,6 +13,7 @@ import SEO from 'components/shared/seo';
 import CloudIcon from 'images/pages/industries/e-commerce/cloud.inline.svg';
 import CodeIcon from 'images/pages/industries/e-commerce/code.inline.svg';
 import DbIcon from 'images/pages/industries/e-commerce/db.inline.svg';
+import EccoOfficeImage from 'images/pages/industries/e-commerce/ecco-office.webp';
 import EcommerceImage1 from 'images/pages/industries/e-commerce/ecommerce-1.png';
 import IkeaOfficeImage from 'images/pages/industries/e-commerce/ikeaoffice.png';
 import LockIcon from 'images/pages/industries/e-commerce/lock.inline.svg';
@@ -130,6 +131,15 @@ const commerceResources = [
     buttonLink: 'https://www.cncf.io/case-studies/nemlig/',
     description:
       'Implementing Cilium in their Kubernetes platform enabled Nemlig to enhance agility, replace kube-proxy and iptables in their clusters, and reduce the operational burden of managing their network.',
+  },
+  {
+    imageSrc: EccoOfficeImage,
+    imageAlt: 'ecco office building',
+    title: 'High Performance Data Backend for Your AI/ML with MinIO and Cilium Cluster Mesh',
+    buttonText: 'Watch the Talk',
+    buttonLink: 'https://www.youtube.com/watch?v=Ennjmo9TFaM',
+    description:
+      'Ecco, a Danish shoe company, uses Cilium Cluster mesh in its in-house Kubernetes-based storage solution to directly connect application nodes and storage nodes, eliminating the cost and latency introduced by relying on external storage solutions.',
   },
 ];
 
