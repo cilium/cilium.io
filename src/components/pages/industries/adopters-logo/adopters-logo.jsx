@@ -25,6 +25,7 @@ import CosmonicLogo from './images/cosmonic.inline.svg';
 import DatadogLogo from './images/datadog.inline.svg';
 import DbSchenkerLogo from './images/dbschenker.inline.svg';
 import DigitaloceanLogo from './images/digitalocean.inline.svg';
+import DocaposteLogo from './images/docaposte.inline.svg';
 import EgdelessLogo from './images/edgeless.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
@@ -172,6 +173,7 @@ const logos = {
   wso2: Wso2Logo,
   yahoo: YahooLogo,
   tsystems: TsystemsLogo,
+  docaposte: DocaposteLogo,
 };
 
 const AdoptersLogo = ({ items, className }) => (

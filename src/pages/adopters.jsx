@@ -165,6 +165,7 @@ const {
   ebay,
   reddit,
   sony,
+  docaposte,
 } = caseStudiesData;
 
 const hero = {
@@ -343,6 +344,7 @@ const userCommunity2 = {
     virtuozzo,
     alauda,
     netcloud,
+    docaposte,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',

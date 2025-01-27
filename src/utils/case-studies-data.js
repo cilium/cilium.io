@@ -1426,6 +1426,10 @@ export default {
     iconName: 'cistec',
     text: '<b>Cistec</b> is a clinical information system provider and uses Cilium as the CNI plugin',
   },
+  docaposte: {
+    iconName: 'docaposte',
+    text: '<b>Docaposte</b> is the digital trust leader in France and uses Cilium as the CNI for their Kubernetes deployments',
+  },
   kubehetzner: {
     iconName: 'kubehetzner',
     text: '<b>Kube-Hetzner</b> uses Cilium as a possible CNI in its cluster deployment on Hetzner Cloud',
