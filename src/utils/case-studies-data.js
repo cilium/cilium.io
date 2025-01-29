@@ -1187,7 +1187,7 @@ export default {
   },
   sinad: {
     iconName: 'sinad',
-    text: 'SINAD uses Cilium and integrates Tetragon to their EzyKube platform',
+    text: '<b>Sinad</b> uses Cilium and integrates Tetragon to their EzyKube platform',
   },
   nutanix: {
     iconName: 'nutanix',
