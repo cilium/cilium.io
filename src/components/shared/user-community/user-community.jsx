@@ -56,6 +56,7 @@ import DbschenkerLogo from './images/dbschenker.inline.svg';
 import DeezerLogo from './images/deezer.inline.svg';
 import DocaposteLogo from './images/docaposte.inline.svg';
 import EbayLogo from './images/ebay.inline.svg';
+import EccoLogo from './images/ecco.inline.svg';
 import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
@@ -330,6 +331,7 @@ const icons = {
   guidewire: GuidewireLogo,
   sinad: SinadLogo,
   docaposte: DocaposteLogo,
+  ecco: EccoLogo,
 };
 
 const themeClassNames = {

@@ -170,6 +170,7 @@ const {
   guidewire,
   sinad,
   docaposte,
+  ecco,
 } = caseStudiesData;
 
 const hero = {
@@ -261,6 +262,7 @@ const userCommunity1 = {
     sony,
     qingcloud,
     imagineLearning,
+    ecco,
   ],
 };
 

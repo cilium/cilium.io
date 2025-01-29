@@ -1047,6 +1047,17 @@ export default {
       },
     ],
   },
+  ecco: {
+    iconName: 'ecco',
+    text: '<b>Ecco</b> uses Cilium in their Kubernetes clusters for networking, observability and security',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=Ennjmo9TFaM',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   gdata: {
     iconName: 'gdata',
     text: '<b>G Data</b> uses Cilium in their Kubernetes clusters for networking, security and observability',
