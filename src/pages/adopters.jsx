@@ -169,6 +169,7 @@ const {
   imagineLearning,
   guidewire,
   sinad,
+  docaposte,
 } = caseStudiesData;
 
 const hero = {
@@ -351,6 +352,7 @@ const userCommunity2 = {
     netcloud,
     guidewire,
     sinad,
+    docaposte,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',

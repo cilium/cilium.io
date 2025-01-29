@@ -54,6 +54,7 @@ import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
 import DbschenkerLogo from './images/dbschenker.inline.svg';
 import DeezerLogo from './images/deezer.inline.svg';
+import DocaposteLogo from './images/docaposte.inline.svg';
 import EbayLogo from './images/ebay.inline.svg';
 import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
@@ -328,6 +329,7 @@ const icons = {
   imagine: ImagineLearningLogo,
   guidewire: GuidewireLogo,
   sinad: SinadLogo,
+  docaposte: DocaposteLogo,
 };
 
 const themeClassNames = {
