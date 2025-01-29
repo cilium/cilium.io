@@ -304,6 +304,17 @@ export default {
       },
     ],
   },
+  qingcloud: {
+    iconName: 'qingcloud',
+    text: '<b>QingCloud</b> integrated Cilium into their KubeSphere platform and deployment tool KubeKey.',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/qingcloud/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   google: {
     iconName: 'google',
     text: '<b>Google</b> chooses Cilium for Google Kubernetes Engine (GKE) networking',

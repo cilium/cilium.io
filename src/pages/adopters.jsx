@@ -165,6 +165,7 @@ const {
   ebay,
   reddit,
   sony,
+  qingcloud,
 } = caseStudiesData;
 
 const hero = {
@@ -254,6 +255,7 @@ const userCommunity1 = {
     ebay,
     reddit,
     sony,
+    qingcloud,
   ],
 };
 

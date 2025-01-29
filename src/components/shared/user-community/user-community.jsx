@@ -113,6 +113,7 @@ import PolarSignalsLogo from './images/polarsignals.inline.svg';
 import PolverioLogo from './images/polverio.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
 import ProtonLogo from './images/proton.inline.svg';
+import QingCloudLogo from './images/qingcloud.inline.svg';
 import QpointLogo from './images/qpoint.inline.svg';
 import RabobankLogo from './images/rabobank.inline.svg';
 import RadioFranceLogo from './images/radiofrance.inline.svg';
@@ -320,6 +321,7 @@ const icons = {
   ebay: EbayLogo,
   reddit: RedditLogo,
   sony: SonyLogo,
+  qingcloud: QingCloudLogo,
 };
 
 const themeClassNames = {
