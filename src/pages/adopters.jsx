@@ -379,6 +379,7 @@ const logos1 = {
     'netways',
     'sealos',
     'gcore',
+    'qingcloud',
   ],
   spaceXSize: 'sm',
 };
