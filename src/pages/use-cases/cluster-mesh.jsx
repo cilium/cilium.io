@@ -7,6 +7,7 @@ import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import CNCFLogo from 'icons/cncf.inline.svg';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
+import EccoLogo from 'icons/logo-ecco.inline.svg';
 import Form3Logo from 'icons/logo-form3.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
 import SicrediLogo from 'icons/sicredi.inline.svg';
@@ -159,6 +160,20 @@ const testimonials = [
       "Cilium Cluster Mesh gave us possibilities that we didn't have before. We can run the same application across our data centers and AWS. It provides us with a consistent networking experience wherever we need to go. Applications in different clusters can communicate with each other without needing to go through an ingress controller. We are expanding this capability for more applications because this value is already proven. Cluster Mesh works, it's fast, and it's reliable",
     quote: true,
     person: 'Matheus Morais - IT Infrastructure Analyst, Sicredi',
+  },
+  {
+    logo: EccoLogo,
+    title: ' High Performance Data Backend for Your AI/ML with MinIO and Cilium Cluster Mesh',
+    CTAs: [
+      {
+        CTAtext: 'Watch The Talk',
+        url: 'https://www.youtube.com/watch?v=Ennjmo9TFaM',
+      },
+    ],
+    description:
+      'Cilium Cluster mesh allows bypass using a load balancer; instead, we use direct node-to-node communication, and we can have transparent service discovery. Each application connects to the local service gateway instead of an ingress. This approach creates network disruption tolerance. If one of these clusters dies, the error is not propagated across all the clusters.',
+    quote: true,
+    person: ' Vitalii Savitskii - Software Engineer, Ecco',
   },
 ];
 
