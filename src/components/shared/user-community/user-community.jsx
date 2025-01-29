@@ -67,9 +67,11 @@ import FRSCALogo from './images/frsca.inline.svg';
 import GcoreLogo from './images/gcore.inline.svg';
 import GdataLogo from './images/gdata.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
+import GuidewireLogo from './images/guidewire.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
 import IcosLogo from './images/icos.inline.svg';
 import IlionxLogo from './images/ilionx.inline.svg';
+import ImagineLearningLogo from './images/imagine.inline.svg';
 import ImmerokLogo from './images/immerok.inline.svg';
 import IncentiveLogo from './images/incentive.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
@@ -134,6 +136,7 @@ import SeatGeekLogo from './images/seatgeek.inline.svg';
 import SianalyticsLogo from './images/sianalytics.inline.svg';
 import SicrediLogo from './images/sicredi.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
+import SinadLogo from './images/sinad.inline.svg';
 import SinglestoreLogo from './images/singlestore.inline.svg';
 import SkybetLogo from './images/skybet.inline.svg';
 import SmartNewsLogo from './images/smartnews.inline.svg';
@@ -322,6 +325,9 @@ const icons = {
   reddit: RedditLogo,
   sony: SonyLogo,
   qingcloud: QingCloudLogo,
+  imagine: ImagineLearningLogo,
+  guidewire: GuidewireLogo,
+  sinad: SinadLogo,
 };
 
 const themeClassNames = {

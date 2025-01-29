@@ -315,6 +315,17 @@ export default {
       },
     ],
   },
+  imagineLearning: {
+    iconName: 'imagine',
+    text: '<b>Imagine Learning</b> uses Cilium as CNI in their Kubernetes environments',
+    links: [
+      {
+        linkText: 'Watch The Interview',
+        linkUrl: 'https://www.youtube.com/watch?v=57kscdkdorw',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   google: {
     iconName: 'google',
     text: '<b>Google</b> chooses Cilium for Google Kubernetes Engine (GKE) networking',
@@ -1158,6 +1169,14 @@ export default {
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',
+  },
+  guidewire: {
+    iconName: 'guidewire',
+    text: '<b>Guidewire</b> uses Cilium for the Guidewire Cloud Platform',
+  },
+  sinad: {
+    iconName: 'sinad',
+    text: 'SINAD uses Cilium and integrates Tetragon to their EzyKube platform',
   },
   nutanix: {
     iconName: 'nutanix',
