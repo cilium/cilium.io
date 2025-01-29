@@ -50,15 +50,14 @@ const testimonials = [
     logo: RedditLogo,
     CTAs: [
       {
-        CTAtext: 'Read the blog',
-        url: 'https://www.reddit.com/r/RedditEng/comments/1hv3sc7/tetragon_configuration_gotchas/',
+        CTAtext: 'Watch the talk',
+        url: 'https://www.youtube.com/watch?v=YNDp7Id7Bb',
       },
     ],
-    title: 'Tetragon Configuration Gotchas',
+    title: "Don't Get Blown up! Avoiding Configuration Gotchas for Tetragon Newbies",
     description:
-      'This blog post provides links to our recent presentation during the CiliumDay at Kubecon NA’24 along with a brief background to describe the problem statement.',
+      'This Reddit team shares from their experience five common configuration pitfalls that beginners encounter when using Tetragon for runtime observability for their workloads.',
   },
-
   {
     logo: FRSCALogo,
     CTAs: [
