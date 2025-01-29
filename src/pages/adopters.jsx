@@ -165,6 +165,10 @@ const {
   ebay,
   reddit,
   sony,
+  qingcloud,
+  imagineLearning,
+  guidewire,
+  sinad,
 } = caseStudiesData;
 
 const hero = {
@@ -254,6 +258,8 @@ const userCommunity1 = {
     ebay,
     reddit,
     sony,
+    qingcloud,
+    imagineLearning,
   ],
 };
 
@@ -343,6 +349,8 @@ const userCommunity2 = {
     virtuozzo,
     alauda,
     netcloud,
+    guidewire,
+    sinad,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -377,6 +385,7 @@ const logos1 = {
     'netways',
     'sealos',
     'gcore',
+    'qingcloud',
   ],
   spaceXSize: 'sm',
 };

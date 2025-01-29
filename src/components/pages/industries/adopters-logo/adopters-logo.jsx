@@ -59,6 +59,7 @@ import PlanetscaleLogo from './images/planetscale.inline.svg';
 import PlusserverLogo from './images/plusserver.inline.svg';
 import PostFinanceLogo from './images/postfinance.inline.svg';
 import ProtonLogo from './images/proton.inline.svg';
+import QingCloud from './images/qingcloud.inline.svg';
 import QwistLogo from './images/qwist.inline.svg';
 import RabobankLogo from './images/rabobank.inline.svg';
 import RadiofranceLogo from './images/radiofrance.inline.svg';
