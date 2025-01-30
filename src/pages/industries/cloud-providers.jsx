@@ -16,6 +16,7 @@ import CloudImage2 from 'images/pages/industries/cloud-providers/cloud-2.png';
 import DigitalOceanOffice from 'images/pages/industries/cloud-providers/DigitalOceanOffice.png';
 import GoogleOfficeImage from 'images/pages/industries/cloud-providers/googleoffice.png';
 import MicrosoftOffice from 'images/pages/industries/cloud-providers/microsoftoffice.png';
+import QingCloudOffice from 'images/pages/industries/cloud-providers/qingcloud-office.jpeg';
 import SysElevenOffice from 'images/pages/industries/cloud-providers/syselvenoffice.jpg';
 import MainLayout from 'layouts/main/main';
 
@@ -179,6 +180,14 @@ const cloudResouces = [
     buttonLink: 'https://www.cncf.io/case-studies/syseleven/',
     imageSrc: SysElevenOffice,
     imageAlt: 'SysEleven office buidling',
+  },
+  {
+    title: 'QingCloud boosted performance and networking with Cilium',
+    description:
+      'QingCloud Technologies Corp uses Cilium to offer advanced networking features, such as multi-cluster management and high performance while ensuring cost-efficiency and alignment with customer needs',
+    buttonLink: 'https://www.cncf.io/case-studies/qingcloud/',
+    imageSrc: QingCloudOffice,
+    imageAlt: 'Qingcloud office buidling',
   },
 ];
 

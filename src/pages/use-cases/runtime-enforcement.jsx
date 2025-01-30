@@ -6,6 +6,7 @@ import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
+import RedditLogo from 'icons/logo-reddit.inline.svg';
 import PalantirLogo from 'icons/palantir.inline.svg';
 import TestifyLogo from 'icons/testifysec.inline.svg';
 import TetragonIllustration from 'images/pages/usecase/tetragon-illustration.png';
@@ -45,6 +46,18 @@ const sectionContent2 = {
 };
 
 const testimonials = [
+  {
+    logo: RedditLogo,
+    CTAs: [
+      {
+        CTAtext: 'Watch the talk',
+        url: 'https://www.youtube.com/watch?v=YNDp7Id7Bb',
+      },
+    ],
+    title: "Don't Get Blown up! Avoiding Configuration Gotchas for Tetragon Newbies",
+    description:
+      'This Reddit team shares from their experience five common configuration pitfalls that beginners encounter when using Tetragon for runtime observability for their workloads.',
+  },
   {
     logo: FRSCALogo,
     CTAs: [

@@ -56,6 +56,7 @@ import DbschenkerLogo from './images/dbschenker.inline.svg';
 import DeezerLogo from './images/deezer.inline.svg';
 import DocaposteLogo from './images/docaposte.inline.svg';
 import EbayLogo from './images/ebay.inline.svg';
+import EccoLogo from './images/ecco.inline.svg';
 import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
@@ -68,9 +69,11 @@ import FRSCALogo from './images/frsca.inline.svg';
 import GcoreLogo from './images/gcore.inline.svg';
 import GdataLogo from './images/gdata.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
+import GuidewireLogo from './images/guidewire.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
 import IcosLogo from './images/icos.inline.svg';
 import IlionxLogo from './images/ilionx.inline.svg';
+import ImagineLearningLogo from './images/imagine.inline.svg';
 import ImmerokLogo from './images/immerok.inline.svg';
 import IncentiveLogo from './images/incentive.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
@@ -114,6 +117,7 @@ import PolarSignalsLogo from './images/polarsignals.inline.svg';
 import PolverioLogo from './images/polverio.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
 import ProtonLogo from './images/proton.inline.svg';
+import QingCloudLogo from './images/qingcloud.inline.svg';
 import QpointLogo from './images/qpoint.inline.svg';
 import RabobankLogo from './images/rabobank.inline.svg';
 import RadioFranceLogo from './images/radiofrance.inline.svg';
@@ -134,6 +138,7 @@ import SeatGeekLogo from './images/seatgeek.inline.svg';
 import SianalyticsLogo from './images/sianalytics.inline.svg';
 import SicrediLogo from './images/sicredi.inline.svg';
 import SimpleLogo from './images/simple.inline.svg';
+import SinadLogo from './images/sinad.inline.svg';
 import SinglestoreLogo from './images/singlestore.inline.svg';
 import SkybetLogo from './images/skybet.inline.svg';
 import SmartNewsLogo from './images/smartnews.inline.svg';
@@ -321,7 +326,12 @@ const icons = {
   ebay: EbayLogo,
   reddit: RedditLogo,
   sony: SonyLogo,
+  qingcloud: QingCloudLogo,
+  imagine: ImagineLearningLogo,
+  guidewire: GuidewireLogo,
+  sinad: SinadLogo,
   docaposte: DocaposteLogo,
+  ecco: EccoLogo,
 };
 
 const themeClassNames = {

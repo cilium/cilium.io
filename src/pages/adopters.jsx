@@ -165,7 +165,12 @@ const {
   ebay,
   reddit,
   sony,
+  qingcloud,
+  imagineLearning,
+  guidewire,
+  sinad,
   docaposte,
+  ecco,
 } = caseStudiesData;
 
 const hero = {
@@ -255,6 +260,9 @@ const userCommunity1 = {
     ebay,
     reddit,
     sony,
+    qingcloud,
+    imagineLearning,
+    ecco,
   ],
 };
 
@@ -344,6 +352,8 @@ const userCommunity2 = {
     virtuozzo,
     alauda,
     netcloud,
+    guidewire,
+    sinad,
     docaposte,
   ],
   buttonText: 'Add Your Company',
@@ -379,6 +389,7 @@ const logos1 = {
     'netways',
     'sealos',
     'gcore',
+    'qingcloud',
   ],
   spaceXSize: 'sm',
 };

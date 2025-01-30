@@ -304,6 +304,28 @@ export default {
       },
     ],
   },
+  qingcloud: {
+    iconName: 'qingcloud',
+    text: '<b>QingCloud</b> integrated Cilium into their KubeSphere platform and deployment tool KubeKey.',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/qingcloud/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  imagineLearning: {
+    iconName: 'imagine',
+    text: '<b>Imagine Learning</b> uses Cilium as CNI in their Kubernetes environments',
+    links: [
+      {
+        linkText: 'Watch The Interview',
+        linkUrl: 'https://www.youtube.com/watch?v=57kscdkdorw',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   google: {
     iconName: 'google',
     text: '<b>Google</b> chooses Cilium for Google Kubernetes Engine (GKE) networking',
@@ -1025,6 +1047,17 @@ export default {
       },
     ],
   },
+  ecco: {
+    iconName: 'ecco',
+    text: '<b>Ecco</b> uses Cilium in their Kubernetes clusters for networking, observability and security',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=Ennjmo9TFaM',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   gdata: {
     iconName: 'gdata',
     text: '<b>G Data</b> uses Cilium in their Kubernetes clusters for networking, security and observability',
@@ -1147,6 +1180,14 @@ export default {
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',
+  },
+  guidewire: {
+    iconName: 'guidewire',
+    text: '<b>Guidewire</b> uses Cilium for the Guidewire Cloud Platform',
+  },
+  sinad: {
+    iconName: 'sinad',
+    text: '<b>Sinad</b> uses Cilium and integrates Tetragon to their EzyKube platform',
   },
   nutanix: {
     iconName: 'nutanix',

@@ -38,6 +38,7 @@ import NetwaysLogo from './images/netways.inline.svg';
 import NineLogo from './images/nine.inline.svg';
 import OpenShiftLogo from './images/openshift.inline.svg';
 import OpenStackLogo from './images/openstack.inline.svg';
+import QingCloudLogo from './images/qingcloud.inline.svg';
 import Rke2Logo from './images/rke2.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
 import SealosLogo from './images/sealos.inline.svg';
@@ -86,6 +87,7 @@ const logos = {
   exoscale: ExoscaleLogo,
   hetzner: HetznerLogo,
   alauda: AlaudaLogo,
+  qingcloud: QingCloudLogo,
 };
 
 const spaceXClassNames = {
