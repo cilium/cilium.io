@@ -117,7 +117,7 @@ accelerate handling for Kubernetes service types `NodePort`, `LoadBalancer`, and
 services with `externalIPs`. This significantly reduces CPU overhead and supports
 handling millions of packets per second efficiently while being co-located with regular
 user workloads. The new release complements the north-south load balancer by adding support
-for [Maglev](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/44824.pdf)'s
+for [Maglev](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/44824.pdf)'s
 consistent hashing algorithm for the backend selection.
 
 By default, Kubernetes service load balancing implemented by kube-proxy or Cilium
