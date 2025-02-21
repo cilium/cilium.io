@@ -4,7 +4,7 @@ date: '2024-12-31T12:00:00.000Z'
 title: 'Cilium at KubeCon + CloudNativeCon Europe 2025 and CiliumCon '
 isFeatured: false
 ogImage: cover.png
-ogSummary: 'This blog post zooms in on what the Tetragon community accomplished in 2024'
+ogSummary: 'This blog highlights Cilium at KubeCon EU 2025'
 categories:
   - Community
 tags:
