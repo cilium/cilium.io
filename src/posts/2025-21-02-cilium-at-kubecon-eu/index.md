@@ -1,5 +1,5 @@
 ---
-path: '/blog/2024/02/21/cilium-at-kubecon-eu-2025'
+path: '/blog/2025/02/21/cilium-at-kubecon-eu-2025'
 date: '2024-12-31T12:00:00.000Z'
 title: 'Cilium at KubeCon + CloudNativeCon Europe 2025 and CiliumCon '
 isFeatured: false
@@ -8,7 +8,7 @@ ogSummary: 'This blog highlights Cilium at KubeCon EU 2025'
 categories:
   - Community
 tags:
-  - Tetragon
+  - Cilium
 ---
 
 **_Author: Paul Arah, Isovalent_**
