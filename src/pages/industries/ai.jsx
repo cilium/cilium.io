@@ -151,7 +151,7 @@ const MediaEntertainmentPage = () => (
     <Testimonial {...googleTestimonial} className="my-10 md:my-20 lg:my-32" />
     <BulletSection {...bulletSection4} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection5} className="mt-10 px-10 md:mt-20 lg:mt-32" />
-    <FeaturedTalks talks={aiTalks} />
+    <FeaturedTalks talks={aiTalks} className="mt-10" />
     <ResourcesCard
       heading="See Real World Stories of Companies using Cilium for AI/ML"
       resources={aiResouces}
