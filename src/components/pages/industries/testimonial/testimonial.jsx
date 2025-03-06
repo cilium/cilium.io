@@ -15,6 +15,7 @@ import EficodeLogo from 'icons/logo-efficode.inline.svg';
 import GoogleCloudLogo from 'icons/logo-googlecloud.inline.svg';
 import HetznerLogo from 'icons/logo-hetzner.inline.svg';
 import KubeEdgeLogo from 'icons/logo-kubeedge.inline.svg';
+import MeltwaterLogo from 'icons/logo-meltwater.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import PalarkLogo from 'icons/logo-palark.inline.svg';
 import RocheLogo from 'icons/logo-roche.inline.svg';
@@ -39,6 +40,7 @@ const logos = {
   hetzner: HetznerLogo,
   kubeedge: KubeEdgeLogo,
   roche: RocheLogo,
+  meltwater: MeltwaterLogo,
 };
 
 const AdopterTestimonial = ({
