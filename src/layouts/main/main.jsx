@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
+import TopBanner from 'components/shared/top-banner';
 import AdoptersIcon from 'icons/adopters.inline.svg';
 import BlogIcon from 'icons/blog.inline.svg';
 import BrandingIcon from 'icons/branding.inline.svg';
@@ -85,6 +86,10 @@ const MainLayout = ({ children, theme, headerWithSearch, footerWithTopBorder }) 
 
   return (
     <>
+      <TopBanner
+        text="Cilium at KubeCon + CloudNativeCon and CiliumCon"
+        url="https://cilium.io/blog/2025/02/21/cilium-at-kubecon-eu-2025/"
+      />
       <Header
         navigation={navigation}
         withSearch={headerWithSearch}
