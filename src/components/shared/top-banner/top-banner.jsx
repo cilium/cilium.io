@@ -10,20 +10,18 @@ const TopBanner = ({ text, url }) => {
   }
 
   return (
-    <section className="top-banner w-full">
-      <Link
-        className="group flex gap-3.5 w-full justify-center items-center px-5 py-3.5 leading-normal bg-[#FFF5D6] border-b border-[#FFE391] overflow-hidden"
-        theme="black-primary"
-        type="text"
-        to={url}
-      >
-        <span className="truncate !font-normal">{text}</span>
-        <span className="hidden sm:block border-l border-current pl-3.5 font-medium tracking-tight whitespace-nowrap">
-          Learn more
-        </span>
-        <ArrowIcon className="-ml-1.5 text-center shrink-0" />
-      </Link>
-    </section>
+    <Link
+      className="top-banner flex gap-3.5 w-full justify-center items-center px-5 py-3.5 leading-normal bg-[#FFF5D6] border-b border-[#FFE391] overflow-hidden"
+      theme="black-primary"
+      type="text"
+      to={url}
+    >
+      <span className="truncate !font-normal">{text}</span>
+      <span className="hidden sm:block border-l border-current pl-3.5 text-15 font-semibold tracking-tight whitespace-nowrap">
+        Learn more
+      </span>
+      <ArrowIcon className="-ml-1.5 text-center shrink-0" />
+    </Link>
   );
 };
 
