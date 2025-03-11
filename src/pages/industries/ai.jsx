@@ -40,10 +40,10 @@ const azureTestimonial = {
   CTAtext: 'Read The Case Study',
 };
 
-const googleTestimonial = {
+const ascendTestimonial = {
   logo: 'ascend',
   description:
-    'Ascend.io useCilium Transparent Encryption to support their use of Apache Spark, the analytics engine for large-scale data processing.',
+    'Ascend.io uses Cilium Transparent Encryption to support their use of Apache Spark, the analytics engine for large-scale data processing.',
   quotedText:
     'Spark was the other reason that Cilium became a killer feature that we needed to roll out across every cloud. Spark is a great tool, but sometimes their built in encryption will fail at random. Statistically, at some point it will crash so if you’re dealing with a 12 hour job, it’s gonna fail on hour 11 and that is a terrible thing to try to explain to the customer. Cilium with IPsec doesn’t have that problem. Why have Spark be doing encryption when what we really want Spark to be doing is processing data. We chose to have a reasonable isolation of priorities and responsibilities and have Spark be focused on data processing and have the network layer that is responsible for encryption.',
   withPerson: true,
@@ -113,7 +113,7 @@ const aiResouces = [
   {
     title: "Meltwater's Live Migration to Cilium for Richer Features",
     description:
-      'Cilium even allowed meltwater to completely replace their existing AWS VPC CNI without requiring any interruption in service to their customers.',
+      'Meltwater is a global leader in media, social and consumer intelligence. They have been building machine learning models for nearly 20 years and use AI at the heart of their operations for use cases such as natural language processing, speech processing, clustering and summarization, etc..',
     buttonLink: 'https://www.cncf.io/case-studies/meltwater/',
     imageSrc: MeltwaterOfficeImage,
     imageAlt: 'meltwater office',
@@ -145,10 +145,10 @@ const MediaEntertainmentPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} imageStyle="h-auto lg:w-[350px]" />
     <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
-    <Testimonial {...azureTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    {/* <Testimonial {...azureTestimonial} className="mt-10 md:mt-20 lg:mt-32" /> */}
     <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection3} className="mt-10 md:mt-20 lg:mt-32" />
-    <Testimonial {...googleTestimonial} className="my-10 md:my-20 lg:my-32" />
+    <Testimonial {...ascendTestimonial} className="my-10 md:my-20 lg:my-32" />
     <BulletSection {...bulletSection4} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection5} className="mt-10 px-10 md:mt-20 lg:mt-32" />
     <FeaturedTalks talks={aiTalks} className="mt-10" />
