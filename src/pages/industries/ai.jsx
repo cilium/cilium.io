@@ -131,7 +131,7 @@ const aiTalks = [
     title: 'Building the core fabric of accelerated hybrid AI clusters using Cilium',
     videoSrc: 'https://www.youtube.com/embed/nYOG41fUO1s?si=dTWw_yRkSwNFicR6',
     description:
-      "This talk covers why and how Backend.ai  switched from the Docker's own overlay network driver to Cilium",
+      "This talk covers why and how Backend.ai switched from  Docker's own overlay network driver to Cilium and how this transition resulted in extra capabilities such as fine-grained control over both inter-container and external traffic and also achieving the sensitive throughput and latency requirements of their target workloads.",
   },
   {
     title: 'How Meltwater migrated from the Amazon VPC CNI plugin to Cilium in K8s',
