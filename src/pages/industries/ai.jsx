@@ -66,7 +66,7 @@ const bulletSection1 = {
 const bulletSection2 = {
   heading: 'Robust Security for AI/ML Models and Data',
   paragraphs: [
-    'AI models result from significant investment in research and infrastructure. Protecting these models and the sensitive data they process is non-negotiable for enterprises. Traditional security solutions often lack the granularity and scalability for dynamic, cloud-native environments.',
+    'AI models are the result of significant investment in research and infrastructure. Protecting these models and the sensitive data they process is non-negotiable for enterprises. Traditional security solutions often lack the granularity and scalability for dynamic, cloud native environments.',
     'Cilium provides robust security features that enhance Kubernetes security. These features include zero-trust security with identity-aware security policies, mutual authentication, and advanced network policies. Cilium supports native HTTP and DNS protocol enforcement, ensuring only authorized services can access endpoints. Cilium’s Transparent Encryption (using IPsec or WireGuard) effortlessly encrypts data in transit, safeguarding intellectual property and easing compliance.',
   ],
   imageRight: false,
