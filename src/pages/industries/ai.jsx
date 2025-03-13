@@ -28,7 +28,7 @@ const heroContent = {
 };
 
 const eccoTestimonial = {
-  logo: 'meltwater',
+  logo: 'ecco',
   description:
     'Ecco is a global leader in shoe production and retail. The company’s IT infrastructure is almost entirely Kubernetes-based and designed to facilitate machine learning (ML) workflows that enable intelligent decision-making and supply chain management.',
   quotedText:
@@ -37,7 +37,7 @@ const eccoTestimonial = {
   name: 'George Zubrienko',
   role: 'Platform Engineer, Ecco',
   url: 'https://www.youtube.com/watch?v=Ennjmo9TFaM',
-  CTAtext: 'Watch the Talk',
+  CTAtext: 'Watch The Talk',
 };
 
 const ascendTestimonial = {

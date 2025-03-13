@@ -4,6 +4,7 @@ import React from 'react';
 import Container from 'components/shared/container/container';
 import Link from 'components/shared/link/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
+import EccoLogo from 'icons/ecco.inline.svg';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import AzureLogo from 'icons/logo-azure.inline.svg';
 import BellLogo from 'icons/logo-bell.inline.svg';
@@ -41,6 +42,7 @@ const logos = {
   kubeedge: KubeEdgeLogo,
   roche: RocheLogo,
   meltwater: MeltwaterLogo,
+  ecco: EccoLogo,
 };
 
 const AdopterTestimonial = ({
