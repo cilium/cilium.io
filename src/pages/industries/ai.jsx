@@ -30,7 +30,7 @@ const heroContent = {
 const azureTestimonial = {
   logo: 'meltwater',
   description:
-    ' Meltwater is a global leader in media, social and consumer intelligence. They have been building machine learning models for nearly 20 years and use AI at the heart of their operations for use cases such as natural language processing, speech processing, clustering and summarization, etc..',
+    ' Meltwater is a global leader in media, social and consumer intelligence. They have been building machine learning models for nearly 20 years and use AI at the heart of their operations for use cases such as natural language processing, speech processing, clustering and summarization, and more.',
   quotedText:
     'Cilium helped us centralize and move functionality within the CNI without having to run anything extra resulting in fewer pieces to manage and reduced cost. For the future, we are looking at Cluster Mesh with blue-green deployments to get to the point where we can swap entire clusters under workloads without users noticing. Cilium has already solved a lot of issues, but what it opens up is even better.',
   withPerson: true,
