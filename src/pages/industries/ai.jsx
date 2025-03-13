@@ -86,7 +86,7 @@ const bulletSection3 = {
 const bulletSection4 = {
   heading: 'Scaling AI/ML Infrastructure Efficiently',
   paragraphs: [
-    'AI workloads are resource-intensive and often experience fluctuating demands. Scaling infrastructure to meet these demands without overspending or inefficiently allocating resources is a significant challenge for operators. The ability to scale up and down depending on the resource demand is one of the most significant advantages Kubernetes brings to AI/ML. Cilium further enhances this advantage, empowering you to scale AI workloads efficiently. Cilium’s advanced load balancing and traffic management capabilities ensure your AI applications can scale dynamically without disruption. By optimizing resource allocation and reducing overhead, Cilium helps you maximize the ROI of your AI/ML investments. ',
+    'AI workloads are resource intensive and often experience fluctuating demands. Scaling infrastructure to meet these demands without overspending or inefficiently allocating resources is a significant challenge for operators. The ability to scale up and down depending on the resource demand is one of the most significant advantages Kubernetes brings to AI/ML. Cilium further enhances this advantage, empowering you to scale AI workloads efficiently. Cilium’s advanced load balancing and traffic management capabilities ensure your AI applications can scale dynamically without disruption. By optimizing resource allocation and reducing overhead, Cilium helps you maximize the ROI of your AI/ML investments.',
   ],
   imageSrc: AiImage4,
   imageAlt: 'hetzner cilium test illustration',
