@@ -113,7 +113,7 @@ const aiResouces = [
   {
     title: "Meltwater's Live Migration to Cilium for Richer Features",
     description:
-      'Meltwater is a global leader in media, social and consumer intelligence. They have been building machine learning models for nearly 20 years and use AI at the heart of their operations for use cases such as natural language processing, speech processing, clustering and summarization, etc..',
+      'Meltwater is a global leader in media, social and consumer intelligence. They have been building machine learning models for nearly 20 years and use AI at the heart of their operations for use cases such as natural language processing, speech processing, clustering and summarization, and more.',
     buttonLink: 'https://www.cncf.io/case-studies/meltwater/',
     imageSrc: MeltwaterOfficeImage,
     imageAlt: 'meltwater office',
