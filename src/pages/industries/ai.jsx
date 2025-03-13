@@ -27,17 +27,17 @@ const heroContent = {
   imageAlt: 'router bee',
 };
 
-const azureTestimonial = {
+const eccoTestimonial = {
   logo: 'meltwater',
   description:
-    ' Meltwater is a global leader in media, social and consumer intelligence. They have been building machine learning models for nearly 20 years and use AI at the heart of their operations for use cases such as natural language processing, speech processing, clustering and summarization, and more.',
+    'Ecco is a global leader in shoe production and retail. The company’s IT infrastructure is almost entirely Kubernetes-based and designed to facilitate machine learning (ML) workflows that enable intelligent decision-making and supply chain management.',
   quotedText:
-    'Cilium helped us centralize and move functionality within the CNI without having to run anything extra resulting in fewer pieces to manage and reduced cost. For the future, we are looking at Cluster Mesh with blue-green deployments to get to the point where we can swap entire clusters under workloads without users noticing. Cilium has already solved a lot of issues, but what it opens up is even better.',
+    'Managing connections across different cloud storage providers was cumbersome. We needed a solution that could simplify this complexity and reduce costs. By leveraging Cilium’s eBPF capabilities, we maintained high-performance networking while completely removing unpredictable traffic costs. Speed is everything in our business; if we can move goods efficiently and forecast demand accurately, we win. Cilium has become a cornerstone of our strategy. It’s not just a tool; it’s a game-changer.',
   withPerson: true,
-  name: 'Simone Sciarrati',
-  role: 'Principal Engineer, Meltwater',
-  url: 'https://www.cncf.io/case-studies/meltwater/',
-  CTAtext: 'Read The Case Study',
+  name: 'George Zubrienko',
+  role: 'Platform Engineer, Ecco',
+  url: 'https://www.youtube.com/watch?v=Ennjmo9TFaM',
+  CTAtext: 'Watch the Talk',
 };
 
 const ascendTestimonial = {
@@ -145,7 +145,7 @@ const MediaEntertainmentPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} imageStyle="h-auto lg:w-[350px]" />
     <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
-    {/* <Testimonial {...azureTestimonial} className="mt-10 md:mt-20 lg:mt-32" /> */}
+    <Testimonial {...eccoTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection3} className="mt-10 md:mt-20 lg:mt-32" />
     <Testimonial {...ascendTestimonial} className="my-10 md:my-20 lg:my-32" />
