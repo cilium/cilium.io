@@ -21,7 +21,7 @@ const heroContent = {
   heading: 'Artificial Intelligence',
   texts: [
     'The AI revolution is here, and with it comes unprecedented demands on network infrastructure. From training massive language models to serving real-time inference, AI workloads require high-performance networking, robust security, and deep observability. Kubernetes has evolved from just a platform for running workloads like web services and microservices to the ideal platform for supporting the end-to-end lifecycle of large artificial intelligence (AI) and machine learning (ML) workloads.',
-    'Cilium is the cloud-native solution for providing, securing, and observing network connectivity between workloads, empowering AI workloads to thrive in cloud native environments. Organizations ranging from artificial intelligence research institutions that build sophisticated training models to financial institutions and startups rely on Cilium to support their AI/ML distributed workloads on Kubernetes. ',
+    'Cilium is the cloud native solution for providing, securing, and observing network connectivity between workloads, empowering AI workloads to thrive in cloud native environments. Organizations ranging from artificial intelligence research institutions that build sophisticated training models to financial institutions and startups rely on Cilium to support their distributed AI/ML workloads on Kubernetes.',
   ],
   imageSrc: RouterBee,
   imageAlt: 'router bee',
