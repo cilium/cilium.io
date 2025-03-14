@@ -57,7 +57,7 @@ const bulletSection1 = {
   heading: 'Fulfilling the Networking Demands of AI/ML Workloads',
   paragraphs: [
     'AI workloads typically require massive data transfers, ultra-low latency, high throughput, and high bandwidth networking. Traditional networking solutions struggle to keep up, leading to bottlenecks and inefficiencies.',
-    'Cilium leverages eBPF to deliver kernel-level networking performance, eliminating the overhead of traditional Linux networking. With features like eXpress Data Path (XDP) and BIG TCP, Cilium ensures high-throughput, low-latency communication—ideal for AI/ML workloads. Cilium provides a comprehensive networking toolset for model deployment with load balancers, ingress controllers, network policies, egress gateway, service mesh, and more. These features facilitate the seamless deployment of AI/ML workloads and their integration into services and applications.',
+    'Cilium leverages eBPF to deliver kernel-level networking performance, eliminating the overhead of traditional Linux networking. With features like eXpress Data Path (XDP) and BIG TCP, Cilium ensures high-throughput, low-latency networking ideal for needs of AI/ML workloads. Cilium provides a comprehensive networking toolset for deploying AI/ML models with load balancers, ingress controllers, network policies, egress gateway, service mesh, and more. These features facilitate the seamless deployment of AI/ML workloads and their integration into services and applications.',
   ],
   imageSrc: AiImage1,
   imageAlt: 'cilium big tcp stats',
