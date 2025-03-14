@@ -36,6 +36,7 @@ const navigation = [
       { name: 'Consulting', href: '/industries/consulting' },
       { name: 'Security', href: '/industries/security' },
       { name: 'Edge Computing', href: '/industries/edge-computing' },
+      { name: 'Artificial Intelligence', href: '/industries/ai' },
     ],
   },
 
