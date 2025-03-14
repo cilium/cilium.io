@@ -35,7 +35,7 @@ const eccoTestimonial = {
     'Managing connections across different cloud storage providers was cumbersome. We needed a solution that could simplify this complexity and reduce costs. By leveraging Cilium’s eBPF capabilities, we maintained high-performance networking while completely removing unpredictable traffic costs. Speed is everything in our business; if we can move goods efficiently and forecast demand accurately, we win. Cilium has become a cornerstone of our strategy. It’s not just a tool; it’s a game-changer.',
   withPerson: true,
   name: 'George Zubrienko',
-  role: 'Platform Engineer, Ecco',
+  role: 'Data & AI Lead Platform Engineer, Ecco',
   url: 'https://www.youtube.com/watch?v=Ennjmo9TFaM',
   CTAtext: 'Watch The Talk',
 };
@@ -125,7 +125,7 @@ const aiTalks = [
     title: 'High Performance Data Backend for Your AI/ML with MinIO and Cilium Cluster Mesh',
     videoSrc: 'https://www.youtube.com/embed/Ennjmo9TFaM?si=Jy8mQ61Ckwk1rHfw',
     description:
-      'This talk demonstrates how embedding your storage into a cluster mesh with Spark and ML containers via Cilium can outperform classic commercial blob storage offerings',
+      'This talk demonstrates how embedding your storage into a cluster mesh with Spark and ML containers via Cilium can outperform classic commercial blob storage offerings.',
   },
   {
     title: 'Building the core fabric of accelerated hybrid AI clusters using Cilium',
@@ -137,7 +137,7 @@ const aiTalks = [
     title: 'How Meltwater migrated from the Amazon VPC CNI plugin to Cilium in K8s',
     videoSrc: 'https://www.youtube.com/embed/wMXV7I3kq9k?si=btypPQp2wwGmukke',
     description:
-      'This talks covers how Meltwater  migrated from the Amazon VPC CNI plugin to Cilium in K8s',
+      'This talks covers how Meltwater  migrated from the Amazon VPC CNI plugin to Cilium in Kubernetes.',
   },
 ];
 
