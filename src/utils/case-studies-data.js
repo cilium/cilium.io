@@ -1491,4 +1491,8 @@ export default {
     iconName: 'netcloud',
     text: '<b>Netcloud</b> uses Cilium as the CNI for mission critical, on premise Kubernetes clusters',
   },
+  coreweave: {
+    iconName: 'coreweave',
+    text: '<b>CoreWeave</b> The AI Hyperscaler™, uses Cilium as the default CNI for CoreWeave Kubernetes Service.',
+  },
 };

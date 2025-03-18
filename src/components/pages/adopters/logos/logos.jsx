@@ -15,6 +15,7 @@ import AzureLogo from './images/azure.inline.svg';
 import AzureKsLogo from './images/azureks.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ConstellationLogo from './images/constellation.inline.svg';
+import CoreweaveLogo from './images/coreweave.inline.svg';
 import CraneLogo from './images/crane.inline.svg';
 import DaoCloudLogo from './images/daocloud.inline.svg';
 import DeckhouseLogo from './images/deckhouse.inline.svg';
@@ -88,6 +89,7 @@ const logos = {
   hetzner: HetznerLogo,
   alauda: AlaudaLogo,
   qingcloud: QingCloudLogo,
+  coreweave: CoreweaveLogo,
 };
 
 const spaceXClassNames = {

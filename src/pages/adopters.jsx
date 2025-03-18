@@ -171,6 +171,7 @@ const {
   sinad,
   docaposte,
   ecco,
+  coreweave,
 } = caseStudiesData;
 
 const hero = {
@@ -355,6 +356,7 @@ const userCommunity2 = {
     guidewire,
     sinad,
     docaposte,
+    coreweave,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -390,6 +392,7 @@ const logos1 = {
     'sealos',
     'gcore',
     'qingcloud',
+    'coreweave',
   ],
   spaceXSize: 'sm',
 };

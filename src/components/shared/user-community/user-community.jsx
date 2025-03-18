@@ -49,6 +49,7 @@ import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CloutomateLogo from './images/cloutomate.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
 import ConfluentLogo from './images/confluent.inline.svg';
+import CoreweaveLogo from './images/coreweave.inline.svg';
 import CybozuLogo from './images/cybozu.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
@@ -332,6 +333,7 @@ const icons = {
   sinad: SinadLogo,
   docaposte: DocaposteLogo,
   ecco: EccoLogo,
+  coreweave: CoreweaveLogo,
 };
 
 const themeClassNames = {
