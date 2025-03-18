@@ -1501,6 +1501,6 @@ export default {
   },
   entrywan: {
     iconName: 'entrywan',
-    text: '<b>Entrywan</b> Entrywan provides Cilium as a CNI option in its managed kubernetes service',
+    text: '<b>Entrywan</b> provides Cilium as a CNI option in its managed Kubernetes service',
   },
 };
