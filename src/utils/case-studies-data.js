@@ -787,6 +787,11 @@ export default {
         linkUrl: 'https://cilium.io/blog/2023/09/07/db-schenker-migration-to-cilium/',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/db-schenker/',
+        linkTarget: '_blank',
+      },
     ],
   },
   dbraincloud: {
