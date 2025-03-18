@@ -5,6 +5,7 @@ import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
+import DBSchenkerLogo from 'images/pages/usecase/dbschenker.inline.svg';
 import NYTimesLogo from 'images/pages/usecase/nyt.inline.svg';
 import RocheLogo from 'images/pages/usecase/roche.inline.svg';
 import ServiceMeshImage1 from 'images/pages/usecase/servicemesh-1.png';
@@ -76,10 +77,6 @@ const testimonials = [
         CTAtext: 'Watch The Talk',
         url: 'https://youtu.be/MSqI-gBiCrc?si=ktIHXkxhuHpuwC6a',
       },
-      // {
-      //   CTAtext: 'Read Case Study',
-      //   url: '',
-      // },
     ],
     description:
       "We started using Cilium in our EKS clusters and encountered security challenges. So many microservices were running without any kind of authentication or encryption. This prompted us to start doing a service mesh proof of concept. Although we already had Cilium available, we also evaluated Consul Connect, Kong Mesh, and Istio. Cilium stood out as it did not require sidecars, appealing to us not only for resource savings but also to avoid potential load issues caused by additional software. Cilium's sidecar-less approach did call our attention, leading us to adopt it to provide security across all our microservices.",
@@ -97,6 +94,19 @@ const testimonials = [
     ],
     description:
       "The New York Times migrated from Istio to Cilium service mesh to simplify their multi-tenant Kubernetes clusters on Amazon EKS. Cilium's service mesh capabilities reduced management complexity, improved manageability with a smaller footprint, and offered a more user-friendly experience for defining network policies. This shift streamlined network operations and enhanced security for their cloud-native applications.",
+  },
+
+  {
+    logo: DBSchenkerLogo,
+    title: 'Simplifying Service Mesh with Encryption from Cilium',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/db-schenker/',
+      },
+    ],
+    description:
+      'DB Schenker adopted Cilium for its eBPF-based networking capabilities. Replacing their service mesh with WireGuard for encryption simplified the service mesh architecture while enhancing security.',
   },
 ];
 

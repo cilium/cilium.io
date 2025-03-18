@@ -84,6 +84,7 @@ import JarLogo from './images/jar.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
 import JyskLogo from './images/jysk-tech.inline.svg';
 import KakaoLogo from './images/kakao.inline.svg';
+import KanabellLogo from './images/kanabell.inline.svg';
 import KiloLogo from './images/kilo.inline.svg';
 import KoyebLogo from './images/koyeb.inline.svg';
 import KryptosLogo from './images/kryptos.inline.svg';
@@ -334,6 +335,7 @@ const icons = {
   docaposte: DocaposteLogo,
   ecco: EccoLogo,
   coreweave: CoreweaveLogo,
+  kanabell: KanabellLogo,
 };
 
 const themeClassNames = {

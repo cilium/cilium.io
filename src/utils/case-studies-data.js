@@ -1495,4 +1495,8 @@ export default {
     iconName: 'coreweave',
     text: '<b>CoreWeave</b> The AI Hyperscaler™, uses Cilium as the default CNI for CoreWeave Kubernetes Service.',
   },
+  kanabell: {
+    iconName: 'kanabell',
+    text: '<b>KA-NABELL</b> harnesses Cilium to deliver Kubernetes networking with robust security and clear observability.',
+  },
 };

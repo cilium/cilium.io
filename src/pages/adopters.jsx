@@ -172,6 +172,7 @@ const {
   docaposte,
   ecco,
   coreweave,
+  kanabell,
 } = caseStudiesData;
 
 const hero = {
@@ -357,6 +358,7 @@ const userCommunity2 = {
     sinad,
     docaposte,
     coreweave,
+    kanabell,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
