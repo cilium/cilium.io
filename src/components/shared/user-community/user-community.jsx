@@ -62,6 +62,7 @@ import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
+import EntrywanLogo from './images/entrywan.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FHNWLogo from './images/fhnw.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
@@ -336,6 +337,7 @@ const icons = {
   ecco: EccoLogo,
   coreweave: CoreweaveLogo,
   kanabell: KanabellLogo,
+  entrywan: EntrywanLogo,
 };
 
 const themeClassNames = {
