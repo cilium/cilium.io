@@ -1502,7 +1502,7 @@ export default {
   },
   kanabell: {
     iconName: 'kanabell',
-    text: '<b>KA-NABELL</b> harnesses Cilium to deliver Kubernetes networking with robust security and clear observability.',
+    text: '<b>KA-NABELL</b> harnesses Cilium to deliver Kubernetes networking with robust security and clear observability',
   },
   entrywan: {
     iconName: 'entrywan',
