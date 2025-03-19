@@ -787,6 +787,11 @@ export default {
         linkUrl: 'https://cilium.io/blog/2023/09/07/db-schenker-migration-to-cilium/',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/db-schenker/',
+        linkTarget: '_blank',
+      },
     ],
   },
   dbraincloud: {
@@ -1490,5 +1495,17 @@ export default {
   netcloud: {
     iconName: 'netcloud',
     text: '<b>Netcloud</b> uses Cilium as the CNI for mission critical, on premise Kubernetes clusters',
+  },
+  coreweave: {
+    iconName: 'coreweave',
+    text: '<b>CoreWeave</b> The AI Hyperscaler™, uses Cilium as the default CNI for CoreWeave Kubernetes Service',
+  },
+  kanabell: {
+    iconName: 'kanabell',
+    text: '<b>KA-NABELL</b> harnesses Cilium to deliver Kubernetes networking with robust security and clear observability',
+  },
+  entrywan: {
+    iconName: 'entrywan',
+    text: '<b>Entrywan</b> provides Cilium as a CNI option in its managed Kubernetes service',
   },
 };

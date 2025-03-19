@@ -49,6 +49,7 @@ import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CloutomateLogo from './images/cloutomate.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
 import ConfluentLogo from './images/confluent.inline.svg';
+import CoreweaveLogo from './images/coreweave.inline.svg';
 import CybozuLogo from './images/cybozu.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
@@ -61,6 +62,7 @@ import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
+import EntrywanLogo from './images/entrywan.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FHNWLogo from './images/fhnw.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
@@ -83,6 +85,7 @@ import JarLogo from './images/jar.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
 import JyskLogo from './images/jysk-tech.inline.svg';
 import KakaoLogo from './images/kakao.inline.svg';
+import KanabellLogo from './images/kanabell.inline.svg';
 import KiloLogo from './images/kilo.inline.svg';
 import KoyebLogo from './images/koyeb.inline.svg';
 import KryptosLogo from './images/kryptos.inline.svg';
@@ -332,6 +335,9 @@ const icons = {
   sinad: SinadLogo,
   docaposte: DocaposteLogo,
   ecco: EccoLogo,
+  coreweave: CoreweaveLogo,
+  kanabell: KanabellLogo,
+  entrywan: EntrywanLogo,
 };
 
 const themeClassNames = {
