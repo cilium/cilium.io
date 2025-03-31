@@ -16,7 +16,7 @@ const navigation = [
   ],
   [
     { name: 'Events', href: '/events' },
-    { name: 'Get Started', href: '/get-started' },
+    { name: 'Swag', href: 'https://store.cncf.io/collections/cilium', target: '_blank' },
   ],
 ];
 
