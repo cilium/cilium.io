@@ -1508,4 +1508,8 @@ export default {
     iconName: 'entrywan',
     text: '<b>Entrywan</b> provides Cilium as a CNI option in its managed Kubernetes service',
   },
+  streamSecurity: {
+    iconName: 'streamsecurity',
+    text: '<b>Stream Security</b> uses Tetragon for Network, Process, and File observability and protection in Kubernetes clusters',
+  },
 };
