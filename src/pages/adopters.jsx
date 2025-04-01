@@ -174,6 +174,7 @@ const {
   coreweave,
   kanabell,
   entrywan,
+  streamSecurity,
 } = caseStudiesData;
 
 const hero = {
@@ -361,6 +362,7 @@ const userCommunity2 = {
     coreweave,
     kanabell,
     entrywan,
+    streamSecurity,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',

@@ -153,6 +153,7 @@ import SpectroCloudLogo from './images/spectrocloud.inline.svg';
 import SpherityLogo from './images/spherity.inline.svg';
 import SportradarLogo from './images/sportradar.inline.svg';
 import SproutfiLogo from './images/sproutfi.inline.svg';
+import StreamSecurityLogo from './images/streamsecurity.inline.svg';
 import SuperorbitalLogo from './images/superorbital.inline.svg';
 import SyselevenLogo from './images/syseleven.inline.svg';
 import SyselfLogo from './images/syself.inline.svg';
@@ -338,6 +339,7 @@ const icons = {
   coreweave: CoreweaveLogo,
   kanabell: KanabellLogo,
   entrywan: EntrywanLogo,
+  streamsecurity: StreamSecurityLogo,
 };
 
 const themeClassNames = {
