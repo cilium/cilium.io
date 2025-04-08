@@ -6,10 +6,10 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Link from 'components/shared/link';
 import labIcon from 'images/lab.svg';
+import blueSkyIcon from 'images/social/blue-sky.svg';
 import githubIcon from 'images/social/github.svg';
 import linkedinIcon from 'images/social/linkedin.svg';
 import slackIcon from 'images/social/slack.svg';
-import xIcon from 'images/social/x.svg';
 import youtubeIcon from 'images/social/youtube.svg';
 
 const title = 'Community';
@@ -29,10 +29,9 @@ const items = [
     target: '_blank',
   },
   {
-    icon: xIcon,
-    title: 'Follow us on X',
-    titleWidth: 'xl:w-20',
-    url: 'https://x.com/ciliumproject',
+    icon: blueSkyIcon,
+    title: 'Follow us on Bluesky',
+    url: 'https://bsky.app/profile/cilium.io',
     target: '_blank',
   },
   {
