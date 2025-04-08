@@ -31,7 +31,6 @@ const items = [
   {
     icon: blueSkyIcon,
     title: 'Follow us on Bluesky',
-    titleWidth: 'xl:w-20',
     url: 'https://bsky.app/profile/cilium.io',
     target: '_blank',
   },
