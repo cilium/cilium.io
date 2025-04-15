@@ -2,7 +2,7 @@
 path: '/blog/2021/05/11/cni-benchmark'
 date: '2021-05-11T17:00:00.000Z'
 title: 'CNI Benchmark: Understanding Cilium Network Performance'
-isPopular: true
+isPopular: false
 categories:
   - How-To
 tags:
@@ -485,7 +485,7 @@ Besides avoiding the sheer amount of proxies that need to be run in a sidecar se
 
 ![](images/performance_impact_sidecar.png)
 
-Reducing the number of proxies in the network path and choosing the type of Envoy filter has a significant impact on performance.  The above benchmark illustrates the latency cost of HTTP processing with a single Envoy proxy running the Cilium Envoy filter (brown) compared to a two-sidecar Envoy model running the Istio Envoy filter (blue). Yellow is the baseline latency with no proxy and no HTTP processing performed.
+Reducing the number of proxies in the network path and choosing the type of Envoy filter has a significant impact on performance. The above benchmark illustrates the latency cost of HTTP processing with a single Envoy proxy running the Cilium Envoy filter (brown) compared to a two-sidecar Envoy model running the Istio Envoy filter (blue). Yellow is the baseline latency with no proxy and no HTTP processing performed.
 
 <a name="sidecar"></a>
 

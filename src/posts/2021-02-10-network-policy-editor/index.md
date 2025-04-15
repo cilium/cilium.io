@@ -2,7 +2,7 @@
 path: '/blog/2021/02/10/network-policy-editor'
 date: '2021-02-10T17:00:00.000Z'
 title: 'NetworkPolicy Editor: Create, Visualize, and Share Kubernetes NetworkPolicies'
-isPopular: true
+isPopular: false
 categories:
   - Technology
 tags:
