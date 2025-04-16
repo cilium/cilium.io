@@ -5,7 +5,7 @@ title: 'Tetragon User Story: Why This Social Networking Company Made Tetragon a 
 isPopular: true
 isFeatured: true
 ogImage: cover.png
-ogSummary: 'how a social networking  company deployed Tetragon to secure their Kubernetes environments'
+ogSummary: 'Why a social networking company secures every Kubernetes cluster with Tetragon'
 categories:
   - Community
 tags:
