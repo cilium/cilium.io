@@ -24,6 +24,8 @@ _This user story comes from a company that provides communication and social net
 
 As this social networking company’s Kubernetes footprint expanded from 12 to 35 clusters in just two years, its security and observability tools struggled to keep up. Like most companies, the ratio of security engineers to developers made it nearly impossible to manually ensure that every service adhered to the company's security best practices. The open source Osquery, initially deployed for visibility, frequently caused production outages due to high resource consumption and contention and noisy neighbor issues. They needed a cloud native, low-overhead solution capable of delivering detailed security observability while seamlessly integrating with its Kubernetes-based infrastructure.
 
+**Solution**
+
 After evaluating various tools and doing in-depth performance overhead testing based on metrics such as process overhead, network monitoring overhead, and file access overhead, this social networking company adopted Tetragon, an eBPF-powered runtime security observability tool, for its Kubernetes environments. Tetragon’s daemonset-based deployment model ensured consistent coverage across all clusters, while its granular configuration allowed them to focus on high-value process events without overwhelming their logging pipeline. Critical features like ARM architecture support, enforcement capabilities, and integration with their data lake via a gRPC logging pipeline made Tetragon the ideal fit for their evolving needs.
 
 With 100 percent coverage of Kubernetes clusters at this company, Tetragon is now part of the bare minimum requirements for every new Kubernetes cluster created there, regardless of whether it is a development, staging, or production cluster.
