@@ -30,6 +30,8 @@ After evaluating various tools and doing in-depth performance overhead testing b
 
 With 100 percent coverage of Kubernetes clusters at this company, Tetragon is now part of the bare minimum requirements for every new Kubernetes cluster created there, regardless of whether it is a development, staging, or production cluster.
 
+**Outcome**
+
 Tetragon transformed the company’s approach to security observability by providing full visibility into process events with minimal impact on resources. Prior to migrating to Tetragon, production outages due to performance impacts from security tools were a common challenge. Tetragon’s low overhead has translated into adjacent teams not even realizing that a security tool is running in the background. Production workloads are shielded from disruptions, enabling their security team to focus on proactive threat detection. This has resulted in deeper trust across the organization, knowing their infrastructure is continuously monitored and safeguarded against evolving threats. With comprehensive coverage across all clusters, the team now identifies anomalies faster and enforces better security practices without compromising performance or developer productivity.
 
 ## The Journey to Reliable Security Observability with Tetragon
