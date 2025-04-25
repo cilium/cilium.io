@@ -778,6 +778,17 @@ export default {
       },
     ],
   },
+  gResearch: {
+    iconName: 'gResearch',
+    text: '<b>G-Research</b> uses Cilium to provide high scale networking for their ML workloads',
+    links: [
+      {
+        linkTarget: '_blank',
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=kjSFN34dROQ',
+      },
+    ],
+  },
   dbschenker: {
     iconName: 'dbschenker',
     text: '<b>DB Schenker</b> uses Cilium as the default CNI in self-managed Kubernetes clusters running in AWS',

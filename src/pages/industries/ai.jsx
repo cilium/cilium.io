@@ -134,10 +134,10 @@ const aiTalks = [
       "This talk covers why and how Backend.ai switched from  Docker's own overlay network driver to Cilium and how this transition resulted in extra capabilities such as fine-grained control over both inter-container and external traffic and also achieving the sensitive throughput and latency requirements of their target workloads.",
   },
   {
-    title: 'How Meltwater migrated from the Amazon VPC CNI plugin to Cilium in K8s',
-    videoSrc: 'https://www.youtube.com/embed/wMXV7I3kq9k?si=btypPQp2wwGmukke',
+    title: 'High-Scale Networking for ML Workloads With Cilium',
+    videoSrc: 'https://www.youtube.com/embed/kjSFN34dROQ?si=ZTJSByzu-6BMT4QQ',
     description:
-      'This talks covers how Meltwater  migrated from the Amazon VPC CNI plugin to Cilium in Kubernetes.',
+      'This talks covers how G-Research leverages Cilium as the core network for their on-prem ML environment of over 1,000 nodes.',
   },
 ];
 
