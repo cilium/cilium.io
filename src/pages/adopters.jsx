@@ -176,6 +176,7 @@ const {
   entrywan,
   streamSecurity,
   gResearch,
+  cornerBanca,
 } = caseStudiesData;
 
 const hero = {
@@ -269,6 +270,7 @@ const userCommunity1 = {
     imagineLearning,
     ecco,
     gResearch,
+    cornerBanca,
   ],
 };
 

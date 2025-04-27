@@ -1204,6 +1204,18 @@ export default {
       },
     ],
   },
+  cornerBanca: {
+    iconName: 'corner',
+    text: '<b>Corner Banca SA</b> uses Cilium as CNI for their on-prem Kubernetes clusters.',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=HVPKSefazl4',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',

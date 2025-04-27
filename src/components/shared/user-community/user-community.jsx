@@ -50,6 +50,7 @@ import CloutomateLogo from './images/cloutomate.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
 import ConfluentLogo from './images/confluent.inline.svg';
 import CoreweaveLogo from './images/coreweave.inline.svg';
+import CornerBancaLogo from './images/corner.inline.svg';
 import CybozuLogo from './images/cybozu.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
@@ -342,6 +343,7 @@ const icons = {
   entrywan: EntrywanLogo,
   streamsecurity: StreamSecurityLogo,
   gResearch: GresearchLogo,
+  corner: CornerBancaLogo,
 };
 
 const themeClassNames = {
