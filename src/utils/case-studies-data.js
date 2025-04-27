@@ -608,6 +608,12 @@ export default {
         linkTarget: '_blank',
       },
       {
+        linkText: 'Talk 4',
+        linkUrl: 'https://www.youtube.com/watch?v=LjIgQZZAYDo',
+        linkTarget: '_blank',
+      },
+
+      {
         linkText: 'User Story',
         linkUrl: 'https://cilium.io/blog/2024/03/07/cloud-provider-user-story/',
         linkTarget: '_blank',

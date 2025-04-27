@@ -13,6 +13,8 @@ import AiImage3 from 'images/pages/industries/ai/ai-3.png';
 import AiImage4 from 'images/pages/industries/ai/ai-4.png';
 import AiImage5 from 'images/pages/industries/ai/ai-5.png';
 import BackendOfficeImage from 'images/pages/industries/ai/backed-office.jpeg';
+import CanopusOfficeImage from 'images/pages/industries/ai/canopusaioffice.png';
+import GresearchOfficeImage from 'images/pages/industries/ai/gresearch-office.jpg';
 import MeltwaterOfficeImage from 'images/pages/industries/ai/meltwater-office.jpeg';
 import RouterBee from 'images/pages/industries/ai/router-bee.png';
 import MainLayout from 'layouts/main/main';
@@ -111,11 +113,27 @@ const aiResouces = [
     imageAlt: 'backend ai office building',
   },
   {
+    title: 'High-Scale Networking for ML Workloads With Cilium',
+    description:
+      'G-Research is a leading quantitative research and technology firm. They use Cilium as the core network layer for the on-prem bare metal Kubernetes clusters with over 1000 nodes. This environment runs thousands of machine learning workloads.',
+    buttonLink: 'https://www.youtube.com/watch?v=kjSFN34dROQ',
+    imageSrc: GresearchOfficeImage,
+    imageAlt: 'gresearch office',
+  },
+  {
     title: "Meltwater's Live Migration to Cilium for Richer Features",
     description:
       'Meltwater is a global leader in media, social and consumer intelligence. They have been building machine learning models for nearly 20 years and use AI at the heart of their operations for use cases such as natural language processing, speech processing, clustering and summarization, and more.',
     buttonLink: 'https://www.cncf.io/case-studies/meltwater/',
     imageSrc: MeltwaterOfficeImage,
+    imageAlt: 'meltwater office',
+  },
+  {
+    title: 'Agentic Bee: How To Get AI Agents To Talk To Tetragon',
+    description:
+      'Canopus leverages the powerful runtime security telemetry and unmatched granularity Tetragon offers to build agentic AI workflows. AI agents to automate workflows directly on top of Tetragon events by leveraging a simple Retrieval-Augmented Generation (RAG) architecture.',
+    buttonLink: 'https://www.youtube.com/watch?v=YXl9xuIxylY',
+    imageSrc: CanopusOfficeImage,
     imageAlt: 'meltwater office',
   },
 ];
