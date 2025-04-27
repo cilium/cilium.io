@@ -467,7 +467,12 @@ export default {
       },
       {
         linkText: 'Talk 5',
-        linkUrl: 'https://www.youtube.com/watch?v=-pOUM1ObAtI&t=8s',
+        linkUrl: 'https://www.youtube.com/watch?v=-pOUM1ObAtI',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 6',
+        linkUrl: 'https://www.youtube.com/watch?v=CcOKo4BrU2w',
         linkTarget: '_blank',
       },
     ],
