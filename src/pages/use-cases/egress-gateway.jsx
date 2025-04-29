@@ -76,7 +76,7 @@ const testimonials = [
       },
     ],
     description:
-      'Corner Banca SA is a Swiss Bank and they use Cilium as the CNI for their on-prem Kubernetes clusters. Corner Banca uses the Cilium egress gateway which allows routing outgoing traffic from one or more workloads to a specific egress IP. This is because the highly regulated industry they operate requires that traffic from the  Kubernetes pods is identifiable for authentication, encryption and application of firewall rules.',
+      'Corner Banca SA is a Swiss Bank and they use Cilium as the CNI for their on-prem Kubernetes clusters. Industry regulations require that traffic from a Kubernetes pods is identifiable for authentication, encryption and application of firewall rules. Corner Banca uses the Cilium egress gateway which allows routing outgoing traffic from one or more workloads to a specific egress IP.',
   },
 ];
 
