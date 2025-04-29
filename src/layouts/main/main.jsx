@@ -27,16 +27,16 @@ const navigation = [
   {
     name: 'Industries',
     childItems: [
+      { name: 'Artificial Intelligence', href: '/industries/ai' },
+      { name: 'Cloud Providers', href: '/industries/cloud-providers' },
+      { name: 'Consulting', href: '/industries/consulting' },
+      { name: 'E-commerce', href: '/industries/e-commerce' },
+      { name: 'Edge Computing', href: '/industries/edge-computing' },
       { name: 'Financial Services', href: '/industries/financial-services' },
       { name: 'Media and Entertainment', href: '/industries/media-entertainment' },
-      { name: 'Cloud Providers', href: '/industries/cloud-providers' },
-      { name: 'SaaS, Software and DBaaS', href: '/industries/software' },
-      { name: 'Telcos and Data Center Operators', href: '/industries/telcos-datacenters' },
-      { name: 'E-commerce', href: '/industries/e-commerce' },
-      { name: 'Consulting', href: '/industries/consulting' },
+      { name: 'SaaS, Software, and DBaaS', href: '/industries/software' },
       { name: 'Security', href: '/industries/security' },
-      { name: 'Edge Computing', href: '/industries/edge-computing' },
-      { name: 'Artificial Intelligence', href: '/industries/ai' },
+      { name: 'Telcos and Data Center Operators', href: '/industries/telcos-datacenters' },
     ],
   },
 
