@@ -1206,7 +1206,7 @@ export default {
   },
   cornerBanca: {
     iconName: 'corner',
-    text: '<b>Corner Banca SA</b> uses Cilium as CNI for their on-prem Kubernetes clusters.',
+    text: '<b>Corner Banca SA</b> uses Cilium as CNI for their on-prem Kubernetes clusters',
     links: [
       {
         linkText: 'Watch Talk',
