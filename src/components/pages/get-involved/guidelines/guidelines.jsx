@@ -10,7 +10,7 @@ const title = 'Brand and Logo Guidelines';
 const description =
   'Check out the branding section for logos, color, and icons for your website, swag, or presentation.';
 const buttonText = 'Check Guidelines';
-const buttonUrl = 'https://github.com/cncf/artwork/blob/master/examples/incubating.md#cilium-logos';
+const buttonUrl = 'https://cilium.io/brand/';
 
 const Guidelines = () => (
   <section className="mt-10 md:mt-20 lg:mt-28">
