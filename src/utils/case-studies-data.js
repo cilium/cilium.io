@@ -819,6 +819,11 @@ export default {
         linkUrl: 'https://www.cncf.io/case-studies/db-schenker/',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=kYT7KV_Cijs',
+        linkTarget: '_blank',
+      },
     ],
   },
   dbraincloud: {
