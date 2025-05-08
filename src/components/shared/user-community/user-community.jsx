@@ -43,6 +43,7 @@ import BloombergLogo from './images/bloomberg.inline.svg';
 import BmcLogo from './images/bmc.inline.svg';
 import BytedanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
+import CanopusLogo from './images/canopus.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
@@ -344,6 +345,7 @@ const icons = {
   streamsecurity: StreamSecurityLogo,
   gResearch: GresearchLogo,
   corner: CornerBancaLogo,
+  canopus: CanopusLogo,
 };
 
 const themeClassNames = {

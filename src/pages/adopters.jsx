@@ -177,6 +177,7 @@ const {
   streamSecurity,
   gResearch,
   cornerBanca,
+  canopus,
 } = caseStudiesData;
 
 const hero = {
@@ -271,6 +272,7 @@ const userCommunity1 = {
     ecco,
     gResearch,
     cornerBanca,
+    canopus,
   ],
 };
 

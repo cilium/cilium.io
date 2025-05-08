@@ -710,6 +710,17 @@ export default {
       },
     ],
   },
+  canopus: {
+    iconName: 'canopus',
+    text: "<b>Canopus</b> integrates Tetragon's runtime telemetry with LLM-powered AI agents",
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=YXl9xuIxylY',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   yahoo: {
     iconName: 'yahoo',
     text: '<b>Yahoo</b> uses Cilium for L4 North-South Load Balancing for Kubernetes Services',
