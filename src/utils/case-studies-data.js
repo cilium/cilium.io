@@ -341,6 +341,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=26KbW5-BeNA',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=kYT7KV_Cijs',
+        linkTarget: '_blank',
+      },
     ],
   },
   hetzner: {

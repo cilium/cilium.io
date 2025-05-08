@@ -128,14 +128,6 @@ const aiResouces = [
     imageSrc: MeltwaterOfficeImage,
     imageAlt: 'meltwater office',
   },
-  {
-    title: 'Agentic Bee: How To Get AI Agents To Talk To Tetragon',
-    description:
-      'Canopus leverages the powerful runtime security telemetry and unmatched granularity Tetragon offers to build agentic AI workflows. AI agents to automate workflows directly on top of Tetragon events by leveraging a simple Retrieval-Augmented Generation (RAG) architecture.',
-    buttonLink: 'https://www.youtube.com/watch?v=YXl9xuIxylY',
-    imageSrc: CanopusOfficeImage,
-    imageAlt: 'meltwater office',
-  },
 ];
 
 const aiTalks = [
