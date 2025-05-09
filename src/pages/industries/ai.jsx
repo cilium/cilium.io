@@ -13,6 +13,8 @@ import AiImage3 from 'images/pages/industries/ai/ai-3.png';
 import AiImage4 from 'images/pages/industries/ai/ai-4.png';
 import AiImage5 from 'images/pages/industries/ai/ai-5.png';
 import BackendOfficeImage from 'images/pages/industries/ai/backed-office.jpeg';
+import CanopusOfficeImage from 'images/pages/industries/ai/canopusaioffice.png';
+import GresearchOfficeImage from 'images/pages/industries/ai/gresearch-office.jpg';
 import MeltwaterOfficeImage from 'images/pages/industries/ai/meltwater-office.jpeg';
 import RouterBee from 'images/pages/industries/ai/router-bee.png';
 import MainLayout from 'layouts/main/main';
@@ -111,6 +113,14 @@ const aiResouces = [
     imageAlt: 'backend ai office building',
   },
   {
+    title: 'High-Scale Networking for ML Workloads With Cilium',
+    description:
+      'G-Research is a leading quantitative research and technology firm. They use Cilium as the core network layer for the on-prem bare metal Kubernetes clusters with over 1000 nodes. This environment runs thousands of machine learning workloads.',
+    buttonLink: 'https://www.youtube.com/watch?v=kjSFN34dROQ',
+    imageSrc: GresearchOfficeImage,
+    imageAlt: 'gresearch office',
+  },
+  {
     title: "Meltwater's Live Migration to Cilium for Richer Features",
     description:
       'Meltwater is a global leader in media, social and consumer intelligence. They have been building machine learning models for nearly 20 years and use AI at the heart of their operations for use cases such as natural language processing, speech processing, clustering and summarization, and more.',
@@ -134,10 +144,10 @@ const aiTalks = [
       "This talk covers why and how Backend.ai switched from  Docker's own overlay network driver to Cilium and how this transition resulted in extra capabilities such as fine-grained control over both inter-container and external traffic and also achieving the sensitive throughput and latency requirements of their target workloads.",
   },
   {
-    title: 'How Meltwater migrated from the Amazon VPC CNI plugin to Cilium in K8s',
-    videoSrc: 'https://www.youtube.com/embed/wMXV7I3kq9k?si=btypPQp2wwGmukke',
+    title: 'High-Scale Networking for ML Workloads With Cilium',
+    videoSrc: 'https://www.youtube.com/embed/kjSFN34dROQ?si=ZTJSByzu-6BMT4QQ',
     description:
-      'This talks covers how Meltwater  migrated from the Amazon VPC CNI plugin to Cilium in Kubernetes.',
+      'This talks covers how G-Research leverages Cilium as the core network for their on-prem ML environment of over 1,000 nodes.',
   },
 ];
 

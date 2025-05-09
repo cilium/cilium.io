@@ -175,6 +175,9 @@ const {
   kanabell,
   entrywan,
   streamSecurity,
+  gResearch,
+  cornerBanca,
+  canopus,
 } = caseStudiesData;
 
 const hero = {
@@ -267,6 +270,9 @@ const userCommunity1 = {
     qingcloud,
     imagineLearning,
     ecco,
+    gResearch,
+    cornerBanca,
+    canopus,
   ],
 };
 

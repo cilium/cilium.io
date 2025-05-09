@@ -6,6 +6,7 @@ import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
+import CornerLogo from 'icons/logo-corner.inline.svg';
 import BeeKeeperBee from 'images/pages/usecase/beekeeper-bee.png';
 import EgressImage1 from 'images/pages/usecase/egress-1.webp';
 import EgressImage3 from 'images/pages/usecase/egress-3.png';
@@ -64,6 +65,18 @@ const testimonials = [
     ],
     description:
       "A telecommunications company implemented a zero-trust networking model on their Kubernetes platform using Cilium's egress gateway. They employed FQDN-based rulesets for flexible blocklisting and a default deny egress policy. To comply with corporate policy, they used a PR-based approval workflow for tenant self-service, underpinned by a two-tier system of CiliumNetworkPolicies (CNPs) and Custom Resource Definitions (CRDs).",
+  },
+  {
+    logo: CornerLogo,
+    title: 'Cilium Egress Gateway at Corner Banca SA',
+    CTAs: [
+      {
+        CTAtext: 'Watch the Talk',
+        url: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
+      },
+    ],
+    description:
+      'Corner Banca SA is a Swiss Bank and they use Cilium as the CNI for their on-prem Kubernetes clusters. Industry regulations require that traffic from a Kubernetes pods is identifiable for authentication, encryption and application of firewall rules. Corner Banca uses the Cilium egress gateway which allows routing outgoing traffic from one or more workloads to a specific egress IP.',
   },
 ];
 
