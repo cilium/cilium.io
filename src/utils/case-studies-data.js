@@ -343,7 +343,7 @@ export default {
       },
       {
         linkText: 'Talk 2',
-        linkUrl: 'https://www.youtube.com/watch?v=kYT7KV_Cijs',
+        linkUrl: 'https://youtu.be/kYT7KV_Cijs?si=rt19kV_oWkACmKpp&t=767',
         linkTarget: '_blank',
       },
     ],
