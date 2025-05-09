@@ -832,7 +832,7 @@ export default {
       },
       {
         linkText: 'Watch Talk',
-        linkUrl: 'https://www.youtube.com/watch?v=kYT7KV_Cijs',
+        linkUrl: 'https://youtu.be/kYT7KV_Cijs?si=aVW7yDwivZyoUVkU&t=287',
         linkTarget: '_blank',
       },
     ],
