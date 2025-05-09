@@ -342,7 +342,7 @@ export default {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Watch Talk',
+        linkText: 'Talk 2',
         linkUrl: 'https://www.youtube.com/watch?v=kYT7KV_Cijs',
         linkTarget: '_blank',
       },
