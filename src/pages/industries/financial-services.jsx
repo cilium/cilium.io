@@ -148,7 +148,7 @@ const financialTalks = [
   },
   {
     title: 'High Scale Networking for ML workloads with Cilium',
-    videoSrc: 'https://www.youtube.com/embed/8fiYVyISyz4',
+    videoSrc: 'https://www.youtube.com/embed/kjSFN34dROQ?si=VJQX3EvzffOWrhn0',
     description:
       'G-research uses Cilium as the core network for their on-premise, bare-metal clusters that scale to 1,000 nodes',
   },
