@@ -11,7 +11,9 @@ import Stats from 'components/pages/industries/stats';
 import Testimonial from 'components/pages/industries/testimonial';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
+import GresearchOfficeImage from 'images/pages/industries/ai/gresearch-office.jpg';
 import CapitalOnefficeImage from 'images/pages/industries/financial-services/capitaloneoffice.png';
+import CornerBancaOfficeImage from 'images/pages/industries/financial-services/corneroffice.jpg';
 import FinanceImage1 from 'images/pages/industries/financial-services/finance-1.png';
 import FinanceImage2 from 'images/pages/industries/financial-services/finance-2.png';
 import FinanceImage3 from 'images/pages/industries/financial-services/finance-3.png';
@@ -145,10 +147,10 @@ const financialTalks = [
       'Bloomberg leverages Cilium to construct data sandboxes that restrict users from exfiltrating data from the sandbox',
   },
   {
-    title: 'Multi-cluster networking with Cilium at Form3',
+    title: 'High Scale Networking for ML workloads with Cilium',
+    videoSrc: 'https://www.youtube.com/embed/kjSFN34dROQ?si=VJQX3EvzffOWrhn0',
     description:
-      'Adelina Simon, a technology evangelist at Form3 talks about how they built a multi-cloud payments platform using Cilium',
-    videoSrc: 'https://www.youtube.com/embed/vKgRf4OzTIE?si=w_-F3oQysthruVtA',
+      'G-research uses Cilium as the core network for their on-premise, bare-metal clusters that scale to 1,000 nodes',
   },
 ];
 
@@ -207,6 +209,24 @@ const financialResources = [
     buttonText: 'Read The Case Study',
     description:
       'Rabobank leverages Cilium to enable zero-trust networking, significantly improving the security and enabling self-service in their financial API platform.',
+  },
+  {
+    imageSrc: CornerBancaOfficeImage,
+    imageAlt: 'CornerBanca office building',
+    title: 'High Availability for Cilium Egress Gateway',
+    buttonLink: 'https://www.youtube.com/watch?v=HVPKSefazl4',
+    buttonText: 'Watch The Talk',
+    description:
+      'Corner Banca SA is a Swiss Bank and they use Cilium as the CNI for their on-prem Kubernetes clusters. Industry regulations require that traffic from a Kubernetes pods is identifiable for authentication, encryption and application of firewall rules. Corner Banca uses the Cilium egress gateway which allows routing outgoing traffic from one or more workloads to a specific egress IP.',
+  },
+  {
+    title: 'High-Scale Networking for ML Workloads With Cilium',
+    description:
+      'G-Research is a leading quantitative research and technology firm. They use Cilium as the core network layer for the on-prem bare metal Kubernetes clusters with over 1000 nodes. This environment runs thousands of machine learning workloads.',
+    buttonLink: 'https://www.youtube.com/watch?v=kjSFN34dROQ',
+    buttonText: 'Watch The Talk',
+    imageSrc: GresearchOfficeImage,
+    imageAlt: 'gresearch office',
   },
 ];
 

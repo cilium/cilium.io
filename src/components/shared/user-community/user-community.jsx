@@ -43,6 +43,7 @@ import BloombergLogo from './images/bloomberg.inline.svg';
 import BmcLogo from './images/bmc.inline.svg';
 import BytedanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
+import CanopusLogo from './images/canopus.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
@@ -50,6 +51,7 @@ import CloutomateLogo from './images/cloutomate.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
 import ConfluentLogo from './images/confluent.inline.svg';
 import CoreweaveLogo from './images/coreweave.inline.svg';
+import CornerBancaLogo from './images/corner.inline.svg';
 import CybozuLogo from './images/cybozu.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
@@ -71,6 +73,7 @@ import FRSCALogo from './images/frsca.inline.svg';
 import GcoreLogo from './images/gcore.inline.svg';
 import GdataLogo from './images/gdata.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
+import GresearchLogo from './images/gresearch.inline.svg';
 import GuidewireLogo from './images/guidewire.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
 import IcosLogo from './images/icos.inline.svg';
@@ -340,6 +343,9 @@ const icons = {
   kanabell: KanabellLogo,
   entrywan: EntrywanLogo,
   streamsecurity: StreamSecurityLogo,
+  gResearch: GresearchLogo,
+  corner: CornerBancaLogo,
+  canopus: CanopusLogo,
 };
 
 const themeClassNames = {
