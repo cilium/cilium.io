@@ -24,14 +24,6 @@ const cardItems1 = [
     buttonTarget: '_blank',
   },
   {
-    iconName: 'twitter',
-    title: 'X',
-    description: "Don't forget to follow Cilium on X for the latest news and announcements.",
-    buttonText: 'Follow on X',
-    buttonUrl: 'https://x.com/ciliumproject',
-    buttonTarget: '_blank',
-  },
-  {
     iconName: 'bluesky',
     title: 'Bluesky',
     description: 'Stay updated with the latest from the Cilium project on Bluesky',
