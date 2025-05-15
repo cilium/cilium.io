@@ -26,7 +26,7 @@ const cardItems1 = [
   {
     iconName: 'bluesky',
     title: 'Bluesky',
-    description: 'Stay updated with the latest from the Cilium project on Bluesky',
+    description: 'Stay updated with the latest from the Cilium project on Bluesky.',
     buttonText: 'Follow on Bluesky',
     buttonUrl: 'https://bsky.app/profile/cilium.io',
     buttonTarget: '_blank',
