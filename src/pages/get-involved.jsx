@@ -32,6 +32,14 @@ const cardItems1 = [
     buttonTarget: '_blank',
   },
   {
+    iconName: 'bluesky',
+    title: 'Bluesky',
+    description: 'Stay updated with the latest from the Cilium project on Bluesky',
+    buttonText: 'Follow on Bluesky',
+    buttonUrl: 'https://bsky.app/profile/cilium.io',
+    buttonTarget: '_blank',
+  },
+  {
     iconName: 'newsletter',
     title: 'Newsletter',
     description: 'Keep up with the latest news from the Cilium and eBPF communities.',

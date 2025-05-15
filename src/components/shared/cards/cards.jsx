@@ -8,6 +8,7 @@ import Heading from 'components/shared/heading';
 
 import Link from '../link';
 
+import BlueskyIcon from './images/bluesky.inline.svg';
 import ConductIcon from './images/conduct.inline.svg';
 import DevstatsIcon from './images/devstats.inline.svg';
 import GithubIcon from './images/github.inline.svg';
@@ -26,6 +27,7 @@ const icons = {
   conduct: ConductIcon,
   devstats: DevstatsIcon,
   youtube: YoutubeIcon,
+  bluesky: BlueskyIcon,
 };
 
 const themeClassNames = {
