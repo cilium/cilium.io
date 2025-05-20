@@ -61,7 +61,7 @@ This policy ensures only HTTP GET requests to _/public_ are allowed on port 80, 
 
 ## gRPC Policies
 
-No lets see Cilium extends this model to gRPC where HTTP/2 semantics allow similar fine grained congtrol. Because gRPC is built on top of HTTP/2, Cilium supports gRPC Layer 7 policy enforcement via its HTTP parser. This means you can apply HTTP-based rules to gRPC traffic, allowing you to control access to specific services and methods.
+Now lets see how Cilium extends this model to gRPC where HTTP/2 semantics allow similar fine grained control. Because gRPC is built on top of HTTP/2, Cilium supports gRPC Layer 7 policy enforcement via its HTTP parser. This means you can apply HTTP-based rules to gRPC traffic, allowing you to control access to specific services and methods.
 For example, you can restrict access to specific gRPC service methods _(like helloworld.Greeter/SayHello)_ using the HTTP path filter, since gRPC requests are encoded as HTTP/2 POST requests with paths like _/package.service/method_. Here's a sample policy:
 
 ```yaml
