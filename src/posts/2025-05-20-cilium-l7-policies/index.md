@@ -22,7 +22,7 @@ In Kubernetes, network policies define how pods can communicate with each other 
 
 In this blog post, we’ll explore how Cilium Layer 7 network policies work across HTTP, gRPC, Kafka, and DNS protocols. If you’re new to Cilium network policies, check out [Introduction to Cilium Network Policies](https://isovalent.com/blog/post/intro-to-cilium-network-policies/) and [Tutorial: Cilium Network Policy in Practice](https://isovalent.com/blog/post/tutorial-cilium-network-policy/) for a primer on Cilium network policies.
 
-## Why Layer 7 Policies Matter\*\*
+## Why Layer 7 Policies Matter
 
 In modern microservice architectures, services rarely communicate over a low-level protocol like TCP or UDP alone. Instead, they expose APIs over a high-level protocol such as HTTP or gRPC. These high-level protocols carry rich protocol-specific semantics such as HTTP methods, Kafka topics, or gRPC service names representing the true intent behind the application communication.
 
