@@ -29,7 +29,7 @@ In modern microservice architectures, services rarely communicate over a low-lev
 Standard Layer 3/4 network policies, which only understand IP addresses and ports, are oblivious to this communication intent. L7 network policies in Cilium address this gap by enabling policy verdicts based on the content and context of the traffic, not just its source or destination. This allows us to go beyond saying, “Service A can only talk to Service B on port 8080,” to expressing rules like, “Service A can only perform a POST to /login path” or “Service B can only consume from the order-events Kafka topic”. By aligning the policy enforcement with the API behaviour, Cilium Layer 7 policies ensure that services can only perform the specific operations they are designed for, eliminating implicit access to sensitive resources. This approach is consistent with zero-trust principles, where services are granted the least privileged access to resources. By providing fine-grained control over the exact HTTP methods, gRPC calls, and Kafka topics a service can make, L7 policies reduce the attack surface. Even if a pod is compromised, the attacker’s ability to abuse service-to-service communication is constrained at the protocol level.
 ![alt text](cilium-netpol-comparison.png)
 
-**HTTP Policies**
+## HTTP Policies\*\*
 
 For HTTP, Cilium Layer 7 policies allow you to define specific methods, paths, host headers, and even required HTTP headers. These rules are enforced by a node-local Envoy proxy that inspects and authorizes traffic before it reaches the application.
 A common use case is restricting access to specific REST endpoints. For example, you can allow only _GET /public_ requests to your app while blocking all other paths or methods. Here's an example:
