@@ -1,6 +1,6 @@
 kind: pipeline
 name: default
-
+type: docker
 steps:
   - name: tests
     image: node:20-alpine
