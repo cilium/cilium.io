@@ -4,6 +4,7 @@ import { PopupButton } from 'react-calendly';
 
 import Link from 'components/shared/link';
 import isSSR from 'utils/is-ssr';
+import { sanitize } from 'utils/sanitize-html';
 
 const CardItem = ({ icon: Icon, name, text, links }) => (
   <div className="flex flex-col rounded-lg border border-gray-3 p-6 sm:flex-row sm:space-x-5 lg:flex-col lg:space-x-0 lg:p-8">
@@ -11,9 +12,12 @@ const CardItem = ({ icon: Icon, name, text, links }) => (
     <div className="mt-4 flex h-full flex-col sm:mt-0 lg:mt-4">
       <h3
         className="font-bold leading-normal md:text-lg md:leading-normal"
-        dangerouslySetInnerHTML={{ __html: name }}
+        dangerouslySetInnerHTML={{ __html: sanitize(name) }}
       />
-      <div className="content-style prose mt-1 mb-4" dangerouslySetInnerHTML={{ __html: text }} />
+      <div
+        className="content-style prose mt-1 mb-4"
+        dangerouslySetInnerHTML={{ __html: sanitize(text) }}
+      />
       <div className="mt-auto space-x-6">
         {links.map(({ linkText, linkUrl, linkTarget, isCalendlyPopUp }, index) => (
           <Fragment key={index}>

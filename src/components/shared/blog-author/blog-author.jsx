@@ -2,6 +2,8 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { sanitize } from 'utils/sanitize-html';
+
 const BlogAuthor = ({ header, bio, theme }) => {
   const isPrimary = theme === 'primary';
   return (
@@ -18,7 +20,7 @@ const BlogAuthor = ({ header, bio, theme }) => {
             isPrimary ? 'block text-lg md:text-xl lg:text-2xl' : 'pr-1',
             'font-bold'
           )}
-          dangerouslySetInnerHTML={{ __html: header }}
+          dangerouslySetInnerHTML={{ __html: sanitize(header) }}
         />
         {isPrimary && (
           <span className="mt-1 block leading-none text-gray-1 lg:text-lg">Author</span>
@@ -28,7 +30,7 @@ const BlogAuthor = ({ header, bio, theme }) => {
         className={classNames(
           isPrimary ? 'my-6 text-lg leading-normal md:!mt-0 lg:text-xl lg:leading-normal' : 'inline'
         )}
-        dangerouslySetInnerHTML={{ __html: bio }}
+        dangerouslySetInnerHTML={{ __html: sanitize(bio) }}
       />
     </div>
   );

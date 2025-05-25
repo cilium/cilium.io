@@ -2,8 +2,13 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import { sanitize } from 'utils/sanitize-html';
+
 const Checkbox = React.forwardRef((props, ref) => {
   const { className, id, label, defaultChecked, ...otherProps } = props;
+  const sanitizedLabel = sanitize(label);
+  // Fallback for accessibility if label is empty after sanitization
+  const fallbackLabel = 'Checkbox option';
 
   return (
     <div className={classNames('checkbox', className)}>
@@ -16,7 +21,11 @@ const Checkbox = React.forwardRef((props, ref) => {
         {...otherProps}
       />
       <label className="checkbox__label" htmlFor={id}>
-        <span dangerouslySetInnerHTML={{ __html: label }} />
+        {sanitizedLabel ? (
+          <span dangerouslySetInnerHTML={{ __html: sanitizedLabel }} />
+        ) : (
+          <span>{fallbackLabel}</span>
+        )}
       </label>
     </div>
   );

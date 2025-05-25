@@ -4,6 +4,7 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+import { sanitize } from 'utils/sanitize-html';
 
 const themeClassNames = {
   white: 'bg-white',
@@ -32,7 +33,7 @@ const Hero = ({ className, title, description, illustration, theme, size }) => (
         </Heading>
         <div
           className="text-md with-link-primary mt-5 space-y-5 leading-relaxed md:text-lg md:leading-relaxed lg:max-w-[503px]"
-          dangerouslySetInnerHTML={{ __html: description }}
+          dangerouslySetInnerHTML={{ __html: sanitize(description) }}
         />
       </div>
       <div className="relative flex flex-1 justify-center">
