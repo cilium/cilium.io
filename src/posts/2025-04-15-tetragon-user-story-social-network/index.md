@@ -3,7 +3,7 @@ path: '/blog/2025/04/15/tetragon-social-networking-user-story'
 date: '2025-04-15T10:00:00.000Z'
 title: 'Tetragon User Story: Why This Social Networking Company Made Tetragon a Default for their Kubernetes Clusters'
 isPopular: true
-isFeatured: true
+isFeatured: false
 ogImage: cover.png
 ogSummary: 'Why a social networking company secures every Kubernetes cluster with Tetragon'
 categories:
