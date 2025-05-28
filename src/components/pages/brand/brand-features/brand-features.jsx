@@ -18,7 +18,7 @@ const items = [
       'Our logo is the combination of a simple wordmark and the icon. When using the logo with other logos and graphic elements, please, observe the clean space around the logo to maximize visual effectiveness.',
   },
   {
-    title: 'Cillium icon',
+    title: 'Cilium icon',
     icon,
     description:
       'An icon is a distinct symbol or image that represents the business, used exclusively when a company icon or avatar is needed (typically within a perfect square or circle). In all other instances, use the logo.',
