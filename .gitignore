@@ -72,5 +72,9 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+# Vscode files
 .vscode/snipsnap.code-snippets
 .vscode/settings.json
+
+# Jetbrains files
+.idea/
