@@ -22,10 +22,10 @@ Please see [Contributing](CONTRIBUTING.md) for guidelines on adding blogs, docum
 
 ## Getting Started
 
-1. Clone this repository
+1. Fork this repository and clone the forked one
 
 ```bash
-git clone git@github.com:cilium/cilium.io.git
+git clone git@github.com:<your-handle>/cilium.io.git
 ```
 
 2. Install dependencies
