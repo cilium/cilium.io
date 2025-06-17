@@ -7,7 +7,7 @@
 - [Usage](#usage)
   - [Run website](#run-the-website)
   - [Build website](#build-the-website)
-  - [Run built website](#run-built-website)
+  - [Run the built website](#run-the-built-website)
   - [Clean Gatsby cache](#clean-gatsby-cache)
 - [Project Structure](#project-structure)
 - [Code Style](#code-style)
@@ -188,7 +188,7 @@ In `.md` files we can declare frontmatter at the beginning:
 - tags: the tags of blog post, which is displayed in Twitter share card;
 - ogImage: the og:image in SEO metadata, also it is the cover image, which is displayed in the blog post card (featured story, popular posts);
 - ogSummary: the og:description in SEO metadata, also it is the description text, which is displayed in the blog post card (featured story, popular posts).
-- externalUrl: the external blog post url 
+- externalUrl: the external blog post url
 - ogImageUrl: the image url for the og:image in SEO metadata (use for the external blog posts)
 
 The preview tags in `.md` files (which is used in the old Cilium blog) are fully converted to `ogImage` and `ogSummary` in `frontmatter`.
