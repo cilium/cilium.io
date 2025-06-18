@@ -56,6 +56,14 @@ const sectionContent4 = {
   imageRight: false,
 };
 
+const sectionContent5 = {
+  title: 'Hands-On: eCHO Playlist',
+  videoSrc:
+    'https://www.youtube.com/embed/videoseries?si=quRWHYILz6cH2kmO&amp;list=PLDg_GiBbAx-l5U7CdEHtg1DJL2kkOlPTE',
+  description:
+    'Whether you’re bootstrapping a service mesh from the ground up or adopting Cilium’s eBPF-powered service mesh later in your service mesh journey, the eCHO Recaps: Cilium Service Mesh playlist shows the entire timeline starting from the first demo and hands-on commands. Follow each episode as to see how service mesh includes ingress and Gateway API traffic management, all on real clusters with CLI walk throughs you can replay on-demand.',
+};
+
 const testimonials = [
   {
     logo: RocheLogo,
@@ -117,6 +125,7 @@ const ServiceMeshPage = () => (
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
     <FeatureSection {...sectionContent4} />
+    <FeatureSection {...sectionContent5} />
     <UseCaseCard heading="Who’s using Cilium's Service Mesh" testimonials={testimonials} />
     <JoinUsCard className="pt-10 md:pt-20 lg:pt-28" />
   </MainLayout>
