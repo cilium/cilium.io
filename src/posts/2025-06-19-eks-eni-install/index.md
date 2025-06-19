@@ -440,10 +440,6 @@ E0618 14:53:36.939961   10146 websocket.go:296] Unknown stream id 1, discarding 
 
 ## Conclusion
 
-<<<<<<< HEAD
 In the first part of our series, we walked through the deployment of Cilium on Amazon EKS in ENI mode. This configuration offers native AWS networking performance while leveraging Cilium's powerful eBPF-based capabilities. From creating an EKS cluster with the default networking add-ons disabled to validating Cilium's health, you've now seen what it takes to get a clean, kube-proxy-free EKS cluster up and running with Cilium managing ENIs and IP allocation.
-=======
-In the first part of our series, we walked through the deployment of Cilium on Amazon EKS in ENI mode. This configuration offers native AWS networking performance while leveraging Cilium's powerful eBPF-based capabilities. From disabling default EKS networking components to validating Cilium's health, you've now seen what it takes to get a clean, kube-proxy-free cluster up and running with Cilium managing ENIs and IP allocation.
->>>>>>> abb67ac1 (feat: add eks eni blog)
 
 In the next part of this series, we'll cover how to install Cilium in overlay mode and explore CNI chaining, giving you more flexibility to integrate Cilium with existing CNIs or tailor your cluster's networking model to suit hybrid environments. Stay tuned!
