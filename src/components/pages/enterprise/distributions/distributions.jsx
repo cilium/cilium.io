@@ -10,9 +10,9 @@ import GradeIcon from './images/grade.inline.svg';
 import SupportIcon from './images/support.inline.svg';
 
 const enterprise = {
-  title: 'Isovalent Enterprise for Cilium',
+  title: 'Isovalent Netowrking for Kubernetes',
   description: 'Enterprise Distribution maintained by the creators of Cilium.',
-  linkUrl: 'https://isovalent.com/product/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise',
+  linkUrl: 'https://isovalent.com/products/kubernetes-networking/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise',
   linkTarget: '_blank',
   linkText: 'Learn more',
 };
