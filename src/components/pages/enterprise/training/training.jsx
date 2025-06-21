@@ -6,6 +6,7 @@ import Heading from 'components/shared/heading';
 import LinuxfoundationLogo from 'icons/LF-Training-logo-color.inline.svg';
 import AcendLogo from 'icons/logo-acend.inline.svg';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
+import KodeKloudLogo from 'icons/logo-kodekloud.inline.svg';
 import SoloioLogo from 'icons/logo-soloio.inline.svg';
 
 const title = 'Training';
@@ -15,6 +16,7 @@ const description =
 const logos = {
   acend: AcendLogo,
   isovalent: IsovalentLogo,
+  kodekloud: KodeKloudLogo,
   linuxfoundation: LinuxfoundationLogo,
   soloio: SoloioLogo,
 };
@@ -36,6 +38,15 @@ const items = [
       'Quickly get started with Cilium in our interactive tutorials with a live environment.',
     buttonText: 'Explore Tutorials',
     buttonLink: 'https://isovalent.com/resource-library/labs/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab',
+    buttonTarget: '_blank',
+  },
+  {
+    logoName: 'kodekloud',
+    title: 'Cilium Certified Associate (CCA)',
+    description:
+      'Build your Kubernetes networking skills with the Cilium Certified Associate (CCA) course! Become a networking powerhouse with this comprehensive hands-on course and labs to master Cilium.',
+    buttonText: 'Get Started',
+    buttonLink: 'https://kodekloud.com/courses/cilium-certified-associate-cca?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab',
     buttonTarget: '_blank',
   },
   {
