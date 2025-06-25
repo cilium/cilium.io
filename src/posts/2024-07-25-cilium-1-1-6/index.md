@@ -6,5 +6,6 @@ ogSummary: 'Cilium 1.16 has arrived with Netkit, Gateway API Gamma Support, Mult
 externalUrl: 'https://isovalent.com/blog/post/cilium-1-16/'
 isPopular: true
 categories:
+  - Release
   - Technology
 ---
