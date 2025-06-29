@@ -1,7 +1,7 @@
 ---
 path: '/blog/2020/09/03/wildlife-studios-multi-cluster-gaming-platform'
 date: '2020-09-03T09:00:00.000Z'
-isPopular: true
+isPopular: false
 title: 'How Wildlife Studios built a Global Multi Cluster Gaming Infrastructure with Cilium'
 categories:
   - Community

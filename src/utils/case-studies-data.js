@@ -341,6 +341,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=26KbW5-BeNA',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Talk 2',
+        linkUrl: 'https://youtu.be/kYT7KV_Cijs?si=rt19kV_oWkACmKpp&t=767',
+        linkTarget: '_blank',
+      },
     ],
   },
   hetzner: {
@@ -467,7 +472,12 @@ export default {
       },
       {
         linkText: 'Talk 5',
-        linkUrl: 'https://www.youtube.com/watch?v=-pOUM1ObAtI&t=8s',
+        linkUrl: 'https://www.youtube.com/watch?v=-pOUM1ObAtI',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk 6',
+        linkUrl: 'https://www.youtube.com/watch?v=CcOKo4BrU2w',
         linkTarget: '_blank',
       },
     ],
@@ -608,6 +618,12 @@ export default {
         linkTarget: '_blank',
       },
       {
+        linkText: 'Talk 4',
+        linkUrl: 'https://www.youtube.com/watch?v=LjIgQZZAYDo',
+        linkTarget: '_blank',
+      },
+
+      {
         linkText: 'User Story',
         linkUrl: 'https://cilium.io/blog/2024/03/07/cloud-provider-user-story/',
         linkTarget: '_blank',
@@ -690,6 +706,17 @@ export default {
       {
         linkText: 'Watch Talk',
         linkUrl: 'https://youtu.be/RdAO_Kxe6tE?t=509',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  canopus: {
+    iconName: 'canopus',
+    text: "<b>Canopus</b> integrates Tetragon's runtime telemetry with LLM-powered AI agents",
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=YXl9xuIxylY',
         linkTarget: '_blank',
       },
     ],
@@ -778,6 +805,17 @@ export default {
       },
     ],
   },
+  gResearch: {
+    iconName: 'gResearch',
+    text: '<b>G-Research</b> uses Cilium to provide high scale networking for their ML workloads',
+    links: [
+      {
+        linkTarget: '_blank',
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=kjSFN34dROQ',
+      },
+    ],
+  },
   dbschenker: {
     iconName: 'dbschenker',
     text: '<b>DB Schenker</b> uses Cilium as the default CNI in self-managed Kubernetes clusters running in AWS',
@@ -785,6 +823,16 @@ export default {
       {
         linkText: 'Read Blog',
         linkUrl: 'https://cilium.io/blog/2023/09/07/db-schenker-migration-to-cilium/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/db-schenker/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://youtu.be/kYT7KV_Cijs?si=aVW7yDwivZyoUVkU&t=287',
         linkTarget: '_blank',
       },
     ],
@@ -1177,6 +1225,18 @@ export default {
       },
     ],
   },
+  cornerBanca: {
+    iconName: 'corner',
+    text: '<b>Corner Banca SA</b> uses Cilium as CNI for their on-prem Kubernetes clusters',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=HVPKSefazl4',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',
@@ -1494,5 +1554,20 @@ export default {
   outscale: {
     iconName: 'outscale',
     text: '<b>Outscale</b> uses Cilium as the default Container Network Interface (CNI) for their managed Kubernetes offering(OKS)',
+  coreweave: {
+    iconName: 'coreweave',
+    text: '<b>CoreWeave</b> The AI Hyperscaler™, uses Cilium as the default CNI for CoreWeave Kubernetes Service',
+  },
+  kanabell: {
+    iconName: 'kanabell',
+    text: '<b>KA-NABELL</b> harnesses Cilium to deliver Kubernetes networking with robust security and clear observability',
+  },
+  entrywan: {
+    iconName: 'entrywan',
+    text: '<b>Entrywan</b> provides Cilium as a CNI option in its managed Kubernetes service',
+  },
+  streamSecurity: {
+    iconName: 'streamsecurity',
+    text: '<b>Stream Security</b> uses Tetragon for Network, Process, and File observability and protection in Kubernetes clusters',
   },
 };

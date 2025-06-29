@@ -172,6 +172,13 @@ const {
   docaposte,
   ecco,
   outscale,
+  coreweave,
+  kanabell,
+  entrywan,
+  streamSecurity,
+  gResearch,
+  cornerBanca,
+  canopus,
 } = caseStudiesData;
 
 const hero = {
@@ -264,6 +271,9 @@ const userCommunity1 = {
     qingcloud,
     imagineLearning,
     ecco,
+    gResearch,
+    cornerBanca,
+    canopus,
   ],
 };
 
@@ -357,6 +367,10 @@ const userCommunity2 = {
     sinad,
     docaposte,
     outscale,
+    coreweave,
+    kanabell,
+    entrywan,
+    streamSecurity,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -392,6 +406,7 @@ const logos1 = {
     'sealos',
     'gcore',
     'qingcloud',
+    'coreweave',
   ],
   spaceXSize: 'sm',
 };

@@ -43,12 +43,15 @@ import BloombergLogo from './images/bloomberg.inline.svg';
 import BmcLogo from './images/bmc.inline.svg';
 import BytedanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
+import CanopusLogo from './images/canopus.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CloutomateLogo from './images/cloutomate.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
 import ConfluentLogo from './images/confluent.inline.svg';
+import CoreweaveLogo from './images/coreweave.inline.svg';
+import CornerBancaLogo from './images/corner.inline.svg';
 import CybozuLogo from './images/cybozu.inline.svg';
 import DaimlerTruckLogo from './images/daimlertruck.inline.svg';
 import DbraincloudLogo from './images/dbraincloud.inline.svg';
@@ -61,6 +64,7 @@ import Ect888Logo from './images/ect888.inline.svg';
 import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
+import EntrywanLogo from './images/entrywan.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FHNWLogo from './images/fhnw.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
@@ -69,6 +73,7 @@ import FRSCALogo from './images/frsca.inline.svg';
 import GcoreLogo from './images/gcore.inline.svg';
 import GdataLogo from './images/gdata.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
+import GresearchLogo from './images/gresearch.inline.svg';
 import GuidewireLogo from './images/guidewire.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
 import IcosLogo from './images/icos.inline.svg';
@@ -83,6 +88,7 @@ import JarLogo from './images/jar.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
 import JyskLogo from './images/jysk-tech.inline.svg';
 import KakaoLogo from './images/kakao.inline.svg';
+import KanabellLogo from './images/kanabell.inline.svg';
 import KiloLogo from './images/kilo.inline.svg';
 import KoyebLogo from './images/koyeb.inline.svg';
 import KryptosLogo from './images/kryptos.inline.svg';
@@ -151,6 +157,7 @@ import SpectroCloudLogo from './images/spectrocloud.inline.svg';
 import SpherityLogo from './images/spherity.inline.svg';
 import SportradarLogo from './images/sportradar.inline.svg';
 import SproutfiLogo from './images/sproutfi.inline.svg';
+import StreamSecurityLogo from './images/streamsecurity.inline.svg';
 import SuperorbitalLogo from './images/superorbital.inline.svg';
 import SyselevenLogo from './images/syseleven.inline.svg';
 import SyselfLogo from './images/syself.inline.svg';
@@ -334,6 +341,13 @@ const icons = {
   docaposte: DocaposteLogo,
   ecco: EccoLogo,
   outscale: OutscaleLogo,
+  coreweave: CoreweaveLogo,
+  kanabell: KanabellLogo,
+  entrywan: EntrywanLogo,
+  streamsecurity: StreamSecurityLogo,
+  gResearch: GresearchLogo,
+  corner: CornerBancaLogo,
+  canopus: CanopusLogo,
 };
 
 const themeClassNames = {

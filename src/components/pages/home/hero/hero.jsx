@@ -26,9 +26,18 @@ const Hero = () => (
           className="with-link-primary mt-5 space-y-5 md:text-lg lg:max-w-[488px]"
           dangerouslySetInnerHTML={{ __html: description }}
         />
-        <Button className="mt-7" to="/get-started" theme="primary-1">
-          Discover Cilium
-        </Button>
+        <div className="mt-7 flex xs:flex-row xs:gap-[18px] flex-col gap-3">
+          <Button className="!pt-[18px]" to="/get-started" theme="primary-1">
+            Discover Cilium
+          </Button>
+          <Button
+            className="bg-white"
+            to="/labs/categories/getting-started/"
+            theme="outline-gray-dark"
+          >
+            Start Lab
+          </Button>
+        </div>
       </div>
       <div className="relative col-span-full mt-5 flex justify-center lg:col-span-6 lg:mt-0 2xl:col-span-5 2xl:-ml-8">
         <img

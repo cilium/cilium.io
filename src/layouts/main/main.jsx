@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 
 import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
+import TopBanner from 'components/shared/top-banner';
 import AdoptersIcon from 'icons/adopters.inline.svg';
 import BlogIcon from 'icons/blog.inline.svg';
 import BrandingIcon from 'icons/branding.inline.svg';
@@ -26,15 +27,16 @@ const navigation = [
   {
     name: 'Industries',
     childItems: [
+      { name: 'Artificial Intelligence', href: '/industries/ai' },
+      { name: 'Cloud Providers', href: '/industries/cloud-providers' },
+      { name: 'Consulting', href: '/industries/consulting' },
+      { name: 'E-commerce', href: '/industries/e-commerce' },
+      { name: 'Edge Computing', href: '/industries/edge-computing' },
       { name: 'Financial Services', href: '/industries/financial-services' },
       { name: 'Media and Entertainment', href: '/industries/media-entertainment' },
-      { name: 'Cloud Providers', href: '/industries/cloud-providers' },
-      { name: 'SaaS, Software and DBaaS', href: '/industries/software' },
-      { name: 'Telcos and Data Center Operators', href: '/industries/telcos-datacenters' },
-      { name: 'E-commerce', href: '/industries/e-commerce' },
-      { name: 'Consulting', href: '/industries/consulting' },
+      { name: 'SaaS, Software, and DBaaS', href: '/industries/software' },
       { name: 'Security', href: '/industries/security' },
-      { name: 'Edge Computing', href: '/industries/edge-computing' },
+      { name: 'Telcos and Data Center Operators', href: '/industries/telcos-datacenters' },
     ],
   },
 
@@ -85,6 +87,10 @@ const MainLayout = ({ children, theme, headerWithSearch, footerWithTopBorder }) 
 
   return (
     <>
+      <TopBanner
+        text="Submit your CfP for CiliumCon NA"
+        url="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cfp-colocated-events/"
+      />
       <Header
         navigation={navigation}
         withSearch={headerWithSearch}

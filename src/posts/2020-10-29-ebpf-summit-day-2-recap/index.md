@@ -1,7 +1,7 @@
 ---
 path: '/blog/2020/10/29/ebpf-summit-day-2'
 date: '2020-10-29T16:00:00.000Z'
-isPopular: true
+isPopular: false
 title: 'eBPF Summit Day 2 Recap'
 categories:
   - Community
