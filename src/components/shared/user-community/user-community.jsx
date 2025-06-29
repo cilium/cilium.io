@@ -107,6 +107,7 @@ import NineLogo from './images/nine.inline.svg';
 import NorthflankLogo from './images/northflank.inline.svg';
 import NutanixLogo from './images/nutanix.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
+import OutscaleLogo from './images/outscale.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
 import ParseableLogo from './images/parseable.inline.svg';
@@ -332,6 +333,7 @@ const icons = {
   sinad: SinadLogo,
   docaposte: DocaposteLogo,
   ecco: EccoLogo,
+  outscale: OutscaleLogo,
 };
 
 const themeClassNames = {

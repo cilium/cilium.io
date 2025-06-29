@@ -1491,4 +1491,8 @@ export default {
     iconName: 'netcloud',
     text: '<b>Netcloud</b> uses Cilium as the CNI for mission critical, on premise Kubernetes clusters',
   },
+  outscale: {
+    iconName: 'outscale',
+    text: '<b>Outscale</b> uses Cilium as the default Container Network Interface (CNI) for their managed Kubernetes offering(OKS)',
+  },
 };

@@ -171,6 +171,7 @@ const {
   sinad,
   docaposte,
   ecco,
+  outscale,
 } = caseStudiesData;
 
 const hero = {
@@ -355,6 +356,7 @@ const userCommunity2 = {
     guidewire,
     sinad,
     docaposte,
+    outscale,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -415,6 +417,7 @@ const logos2 = {
     'deckhouse',
     'alauda',
     'kubelift',
+    'outscale',
   ],
   spaceXSize: 'sm',
 };
