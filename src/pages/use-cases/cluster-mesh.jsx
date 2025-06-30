@@ -100,6 +100,20 @@ const testimonials = [
     description:
       'In the technology landscape radar survey conducted by the Cloud Native Computing Foundation(CNCF), Cilium was voted the most mature multi cluster application management technology. Cilium received the highest usefulness and maturity score, cementing its position as a technology that the community considers both the most useful and mature.',
   },
+  {
+    logo: EccoLogo,
+    title: 'Transforming Networking with Cilium at Ecco',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/ecco/',
+      },
+    ],
+    description:
+      'Cilium’s documentation made it clear what we needed to do. It wasn’t like other solutions where you’re stuck figuring out why the mesh isn’t connecting.',
+    quote: true,
+    person: ' George Zubrienko - Data & AI lead Platform Engineer, Ecco',
+  },
 
   {
     logo: Form3Logo,
