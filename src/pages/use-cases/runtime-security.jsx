@@ -14,7 +14,7 @@ import TetragonShield from 'images/pages/usecase/tetragon-shield.png';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
-  title: 'Runtime Enforcement',
+  title: 'Runtime Security',
   category: 'Security',
   tagline: 'Prevent threats and enforce policies in real-time',
   subHeading:
