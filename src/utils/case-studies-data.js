@@ -1567,4 +1567,8 @@ export default {
     iconName: 'streamsecurity',
     text: '<b>Stream Security</b> uses Tetragon for Network, Process, and File observability and protection in Kubernetes clusters',
   },
+  guida: {
+    iconName: 'guida',
+    text: '<b>Guida</b> uses Cilium in their Managed Kubernetes offering.',
+  },
 };
