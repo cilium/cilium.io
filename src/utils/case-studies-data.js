@@ -1104,6 +1104,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=Ennjmo9TFaM',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/ecco/',
+        linkTarget: '_blank',
+      },
     ],
   },
   gdata: {
