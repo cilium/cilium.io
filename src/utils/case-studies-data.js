@@ -636,13 +636,13 @@ export default {
     text: '<b>eBay</b> uses Cilium and Hubble for networking, observability and security of their Kubernetes-based fleet of microservices',
     links: [
       {
-        linkText: 'Watch Talk',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=C5eSFAeW4ec',
         linkTarget: '_blank',
       },
       {
         linkUrl: 'https://www.youtube.com/watch?v=xEa4KFf5FzY',
-        linkText: 'Watch Talk',
+        linkText: 'Talk 2',
         linkTarget: '_blank',
       },
     ],
