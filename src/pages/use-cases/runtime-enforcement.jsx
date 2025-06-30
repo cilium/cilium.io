@@ -5,6 +5,7 @@ import Hero from 'components/pages/use-cases/hero';
 import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import SEO from 'components/shared/seo';
+import EbayLogo from 'icons/ebay.inline.svg';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
 import RedditLogo from 'icons/logo-reddit.inline.svg';
 import PalantirLogo from 'icons/palantir.inline.svg';
@@ -14,7 +15,7 @@ import TetragonShield from 'images/pages/usecase/tetragon-shield.png';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
-  title: 'Runtime Enforcement',
+  title: 'Runtime Security',
   category: 'Security',
   tagline: 'Prevent threats and enforce policies in real-time',
   subHeading:
@@ -93,6 +94,18 @@ const testimonials = [
     title: 'Hubble + Tetragon at Palantir',
     description:
       'Palantir utilizes Hubble and Tetragon for runtime enforcement and security observability in their Kubernetes clusters',
+  },
+  {
+    logo: EbayLogo,
+    CTAs: [
+      {
+        CTAtext: 'Watch Talk',
+        url: 'https://www.youtube.com/watch?v=xEa4KFf5FzY',
+      },
+    ],
+    title: 'Who Owns Your Pod? Observing and Blocking Unwanted Behavior at eBay With eBPF',
+    description:
+      'This talk provides practical insights into using Tetragon for observability, policy refinement, and improving overall pod security posture in Kubernetes environments.',
   },
 ];
 

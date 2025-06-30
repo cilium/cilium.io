@@ -273,6 +273,7 @@ const userCommunity1 = {
     gResearch,
     cornerBanca,
     canopus,
+    bytedance,
   ],
 };
 
@@ -342,7 +343,6 @@ const userCommunity2 = {
     snapp,
     tsi,
     tailorBrands,
-    bytedance,
     kubeOvn,
     kryptos,
     immerok,

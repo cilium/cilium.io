@@ -1236,7 +1236,17 @@ export default {
       },
     ],
   },
-
+  bytedance: {
+    iconName: 'bytedance',
+    text: '<b>ByteDance</b> uses Cilium as their CNI for self-hosted Kubernetes clusters',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=cKPW67D7X10',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',
@@ -1349,10 +1359,6 @@ export default {
   ayedo: {
     iconName: 'ayedo',
     text: '<b>Ayedo</b> builds and operates cloud native platforms using Cilium',
-  },
-  bytedance: {
-    iconName: 'bytedance',
-    text: '<b>ByteDance</b> uses Cilium as their CNI for self-hosted Kubernetes clusters',
   },
   cognite: {
     iconName: 'cognite',
