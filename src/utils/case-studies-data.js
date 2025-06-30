@@ -640,6 +640,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=C5eSFAeW4ec',
         linkTarget: '_blank',
       },
+      {
+        linkUrl: 'https://www.youtube.com/watch?v=xEa4KFf5FzY',
+        linkText: 'Watch Talk',
+        linkTarget: '_blank',
+      },
     ],
   },
 
