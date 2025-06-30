@@ -178,6 +178,7 @@ const {
   gResearch,
   cornerBanca,
   canopus,
+  guida,
 } = caseStudiesData;
 
 const hero = {
@@ -369,6 +370,7 @@ const userCommunity2 = {
     kanabell,
     entrywan,
     streamSecurity,
+    guida,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -430,6 +432,7 @@ const logos2 = {
     'deckhouse',
     'alauda',
     'kubelift',
+    'guida',
   ],
   spaceXSize: 'sm',
 };
