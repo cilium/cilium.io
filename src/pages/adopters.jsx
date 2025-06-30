@@ -370,8 +370,7 @@ const userCommunity2 = {
     kanabell,
     entrywan,
     streamSecurity,
-    outscale
-
+    outscale,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -408,6 +407,7 @@ const logos1 = {
     'gcore',
     'qingcloud',
     'coreweave',
+    'outscale',
   ],
   spaceXSize: 'sm',
 };
@@ -433,7 +433,6 @@ const logos2 = {
     'deckhouse',
     'alauda',
     'kubelift',
-    'outscale'
   ],
   spaceXSize: 'sm',
 };
