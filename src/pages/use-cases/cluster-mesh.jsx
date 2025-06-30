@@ -110,7 +110,7 @@ const testimonials = [
       },
     ],
     description:
-      'Cilium’s documentation made it clear what we needed to do. It wasn’t like other solutions where you’re stuck figuring out why the mesh isn’t connecting.',
+      'Cilium’s documentation made it clear what we needed to do. It wasn’t like other solutions where you’re stuck figuring out why the mesh isn’t connecting. Cluster mesh enabled us to reduce storage costs by 50% and latency for critical operations by 33%.',
     quote: true,
     person: ' George Zubrienko - Data & AI lead Platform Engineer, Ecco',
   },
