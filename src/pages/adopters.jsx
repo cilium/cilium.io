@@ -178,6 +178,7 @@ const {
   gResearch,
   cornerBanca,
   canopus,
+  guida,
   outscale,
 } = caseStudiesData;
 
@@ -370,6 +371,7 @@ const userCommunity2 = {
     kanabell,
     entrywan,
     streamSecurity,
+    guida,
     outscale,
   ],
   buttonText: 'Add Your Company',
@@ -433,6 +435,7 @@ const logos2 = {
     'deckhouse',
     'alauda',
     'kubelift',
+    'guida',
   ],
   spaceXSize: 'sm',
 };

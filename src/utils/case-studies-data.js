@@ -1583,6 +1583,10 @@ export default {
     iconName: 'streamsecurity',
     text: '<b>Stream Security</b> uses Tetragon for Network, Process, and File observability and protection in Kubernetes clusters',
   },
+  guida: {
+    iconName: 'guida',
+    text: '<b>Guida</b> uses Cilium in their Managed Kubernetes offering',
+  },
   outscale: {
     iconName: 'outscale', 
     text: '<b>Outscale</b> uses Cilium as the the default Container Network Interface (CNI) for their managed Kubernetes offering'
