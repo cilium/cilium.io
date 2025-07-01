@@ -1585,7 +1585,7 @@ export default {
   },
   guida: {
     iconName: 'guida',
-    text: '<b>Guida</b> uses Cilium in their Managed Kubernetes offering.',
+    text: '<b>Guida</b> uses Cilium in their Managed Kubernetes offering',
   },
   outscale: {
     iconName: 'outscale', 
