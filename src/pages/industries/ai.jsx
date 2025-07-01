@@ -13,10 +13,10 @@ import AiImage3 from 'images/pages/industries/ai/ai-3.png';
 import AiImage4 from 'images/pages/industries/ai/ai-4.png';
 import AiImage5 from 'images/pages/industries/ai/ai-5.png';
 import BackendOfficeImage from 'images/pages/industries/ai/backed-office.jpeg';
-import CanopusOfficeImage from 'images/pages/industries/ai/canopusaioffice.png';
 import GresearchOfficeImage from 'images/pages/industries/ai/gresearch-office.jpg';
 import MeltwaterOfficeImage from 'images/pages/industries/ai/meltwater-office.jpeg';
 import RouterBee from 'images/pages/industries/ai/router-bee.png';
+import EccoOfficeImage from 'images/pages/industries/e-commerce/ecco-office.webp';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
@@ -104,6 +104,16 @@ const bulletSection5 = {
 };
 
 const aiResouces = [
+  {
+    imageSrc: EccoOfficeImage,
+    imageAlt: 'ecco office building',
+    title: 'Transforming Networking with Cilium at Ecco',
+    buttonText: 'Read The Case Study',
+    buttonLink: 'https://www.cncf.io/case-studies/ecco/',
+    description:
+      'ECCO Data & AI implemented Cilium, leveraging its eBPF-based capabilities to simplify and enhance networking. The team used Cilium Cluster Mesh to create a single networking layer covering multiple Kubernetes clusters, enabling seamless communication between applications and storage without relying on costly cloud-specific solutions.',
+  },
+
   {
     title: 'Building the core fabric of accelerated hybrid AI clusters using Cilium',
     description:
