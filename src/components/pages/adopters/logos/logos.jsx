@@ -40,6 +40,7 @@ import NetwaysLogo from './images/netways.inline.svg';
 import NineLogo from './images/nine.inline.svg';
 import OpenShiftLogo from './images/openshift.inline.svg';
 import OpenStackLogo from './images/openstack.inline.svg';
+import OutScaleLogo from './images/outscale.inline.svg';
 import QingCloudLogo from './images/qingcloud.inline.svg';
 import Rke2Logo from './images/rke2.inline.svg';
 import ScalewayLogo from './images/scaleway.inline.svg';
@@ -92,6 +93,7 @@ const logos = {
   qingcloud: QingCloudLogo,
   coreweave: CoreweaveLogo,
   guida: GuidaLogo,
+  outscale: OutScaleLogo
 };
 
 const spaceXClassNames = {

@@ -636,8 +636,13 @@ export default {
     text: '<b>eBay</b> uses Cilium and Hubble for networking, observability and security of their Kubernetes-based fleet of microservices',
     links: [
       {
-        linkText: 'Watch Talk',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=C5eSFAeW4ec',
+        linkTarget: '_blank',
+      },
+      {
+        linkUrl: 'https://www.youtube.com/watch?v=xEa4KFf5FzY',
+        linkText: 'Talk 2',
         linkTarget: '_blank',
       },
     ],
@@ -1104,6 +1109,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=Ennjmo9TFaM',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/ecco/',
+        linkTarget: '_blank',
+      },
     ],
   },
   gdata: {
@@ -1236,7 +1246,17 @@ export default {
       },
     ],
   },
-
+  bytedance: {
+    iconName: 'bytedance',
+    text: '<b>ByteDance</b> uses Cilium as their CNI for self-hosted Kubernetes clusters',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=cKPW67D7X10',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',
@@ -1349,10 +1369,6 @@ export default {
   ayedo: {
     iconName: 'ayedo',
     text: '<b>Ayedo</b> builds and operates cloud native platforms using Cilium',
-  },
-  bytedance: {
-    iconName: 'bytedance',
-    text: '<b>ByteDance</b> uses Cilium as their CNI for self-hosted Kubernetes clusters',
   },
   cognite: {
     iconName: 'cognite',
@@ -1571,4 +1587,8 @@ export default {
     iconName: 'guida',
     text: '<b>Guida</b> uses Cilium in their Managed Kubernetes offering.',
   },
+  outscale: {
+    iconName: 'outscale', 
+    text: '<b>Outscale</b> uses Cilium as the the default Container Network Interface (CNI) for their managed Kubernetes offering'
+  }
 };
