@@ -74,6 +74,7 @@ import GcoreLogo from './images/gcore.inline.svg';
 import GdataLogo from './images/gdata.inline.svg';
 import GiantSwarmLogo from './images/giant-swarm.inline.svg';
 import GresearchLogo from './images/gresearch.inline.svg';
+import GuidaLogo from './images/guida.inline.svg';
 import GuidewireLogo from './images/guidewire.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
 import IcosLogo from './images/icos.inline.svg';
@@ -113,6 +114,7 @@ import NineLogo from './images/nine.inline.svg';
 import NorthflankLogo from './images/northflank.inline.svg';
 import NutanixLogo from './images/nutanix.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
+import OutscaleLogo from './images/outscale.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
 import ParseableLogo from './images/parseable.inline.svg';
@@ -346,6 +348,8 @@ const icons = {
   gResearch: GresearchLogo,
   corner: CornerBancaLogo,
   canopus: CanopusLogo,
+  guida: GuidaLogo,
+  outscale: OutscaleLogo
 };
 
 const themeClassNames = {

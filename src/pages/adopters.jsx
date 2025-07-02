@@ -178,6 +178,8 @@ const {
   gResearch,
   cornerBanca,
   canopus,
+  guida,
+  outscale,
 } = caseStudiesData;
 
 const hero = {
@@ -273,6 +275,7 @@ const userCommunity1 = {
     gResearch,
     cornerBanca,
     canopus,
+    bytedance,
   ],
 };
 
@@ -342,7 +345,6 @@ const userCommunity2 = {
     snapp,
     tsi,
     tailorBrands,
-    bytedance,
     kubeOvn,
     kryptos,
     immerok,
@@ -369,6 +371,8 @@ const userCommunity2 = {
     kanabell,
     entrywan,
     streamSecurity,
+    guida,
+    outscale,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -405,6 +409,7 @@ const logos1 = {
     'gcore',
     'qingcloud',
     'coreweave',
+    'outscale',
   ],
   spaceXSize: 'sm',
 };
@@ -430,6 +435,7 @@ const logos2 = {
     'deckhouse',
     'alauda',
     'kubelift',
+    'guida',
   ],
   spaceXSize: 'sm',
 };
