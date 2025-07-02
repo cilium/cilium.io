@@ -1567,8 +1567,4 @@ export default {
     iconName: 'streamsecurity',
     text: '<b>Stream Security</b> uses Tetragon for Network, Process, and File observability and protection in Kubernetes clusters',
   },
-  ovh: {
-    iconName: 'ovh',
-    text: '<b>OVHcloud</b> is using Cilium as the default CNI on their Managed Kubernetes Service (MKS) clusters',
-  },
 };
