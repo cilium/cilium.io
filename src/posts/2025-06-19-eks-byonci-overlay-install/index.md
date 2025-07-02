@@ -212,10 +212,6 @@ managedNodeGroups:
   - name: ng-1
     iam:
       attachPolicyARNs:
-        - arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy
-        - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
-        - arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly
-        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
     desiredCapacity: 2
     privateNetworking: true
 ```
@@ -239,5 +235,7 @@ Encapsulation uses overlay networks like VXLAN or Geneve to tunnel traffic betwe
 Native routing, on the other hand, skips tunneling entirely and relies on the underlying network to route PodCIDRs directly. This results in better performance and eliminates MTU concerns, but it requires a network that is aware of all pod IPs typically achievable in on-prem setups or cloud environments.
 
 ## Is AWS ENI is considered a form of native routing in Cilium?
+
+![alt text](aws-cilium-architecture.webp)
 
 Yes! AWS ENI is implemented via a specialized Cilium datapath optimized for AWS VPC’s native capabilities. Cilium delegates packet forwarding to the underlying network (or routing layer) rather than using encapsulation like VXLAN or Geneve. AWS ENI fits this model because Pod IPs are directly routable within the AWS VPC, they are allocated from the ENI IP ranges that are natively integrated into the AWS network. The AWS VPC acts as the native network that routes packets between ENIs across nodes.
