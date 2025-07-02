@@ -96,7 +96,7 @@ const testimonials = [
   },
 ];
 
-const RuntimeEnforcementPage = () => (
+const RuntimeSecurityPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
@@ -109,7 +109,7 @@ const RuntimeEnforcementPage = () => (
   </MainLayout>
 );
 
-export default RuntimeEnforcementPage;
+export default RuntimeSecurityPage;
 
 // eslint-disable-next-line react/prop-types
 export const Head = ({ location: { pathname } }) => {
