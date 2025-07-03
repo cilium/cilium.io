@@ -177,8 +177,8 @@ const securityUsecases = [
   },
   {
     icon: 'runtimeEnforcement',
-    title: 'Runtime Enforcement',
-    buttonLink: '/use-cases/runtime-enforcement',
+    title: 'Runtime Security',
+    buttonLink: '/use-cases/runtime-security',
     description:
       'Prevent unauthorized access to your traffic at runtime to stop attacks on the OS level, preventing malicious actions.',
   },

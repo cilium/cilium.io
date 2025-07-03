@@ -133,8 +133,8 @@ const list = [
 
       {
         icon: RuntimeEnforcementIcon,
-        title: 'Runtime Enforcement',
-        path: 'runtime-enforcement',
+        title: 'Runtime Security',
+        path: 'runtime-security',
       },
     ],
   },
