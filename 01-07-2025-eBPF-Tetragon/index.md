@@ -1,3 +1,4 @@
+---
 date: '2025-07-01T12:40:00.000Z'
 title: 'Shift Left with eBPF: Using Tetragon in Your CI/CD Pipeline'
 ogImage: https://miro.medium.com/v2/resize:fit:1100/format:webp/1*jDh4Mo7biQROJd7Wvs-Dag.jpeg
@@ -15,4 +16,5 @@ tags:
   - BPF
   - Cilium
   - CNCF
+---
   
