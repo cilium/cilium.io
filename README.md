@@ -48,6 +48,31 @@ cp .env.example .env
 npm run start
 ```
 
+> **Note:** If you encounter the error:
+>
+> ```
+> FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+> ```
+>
+> This happens because Node.js has a default memory limit (usually around 4 GB), which may not be sufficient for memory intensive tasks such as image processing in Gatsby.
+>
+> To fix this, increase the memory limit by running the following command:
+>
+> **Linux/macos**:
+>
+> ```bash
+> NODE_OPTIONS="--max-old-space-size=8192" npm run start
+> ```
+>
+> **Windows**:
+>
+> ```powershell
+> $env:NODE_OPTIONS="--max-old-space-size=8192"
+> npm run start
+> ```
+>
+> This allows Node.js to use up to 8 GB of RAM. You can adjust the number (`8192`) if needed based on your system capacity.
+
 ### Build the website
 
 ```bash
