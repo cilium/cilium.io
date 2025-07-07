@@ -88,8 +88,8 @@ const MainLayout = ({ children, theme, headerWithSearch, footerWithTopBorder }) 
   return (
     <>
       <TopBanner
-        text="Submit your CfP for CiliumCon NA"
-        url="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cfp-colocated-events/"
+        text="Join us KubeCon NA and CiliumCon 2025"
+        url="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/ciliumcon/"
       />
       <Header
         navigation={navigation}
