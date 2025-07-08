@@ -180,6 +180,7 @@ const {
   canopus,
   guida,
   outscale,
+  ovh,
 } = caseStudiesData;
 
 const hero = {
@@ -373,6 +374,7 @@ const userCommunity2 = {
     streamSecurity,
     guida,
     outscale,
+    ovh,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -436,6 +438,7 @@ const logos2 = {
     'alauda',
     'kubelift',
     'guida',
+    'ovh',
   ],
   spaceXSize: 'sm',
 };

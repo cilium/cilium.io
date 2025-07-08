@@ -116,6 +116,7 @@ import NutanixLogo from './images/nutanix.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
 import OutscaleLogo from './images/outscale.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
+import OVHcloudLogo from './images/ovh.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
 import ParseableLogo from './images/parseable.inline.svg';
 import PlaidLogo from './images/plaid.inline.svg';
@@ -349,7 +350,8 @@ const icons = {
   corner: CornerBancaLogo,
   canopus: CanopusLogo,
   guida: GuidaLogo,
-  outscale: OutscaleLogo
+  outscale: OutscaleLogo,
+  ovh: OVHcloudLogo,
 };
 
 const themeClassNames = {

@@ -1588,7 +1588,11 @@ export default {
     text: '<b>Guida</b> uses Cilium in their Managed Kubernetes offering',
   },
   outscale: {
-    iconName: 'outscale', 
-    text: '<b>Outscale</b> uses Cilium as the the default Container Network Interface (CNI) for their managed Kubernetes offering'
-  }
+    iconName: 'outscale',
+    text: '<b>Outscale</b> uses Cilium as the the default Container Network Interface (CNI) for their managed Kubernetes offering',
+  },
+  ovh: {
+    iconName: 'ovh',
+    text: '<b>OVHcloud</b> uses Cilium as the default CNI on their Managed Kubernetes Service offering',
+  },
 };
