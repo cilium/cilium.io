@@ -1593,6 +1593,6 @@ export default {
   },
   ovh: {
     iconName: 'ovh',
-    text: '<b>OVHcloud</b> uses Cilium as the default CNI on their Managed Kubernetes Service offering',
+    text: '<b>OVHcloud</b> uses Cilium as the default CNI for their Managed Kubernetes Service offering',
   },
 };
