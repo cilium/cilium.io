@@ -14,7 +14,7 @@ tags:
 
 ![](cover.png)
 
-_June 19th, 2025_
+_July 6th, 2025_
 
 _Author: Paul Arah, Isovalent@Cisco_
 
