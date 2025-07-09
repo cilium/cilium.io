@@ -247,5 +247,4 @@ In this two-part series, we explored how to deploy Cilium on EKS using different
 - [AWS VPC CNI plugin - Cilium Docs](https://docs.cilium.io/en/latest/installation/cni-chaining-aws-cni/)
 - [AWS ENI - Cilium Docs](https://docs.cilium.io/en/latest/network/concepts/routing/#aws-eni-datapath)
 - [Routing - Cilium Docs](https://docs.cilium.io/en/latest/network/concepts/routing/#aws-eni-datapath)
-- [Helm Reference](https://docs.cilium.io/en/stable/helm-reference/)
-  ![alt text](<Cilium.io Social Card Donia Chaiehloudj.png>)
+- [Helm Reference](https://docs.cilium.io/en/stable/helm-reference/)
