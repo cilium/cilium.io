@@ -412,6 +412,7 @@ const logos1 = {
     'qingcloud',
     'coreweave',
     'outscale',
+    'ovh',
   ],
   spaceXSize: 'sm',
 };
@@ -438,7 +439,6 @@ const logos2 = {
     'alauda',
     'kubelift',
     'guida',
-    'ovh',
   ],
   spaceXSize: 'sm',
 };
