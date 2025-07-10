@@ -72,7 +72,7 @@ const testimonials = [
     CTAs: [
       {
         CTAtext: 'Watch the Talk',
-        url: 'https://cilium.io/blog/2023/05/04/telecommunications-user-story/',
+        url: 'https://www.youtube.com/watch?v=HVPKSefazl4',
       },
     ],
     description:
