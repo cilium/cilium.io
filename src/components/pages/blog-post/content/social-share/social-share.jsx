@@ -3,9 +3,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { LinkedinShareButton } from 'react-share';
 
-import Button from 'components/shared/button';
 import BlueskyIcon from 'icons/bluesky.inline.svg';
 import LinkedinIcon from 'icons/linkedin.inline.svg';
+
+const CustomButton = ({ url, className, children, ...props }) => (
+  <a href={url} className={className} target="_blank" rel="noopener noreferrer" {...props}>
+    {children}
+  </a>
+);
 
 const SocialShare = ({ className, postUrl, title, summary, tags }) => (
   <div
@@ -19,16 +24,12 @@ const SocialShare = ({ className, postUrl, title, summary, tags }) => (
         <LinkedinIcon />
       </div>
     </LinkedinShareButton>
-
-    <Button
-      to="https://bsky.app/profile/your-profile"
-      className="group flex items-center justify-center w-12 h-12 text-[#0085FF] hover:text-gray-600 transition-colors duration-200 bg-white border rounded-full lg:w-14 lg:h-14 border-gray-3 hover:bg-gray-4"
-      target="_blank"
-      rel="noopener noreferrer"
-      asDefaultLink
+    <CustomButton
+      url="https://bsky.app/intent/compose"
+      className="flex items-center justify-center w-12 h-12 text-[#0085FF] hover:text-gray-600 transition-colors duration-200 bg-white border rounded-full lg:w-14 lg:h-14 border-gray-3 hover:bg-gray-4"
     >
-      <BlueskyIcon className="w-6 h-6" />
-    </Button>
+      <BlueskyIcon className="!w-6 !h-6" />
+    </CustomButton>
   </div>
 );
 
