@@ -1259,7 +1259,7 @@ export default {
   },
   openai: {
     iconName: 'openai',
-    text: '<b>OpenAI</b> uses Cilium as the CNI for their Kubernetes clusters.',
+    text: '<b>OpenAI</b> uses Cilium as the CNI for their Kubernetes clusters',
     links: [
       {
         linkText: 'Watch Interview',
