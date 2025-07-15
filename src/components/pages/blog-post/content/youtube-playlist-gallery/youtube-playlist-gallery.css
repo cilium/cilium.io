@@ -1,0 +1,29 @@
+/* dots colors */
+.youtube-gallery {
+  --swiper-pagination-color: #0e0d52;
+  --swiper-pagination-bullet-inactive-color: #819de7;
+}
+
+/* pagination */
+.youtube-gallery .my-slider .swiper-pagination{
+  display: flex;
+  justify-content: center;
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 8px;
+  transform: translateX(-50%);
+  gap: 8px;
+}
+
+/* bullets style */
+.youtube-gallery .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--swiper-pagination-bullet-inactive-color);
+  opacity: 1;
+}
+
+.youtube-gallery .swiper-pagination-bullet-active {
+  background: var(--swiper-pagination-color) !important;
+}
