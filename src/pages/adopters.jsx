@@ -181,6 +181,7 @@ const {
   guida,
   outscale,
   ovh,
+  openai,
 } = caseStudiesData;
 
 const hero = {
@@ -277,6 +278,7 @@ const userCommunity1 = {
     cornerBanca,
     canopus,
     bytedance,
+    openai,
   ],
 };
 

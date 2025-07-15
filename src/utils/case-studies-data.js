@@ -1257,6 +1257,17 @@ export default {
       },
     ],
   },
+  openai: {
+    iconName: 'openai',
+    text: '<b>OpenAI</b> uses Cilium as the CNI for their Kubernetes clusters',
+    links: [
+      {
+        linkText: 'Watch Interview',
+        linkUrl: 'https://www.youtube.com/watch?v=wuO4nREXu4Y&t=251s',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   scigility: {
     iconName: 'scigility',
     text: '<b>Scigility</b> uses Cilium as the default CNI accross their internal and client platforms',

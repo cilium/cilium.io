@@ -114,6 +114,7 @@ import NineLogo from './images/nine.inline.svg';
 import NorthflankLogo from './images/northflank.inline.svg';
 import NutanixLogo from './images/nutanix.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
+import OpenAiLogo from './images/openai.inline.svg';
 import OutscaleLogo from './images/outscale.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import OVHcloudLogo from './images/ovh.inline.svg';
@@ -352,6 +353,7 @@ const icons = {
   guida: GuidaLogo,
   outscale: OutscaleLogo,
   ovh: OVHcloudLogo,
+  openai: OpenAiLogo,
 };
 
 const themeClassNames = {
