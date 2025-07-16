@@ -59,6 +59,8 @@
     "react-use": "^17.6.0",
     "remark-gfm": "^1.0.0",
     "slick-carousel": "^1.8.1",
+    "swiper": "^11.2.10",
+    "tiny-slider": "^2.9.4",
     "yup": "^1.6.1"
   },
   "devDependencies": {

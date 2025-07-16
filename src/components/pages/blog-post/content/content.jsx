@@ -8,6 +8,7 @@ import Heading from 'components/shared/heading';
 
 import SocialShare from './social-share';
 import YoutubeIframe from './youtube-iframe';
+import YoutubePlaylistGallery from './youtube-playlist-gallery';
 
 // eslint-disable-next-line react/prop-types
 const Wrapper = ({ children }) => <div className="prose md:prose-lg !max-w-none">{children}</div>;
@@ -16,6 +17,7 @@ const components = {
   wrapper: Wrapper,
   BlogAuthor,
   YoutubeIframe,
+  YoutubePlaylistGallery,
   undefined: (props) => <Fragment {...props} />,
 };
 const Content = ({ date, title, summary, content, path, tags }) => {
