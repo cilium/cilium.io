@@ -16,20 +16,21 @@ tags:
 
 ![](cover.png)
 
-_July 01st, 2025_
+July 01st, 2025
 
-_Author: Donia Chaiehloudj, Isovalent@Cisco_
+Author: Donia Chaiehloudj, Isovalent@Cisco
 
-eCHO (“eBPF & Cilium Office Hours”) is our weekly live-stream where maintainers, users, and special guests pull back the 
+eCHO (“eBPF & Cilium Office Hours”) is our weekly live-stream where maintainers, users, and special guests pull back the
 curtain on all things Cilium, eBPF, Hubble, and Tetragon. Since episode #1 we’ve:
+
 - Shipped 180 + sessions ranging from five-minute demos to full architecture deep-dives
 - Answered live YouTube questions in real time
 - Captured every recording so you can binge-watch at your own pace.
 
-To make the library easier to navigate we’ve created theme-based playlist - think of them as fast-track learning paths. 
-Pick a topic, hit play, and work through the sessions in any order that fits your day. In total you’ll find 18 playlists, 
-grouped into seven themes that mirror the Cilium journey: Cilium in Production (installs and upgrades), Networking for Kubernetes 
-(policies and datapath), Runtime Security (Tetragon), Mesh Networking (service and cluster mesh), Gateway-API & Traffic Management, 
+To make the library easier to navigate we’ve created theme-based playlist - think of them as fast-track learning paths.
+Pick a topic, hit play, and work through the sessions in any order that fits your day. In total you’ll find 18 playlists,
+grouped into seven themes that mirror the Cilium journey: Cilium in Production (installs and upgrades), Networking for Kubernetes
+(policies and datapath), Runtime Security (Tetragon), Mesh Networking (service and cluster mesh), Gateway-API & Traffic Management,
 All Things eBPF (development and observability), and Ecosystem & Community (releases, conferences, culture).
 
 # 🚀 Cilium in Production
@@ -37,6 +38,7 @@ All Things eBPF (development and observability), and Ecosystem & Community (rele
 Running Cilium in a home lab is fun, but running it in anger across EKS, bare-metal, and on-prem clusters requires repeatable workflows and a few battle-tested tricks. The Cilium in Production playlist condenses those lessons into one place.
 
 ### What you’ll learn
+
 - Choosing (and changing) data-plane modes on managed Kubernetes (EKS, AKS, GKE).
 - Safe blue/green upgrades with Helm and Pulumi.
 - Debugging the odd corner cases on OpenShift, vSphere, or air-gapped bare metal.
@@ -52,15 +54,17 @@ playlists={[
 />
 
 #### More resources
+
 - Hands-on lab: [Install Cilium on EKS](https://isovalent.com/resource-library/labs/) – spin up a sandbox in minutes.
-- Book: [Cilium Up and Running](https://isovalent.com/books/cilium-up-and-running/) 
+- Book: [Cilium Up and Running](https://isovalent.com/books/cilium-up-and-running/)
 
 # 🌐 Networking for Kubernetes
 
-Kubernetes ships with an “allow-all” networking and leaves the policy enforcement and performance tuning to your CNI. 
+Kubernetes ships with an “allow-all” networking and leaves the policy enforcement and performance tuning to your CNI.
 The Networking for Kubernetes playlist tackles everything from first NetworkPolicy to packet-level performance tuning.
 
 #### What you’ll learn
+
 - Writing a default-deny policy and graduating to L7 HTTP and DNS rules.
 - Following a single packet through XDP, tc, and the eBPF conntracker (“Life of a Packet”).
 - Benchmarking NodePort vs Maglev vs BGP mode and knowing when to switch.
@@ -75,13 +79,16 @@ playlists={[
 />
 
 #### More resources
+
 - Hands-on lab: [Isovalent Enterprise for Cilium: Network Policies](https://isovalent.com/labs/cilium-network-policies/)
 - eBook: [Kubernetes Networking and Cilium for the Network Engineer](https://isovalent.com/blog/post/introducing-the-new-kubernetes-networking-and-cilium-for-the-network-engineer-ebook/)
 
 # 🔀 Mesh Networking
 
 Service-to-service and cluster-to-cluster traffic without sidecars or iptables tax. Two playlists cover both worlds.
+
 #### What you’ll learn
+
 - Stretching services across clusters with ClusterMesh fail-over.
 - Integrating Envoy, and Gateway API without iptables overhead.
 
@@ -93,15 +100,17 @@ playlists={[
 />
 
 #### More resources
+
 - Hands-on lab: [Cilium Cluster Mesh Lab](https://isovalent.com/labs/cilium-cluster-mesh/), [Cilium Gateway API](https://isovalent.com/labs/cilium-gateway-api/)
-- Blog post:  [Cilium Mesh - One Mesh to Connect Them All](https://isovalent.com/blog/post/introducing-cilium-mesh/)
+- Blog post: [Cilium Mesh - One Mesh to Connect Them All](https://isovalent.com/blog/post/introducing-cilium-mesh/)
 
 # 🔒 Runtime Security with Tetragon
 
-Need process-level enforcement and instant CVE detection? The Tetragon playlist shows how eBPF can hook every `execve`, 
+Need process-level enforcement and instant CVE detection? The Tetragon playlist shows how eBPF can hook every `execve`,
 file write, and socket call before turning them into actionable policies.
 
 #### What you’ll learn
+
 - Building allow/deny rules at PID & binary granularity.
 - Detecting supply-chain attacks (e.g. XZ Utils CVE) in real time.
 - Capturing least-privilege baselines for production workloads.
@@ -113,6 +122,7 @@ playlists={[
 />
 
 #### More resources
+
 - Hands-on lab: [Tetragon Getting Started](https://isovalent.com/labs/tetragon-getting-started/)
 - Blog post: [Detecting the XZ Utils CVE with Tetragon](https://isovalent.com/blog/post/ebpf-tetragon-xz-utils-cve-policy/)
 - Doc: Quick-start guide — [docs.tetragon.io](http://docs.tetragon.io)
@@ -122,6 +132,7 @@ playlists={[
 Whether you’re writing custom programs or just want better observability, these playlists cover the kernel side of life.
 
 #### What you’ll learn
+
 - eBPF architecture, verifier workflow, and key helper functions.
 - Building custom programs and loaders with libbpf.
 - End-to-end observability with BPFTrace, Hubble, and continuous profiling.
@@ -136,13 +147,16 @@ playlists={[
 />
 
 #### More resources
+
 - Hands-on lab: [Getting started with eBPF](https://isovalent.com/labs/ebpf-getting-started/)
 - Book: [Learning eBPF](https://isovalent.com/books/learning-ebpf/), O'Reilly book by Liz Rice
 
 # 🎉 Ecosystem & Community
+
 Stay current with release overviews, conference recaps, and behind-the-scenes chats with Cilium maintainers.
 
 #### What you’ll learn
+
 - Highlights and release notes for every Cilium, Hubble, and Tetragon release.
 - Previews and recaps from KubeCon, eBPF Summit and more.
 - Contributor AMAs, lightning talks, and behind the scenes culture stories.
@@ -156,9 +170,11 @@ playlists={[
 />
 
 #### More resources
-- Blog posts:[ Cilium Release 1.17](https://isovalent.com/blog/post/isovalent-networking-kubernetes-1-17/), [KubeCon Europe 2025 Wrap-Up](https://isovalent.com/blog/post/kubecon-europe-2025-wrap-up/)
+
+- Blog posts:[Cilium Release 1.17](https://isovalent.com/blog/post/isovalent-networking-kubernetes-1-17/), [KubeCon Europe 2025 Wrap-Up](https://isovalent.com/blog/post/kubecon-europe-2025-wrap-up/)
 
 # 👉 How to use this library
+
 - Choose your theme above.
 - Start the playlist episode.
 - Read or try the linked blog or lab or download the eBook.
@@ -166,7 +182,7 @@ playlists={[
 ## Recap
 
 | Theme                         | Playlist                                                                                                                        | Description                                                             |
-|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | **Cilium in Production**      | [**eCHO Recaps: Cilium in the Clouds**](https://www.youtube.com/playlist?PLDg_GiBbAx-mmWNec1zMhEal5f6WurrJL)                    | Installing and operating Cilium on EKS, AKS and GKE.                    |
 |                               | [**eCHO Recaps: Deploying Cilium**](https://www.youtube.com/playlist?list=PLDg_GiBbAx-m6W4UfeVxFNT5vtPDvel4a)                   | Helm values, upgrades and CI/CD pipelines for day-2 ops.                |
 |                               | [**eCHO Recaps: Cilium with on-premise clusters**](https://www.youtube.com/playlist?list=PLDg_GiBbAx-maWggVCCczWOWq4BxMZD5d)    | Blue/green roll-outs and war stories from other CNIs (Calico, Flannel). |
