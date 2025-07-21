@@ -49,19 +49,39 @@ const BlogCover = ({ ogImage, title, coverUrl, coverClassNames }) => {
       />
     );
   } else if (!ogImage && !coverUrl) {
-    content = (
-      <div
-        className={classNames(
-          'flex w-full items-center justify-center rounded-lg bg-gray-4',
-          coverClassNames
-        )}
-        ref={placeholder}
-        style={{ height: placeholderHeight }}
-      >
-        <CiliumLogo aria-label="Cilium logo" />
-      </div>
-    );
+    let customImageSrc = null;
+
+    if (title === 'Shift Left with eBPF: Using Tetragon in Your CI/CD Pipeline') {
+      customImageSrc = 'https://miro.medium.com/v2/resize:fit:875/1*jDh4Mo7biQROJd7Wvs-Dag.jpeg';
+    } else if (title === 'Automated Kubernetes Threat Detection with Tetragon and Azure Sentinel') {
+      customImageSrc = 'https://miro.medium.com/v2/resize:fit:875/1*xXXgZ4CiRELx3Z9ixL-A7g.jpeg';
+    }
+
+    if (customImageSrc) {
+      content = (
+        <img
+          className={classNames('w-full self-center rounded-lg object-contain', coverClassNames)}
+          src={customImageSrc}
+          alt={title}
+          loading="lazy"
+        />
+      );
+    } else {
+      content = (
+        <div
+          className={classNames(
+            'flex w-full items-center justify-center rounded-lg bg-gray-4',
+            coverClassNames
+          )}
+          ref={placeholder}
+          style={{ height: placeholderHeight }}
+        >
+          <CiliumLogo aria-label="Cilium logo" />
+        </div>
+      );
+    }
   }
+
   return content;
 };
 
