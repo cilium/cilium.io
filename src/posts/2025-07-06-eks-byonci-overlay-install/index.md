@@ -14,9 +14,9 @@ tags:
 
 ![](cover.png)
 
-_July 6th, 2025_
+##### July 6th, 2025
 
-_Author: Paul Arah, Isovalent@Cisco_
+##### Author: Paul Arah, Isovalent@Cisco
 
 ## Installing Cilium on EKS in Overlay(BYOCNI) and CNI Chaining Mode
 
@@ -129,7 +129,7 @@ eksctl create nodegroup -f nodegroup.yaml
 
 - Afterwards, we can check the status of the nodes to ensure that they are in a ready state.
 
-```shell
+````shell
 kubectl get nodes
 
 
@@ -139,7 +139,7 @@ ip-192-168-128-147.eu-west-2.compute.internal   Ready    <none>   3h25m   v1.30.
 
 - Validate health check: cilium-health is a tool available in Cilium that provides visibility into the overall health of the cluster’s networking and connectivity. You can check node-to-node health with cilium-health status:
 
-```
+```shell
 
 kubectl -n kube-system exec ds/cilium -- cilium status
 
@@ -167,7 +167,7 @@ addonsConfig:
   disableDefaultAddons: true
 addons:
   - name: coredns
-````
+```
 
 Notice this time our cluster config file doesn’t include the AWS VPC CNI or kube-proxy add-on.
 
