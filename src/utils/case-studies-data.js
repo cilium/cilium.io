@@ -657,6 +657,11 @@ export default {
         linkUrl: 'https://www.youtube.com/watch?v=YNDp7Id7Bbs',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://cilium.io/blog/2025/04/15/tetragon-social-networking-user-story/',
+        linkTarget: '_blank',
+      },
     ],
   },
 
