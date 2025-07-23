@@ -5,15 +5,20 @@ import Link from 'components/shared/link';
 
 import ChevronIcon from './images/chevron.inline.svg';
 
-const MenuItem = ({ name, href, target, childItems }) => {
+const MenuItem = ({ name, href, target, childItems, isThemeToggle }) => {
   const Tag = href ? Link : 'div';
+
+  if (isThemeToggle) {
+    return null;
+  }
+
   return (
     <li className="group relative">
       <Tag
         to={href}
         target={target || null}
         rel={target ? 'noopener noreferrer' : null}
-        className="inline-flex items-center whitespace-nowrap text-sm font-bold leading-none transition-colors duration-200 hover:cursor-pointer hover:text-primary-1 xl:text-base"
+        className="inline-flex items-center whitespace-nowrap text-sm font-bold leading-none transition-colors duration-200 hover:cursor-pointer dark:text-gray-2 text-black hover:text-primary-1 dark:hover:text-gray-4 xl:text-base"
       >
         <span>{name}</span>
         {childItems && <ChevronIcon className="ml-1.5 shrink-0" />}
@@ -44,6 +49,7 @@ MenuItem.propTypes = {
   name: PropTypes.string.isRequired,
   href: PropTypes.string,
   target: PropTypes.string,
+  isThemeToggle: PropTypes.bool,
   childItems: PropTypes.arrayOf(
     PropTypes.exact({
       name: PropTypes.string.isRequired,
@@ -57,6 +63,7 @@ MenuItem.propTypes = {
 MenuItem.defaultProps = {
   href: null,
   target: null,
+  isThemeToggle: false,
   childItems: null,
 };
 

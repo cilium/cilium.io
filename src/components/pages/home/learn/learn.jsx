@@ -37,9 +37,9 @@ const Learn = () => {
   `);
 
   return (
-    <section className="mt-10 md:mt-20 lg:mt-32">
+    <section className="pt-10 md:pt-20 lg:pt-32 bg-white dark:bg-[#0f1d3e]">
       <Container>
-        <Heading tag="h2" className="text-center">
+        <Heading tag="h2" className="text-center dark:text-gray-3 text-black">
           {title}
         </Heading>
         <div className="mt-6 grid grid-cols-1 gap-8 md:mt-8 lg:mt-16 lg:grid-cols-2 lg:grid-rows-4">

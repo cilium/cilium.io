@@ -44,8 +44,8 @@ const userCommunity = {
 };
 
 const LearnPage = () => (
-  <MainLayout pageMetadata={seo} theme="gray">
-    <Hero className="pt-5 pb-10 md:pt-16 md:pb-20 lg:pb-[138px]" theme="gray" {...hero} />
+  <MainLayout pageMetadata={seo}>
+    <Hero className="pt-5 pb-10 md:pt-16 md:pb-20 lg:pb-[138px]" {...hero} />
     <Highlights />
     <Architecture />
     <HandsOn />
@@ -54,12 +54,11 @@ const LearnPage = () => (
     <RelatedProjects />
     <UserCommunity
       className="py-10 mt-10 md:py-20 lg:py-32 md:mt-20 lg:mt-32"
-      theme="gray"
       isTitleCentered
       {...userCommunity}
     />
     <News />
-    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
+    <Community className="mt-10 md:mt-20 lg:mt-32" isTitleCentered />
   </MainLayout>
 );
 

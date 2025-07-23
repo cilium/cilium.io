@@ -5,7 +5,8 @@ import React from 'react';
 import Button from 'components/shared/button';
 import Search from 'components/shared/search';
 import SlackIcon from 'icons/slack.inline.svg';
-import Logo from 'images/logo.inline.svg';
+import DarkLogo from 'images/logo.inline.svg';
+import LightLogo from 'images/white-logo.inline.svg';
 import algoliaQueries from 'utils/algolia-queries';
 
 import Container from '../container';
@@ -20,25 +21,20 @@ const searchIndices = [
   { name: algoliaQueries[0].indexName, title: 'Blog Posts', hitComp: 'postPageHit' },
 ];
 
-const themeClassNames = {
-  white: 'bg-white',
-  gray: 'bg-gray-4',
-};
-
 const Header = ({
   withSearch,
   isMobileMenuOpen,
   handleCloseClick,
   navigation,
-  theme,
+  isDarkMode,
   handleOverlay,
+  toggleTheme,
 }) => (
   <div className="relative z-20">
     <header
       className={classNames(
-        'py-5 transition-[background] duration-200',
-        themeClassNames[theme],
-        isMobileMenuOpen && themeClassNames.white
+        'py-5 transition-[background] duration-200 bg-gray-4 dark:bg-gray-900 ',
+        isMobileMenuOpen && 'bg-white dark:bg-gray-900'
       )}
     >
       <Container size="lg">
@@ -46,22 +42,22 @@ const Header = ({
           className="relative flex items-center justify-between w-full space-x-6 sm:h-10"
           aria-label="Global"
         >
-          <div className="flex w-full shrink-0 items-center justify-between [@media(min-width:1100px)]:w-auto">
+          <div className="flex w-full shrink-0 items-center justify-between [@media(min-width:1210px)]:w-auto">
             <div className="flex items-center">
               <Link to="/">
                 <span className="sr-only">Cilium</span>
-                <Logo />
+                {isDarkMode ? <LightLogo /> : <DarkLogo />}
               </Link>
-              <div className="hidden items-center [@media(min-width:1100px)]:inline-flex">
+              <div className="hidden items-center [@media(min-width:1210px)]:inline-flex">
                 <GithubStars
                   className={classNames(
-                    'ml-4 bg-white lg:ml-8',
+                    'ml-4 bg-white dark:bg-gray-800 lg:ml-8',
                     withSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                   )}
                 />
                 <Button
                   className={classNames(
-                    'ml-4 items-center bg-white leading-none ',
+                    'ml-4 items-center bg-white dark:bg-gray-800 leading-none',
                     withSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                   )}
                   to="https://slack.cilium.io"
@@ -73,8 +69,8 @@ const Header = ({
                   <SlackIcon className="w-4 h-4" />
                   <span
                     className={classNames(
-                      'hidden lg:ml-1.5',
-                      withSearch ? '2xl:block' : 'xl:block'
+                      'hidden lg:ml-1.5 dark:text-gray-2 text-black',
+                      withSearch ? '2xl:block' : '2xl:block'
                     )}
                   >
                     Join Slack
@@ -82,22 +78,38 @@ const Header = ({
                 </Button>
               </div>
             </div>
-            <div className="flex items-center [@media(min-width:1100px)]:hidden space-x-6">
+            <div className="flex items-center [@media(min-width:1210px)]:hidden space-x-6">
               {withSearch && !isMobileMenuOpen && <Search indices={searchIndices} />}
               <Burger isToggled={isMobileMenuOpen} onClick={handleCloseClick} />
             </div>
           </div>
-          <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1100px)]:flex">
+          <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1210px)]:flex">
             {withSearch && (
               <Search
-                buttonClassName="rounded h-8 w-8 border border-gray-2 p-[7px]"
+                buttonClassName="rounded h-8 w-8 border border-gray-2 dark:border-gray-600 p-[7px]"
                 indices={searchIndices}
               />
             )}
             <ul className="flex items-center lg:space-x-6 2xl:space-x-11">
-              {navigation.map((item, index) => (
-                <MenuItem {...item} key={index} />
-              ))}
+              {navigation.map((item, index) => {
+                if (item.isThemeToggle) {
+                  const ThemeIcon = item.name;
+                  return (
+                    <li key={index}>
+                      <button
+                        type="button"
+                        className="flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-800 theme-toggle"
+                        aria-label="Toggle theme"
+                        onClick={item.onClick}
+                      >
+                        <ThemeIcon className="h-5 w-5" />
+                      </button>
+                    </li>
+                  );
+                }
+
+                return <MenuItem {...item} key={index} />;
+              })}
             </ul>
           </div>
         </nav>
@@ -108,6 +120,7 @@ const Header = ({
       isOpen={isMobileMenuOpen}
       handleOverlay={handleOverlay}
       handleCloseClick={handleCloseClick}
+      toggleTheme={toggleTheme}
     />
   </div>
 );
@@ -115,14 +128,16 @@ const Header = ({
 Header.propTypes = {
   handleOverlay: PropTypes.func.isRequired,
   withSearch: PropTypes.bool,
-  theme: PropTypes.oneOf(Object.keys(themeClassNames)),
+  isDarkMode: PropTypes.bool,
   isMobileMenuOpen: PropTypes.bool.isRequired,
   handleCloseClick: PropTypes.func.isRequired,
+  toggleTheme: PropTypes.func.isRequired,
   navigation: PropTypes.arrayOf(
     PropTypes.exact({
       name: PropTypes.string.isRequired,
       href: PropTypes.string,
       target: PropTypes.string,
+      isThemeToggle: PropTypes.bool,
       childItems: PropTypes.arrayOf(
         PropTypes.exact({
           name: PropTypes.string.isRequired,
@@ -137,6 +152,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   withSearch: false,
-  theme: 'white',
+  isDarkMode: false,
 };
+
 export default Header;

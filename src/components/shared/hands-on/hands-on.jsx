@@ -64,9 +64,9 @@ const HandsOn = () => {
   ];
 
   return (
-    <section className="mt-10 md:mt-20 lg:mt-32">
+    <section className="pt-10 md:pt-20 lg:pt-32 bg-white dark:bg-[#0f1d3e]">
       <Container>
-        <Heading className="text-center" tag="h2">
+        <Heading className="text-center dark:text-gray-3 text-black" tag="h2">
           {title}
         </Heading>
         <ul className="grid mt-6 gap-y-8 md:mt-10 md:grid-cols-2 md:gap-x-8 lg:mt-14">

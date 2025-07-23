@@ -141,14 +141,14 @@ const list = [
 ];
 
 const Highlights = () => (
-  <section className="mt-10 md:mt-20 lg:mt-32" id="use-cases">
+  <section className="pt-10 md:pt-20 lg:pt-32 bg-white dark:bg-[#0f1d3e]" id="use-cases">
     <Container>
-      <Heading className="text-center" tag="h2">
+      <Heading className="text-center dark:text-gray-3 text-black" tag="h2">
         {title}
       </Heading>
       {list.map(({ title, items }, index) => (
         <div key={index} id={title.toLowerCase()}>
-          <Heading className="pb-10 pt-14 md:pt-20" tag="h2" size="sm">
+          <Heading className="pb-10 pt-14 md:pt-20 dark:text-gray-3 text-black" tag="h2" size="sm">
             {title}
           </Heading>
           <ul className="grid grid-cols-1 gap-6 md:auto-rows-fr md:grid-cols-2 md:gap-8 lg:grid lg:auto-rows-fr lg:grid-cols-3">

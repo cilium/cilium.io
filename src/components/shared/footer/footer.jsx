@@ -3,7 +3,8 @@ import React from 'react';
 
 import Container from 'components/shared/container';
 import Link from 'components/shared/link';
-import Logo from 'images/logo.inline.svg';
+import DarkLogo from 'images/logo.inline.svg';
+import LightLogo from 'images/white-logo.inline.svg';
 
 const navigation = [
   [
@@ -20,16 +21,20 @@ const navigation = [
   ],
 ];
 
-const Footer = ({ withTopBorder }) => (
-  <footer className={withTopBorder ? 'border-t border-gray-3' : null}>
+const Footer = ({ withTopBorder, isDarkMode }) => (
+  <footer
+    className={`bg-white dark:bg-[#0f1d3e] ${withTopBorder ? 'border-t border-gray-3 dark:border-gray-600' : null}`}
+  >
     <Container className="pt-10 pb-8 lg:pt-14 lg:pb-9">
       <div className="grid grid-cols-3 gap-y-10 xs:gap-x-8 lg:grid-cols-12 lg:gap-y-0">
         <div className="col-span-full flex flex-col items-start xs:col-span-5">
           <Link to="/">
             <span className="sr-only">Cilium</span>
-            <Logo className="col-span-1 lg:col-span-1" />
+            <div className="col-span-1 lg:col-span-1">
+              {isDarkMode ? <LightLogo /> : <DarkLogo />}
+            </div>
           </Link>
-          <span className="with-link-primary-medium mt-6 text-sm leading-none">
+          <span className="with-link-primary-medium mt-6 text-sm leading-none text-black dark:text-gray-2">
             Cilium was originally created by{' '}
             <a className="" href="https://isovalent.com/" target="_blank" rel="noopener noreferrer">
               Isovalent
@@ -42,7 +47,7 @@ const Footer = ({ withTopBorder }) => (
               {menu.map(({ name, href, target }) => (
                 <li className="inline leading-none" key={name}>
                   <Link
-                    theme="black"
+                    className="dark:text-[#579dd6] text-black "
                     type="text"
                     to={href}
                     target={target || null}
@@ -56,7 +61,7 @@ const Footer = ({ withTopBorder }) => (
           ))}
         </div>
       </div>
-      <div className="with-link-primary-light mt-8 space-y-3 border-t border-gray-3 pt-8 text-sm text-gray-1 md:mt-10 lg:mt-12">
+      <div className="with-link-primary-light mt-8 space-y-3 border-t border-gray-3 dark:border-gray-600 pt-8 text-sm text-gray-1 dark:text-gray-2 dark:bg-[#0f1d3e] md:mt-10 lg:mt-12">
         <p>© {new Date().getFullYear()} The Cilium Authors.</p>
         <p>
           The content of the{' '}
@@ -105,10 +110,12 @@ const Footer = ({ withTopBorder }) => (
 
 Footer.propTypes = {
   withTopBorder: PropTypes.bool,
+  isDarkMode: PropTypes.bool,
 };
 
 Footer.defaultProps = {
   withTopBorder: false,
+  isDarkMode: false,
 };
 
 export default Footer;
