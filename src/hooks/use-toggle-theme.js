@@ -1,4 +1,4 @@
-const useThemeToggle = () => {
+const useToggleTheme = () => {
   const toggleTheme = () => {
     const isCurrentlyDark = document.documentElement.classList.contains('dark');
     const newTheme = !isCurrentlyDark;
@@ -15,4 +15,4 @@ const useThemeToggle = () => {
   return toggleTheme;
 };
 
-export default useThemeToggle;
+export default useToggleTheme;

@@ -3,7 +3,7 @@ import { m, LazyMotion, domAnimation, useAnimation } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-import useThemeToggle from 'hooks/use-toggle-theme';
+import useToggleTheme from 'hooks/use-toggle-theme';
 import SlackIcon from 'icons/slack.inline.svg';
 
 import Button from '../button';
@@ -54,7 +54,7 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, handleCloseClick }) => 
     }
   }, [isOpen, controls]);
 
-  const toggleTheme = useThemeToggle();
+  const toggleTheme = useToggleTheme();
 
   return (
     <LazyMotion features={domAnimation}>

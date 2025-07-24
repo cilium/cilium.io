@@ -5,7 +5,7 @@ import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
 import TopBanner from 'components/shared/top-banner';
 import useDarkMode from 'hooks/use-dark-mode';
-import useThemeToggle from 'hooks/use-toggle-theme';
+import useToggleTheme from 'hooks/use-toggle-theme';
 import AdoptersIcon from 'icons/adopters.inline.svg';
 import BlogIcon from 'icons/blog.inline.svg';
 import BrandingIcon from 'icons/branding.inline.svg';
@@ -21,7 +21,7 @@ import LightThemeIcon from 'icons/sun.inline.svg';
 const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleTheme = useThemeToggle();
+  const toggleTheme = useToggleTheme();
   const isDarkMode = useDarkMode();
 
   const navigation = [
