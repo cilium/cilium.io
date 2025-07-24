@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import FeaturedTalks from 'components/pages/home/featured-talks';
 import Hero from 'components/pages/home/hero';
@@ -41,52 +41,22 @@ const talks = [
   },
 ];
 
-const IndexPage = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add('dark');
-    } else {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove('dark');
-    }
-  }, []);
-
-  const toggleTheme = () => {
-    const newTheme = !isDarkMode;
-    setIsDarkMode(newTheme);
-
-    if (newTheme) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-    }
-  };
-
-  return (
-    <MainLayout isDarkMode={isDarkMode} toggleTheme={toggleTheme}>
-      <Hero />
-      <UserCommunity
-        className="pt-8 pb-10 md:pb-20 lg:pb-32 bg-gray-4 dark:bg-gray-900"
-        {...userCommunity}
-      />
-      <Highlights />
-      <CNCFBanner isDarkMode={isDarkMode} />
-      <HandsOn />
-      <InProduction />
-      <FeaturedTalks talks={talks} />
-      <Learn />
-      <Community className="pt-10 md:pt-20 lg:pt-32" isTitleCentered />
-    </MainLayout>
-  );
-};
+const IndexPage = () => (
+  <MainLayout>
+    <Hero />
+    <UserCommunity
+      className="pt-8 pb-10 md:pb-20 lg:pb-32 bg-gray-4 dark:bg-gray-900"
+      {...userCommunity}
+    />
+    <Highlights />
+    <CNCFBanner />
+    <HandsOn />
+    <InProduction />
+    <FeaturedTalks talks={talks} />
+    <Learn />
+    <Community className="pt-10 md:pt-20 lg:pt-32" isTitleCentered />
+  </MainLayout>
+);
 
 export default IndexPage;
 

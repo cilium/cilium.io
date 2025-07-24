@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import Footer from 'components/shared/footer';
 import Header from 'components/shared/header';
 import TopBanner from 'components/shared/top-banner';
+import useDarkMode from 'hooks/use-dark-mode';
+import useThemeToggle from 'hooks/use-toggle-theme';
 import AdoptersIcon from 'icons/adopters.inline.svg';
 import BlogIcon from 'icons/blog.inline.svg';
 import BrandingIcon from 'icons/branding.inline.svg';
@@ -16,14 +18,11 @@ import DarkThemeIcon from 'icons/moon.inline.svg';
 import NewsletterIcon from 'icons/newsletter.inline.svg';
 import LightThemeIcon from 'icons/sun.inline.svg';
 
-const MainLayout = ({
-  children,
-  headerWithSearch,
-  footerWithTopBorder,
-  isDarkMode,
-  toggleTheme,
-}) => {
+const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleTheme = useThemeToggle();
+  const isDarkMode = useDarkMode();
 
   const navigation = [
     { name: 'Users', href: '/adopters' },
@@ -98,7 +97,7 @@ const MainLayout = ({
   const handleOverlay = () => setIsMobileMenuOpen(false);
 
   return (
-    <div className={isDarkMode ? 'dark' : ''}>
+    <div className="bg-gray-4 dark:bg-gray-900">
       <TopBanner
         text="Join us KubeCon NA and CiliumCon 2025"
         url="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/ciliumcon/"
@@ -107,27 +106,22 @@ const MainLayout = ({
         navigation={navigation}
         withSearch={headerWithSearch}
         isMobileMenuOpen={isMobileMenuOpen}
-        isDarkMode={isDarkMode}
         handleOverlay={handleOverlay}
         handleCloseClick={handleCloseClick}
-        toggleTheme={toggleTheme}
       />
       <main className="transition-colors duration-200">{children}</main>
-      <Footer withTopBorder={footerWithTopBorder} isDarkMode={isDarkMode} />
+      <Footer withTopBorder={footerWithTopBorder} />
     </div>
   );
 };
 
 MainLayout.propTypes = {
   children: PropTypes.node.isRequired,
-  isDarkMode: PropTypes.bool,
-  toggleTheme: PropTypes.func.isRequired,
   headerWithSearch: PropTypes.bool,
   footerWithTopBorder: PropTypes.bool,
 };
 
 MainLayout.defaultProps = {
-  isDarkMode: false,
   headerWithSearch: false,
   footerWithTopBorder: false,
 };

@@ -367,11 +367,12 @@ const UserCommunity = ({
   id,
 }) => (
   <section className={classNames(className)} id={id}>
-    <Container className="flex flex-col">
+    <Container className="flex flex-col overflow-x-hidden">
       {title && (
         <Link
           className={classNames(
-            isTitleCentered && 'mb-6 self-center text-center md:mb-10 lg:mb-16'
+            isTitleCentered &&
+              'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
           )}
           to={`#${id}`}
         >
