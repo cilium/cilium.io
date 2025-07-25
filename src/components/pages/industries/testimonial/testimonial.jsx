@@ -60,15 +60,15 @@ const AdopterTestimonial = ({
 
   return (
     <Container className={className}>
-      <div className="rounded-xl bg-white px-6 py-8 shadow-primary">
-        <div className="grid grid-cols-12 gap-4 divide-y divide-gray-3 md:gap-6 lg:gap-8 lg:divide-x lg:divide-y-0">
+      <div className="rounded-xl bg-white dark:bg-gray-2 px-6 py-8 shadow-primary">
+        <div className="grid grid-cols-12 gap-4 divide-y divide-gray-3 dark:divide-gray-600 md:gap-6 lg:gap-8 lg:divide-x lg:divide-y-0">
           <figure className="col-span-12 flex flex-col items-center justify-between gap-y-6 text-center lg:col-span-8">
             <QuoteIcon className="inline-block w-4 lg:w-4" />
             <blockquote className="flex-1 text-lg">{quotedText}</blockquote>
             {withPerson && (
               <figcaption>
                 <span className="text-sm font-bold">{name}</span> —{' '}
-                <span className="text-sm text-gray-1">{role}</span>
+                <span className="text-sm text-gray-1 dark:text-[#485163]">{role}</span>
               </figcaption>
             )}
           </figure>

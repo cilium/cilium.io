@@ -5,17 +5,18 @@ import React from 'react';
 import Container from 'components/shared/container/container';
 import Heading from 'components/shared/heading';
 
-const FeaturedTalks = ({ heading, talks, className, useDefaultBg = true }) => (
+const FeaturedTalks = ({ heading, talks, className }) => (
   <div
-    className={classNames('featured-talks py-10 md:py-20 lg:py-32', className, {
-      'bg-[#F6F7F8]': useDefaultBg,
-    })}
+    className={classNames(
+      'featured-talks py-10 md:py-20 lg:py-32 bg-white dark:bg-[#0f1d3e]',
+      className
+    )}
   >
     <Container>
-      <Heading tag="h2" className="text-center">
+      <Heading tag="h2" className="text-center dark:text-white text-black">
         {heading}
       </Heading>
-      <div className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:grid-cols-3 md:gap-6 lg:mt-14 lg:gap-8">
+      <div className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:grid-cols-3 md:gap-6 lg:mt-14 lg:gap-8 ">
         {talks.map(({ title, description, videoSrc }, index) => (
           <div key={index} className="basis-1/3">
             <iframe
@@ -25,10 +26,14 @@ const FeaturedTalks = ({ heading, talks, className, useDefaultBg = true }) => (
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
-            <Heading className="mt-3 !text-xl md:mt-5" tag="h3" size="xs">
+            <Heading
+              className="mt-3 !text-xl md:mt-5 dark:text-gray-3 text-black"
+              tag="h3"
+              size="xs"
+            >
               {title}
             </Heading>
-            <p className="mt-2">{description}</p>
+            <p className="mt-2 dark:text-gray-2 text-black">{description}</p>
           </div>
         ))}
       </div>
@@ -39,7 +44,6 @@ const FeaturedTalks = ({ heading, talks, className, useDefaultBg = true }) => (
 FeaturedTalks.propTypes = {
   heading: PropTypes.string,
   className: PropTypes.string,
-  useDefaultBg: PropTypes.bool.isRequired,
   talks: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,

@@ -8,7 +8,7 @@ import Card from './card';
 
 const IndustryUseCases = ({ heading, usecases }) => (
   <Container className="mt-10 md:mt-20 lg:mt-32">
-    <Heading tag="h2" className="text-center">
+    <Heading tag="h2" className="text-center dark:text-white text-black">
       {heading}
     </Heading>
     <div className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:grid-cols-3 md:gap-6 lg:mt-14 lg:gap-8">

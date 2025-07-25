@@ -15,14 +15,20 @@ const BulletSection = ({
   imageStyle,
   withBackground,
 }) => (
-  <section className={classNames(withBackground && 'bg-gray-4')}>
+  <section className={classNames(withBackground && 'bg-gray-4 ')}>
     <Container className={classNames('grid grid-cols-12 gap-y-6 gap-x-6 xl:gap-x-8', className)}>
       <div className={classNames('col-span-full lg:col-span-6')}>
-        <Heading className="mb-5 leading-tight" tag="h2" size="sm">
+        <Heading className="mb-5 leading-tight dark:text-white text-black" tag="h2" size="sm">
           {heading}
         </Heading>
         {paragraphs.map((paragraph, index) => (
-          <p key={index} className={classNames(index < paragraphs.length - 1 && 'mb-4')}>
+          <p
+            key={index}
+            className={classNames(
+              'dark:text-gray-2 text-black',
+              index < paragraphs.length - 1 && 'mb-4'
+            )}
+          >
             {paragraph}
           </p>
         ))}

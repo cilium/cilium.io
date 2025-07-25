@@ -37,7 +37,8 @@ const items = [
     description:
       'Quickly get started with Cilium in our interactive tutorials with a live environment.',
     buttonText: 'Explore Tutorials',
-    buttonLink: 'https://isovalent.com/resource-library/labs/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab',
+    buttonLink:
+      'https://isovalent.com/resource-library/labs/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab',
     buttonTarget: '_blank',
   },
   {
@@ -46,7 +47,8 @@ const items = [
     description:
       'Build your Kubernetes networking skills with the Cilium Certified Associate (CCA) course! Become a networking powerhouse with this comprehensive hands-on course and labs to master Cilium.',
     buttonText: 'Get Started',
-    buttonLink: 'https://kodekloud.com/courses/cilium-certified-associate-cca?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab',
+    buttonLink:
+      'https://kodekloud.com/courses/cilium-certified-associate-cca?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab',
     buttonTarget: '_blank',
   },
   {
@@ -77,9 +79,9 @@ const promo = {
 };
 
 const Training = () => (
-  <section className="py-16 md:py-20 lg:py-28" id="trainings">
+  <section className="py-16 md:py-20 lg:py-28 " id="trainings">
     <Container>
-      <Heading className="text-center" tag="h2">
+      <Heading className="text-center dark:text-gray-3 text-black" tag="h2">
         {title}
       </Heading>
       <p
@@ -96,7 +98,7 @@ const Training = () => (
 
             return (
               <div
-                className="flex flex-col items-start rounded-xl bg-white p-4 shadow-card sm:p-6 md:p-8"
+                className="flex flex-col items-start rounded-xl bg-white dark:bg-gray-2 p-4 shadow-card sm:p-6 md:p-8"
                 key={index}
               >
                 <Logo className="h-9" />
