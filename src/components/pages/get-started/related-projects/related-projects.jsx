@@ -72,7 +72,7 @@ const RelatedProjects = () => {
   return (
     <section className="mt-10 md:mt-20 lg:mt-32">
       <Container>
-        <Heading className="text-center" tag="h2">
+        <Heading className="text-center text-black dark:text-white" tag="h2">
           {title}
         </Heading>
         <div className="grid grid-cols-1 gap-6 mt-6 gap-y-10 md:mt-10 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:mt-14 lg:grid-cols-3">
@@ -87,10 +87,13 @@ const RelatedProjects = () => {
                   alt=""
                   loading="lazy"
                 />
-                <Heading className="mt-7" tag="h3" size="xs">
+                <Heading className="mt-7 text-black dark:text-white" tag="h3" size="xs">
                   {title}
                 </Heading>
-                <p className="mt-5 md:max-w-[542px]" dangerouslySetInnerHTML={{ __html: text }} />
+                <p
+                  className="mt-5 md:max-w-[542px] dark:text-gray-2 text-black"
+                  dangerouslySetInnerHTML={{ __html: text }}
+                />
                 <Link
                   className="mt-5"
                   type="arrow"

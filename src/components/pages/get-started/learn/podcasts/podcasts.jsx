@@ -52,7 +52,9 @@ const Podcasts = ({ className }) => (
           >
             <PlayIcon className="shrink-0" />
             <div className="flex flex-col lg:pt-1.5">
-              <span className="text-lg font-medium leading-relaxed lg:text-xl ">{name}</span>
+              <span className="text-lg font-medium leading-relaxed lg:text-xl text-black dark:text-white">
+                {name}
+              </span>
               <span className="mt-2 text-sm font-medium leading-none text-gray-1">{type}</span>
             </div>
           </Link>

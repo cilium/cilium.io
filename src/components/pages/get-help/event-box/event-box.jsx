@@ -60,8 +60,10 @@ const EventBox = () => (
         </div>
       </div>
       <div className="col-span-full lg:col-span-6 lg:pl-8 xl:col-start-8 xl:col-end-13 xl:pl-0">
-        <Heading tag="h2">{title}</Heading>
-        <p className="mt-5">{description}</p>
+        <Heading tag="h2" className="text-black dark:text-white">
+          {title}
+        </Heading>
+        <p className="mt-5 dark:text-gray-2 text-black">{description}</p>
         <Button className="mt-5" theme="primary-1" to={buttonUrl}>
           {buttonText}
         </Button>

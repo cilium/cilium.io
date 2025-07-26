@@ -25,10 +25,12 @@ const LabsPage = (props) => {
     <MainLayout>
       <section className="relative mt-6 mb-10 md:mt-10 md:mb-16 lg:mt-16 lg:mb-24 xl:mb-32">
         <Container className="text-center">
-          <Heading tag="h1" size="lg">
+          <Heading tag="h1" size="lg" className="text-black dark:text-white">
             {data.title}
           </Heading>
-          <p className="mt-4 w-full text-center text-lg text-black">{data.description}</p>
+          <p className="mt-4 w-full text-center text-lg dark:text-gray-2 text-black ">
+            {data.description}
+          </p>
           <Tabs
             id="categories"
             defaultTabTitle="All labs"

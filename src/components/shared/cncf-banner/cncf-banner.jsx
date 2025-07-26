@@ -17,7 +17,7 @@ const CNCFBanner = ({ className }) => {
 
   return (
     <section
-      className={classNames('pt-10 md:pt-20 lg:pt-32 bg-white dark:bg-[#0f1d3e]', className)}
+      className={classNames('pt-10 md:pt-20 py-10 lg:pt-32 bg-white dark:bg-[#0f1d3e]', className)}
     >
       <Container>
         <div className="flex flex-col items-center justify-between bg-gray-4 dark:bg-gray-900 p-10 rounded-lg md:flex-row lg:p-16 lg:pr-24 overflow-hidden">

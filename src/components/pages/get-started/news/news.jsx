@@ -21,7 +21,8 @@ const featuredBlogs = {
       linkText: 'Cilium joins the CNCF',
     },
     {
-      linkUrl: 'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
+      linkUrl:
+        'https://isovalent.com/blog/post/2021-09-aws-eks-anywhere-chooses-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
       linkText: 'AWS picks Cilium for Networking & Security on EKS Anywhere',
       linkTarget: '_blank',
     },
@@ -31,7 +32,7 @@ const featuredBlogs = {
 const InstallDeploy = () => (
   <section className="mt-10 md:mt-20 lg:mt-32">
     <Container>
-      <Heading className="text-center" tag="h2">
+      <Heading className="text-center text-black dark:text-white" tag="h2">
         {title}
       </Heading>
       <div className="grid grid-cols-1 mt-8 gap-x-8 gap-y-8 md:mt-12 md:grid-cols-12 md:gap-y-12 lg:mt-16 lg:gap-y-16">

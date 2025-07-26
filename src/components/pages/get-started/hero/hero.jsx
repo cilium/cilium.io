@@ -5,11 +5,6 @@ import React from 'react';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
-const themeClassNames = {
-  white: 'bg-white',
-  gray: 'bg-gray-4',
-};
-
 const sizeClassName = {
   md: {
     content: 'lg:max-w-[488px]',
@@ -22,17 +17,24 @@ const sizeClassName = {
   },
 };
 
-const Hero = ({ className, title, description, theme, size }) => (
+const Hero = ({ className, title, description, size }) => (
   <section
-    className={classNames('overflow-hidden lg:overflow-visible', className, themeClassNames[theme])}
+    className={classNames(
+      'overflow-hidden lg:overflow-visible bg-gray-4 dark:bg-gray-900 ',
+      className
+    )}
   >
     <Container className="grid gap-y-6 lg:grid-cols-2 xl:gap-x-8">
       <div className={classNames('flex-1', sizeClassName[size].content)}>
-        <Heading className="leading-tight lg:leading-tight xl:leading-tight" tag="h1" size="lg">
+        <Heading
+          className="leading-tight lg:leading-tight xl:leading-tight text-black dark:text-white"
+          tag="h1"
+          size="lg"
+        >
           {title}
         </Heading>
         <div
-          className="text-md with-link-primary mt-5 space-y-5 leading-relaxed md:text-lg md:leading-relaxed lg:max-w-[503px]"
+          className="text-md with-link-primary mt-5 space-y-5 leading-relaxed md:text-lg md:leading-relaxed lg:max-w-[503px] dark:text-gray-2 text-black"
           dangerouslySetInnerHTML={{ __html: description }}
         />
       </div>
@@ -54,13 +56,11 @@ Hero.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  theme: PropTypes.oneOf(Object.keys(themeClassNames)),
   size: PropTypes.oneOf(Object.keys(sizeClassName)),
 };
 
 Hero.defaultProps = {
   className: null,
-  theme: 'white',
   size: 'md',
 };
 
