@@ -21,7 +21,7 @@ export default connectSearchBox(
           Search Input
         </label>
         <input
-          className="max-h-10 w-full appearance-none bg-search-icon bg-[center_left_1.5rem] bg-no-repeat py-2 pl-14 leading-none transition-[width,colors] focus-visible:outline-none sm:max-h-8 text-16 pr-6 placeholder:text-gray-2"
+          className="max-h-10 w-full appearance-none bg-search-icon bg-[center_left_1.5rem] bg-no-repeat py-2 pl-14 leading-none transition-[width,colors] focus-visible:outline-none sm:max-h-8 text-16 pr-6 placeholder:text-gray-2 dark:bg-[#dfe5ed]"
           aria-label="Search"
           type="search"
           value={searchQuery}

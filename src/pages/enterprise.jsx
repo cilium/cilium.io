@@ -20,12 +20,7 @@ const EnterprisePage = () => {
 
   return (
     <MainLayout pageMetadata={seo} theme="gray">
-      <Hero
-        className="pt-5 pb-10 md:pt-24 md:pb-20 lg:pb-[70px]"
-        theme="gray"
-        size="lg"
-        {...hero}
-      />
+      <Hero className="pt-5 pb-10 md:pt-24 md:pb-20 lg:pb-[70px]" size="lg" {...hero} />
       <Distributions />
       <Training />
       <Community theme="gray" isTitleCentered />

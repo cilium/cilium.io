@@ -28,16 +28,16 @@ const items = [
 const BrandFeatures = () => (
   <section className="mt-16 md:mt-24 lg:mt-32">
     <Container>
-      <Heading className="text-center" tag="h2" size="lg">
+      <Heading className="text-center text-black dark:text-white" tag="h2" size="lg">
         {title}
       </Heading>
-      <p className="mx-auto mt-4 max-w-[632px] text-center text-base leading-relaxed lg:text-lg">
+      <p className="mx-auto mt-4 max-w-[632px] text-center text-black dark:text-gray-2 text-base leading-relaxed lg:text-lg">
         {description}
       </p>
       <ul className="gap-grid mt-8 grid grid-cols-12 gap-y-6 lg:mt-12">
         {items.map(({ title, description, icon }, index) => (
           <li
-            className="col-span-full rounded-xl p-5 pt-2 shadow-[0px_1px_8px_0px_rgba(20,26,31,0.20)] md:col-span-6 lg:px-8 lg:pt-3 lg:pb-8"
+            className="col-span-full rounded-xl p-5 pt-2 shadow-[0px_1px_8px_0px_rgba(20,26,31,0.20)] md:col-span-6 lg:px-8 lg:pt-3 lg:pb-8 bg-white dark:bg-[#0f1d3e]"
             key={index}
           >
             <img
@@ -48,8 +48,12 @@ const BrandFeatures = () => (
               height={261}
               loading="lazy"
             />
-            <h3 className="mt-3 text-xl font-bold leading-snug lg:text-2xl">{title}</h3>
-            <p className="mt-2.5 text-base lg:text-lg lg:leading-relaxed">{description}</p>
+            <h3 className="mt-3 text-xl font-bold leading-snug lg:text-2xl text-black dark:text-white">
+              {title}
+            </h3>
+            <p className="mt-2.5 text-base lg:text-lg lg:leading-relaxed dark:text-gray-2 text-black">
+              {description}
+            </p>
           </li>
         ))}
       </ul>

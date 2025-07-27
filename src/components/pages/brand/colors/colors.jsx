@@ -12,11 +12,11 @@ const Colors = ({ title, description, linkUrl = null, colors }) => (
     <Container>
       <header className="flex flex-col items-start justify-between gap-y-5 border-b border-gray-3 pb-10 lg:flex-row">
         <div className="flex flex-col gap-y-3">
-          <Heading tag="h2" size="md">
+          <Heading tag="h2" size="md" className="text-black dark:text-white">
             {title}
           </Heading>
           <p
-            className="max-w-full sm:max-w-[520px] [&>br]:hidden sm:[&>br]:block"
+            className="max-w-full sm:max-w-[520px] [&>br]:hidden sm:[&>br]:block dark:text-gray-2 text-black"
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </div>
@@ -64,6 +64,10 @@ Colors.propTypes = {
       })
     ),
   }).isRequired,
+};
+
+Colors.defaultProps = {
+  linkUrl: null,
 };
 
 export default Colors;

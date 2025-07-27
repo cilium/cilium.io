@@ -27,7 +27,7 @@ const Footer = ({ withTopBorder }) => {
 
   return (
     <footer
-      className={`bg-white dark:bg-[#0f1d3e] ${withTopBorder ? 'border-t border-gray-3 dark:border-gray-600' : null}`}
+      className={`bg-white dark:bg-[#0f1d3e] ${withTopBorder ? 'border-t border-gray-3 dark:border-gray-1' : null}`}
     >
       <Container className="pt-10 pb-8 lg:pt-14 lg:pb-9">
         <div className="grid grid-cols-3 gap-y-10 xs:gap-x-8 lg:grid-cols-12 lg:gap-y-0">

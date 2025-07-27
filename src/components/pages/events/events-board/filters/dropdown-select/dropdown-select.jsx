@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import React, { useRef, useState } from 'react';
 
 import useClickOutside from 'hooks/use-click-outside';
+import useDarkMode from 'hooks/use-dark-mode';
 import ChevronIcon from 'icons/chevron.inline.svg';
+import LightChevronIcon from 'icons/light-chevron.inline.svg';
 
 import Checkbox from './checkbox';
+
 
 const DropdownSelect = ({ name, items, values, onSelect, isSelected, className }) => {
   const dropdownRef = useRef(null);
@@ -30,11 +33,18 @@ const DropdownSelect = ({ name, items, values, onSelect, isSelected, className }
 
   useClickOutside([dropdownRef, buttonRef], handleDropdownOutsideClick);
 
+  const isDarkMode = useDarkMode();
+
+  const iconClass = classNames(
+    'text-gray-40 mt-1 h-auto w-2 shrink-0 transition-[transform,color] duration-200 group-hover:text-black',
+    isOpen ? '-rotate-90' : 'rotate-90'
+  );
+
   return (
     <div className={classNames('relative', className)}>
       <button
         className={classNames(
-          'group flex w-full items-center justify-between rounded-md border border-gray-3 py-4 px-5 transition-colors duration-200 hover:border-primary-1 [@media(min-width:550px)]:w-60',
+          'group flex w-full items-center justify-between rounded-md border border-gray-3 dark:border-gray-1 py-4 px-5 transition-colors duration-200 hover:border-primary-1 [@media(min-width:550px)]:w-60',
           (isOpen || isSelected) && 'border-primary-1'
         )}
         type="button"
@@ -42,23 +52,19 @@ const DropdownSelect = ({ name, items, values, onSelect, isSelected, className }
         onClick={handleOpen}
       >
         <span
-          className={classNames(
-            'font-sans text-base leading-none text-gray-7',
-            isOpen && '!text-black'
-          )}
+          className={classNames('font-sans text-base leading-none text-gray-7 dark:text-white')}
         >
           {name}
         </span>
-        <ChevronIcon
-          className={classNames(
-            'text-gray-40 mt-1 h-auto w-2 shrink-0 transition-[transform,color] duration-200 group-hover:text-black',
-            isOpen ? '-rotate-90' : 'rotate-90'
-          )}
-        />
+        {isDarkMode ? (
+          <LightChevronIcon className={iconClass} />
+        ) : (
+          <ChevronIcon className={iconClass} />
+        )}
       </button>
       <div
         className={classNames(
-          'absolute top-16 left-0 w-full rounded border border-gray-3 bg-white shadow-card transition-[opacity,visibility] duration-200 [@media(min-width:550px)]:w-[270px]',
+          'absolute top-16 left-0 w-full rounded border border-gray-3 bg-white dark:bg-[#dfe5ed] shadow-card transition-[opacity,visibility] duration-200 [@media(min-width:550px)]:w-[270px]',
           isOpen ? 'visible z-10 opacity-100' : 'invisible opacity-0'
         )}
         ref={dropdownRef}

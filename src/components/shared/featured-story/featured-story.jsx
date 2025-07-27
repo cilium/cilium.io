@@ -59,13 +59,15 @@ const FeaturedStory = ({
             )}
           </div>
           <Heading
-            className="mt-4 transition-colors duration-200 line-clamp-3 group-hover:text-primary-1"
+            className="mt-4 transition-colors duration-200 line-clamp-3 text-black dark:text-white group-hover:text-primary-1"
             tag="h3"
             size="md"
           >
             {title}
           </Heading>
-          <p className="my-5 line-clamp-4 md:text-lg md:leading-relaxed">{summary}</p>
+          <p className="my-5 line-clamp-4 md:text-lg md:leading-relaxed dark:text-gray-2 text-black">
+            {summary}
+          </p>
           <div className="mt-auto flex flex-wrap gap-x-2 gap-y-2">
             {categories?.map((category) => (
               <span
