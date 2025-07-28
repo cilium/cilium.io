@@ -25,7 +25,7 @@ const MenuItem = ({ name, href, target, childItems, isThemeToggle }) => {
       </Tag>
       {childItems && (
         <div className="invisible absolute bottom-0 -left-5 z-10 translate-y-full pt-4 opacity-0 transition-all duration-200 hover:visible hover:opacity-100 group-hover:visible group-hover:opacity-100">
-          <ul className="space-y-[18px] whitespace-nowrap rounded-xl bg-white p-5 shadow-input">
+          <ul className="space-y-[18px] whitespace-nowrap rounded-xl bg-white dark:bg-[#dfe5ed] p-5 shadow-input">
             {childItems.map(({ name, href, target, icon: Icon }) => (
               <li className="flex" key={name}>
                 <Link

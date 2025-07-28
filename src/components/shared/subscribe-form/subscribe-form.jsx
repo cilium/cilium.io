@@ -75,7 +75,7 @@ const SubscribeForm = ({ className, inputClassName, buttonClassName, divClassNam
         >
           <input
             className={classNames(
-              'remove-autocomplete-styles w-full appearance-none rounded border py-3 pl-6 pr-6 leading-normal shadow-input transition-colors duration-200 xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44',
+              'remove-autocomplete-styles w-full appearance-none rounded border py-3 pl-6 pr-6 leading-normal shadow-input transition-colors duration-200 xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44 bg-white dark:bg-[#dfe5ed]',
               'outline-none hover:border-gray-2 focus:border-primary-1',
               (errors?.email?.message || errorMessage) &&
                 'border-additional-1 hover:border-additional-1 focus:border-additional-1',
