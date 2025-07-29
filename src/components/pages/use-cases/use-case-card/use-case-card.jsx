@@ -20,7 +20,7 @@ const UseCaseCard = ({ heading, testimonials }) => (
       <ul className="grid grid-cols-1 gap-8 lg:grid-cols-2">
         {testimonials.map(({ logo: Logo, CTAs, description, title, quote, person }, index) => (
           <li
-            className="relative flex flex-col p-8 bg-white rounded-xl shadow-primary bg-white dark:bg-gray-2"
+            className="relative flex flex-col p-8 rounded-xl shadow-primary bg-white dark:bg-gray-2"
             key={title + index}
           >
             <Logo className="h-12 mb-5 lg:mb-7" />

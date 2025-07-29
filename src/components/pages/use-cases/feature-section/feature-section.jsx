@@ -31,13 +31,16 @@ const FeatureSection = ({
         )}
       >
         <Heading
-          className="mb-5 leading-tight lg:leading-tight xl:leading-tight"
+          className="mb-5 leading-tight lg:leading-tight xl:leading-tight dark:text-white text-black"
           tag="h3"
           size="md"
         >
           {title}
         </Heading>
-        <p className="text-lg leading-normal" dangerouslySetInnerHTML={{ __html: description }} />
+        <p
+          className="text-lg leading-normal dark:text-gray-2 text-black"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
       <div
         className={classNames(

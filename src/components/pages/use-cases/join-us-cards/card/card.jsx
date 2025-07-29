@@ -19,7 +19,10 @@ const iconList = {
 
 const Card = ({ icon, title, description, buttonText, buttonLink, buttonTarget, className }) => (
   <article
-    className={classNames('flex h-full flex-col rounded-xl bg-white p-8 shadow-primary', className)}
+    className={classNames(
+      'flex h-full flex-col rounded-xl bg-white dark:bg-gray-2 p-8 shadow-primary',
+      className
+    )}
   >
     <img
       className="h-10 w-10 lg:h-16 lg:w-16"
@@ -39,7 +42,7 @@ const Card = ({ icon, title, description, buttonText, buttonLink, buttonTarget, 
       type="text"
       theme="primary"
       rel="noopener noreferrer"
-      className="mt-auto border-t border-gray-3 pt-6"
+      className="mt-auto border-t border-gray-3 dark:border-gray-1 pt-6"
     >
       {buttonText}
     </Link>
