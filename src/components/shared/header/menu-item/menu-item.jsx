@@ -18,7 +18,7 @@ const MenuItem = ({ name, href, target, childItems, isThemeToggle }) => {
         to={href}
         target={target || null}
         rel={target ? 'noopener noreferrer' : null}
-        className="inline-flex items-center whitespace-nowrap text-sm font-bold leading-none transition-colors duration-200 hover:cursor-pointer dark:text-gray-2 text-black hover:text-primary-1 dark:hover:text-gray-4 xl:text-base"
+        className="inline-flex items-center whitespace-nowrap text-sm font-bold leading-none hover:cursor-pointer dark:text-gray-2 text-black hover:text-primary-1 dark:hover:text-gray-4 xl:text-base"
       >
         <span>{name}</span>
         {childItems && <ChevronIcon className="ml-1.5 shrink-0" />}

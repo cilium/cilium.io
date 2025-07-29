@@ -29,7 +29,7 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
     <div className="relative z-20">
       <header
         className={classNames(
-          'py-5 transition-[background] duration-200 bg-gray-4 dark:bg-gray-900 ',
+          'py-5 bg-gray-4 dark:bg-gray-900 ',
           isMobileMenuOpen && 'bg-white dark:bg-gray-900'
         )}
       >
