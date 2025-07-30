@@ -69,13 +69,16 @@ const themeClassNames = {
 const Community = ({ className, theme, isTitleCentered }) => (
   <section
     className={classNames(
-      'overflow-hidden py-10 sm:overflow-visible md:py-20 lg:pt-28 lg:pb-32',
+      'overflow-hidden py-10 sm:overflow-visible md:py-20 lg:pt-28 lg:pb-32 bg-gray-4 dark:bg-gray-900',
       className,
       themeClassNames[theme].wrapper
     )}
   >
     <Container>
-      <Heading className={classNames(isTitleCentered && 'text-center')} tag="h2">
+      <Heading
+        className={classNames(isTitleCentered && 'text-center  dark:text-gray-3 text-black ')}
+        tag="h2"
+      >
         {title}
       </Heading>
       <ul className="mt-7 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mt-10 md:gap-5 lg:mt-14 lg:grid-cols-3 lg:mb-1.5 xl:grid-cols-6 xl:gap-8">
@@ -85,7 +88,7 @@ const Community = ({ className, theme, isTitleCentered }) => (
               to={url}
               target={target}
               className={classNames(
-                'flex items-center rounded-lg p-6 md:flex-col md:pb-8 md:pt-7 lg:pt-9 lg:pb-11 xl:p-7',
+                'flex items-center rounded-lg p-6 md:flex-col md:pb-8 md:pt-7 lg:pt-9 lg:pb-11 xl:p-7 bg-white dark:bg-gray-2',
                 themeClassNames[theme].card
               )}
               type="text"

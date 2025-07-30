@@ -11,11 +11,11 @@ const description =
   'Cilium is an open source, cloud native solution for providing, securing, and observing network connectivity between workloads, fueled by the revolutionary Kernel technology eBPF';
 
 const Hero = () => (
-  <section className="overflow-hidden bg-gray-4 pt-5 pb-0 md:pt-16 md:pb-20 lg:pt-28 lg:pb-36">
+  <section className="overflow-hidden bg-gray-4 dark:bg-gray-900 pt-5 pb-0 md:pt-16 md:pb-20 lg:pt-28 lg:pb-36">
     <Container className="grid grid-cols-12 md:gap-x-8">
       <div className="relative z-10 col-span-full lg:col-span-6 2xl:col-span-7">
         <Heading
-          className="font-semibold leading-tight lg:max-w-2xl lg:leading-tight"
+          className="font-semibold dark:text-[#579dd6] text-black leading-tight lg:max-w-2xl lg:leading-tight"
           tag="h1"
           size="lg"
           asHTML
@@ -23,7 +23,7 @@ const Hero = () => (
           {title}
         </Heading>
         <div
-          className="with-link-primary mt-5 space-y-5 md:text-lg lg:max-w-[488px]"
+          className="with-link-primary dark:text-[#579dd6] text-black mt-5 space-y-5 md:text-lg lg:max-w-[488px]"
           dangerouslySetInnerHTML={{ __html: description }}
         />
         <div className="mt-7 flex xs:flex-row xs:gap-[18px] flex-col gap-3">

@@ -46,19 +46,19 @@ const items = [
 ];
 
 const JoinUsCard = ({ className }) => (
-  <section className="bg-gray-4">
+  <section className="bg-gray-4 dark:bg-[#111827]">
     <Container
-      className={classNames('flex flex-col items-center pb-16 md:pb-20 lg:pb-28', className)}
+      className={classNames('flex flex-col items-center pb-16 md:pb-20 lg:pb-28 ', className)}
       size="lg"
     >
       <Heading
-        className="mb-8 max-w-full text-center leading-tight md:mb-10 lg:mb-14 lg:max-w-[70%] lg:leading-tight xl:leading-tight"
+        className="mb-8 max-w-full text-center leading-tight md:mb-10 lg:mb-14 lg:max-w-[70%] lg:leading-tight xl:leading-tight dark:text-white text-black"
         tag="h2"
         size="md"
       >
         Want to Learn More?
       </Heading>
-      <ul className="grid gap-8 grid-cols-1 max-w-[1420px] mx-auto md:grid-cols-2 md:gap-8 2xl:grid-cols-4">
+      <ul className="grid gap-8 grid-cols-1 max-w-[1420px] mx-auto md:grid-cols-2 md:gap-8 2xl:grid-cols-4 ">
         {items.map((item, index) => (
           <li key={item.title + index}>
             <Card {...item} />

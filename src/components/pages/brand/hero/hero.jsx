@@ -11,12 +11,14 @@ const description =
   'We’ve created some guidelines to help you use our brands and assets, including our logo, content and trademarks';
 
 const Hero = () => (
-  <section className="relative overflow-hidden bg-gray-4 pb-28 pt-20 sm:pb-28 sm:pt-10 lg:pt-[88px] lg:pb-40">
+  <section className="relative overflow-hidden bg-gray-4 dark:bg-gray-900 pb-28 pt-20 sm:pb-28 sm:pt-10 lg:pt-[88px] lg:pb-40">
     <Container className="z-10 flex flex-col items-center text-center">
-      <h1 className="max-w-xs text-4xl font-bold leading-tight sm:max-w-none sm:text-44 lg:text-52">
+      <h1 className="max-w-xs text-4xl font-bold leading-tight sm:max-w-none sm:text-44 lg:text-52 dark:text-white sm:dark:text-black">
         {title}
       </h1>
-      <p className="mt-4 max-w-xs text-base sm:mt-2.5 md:max-w-[560px] md:text-lg">{description}</p>
+      <p className="mt-4 max-w-xs text-base sm:mt-2.5 md:max-w-[560px] md:text-lg dark:text-gray-2 sm:dark:text-black">
+        {description}
+      </p>
       <Button
         className="mx-auto mt-6 !rounded-md !px-5 sm:mt-7 sm:!px-7"
         to="/data/cilium-brandbook.pdf"

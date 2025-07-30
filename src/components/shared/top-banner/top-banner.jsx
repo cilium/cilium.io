@@ -11,7 +11,7 @@ const TopBanner = ({ text, url }) => {
 
   return (
     <Link
-      className="top-banner flex gap-3.5 w-full justify-center items-center px-5 py-3.5 leading-normal bg-[#FFF5D6] border-b border-[#FFE391] overflow-hidden"
+      className="top-banner flex gap-3.5 w-full justify-center items-center px-5 py-3.5 leading-normal bg-[#FFF5D6] dark:bg-[#262111] text-black dark:text-[#b5a166] border-b border-[#FFE391] dark:border-[#40381d] overflow-hidden transition-none"
       theme="black-primary"
       type="text"
       to={url}

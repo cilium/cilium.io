@@ -21,10 +21,10 @@ const icons = {
 // eslint-disable-next-line import/prefer-default-export
 export const TetragonCard = ({ heading, description, imageSrc, imageAlt, className, contents }) => (
   <Container className={className}>
-    <Heading tag="h2" className="text-center">
+    <Heading tag="h2" className="text-center dark:text-white text-black">
       {heading}
     </Heading>
-    <div className="mt-6 flex flex-col items-center gap-4 rounded-xl bg-white p-8 shadow-primary md:mt-10 md:flex-row md:gap-6 lg:mt-14 lg:gap-8">
+    <div className="mt-6 flex flex-col items-center gap-4 rounded-xl bg-white dark:bg-gray-2 p-8 shadow-primary md:mt-10 md:flex-row md:gap-6 lg:mt-14 lg:gap-8">
       <img
         className="h-20 w-20"
         src={images[imageSrc]}
@@ -42,7 +42,10 @@ export const TetragonCard = ({ heading, description, imageSrc, imageAlt, classNa
       {contents.map(({ title, text, icon }, index) => {
         const Icon = icons[icon];
         return (
-          <li key={index} className="flex flex-col rounded-xl bg-white px-6 py-8 shadow-primary">
+          <li
+            key={index}
+            className="flex flex-col rounded-xl bg-white dark:bg-gray-2 px-6 py-8 shadow-primary"
+          >
             <Icon className="h-14 w-14" />
             <Heading className="mt-5 leading-tight" tag="h3" size="xs">
               {title}

@@ -15,13 +15,16 @@ const HeroWithImage = ({
   decor1,
   decor2,
 }) => (
-  <section className={classNames('overflow-x-hidden bg-gray-4', className)}>
+  <section className={classNames('overflow-x-hidden bg-gray-4 dark:bg-gray-900 ', className)}>
     <Container className="grid grid-cols-12 gap-y-14 sm:gap-y-20 md:gap-y-24 lg:items-center lg:gap-y-0 lg:gap-x-8">
       <div className="col-span-full lg:col-span-5">
-        <Heading size="lg" tag="h1">
+        <Heading size="lg" className="text-black dark:text-white" tag="h1">
           {title}
         </Heading>
-        <div className="mt-5 space-y-5 text-lg" dangerouslySetInnerHTML={{ __html: description }} />
+        <div
+          className="mt-5 space-y-5 text-lg dark:text-gray-2 text-black"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
       <div
         className={classNames(

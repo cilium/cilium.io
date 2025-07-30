@@ -17,7 +17,7 @@ const List = ({ className, title, items, buttonUrl, buttonText }) => (
           key={index}
         >
           <Link type="text" theme="black-primary" target={linkTarget || ''} to={linkUrl}>
-            <span className="text-lg lg:text-xl lg:leading-normal pt-1.5 font-medium">
+            <span className="text-lg lg:text-xl lg:leading-normal pt-1.5 font-medium text-black dark:text-white">
               {linkText}
             </span>
           </Link>

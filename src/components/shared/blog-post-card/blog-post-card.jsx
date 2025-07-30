@@ -89,7 +89,7 @@ const BlogPostCard = ({
     <Link
       to={url || path}
       className={classNames(
-        'group flex rounded-lg border border-gray-3 p-5 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
+        'group flex rounded-lg border border-gray-3 dark:border-gray-600 p-5 transition-all duration-200 hover:border-transparent hover:shadow-tertiary bg-white dark:bg-gray-2',
         isLandscapeView
           ? 'flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-7'
           : 'flex-col space-y-7',

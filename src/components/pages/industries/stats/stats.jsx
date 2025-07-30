@@ -20,9 +20,9 @@ const Stats = ({ logo, description, CTAtext, url, stats, className }) => {
 
   return (
     <Container className={className}>
-      <div className="rounded-xl bg-white px-6 py-8 shadow-primary">
-        <div className="grid grid-cols-12 gap-4 divide-y divide-gray-3 md:gap-6 lg:gap-8 lg:divide-x lg:divide-y-0">
-          <div className="col-span-12 flex flex-col items-start justify-start gap-4 divide-y divide-gray-3 md:flex-row md:items-center md:justify-between md:gap-6 md:divide-x md:divide-y-0 lg:col-span-8 lg:gap-8">
+      <div className="rounded-xl bg-white dark:bg-gray-2 px-6 py-8 shadow-primary">
+        <div className="grid grid-cols-12 gap-4 divide-y divide-gray-3 dark:divide-gray-600 text-black md:gap-6 lg:gap-8 lg:divide-x lg:divide-y-0">
+          <div className="col-span-12 flex flex-col items-start justify-start gap-4 divide-y divide-gray-3 dark:divide-gray-600 md:flex-row md:items-center md:justify-between md:gap-6 md:divide-x md:divide-y-0 lg:col-span-8 lg:gap-8">
             {stats.map((stat, index) => (
               <div
                 key={index}

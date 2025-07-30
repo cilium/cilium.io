@@ -150,7 +150,7 @@ const mediaUsecases = [
 ];
 
 const MediaEntertainmentPage = () => (
-  <MainLayout theme="gray">
+  <MainLayout>
     <Hero {...heroContent} imageStyle="h-auto lg:w-[400px]" />
     <Testimonial {...newyorktimesTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
@@ -165,7 +165,7 @@ const MediaEntertainmentPage = () => (
       heading="Cilium’s Solutions for Media and Entertainment"
       usecases={mediaUsecases}
     />
-    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
+    <Community className="mt-10 md:mt-20 lg:mt-32" isTitleCentered />
   </MainLayout>
 );
 

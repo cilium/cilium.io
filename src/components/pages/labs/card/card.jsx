@@ -51,7 +51,7 @@ const Card = ({
     <Link
       to={externalUrl}
       className={classNames(
-        'group flex flex-col overflow-hidden rounded-lg border-2 border-gray-6 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
+        'group flex flex-col overflow-hidden rounded-lg border-2 border-gray-6 dark:border-gray-1 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
         className
       )}
       target="_blank"
@@ -74,10 +74,12 @@ const Card = ({
             ))}
           </div>
         )}
-        <Tag className="line-clamp-3 text-xl font-bold leading-snug transition-colors duration-200 group-hover:text-primary-1 md:text-22">
+        <Tag className="line-clamp-3 text-xl font-bold leading-snug transition-colors duration-200 group-hover:text-primary-1 md:text-22 text-black dark:text-white">
           {title}
         </Tag>
-        <p className="line-clamp-4 mt-2 text-base leading-normal text-black/60">{summary}</p>
+        <p className="line-clamp-4 mt-2 text-base leading-normal text-black/60 dark:text-gray-2">
+          {summary}
+        </p>
       </article>
     </Link>
   );

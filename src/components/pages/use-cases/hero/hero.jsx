@@ -34,7 +34,7 @@ const Hero = ({
   imageHeight,
   videoSrc,
 }) => (
-  <section className="mb-10 bg-gray-4 md:mb-20 lg:mb-28">
+  <section className="mb-10 bg-gray-4 dark:bg-[#111827] md:mb-20 lg:mb-28">
     <Container className="grid grid-cols-12 gap-y-6 gap-x-6 pt-5 pb-10 md:pt-16 md:pb-20 lg:pb-[138px] xl:gap-x-8">
       <div
         className={classNames(
@@ -43,21 +43,24 @@ const Hero = ({
       >
         <Label category={category} />
         <Heading
-          className="mt-6 mb-3 leading-tight lg:leading-tight xl:!text-44 xl:leading-tight"
+          className="mt-6 mb-3 leading-tight lg:leading-tight xl:!text-44 xl:leading-tight dark:text-white text-black"
           tag="h1"
           size="md"
         >
           {title}
         </Heading>
-        <small className="text-xl leading-normal ">{tagline}</small>
+        <small className="text-xl leading-normal dark:text-gray-2 text-black">{tagline}</small>
         <Heading
-          className="pt-5 mt-5 mb-2 font-semibold border-t border-gray-3"
+          className="pt-5 mt-5 mb-2 font-semibold border-t border-gray-3  dark:border-gray-1 dark:text-white text-black"
           tag="h2"
           size="3xs"
         >
           {subHeading}
         </Heading>
-        <p className="text-base leading-normal" dangerouslySetInnerHTML={{ __html: description }} />
+        <p
+          className="text-base leading-normal dark:text-gray-2 text-black"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
       {(imageSrc || videoSrc) && (
         <div
@@ -112,6 +115,10 @@ Hero.defaultProps = {
   imageAlt: null,
   imageWidth: 592,
   imageHeight: 350,
+};
+
+Label.propTypes = {
+  category: PropTypes.string.isRequired,
 };
 
 export default Hero;

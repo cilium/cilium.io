@@ -22,7 +22,7 @@ const Submenu = ({ isOpen, childItems, handleCloseClick }) => (
     {childItems.map(({ name, href, target, icon: Icon }, index) => (
       <li className="flex" key={index}>
         <Link
-          className="inline-flex w-full items-center space-x-2.5 font-medium leading-none hover:text-primary-1"
+          className="inline-flex w-full items-center space-x-2.5 font-medium leading-none text-black dark:text-gray-1 hover:text-primary-1 dark:hover-text-blue-400"
           to={href}
           target={target || null}
           rel={target ? 'noopener noreferrer' : null}

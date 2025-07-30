@@ -17,18 +17,18 @@ const logos = {
 const Logos = ({ title, description, downloadLink, brand = 'cilium', titleSize = 'md' }) => (
   <section className="mt-16 md:mt-24 lg:mt-32">
     <Container>
-      <header className="flex flex-col items-start justify-between pb-10 border-b gap-y-5 border-gray-3 lg:flex-row">
+      <header className="flex flex-col items-start justify-between pb-10 border-b gap-y-5 border-gray-3 dark:border-gray-1 lg:flex-row">
         <div className="flex flex-col gap-y-3">
-          <Heading tag="h2" size={titleSize}>
+          <Heading tag="h2" size={titleSize} className="text-black dark:text-white">
             {title}
           </Heading>
           <p
-            className="max-w-full sm:max-w-[520px] [&>br]:hidden sm:[&>br]:block"
+            className="max-w-full sm:max-w-[520px] [&>br]:hidden sm:[&>br]:block dark:text-gray-2 text-black"
             dangerouslySetInnerHTML={{ __html: description }}
           />
         </div>
         <Button
-          className="w-full !rounded-md border-2 !px-7 sm:w-auto lg:h-[50px] lg:self-end"
+          className="w-full !rounded-md border-2 dark:border-gray-1 text-black dark:text-white !px-7 sm:w-auto lg:h-[50px] lg:self-end"
           theme="outline-gray"
           to={downloadLink}
           download
@@ -49,6 +49,10 @@ Logos.propTypes = {
   downloadLink: PropTypes.string.isRequired,
   titleSize: PropTypes.oneOf(['md', 'lg']),
   brand: PropTypes.oneOf(['cilium', 'hubble', 'tetragon']).isRequired,
+};
+
+Logos.defaultProps = {
+  titleSize: 'md',
 };
 
 export default Logos;

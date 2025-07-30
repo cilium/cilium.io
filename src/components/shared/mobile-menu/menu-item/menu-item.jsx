@@ -26,7 +26,7 @@ const MenuItem = ({ name, href, target, childItems, handleCloseClick }) => {
           to={href}
           target={target || null}
           rel={target ? 'noopener noreferrer' : null}
-          className="w-full whitespace-nowrap font-bold leading-none transition-colors duration-200 hover:cursor-pointer hover:text-primary-1 xl:text-base"
+          className="w-full whitespace-nowrap font-bold leading-none transition-colors duration-200 hover:cursor-pointer hover:text-primary-1 xl:text-base text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white "
         >
           <span>{name}</span>
         </Tag>
@@ -34,13 +34,13 @@ const MenuItem = ({ name, href, target, childItems, handleCloseClick }) => {
           <div className="relative h-1.5 w-[12.5px]">
             <span
               className={classNames(
-                'absolute top-0.5 right-0 h-0.5 w-2 bg-black transition-transform duration-200',
+                'absolute top-0.5 right-0 h-0.5 w-2 bg-black dark:bg-gray-300 transition-transform duration-200 ',
                 isSubmenuOpen ? 'rotate-45' : '-rotate-45'
               )}
             />
             <span
               className={classNames(
-                'absolute top-0.5 left-0 h-0.5 w-2 bg-black transition-transform duration-200',
+                'absolute top-0.5 left-0 h-0.5 w-2 bg-black dark:bg-gray-300  transition-transform duration-200',
                 isSubmenuOpen ? '-rotate-45' : 'rotate-45'
               )}
             />

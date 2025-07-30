@@ -30,19 +30,14 @@ const icons = {
   bluesky: BlueskyIcon,
 };
 
-const themeClassNames = {
-  white: 'bg-white',
-  gray: 'bg-gray-4',
-};
-
-const Cards = ({ className, title, items, buttonType, theme, textSize, cardSize }) => {
+const Cards = ({ className, title, items, buttonType, textSize, cardSize }) => {
   const isTypeLink = buttonType === 'link';
   const isSmSize = cardSize === 'sm';
   const Tag = isTypeLink ? Link : Button;
   const buttonTheme = isTypeLink ? 'primary' : 'primary-1';
 
   return (
-    <div className={classNames(className, themeClassNames[theme])}>
+    <div className={classNames(className, 'bg-gray-4 dark:bg-gray-900')}>
       <Container>
         {title && (
           <Heading className="mb-6 xs:text-center md:mb-10 lg:mb-14" tag="h2">
@@ -56,7 +51,7 @@ const Cards = ({ className, title, items, buttonType, theme, textSize, cardSize 
               return (
                 <li
                   className={classNames(
-                    'col-span-full flex flex-col space-y-4 rounded-xl bg-white px-6 py-8 shadow-card md:flex-row md:space-y-0 md:space-x-5 lg:flex-col lg:space-x-0 lg:space-y-5 xl:px-8',
+                    'col-span-full flex flex-col space-y-4 rounded-xl bg-white dark:bg-gray-2 px-6 py-8 shadow-card md:flex-row md:space-y-0 md:space-x-5 lg:flex-col lg:space-x-0 lg:space-y-5 xl:px-8',
                     isSmSize ? 'lg:col-span-6 xl:col-span-3' : 'lg:col-span-4'
                   )}
                   key={index}
@@ -92,7 +87,9 @@ const Cards = ({ className, title, items, buttonType, theme, textSize, cardSize 
                       <Tag
                         className={classNames(
                           'mt-auto',
-                          isTypeLink ? 'border-t border-gray-3 pt-5 leading-snug' : 'self-start'
+                          isTypeLink
+                            ? 'border-t border-gray-3 dark:border-gray-600 pt-5 leading-snug'
+                            : 'self-start'
                         )}
                         theme={buttonTheme}
                         type={isTypeLink ? 'text' : null}
@@ -130,7 +127,6 @@ Cards.propTypes = {
       buttonTarget: PropTypes.string,
     })
   ).isRequired,
-  theme: PropTypes.oneOf(Object.keys(themeClassNames)),
 };
 
 Cards.defaultProps = {
@@ -139,7 +135,6 @@ Cards.defaultProps = {
   textSize: 'md',
   cardSize: 'md',
   buttonType: 'button',
-  theme: 'white',
 };
 
 export default Cards;

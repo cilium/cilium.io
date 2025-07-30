@@ -18,8 +18,13 @@ const CiliumStory = () => (
   <section className="mt-10 overflow-hidden pb-8 md:mt-20 lg:mt-28 lg:overflow-visible lg:pb-0 xl:mt-36">
     <Container className="grid grid-cols-12 items-center gap-y-10 lg:gap-y-0 lg:gap-x-8">
       <div className="col-span-full lg:col-span-6 lg:max-w-[519px]">
-        <Heading tag="h2">{title}</Heading>
-        <div className="mt-5 space-y-2.5" dangerouslySetInnerHTML={{ __html: description }} />
+        <Heading tag="h2" className="text-black dark:text-white">
+          {title}
+        </Heading>
+        <div
+          className="mt-5 space-y-2.5 dark:text-gray-2 text-black"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
         <Button className="mt-5" theme="primary-1" to={buttonUrl}>
           {buttonText}
         </Button>

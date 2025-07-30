@@ -35,21 +35,24 @@ const Card = ({ icon, title, description, buttonText, buttonLink, buttonTarget, 
   return (
     <article
       className={classNames(
-        'flex flex-col rounded-xl bg-white px-6 py-8 shadow-primary',
+        'flex flex-col rounded-xl bg-white dark:bg-gray-2 px-6 py-8 shadow-primary',
         className
       )}
     >
       <Icon className="h-10 w-10 lg:h-16 lg:w-16" />
-      <Heading className="mt-5 leading-tight" tag="h3" size="xs">
+      <Heading className="mt-5 leading-tight text-black" tag="h3" size="xs">
         {title}
       </Heading>
-      <p className="mt-2.5 w-full pb-6" dangerouslySetInnerHTML={{ __html: description }} />
+      <p
+        className="mt-2.5 w-full pb-6  text-black"
+        dangerouslySetInnerHTML={{ __html: description }}
+      />
       <Link
         to={buttonLink}
         target={buttonTarget}
         type="text"
         theme="primary"
-        className="mt-auto flex gap-2 border-t border-gray-3 pt-6"
+        className="mt-auto flex gap-2 border-t border-t border-gray-3 dark:border-gray-600 pt-6"
       >
         {buttonText}
         <ArrowIcon />

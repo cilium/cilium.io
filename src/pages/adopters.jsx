@@ -191,7 +191,6 @@ const hero = {
 };
 
 const userCommunity1 = {
-  theme: 'gray',
   items: [
     FHNW,
     koyeb,
@@ -289,7 +288,6 @@ userCommunity1.items.sort((a, b) =>
 const userCommunity2 = {
   title: 'Cilium is everywhere',
   isTitleCentered: true,
-  theme: 'gray',
   items: [
     scigility,
     nutanix,
@@ -446,16 +444,16 @@ const logos2 = {
 };
 
 const Adopters = () => (
-  <MainLayout className="overflow-x-hidden" theme="gray">
+  <MainLayout className="overflow-x-hidden">
     <HeroWithoutImage {...hero} />
     <UserCommunity
-      className="pt-6 pb-10 md:pt-10 md:pb-20 lg:pt-14 lg:pb-32 overflow-x-scroll max-w-full"
+      className="pt-6 pb-10 md:pt-10 md:pb-20 lg:pt-14 lg:pb-32 overflow-x-auto max-w-full"
       {...userCommunity1}
     />
     <Logos {...logos1} id="preferred-cloud" />
     <Logos {...logos2} id="kubernetes-distribution" />
     <UserCommunity
-      className="mt-10 py-10 md:mt-20 md:py-20 lg:mt-28 lg:py-28 overflow-x-scroll max-w-full"
+      className="mt-10 py-10 md:mt-20 md:py-20 lg:mt-28 lg:py-28 overflow-x-auto max-w-full"
       {...userCommunity2}
       id="cilium-is-everywhere"
     />

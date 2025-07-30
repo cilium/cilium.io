@@ -6,7 +6,7 @@ import Training from 'components/pages/enterprise/training';
 import Community from 'components/shared/community';
 import Hero from 'components/shared/hero';
 import SEO from 'components/shared/seo';
-import illustration from 'images/pages/enterprise/hero/illustration.svg';
+import illustration from 'images/pages/enterprise/hero/illustration-without-bg.svg';
 import MainLayout from 'layouts/main';
 import { enterprise as seo } from 'utils/seo-metadata';
 
@@ -20,12 +20,7 @@ const EnterprisePage = () => {
 
   return (
     <MainLayout pageMetadata={seo} theme="gray">
-      <Hero
-        className="pt-5 pb-10 md:pt-24 md:pb-20 lg:pb-[70px]"
-        theme="gray"
-        size="lg"
-        {...hero}
-      />
+      <Hero className="pt-5 pb-10 md:pt-24 md:pb-20 lg:pb-[70px]" size="lg" {...hero} />
       <Distributions />
       <Training />
       <Community theme="gray" isTitleCentered />

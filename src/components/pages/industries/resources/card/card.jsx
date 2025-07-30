@@ -17,7 +17,10 @@ const Card = ({
   className,
 }) => (
   <article
-    className={classNames('flex flex-col rounded-xl bg-white px-6 py-8 shadow-primary', className)}
+    className={classNames(
+      'flex flex-col rounded-xl bg-white dark:bg-gray-2 px-6 py-8 shadow-primary',
+      className
+    )}
   >
     <img
       src={imageSrc}
@@ -37,7 +40,7 @@ const Card = ({
       type="text"
       theme="primary"
       rel="noopener noreferrer"
-      className="mt-auto flex gap-2 border-t border-gray-3 pt-6"
+      className="mt-auto flex gap-2 border-t border-gray-3 dark:border-gray-600 pt-6"
     >
       {buttonText}
       <ArrowIcon />

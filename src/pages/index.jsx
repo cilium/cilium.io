@@ -40,17 +40,21 @@ const talks = [
     videoSrc: 'https://www.youtube.com/embed/80OYrzS1dCA?si=46mPj1lXsIe0vuU-',
   },
 ];
+
 const IndexPage = () => (
-  <MainLayout theme="gray">
+  <MainLayout>
     <Hero />
-    <UserCommunity className="pt-8 pb-10 md:pb-20 lg:pb-32" theme="gray" {...userCommunity} />
+    <UserCommunity
+      className="pt-8 pb-10 md:pb-20 lg:pb-32 bg-gray-4 dark:bg-gray-900"
+      {...userCommunity}
+    />
     <Highlights />
     <CNCFBanner />
     <HandsOn />
     <InProduction />
     <FeaturedTalks talks={talks} />
     <Learn />
-    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
+    <Community className="pt-10 md:pt-20 lg:pt-32" isTitleCentered />
   </MainLayout>
 );
 

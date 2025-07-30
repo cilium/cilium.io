@@ -356,34 +356,23 @@ const icons = {
   openai: OpenAiLogo,
 };
 
-const themeClassNames = {
-  white: {
-    wrapper: 'bg-white',
-    card: 'bg-gray-4 border-gray-3 border',
-  },
-  gray: {
-    wrapper: 'bg-gray-4',
-    card: 'bg-white shadow-card',
-  },
-};
-
 const UserCommunity = ({
   className,
   title,
   items,
   isTitleCentered,
-  theme,
   buttonText,
   buttonUrl,
   buttonTarget,
   id,
 }) => (
-  <section className={classNames(className, themeClassNames[theme].wrapper)} id={id}>
-    <Container className="flex flex-col">
+  <section className={classNames(className)} id={id}>
+    <Container className="flex flex-col overflow-x-hidden">
       {title && (
         <Link
           className={classNames(
-            isTitleCentered && 'mb-6 self-center text-center md:mb-10 lg:mb-16'
+            isTitleCentered &&
+              'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
           )}
           to={`#${id}`}
         >
@@ -400,8 +389,7 @@ const UserCommunity = ({
           return (
             <div
               className={classNames(
-                'flex flex-col rounded-lg p-6 xl:p-8',
-                themeClassNames[theme].card
+                'flex flex-col rounded-lg p-6 xl:p-8 bg-white dark:bg-gray-2 shadow-card'
               )}
               key={index}
             >
@@ -411,10 +399,10 @@ const UserCommunity = ({
                 dangerouslySetInnerHTML={{ __html: text }}
               />
               {links && (
-                <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-3 pt-4 leading-none">
+                <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-3 dark:border-gray-600 pt-4 leading-none">
                   {links.map(({ linkUrl, linkText, linkTarget }, index) => (
                     <Link
-                      className="relative after:absolute after:top-1/2 after:-right-2.5 after:inline-block after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-5 last:after:hidden"
+                      className="relative after:absolute after:top-1/2 after:-right-2.5 after:inline-block after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-5 after:dark:bg-gray-600 last:after:hidden"
                       key={index}
                       type="text"
                       theme="primary"
@@ -463,7 +451,6 @@ UserCommunity.propTypes = {
       ),
     })
   ).isRequired,
-  theme: PropTypes.oneOf(Object.keys(themeClassNames)),
   buttonText: PropTypes.string,
   buttonUrl: PropTypes.string,
   buttonTarget: PropTypes.string,
@@ -474,7 +461,6 @@ UserCommunity.defaultProps = {
   className: null,
   title: null,
   isTitleCentered: false,
-  theme: 'white',
   buttonText: null,
   buttonUrl: null,
   buttonTarget: null,

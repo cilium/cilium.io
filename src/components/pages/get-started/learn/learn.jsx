@@ -71,7 +71,7 @@ const items = [
 const Learn = () => (
   <section className="mt-10 md:mt-20 lg:mt-32">
     <Container>
-      <Heading className="text-center" tag="h2">
+      <Heading className="text-center text-black dark:text-white" tag="h2">
         {title}
       </Heading>
       <div className="grid grid-cols-1 gap-4 mt-6 md:mt-10 md:gap-6 lg:mt-14 lg:grid-cols-3 lg:gap-8">

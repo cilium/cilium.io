@@ -60,15 +60,18 @@ const ITEMS = [
 ];
 
 const InProduction = () => (
-  <section className="in-production bg-gray-4 py-10 mt-10 md:mt-20 md:py-20 lg:mt-28 lg:pt-32 lg:pb-[136px]">
+  <section className="in-production bg-gray-4 dark:bg-gray-900 py-10 pt-10 md:pt-20 md:py-20 lg:pt-32 lg:pb-[136px]">
     <Container className="flex flex-col 2xl:max-w-[1248px] md:max-w-[calc(100%-8rem)] xl:max-w-[calc(100%-8rem)] !px-0">
-      <Heading className="mb-2 self-center text-center px-4 md:mb-6 lg:mb-12" tag="h2">
+      <Heading
+        className="mb-2 self-center text-center px-4 md:mb-6 lg:mb-12 dark:text-gray-3 text-black"
+        tag="h2"
+      >
         Cilium in Production
       </Heading>
       <Slider>
         {ITEMS.map(({ title, icon, text, link }, index) => (
           <figure
-            className="!flex bg-white h-full shadow-card flex-col rounded-xl p-6 xl:p-8 xl:pb-7"
+            className="!flex bg-white  dark:bg-gray-2 h-full shadow-card flex-col rounded-xl p-6 xl:p-8 xl:pb-7"
             key={index}
           >
             <div>
@@ -77,7 +80,7 @@ const InProduction = () => (
                 <p>“{text}”</p>
               </blockquote>
             </div>
-            <div className="mt-auto flex border-t border-gray-3 pt-6 leading-none">
+            <div className="mt-auto flex border-t border-gray-3 dark:border-gray-600 pt-6 leading-none">
               <Link
                 className="relative"
                 key={index}

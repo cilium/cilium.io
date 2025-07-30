@@ -6,9 +6,14 @@ import Container from 'components/shared/container/container';
 import Heading from 'components/shared/heading';
 
 const FeaturedTalks = ({ heading, talks, className }) => (
-  <div className={classNames('featured-talks  py-10 md:py-20 lg:py-32', className)}>
+  <div
+    className={classNames(
+      'featured-talks py-10 md:py-20 lg:py-32 bg-white dark:bg-[#0f1d3e]',
+      className
+    )}
+  >
     <Container>
-      <Heading tag="h2" className="text-center">
+      <Heading tag="h2" className="text-center dark:text-gray-3 text-black">
         {heading}
       </Heading>
       <div className="mt-6 grid grid-cols-1 gap-4 md:mt-10 md:grid-cols-3 md:gap-6 lg:mt-14 lg:gap-8">
@@ -17,14 +22,18 @@ const FeaturedTalks = ({ heading, talks, className }) => (
             <iframe
               src={videoSrc}
               title="YouTube video player"
-              className="aspect-video w-full rounded-lg border border-gray-3"
+              className="aspect-video w-full rounded-lg border border-gray-3 dark:border-gray-600 "
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
-            <Heading className="mt-3 !text-xl md:mt-5" tag="h3" size="xs">
+            <Heading
+              className="mt-3 !text-xl md:mt-5 dark:text-gray-3 text-black"
+              tag="h3"
+              size="xs"
+            >
               {title}
             </Heading>
-            <p className="mt-2">{description}</p>
+            <p className="mt-2 dark:text-gray-2 text-black">{description}</p>
           </div>
         ))}
       </div>

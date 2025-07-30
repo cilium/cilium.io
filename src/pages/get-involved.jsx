@@ -112,7 +112,6 @@ const GetInvolved = () => {
         className="pt-4 pb-10 md:pb-20 md:pt-16 lg:pt-[72px] lg:pb-28"
         items={cardItems1}
         buttonType="link"
-        theme="gray"
         cardSize="sm"
       />
       <Guidelines />
