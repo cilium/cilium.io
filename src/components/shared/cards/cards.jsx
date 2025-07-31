@@ -15,7 +15,7 @@ import GithubIcon from './images/github.inline.svg';
 import NewsletterIcon from './images/newsletter.inline.svg';
 import SlackIcon from './images/slack.inline.svg';
 import SupportIcon from './images/support.inline.svg';
-import TwitterIcon from './images/twitter.inline.svg';
+import LinkedinIcon from './images/linkedin.inline.svg';
 import YoutubeIcon from './images/youtube.inline.svg';
 
 const icons = {
@@ -23,7 +23,7 @@ const icons = {
   slack: SlackIcon,
   support: SupportIcon,
   newsletter: NewsletterIcon,
-  twitter: TwitterIcon,
+  linkedin: LinkedinIcon,
   conduct: ConductIcon,
   devstats: DevstatsIcon,
   youtube: YoutubeIcon,
