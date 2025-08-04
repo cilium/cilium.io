@@ -1,6 +1,6 @@
 import { MDXProvider } from '@mdx-js/react';
 import PropTypes from 'prop-types';
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import BlogAuthor from 'components/shared/blog-author';
 import Container from 'components/shared/container';
@@ -10,16 +10,26 @@ import SocialShare from './social-share';
 import YoutubeIframe from './youtube-iframe';
 import YoutubePlaylistGallery from './youtube-playlist-gallery';
 
-// eslint-disable-next-line react/prop-types
-const Wrapper = ({ children }) => <div className="prose md:prose-lg !max-w-none">{children}</div>;
-// eslint-disable-next-line react/jsx-no-useless-fragment
+// Updated wrapper with dark mode prose support
+const Wrapper = ({ children }) => (
+  <div className="prose md:prose-lg !max-w-none dark:text-gray-300 text-black dark:prose-invert">
+    {children}
+  </div>
+);
+
+// Add PropTypes for Wrapper component
+Wrapper.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
 const components = {
   wrapper: Wrapper,
   BlogAuthor,
   YoutubeIframe,
   YoutubePlaylistGallery,
-  undefined: (props) => <Fragment {...props} />,
+  undefined: (props) => <div {...props} />,
 };
+
 const Content = ({ date, title, summary, content, path, tags }) => {
   const postUrl = `${process.env.GATSBY_DEFAULT_SITE_URL}${path}`;
   return (
@@ -34,7 +44,7 @@ const Content = ({ date, title, summary, content, path, tags }) => {
         />
         <div className="md:col-span-10">
           <span className="font-semibold leading-none md:text-lg text-gray-1">{date}</span>
-          <Heading className="mt-4 mb-10 lg:mb-16" size="lg" tag="h1">
+          <Heading className="mt-4 mb-10 lg:mb-16 dark:text-white text-black" size="lg" tag="h1">
             {title}
           </Heading>
           <MDXProvider components={components}>{content}</MDXProvider>
@@ -43,11 +53,12 @@ const Content = ({ date, title, summary, content, path, tags }) => {
     </article>
   );
 };
+
 Content.propTypes = {
   date: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   summary: PropTypes.string,
-  content: PropTypes.object.isRequired,
+  content: PropTypes.node.isRequired,
   path: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(PropTypes.string),
 };
