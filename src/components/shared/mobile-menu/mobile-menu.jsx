@@ -3,7 +3,6 @@ import { m, LazyMotion, domAnimation, useAnimation } from 'framer-motion';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 
-import useToggleTheme from 'hooks/use-toggle-theme';
 import SlackIcon from 'icons/slack.inline.svg';
 
 import Button from '../button';
@@ -54,8 +53,6 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, handleCloseClick }) => 
     }
   }, [isOpen, controls]);
 
-  const toggleTheme = useToggleTheme();
-
   return (
     <LazyMotion features={domAnimation}>
       {isOpen && (
@@ -71,20 +68,24 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, handleCloseClick }) => 
       )}
 
       <m.nav
-        className="safe-paddings py-safe absolute max-h-[calc(100vh-5rem)] inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 dark:border-gray-1 bg-white dark:bg-gray-900 shadow-lg xl:hidden"
+        className="safe-paddings py-safe absolute inset-x-0 top-20 flex w-full flex-col border-t border-gray-3 dark:border-gray-1 bg-white dark:bg-gray-900 shadow-lg xl:hidden"
+        style={{ maxHeight: 'calc(100vh - 5rem)' }}
         initial="from"
         animate={controls}
         variants={menuVariants}
         transition={{ duration: ANIMATION_DURATION }}
       >
-        <ul className="flex flex-col flex-grow h-full px-4 overflow-x-hidden divide-y divide-gray-3 dark:divide-gray-1 md:px-6 lg:px-10">
-          {navigation.map((item, index) => (
-            <MenuItem {...item} key={index} handleCloseClick={handleCloseClick} />
-          ))}
-        </ul>
+        <div className="flex-1 min-h-0">
+          <ul className="flex flex-col h-full px-4 overflow-y-auto divide-y divide-gray-3 dark:divide-gray-1 md:px-6 lg:px-10">
+            {navigation.map((item, index) => (
+              <MenuItem {...item} key={index} handleCloseClick={handleCloseClick} />
+            ))}
+          </ul>
+        </div>
+
         <div
           className={classNames(
-            'mt-auto flex flex-col items-center space-y-3 border-t border-gray-3 dark:border-gray-1 bg-gray-4 dark:bg-[#0f1d3e] px-4 py-[33px]',
+            'flex-shrink-0 flex flex-col items-center space-y-3 border-t border-gray-3 dark:border-gray-1 bg-gray-4 dark:bg-[#0f1d3e] px-4 py-4',
             'xs:flex-row xs:items-stretch xs:justify-center xs:space-y-0 xs:space-x-4'
           )}
         >
@@ -99,15 +100,6 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, handleCloseClick }) => 
           >
             <SlackIcon className="w-4 h-4" />
             <span className="ml-1.5 block dark:text-gray-2 text-black">Join Slack</span>
-          </Button>
-
-          <Button
-            className="inline-flex items-center leading-none bg-white dark:bg-gray-800"
-            theme="outline-gray"
-            size="xs"
-            onClick={toggleTheme}
-          >
-            <span className="ml-1.5 block dark:text-gray-2 text-black">Change Theme</span>
           </Button>
         </div>
       </m.nav>
