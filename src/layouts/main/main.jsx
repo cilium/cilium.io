@@ -22,7 +22,11 @@ const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleTheme = useToggleTheme();
-  const isDarkMode = useDarkMode();
+  const { isDarkMode, isReady } = useDarkMode();
+
+  if (!isReady) {
+    return null;
+  }
 
   const navigation = [
     { name: 'Users', href: '/adopters' },
