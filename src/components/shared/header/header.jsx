@@ -5,6 +5,7 @@ import React from 'react';
 import Button from 'components/shared/button';
 import Search from 'components/shared/search';
 import useDarkMode from 'hooks/use-dark-mode';
+import useToggleTheme from 'hooks/use-toggle-theme';
 import SlackIcon from 'icons/slack.inline.svg';
 import DarkLogo from 'images/logo.inline.svg';
 import LightLogo from 'images/white-logo.inline.svg';
@@ -24,6 +25,10 @@ const searchIndices = [
 
 const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, handleOverlay }) => {
   const isDarkMode = useDarkMode();
+  const toggleTheme = useToggleTheme();
+
+  const navigationWithoutTheme = navigation.filter((item) => !item.isThemeToggle);
+  const themeToggleItem = navigation.find((item) => item.isThemeToggle);
 
   return (
     <div className="relative z-20">
@@ -74,8 +79,21 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
                   </Button>
                 </div>
               </div>
-              <div className="flex items-center [@media(min-width:1210px)]:hidden space-x-6">
+              <div className="flex items-center [@media(min-width:1210px)]:hidden space-x-3">
                 {withSearch && !isMobileMenuOpen && <Search indices={searchIndices} />}
+
+                {/* Theme toggle button for mobile */}
+                {themeToggleItem && (
+                  <button
+                    type="button"
+                    className="flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-800"
+                    aria-label="Toggle theme"
+                    onClick={toggleTheme}
+                  >
+                    <themeToggleItem.name className="h-5 w-5" />
+                  </button>
+                )}
+
                 <Burger isToggled={isMobileMenuOpen} onClick={handleCloseClick} />
               </div>
             </div>
@@ -96,7 +114,7 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
                           type="button"
                           className="flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-800 theme-toggle"
                           aria-label="Toggle theme"
-                          onClick={item.onClick}
+                          onClick={toggleTheme}
                         >
                           <ThemeIcon className="h-5 w-5" />
                         </button>
@@ -112,7 +130,7 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
         </Container>
       </header>
       <MobileMenu
-        navigation={navigation}
+        navigation={navigationWithoutTheme}
         isOpen={isMobileMenuOpen}
         handleOverlay={handleOverlay}
         handleCloseClick={handleCloseClick}
