@@ -67,4 +67,4 @@ const documentation = {
     'Access comprehensive documentation for Cilium, including guides, tutorials, and API references.',
 };
 
-export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand,getStarted,blog,community,events,documentation };
+export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand,getStarted,blog,community,events,documentation, };
