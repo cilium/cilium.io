@@ -17,8 +17,10 @@ import SlackIcon from './images/slack.inline.svg';
 import SupportIcon from './images/support.inline.svg';
 import LinkedinIcon from './images/linkedin.inline.svg';
 import YoutubeIcon from './images/youtube.inline.svg';
+import CalendarIcon from './images/calendar.inline.svg';
 
 const icons = {
+  calendar: CalendarIcon,
   github: GithubIcon,
   slack: SlackIcon,
   support: SupportIcon,
@@ -56,7 +58,7 @@ const Cards = ({ className, title, items, buttonType, textSize, cardSize }) => {
                   )}
                   key={index}
                 >
-                  <div className="flex grow flex-col">
+                  <div className="flex flex-col grow">
                     <div className={classNames(isSmSize && 'flex items-center space-x-3')}>
                       {Icon && (
                         <Icon

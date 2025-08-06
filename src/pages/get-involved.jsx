@@ -66,6 +66,15 @@ const cardItems2 = {
       buttonTarget: '_blank',
     },
     {
+      iconName: 'calendar',
+      title: 'Community Meetings',
+      description:
+        'Join our regular community meetings including weekly calls and monthly timezone-specific meetings. Stay connected with the project development and community discussions.',
+      buttonText: 'View meeting calendar',
+      buttonUrl: 'https://zoom-lfx.platform.linuxfoundation.org/meetings/cilium?view=week',
+      buttonTarget: '_blank',
+    },
+    {
       iconName: 'conduct',
       title: 'Code of Conduct',
       description:
@@ -104,7 +113,7 @@ const GetInvolved = () => {
   return (
     <MainLayout theme="gray" pageMetadata={seo}>
       <HeroWithImage
-        className="pb-10 pt-5 md:pt-10 lg:py-16"
+        className="pt-5 pb-10 md:pt-10 lg:py-16"
         imgWrapperClassName="mr-0 xl:mr-8 lg:!justify-self-center"
         {...hero}
       />
