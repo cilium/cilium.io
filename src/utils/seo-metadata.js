@@ -41,5 +41,30 @@ const newsletter = {
   description:
     'If you want to keep up on the latest in cloud native networking, observability, and security this is your source',
 };
+const getStarted = {
+  title: 'Get started with Cilium',
+  description:
+    'Learn how to get started with Cilium, including installation, configuration, and usage guides.',
+};
+const blog = {
+  title: 'Cilium Blog',
+  description:
+    'Read the latest news, updates, and insights from the Cilium community.',
+};
+const community = {
+  title: 'Cilium Community',
+  description:
+    'Join the Cilium community to connect with other users, contributors, and maintainers.',
+};
+const events = {
+  title: 'Cilium Events',
+  description:
+    'Stay updated on upcoming Cilium events, webinars, and conferences.',
+};
+const documentation = {
+  title: 'Cilium Documentation',
+  description:
+    'Access comprehensive documentation for Cilium, including guides, tutorials, and API references.',
+};
 
-export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand };
+export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand,getStarted,blog,community,events,documentation, };
