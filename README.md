@@ -1,4 +1,5 @@
-<!-- Logo that switches based on light/dark mode -->
+# Cilium Website
+
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://cdn.jsdelivr.net/gh/cilium/cilium@main/Documentation/images/logo.png">
@@ -8,15 +9,26 @@
 
 <!-- Horizontal badges -->
 <p align="center">
-  <a href="https://cilium.io"><img src="https://img.shields.io/badge/Website-cilium.io-blue?style=for-the-badge"></a>
-  <a href="https://docs.cilium.io/en/stable/"><img src="https://img.shields.io/badge/Docs-docs.cilium.io-green?style=for-the-badge"></a>
-  <a href="https://github.com/cilium/cilium"><img src="https://img.shields.io/badge/GitHub-cilium/cilium-black?style=for-the-badge&logo=github"></a>
-  <a href="https://slack.cilium.io/"><img src="https://img.shields.io/badge/Slack-Join%20Community-purple?style=for-the-badge&logo=slack"></a>
-  <a href="https://zoom-lfx.platform.linuxfoundation.org/meetings/cilium?view=week"><img src="https://img.shields.io/badge/Calendar-Community%20Meetings-orange?style=for-the-badge"></a>
-  <a href="https://www.youtube.com/c/eBPFCiliumCommunity/"><img src="https://img.shields.io/badge/YouTube-eBPF%20%26%20Cilium-red?style=for-the-badge&logo=youtube"></a>
-  <a href="https://cilium.devstats.cncf.io/"><img src="https://img.shields.io/badge/DevStats-Cilium-blueviolet?style=for-the-badge"></a>
-  <a href="https://cilium.betteruptime.com/"><img src="https://img.shields.io/website?url=https%3A%2F%2Fcilium.betteruptime.com%2F&style=for-the-badge" alt="Uptime Status"></a>
+  <a href="https://cilium.io">
+    <img src="https://img.shields.io/badge/Website-cilium.io-blue?style=for-the-badge">
+  </a>
+  <a href="https://docs.cilium.io/en/stable/">
+    <img src="https://img.shields.io/badge/Docs-docs.cilium.io-green?style=for-the-badge">
+  </a>
+  <a href="https://github.com/cilium/cilium">
+    <img src="https://img.shields.io/badge/GitHub-cilium/cilium-black?style=for-the-badge&logo=github">
+  </a>
+  <a href="https://slack.cilium.io/">
+    <img src="https://img.shields.io/badge/Slack-Join%20Community-purple?style=for-the-badge&logo=slack">
+  </a>
+  <a href="https://www.youtube.com/c/eBPFCiliumCommunity/">
+    <img src="https://img.shields.io/badge/YouTube-eBPF%20%26%20Cilium-red?style=for-the-badge&logo=youtube">
+  </a>
+  <a href="https://cilium.betteruptime.com/">
+    <img src="https://img.shields.io/website?url=https%3A%2F%2Fcilium.betteruptime.com%2F&style=for-the-badge" alt="Uptime Status">
+  </a>
 </p>
+
 
 ---
 
