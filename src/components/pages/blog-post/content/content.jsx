@@ -33,7 +33,7 @@ const components = {
 const Content = ({ date, title, summary, content, path, tags }) => {
   const postUrl = `${process.env.GATSBY_DEFAULT_SITE_URL}${path}`;
   return (
-    <article className="relative mt-6 md:mt-10 lg:mt-16">
+    <article className="relative mt-6 md:mt-10 lg:mt-16 dark:text-white">
       <Container className="grid grid-cols-1 md:grid-cols-12 lg:gap-8">
         <SocialShare
           className="order-1 md:order-none md:col-span-1"
