@@ -28,7 +28,9 @@ const PostsBoard = ({ categories, posts, currentCategory, basePath, currentPage,
   return (
     <section className="mt-10 md:mt-20 lg:mt-28">
       <Container>
-        <Heading tag="h2">{blockTitle}</Heading>
+        <Heading tag="h2" className="text-black dark:text-white">
+          {blockTitle}
+        </Heading>
         <Tabs
           id="categories"
           items={categories}

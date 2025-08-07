@@ -112,7 +112,7 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
                       <li key={index}>
                         <button
                           type="button"
-                          className="flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-800 theme-toggle"
+                          className="flex items-center -ml-2 justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-800 theme-toggle"
                           aria-label="Toggle theme"
                           onClick={toggleTheme}
                         >
