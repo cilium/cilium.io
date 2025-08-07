@@ -21,7 +21,7 @@ const links = [
 
 const NotFoundPage = () => (
   <MainLayout footerWithTopBorder>
-    <section className="safe-paddings overflow-hidden bg-[#F8F9FC] pt-20 pb-24 sm:pt-24 sm:pb-32">
+    <section className="safe-paddings overflow-hidden bg-[#F8F9FC] dark:bg-gray-900 pt-20 pb-24 sm:pt-24 sm:pb-32">
       <div className="container flex flex-col items-center mx-auto">
         <div className="relative h-[303px] w-[728px] bg-404-page-pattern bg-[center_-42px]">
           <StaticImage
@@ -33,11 +33,11 @@ const NotFoundPage = () => (
             alt=""
           />
         </div>
-        <h1 className="max-w-xs mt-4 text-4xl font-bold leading-tight text-center sm:max-w-none md:mt-6 md:text-5xl">
+        <h1 className="max-w-xs mt-4 text-4xl font-bold leading-tight text-center text-gray-900 dark:text-white sm:max-w-none md:mt-6 md:text-5xl">
           <span className="sr-only">Error</span> 404: oops, tools still whirring!
         </h1>
-        <p className="max-w-xs mt-3 text-base leading-relaxed text-center sm:max-w-none md:text-lg">
-          If you're unsure what to explore, check out our recommendations.
+        <p className="max-w-xs mt-3 text-base leading-relaxed text-center text-gray-900 dark:text-white sm:max-w-none md:text-lg">
+          If you&apos;re unsure what to explore, check out our recommendations.
         </p>
         <div className="flex flex-col items-center mt-8 space-y-6 sm:space-y-0 sm:space-x-6 sm:flex-row sm:mt-8">
           {links.map(({ title, to }, index) => (
