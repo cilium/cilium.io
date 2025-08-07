@@ -1,14 +1,10 @@
 const enterprise = {
-  title: 'Cilium - Enterprise Distributions & Training Partners',
+  // title: 'Cilium - Enterprise Distributions & Training',
   description:
     'Learn how to get enterprise level support and training for Cilium from different vendors in the ecosystem',
 };
-const homepage = {
-  title: 'Cilium - eBPF-based Networking, Observability, and Security for Kubernetes',
-  description: 'Cilium provides eBPF-based networking, observability, and security for Kubernetes and beyond. Trusted by all major cloud providers and cloud native platforms worldwide.',
-};
 const learn = {
-  title: 'Cilium - What is Cilium?',
+  // title: 'Cilium - What is Cilium?',
   description:
     'Cilium is an open source project to provide networking, security, and observability for cloud native environments such as Kubernetes clusters and other container orchestration platforms.',
 };
@@ -46,4 +42,4 @@ const newsletter = {
     'If you want to keep up on the latest in cloud native networking, observability, and security this is your source',
 };
 
-export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand, homepage };
+export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand };
