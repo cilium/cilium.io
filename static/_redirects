@@ -27,7 +27,7 @@
 /use-cases/runtime-enforcement/ /use-cases/runtime-security/ 301
 
 https://blog.cilium.io/ https://cilium.io/blog/ 301!
-use-cases/runtime-enforcement/  use-cases/runtime-security/ 301
+/use-cases/runtime-enforcement/  /use-cases/runtime-security/ 301
 
 
 /*    /404.html   404
