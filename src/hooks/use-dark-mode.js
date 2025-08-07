@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 const useDarkMode = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const updateDarkMode = () => {
@@ -19,6 +20,7 @@ const useDarkMode = () => {
       }
 
       updateDarkMode();
+      setIsReady(true);
     };
 
     initializeTheme();
@@ -41,7 +43,7 @@ const useDarkMode = () => {
     };
   }, []);
 
-  return isDarkMode;
+  return { isDarkMode, isReady };
 };
 
 export default useDarkMode;
