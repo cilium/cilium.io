@@ -5,7 +5,7 @@ const enterprise = {
 };
 const homepage = {
   title: 'Cilium - eBPF-based Networking, Observability, and Security for Kubernetes',
-  description: 'Cilium provides eBPF-based networking, security policies, and observability for Kubernetes. Trusted by Google GKE, AWS EKS, and cloud native platforms worldwide.',
+  description: 'Cilium provides eBPF-based networking, observability, and security for Kubernetes and beyond. Trusted by all major cloud providers and cloud native platforms worldwide.',
 };
 const learn = {
   title: 'Cilium - What is Cilium?',
