@@ -46,4 +46,4 @@ const newsletter = {
     'If you want to keep up on the latest in cloud native networking, observability, and security this is your source',
 };
 
-export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand,homepage };
+export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand, homepage };
