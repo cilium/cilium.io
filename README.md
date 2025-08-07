@@ -24,9 +24,6 @@
   <a href="https://www.youtube.com/c/eBPFCiliumCommunity/">
     <img src="https://img.shields.io/badge/YouTube-eBPF%20%26%20Cilium-red?style=for-the-badge&logo=youtube">
   </a>
-  <a href="https://cilium.betteruptime.com/">
-    <img src="https://img.shields.io/website?url=https%3A%2F%2Fcilium.betteruptime.com%2F&style=for-the-badge" alt="Uptime Status">
-  </a>
 </p>
 
 
