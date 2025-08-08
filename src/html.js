@@ -8,7 +8,7 @@ const fontsPaths = ['/inter-regular.woff2', '/inter-bold.woff2'];
 
 export default function HTML(props) {
   return (
-    <html {...props.htmlAttributes}>
+    <html {...props.htmlAttributes} lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
