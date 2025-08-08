@@ -153,7 +153,9 @@ const Highlights = () => (
           </Heading>
           <ul className="grid grid-cols-1 gap-6 md:auto-rows-fr md:grid-cols-2 md:gap-8 lg:grid lg:auto-rows-fr lg:grid-cols-3">
             {items.map((item, index) => (
-              <ItemCard {...item} key={item.title + index} />
+              <li>
+                <ItemCard {...item} key={item.title + index} />
+              </li>
             ))}
           </ul>
         </div>
