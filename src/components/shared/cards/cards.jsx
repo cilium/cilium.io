@@ -40,7 +40,7 @@ const Cards = ({ className, title, items, buttonType, textSize, cardSize }) => {
     <div className={classNames(className, 'bg-gray-4 dark:bg-gray-900')}>
       <Container>
         {title && (
-          <Heading className="mb-6 xs:text-center md:mb-10 lg:mb-14" tag="h2">
+          <Heading className="mb-6 xs:text-center md:mb-10 lg:mb-14 dark:text-white" tag="h2">
             {title}
           </Heading>
         )}
