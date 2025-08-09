@@ -23,7 +23,7 @@ const searchIndices = [
   { name: algoliaQueries[0].indexName, title: 'Blog Posts', hitComp: 'postPageHit' },
 ];
 
-const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, handleOverlay }) => {
+const Header = ({ withSearch = true, isMobileMenuOpen, handleCloseClick, navigation, handleOverlay }) => {
   const isDarkMode = useDarkMode();
   const toggleTheme = useToggleTheme();
 
@@ -80,6 +80,7 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
                 </div>
               </div>
               <div className="flex items-center [@media(min-width:1210px)]:hidden space-x-3">
+                {/* Mobile Search - Always show when withSearch is true */}
                 {withSearch && !isMobileMenuOpen && <Search indices={searchIndices} />}
 
                 {/* Theme toggle button for mobile */}
@@ -98,6 +99,7 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
               </div>
             </div>
             <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1210px)]:flex">
+              {/* Desktop Search - Always show when withSearch is true */}
               {withSearch && (
                 <Search
                   buttonClassName="rounded h-8 w-8 border border-gray-2 dark:border-gray-600 p-[7px]"
@@ -164,7 +166,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  withSearch: false,
+  withSearch: true,
 };
 
 export default Header;
