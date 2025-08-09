@@ -104,7 +104,7 @@ const spaceXClassNames = {
 };
 
 const Logos = ({ title, items, spaceXSize, id }) => (
-  <section className="pt-10 md:pt-20 lg:pt-28 xl:pt-32" id={id}>
+  <section className="pt-10 md:pt-20 lg:pt-28 xl:pt-32 dark:text-white" id={id}>
     <Container size="md">
       <Link className="text-center" to={`#${id}`}>
         <Heading tag="h2">{title}</Heading>
