@@ -77,6 +77,7 @@ module.exports = {
       },
       backgroundImage: {
         'dark-blue': 'linear-gradient(247.62deg, #272B41 21.37%, #161928 52.43%)',
+        'light-gray': 'linear-gradient(247.62deg, #FFFFFF 21.37%, #b5b5b5 52.43%)',
         eu: "url('/images/eu.svg')",
         usa: "url('/images/usa.svg')",
         'search-icon': "url('/images/search.svg')",
