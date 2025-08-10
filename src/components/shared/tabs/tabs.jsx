@@ -28,7 +28,7 @@ const Tabs = ({ id, items, activeLabel, defaultTabTitle, align, className }) => 
               'relative whitespace-nowrap px-3 pt-2.5 pb-5 font-medium leading-none transition-colors duration-200',
               isActive
                 ? 'text-primary-1 after:absolute after:inset-x-0 after:bottom-0 after:z-0 after:h-0.5 after:w-full after:bg-primary-1'
-                : 'dark:text-gray-2 text-black hover:text-primary-1'
+                : 'dark:text-white text-black hover:text-primary-1 dark:hover:text-primary-1'
             )}
             to={basePath}
             key={index}
