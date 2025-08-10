@@ -51,7 +51,7 @@ const Card = ({
     <Link
       to={externalUrl}
       className={classNames(
-        'group flex flex-col overflow-hidden rounded-lg border-2 border-gray-6 dark:border-transparent transition-all duration-200 hover:border-transparent hover:shadow-tertiary dark:hover:border-transparent dark:hover:shadow-tertiary dark:hover:shadow-slate-600',
+        'group flex flex-col overflow-hidden rounded-lg border-2 border-gray-6 dark:border-gray-7 transition-all duration-200 hover:border-transparent hover:shadow-tertiary dark:hover:border-gray-7 dark:hover:shadow-darksecondary',
         className
       )}
       target="_blank"

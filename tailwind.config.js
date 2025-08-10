@@ -69,6 +69,8 @@ module.exports = {
         tertiary: '0px 5px 20px rgba(0, 0, 0, 0.1)',
         card: '0px 2px 10px rgba(20, 26, 31, 0.15)',
         input: '0px 1px 8px rgba(20, 26, 31, 0.2)',
+        darkprimary: '0px 2px 10px rgba(226, 232, 240, 0.3)',
+        darksecondary:  '0px 5px 20px rgba(71, 85, 105, 0.3)', 
       },
       borderRadius: {
         large: '20px',
