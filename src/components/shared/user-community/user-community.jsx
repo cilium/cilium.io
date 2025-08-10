@@ -381,7 +381,7 @@ const UserCommunity = ({
       )}
       <div
         className={classNames(
-          'grid gap-4 sm:grid-cols-2 md:gap-6 lg:auto-rows-fr lg:grid-cols-4 lg:gap-4 xl:gap-8'
+          'grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:auto-rows-fr lg:grid-cols-4 lg:gap-4 xl:gap-8'
         )}
       >
         {items.map(({ iconName, text, links }, index) => {
@@ -389,20 +389,23 @@ const UserCommunity = ({
           return (
             <div
               className={classNames(
-                'flex flex-col rounded-lg p-6 xl:p-8 bg-white dark:bg-gray-2 shadow-card'
+                'flex flex-col rounded-lg p-4 sm:p-6 xl:p-8 bg-white dark:bg-gray-2 shadow-card min-w-0'
               )}
               key={index}
             >
-              <Icon className="h-12" aria-label={`${iconName} logo`} />
+              <Icon className="h-8 sm:h-12 flex-shrink-0" aria-label={`${iconName} logo`} />
               <p
-                className={classNames('mt-5', links && 'mb-4')}
+                className={classNames(
+                  'mt-3 sm:mt-5 text-sm sm:text-base break-words',
+                  links && 'mb-4'
+                )}
                 dangerouslySetInnerHTML={{ __html: text }}
               />
               {links && (
-                <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-3 dark:border-gray-600 pt-4 leading-none">
+                <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-3 dark:border-gray-600 pt-4 leading-none text-sm">
                   {links.map(({ linkUrl, linkText, linkTarget }, index) => (
                     <Link
-                      className="relative after:absolute after:top-1/2 after:-right-2.5 after:inline-block after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-5 after:dark:bg-gray-600 last:after:hidden"
+                      className="relative after:absolute after:top-1/2 after:-right-2.5 after:inline-block after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-5 after:dark:bg-gray-600 last:after:hidden break-words"
                       key={index}
                       type="text"
                       theme="primary"
