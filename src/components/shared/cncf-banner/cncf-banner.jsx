@@ -13,7 +13,7 @@ import Container from '../container';
 const title = 'We are proud to be a CNCF Graduation level project';
 
 const CNCFBanner = ({ className }) => {
-  const isDarkMode = useDarkMode();
+  const {isDarkMode} = useDarkMode();
 
   return (
     <section

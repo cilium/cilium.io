@@ -23,7 +23,7 @@ const navigation = [
 ];
 
 const Footer = ({ withTopBorder }) => {
-  const isDarkMode = useDarkMode();
+  const {isDarkMode} = useDarkMode();
 
   return (
     <footer
