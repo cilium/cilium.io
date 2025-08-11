@@ -14,7 +14,6 @@ import Hits from './hits';
 import AlgoliaLogo from './images/algolia.inline.svg';
 import SearchInput from './input';
 
-
 const Search = ({ buttonClassName, indices }) => {
   const [isOpen, setIsOpen] = useState(false);
   const { searchClient, searchQuery, setSearchQuery, onSearchStateChange } = useAlgoliaSearch();
@@ -29,7 +28,7 @@ const Search = ({ buttonClassName, indices }) => {
     setIsOpen(false);
   };
 
-  const isDarkMode = useDarkMode();
+  const {isDarkMode} = useDarkMode();
 
   return (
     <>
