@@ -118,8 +118,10 @@ const Form = ({ formClassName }) => {
               name="message"
               {...register('message')}
             />
-            <div className="border-b border-gray-4 pb-4">
-              <span className="text-sm font-semibold">What do you need help with?</span>
+            <div className="border-b border-gray-4 dark:border-gray-7 pb-4">
+              <span className="text-sm font-semibold text-black dark:text-white">
+                What do you need help with?
+              </span>
               <div className="mt-5 grid gap-x-8 gap-y-4 md:grid-cols-[repeat(2,minmax(45%,max-content))]">
                 <Checkbox
                   id="reviewAbstract"
