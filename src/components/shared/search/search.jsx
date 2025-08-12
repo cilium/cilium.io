@@ -28,7 +28,7 @@ const Search = ({ buttonClassName, indices }) => {
     setIsOpen(false);
   };
 
-  const {isDarkMode} = useDarkMode();
+  const { isDarkMode } = useDarkMode();
 
   return (
     <>

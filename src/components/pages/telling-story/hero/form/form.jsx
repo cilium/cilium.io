@@ -21,27 +21,15 @@ const FORM_STATES = {
 };
 
 const validationSchema = yup.object().shape({
-  firstName: yup
-    .string()
-    .trim()
-    .required('Name is a required field'),
+  firstName: yup.string().trim().required('Name is a required field'),
   email: yup
     .string()
     .trim()
     .email('Please provide a valid email')
     .required('Email is a required field'),
-  ciliumSlackUsername: yup
-    .string()
-    .trim()
-    .required('Cilium Slack Username is a required field'),
-  howAreYouUsingCilium: yup
-    .string()
-    .trim()
-    .required('It is a required field'),
-  message: yup
-    .string()
-    .trim()
-    .required('Message is a required field'),
+  ciliumSlackUsername: yup.string().trim().required('Cilium Slack Username is a required field'),
+  howAreYouUsingCilium: yup.string().trim().required('It is a required field'),
+  message: yup.string().trim().required('Message is a required field'),
 });
 
 const Form = ({ formClassName }) => {
