@@ -87,7 +87,7 @@ const Cards = () => {
               {links.map(({ title, url, target }, index) => (
                 <Button
                   className="lg:text-base"
-                  theme={title === 'Explore Archive' ? 'primary-1' : 'outline-gray'}
+                  theme="primary-1"
                   size="md"
                   key={index}
                   to={url}
