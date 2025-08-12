@@ -9,7 +9,6 @@ import LightChevronIcon from 'icons/light-chevron.inline.svg';
 
 import Checkbox from './checkbox';
 
-
 const DropdownSelect = ({ name, items, values, onSelect, isSelected, className }) => {
   const dropdownRef = useRef(null);
   const buttonRef = useRef(null);
@@ -33,7 +32,7 @@ const DropdownSelect = ({ name, items, values, onSelect, isSelected, className }
 
   useClickOutside([dropdownRef, buttonRef], handleDropdownOutsideClick);
 
-  const isDarkMode = useDarkMode();
+  const { isDarkMode } = useDarkMode();
 
   const iconClass = classNames(
     'text-gray-40 mt-1 h-auto w-2 shrink-0 transition-[transform,color] duration-200 group-hover:text-black',

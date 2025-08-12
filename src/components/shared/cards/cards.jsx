@@ -12,10 +12,10 @@ import BlueskyIcon from './images/bluesky.inline.svg';
 import ConductIcon from './images/conduct.inline.svg';
 import DevstatsIcon from './images/devstats.inline.svg';
 import GithubIcon from './images/github.inline.svg';
+import LinkedinIcon from './images/linkedin.inline.svg';
 import NewsletterIcon from './images/newsletter.inline.svg';
 import SlackIcon from './images/slack.inline.svg';
 import SupportIcon from './images/support.inline.svg';
-import LinkedinIcon from './images/linkedin.inline.svg';
 import YoutubeIcon from './images/youtube.inline.svg';
 
 const icons = {
@@ -40,7 +40,7 @@ const Cards = ({ className, title, items, buttonType, textSize, cardSize }) => {
     <div className={classNames(className, 'bg-gray-4 dark:bg-gray-900')}>
       <Container>
         {title && (
-          <Heading className="mb-6 xs:text-center md:mb-10 lg:mb-14" tag="h2">
+          <Heading className="mb-6 xs:text-center md:mb-10 lg:mb-14 dark:text-white" tag="h2">
             {title}
           </Heading>
         )}

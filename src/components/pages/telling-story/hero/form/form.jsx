@@ -21,11 +21,15 @@ const FORM_STATES = {
 };
 
 const validationSchema = yup.object().shape({
+  firstName: yup.string().trim().required('Name is a required field'),
   email: yup
     .string()
     .trim()
     .email('Please provide a valid email')
     .required('Email is a required field'),
+  ciliumSlackUsername: yup.string().trim().required('Cilium Slack Username is a required field'),
+  howAreYouUsingCilium: yup.string().trim().required('It is a required field'),
+  message: yup.string().trim().required('Message is a required field'),
 });
 
 const Form = ({ formClassName }) => {
@@ -81,6 +85,7 @@ const Form = ({ formClassName }) => {
                 type="text"
                 id="firstName"
                 name="name"
+                error={errors?.firstName?.message}
                 autoComplete="given-name"
                 {...register('firstName')}
               />
@@ -100,6 +105,7 @@ const Form = ({ formClassName }) => {
                 type="text"
                 id="ciliumSlackUsername"
                 name="ciliumSlackUsername"
+                error={errors?.ciliumSlackUsername?.message}
                 {...register('ciliumSlackUsername')}
               />
               <Field
@@ -107,6 +113,7 @@ const Form = ({ formClassName }) => {
                 type="text"
                 id="howAreYouUsingCilium"
                 name="howAreYouUsingCilium"
+                error={errors?.howAreYouUsingCilium?.message}
                 {...register('howAreYouUsingCilium')}
               />
             </div>
@@ -116,10 +123,13 @@ const Form = ({ formClassName }) => {
               fieldName="Message"
               id="message"
               name="message"
+              error={errors?.message?.message}
               {...register('message')}
             />
-            <div className="border-b border-gray-4 pb-4">
-              <span className="text-sm font-semibold">What do you need help with?</span>
+            <div className="border-b border-gray-4 dark:border-gray-7 pb-4">
+              <span className="text-sm font-semibold text-black dark:text-white">
+                What do you need help with?
+              </span>
               <div className="mt-5 grid gap-x-8 gap-y-4 md:grid-cols-[repeat(2,minmax(45%,max-content))]">
                 <Checkbox
                   id="reviewAbstract"

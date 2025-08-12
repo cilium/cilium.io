@@ -24,7 +24,7 @@ const searchIndices = [
 ];
 
 const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, handleOverlay }) => {
-  const isDarkMode = useDarkMode();
+  const { isDarkMode } = useDarkMode();
   const toggleTheme = useToggleTheme();
 
   const navigationWithoutTheme = navigation.filter((item) => !item.isThemeToggle);

@@ -10,13 +10,12 @@ import backgroundSvg from './images/background.svg';
 import darkThemeBackgroundSvg from './images/dark-theme-background.svg';
 import RSSIcon from './images/rss.inline.svg';
 
-
 const title = 'Subscribe to bi-weekly eCHO News';
 const description =
   'eCHO news is your bi-weekly wrap up of all things eBPF and Cilium. If you want to keep up on the latest in cloud native networking, observability, and security this is your source';
 
 const Hero = () => {
-  const isDarkMode = useDarkMode();
+  const { isDarkMode } = useDarkMode();
 
   return (
     <section className="relative pt-10 md:pt-20 bg-gray-4 dark:bg-gray-900 ">
