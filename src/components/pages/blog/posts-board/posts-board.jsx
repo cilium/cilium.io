@@ -79,18 +79,12 @@ const PostsBoard = ({ categories, posts, currentCategory, basePath, currentPage,
           className="mt-6 md:mt-10 lg:mt-14"
         />
         
-        {searchQuery && (
-          <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            Found {filteredPosts.length} post{filteredPosts.length !== 1 ? 's' : ''} with titles matching "{searchQuery}" across all posts
-          </div>
-        )}
-        
         {filteredPosts.length > 0 ? (
           <BlogPostsList posts={filteredPosts} />
         ) : searchQuery ? (
           <div className="mt-8 text-center py-12">
             <div className="text-gray-500 dark:text-gray-400 text-lg">
-              No posts found with titles matching "{searchQuery}" across all posts
+              No posts found with titles matching "{searchQuery}"
             </div>
             <button
               onClick={() => setSearchQuery('')}
