@@ -8,14 +8,18 @@ const Checkbox = React.forwardRef((props, ref) => {
   return (
     <div className={classNames('checkbox', className)}>
       <input
-        className="checkbox__input"
+        className="checkbox__input bg-white dark:bg-[#A7B1BE]"
         type="checkbox"
         id={id}
         defaultChecked={defaultChecked}
         ref={ref}
         {...otherProps}
       />
-      <label className="checkbox__label" htmlFor={id}>
+      <label
+        className="checkbox__label dark:text-[#dfe5ed] text-black"
+        htmlFor={id}
+        aria-label={label}
+      >
         <span dangerouslySetInnerHTML={{ __html: label }} />
       </label>
     </div>

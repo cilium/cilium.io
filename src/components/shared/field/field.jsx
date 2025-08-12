@@ -10,13 +10,13 @@ export const FIELD_TAGS = {
 const Field = forwardRef(({ id, fieldName, className, tag: Tag, error, ...otherProps }, ref) => (
   <div className="relative flex w-full flex-col">
     {fieldName && (
-      <label htmlFor={id} className="text-sm font-semibold leading-none">
+      <label htmlFor={id} className="text-sm font-semibold leading-none text-black dark:text-white">
         {fieldName}
       </label>
     )}
     <Tag
       className={classNames(
-        'remove-autocomplete-styles w-full appearance-none rounded border border-gray-3 px-3 py-3 text-[16px] outline-none transition duration-200 hover:border-gray-2 focus:border-primary-1 xl:px-4 xl:py-5',
+        'remove-autocomplete-styles w-full appearance-none rounded border border-gray-3 px-3 py-3 text-[16px] outline-none hover:border-gray-2 focus:border-primary-1 xl:px-4 xl:py-5 bg-white dark:bg-[#0F1D3E] dark:text-white',
         className,
         {
           'border-additional-1 hover:border-additional-1 focus:border-additional-1': error,
@@ -29,6 +29,7 @@ const Field = forwardRef(({ id, fieldName, className, tag: Tag, error, ...otherP
       ref={ref}
       {...otherProps}
     />
+
     {error && (
       <span className="absolute top-[calc(100%+0.1rem)] text-xs text-additional-1">{error}</span>
     )}
