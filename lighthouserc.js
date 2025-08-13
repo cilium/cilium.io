@@ -2,16 +2,9 @@ module.exports = {
   ci: {
     collect: {
       staticDistDir: './public',
-      url: [
-        'http://localhost:9000/',
-        'http://localhost:9000/adopters/',
-        'http://localhost:9000/blog/',
-        'http://localhost:9000/#networking/',
-        'http://localhost:9000/get-involved/',
-      ],
       numberOfRuns: 1,
       settings: {
-        emulatedFormFactor: 'website',
+        emulatedFormFactor: 'Desktop',
         throttlingMethod: 'simulate',
       },
     },

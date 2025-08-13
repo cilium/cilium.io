@@ -1,31 +1,98 @@
-name: CI
-on: [push]
+name: CI - Lighthouse
+
+on:
+  pull_request:
+    branches:
+      - main
+
 jobs:
   lhci:
-    name: Lighthouse
     runs-on: ubuntu-latest
     env:
       NODE_OPTIONS: --max-old-space-size=8192
       GATSBY_CONCURRENT_DOWNLOAD: 1
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Check for Lighthouse Trigger
+        id: trigger_check
+        run: |
+          if grep -q "Lighthouse Test" <<< "${{ github.event.pull_request.body }}"; then
+            echo "should_run=true" >> $GITHUB_OUTPUT
+          else
+            echo "should_run=false" >> $GITHUB_OUTPUT
+          fi
+
+
+      - name: Extract and build URLs from PR body paths
+        id: extract
+        if: steps.trigger_check.outputs.should_run == 'true'
+        shell: bash
+        env:
+          PR_BODY: ${{ github.event.pull_request.body || '' }}
+        run: |
+          echo "$PR_BODY" > pr_body.txt
+
+          # A more robust way to read each path and build the ARGS string
+          ARGS=""
+          while read -r path; do
+            # The -n flag ensures we only process non-empty lines
+            if [ -n "$path" ]; then
+              clean_path=$(echo "$path" | sed 's/[),.;:]*$//')
+              full_url="http://localhost:9000$clean_path"
+              ARGS="$ARGS --collect.url='$full_url'"
+            fi
+          done < <(grep -Eo '^/[a-zA-Z0-9/_.-]*$' pr_body.txt || true)
+          
+          # This part remains the same
+          if [ -z "$ARGS" ]; then
+            echo "has_urls=false" >> $GITHUB_OUTPUT
+            echo "has_localhost=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          echo "ARGS=$ARGS" >> $GITHUB_ENV
+          echo "has_urls=true" >> $GITHUB_OUTPUT
+          echo "has_localhost=true" >> $GITHUB_OUTPUT
+
+      - name: Checkout code
+        if: steps.trigger_check.outputs.should_run == 'true' && steps.extract.outputs.has_localhost == 'true'
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Use Node.js 18.x
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-
-      - name: npm install, build
+      - name: Install dependencies & build
+        if: steps.trigger_check.outputs.should_run == 'true' && steps.extract.outputs.has_localhost == 'true'
         run: |
-          npm install
+          rm -rf .cache public
+          npm ci
           npm run build
 
-      - name: run Lighthouse CI
+      - name: Start static server
+        if: steps.trigger_check.outputs.should_run == 'true' && steps.extract.outputs.has_localhost == 'true'
+        shell: bash
         run: |
-          npm install -g @lhci/cli@0.15.x
-          lhci autorun
+          npx http-server ./public -p 9000 --silent &
+          TIMEOUT=60
+          COUNT=0
+          until curl -sSf http://localhost:9000/ >/dev/null; do
+            sleep 1
+            COUNT=$((COUNT+1))
+            if [ $COUNT -ge $TIMEOUT ]; then
+              echo "Server did not start within timeout"
+              exit 1
+            fi
+          done
+          echo "Local server ready"
+
+      - name: Run Lighthouse CI for supplied URLs
+        if: steps.trigger_check.outputs.should_run == 'true' && steps.extract.outputs.has_urls == 'true'
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        run: |
+          npm install -g @lhci/cli@0.15.x
+          if [ -z "${ARGS}" ]; then
+            echo "No URLs provided. Skipping LHCI."
+            exit 0
+          fi
+          echo "Running LHCI autorun with URLs: $ARGS"
+          lhci autorun $ARGS
