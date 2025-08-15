@@ -9,7 +9,7 @@ import { USE_CASE_BASE_PATH } from 'utils/routes';
 const ItemCard = ({ icon: Icon, title, path }) => (
   <Link
     to={USE_CASE_BASE_PATH + path}
-    className="group flex h-full items-center gap-x-6 rounded-lg border-2 border-gray-4 dark:border-[#4d4e4f] p-6 transition-all duration-200 dark:hover:shadow-lg hover:shadow-primary bg-white dark:bg-gray-2"
+    className="group flex h-full items-center gap-x-6 rounded-lg border-2 border-gray-4 dark:border-[#4d4e4f] p-6 transition-all duration-200 hover:shadow-primary bg-white dark:bg-gray-2 dark:hover:shadow-darkprimary"
   >
     <Icon className="h-16 w-16" />
     <Heading
