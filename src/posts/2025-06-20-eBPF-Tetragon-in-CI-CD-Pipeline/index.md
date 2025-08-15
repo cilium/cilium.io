@@ -1,5 +1,5 @@
 ---
-date: '2025-07-01T12:40:00.000Z'
+date: '2025-06-20T12:40:00.000Z'
 title: 'Shift Left with eBPF: Using Tetragon in Your CI/CD Pipeline'
 ogImage: ogimage.jpg
 ogSummary: 'Building a Professional-Grade DevSecOps Pipeline with Tetragon eBPF Security Monitoring on Azure AKS'
