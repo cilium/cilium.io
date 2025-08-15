@@ -1,5 +1,5 @@
 ---
-date: '2025-07-01T12:40:00.000Z'
+date: '2025-07-03T12:40:00.000Z'
 title: 'Automated Kubernetes Threat Detection with Tetragon and Azure Sentinel'
 ogImage: ogimage.jpg
 ogSummary: 'Building a Professional-Grade DevSecOps Pipeline with Tetragon eBPF Security Monitoring on Azure AKS'
