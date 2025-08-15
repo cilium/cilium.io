@@ -96,7 +96,9 @@ This provides real-time insights into which flows would have been denied, lettin
 
 Cilium assigns a special identity of “1” to the nodes in a cluster. We can use this identity to filter and observe the node’s network traffic.
 
-hubble observe --to-identity 1 --port 22 -f
+```shell
+    hubble observe --to-identity 1 --port 22 -f
+```
 
 ## Writing Host Network Policies
 
@@ -146,7 +148,9 @@ Once you're confident your policy won't break anything, you can disable audit mo
 
 Immediately, Cilium will begin enforcing the host policy. Any disallowed communication, like a rogue external SSH attempt, will be blocked and logged with a clear verdict:
 
-Policy verdict log: action deny, match none, 10.0.2.2:49038 -> 10.0.2.15:21 tcp SYN
+```shell
+    Policy verdict log: action deny, match none, 10.0.2.2:49038 -> 10.0.2.15:21 tcp SYN
+```
 
 Here’s an example of a real-world production policy that permits just the minimum required ingress traffic to a worker node:
 
@@ -179,11 +183,11 @@ spec:
 
 ## Best Practices and Troubleshooting Tips
 
-- **Label Nodes Clearly**: Make sure nodeSelector labels in your policy match what’s actually set on the nodes.
-- **Use Audit Mode First**: Always test in audit mode to avoid breaking the control plane or SSH access.
-- **Watch Monitor Logs**: Use cilium-dbg monitor to get clear visibility into dropped or allowed packets.
-- **Match Devices**: If host firewall seems inactive, verify that Cilium is managing the correct interfaces with cilium-dbg status.
-- **Hubble is Your Friend**: flow logs from Hubble come in very handy when writing and debugging policies.
+- **Label Nodes Clearly** : Make sure `nodeSelector` labels in your policy match what’s actually set on the nodes.
+- **Use Audit Mode First** : Always test in audit mode to avoid breaking the control plane or SSH access.
+- **Watch Monitor Logs** : Use `cilium-dbg monitor` to get clear visibility into dropped or allowed packets.
+- **Match Devices** : If host firewall seems inactive, verify that Cilium is managing the correct interfaces with `cilium-dbg status`.
+- **Hubble is Your Friend** : Flow logs from Hubble come in very handy when writing and debugging policies.
 
 ## Conclusion
 
@@ -191,7 +195,7 @@ Cilium Host Firewall brings Kubernetes-native, eBPF-powered network security to 
 
 ## Additional Resources:
 
-[Cilium Host Firewall Lab](https://isovalent.com/labs/cilium-host-firewall/)
-[eCHO Episode 40: Cilium Host Firewall](https://www.youtube.com/watch?v=GLLLcz398K0&t=288s)
-[eCHO Episode 184: Securing Kubernetes Nodes with Cilium Host Firewall](https://www.youtube.com/watch?v=fLYHG07VdNc)
-[Kubernetes Node Firewalling from the Inside Out - Jef Spaleta & Justin Garrison](https://www.youtube.com/watch?v=-3Fbb3BNjjE)
+- [Cilium Host Firewall Lab](https://isovalent.com/labs/cilium-host-firewall/)
+- [eCHO Episode 40: Cilium Host Firewall](https://www.youtube.com/watch?v=GLLLcz398K0&t=288s)
+- [eCHO Episode 184: Securing Kubernetes Nodes with Cilium Host Firewall](https://www.youtube.com/watch?v=fLYHG07VdNc)
+- [Kubernetes Node Firewalling from the Inside Out - Jef Spaleta & Justin Garrison](https://www.youtube.com/watch?v=-3Fbb3BNjjE)
