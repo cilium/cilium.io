@@ -4,6 +4,7 @@ import React from 'react';
 
 import Guidelines from 'components/pages/get-involved/guidelines';
 import ReportBugs from 'components/pages/get-involved/report-bugs';
+import CalendarIntegration from 'components/pages/get-involved/calendar-integration';
 import Subscribe from 'components/pages/get-involved/subscribe';
 import Cards from 'components/shared/cards';
 import HandsOn from 'components/shared/hands-on';
@@ -104,7 +105,7 @@ const GetInvolved = () => {
   return (
     <MainLayout theme="gray" pageMetadata={seo}>
       <HeroWithImage
-        className="pb-10 pt-5 md:pt-10 lg:py-16"
+        className="pt-5 pb-10 md:pt-10 lg:py-16"
         imgWrapperClassName="mr-0 xl:mr-8 lg:!justify-self-center"
         {...hero}
       />
@@ -116,6 +117,7 @@ const GetInvolved = () => {
       />
       <Guidelines />
       <Cards className="mt-16 md:mt-20 lg:mt-32" {...cardItems2} buttonType="link" />
+      <CalendarIntegration />
       <ReportBugs />
       <HandsOn />
       <Subscribe />
