@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { InstantSearch } from 'react-instantsearch-dom';
 import ReactModal from 'react-modal';
 
@@ -13,10 +13,36 @@ import SearchIcon from 'images/search.inline.svg';
 import Hits from './hits';
 import AlgoliaLogo from './images/algolia.inline.svg';
 import SearchInput from './input';
+import LoadingSpinner from './loadingSpinner';
 
 const Search = ({ buttonClassName, indices }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const timeoutRef = useRef(null);
+
   const { searchClient, searchQuery, setSearchQuery, onSearchStateChange } = useAlgoliaSearch();
+
+  useEffect(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    if (searchQuery?.length > 0) {
+      setIsLoading(true);
+
+      timeoutRef.current = setTimeout(() => {
+        setIsLoading(false);
+      }, 800);
+    } else {
+      setIsLoading(false);
+    }
+
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, [searchQuery]);
 
   const openModal = () => {
     setIsOpen(true);
@@ -25,10 +51,30 @@ const Search = ({ buttonClassName, indices }) => {
   const closeModal = (e) => {
     e.stopPropagation();
     setSearchQuery('');
+    setIsLoading(false);
     setIsOpen(false);
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
   };
 
-  const {isDarkMode} = useDarkMode();
+  const { isDarkMode } = useDarkMode();
+
+  const renderContent = () => {
+    if (!searchQuery?.length) {
+      return (
+        <span className="mt-16 text-lg leading-none text-black">Try searching for something</span>
+      );
+    }
+
+    if (isLoading) {
+      return <LoadingSpinner />;
+    }
+
+    return indices.map((index) => <Hits index={index} key={index.name} />);
+  };
 
   return (
     <>
@@ -63,13 +109,7 @@ const Search = ({ buttonClassName, indices }) => {
         >
           <SearchInput searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
           <div className="flex flex-col items-center w-full h-full overflow-y-auto">
-            {searchQuery?.length ? (
-              indices.map((index) => <Hits index={index} key={index.name} />)
-            ) : (
-              <span className="mt-16 text-lg leading-none text-black">
-                Try searching for something
-              </span>
-            )}
+            {renderContent()}
           </div>
         </InstantSearch>
         <div className="flex items-center justify-center w-full px-6 py-3 border-t border-gray-3 bg-gray-4 dark:border-gray-3">
