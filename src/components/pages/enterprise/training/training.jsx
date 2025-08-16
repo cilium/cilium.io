@@ -85,7 +85,7 @@ const Training = () => (
         {title}
       </Heading>
       <p
-        className="with-link-primary mx-auto mt-4 max-w-[592px] text-center text-lg"
+        className="with-link-primary mx-auto mt-4 max-w-[592px] text-center text-lg dark:text-gray-3 text-black"
         dangerouslySetInnerHTML={{ __html: description }}
       />
       <div className="mt-12 grid grid-cols-1 gap-y-8 gap-x-0 md:grid-cols-2 md:gap-x-8">
@@ -101,7 +101,18 @@ const Training = () => (
                 className="flex flex-col items-start rounded-xl bg-white dark:bg-gray-2 p-4 shadow-card sm:p-6 md:p-8"
                 key={index}
               >
-                <Logo className="h-9" />
+                <div className="w-full flex justify-start">
+                  <Logo
+                    className="h-9"
+                    style={{
+                      marginLeft: 0,
+                      alignSelf: 'flex-start',
+                      display: 'block',
+                      textAlign: 'left',
+                    }}
+                  />
+                </div>
+
                 <Heading className="mt-7" size="2xs" tag="h3">
                   {title}
                 </Heading>
