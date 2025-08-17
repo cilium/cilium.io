@@ -126,6 +126,7 @@ import PlusserverLogo from './images/plusserver.inline.svg';
 import PolarSignalsLogo from './images/polarsignals.inline.svg';
 import PolverioLogo from './images/polverio.inline.svg';
 import PostfinanceLogo from './images/postfinance.inline.svg';
+import PreferredNetworksLogo from './images/preferred.inline.svg';
 import ProtonLogo from './images/proton.inline.svg';
 import QingCloudLogo from './images/qingcloud.inline.svg';
 import QpointLogo from './images/qpoint.inline.svg';
@@ -354,6 +355,7 @@ const icons = {
   outscale: OutscaleLogo,
   ovh: OVHcloudLogo,
   openai: OpenAiLogo,
+  preferredNetworks: PreferredNetworksLogo,
 };
 
 const UserCommunity = ({

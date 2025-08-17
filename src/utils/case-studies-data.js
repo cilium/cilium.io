@@ -1611,4 +1611,8 @@ export default {
     iconName: 'ovh',
     text: '<b>OVHcloud</b> uses Cilium as the default CNI for their Managed Kubernetes Service offering',
   },
+  preferredNetworks: {
+    iconName: 'preferredNetworks',
+    text: '<b>Preferred Networks</b> uses Cilium for scalable and reliable Kubernetes networking with BGP.',
+  },
 };
