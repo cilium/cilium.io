@@ -18,9 +18,9 @@ const EventCover = ({ ogImage, title }) => {
 
   return ogImage ? (
     <GatsbyImage
-      className="h-[261px] rounded-t-lg lg:h-[180px] sm:h-[221px]"
+      className="h-[261px] rounded-t-lg lg:h-[180px] sm:h-[221px] bg-white"
       image={getImage(ogImage)}
-      objectFit="cover"
+      objectFit="contain"
       alt={title}
       loading="lazy"
     />
