@@ -15,16 +15,18 @@ const description =
   'eCHO news is your bi-weekly wrap up of all things eBPF and Cilium. If you want to keep up on the latest in cloud native networking, observability, and security this is your source';
 
 const Hero = () => {
-  const {isDarkMode} = useDarkMode();
+  const { isDarkMode, isReady } = useDarkMode();
 
   return (
-    <section className="relative pt-10 md:pt-20 bg-gray-4 dark:bg-gray-900 ">
-      <img
-        className="absolute left-1/2 bottom-0 -translate-x-1/2"
-        src={isDarkMode ? darkThemeBackgroundSvg : backgroundSvg}
-        alt=""
-        aria-hidden
-      />
+    <section className="relative pt-10 md:pt-20 bg-gray-4 dark:bg-gray-900">
+      {isReady && (
+        <img
+          className="absolute left-1/2 bottom-0 -translate-x-1/2"
+          src={isDarkMode ? darkThemeBackgroundSvg : backgroundSvg}
+          alt=""
+          aria-hidden
+        />
+      )}
       <Container className="text-center">
         <Heading tag="h1" size="lg" className="text-black dark:text-white">
           {title}
