@@ -1611,4 +1611,8 @@ export default {
     iconName: 'ovh',
     text: '<b>OVHcloud</b> uses Cilium as the default CNI for their Managed Kubernetes Service offering',
   },
+  batumbu: {
+    iconName: 'batumbu',
+    text: '<b>Batumbu</b> uses Cilium as the CNI in their GKE clusters',
+  },
 };
