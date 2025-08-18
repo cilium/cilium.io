@@ -15,7 +15,7 @@ const buttonUrl = 'mailto:security@cilium.io';
 const ReportBugs = () => (
   <section className="mt-10 mb-10">
     <Container>
-      <div className="relative flex flex-col space-y-8 overflow-hidden rounded-xl bg-dark-blue py-8 px-8 text-white md:py-10 lg:space-y-0 lg:py-14 lg:pl-16 xl:pl-20">
+      <div className="relative flex flex-col space-y-8 overflow-hidden rounded-xl bg-white dark:bg-gray-2 shadow-primary py-8 px-8 md:py-10 lg:space-y-0 lg:py-14 lg:pl-16 xl:pl-20">
         <div className="lg:max-w-[500px] xl:max-w-[550px]">
           <Heading tag="h2">{title}</Heading>
           <p className="mt-5 md:text-lg">{description}</p>
