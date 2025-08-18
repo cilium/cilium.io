@@ -10,8 +10,8 @@ const commonClassNames = 'font-bold leading-none group';
 const themeClassNames = {
   text: {
     common: 'transition-colors duration-200',
-    black: 'text-black hover:text-gray-1',
-    'black-primary': 'text-black hover:text-primary-1',
+    black: 'text-black hover:text-gray-1 dark:hover:text-blue-400',
+    'black-primary': 'text-black hover:text-primary-1 dark:hover:text-blue-400',
     primary: 'uppercase text-primary-1 text-sm hover:text-gray-1 tracking-wider',
     'primary-normal-case': 'text-primary-1 text-sm hover:text-gray-1 tracking-wider',
   },
