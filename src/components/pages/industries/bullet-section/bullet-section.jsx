@@ -43,7 +43,10 @@ const BulletSection = ({
           )}
         >
           <img
-            className={classNames('max-h-full w-full lg:max-h-[350px]', imageStyle)}
+            className={classNames(
+              'max-h-full w-full lg:max-h-[350px] bg-white rounded-lg',
+              imageStyle
+            )}
             width={592}
             height={350}
             src={imageSrc}
