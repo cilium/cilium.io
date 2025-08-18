@@ -369,7 +369,7 @@ const UserCommunity = ({
   id,
 }) => (
   <section className={classNames(className)} id={id}>
-    <Container className="flex flex-col overflow-x-hidden">
+    <Container className="flex flex-col overflow-x-hidden p-2">
       {title && (
         <Link
           className={classNames(
