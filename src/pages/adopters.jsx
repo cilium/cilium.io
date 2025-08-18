@@ -182,6 +182,7 @@ const {
   outscale,
   ovh,
   openai,
+  batumbu,
 } = caseStudiesData;
 
 const hero = {
@@ -375,6 +376,7 @@ const userCommunity2 = {
     guida,
     outscale,
     ovh,
+    batumbu,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
