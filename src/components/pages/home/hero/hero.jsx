@@ -35,7 +35,7 @@ const Hero = () => (
       </div>
       <div className=" flex justify-center col-span-full lg:col-span-6 2xl:col-span-5 mt-8 lg:mt-0 lg:block">
         <StaticImage
-          className="w-full max-w-[650px] h-auto mx-auto xl:max-w-[750px] xl:w-[750px]"
+          className="w-full max-w-[600px] h-auto mx-auto xl:max-w-[700px] xl:w-[700px]"
           src="./images/hero-illustration.svg" // StaticImage doesn't support dynamic imports
           alt={title}
           loading="eager"
