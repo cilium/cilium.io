@@ -39,6 +39,10 @@ const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
       ],
     },
     {
+      name: 'Outcomes',
+      childItems: [{ name: 'Zero Trust Networking', href: '/outcomes/zero-trust' }],
+    },
+    {
       name: 'Industries',
       childItems: [
         { name: 'Artificial Intelligence', href: '/industries/ai' },
