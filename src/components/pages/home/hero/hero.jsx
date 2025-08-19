@@ -1,17 +1,18 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
+import illustration from './images/hero-illustration.svg';
+
 const title = 'eBPF-based Networking, Observability, Security';
 const description =
   'Cilium is an open source, cloud native solution for providing, securing, and observing network connectivity between workloads, fueled by the revolutionary Kernel technology eBPF';
 
 const Hero = () => (
-  <section className="relative overflow-hidden bg-gray-4 dark:bg-gray-900 pt-5 pb-0 md:pt-8 md:pb-10 lg:pt-10 lg:pb-14">
-    <Container className="grid grid-cols-12 md:gap-x-8 items-center">
+  <section className="overflow-hidden bg-gray-4 dark:bg-gray-900 pt-5 pb-0 md:pt-16 md:pb-20 lg:pt-28 lg:pb-36">
+    <Container className="grid grid-cols-12 md:gap-x-8">
       <div className="relative z-10 col-span-full lg:col-span-6 2xl:col-span-7">
         <Heading className="dark:text-[#579dd6]" tag="h1" size="lg" asHTML>
           {title}
@@ -33,13 +34,14 @@ const Hero = () => (
           </Button>
         </div>
       </div>
-      <div className=" flex justify-center col-span-full lg:col-span-6 2xl:col-span-5 mt-8 lg:mt-0 lg:block">
-        <StaticImage
-          className="w-full max-w-[600px] h-auto mx-auto xl:max-w-[700px] xl:w-[700px]"
-          src="./images/hero-illustration.svg" // StaticImage doesn't support dynamic imports
+      <div className="relative col-span-full mt-5 flex justify-center lg:col-span-6 lg:mt-0 2xl:col-span-5 2xl:-ml-8">
+        <img
+          className="top-0 h-full w-full max-w-[512px] lg:absolute lg:-right-16 lg:h-auto lg:w-[580px] lg:max-w-max xl:-top-[74px] xl:-right-16 xl:w-max"
+          src={illustration}
           alt={title}
           loading="eager"
-          placeholder="blurred"
+          width={761}
+          height={555}
         />
       </div>
     </Container>
