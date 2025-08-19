@@ -60,11 +60,6 @@ const community = {
   description:
     'Engage with the Cilium community, participate in discussions, and contribute to the project on our community page.',
 };    
-const events = {
-  title: 'Cilium Events - Upcoming Conferences and Meetups',
-  description:
-    'Find out about upcoming Cilium events, conferences, and meetups where you can connect with the community.',
-};
 const security = {
   title: 'Cilium Security - Security Features and Best Practices',
   description:
@@ -74,11 +69,6 @@ const useCases = {
   title: 'Cilium Use Cases - Real World Applications',
   description:
     'Explore various use cases of Cilium in real-world applications and how it can benefit your organization.',
-};  
-const resources = {
-  title: 'Cilium Resources - Documentation and Guides',
-  description:
-    'Access comprehensive documentation, guides, and resources to help you effectively use Cilium in your projects.',
 };  
 const documentation = {
   title: 'Cilium Documentation - Comprehensive Guides and Tutorials',
@@ -92,4 +82,4 @@ const tutorials = {
 };  
 
 
-export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand, homepage, getStarted, blog, community, events, security, useCases, resources, documentation, tutorials};
+export { enterprise, learn, adopters, getHelp, getInvolved, tellingStory, newsletter, brand, homepage, getStarted, blog, community, events, useCases, documentation, tutorials};
