@@ -50,7 +50,7 @@ const testimonials = [
   },
   {
     logo: PreferredNetworksLogo,
-    title: 'Sidecar BGP peering pattern with Cilium at Preferred Networks',
+    title: 'Sidecar BGP Peering Pattern with Cilium at Preferred Networks',
     CTAtext: 'Watch The Talk',
     url: 'https://www.youtube.com/watch?v=n7_I4zu6f_M',
     description:
