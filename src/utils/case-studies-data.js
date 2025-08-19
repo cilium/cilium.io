@@ -1614,6 +1614,7 @@ export default {
   preferredNetworks: {
     iconName: 'preferredNetworks',
     text: '<b>Preferred Networks</b> uses Cilium for scalable and reliable Kubernetes networking with BGP.',
+  },
   batumbu: {
     iconName: 'batumbu',
     text: '<b>Batumbu</b> uses Cilium as the CNI in their GKE clusters',
