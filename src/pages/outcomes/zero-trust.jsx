@@ -41,7 +41,7 @@ const ws02Testimonial = {
   withPerson: true,
   name: 'Lakmal Warusawithana, Vice President & Distinguished Engineer',
   role: 'WS02',
-  url: 'https://wso2.com/library/blogs/how-we-implemented-zero-trust-in-choreo/',
+  url: 'https://www.cncf.io/case-studies/wso2/',
   CTAtext: 'Read The Blog',
 };
 
