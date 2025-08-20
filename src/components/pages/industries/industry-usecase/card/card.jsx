@@ -9,7 +9,10 @@ import BandWidthIcon from 'icons/highlights/bandwidth-latency-optimization.inlin
 import BGPIcon from 'icons/highlights/bgp.inline.svg';
 import EgressGatewayIcon from 'icons/highlights/egress-gateway.inline.svg';
 import EncryptionIcon from 'icons/highlights/encryption.inline.svg';
+import MulticastIcon from 'icons/highlights/multicast.inline.svg';
+import NetworkFlowIcon from 'icons/highlights/network-flow.inline.svg';
 import NetworkPolicyIcon from 'icons/highlights/network-policy.inline.svg';
+import AdvancedProtocolVisibilityIcon from 'icons/highlights/protocol-visibility.inline.svg';
 import RuntimeEnforcementIcon from 'icons/highlights/runtime-enforcement.inline.svg';
 import ScalableKubernetesIcon from 'icons/highlights/scalable-kubernetes.inline.svg';
 import ServiceMapIcon from 'icons/highlights/service-map.inline.svg';
@@ -27,6 +30,9 @@ const iconList = {
   nativeSupport: NativeSupportIcon,
   serviceMap: ServiceMapIcon,
   egressGateway: EgressGatewayIcon,
+  'protocol-visibility': AdvancedProtocolVisibilityIcon,
+  'network-flow': NetworkFlowIcon,
+  multicast: MulticastIcon,
 };
 
 const Card = ({ icon, title, description, buttonText, buttonLink, buttonTarget, className }) => {

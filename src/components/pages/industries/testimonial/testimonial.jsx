@@ -22,7 +22,9 @@ import PalarkLogo from 'icons/logo-palark.inline.svg';
 import RocheLogo from 'icons/logo-roche.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
+import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import QuoteIcon from 'icons/quote.inline.svg';
+import Wso2Logo from 'icons/wso2.inline.svg';
 
 const logos = {
   bell: BellLogo,
@@ -43,6 +45,8 @@ const logos = {
   roche: RocheLogo,
   meltwater: MeltwaterLogo,
   ecco: EccoLogo,
+  wso2: Wso2Logo,
+  utmost: UtmostLogo,
 };
 
 const AdopterTestimonial = ({
