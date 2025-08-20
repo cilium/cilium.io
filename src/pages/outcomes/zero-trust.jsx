@@ -140,7 +140,7 @@ const testimonials = [
       },
     ],
     description:
-      'To protect its infrastructure built on Kubernetes, Rabobank uses Cilium, which offers identity-aware policies and comprehensive insight into service communication. This helps the bank in meeting regulatory obligations, safeguarding sensitive financial data, and preserving a constant security posture in a variety of dynamic circumstances.',
+      'To protect its Kubernetes based infrastructure, Rabobank uses Cilium, which offers identity-aware network policies and comprehensive insight into service communication. This helps the bank meet regulatory obligations, safeguarding sensitive financial data, and maintain a constant security posture across a variety of dynamic environments.',
   },
   {
     title: 'Enforcing Zero Trust isolation in a multi-tenant platform',
