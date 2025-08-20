@@ -8,11 +8,13 @@ import ArrowIcon from 'icons/arrow.inline.svg';
 import ClickHouseLogo from 'icons/logo-clickhouse.inline.svg';
 import PostFinanceLogo from 'icons/logo-postfinance.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
+import Wso2Logo from 'icons/wso2.inline.svg';
 
 const logos = {
   clickHouse: ClickHouseLogo,
   trip: TripLogo,
   postFinance: PostFinanceLogo,
+  wso2: Wso2Logo,
 };
 
 const Stats = ({ logo, description, CTAtext, url, stats, className }) => {
@@ -60,11 +62,11 @@ const Stats = ({ logo, description, CTAtext, url, stats, className }) => {
 };
 
 Stats.defaultProps = {
-  className: {},
+  className: '',
 };
 
 Stats.propTypes = {
-  logo: PropTypes.node.isRequired,
+  logo: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   CTAtext: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,

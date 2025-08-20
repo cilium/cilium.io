@@ -10,6 +10,7 @@ const BulletSection = ({
   className,
   imageSrc,
   imageRight,
+  videoSrc,
   paragraphs,
   imageAlt,
   imageStyle,
@@ -17,7 +18,12 @@ const BulletSection = ({
 }) => (
   <section className={classNames(withBackground && 'bg-gray-4 ')}>
     <Container className={classNames('grid grid-cols-12 gap-y-6 gap-x-6 xl:gap-x-8', className)}>
-      <div className={classNames('col-span-full lg:col-span-6')}>
+      <div
+        className={classNames(
+          'col-span-full lg:col-span-5 flex flex-col justify-center',
+          !imageRight ? 'lg:col-start-8' : 'lg:col-start-1'
+        )}
+      >
         <Heading className="mb-5 leading-tight dark:text-white text-black" tag="h2" size="sm">
           {heading}
         </Heading>
@@ -33,23 +39,36 @@ const BulletSection = ({
           </p>
         ))}
       </div>
-      {imageSrc && (
+      {(imageSrc || videoSrc) && (
         <div
           className={classNames(
-            'col-span-full flex items-center justify-center justify-self-center pt-6 md:col-span-8 lg:col-span-6 lg:pt-0',
+            'col-span-full col-start-1 pt-6 md:col-span-8 md:col-start-3 lg:col-span-7 lg:pt-0',
             !imageRight
               ? 'pr-0 lg:col-start-1 lg:row-start-1 lg:pr-10 xl:pr-[72px]'
               : 'pl-0 lg:pl-10 xl:pl-[72px]'
           )}
         >
-          <img
-            className={classNames('max-h-full w-full lg:max-h-[350px]', imageStyle)}
-            width={592}
-            height={350}
-            src={imageSrc}
-            alt={imageAlt}
-            loading="lazy"
-          />
+          {imageSrc && !videoSrc && (
+            <img
+              className={classNames('h-auto w-full', imageStyle)}
+              width={592}
+              height={350}
+              src={imageSrc}
+              alt={imageAlt}
+              loading="lazy"
+            />
+          )}
+          {videoSrc && (
+            <iframe
+              className="max-h-full w-full lg:max-h-[350px] rounded"
+              width={592}
+              height={350}
+              src={videoSrc}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          )}
         </div>
       )}
     </Container>
@@ -61,6 +80,7 @@ BulletSection.propTypes = {
   paragraphs: PropTypes.arrayOf(PropTypes.string),
   className: PropTypes.string,
   imageSrc: PropTypes.string,
+  videoSrc: PropTypes.string,
   imageAlt: PropTypes.string,
   imageStyle: PropTypes.string,
   imageRight: PropTypes.bool,
@@ -70,6 +90,7 @@ BulletSection.propTypes = {
 BulletSection.defaultProps = {
   className: null,
   imageSrc: null,
+  videoSrc: null,
   imageAlt: null,
   imageStyle: '',
   paragraphs: [],

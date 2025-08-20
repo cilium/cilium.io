@@ -23,7 +23,7 @@ const navigation = [
 ];
 
 const Footer = ({ withTopBorder }) => {
-  const {isDarkMode} = useDarkMode();
+  const { isDarkMode } = useDarkMode();
 
   return (
     <footer
@@ -56,7 +56,7 @@ const Footer = ({ withTopBorder }) => {
                 {menu.map(({ name, href, target }) => (
                   <li className="inline leading-none" key={name}>
                     <Link
-                      className="dark:text-[#579dd6] text-black "
+                      className="text-black dark:text-white hover:text-blue-600 dark:hover:text-blue-400"
                       type="text"
                       to={href}
                       target={target || null}
