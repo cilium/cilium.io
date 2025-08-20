@@ -3,7 +3,6 @@ import React from 'react';
 import BulletSection from 'components/pages/industries/bullet-section';
 import Hero from 'components/pages/industries/hero';
 import IndustryUseCases from 'components/pages/industries/industry-usecase';
-import Stats from 'components/pages/industries/stats';
 import Testimonial from 'components/pages/industries/testimonial';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import Community from 'components/shared/community';
@@ -68,7 +67,6 @@ const sectionContent1 = {
   imageSrc: ZeroTrustImage1,
   imageAlt: 'cilium TLS keys and certificate illustration',
 };
-
 
 const sectionContent2 = {
   heading: 'Enforcing identity driven policies instead of IP-based rules',
@@ -242,7 +240,6 @@ const ZeroTrustNetworkingPage = () => (
     <Hero {...heroContent} imageStyle="h-auto lg:w-[400px] self-center" />
     <Testimonial {...ws02Testimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...sectionContent1} className="mt-10 md:mt-20 lg:mt-32" />
-    <Stats {...wso2Stats} className="mt-10 md:mt-20 lg:mt-32" />
     <Heading tag="h2" className="mt-10 md:mt-20 lg:mt-32 text-center dark:text-white text-black">
       How Cilium scales Zero Trust Networking
     </Heading>
