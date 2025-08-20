@@ -69,27 +69,6 @@ const sectionContent1 = {
   imageAlt: 'cilium TLS keys and certificate illustration',
 };
 
-const wso2Stats = {
-  description:
-    'WS02 is a software company that creates products for API management, enterprise integration, and identity and access management.',
-  logo: 'wso2',
-  stats: [
-    {
-      heading: '60 Trillion+',
-      subHeading: 'Transactions/year',
-    },
-    {
-      heading: '20 Trillion+',
-      subHeading: 'Managed API transactions/year',
-    },
-    {
-      heading: '1 Billion+',
-      subHeading: 'Managed Identities/year',
-    },
-  ],
-  url: 'https://www.cncf.io/case-studies/wso2/',
-  CTAtext: 'READ THE CASE STUDY',
-};
 
 const sectionContent2 = {
   heading: 'Enforce identity-driven policies instead of IP-based rules',
