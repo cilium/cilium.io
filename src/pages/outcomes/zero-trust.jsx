@@ -107,7 +107,7 @@ const sectionContent4 = {
 };
 
 const sectionContent5 = {
-  heading: 'Built-in distributed firewalling for Zero Trust at scale',
+  heading: 'Built-in distributed firewalling for Zero Trust Networking at scale',
   paragraphs: [
     'Rather than relying on centralized firewalls or sidecar proxies, Cilium enforces security policies directly at the source of traffic using eBPF inside the Linux kernel. This distributed model applies identity-aware policies consistently across all nodes, clusters, and environments, without introducing bottlenecks.',
     'With visibility and control from Layer 3 to Layer 7, Cilium prevents unauthorized lateral movement and delivers scalable, low-overhead Zero Trust enforcement across cloud native infrastructure.',
