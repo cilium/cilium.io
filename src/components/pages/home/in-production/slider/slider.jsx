@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useEffect } from 'react';
 import SlickSlider from 'react-slick';
 
 import 'slick-carousel/slick/slick-theme.css';
@@ -42,6 +42,25 @@ Arrow.defaultProps = {
 };
 
 const Slider = ({ children, className }) => {
+  useEffect(() => {
+    const showAllSlides = () => {
+      document.querySelectorAll('.slick-slide[aria-hidden]').forEach((slide) => {
+        slide.removeAttribute('aria-hidden');
+      });
+    };
+
+    showAllSlides(); // iinitial run
+
+    const observer = new MutationObserver(showAllSlides);
+    observer.observe(document.body, {
+      attributes: true,
+      subtree: true,
+      attributeFilter: ['aria-hidden'],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   const settings = {
     dots: false,
     infinite: false,

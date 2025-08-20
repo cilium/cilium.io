@@ -15,6 +15,7 @@ const description =
   'eCHO news is your bi-weekly wrap up of all things eBPF and Cilium. If you want to keep up on the latest in cloud native networking, observability, and security this is your source';
 
 const Hero = () => {
+  
   const { isDarkMode, isReady } = useDarkMode();
 
   return (
