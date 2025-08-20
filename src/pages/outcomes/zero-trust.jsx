@@ -272,3 +272,4 @@ export const Head = ({ location: { pathname } }) => {
   };
   return <SEO data={pageMetadata} />;
 };
+
