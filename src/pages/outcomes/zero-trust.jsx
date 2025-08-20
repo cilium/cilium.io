@@ -208,7 +208,7 @@ const zeroTrustSolutions = [
     icon: 'networkPolicy',
     title: 'Network Policy',
     description:
-      'Cilium implements Kubernetes Network Policies for L3/L4 level and extends with L7 policies for fine grained API-level security for common protocols such as HTTP, Kafka, gRPC, etc.',
+      'Cilium implements Kubernetes Network Policies for L3/L4 and extends them with L7 policies for fine grained API-level security of common protocols such as HTTP, Kafka, gRPC, etc.',
     buttonLink: '/use-cases/network-policy',
   },
 
