@@ -119,7 +119,7 @@ const sectionContent5 = {
 const sectionContent6 = {
   heading: 'Keep Zero Trust enforcement consistent across clusters and clouds',
   paragraphs: [
-    'Applications rarely run in just one cluster, region, or cloud. As environments grow more distributed, keeping security policies consistent across all of them becomes complex, and any gaps in enforcement across environments creates risk.',
+    'Applications rarely run in just one cluster, region, or cloud. As environments grow more distributed, keeping security policies consistent across all of them becomes complex, and any gaps in enforcement between environments creates risk.',
     'Cilium makes it simple to define and apply Zero Trust policies uniformly, no matter where your workloads run. Whether you operate in a single Kubernetes cluster, across multiple clouds, or in hybrid setups, Cilium helps ensure security stays consistent without duplication or increased complexity.',
   ],
   imageSrc: ZeroTrustImage4,
