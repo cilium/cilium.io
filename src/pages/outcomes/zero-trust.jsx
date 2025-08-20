@@ -37,7 +37,7 @@ const ws02Testimonial = {
   description:
     'WS02 is a software company that creates products for API management, enterprise integration, and identity and access management.',
   quotedText:
-    'Implementing the Zero Trust security model within Choreo using Cilium significantly bolsters our SOC2 compliance posture. The core principles of the Zero Trust model, including multi layered authentication, least privilege access, encryption, and perpetual logging and monitoring, align with the stringent operational and security control requirements of a SOC2 audit.',
+    'Implementing the Zero Trust Networking security model within Choreo using Cilium significantly bolsters our SOC2 compliance posture. The core principles of the Zero Trust model, including multi layered authentication, least privilege access, encryption, and perpetual logging and monitoring, align with the stringent operational and security control requirements of a SOC2 audit.',
   withPerson: true,
   name: ' ',
   role: 'WS02',
