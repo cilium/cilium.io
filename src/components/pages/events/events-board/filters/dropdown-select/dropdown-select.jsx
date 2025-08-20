@@ -32,7 +32,7 @@ const DropdownSelect = ({ name, items, values, onSelect, isSelected, className }
 
   useClickOutside([dropdownRef, buttonRef], handleDropdownOutsideClick);
 
-  const {isDarkMode} = useDarkMode();
+  const { isDarkMode } = useDarkMode();
 
   const iconClass = classNames(
     'text-gray-40 mt-1 h-auto w-2 shrink-0 transition-[transform,color] duration-200 group-hover:text-black',
