@@ -42,7 +42,7 @@ const ws02Testimonial = {
   name: 'Lakmal Warusawithana, Vice President & Distinguished Engineer',
   role: 'WS02',
   url: 'https://www.cncf.io/case-studies/wso2/',
-  CTAtext: 'Read The Blog',
+  CTAtext: 'Case Study',
 };
 
 const utmostTestimonial = {
