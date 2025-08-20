@@ -7,7 +7,6 @@ import Stats from 'components/pages/industries/stats';
 import Testimonial from 'components/pages/industries/testimonial';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import Community from 'components/shared/community';
-import Container from 'components/shared/container/container';
 import Heading from 'components/shared/heading';
 import SEO from 'components/shared/seo';
 import BloombergLogo from 'icons/logo-bloomberg.inline.svg';
@@ -61,7 +60,7 @@ const utmostTestimonial = {
   CTAtext: 'Read The Case Study',
 };
 
-const bulletSection1 = {
+const sectionContent1 = {
   heading: 'Keep internal traffic secure at any scale',
   paragraphs: [
     'In modern infrastructure, internal communication is often the largest and most vulnerable attack surface. In the absence of Zero Trust controls, attackers who breach one service have the ability to extend their attacks laterally, gain access to sensitive data, and escalate their attacks. For regulatory frameworks like PCI DSS, GDPR, and HIPAA, protection for internal communication is becoming increasingly necessary in order to comply, and firewall-based controls aren’t enough. Cilium helps you meet these security and compliance demands by enforcing Zero Trust networking policies that protect every connection, no matter how large or complex your environment becomes.',
@@ -93,7 +92,7 @@ const wso2Stats = {
   CTAtext: 'READ THE CASE STUDY',
 };
 
-const bulletSection2 = {
+const sectionContent2 = {
   heading: 'Enforce identity-driven policies instead of IP-based rules',
   paragraphs: [
     'As workloads scale, restart, or move across nodes and clusters, IP addresses change constantly, creating gaps or needing constant rule updates.',
@@ -106,7 +105,7 @@ const bulletSection2 = {
   imageRight: true,
 };
 
-const bulletSection3 = {
+const sectionContent3 = {
   heading: 'Enforce policies at the kernel level',
   paragraphs: [
     'Typically, enforcing Zero Trust often relies on proxies, sidecars, or userspace components to inspect and control traffic. These methods can make things more complicated to run, especially as systems scale.',
@@ -119,31 +118,27 @@ const bulletSection3 = {
   imageRight: false,
 };
 
-const bulletSection4 = {
+const sectionContent4 = {
   heading: 'Secure at the API and application layer, not just at the network layer',
   paragraphs: [
     'In cloud native environments, many microservices communicate through APIs. Traditional security solutions stop at IP addresses and ports, leaving critical API traffic and application-level interactions vulnerable to misuse. This creates blind spots that attackers can exploit once inside the network.',
     'Cilium extends Zero Trust to Layer 7, enabling network policies that inspect and control traffic based on API paths, HTTP methods, gRPC calls, DNS queries, and more. This ensures services communicate only as intended and minimizes unnecessary exposure within your environment.',
   ],
   videoSrc: 'https://www.youtube.com/embed/yikVhGM2ye8',
-  videoRight: true,
-  videoWidth: 620,
-  videoHeight: 388,
+  imageRight: true,
 };
 
-const bulletSection5 = {
+const sectionContent5 = {
   heading: 'Built-in distributed firewalling for Zero Trust at scale',
   paragraphs: [
     'Rather than relying on centralized firewalls or sidecar proxies, Cilium enforces security policies directly at the source of traffic using eBPF inside the Linux kernel. This distributed model applies identity-aware policies consistently across all nodes, clusters, and environments, without introducing bottlenecks.',
     'With visibility and control from Layer 3 to Layer 7, Cilium prevents unauthorized lateral movement and delivers scalable, low-overhead Zero Trust enforcement across cloud native infrastructure.',
   ],
   videoSrc: 'https://www.youtube.com/embed/GLLLcz398K0',
-  videoRight: false,
-  videoWidth: 560,
-  videoHeight: 388,
+  imageRight: false,
 };
 
-const bulletSection6 = {
+const sectionContent6 = {
   heading: 'Keep Zero Trust enforcement consistent across clusters and clouds',
   paragraphs: [
     'Applications rarely run in just one cluster, region, or cloud. As environments grow more distributed, keeping security policies consistent across all of them becomes complex, and any gaps in enforcement across environments creates risk.',
@@ -266,72 +261,18 @@ const zeroTrustSolutions = [
 
 const ZeroTrustNetworkingPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="h-auto lg:w-[350px]" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[400px] self-center" />
     <Testimonial {...ws02Testimonial} className="mt-10 md:mt-20 lg:mt-32" />
-    <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...sectionContent1} className="mt-10 md:mt-20 lg:mt-32" />
     <Stats {...wso2Stats} className="mt-10 md:mt-20 lg:mt-32" />
-    <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
-    <BulletSection {...bulletSection3} className="mt-10 md:mt-20 lg:mt-32" />
-    <section className="mt-10 md:mt-20 lg:mt-32">
-      <Container className="grid grid-cols-12 gap-y-6 gap-x-6 xl:gap-x-8">
-        <div className="col-span-full lg:col-span-6">
-          <Heading className="mb-5 leading-tight dark:text-white text-black" tag="h2" size="sm">
-            {bulletSection4.heading}
-          </Heading>
-          {bulletSection4.paragraphs.map((paragraph, index) => (
-            <p
-              key={index}
-              className={`dark:text-gray-2 text-black ${index < bulletSection4.paragraphs.length - 1 ? 'mb-4' : ''}`}
-            >
-              {paragraph}
-            </p>
-          ))}
-        </div>
-        <div className="col-span-full flex items-center justify-center justify-self-center pt-6 md:col-span-8 lg:col-span-6 lg:pt-0 pl-0 lg:pl-10 xl:pl-[72px]">
-          <div className="w-full max-w-[600px] aspect-video">
-            <iframe
-              className="h-full w-full rounded"
-              src={bulletSection4.videoSrc}
-              title={bulletSection4.heading}
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </Container>
-    </section>
-
-    <section className="mt-10 px-10 md:mt-20 lg:mt-32">
-      <Container className="grid grid-cols-12 gap-y-6 gap-x-6 xl:gap-x-8">
-        <div className="col-span-full flex items-center justify-center justify-self-center pt-6 md:col-span-8 lg:col-span-6 lg:pt-0 pr-0 lg:col-start-1 lg:row-start-1 lg:pr-10 xl:pr-[72px]">
-          <div className="w-full max-w-[600px] aspect-video">
-            <iframe
-              className="h-full w-full rounded"
-              src={bulletSection5.videoSrc}
-              title={bulletSection5.heading}
-              loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            />
-          </div>
-        </div>
-        <div className="col-span-full lg:col-span-6">
-          <Heading className="mb-5 leading-tight dark:text-white text-black" tag="h2" size="sm">
-            {bulletSection5.heading}
-          </Heading>
-          {bulletSection5.paragraphs.map((paragraph, index) => (
-            <p
-              key={index}
-              className={`dark:text-gray-2 text-black ${index < bulletSection5.paragraphs.length - 1 ? 'mb-4' : ''}`}
-            >
-              {paragraph}
-            </p>
-          ))}
-        </div>
-      </Container>
-    </section>
-    <BulletSection {...bulletSection6} className="mt-10 px-10 md:mt-20 lg:mt-32" />
+    <Heading tag="h2" className="mt-10 md:mt-20 lg:mt-32 text-center dark:text-white text-black">
+      How Cilium scales Zero Trust Networking
+    </Heading>
+    <BulletSection {...sectionContent2} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...sectionContent3} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...sectionContent4} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...sectionContent5} className="mt-10 md:mt-20 lg:mt-32" />
+    <BulletSection {...sectionContent6} className="mt-10 md:mt-20 lg:mt-32" />
     <Testimonial {...utmostTestimonial} className="my-10 md:my-20 lg:my-32" />
     <UseCaseCard
       heading="Who’s using Cilium for Zero Trust Networking"
