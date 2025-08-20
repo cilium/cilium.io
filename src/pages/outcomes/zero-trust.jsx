@@ -55,7 +55,7 @@ const utmostTestimonial = {
   ],
   withPerson: true,
   name: 'Andrew Holt',
-  role: 'Senior Systems Engineer, Utmost.',
+  role: 'Senior Systems Engineer, Utmost',
   url: 'https://www.cncf.io/case-studies/utmost/',
   CTAtext: 'Read The Case Study',
 };
