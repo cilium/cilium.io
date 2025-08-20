@@ -25,7 +25,7 @@ Earlier this year, the community gathered in London during KubeCon + CloudNative
 
 KubeCon keynote attendees also heard the latest Cilium updates from Liz Rice from reporting live at London landmarks. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/thCrfsVJz4g?si=4a6jFCWO0Vs3HmKn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/thCrfsVJz4g?si=4a6jFCWO0Vs3HmKn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Contributors also gathered during the [Cilium Developer Summit](https://github.com/cilium/dev-summits/tree/main/2025-EU) to discuss the future of the Cilium project. Representatives from Google, Isovalent, Microsoft, Seznam, and more discussed the status of existing and new features like Cluster Mesh and StateDB-based load balancing and the project roadmap.
 
@@ -178,13 +178,13 @@ Most mTLS solutions in Kubernetes are tightly coupled to service meshes or L7 pr
 
 [TikTok's IPv6 Journey To Cilium: Pitfalls and Lessons Learned - Giri Kuncoro & Joseph Pallamidessi, ByteDance](https://kccncna2025.sched.com/event/27FbS/tiktoks-ipv6-journey-to-cilium-pitfalls-and-lessons-learned-giri-kuncoro-joseph-pallamidessi-bytedance?iframe=yes&w=100%&sidebar=yes&bg=no)
 
-Wednesday, November 12, 4:45pm - 5:15 PM
+Wednesday, November 12, 4:45 - 5:15 PM
 
 Cilium has been the standard for Kubernetes networking and security. TikTok migrated clusters to use Cilium for its advanced security features like mutual authentication, along with high performance networking and enhanced observability. The main challenge was executing this on TikTok IPv6 only datacenters, as Cilium has been battle tested with IPv4 and dual-stack, but not with IPv6 only environments.
 
 This talk shares the journey of making Cilium work for IPv6 only Kubernetes, highlighting the limitations and techniques to overcome them. First, Cilium doesn't support tunneling over IPv6, native routing mode must be configured. Second, we encountered several bugs related to IPv6 only: NDP traffic getting dropped by Cilium Network Policy due to incorrect identification; DNS policy not allowing traffic for IPv6 DNS servers; broken cilium debug tools when IPv4 related BPF maps not found. Finally, the NodePort timeout issue was blocking us from enabling Cilium to fully replace kube-proxy.
 
 
-**Cilium Project Booth:** FBe sure to visit Cilium’s booth in the Project Pavilion to see live demos, explore new features, and connect with the community.
+**Cilium Project Booth:** Be sure to visit Cilium’s booth in the Project Pavilion to see live demos, explore new features, and connect with the community.
 
 Whether you are attending hands-on workshops, lightning talks, or networking with industry peers, you will find countless opportunities to interact with the Cilium community. Be sure to stop by with any questions or just say hello!
