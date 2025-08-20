@@ -100,7 +100,7 @@ const sectionContent4 = {
   heading: 'Secure at the API and application layer, not just at the network layer',
   paragraphs: [
     'In cloud native environments, many microservices communicate through APIs. Traditional security solutions stop at IP addresses and ports, leaving critical API traffic and application-level interactions vulnerable to misuse. This creates blind spots that attackers can exploit once inside the network.',
-    'Cilium extends Zero Trust to Layer 7, enabling network policies that inspect and control traffic based on API paths, HTTP methods, gRPC calls, DNS queries, and more. This ensures services communicate only as intended and minimizes unnecessary exposure within your environment.',
+    'Cilium extends Zero Trust Networking to Layer 7, enabling network policies that inspect and control traffic based on API paths, HTTP methods, gRPC calls, DNS queries, and more. This ensures services communicate only as intended and minimizes unnecessary exposure within your environment.',
   ],
   videoSrc: 'https://www.youtube.com/embed/yikVhGM2ye8',
   imageRight: true,
