@@ -74,7 +74,7 @@ const sectionContent2 = {
   heading: 'Enforce identity-driven policies instead of IP-based rules',
   paragraphs: [
     'As workloads scale, restart, or move across nodes and clusters, IP addresses change constantly, creating gaps or needing constant rule updates.',
-    'Cilium solves this by applying security policies tied to Kubernetes-native identities like service accounts, pod labels, and namespaces. These identities stay consistent even as workloads shift or restart, so policies automatically follow the right services wherever they run, removing the need to manage static network rules and ensuring reliable Zero Trust enforcement at scale.',
+    'Cilium solves this by applying security policies tied to Kubernetes-native identities like service accounts, pod labels, and namespaces. These identities stay consistent even as workloads shift or restart, so policies automatically follow the correct services wherever they run, removing the need to manage static network rules and ensuring reliable Zero Trust Networking enforcement at scale.',
   ],
   imageSrc: ZeroTrustImage2,
   imageWidth: 624,
