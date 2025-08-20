@@ -86,7 +86,7 @@ const sectionContent2 = {
 const sectionContent3 = {
   heading: 'Enforce policies at the kernel level',
   paragraphs: [
-    'Typically, enforcing Zero Trust often relies on proxies, sidecars, or userspace components to inspect and control traffic. These methods can make things more complicated to run, especially as systems scale.',
+    'Typically, enforcing Zero Trust Networking relies on proxies, sidecars, or userspace components to inspect and control traffic. These methods can make things more complicated to run, especially as systems scale.',
     'Cilium takes a different approach by using eBPF to apply security policies directly in the Linux kernel. This allows high-performance enforcement at the source of the traffic without extra components in the data path. The result is fast, low-latency security that scales cleanly with your infrastructure.',
   ],
   imageSrc: ZeroTrustImage3,
