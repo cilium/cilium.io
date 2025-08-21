@@ -9,6 +9,7 @@ import BandWidthIcon from 'icons/highlights/bandwidth-latency-optimization.inlin
 import BGPIcon from 'icons/highlights/bgp.inline.svg';
 import EgressGatewayIcon from 'icons/highlights/egress-gateway.inline.svg';
 import EncryptionIcon from 'icons/highlights/encryption.inline.svg';
+import KubeProxyIcon from 'icons/highlights/kubeproxy.inline.svg';
 import MulticastIcon from 'icons/highlights/multicast.inline.svg';
 import NetworkFlowIcon from 'icons/highlights/network-flow.inline.svg';
 import NetworkPolicyIcon from 'icons/highlights/network-policy.inline.svg';
@@ -30,6 +31,7 @@ const iconList = {
   nativeSupport: NativeSupportIcon,
   serviceMap: ServiceMapIcon,
   egressGateway: EgressGatewayIcon,
+  kubeProxy: KubeProxyIcon,
   'protocol-visibility': AdvancedProtocolVisibilityIcon,
   'network-flow': NetworkFlowIcon,
   multicast: MulticastIcon,

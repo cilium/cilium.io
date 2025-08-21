@@ -5,6 +5,7 @@ import Container from 'components/shared/container/container';
 import Link from 'components/shared/link/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
 import EccoLogo from 'icons/ecco.inline.svg';
+import AlibabaCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import AzureLogo from 'icons/logo-azure.inline.svg';
 import BellLogo from 'icons/logo-bell.inline.svg';
@@ -13,6 +14,7 @@ import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import DatadogLogo from 'icons/logo-datadog.inline.svg';
 import DbSchenkerLogo from 'icons/logo-dbschenker.inline.svg';
 import EficodeLogo from 'icons/logo-efficode.inline.svg';
+import GDataLogo from 'icons/logo-gdata.inline.svg';
 import GoogleCloudLogo from 'icons/logo-googlecloud.inline.svg';
 import HetznerLogo from 'icons/logo-hetzner.inline.svg';
 import KubeEdgeLogo from 'icons/logo-kubeedge.inline.svg';
@@ -22,6 +24,7 @@ import PalarkLogo from 'icons/logo-palark.inline.svg';
 import RocheLogo from 'icons/logo-roche.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
+import TripLogo from 'icons/logo-trip.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import QuoteIcon from 'icons/quote.inline.svg';
 import Wso2Logo from 'icons/wso2.inline.svg';
@@ -47,6 +50,9 @@ const logos = {
   ecco: EccoLogo,
   wso2: Wso2Logo,
   utmost: UtmostLogo,
+  alibaba: AlibabaCloudLogo,
+  trip: TripLogo,
+  gdata: GDataLogo,
 };
 
 const AdopterTestimonial = ({
