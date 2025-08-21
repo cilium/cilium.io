@@ -2,7 +2,6 @@
 path: '/blog/2025/08/20/cilium-at-kubecon-na-2025'
 date: '2025-08-20T12:00:00.000Z'
 title: 'Cilium at KubeCon + CloudNativeCon and CiliumCon North America 2025'
-isFeatured: true
 ogImage: kubeconcover.png
 ogSummary: 'Learn how to engage with the Cilium community at KubeCon + CloudNativeCon North America 2025'
 categories:
