@@ -108,7 +108,7 @@ const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
     <div className="bg-gray-4 dark:bg-gray-900">
       <TopBanner
         text="Join us for KubeCon NA and CiliumCon 2025"
-        url="cillium.io/blog/2025/08/20/cilium-at-kubecon-na-2025"
+        url="cilium.io/blog/2025/08/20/cilium-at-kubecon-na-2025"
       />
       <Header
         navigation={navigation}
