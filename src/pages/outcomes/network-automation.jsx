@@ -123,7 +123,7 @@ const sectionContent5 = {
   heading: 'eBPF programs the network in the kernel',
   paragraphs: [
     'Rather than relying on centralized firewalls or sidecar proxies, Cilium enforces security policies directly at the source of traffic using eBPF inside the Linux kernel. This distributed model applies identity-aware policies consistently across all nodes, clusters, and environments, without introducing bottlenecks.',
-    'With visibility and control from Layer 3 to Layer 7, Cilium prevents unauthorized lateral movement and delivers scalable, low-overhead Zero Trust enforcement across cloud native infrastructure.',
+    'With visibility and control from Layer 3 to Layer 7, Cilium prevents unauthorized lateral movement and delivers scalable, low-overhead [Zero Trust Networking](https://cilium.io/outcomes/zero-trust/) enforcement across cloud native infrastructure.',
   ],
   imageSrc: AutomationImage4,
   imageWidth: 624,
