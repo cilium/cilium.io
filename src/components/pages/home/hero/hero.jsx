@@ -1,9 +1,10 @@
-import { StaticImage } from 'gatsby-plugin-image';
 import React from 'react';
 
 import Button from 'components/shared/button';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
+
+import illustration from './images/hero-illustration.svg';
 
 const title = 'eBPF-based Networking, Observability, Security';
 const description =
@@ -34,9 +35,9 @@ const Hero = () => (
         </div>
       </div>
       <div className="relative col-span-full mt-5 flex justify-center lg:col-span-6 lg:mt-0 2xl:col-span-5 2xl:-ml-8">
-        <StaticImage
+        <img
           className="top-0 h-full w-full max-w-[512px] lg:absolute lg:-right-16 lg:h-auto lg:w-[580px] lg:max-w-max xl:-top-[74px] xl:-right-16 xl:w-max"
-          src="./images/hero-illustration.svg" // StaticImage doesn't support dynamic imports
+          src={illustration}
           alt={title}
           loading="eager"
           width={761}
