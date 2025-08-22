@@ -76,7 +76,7 @@ const sectionContent1 = {
   heading: 'Make your networking configuration as dynamic as your workloads',
   paragraphs: [
     'As workloads in cloud native environments scale, shift, and redeploy across clusters and clouds, manual network configuration quickly becomes unsustainable. Engineers are left to manage rigid IP rules, duplicate policies across environments, and react to changes rather than design systems that adapt automatically.',
-    'Cilium addresses this by making networking programmable and declarative. It allows teams to specify intent once, using workload identity and Kubernetes-native components, and then trust that connectivity, security, and observability will respond in real time as the environment changes. This means less time spent developing and debugging YAML, fewer outages due to misconfigured rules, and increased confidence when deploying infrastructure or adding new services.',
+    'Cilium addresses this by making the network programmable and declarative. It allows teams to specify intent once, using workload identity and Kubernetes-native components, and then trust that connectivity, security, and observability will respond in real time as the environment changes. This means less time spent developing and debugging YAML, fewer outages due to misconfigured rules, and increased confidence when deploying infrastructure or adding new services.',
     'By removing manual steps from the networking stack, Cilium helps platform and security teams move faster, reduce risk, and operate more reliably in even the most dynamic environments.',
   ],
   imageSrc: AutomationImage1,
