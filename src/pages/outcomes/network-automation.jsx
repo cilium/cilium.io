@@ -31,29 +31,32 @@ const heroContent = {
   imageAlt: 'network bee',
 };
 
-const AlibabaCloudTestimonial = {
-  logo: 'alibaba',
+const IlionxTestimonial = {
+  logo: 'ilionx',
   description:
-    'Alibaba Cloud is a leading cloud computing and artificial intelligence service provider in Asia.',
-  quotedText:
-    'After Cilium and eBPF simplified our network, the performance improved significantly by 32% compared to when iptables was used, and 62% compared to IPVS mode.',
+    'Ilionx is an IT services company that provides consulting and solutions in cloud, data, security, and digital transformation',
+  quotedText: [
+    'If I use Cilium network policies and the API from Kubernetes I can automate everything easier. I can educate the development teams on how to use their own network policies and how to make a fence around their own application making it almost completely self-service.',
+    'Everything that we can do with CIlium network policies makes automation better. It’s really easy. The self-service makes it a lot more sellable and usable to our development teams.',
+  ],
   withPerson: true,
-  name: 'BoKang Li',
-  role: 'Senior Engineer, Alibaba Cloud',
-  url: 'https://www.cncf.io/case-studies/alibaba',
+  name: 'Remy Simons',
+  role: 'Managing Consultant – Cloud/Platform Engineer, Ilionx',
+  url: 'https://www.cncf.io/case-studies/ilionx',
   CTAtext: 'Read The Case Study',
 };
 
-const TripTestimonial = {
-  logo: 'trip',
+const RabobankTestimonial = {
+  logo: 'rabobank',
   description:
-    'Trip.com is a global online travel agency offering comprehensive travel services, including flights, hotels, and tours.',
-  quotedText:
-    'We tried Flannel and Calico and to extend our own solution to support Kubernetes, but found that Cilium’s approach of replacing iptables with eBPF and removing kube-proxy created a much more performant and scalable solution. With Cilium, we have very fast IPAM and it just scales even with thousands of nodes in the clusters.',
+    'Rabobank is a global cooperative bank headquartered in the Netherlands, specializing in food and agriculture financing, retail banking, and sustainable financial services.',
+  quotedText: [
+    'We had to migrate 400 teams and it was a lot of work. That’s also why we did a lot of automation, to make it easy for the users themselves. If you give teams the power, they already have the best knowledge of what they need to do. With Cilium now in place, almost no maintenance needs to be done by our team, besides upgrading Cilium once in a while.',
+  ],
   withPerson: true,
-  name: 'Jaff Cheng',
-  role: 'Senior Software Developer, Trip.com',
-  url: 'https://www.cncf.io/case-studies/trip-com-group/',
+  name: 'Frank Potter',
+  role: 'Devops Engineer, Rabobank',
+  url: 'https://www.cncf.io/case-studies/rabobank/',
   CTAtext: 'Read The Case Study',
 };
 
@@ -228,9 +231,10 @@ const AutomationSolutions = [
 
 const NetworkAutomationPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="h-auto lg:w-[400px] self-center" />
-    <Testimonial {...AlibabaCloudTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[300px] mx-auto" />
+    <Testimonial {...GDataTestimonial} className="my-10 md:my-20 lg:my-32" />
     <BulletSection {...sectionContent1} className="mt-10 md:mt-20 lg:mt-32" />
+    <Testimonial {...IlionxTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <Heading tag="h2" className="mt-10 md:mt-20 lg:mt-32 text-center dark:text-white text-black">
       How Cilium Delivers Network Automation
     </Heading>
@@ -239,9 +243,8 @@ const NetworkAutomationPage = () => (
     <BulletSection {...sectionContent4} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...sectionContent5} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...sectionContent6} className="mt-10 md:mt-20 lg:mt-32" />
-    <Testimonial {...GDataTestimonial} className="my-10 md:my-20 lg:my-32" />
+    <Testimonial {...RabobankTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <UseCaseCard heading="Who’s using Cilium for Network Automation" testimonials={testimonials} />
-    <Testimonial {...TripTestimonial} className="my-10 md:my-20 lg:my-32" />
     <IndustryUseCases
       heading="Cilium’s Solutions for Network Automation"
       usecases={AutomationSolutions}

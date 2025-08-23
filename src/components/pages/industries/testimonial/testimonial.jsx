@@ -17,6 +17,7 @@ import EficodeLogo from 'icons/logo-efficode.inline.svg';
 import GDataLogo from 'icons/logo-gdata.inline.svg';
 import GoogleCloudLogo from 'icons/logo-googlecloud.inline.svg';
 import HetznerLogo from 'icons/logo-hetzner.inline.svg';
+import IlionxLogo from 'icons/logo-ilionx.inline.svg';
 import KubeEdgeLogo from 'icons/logo-kubeedge.inline.svg';
 import MeltwaterLogo from 'icons/logo-meltwater.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
@@ -27,6 +28,7 @@ import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import QuoteIcon from 'icons/quote.inline.svg';
+import RabobankLogo from 'icons/rabobank.inline.svg';
 import Wso2Logo from 'icons/wso2.inline.svg';
 
 const logos = {
@@ -44,7 +46,9 @@ const logos = {
   azure: AzureLogo,
   googleCloud: GoogleCloudLogo,
   hetzner: HetznerLogo,
+  ilionx: IlionxLogo,
   kubeedge: KubeEdgeLogo,
+  rabobank: RabobankLogo,
   roche: RocheLogo,
   meltwater: MeltwaterLogo,
   ecco: EccoLogo,
