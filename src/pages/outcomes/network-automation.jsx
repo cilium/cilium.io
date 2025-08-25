@@ -36,7 +36,7 @@ const IlionxTestimonial = {
   description:
     'Ilionx is an IT services company that provides consulting and solutions in cloud, data, security, and digital transformation',
   quotedText: [
-    'If I use Cilium network policies and the API from Kubernetes I can automate everything easier. I can educate the development teams on how to use their own network policies and how to make a fence around their own application making it almost completely self-service.',
+    'If I use Cilium network policies and the API from Kubernetes I can automate everything more easily. I can educate the development teams on how to use their own network policies and how to make a fence around their own application making it almost completely self-service. ',
     'Everything that we can do with CIlium network policies makes automation better. It’s really easy. The self-service makes it a lot more sellable and usable to our development teams.',
   ],
   withPerson: true,
@@ -65,7 +65,7 @@ const GDataTestimonial = {
   description:
     'G DATA CyberDefense is a cybersecurity company specializing in antivirus software, threat detection, and IT security solutions.',
   quotedText: [
-    'In our platform, we have a diverse application set. Every team can choose to work in the programming language of their choice – we have Java, C#, Python, and Go. With Kubernetes and Cilium, we can streamline the process so that not everyone has to manage security policies.',
+    'In our platform, we have a diverse application set. Every team can choose to work in the programming language of their choice – we have Java, C#, Python, and Go. With Kubernetes and Cilium, we can streamline the process so that not everyone has to manage security policies. ',
     'Previously, we had to contact our IT department and submit a ticket for them to manually make changes to network policy. Now developers can self-service, which speeds up the development process for the application teams and also increases our security on the backend.',
   ],
   withPerson: true,

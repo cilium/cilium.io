@@ -22,13 +22,13 @@ import KubeEdgeLogo from 'icons/logo-kubeedge.inline.svg';
 import MeltwaterLogo from 'icons/logo-meltwater.inline.svg';
 import NewYorkTimesLogo from 'icons/logo-newyork.inline.svg';
 import PalarkLogo from 'icons/logo-palark.inline.svg';
+import RabobankLogo from 'icons/logo-rabobank.inline.svg';
 import RocheLogo from 'icons/logo-roche.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
 import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import QuoteIcon from 'icons/quote.inline.svg';
-import RabobankLogo from 'icons/rabobank.inline.svg';
 import Wso2Logo from 'icons/wso2.inline.svg';
 
 const logos = {
