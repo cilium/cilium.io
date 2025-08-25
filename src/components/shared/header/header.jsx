@@ -104,7 +104,7 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
                   indices={searchIndices}
                 />
               )}
-              <ul className="flex items-center lg:space-x-6 2xl:space-x-11">
+              <ul className="flex items-center lg:space-x-5 2xl:space-x-9">
                 {navigation.map((item, index) => {
                   if (item.isThemeToggle) {
                     const ThemeIcon = item.name;

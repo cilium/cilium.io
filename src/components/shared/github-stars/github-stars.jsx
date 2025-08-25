@@ -29,7 +29,7 @@ const GithubStars = ({ className }) => {
       >
         <div className="flex h-full items-center space-x-1.5 border-r border-gray-3 px-2 xs:px-3">
           <GithubLogo className="h-5 w-5" />
-          <span className="dark:text-gray-2 text-black">GitHub Stars</span>
+          <span className="dark:text-gray-2 text-black">Stars</span>
         </div>
         <div className="px-2 dark:text-gray-2 text-black xs:px-3">
           <span>{`${(parseInt(githubStars.replace(/,/g, ''), 10) / 1000).toFixed(1)}k`}</span>
