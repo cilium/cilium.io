@@ -107,7 +107,7 @@ const testimonials = [
       },
     ],
     description:
-      'SmartNews adopted Cilium to reduce the compute and cost impact of Kubernetes networking. With eBPF-based routing and automated policy enforcement, they reduced the number of nodes needed to run their workloads efficiently and improved resource efficiency, and direct savings on infrastructure and energy.',
+      'SmartNews adopted Cilium to reduce the compute and cost impact of Kubernetes networking. With eBPF-based routing and automated policy enforcement, they reduced the number of nodes needed to run their workloads which improved resource efficiency and had direct savings for infrastructure and energy costs.',
   },
   {
     title: 'Lowering network costs while debugging faster',
