@@ -78,7 +78,15 @@ const AdopterTestimonial = ({
         <div className="grid grid-cols-12 gap-4 divide-y divide-gray-3 dark:divide-gray-600 md:gap-6 lg:gap-8 lg:divide-x lg:divide-y-0">
           <figure className="col-span-12 flex flex-col items-center justify-between gap-y-6 text-center lg:col-span-8">
             <QuoteIcon className="inline-block w-4 lg:w-4" />
-            <blockquote className="flex-1 text-lg">{quotedText}</blockquote>
+            <blockquote className="flex-1 text-lg">
+              {Array.isArray(quotedText)
+                ? quotedText.map((text, index) => (
+                    <p key={index} className={index > 0 ? 'mt-4' : undefined}>
+                      {text}
+                    </p>
+                  ))
+                : quotedText}
+            </blockquote>
             {withPerson && (
               <figcaption>
                 <span className="text-sm font-bold">{name}</span> —{' '}
@@ -111,7 +119,8 @@ const AdopterTestimonial = ({
 
 AdopterTestimonial.propTypes = {
   description: PropTypes.string.isRequired,
-  quotedText: PropTypes.string.isRequired,
+  quotedText: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
+    .isRequired,
   CTAtext: PropTypes.string,
   withPerson: PropTypes.bool,
   className: PropTypes.string,
