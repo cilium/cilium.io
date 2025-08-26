@@ -37,7 +37,7 @@ const EccoTestimonial = {
   ],
   withPerson: true,
   name: 'George Zubrienko',
-  role: 'Data & AI lead platform engineer, ECCO',
+  role: 'Lead Platform Engineer, ECCO Data & AI',
   url: 'https://www.cncf.io/case-studies/ecco/',
   CTAtext: 'Read The Case Study',
 };
