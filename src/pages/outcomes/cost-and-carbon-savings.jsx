@@ -31,7 +31,7 @@ const heroContent = {
 const EccoTestimonial = {
   logo: 'ecco',
   description:
-    'ECCO’s IT infrastructure, nearly 100% Kubernetes-based, is designed to facilitate machine learning (ML) workflows that enable intelligent decision making and supply chain management.',
+    'ECCO's Data & AI infrastructure is designed to facilitate machine learning (ML) workflows that enable intelligent decision making and supply chain management.',
   quotedText: [
     'Our new storage system and networking setup powered by Cilium provided up to a 50% reduction in storage operational cost, and it’s all thanks to Cilium enabling a more efficient network. Even with IPv6 networks, enabling Cilium was just a flip of a switch. It was surprisingly straightforward.',
   ],
