@@ -31,7 +31,7 @@ const heroContent = {
 const EccoTestimonial = {
   logo: 'ecco',
   description:
-    'ECCO's Data & AI infrastructure is designed to facilitate machine learning (ML) workflows that enable intelligent decision making and supply chain management.',
+    "ECCO's Data & AI infrastructure is designed to facilitate machine learning (ML) workflows that enable intelligent decision making and supply chain management.",
   quotedText: [
     'Our new storage system and networking setup powered by Cilium provided up to a 50% reduction in storage operational cost, and it’s all thanks to Cilium enabling a more efficient network. Even with IPv6 networks, enabling Cilium was just a flip of a switch. It was surprisingly straightforward.',
   ],
@@ -131,6 +131,10 @@ const testimonials = [
       {
         CTAtext: 'Read The Case Study',
         url: 'https://www.cncf.io/case-studies/seznam/',
+      },
+      {
+        CTAtext: 'Read The Blog',
+        url: 'https://cilium.io/blog/2022/04/12/cilium-standalone-l4lb-xdp/',
       },
     ],
   },
