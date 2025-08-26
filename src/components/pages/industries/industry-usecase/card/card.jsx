@@ -7,6 +7,7 @@ import Link from 'components/shared/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
 import BandWidthIcon from 'icons/highlights/bandwidth-latency-optimization.inline.svg';
 import BGPIcon from 'icons/highlights/bgp.inline.svg';
+import ClusterMeshIcon from 'icons/highlights/connectivity.inline.svg';
 import EgressGatewayIcon from 'icons/highlights/egress-gateway.inline.svg';
 import EncryptionIcon from 'icons/highlights/encryption.inline.svg';
 import KubeProxyIcon from 'icons/highlights/kubeproxy.inline.svg';
@@ -25,6 +26,7 @@ const iconList = {
   serviceMesh: ServiceMeshIcon,
   scalableKubernetes: ScalableKubernetesIcon,
   bgp: BGPIcon,
+  clusterMesh: ClusterMeshIcon,
   encryption: EncryptionIcon,
   networkPolicy: NetworkPolicyIcon,
   runtimeEnforcement: RuntimeEnforcementIcon,

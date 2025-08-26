@@ -30,6 +30,7 @@ import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import QuoteIcon from 'icons/quote.inline.svg';
+import SicrediLogo from 'icons/sicredi.inline.svg';
 import Wso2Logo from 'icons/wso2.inline.svg';
 
 const logos = {
@@ -38,6 +39,7 @@ const logos = {
   ascend: AscendLogo,
   cilium: CiliumLogo,
   seznam: SeznamLogo,
+  sicredi: SicrediLogo,
   newYorkTimes: NewYorkTimesLogo,
   bloomberg: BloombergLogo,
   dbSchenker: DbSchenkerLogo,
