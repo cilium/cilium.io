@@ -217,7 +217,7 @@ export default SavingsPage;
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
-    description: 'How Cilium delivers Network Automation',
+    description: 'How Cilium delivers Cost and Carbon Savings',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
