@@ -16,7 +16,7 @@ const TopBanner = ({ text, url }) => {
       type="text"
       to={url}
     >
-      <span className="truncate !font-normal">{text}</span>
+      <span className="!font-normal">{text}</span>
       <span className="hidden sm:block border-l border-current pl-3.5 text-15 font-semibold tracking-tight whitespace-nowrap">
         Learn more
       </span>
