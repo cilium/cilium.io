@@ -5,6 +5,7 @@ import Container from 'components/shared/container/container';
 import Link from 'components/shared/link/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
 import EccoLogo from 'icons/ecco.inline.svg';
+import KakaoLogo from 'icons/kakao.inline.svg';
 import AlibabaCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import AzureLogo from 'icons/logo-azure.inline.svg';
@@ -47,6 +48,7 @@ const logos = {
   googleCloud: GoogleCloudLogo,
   hetzner: HetznerLogo,
   ilionx: IlionxLogo,
+  kakao: KakaoLogo,
   kubeedge: KubeEdgeLogo,
   rabobank: RabobankLogo,
   roche: RocheLogo,

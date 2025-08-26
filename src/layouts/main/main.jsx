@@ -43,6 +43,7 @@ const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
       childItems: [
         { name: 'Zero Trust Networking', href: '/outcomes/zero-trust' },
         { name: 'Network Automation', href: '/outcomes/network-automation' },
+        { name: 'Cost and Carbon Savings', href: '/outcomes/cost-and-carbon-savings' },
       ],
     },
     {
