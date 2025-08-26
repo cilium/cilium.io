@@ -139,7 +139,7 @@ const testimonials = [
     title: 'Cutting storage costs and cloud networking complexity',
 
     description:
-      'ECCO chose Cilium with Cluster Mesh to simplify multi-cluster communication and avoid costly cloud load balancers and NAT gateways. This decreased storage costs by 50% and reduced latency by over 30%. ',
+      'ECCO chose Cilium Cluster Mesh to simplify multi-cluster communication and avoid costly cloud load balancers and NAT gateways. This decreased storage costs by 50% and reduced latency by over 30%. ',
     CTAs: [
       {
         CTAtext: 'Read The Case Study',
