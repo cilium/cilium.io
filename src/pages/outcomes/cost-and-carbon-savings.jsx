@@ -80,7 +80,7 @@ const sectionContent3 = {
   paragraphs: [
     'Particularly when used at scale, other CNIs may require large blocks of IP addresses for every node, limiting pod density and resulting in wasted resources. Because Cilium manages IP allocation more efficiently, you can run more pods per node without running out of IPs. This improves resource utilisation and decreases infrastructure and electricity costs by reducing the number of nodes needed.',
   ],
-  videoSrc: 'https://www.youtube.com/embed/yikVhGM2ye8',
+  videoSrc: 'https://www.youtube.com/embed/p7SSZMlelGA',
   imageRight: false,
 };
 
