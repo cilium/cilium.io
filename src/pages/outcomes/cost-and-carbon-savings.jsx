@@ -47,7 +47,7 @@ const KakaoTestimonial = {
   description:
     'Kakao Corp is a South Korean company known for its popular messaging application, KakaoTalk, that serves over 50 million users. They not only help people stay connected but also offer additional services such as maps, comics, online shopping, banking, taxis, and more.',
   quotedText: [
-    'As an engineer, I can say that Cilium has lowered our costs for performance and network. Because we have so many clusters and nodes, we always need more machines for new services to be served. By reducing network costs and CPU consumption with Cilium, we can manage with fewer nodes. Compared to kube-proxy, Calico, or Flannel, Cilium offers more value in that aspect.',
+    'As an engineer, I can say that Cilium lowered our costs for performance and networking. Because we have so many clusters and nodes, we always need more machines for new services to be served. By reducing network costs and CPU consumption with Cilium, we can manage with fewer nodes. Compared to kube-proxy, Calico, or Flannel, Cilium offers more value.',
   ],
   withPerson: true,
   name: 'Kwang Hun Choi',
