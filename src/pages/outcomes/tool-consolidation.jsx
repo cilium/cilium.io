@@ -57,7 +57,7 @@ const MeltwaterTestimonial = {
 const sectionContent1 = {
   heading: 'Replacing a patchwork of tools with Cilium',
   paragraphs: [
-    'Managing and integrating multiple tools for service mesh, firewalling, load balancing, ingress, observability, and policy enforcement slows teams down. Cilium helps teams consolidate without compromise as one platform for traffic flow, service discovery, API-aware security, and real-time network visibility. This reduces operational costs, accelerates onboarding, and improves performance, while maintaining full control.',
+    'Managing and integrating multiple tools for service mesh, firewalling, load balancing, ingress, observability, and policy enforcement slows teams down. Cilium helps teams consolidate without compromise with one tool for managing network traffic, service discovery, API-aware security, and real-time network visibility. This reduces operational costs, accelerates onboarding, and improves performance, while maintaining full control.',
   ],
   imageSrc: ToolImage1,
   imageAlt: 'cilium as a replacement for other tools',
