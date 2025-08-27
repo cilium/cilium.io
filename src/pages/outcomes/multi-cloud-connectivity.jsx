@@ -72,7 +72,7 @@ const sectionContent2 = {
   heading: 'Trusted across cloud providers',
   paragraphs: [
     'Cilium powers the default networking for major Kubernetes platforms like GKE, EKS-A, and AKS, and is trusted by leading organizations operating at scale. Its performance and security model have been validated across a wide range of public clouds, private data centers, and edge environments, making it a reliable foundation for multi-cloud and hybrid infrastructure.',
-    "Whether you're running in one cloud or many, Cilium makes sure your clusters have consistent performance and security.",
+    "Whether you're running in one cloud or many, Cilium makes sure your clusters have consistent connectivity, performance, and security.",
   ],
   imageSrc: CloudImage2,
   imageAlt: 'cilium big tcp stats',
