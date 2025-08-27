@@ -167,7 +167,7 @@ const MultiCloudPage = () => (
     <Hero {...heroContent} imageStyle="h-auto lg:w-[280px] mx-auto" />
     <Testimonial {...SicrediTestimonial} className="my-10 md:my-20 lg:my-32" />
     <Heading tag="h2" className="mt-10 md:mt-20 lg:mt-32 text-center dark:text-white text-black">
-      How Cilium enables Multi-cloud Connectivity
+      How Cilium enables Multi-Cloud Connectivity
     </Heading>
     <BulletSection {...sectionContent1} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...sectionContent2} className="mt-10 md:mt-20 lg:mt-32" />
