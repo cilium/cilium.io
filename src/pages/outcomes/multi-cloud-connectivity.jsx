@@ -157,7 +157,7 @@ const MultiCloudSolutions = [
     icon: 'clusterMesh',
     title: 'Cluster Mesh',
     description:
-      'Cluster Mesh enhances service high availability and fault tolerance. It supports the operation of Kubernetes clusters across multiple regions or availability zones. If resources become temporarily unavailable, are misconfigured in one cluster, or offline for upgrades, it enables failover to other clusters, ensuring your services remain accessible at all times.',
+      'By bridging Kubernetes clusters, Cluster Mesh enhances service availability and fault tolerance. It supports the operation of Kubernetes clusters across multiple regions or availability zones. If resources become temporarily unavailable, are misconfigured in one cluster, or offline for upgrades, it enables failover to other clusters, ensuring your services remain accessible at all times.',
     buttonLink: '/use-cases/cluster-mesh',
   },
 ];
