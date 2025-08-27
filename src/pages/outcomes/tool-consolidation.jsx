@@ -103,7 +103,7 @@ const testimonials = [
       },
     ],
     description:
-      "DigitalOcean replaced Flannel in DOKS with Cilium for better multi-tenant isolation, IPAM simplification, and observability. Cilium's robust network policies, default-deny mode, and Hubble unified security, troubleshooting, and scalability across internal and customer clusters without patchwork.",
+      "DigitalOcean replaced Flannel in DOKS with Cilium for better multi-tenant isolation, IPAM simplification, and observability. Cilium's robust network policies, default-deny mode, and Hubble unified security, troubleshooting, and scalability across internal and customer clusters.",
   },
   {
     title: 'Unified networking and observability for MetaKube',
