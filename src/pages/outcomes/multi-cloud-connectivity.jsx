@@ -90,7 +90,7 @@ const testimonials = [
       },
     ],
     description:
-      "Sicredi, Brazil's largest credit union cooperative, chose CIlium to resolve the persistent Kubernetes networking issues they faced, including production outages. Cluster Mesh lets Sicredi connect workloads across data centres and clouds using a dependable service network. This enables secure multi-cluster communication, platform resiliency, and microservices architecture scaling to serve over 7.5 million subscribers.",
+      "Sicredi, Brazil's largest credit union cooperative, chose Cilium to resolve the persistent Kubernetes networking issues they faced. Cluster Mesh lets Sicredi connect workloads across data centers and clouds using a dependable service network. This enables secure multi-cluster communication, platform resiliency, and a microservices architecture scaling to serve over 7.5 million customers.",
   },
   {
     title: 'Scaling secure payments across regions',
