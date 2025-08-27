@@ -85,7 +85,7 @@ const sectionContent3 = {
 const sectionContent4 = {
   heading: 'Enforce policies at Layer 3 to Layer 7',
   paragraphs: [
-    'Unlike traditional firewalls, Cilium enforces identity-aware policies tied to Kubernetes primitives and inspects traffic all the way up to Layer 7. That means you can secure microservices based on actual behavior, from DNS queries to API calls, without additional moving parts. ',
+    'Unlike traditional firewalls, Cilium enforces identity-aware policies tied to Kubernetes primitives and inspects traffic all the way up to Layer 7. That means you can secure microservices based on actual behavior, from DNS queries to API calls, without additional tooling. ',
   ],
   imageSrc: ToolImage2,
   imageAlt: 'l3 - l7 policy illustration',
