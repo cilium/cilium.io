@@ -46,7 +46,7 @@ const SicrediTestimonial = {
 const AscendTestimonial = {
   logo: 'ascend',
   description:
-    'Ascend is a data automation platform that runs a lot of batch and short lived workloads to ingest, transform, and orchestrate customer data.',
+    'Ascend is a data automation platform that runs batch and short lived workloads to ingest, transform, and orchestrate customer data.',
   quotedText: [
     'A lot has changed since we first started adopting Cilium. The industry has become more clear with Cilium becoming the de facto networking layer for all three clouds. The last one that really sent it home was the Azure switching to using Cilium as their CNI.',
     'This brings us consistency across all clouds wherever our customers are. For points of leverage to reduce the amount of work that we need to do overall, this consistency is a major one of them. It allows us to know what we’re working with everywhere and we have the same networking layer in all three clouds.',
