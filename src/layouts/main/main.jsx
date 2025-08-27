@@ -44,6 +44,7 @@ const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
         { name: 'Zero Trust Networking', href: '/outcomes/zero-trust' },
         { name: 'Network Automation', href: '/outcomes/network-automation' },
         { name: 'Cost and Carbon Savings', href: '/outcomes/cost-and-carbon-savings' },
+        { name: 'Multi-Cloud Connectivity', href: '/outcomes/multi-cloud-connectivity' },
       ],
     },
     {
