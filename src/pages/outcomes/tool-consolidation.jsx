@@ -67,7 +67,7 @@ const sectionContent1 = {
 const sectionContent2 = {
   heading: 'Consolidating your networking stack',
   paragraphs: [
-    'With Cilium, you get high-performance networking, API-aware security, and deep observability in a single agent powered by eBPF. It removes the need for standalone network plugins, sidecar-based service meshes, and third-party observability layers, while integrating natively with Kubernetes.',
+    'With Cilium, you get high-performance networking, API-aware security, and deep observability in a single tool powered by eBPF. It removes the need for standalone network plugins, sidecar-based service meshes, and third-party observability layers, while integrating natively with Kubernetes.',
   ],
   videoSrc: 'https://www.youtube.com/embed/bIRwSIwNHC0',
   imageRight: true,
