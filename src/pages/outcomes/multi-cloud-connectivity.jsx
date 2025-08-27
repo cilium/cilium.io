@@ -164,8 +164,8 @@ const MultiCloudSolutions = [
 
 const MultiCloudPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="h-auto lg:w-[200px] mx-auto" />
-    <Testimonial {...SicrediTestimonial} className="my-10 md:my-20 lg:my-32" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[180px] mx-auto self-center" />
+    <Testimonial {...SicrediTestimonial} className="my- md:my-8 lg:my-12" />
     <Heading tag="h2" className="mt-10 md:mt-20 lg:mt-32 text-center dark:text-white text-black">
       How Cilium enables Multi-Cloud Connectivity
     </Heading>
