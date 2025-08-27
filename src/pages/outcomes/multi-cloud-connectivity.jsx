@@ -19,7 +19,7 @@ import CloudImage2 from 'images/pages/outcomes/multi-cloud-connectivity/multi-cl
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
-  heading: 'Multi-cloud Connectivity',
+  heading: 'Multi-Cloud Connectivity',
   tagline: 'Seamless service-to-service communication across clouds, clusters, and regions.',
   texts: [
     'Connecting workloads across multiple clouds is often fragile and complex, introducing issues like overlapping IPs and inconsistent rules. Cilium solves this with a unified, eBPF-powered network that offers native service discovery, identity-aware security, and scalable performance that works wherever your infrastructure lives.',
