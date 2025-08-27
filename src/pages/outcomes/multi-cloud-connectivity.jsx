@@ -34,7 +34,7 @@ const SicrediTestimonial = {
     'Sicredi is Brazil’s first credit union with more than 120 years of experience in the business and over 7.5 million members.',
   quotedText: [
     'Cilium Cluster Mesh gave us possibilities that we didn’t have before. We can run the same application across our data centers and AWS. It provides us with a consistent networking experience wherever we need to go.',
-    'Applications in different clusters can communicate with each other without needing to go through an ingress controller. We are expanding this capability for more applications because this value is already proven. Cluster Mesh works, it’s fast, and it’s reliable',
+    'Applications in different clusters can communicate with each other without needing to go through an ingress controller. We are expanding this capability for more applications because this value is already proven. Cluster Mesh works, it’s fast, and it’s reliable.',
   ],
   withPerson: true,
   name: 'Matheus Morais',
