@@ -164,7 +164,7 @@ const MultiCloudSolutions = [
 
 const MultiCloudPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="h-auto lg:w-[280px] mx-auto" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[200px] mx-auto" />
     <Testimonial {...SicrediTestimonial} className="my-10 md:my-20 lg:my-32" />
     <Heading tag="h2" className="mt-10 md:mt-20 lg:mt-32 text-center dark:text-white text-black">
       How Cilium enables Multi-Cloud Connectivity
@@ -173,11 +173,11 @@ const MultiCloudPage = () => (
     <BulletSection {...sectionContent2} className="mt-10 md:mt-20 lg:mt-32" />
     <Testimonial {...AscendTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <UseCaseCard
-      heading="Who’s using Cilium for multi-cloud connectivity"
+      heading="Who’s using Cilium for multi-Cloud connectivity"
       testimonials={testimonials}
     />
     <IndustryUseCases
-      heading="Cilium’s Solutions for Multi–cloud Connectivity"
+      heading="Cilium’s Solutions for Multi–Cloud Connectivity"
       usecases={MultiCloudSolutions}
     />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
@@ -190,7 +190,7 @@ export default MultiCloudPage;
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
-    description: 'How Cilium enables Multi-cloud Connectivity',
+    description: 'How Cilium enables Multi-Cloud Connectivity',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
