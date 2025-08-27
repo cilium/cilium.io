@@ -115,7 +115,7 @@ const testimonials = [
       },
     ],
     description:
-      'SysEleven chose Cilium for its simplicity, eBPF foundation, and native Kubernetes integration. The switch updated their networking stack, including kube-proxy, doubled throughput, and enabled deep observability with Hubble.',
+      'SysEleven chose Cilium for its simplicity, native Kubernetes integration, and foundation based on eBPF. The switch simplified their networking stack, including removing kube-proxy, doubling throughput, and enabling deep observability with Hubble.',
   },
   {
     logo: MeltwaterLogo,
