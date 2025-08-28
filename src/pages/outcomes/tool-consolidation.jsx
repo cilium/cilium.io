@@ -161,6 +161,20 @@ const ToolConsolidationSolutions = [
       'Replace static, manual routing with dynamic, scalable control. Cilium’s BGP integration allows seamless communication across complex topologies, enabling native routing between clusters, clouds, and data centers, without external routing daemons or added tooling.',
     buttonLink: '/use-cases/kube-proxy',
   },
+  {
+    icon: 'nativeSupport',
+    title: 'Layer 4 Load Balancer',
+    description:
+      "Cilium's high performance, robust load balancing implementation is tuned for the scale and churn of cloud native environments. You can replace expensive legacy boxes in your network with Cilium as a standalone load balancer.",
+    buttonLink: '/use-cases/load-balancer',
+  },
+  {
+    icon: 'serviceMesh',
+    title: 'Service Mesh',
+    description:
+      'Cilium Service Mesh redefines traditional service mesh frameworks by integrating the mesh layer directly into the kernel using eBPF, thus eliminating the need for sidecar proxies.',
+    buttonLink: '/use-cases/service-mesh',
+  },
 ];
 
 const ToolConsolidationPage = () => (
