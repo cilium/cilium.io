@@ -172,7 +172,7 @@ const ToolConsolidationSolutions = [
     icon: 'serviceMesh',
     title: 'Service Mesh',
     description:
-      'Cilium Service Mesh redefines traditional service mesh frameworks by integrating the mesh layer directly into the kernel using eBPF, thus eliminating the need for sidecar proxies.',
+      'Cilium Service Mesh redefines traditional service mesh frameworks by managing connectivity at both the network and application layers, handling protocols like IP, TCP, UDP, HTTP, Kafka, gRPC, and DNS with great efficiency. It replaces the overhead of sidecar proxies with eBPF in the kernel for better performance and simplified lifecycle management.',
     buttonLink: '/use-cases/service-mesh',
   },
 ];
