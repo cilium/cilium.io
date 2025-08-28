@@ -14,9 +14,9 @@ tags:
 
 ![](cover.png)
 
-_June 19th, 2025_
+**_June 19th, 2025_**
 
-_Author: Paul Arah, Isovalent@Cisco_
+**_Author: Paul Arah, Isovalent@Cisco_**
 
 ## Installing Cilium on EKS in ENI Mode
 
