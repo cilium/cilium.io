@@ -165,7 +165,7 @@ const ToolConsolidationSolutions = [
     icon: 'nativeSupport',
     title: 'Layer 4 Load Balancer',
     description:
-      "Cilium's high performance, robust load balancing implementation is tuned for the scale and churn of cloud native environments. You can replace expensive legacy boxes in your network with Cilium as a standalone load balancer.",
+      "Cilium's high performance standalone layer 4 load balancer is tuned for the scale and churn of cloud native environments. Replace expensive legacy boxes in your network and integrate directly into Kubernetes with Cilium.",
     buttonLink: '/use-cases/load-balancer',
   },
   {
