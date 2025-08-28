@@ -27,6 +27,7 @@ import PalarkLogo from 'icons/logo-palark.inline.svg';
 import RabobankLogo from 'icons/logo-rabobank.inline.svg';
 import RocheLogo from 'icons/logo-roche.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
+import SysElevenLogo from 'icons/logo-syseleven.inline.svg';
 import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
@@ -41,6 +42,7 @@ const logos = {
   cilium: CiliumLogo,
   seznam: SeznamLogo,
   sicredi: SicrediLogo,
+  syseleven: SysElevenLogo,
   newYorkTimes: NewYorkTimesLogo,
   bloomberg: BloombergLogo,
   dbSchenker: DbSchenkerLogo,

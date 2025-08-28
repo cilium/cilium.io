@@ -10,7 +10,7 @@ import Heading from 'components/shared/heading';
 import SEO from 'components/shared/seo';
 import DigitalOceanLogo from 'icons/digitalocean.inline.svg';
 import MeltwaterLogo from 'icons/logo-meltwater.inline.svg';
-import SysElevenLogo from 'icons/syseleven.inline.svg';
+import SysElevenLogo from 'icons/logo-syseleven.inline.svg';
 import ToolBee from 'images/pages/outcomes/tool-consolidation/tool-bee.png';
 import ToolImage1 from 'images/pages/outcomes/tool-consolidation/tool-image-1.png';
 import ToolImage2 from 'images/pages/outcomes/tool-consolidation/tool-image-2.webp';
@@ -26,17 +26,17 @@ const heroContent = {
   imageAlt: 'tool bee',
 };
 
-const DigitalOceanTestimonial = {
-  logo: 'digitalocean',
+const SysElevenTestimonial = {
+  logo: 'syseleven',
   description:
-    'DigitalOcean is a cloud service provider with a target market of small to medium-sized businesses, developers, and startups.',
+    'SysEleven is a cloud and managed services provider that specializes in scalable infrastructure, Kubernetes, and reliable hosting solutions.',
   quotedText: [
-    'Cilium brings a lot of network features that we could not offer otherwise because they’re complicated to develop. It enables a more intelligent network than just having a flat layer three for your Kubernetes clusters. Additionally, aspects of network management, such as IPAM, have become much easier with Cilium.',
+    'Cilium replaced everything that previously had anything to do with networking. In one sense, it’s just a CNI plugin, but on the other hand, it can also remove the need for so many other tools, like Kube-Proxy.',
   ],
   withPerson: true,
-  name: 'Ingo Gottwald',
-  role: 'Senior Engineer, DigitalOcean',
-  url: 'https://www.cncf.io/case-studies/digitalocean/',
+  name: 'Josef Mende',
+  role: 'Technical Lead & Product Owner for MetaKube, SysEleven',
+  url: 'https://www.cncf.io/case-studies/syseleven/',
   CTAtext: 'Read The Case Study',
 };
 
@@ -167,7 +167,7 @@ const ToolConsolidationPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} imageStyle="h-auto lg:w-[180px] mx-auto self-center" />
     <BulletSection {...sectionContent1} className="my- md:my-8 lg:my-12" />
-    <Testimonial {...DigitalOceanTestimonial} className="my- md:my-8 lg:my-12" />
+    <Testimonial {...SysElevenTestimonial} className="my- md:my-8 lg:my-12" />
     <Heading tag="h2" className="mt-10 md:mt-20 lg:mt-32 text-center dark:text-white text-black">
       How Cilium enables Tool Consolidation
     </Heading>
