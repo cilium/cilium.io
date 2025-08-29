@@ -4,6 +4,7 @@ import React from 'react';
 import Container from 'components/shared/container/container';
 import Link from 'components/shared/link/link';
 import ArrowIcon from 'icons/arrow.inline.svg';
+import DigitalOceanLogo from 'icons/digitalocean.inline.svg';
 import EccoLogo from 'icons/ecco.inline.svg';
 import KakaoLogo from 'icons/kakao.inline.svg';
 import AlibabaCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
@@ -26,6 +27,7 @@ import PalarkLogo from 'icons/logo-palark.inline.svg';
 import RabobankLogo from 'icons/logo-rabobank.inline.svg';
 import RocheLogo from 'icons/logo-roche.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
+import SysElevenLogo from 'icons/logo-syseleven.inline.svg';
 import TrendyolLogo from 'icons/logo-trendyol.inline.svg';
 import TripLogo from 'icons/logo-trip.inline.svg';
 import UtmostLogo from 'icons/logo-utmost.inline.svg';
@@ -40,9 +42,11 @@ const logos = {
   cilium: CiliumLogo,
   seznam: SeznamLogo,
   sicredi: SicrediLogo,
+  syseleven: SysElevenLogo,
   newYorkTimes: NewYorkTimesLogo,
   bloomberg: BloombergLogo,
   dbSchenker: DbSchenkerLogo,
+  digitalocean: DigitalOceanLogo,
   trendyol: TrendyolLogo,
   eficode: EficodeLogo,
   palark: PalarkLogo,
