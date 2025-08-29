@@ -59,16 +59,6 @@ const items = [
     buttonLink: 'https://training.linuxfoundation.org/training/introduction-to-cilium-lfs146x/',
     buttonTarget: '_blank',
   },
-  {
-    logoName: 'soloio',
-    title: 'Introduction to Cilium',
-    description:
-      'In this workshop, you will learn the essential skills to deploy the Cilium CNI on a test Kubernetes cluster, gather metrics, and enforce network policies.',
-    buttonText: 'Get Started',
-    buttonLink:
-      'https://academy.solo.io/introduction-to-cilium-with-fundamentals-for-cilium-certification',
-    buttonTarget: '_blank',
-  },
 ];
 
 const promo = {
