@@ -231,8 +231,8 @@ const AutomationSolutions = [
 
 const NetworkAutomationPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="h-auto lg:w-[300px] mx-auto" />
-    <Testimonial {...GDataTestimonial} className="my-10 md:my-20 lg:my-32" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[200px] mx-auto self-center" />
+    <Testimonial {...GDataTestimonial} className="my- md:my-2 lg:my-2" />
     <BulletSection {...sectionContent1} className="mt-10 md:mt-20 lg:mt-32" />
     <Testimonial {...IlionxTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <Heading tag="h2" className="mt-10 md:mt-20 lg:mt-32 text-center dark:text-white text-black">
