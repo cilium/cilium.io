@@ -2,8 +2,8 @@ import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
-import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import AlibabCloudLogo from 'icons/logo-alibaba-cloud.inline.svg';
 import AWSLogo from 'icons/logo-aws.inline.svg';
@@ -156,7 +156,7 @@ const CniPage = () => (
       heading="Who’s using Cilium for High Performance Cloud Native Networking(CNI)"
       testimonials={testimonials}
     />
-    <JoinUsCard />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

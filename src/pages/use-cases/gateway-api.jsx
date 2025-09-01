@@ -2,7 +2,7 @@ import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
-import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import GatewayImage1 from 'images/pages/usecase/gateway-1.png';
 import GatewayImage2 from 'images/pages/usecase/gateway-2.png';
@@ -60,7 +60,7 @@ const GatewayAPIPage = () => (
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
     <FeatureSection {...sectionContent4} />
-    <JoinUsCard className="pt-10 md:pt-20 lg:pt-28" />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

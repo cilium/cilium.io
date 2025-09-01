@@ -2,8 +2,8 @@ import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
-import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 import BandWidthImage1 from 'images/pages/usecase/bandwidth-1.png';
@@ -71,7 +71,7 @@ const BandwidthLatencyPage = () => (
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
     <UseCaseCard heading="Learn More About Cilium’s Big TCP Feature" testimonials={testimonials} />
-    <JoinUsCard />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

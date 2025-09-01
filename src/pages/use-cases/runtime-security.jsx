@@ -2,8 +2,8 @@ import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
-import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import EbayLogo from 'icons/ebay.inline.svg';
 import FRSCALogo from 'icons/logo-frsca.inline.svg';
@@ -118,7 +118,7 @@ const RuntimeSecurityPage = () => (
       heading="Who’s using  Cilium’s Tetragon for Security Observability and Runtime Enforcement?"
       testimonials={testimonials}
     />
-    <JoinUsCard />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 
