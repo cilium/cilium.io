@@ -237,8 +237,8 @@ const zeroTrustSolutions = [
 
 const ZeroTrustNetworkingPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="h-auto lg:w-[400px] self-center" />
-    <Testimonial {...ws02Testimonial} className="mt-10 md:mt-20 lg:mt-32" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[300px] self-center" />
+    <Testimonial {...ws02Testimonial} className="my- md:my-2 lg:my-2" />
     <BulletSection {...sectionContent1} className="mt-10 md:mt-20 lg:mt-32" />
     <Heading tag="h2" className="mt-10 md:mt-20 lg:mt-32 text-center dark:text-white text-black">
       How Cilium scales Zero Trust Networking
@@ -272,4 +272,3 @@ export const Head = ({ location: { pathname } }) => {
   };
   return <SEO data={pageMetadata} />;
 };
-

@@ -192,8 +192,8 @@ const SavingSolutions = [
 
 const SavingsPage = () => (
   <MainLayout theme="gray">
-    <Hero {...heroContent} imageStyle="h-auto lg:w-[280px] mx-auto" />
-    <BulletSection {...sectionContent1} className="mt-10 md:mt-20 lg:mt-32" />
+    <Hero {...heroContent} imageStyle="h-auto lg:w-[200px] mx-auto" />
+    <BulletSection {...sectionContent1} className="my- md:my-2 lg:my-2" />
     <Testimonial {...EccoTestimonial} className="my-10 md:my-20 lg:my-32" />
     <Heading tag="h2" className="mt-10 md:mt-20 lg:mt-32 text-center dark:text-white text-black">
       How Cilium Saves Money and Carbon
