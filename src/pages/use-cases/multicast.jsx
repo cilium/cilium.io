@@ -2,7 +2,7 @@ import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
-import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import CaptaineBee from 'images/pages/usecase/captain-bee.png';
 import MulticastImage1 from 'images/pages/usecase/multicast-1.webp';
@@ -48,7 +48,7 @@ const BGPPage = () => (
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
     <FeatureSection {...sectionContent2} />
-    <JoinUsCard className="pt-10" />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

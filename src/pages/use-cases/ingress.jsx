@@ -2,7 +2,7 @@ import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
-import JoinUsCard from 'components/pages/use-cases/join-us-cards';
+import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import BountyHunterBeeImage from 'images/pages/usecase/bounty-hunter-bee.png';
 import IngressImage1 from 'images/pages/usecase/ingress-1.png';
@@ -60,7 +60,7 @@ const KubeProxyReplacementPage = () => (
     <FeatureSection {...sectionContent2} />
     <FeatureSection {...sectionContent3} />
     <FeatureSection {...sectionContent4} />
-    <JoinUsCard className="pt-8" />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

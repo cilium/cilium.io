@@ -2,8 +2,8 @@ import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
-import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import PalantirLogo from 'icons/logo-palantir.inline.svg';
@@ -80,7 +80,7 @@ const ProtocolVisibilityPage = () => (
       heading="Who’s using Cilium’s for Advanced Network Protocol Visibility?"
       testimonials={testimonials}
     />
-    <JoinUsCard />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

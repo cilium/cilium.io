@@ -2,8 +2,8 @@ import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
-import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import CosmonicLogo from 'icons/logo-cosmonic.inline.svg';
@@ -65,7 +65,7 @@ const TransparentEncryptionPage = () => (
       heading="Who’s using Cilium’s Transparent Encryption?"
       testimonials={testimonials}
     />
-    <JoinUsCard />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 

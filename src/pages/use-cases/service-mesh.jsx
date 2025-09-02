@@ -2,8 +2,8 @@ import React from 'react';
 
 import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
-import JoinUsCard from 'components/pages/use-cases/join-us-cards';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
+import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
 import DBSchenkerLogo from 'images/pages/usecase/dbschenker.inline.svg';
 import NYTimesLogo from 'images/pages/usecase/nyt.inline.svg';
@@ -127,7 +127,7 @@ const ServiceMeshPage = () => (
     <FeatureSection {...sectionContent4} />
     <FeatureSection {...sectionContent5} />
     <UseCaseCard heading="Who’s using Cilium's Service Mesh" testimonials={testimonials} />
-    <JoinUsCard className="pt-10 md:pt-20 lg:pt-28" />
+    <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 
