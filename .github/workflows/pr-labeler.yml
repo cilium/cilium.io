@@ -1,0 +1,23 @@
+name: 'PR Labeler'
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Apply PR labels based on files
+        uses: actions/labeler@v3
+        with:
+          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+
+      - name: Add "needs-review" label
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: needs-review

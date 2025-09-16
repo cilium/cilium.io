@@ -1,0 +1,33 @@
+bug:
+  - 'src/**/*.js'
+  - 'src/**/*.jsx'
+  - 'src/**/*.ts'
+  - 'src/**/*.tsx'
+
+feature:
+  - 'src/components/**'
+  - 'src/pages/**'
+  - 'src/templates/**'
+  - 'src/hooks/**'
+
+docs:
+  - 'docs/**'
+  - 'README.md'
+  - 'CONTRIBUTING.md'
+  - 'src/posts/**'
+
+chore:
+  - 'package.json'
+  - 'package-lock.json'
+  - 'Makefile'
+  - '.github/**'
+  - 'gatsby-config.js'
+  - 'gatsby-node.js'
+  - 'gatsby-browser.js'
+  - 'gatsby-ssr.js'
+  - 'Dockerfile'
+
+# Images or media updates
+images:
+  - 'src/images/**'
+  - 'static/**'
