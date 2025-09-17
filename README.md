@@ -48,7 +48,7 @@
     - [ESLint](#eslint)
     - [Prettier](#prettier)
     - [VS Code](#vs-code)
-  - [Development Commands](#development-commands)
+    - [Development Commands](#development-commands)
   - [How to create blog post](#how-to-create-blog-post)
 
 ## Contributing
@@ -74,6 +74,18 @@ npm install
 ```bash
 cp .env.example .env
 ```
+
+**Note:** This project includes a Makefile with all the development commands.
+
+You can quickly set up the project using:
+
+```bash
+make env     # Setup environment file
+make install # Install dependencies
+make start   # Start the development server
+```
+
+Explore the [Development Commands](#development-commands) section for more available options.
 
 ## Usage
 
@@ -231,11 +243,11 @@ To enable Prettier go to Preferences -> Settings -> type "Format". Then check th
 
 Reload VS Code and auto-format will work for you.
 
-## Development Commands
+### Development Commands
 
 This project uses a Makefile to simplify common tasks. Below are the available commands:
 
-```
+```bash
 make install       # Install dependencies
 make env           # Setup environment file (.env)
 make start         # Start dev server (fast, skips image processing)
