@@ -37,7 +37,12 @@ const InstallDeploy = () => (
       </Heading>
       <div className="grid grid-cols-1 mt-8 gap-x-8 gap-y-8 md:mt-12 md:grid-cols-12 md:gap-y-12 lg:mt-16 lg:gap-y-16">
         <Podcasts className="md:col-span-6 lg:col-span-5" />
-        <List className="md:col-start-7 md:col-end-13 lg:col-end-12" {...featuredBlogs} />
+        <List
+          className="md:col-start-7 md:col-end-13 lg:col-end-12
+                     [&_a]:transition-colors [&_a]:text-black [&_a:hover]:text-hover-1
+                     dark:[&_a]:text-white"
+          {...featuredBlogs}
+        />
       </div>
     </Container>
   </section>
