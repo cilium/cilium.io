@@ -39,8 +39,8 @@ const InstallDeploy = () => (
         <Podcasts className="md:col-span-6 lg:col-span-5" />
         <List
           className="md:col-start-7 md:col-end-13 lg:col-end-12
-                     [&_a]:transition-colors [&_a]:text-black [&_a:hover]:text-hover-1
-                     dark:[&_a]:text-white"
+                     [&_a]:transition-colors [&_a]:text-black dark:[&_a]:text-white
+                     [&_a:hover]:text-[#3399FF]"
           {...featuredBlogs}
         />
       </div>
