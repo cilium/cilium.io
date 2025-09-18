@@ -112,7 +112,7 @@ Whichever option you choose, the common theme is that you’re navigating the Li
 
 ## Process Management
 
-In the kernel's view, every running program is represented by a task_struct data structure. This massive structure (over 1,000 lines in recent kernels) contains everything the kernel needs to know about a process, including the process and thread group IDs (PID/TGID), memory management information, file descriptor table, security credentials, scheduling information, and signal handling state.
+In the kernel's view, every running program is represented by a `task_struct` data structure. This massive structure (over 1,000 lines in recent kernels) contains everything the kernel needs to know about a process, including the process and thread group IDs (PID/TGID), memory management information, file descriptor table, security credentials, scheduling information, and signal handling state.
 When your Tetragon examines process-related information, it is often looking at fields within the current process's task_struct. Process lifecycle monitoring is a core use case for Tetragon, and by default, without deploying any additional tracing policy, Tetragon observes the process lifecycle. The process section of the [Linux kernel teaching lab](https://linux-kernel-labs.github.io/refs/heads/master/lectures/processes.html) covers in detail how processes work in Linux.
 
 ### Process Monitoring with Tetragon
