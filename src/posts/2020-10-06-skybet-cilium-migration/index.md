@@ -54,7 +54,7 @@ an [overlay network](https://en.wikipedia.org/wiki/Overlay_network) using the
 (VXLAN)](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN) protocol. Another
 project, [Calico](https://www.projectcalico.org), can be run as either a
 standalone CNI solution or on top of Flannel (called
-[Canal](https://docs.projectcalico.org/getting-started/kubernetes/flannel/flannel))
+[Canal](https://docs.tigera.io/calico/latest/getting-started/kubernetes/flannel))
 to provide network policy enforcement.
 
 While using Flannel and Calico together is a solid solution, it can have

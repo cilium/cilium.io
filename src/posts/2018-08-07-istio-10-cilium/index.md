@@ -250,7 +250,6 @@ in particular important if the data is being used to authorize a request.
 ## Summary
 
 - **Increased Istio Security:**
-
   - **Least privilege security inside of pod:** By locking down communication
     on container and process level inside of the pod using socket-aware BPF
     programs, a security breach in one of the containers no longer leads to the
@@ -294,4 +293,4 @@ If you are interested to learn more:
 
 - **[Try a Getting Started Guide](http://docs.cilium.io/en/stable/gettingstarted/)**
 - **[Learn more about Cilium concepts](http://docs.cilium.io/en/stable/concepts/)**
-- **[Join our Slack channel](https://cilium.io/slack)**
+- **[Join our Slack channel](https://slack.cilium.io/)**

@@ -223,6 +223,6 @@ To make sharing network policy examples easy, we have added a simple Share butto
 
 Tweet us at <a href="https://twitter.com/@ciliumproject" target="_blank">@ciliumproject</a> to share your examples, and in the next few weeks we’ll pick a few favorites and send the creators some exclusive Cilium SWAG!
 
-We’d love to hear your feedback and questions on both the editor and Network Policy in the **#networkpolicy** channel of <a href="https://cilium.io/slack" target="_blank">Cilium Slack</a>. See you there!
+We’d love to hear your feedback and questions on both the editor and Network Policy in the **#networkpolicy** channel of <a href="https://slack.cilium.io/" target="_blank">Cilium Slack</a>. See you there!
 
 <BlogAuthor {...authors.sergeyGeneralov} />
