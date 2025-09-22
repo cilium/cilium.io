@@ -419,7 +419,7 @@ const logos1 = {
     'coreweave',
     'outscale',
     'ovh',
-    'fpttelecom',
+    'fptTelecom',
   ],
   spaceXSize: 'sm',
 };
