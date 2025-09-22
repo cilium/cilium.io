@@ -359,6 +359,7 @@ const icons = {
   openai: OpenAiLogo,
   preferredNetworks: PreferredNetworksLogo,
   batumbu: BatumbuLogo,
+  fptTelecom: FPTTelecomLogo,
 };
 
 const UserCommunity = ({
