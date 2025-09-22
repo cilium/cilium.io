@@ -38,6 +38,7 @@ import KubeoneLogo from './images/kubeone.inline.svg';
 import KubesprayLogo from './images/kuberspray.inline.svg';
 import NetwaysLogo from './images/netways.inline.svg';
 import NineLogo from './images/nine.inline.svg';
+import NutanixLogo from './images/nutanix.inline.svg';
 import OpenShiftLogo from './images/openshift.inline.svg';
 import OpenStackLogo from './images/openstack.inline.svg';
 import OutScaleLogo from './images/outscale.inline.svg';
@@ -57,6 +58,7 @@ const logos = {
   netways: NetwaysLogo,
   sealos: SealosLogo,
   vkcloud: VKCloudLogo,
+  nutanix: NutanixLogo,
   aws: AWSLogo,
   constellation: ConstellationLogo,
   tencentCloud: TencentCloudLogo,

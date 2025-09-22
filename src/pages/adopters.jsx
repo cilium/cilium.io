@@ -279,6 +279,7 @@ const userCommunity1 = {
     cornerBanca,
     canopus,
     bytedance,
+    nutanix,
     openai,
   ],
 };
@@ -292,7 +293,6 @@ const userCommunity2 = {
   isTitleCentered: true,
   items: [
     scigility,
-    nutanix,
     cloutomate,
     qpoint,
     seatgeek,
@@ -443,6 +443,7 @@ const logos2 = {
     'alauda',
     'kubelift',
     'guida',
+    'nutanix',
   ],
   spaceXSize: 'sm',
 };
