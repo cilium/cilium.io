@@ -1619,4 +1619,8 @@ export default {
     iconName: 'batumbu',
     text: '<b>Batumbu</b> uses Cilium as the CNI in their GKE clusters',
   },
+  fptTelecom: { 
+    iconName: 'fptTelecom', 
+    text: '<b>FPT Telecom</b> uses Cilium as their CNI plugin to handle the massive CPE Management traffic to the backends', 
+  },
 };

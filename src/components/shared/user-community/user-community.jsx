@@ -69,6 +69,7 @@ import EntrywanLogo from './images/entrywan.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FHNWLogo from './images/fhnw.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
+import FPTTelecomLogo from './images/fpttelecom.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
 import GcoreLogo from './images/gcore.inline.svg';
