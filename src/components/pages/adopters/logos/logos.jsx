@@ -22,6 +22,7 @@ import DeckhouseLogo from './images/deckhouse.inline.svg';
 import DigitalOceanLogo from './images/digitalocean.inline.svg';
 import EquinixLogo from './images/equinix.inline.svg';
 import ExoscaleLogo from './images/exoscale.inline.svg';
+import FPTTelecomLogo from './images/fpttelecom.inline.svg'; 
 import GardernerLogo from './images/gardener.inline.svg';
 import GcoreLogo from './images/gcore.inline.svg';
 import GoogleKeLogo from './images/gke.inline.svg';
@@ -96,6 +97,7 @@ const logos = {
   guida: GuidaLogo,
   outscale: OutScaleLogo,
   ovh: OVHcloudLogo,
+  fptTelecom: FPTTelecomLogo,
 };
 
 const spaceXClassNames = {

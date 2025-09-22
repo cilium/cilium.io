@@ -184,6 +184,7 @@ const {
   openai,
   preferredNetworks,
   batumbu,
+  fptTelecom,
 } = caseStudiesData;
 
 const hero = {
@@ -379,6 +380,7 @@ const userCommunity2 = {
     ovh,
     preferredNetworks,
     batumbu,
+    fptTelecom,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -417,6 +419,7 @@ const logos1 = {
     'coreweave',
     'outscale',
     'ovh',
+    'fptTelecom',
   ],
   spaceXSize: 'sm',
 };
