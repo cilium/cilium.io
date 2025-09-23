@@ -1288,6 +1288,13 @@ export default {
   nutanix: {
     iconName: 'nutanix',
     text: '<b>Nutanix</b> uses Cilium as the default CNI plugin for NKP (Nutanix Kubernetes Platform)',
+    links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/nutanix/',
+        linkTarget: '_blank',
+      },
+    ],
   },
   cloutomate: {
     iconName: 'cloutomate',
