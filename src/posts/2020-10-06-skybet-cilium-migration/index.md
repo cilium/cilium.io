@@ -54,7 +54,7 @@ an [overlay network](https://en.wikipedia.org/wiki/Overlay_network) using the
 (VXLAN)](https://en.wikipedia.org/wiki/Virtual_Extensible_LAN) protocol. Another
 project, [Calico](https://www.projectcalico.org), can be run as either a
 standalone CNI solution or on top of Flannel (called
-[Canal](https://docs.projectcalico.org/getting-started/kubernetes/flannel/flannel))
+[Canal](https://docs.tigera.io/calico/latest/getting-started/kubernetes/flannel))
 to provide network policy enforcement.
 
 While using Flannel and Calico together is a solid solution, it can have
@@ -310,7 +310,7 @@ network. This will become important later.
 
 Multus is easy to setup, all that is needed are a few lines of config. for each
 CNI we want to install. It is also possible to configure Multus using a
-[CRD](https://intel.github.io/multus-cni/doc/how-to-use.html#create-network-attachment-definition),
+[CRD](https://k8snetworkplumbingwg.github.io/multus-cni/docs/how-to-use.html?),
 though a blanket cluster-wide configuration is more useful in our case.
 
 <div align="center"><b>Base Multus config</b></div>
