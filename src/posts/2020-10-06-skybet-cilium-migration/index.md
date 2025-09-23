@@ -310,7 +310,7 @@ network. This will become important later.
 
 Multus is easy to setup, all that is needed are a few lines of config. for each
 CNI we want to install. It is also possible to configure Multus using a
-[CRD](https://intel.github.io/multus-cni/doc/how-to-use.html#create-network-attachment-definition),
+[CRD](https://k8snetworkplumbingwg.github.io/multus-cni/docs/how-to-use.html?),
 though a blanket cluster-wide configuration is more useful in our case.
 
 <div align="center"><b>Base Multus config</b></div>
