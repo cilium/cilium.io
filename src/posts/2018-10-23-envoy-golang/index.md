@@ -446,5 +446,6 @@ to upgrade your Cilium deployment. Feel free to ping us on
 
 [slack]: https://slack.cilium.io/
 [envoy]: https://github.com/envoyproxy/envoy
+[go]: https://golang.org/
 [vitess]: https://vitess.io/
 [cassandra]: https://github.com/apache/cassandra
