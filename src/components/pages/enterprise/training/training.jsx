@@ -7,7 +7,6 @@ import LinuxfoundationLogo from 'icons/LF-Training-logo-color.inline.svg';
 import AcendLogo from 'icons/logo-acend.inline.svg';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 import KodeKloudLogo from 'icons/logo-kodekloud.inline.svg';
-import SoloioLogo from 'icons/logo-soloio.inline.svg';
 
 const title = 'Training';
 const description =
@@ -18,7 +17,6 @@ const logos = {
   isovalent: IsovalentLogo,
   kodekloud: KodeKloudLogo,
   linuxfoundation: LinuxfoundationLogo,
-  soloio: SoloioLogo,
 };
 
 const items = [
