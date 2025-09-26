@@ -119,7 +119,8 @@ export default EdgeComputingPage;
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
-    description: 'Discover Cloud Providers use Cilium',
+    description:
+      'How Cilium enables secure, high-performance, and observable networking for edge computing across distributed and resource-constrained environments.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
