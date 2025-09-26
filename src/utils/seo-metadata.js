@@ -8,9 +8,9 @@ const homepage = {
   description: 'Cilium provides eBPF-based networking, observability, and security for Kubernetes and beyond. Trusted by all major cloud providers and cloud native platforms worldwide.',
 };
 const learn = {
-  title: 'Cilium - Get Started with Cilium',
+  title: 'Cilium - What is Cilium?',
   description:
-    'Learn how to get started with Cilium, from installation to advanced use cases and features through tutorials, documentation, and videos',
+    'Cilium is an open source project to provide networking, security, and observability for cloud native environments such as Kubernetes clusters and other container orchestration platforms.',
 };
 const adopters = {
   title: 'Cilium users and real world case studies',

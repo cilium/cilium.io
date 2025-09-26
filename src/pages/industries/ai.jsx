@@ -186,7 +186,8 @@ export default MediaEntertainmentPage;
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
-    description: 'Discover Cloud Providers use Cilium',
+    description:
+      'Discover how Cilium powers AI/ML workloads with fast networking, robust security, and observability for Kubernetes.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
