@@ -119,6 +119,13 @@ npm run start
 > ```
 >
 > This allows Node.js to use up to 8 GB of RAM. You can adjust the number (`8192`) if needed based on your system capacity.
+>
+> **Tip for laptops without fans** (e.g., MacBook Air):  
+> To reduce heat and memory usage during development, you can limit Gatsby to fewer CPU cores:
+>
+> ```bash
+> GATSBY_CPU_COUNT=2 npm run develop
+> ```
 
 ### Build the website
 
