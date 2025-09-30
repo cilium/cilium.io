@@ -168,7 +168,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      'Simplify your Telco and data center networks, comply with regulatory requirements, and ease your cloud native journey with Cilium.',
+      'Cilium provides a comprehensive suite of capabilities that empower telcos and data center providers to transition seamlessly from traditional infrastructure to cloud native environments.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

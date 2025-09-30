@@ -176,7 +176,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      'Discover how companies in the media and entertainment industry leverage cilium for robust security, scalability, and flexibility at a reduced operational overhead',
+      'Leverage the Cilium advantage to deliver seamless experiences to your users, reduce operational complexity for your teams, and secure your environments.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

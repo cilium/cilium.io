@@ -198,7 +198,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      'Discover how SaaS, software, and DBaaS companies leverage cilium to meet the challenges of modern software deployment head-on.',
+      'With Cilium, SaaS, software, and DBaaS teams can establish infrastructure capable of scaling their products globally to reach customers wherever they may be.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

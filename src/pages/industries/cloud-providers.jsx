@@ -215,7 +215,8 @@ export default MediaEntertainmentPage;
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
-    description: 'Discover Cloud Providers use Cilium',
+    description:
+      'See why top cloud providers like Google, AWS, Azure, and Alibaba trust Cilium for secure, scalable, and observable Kubernetes networking.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
