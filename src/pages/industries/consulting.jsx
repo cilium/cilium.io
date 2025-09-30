@@ -103,7 +103,8 @@ const consultingResources = [
     title: 'Reducing Kubernetes tool sprawl: Tietoevry uses Cilium and Hubble',
     description:
       'Tietroevry Industries reduced Kubernetes tool sprawl using Cilium, greatly simplifying its overall Kubernetes administration.',
-    buttonLink: 'https://isovalent.com/blog/post/kubernetes-tool-sprawl/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
+    buttonLink:
+      'https://isovalent.com/blog/post/kubernetes-tool-sprawl/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog',
     imageSrc: TieToevryOfficeImage,
     imageAlt: 'tieotvry office building',
     buttonText: 'Watch the Talk',
@@ -143,7 +144,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      'Discover how consulting companies leverage Cilium to deliver solutions for a wide range of clients',
+      'World-leading consulting companies are now turning to Cilium, leveraging its capabilities to deliver secure, high-performance, and observable cloud native solutions to clients ranging from startups, nationwide banks, and large enterprises.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

@@ -211,7 +211,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      'Discover how companies in the security industry and companies whom security is integral to their operations leverage cilium.',
+      'Cilium delivers robust cloud native security with features like transparent encryption, mutual authentication, security observability, advanced network polices, egress gateway, and runtime enforcement.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

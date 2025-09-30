@@ -238,7 +238,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      'Discover how global e-commerce brands leverage Cilium to build globally distributed services and gain the edge in speed, security and observability',
+      'E-commerce teams can scale globally and deliver better user experiences through a low-latency network path from Cilium eBPF-optimized data plane.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
