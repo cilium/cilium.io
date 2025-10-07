@@ -238,7 +238,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      'E-commerce teams scale globally and deliver better user experiences with Cilium's eBPF-optimized data plane.',
+      'E-commerce teams scale globally and deliver better user experiences with Cilium eBPF-optimized data plane.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
