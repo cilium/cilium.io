@@ -1,13 +1,14 @@
 ---
 path: '/blog/grpc'
 date: '2017-12-06T09:13:48.000Z'
-title: 'Cilium Now Speaks gRPC!'
+title: 'Cilium Now Speaks gRPC: Fine-Grained Network Security for Modern Microservices'
 categories:
   - Technology
 tags:
   - grpc
   - cilium
   - microservices
+  - Network Security
 ogImage: cilium_grpc.png
 ogSummary: 'The Cilium team is happy to announce tech preview support for gRPC-aware filtering!'
 ---
@@ -24,4 +25,4 @@ We have created a Cilium + gRPC "Getting Started Guide" so you can try it out yo
 
 <YoutubeIframe embedId='-aUHGeBRDPU'/>
 
-As always, we're very interested in your questions and feedback, so don't hesitate to reach out via Twitter ([@ciliumproject](https://twitter.com/ciliumproject)) or Slack ([http://www.cilium.io/slack](http://www.cilium.io/slack)).   And don't forget to check out the code and star us on [Cilium Github](http://github.com/cilium/cilium) .  Happy gRPC-ing!
+As always, we're very interested in your questions and feedback, so don't hesitate to reach out via Twitter ([@ciliumproject](https://twitter.com/ciliumproject)) or Slack ([https://slack.cilium.io/](https://slack.cilium.io/)).   And don't forget to check out the code and star us on [Cilium Github](http://github.com/cilium/cilium) .  Happy gRPC-ing!

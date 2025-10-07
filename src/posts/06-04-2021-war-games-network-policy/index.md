@@ -15,7 +15,7 @@ tags:
   - Network
   - Cloud Native
 ogImage: ogimage.png
-ogSummary: 'We’ve just launched a new community resource:networkpolicy.io, to help people learn how to apply Kubernetes network policies to protect their business-critical workloads. But why do we need network policies at all? Let’s consider why traditional network security approaches aren’t sufficient in the cloud native world, and see what advantages we can gain through network policies.'
+ogSummary: 'Traditional firewalls can’t keep up with the dynamic nature of Kubernetes. Learn why network policies are essential for securing cloud-native workloads and how tools like Cilium can help enforce them effectively.'
 ---
 
 import authors from 'utils/author-data';
