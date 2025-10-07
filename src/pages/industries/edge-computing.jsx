@@ -120,7 +120,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      'How Cilium enables secure, high-performance, and observable networking for edge computing across distributed and resource-constrained environments.',
+      'Cilium delivers efficient, secure networking for edge computing deployments across distributed locations with limited resources.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
