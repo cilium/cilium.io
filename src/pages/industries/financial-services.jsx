@@ -271,7 +271,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      'Discover how companies in the financial service industry leverage cilium for zero-trust security and continuos compliance',
+      'Financial services use Cilium to strengthen security, improve observability, and integrate compliance governance directly into DevOps workflows.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
