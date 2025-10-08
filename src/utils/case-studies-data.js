@@ -1288,6 +1288,13 @@ export default {
   nutanix: {
     iconName: 'nutanix',
     text: '<b>Nutanix</b> uses Cilium as the default CNI plugin for NKP (Nutanix Kubernetes Platform)',
+    links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/nutanix/',
+        linkTarget: '_blank',
+      },
+    ],
   },
   cloutomate: {
     iconName: 'cloutomate',
@@ -1618,5 +1625,9 @@ export default {
   batumbu: {
     iconName: 'batumbu',
     text: '<b>Batumbu</b> uses Cilium as the CNI in their GKE clusters',
+  },
+  fptTelecom: { 
+    iconName: 'fptTelecom', 
+    text: '<b>FPT Telecom</b> uses Cilium as their CNI plugin to handle the massive CPE Management traffic to the backends', 
   },
 };

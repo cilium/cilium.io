@@ -30,24 +30,26 @@
 
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Contributing](#contributing)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
-  - [Run the website](#run-the-website)
-  - [Build the website](#build-the-website)
-  - [Run the built website](#run-the-built-website)
-  - [Clean Gatsby cache](#clean-gatsby-cache)
-- [Project Structure](#project-structure)
-- [Component Folder Structure](#component-folder-structure)
-  - [Each component includes](#each-component-includes)
-  - [Each component optionally may include](#each-component-optionally-may-include)
-  - [Example structure](#example-structure)
-- [Code Style](#code-style)
-  - [ESLint](#eslint)
-  - [Prettier](#prettier)
-  - [VS Code](#vs-code)
-- [How to create blog post](#how-to-create-blog-post)
+- [Cilium Website](#cilium-website)
+  - [Table of Contents](#table-of-contents)
+  - [Contributing](#contributing)
+  - [Getting Started](#getting-started)
+  - [Usage](#usage)
+    - [Run the website](#run-the-website)
+    - [Build the website](#build-the-website)
+    - [Run the built website](#run-the-built-website)
+    - [Clean Gatsby cache](#clean-gatsby-cache)
+  - [Project Structure](#project-structure)
+  - [Component Folder Structure](#component-folder-structure)
+    - [Each component includes](#each-component-includes)
+    - [Each component optionally may include](#each-component-optionally-may-include)
+    - [Example structure](#example-structure)
+  - [Code Style](#code-style)
+    - [ESLint](#eslint)
+    - [Prettier](#prettier)
+    - [VS Code](#vs-code)
+    - [Development Commands](#development-commands)
+  - [How to create blog post](#how-to-create-blog-post)
 
 ## Contributing
 
@@ -72,6 +74,18 @@ npm install
 ```bash
 cp .env.example .env
 ```
+
+**Note:** This project includes a Makefile with all the development commands.
+
+You can quickly set up the project using:
+
+```bash
+make env     # Setup environment file
+make install # Install dependencies
+make start   # Start the development server
+```
+
+Explore the [Development Commands](#development-commands) section for more available options.
 
 ## Usage
 
@@ -105,6 +119,13 @@ npm run start
 > ```
 >
 > This allows Node.js to use up to 8 GB of RAM. You can adjust the number (`8192`) if needed based on your system capacity.
+>
+> **Tip for laptops without fans** (e.g., MacBook Air):  
+> To reduce heat and memory usage during development, you can limit Gatsby to fewer CPU cores:
+>
+> ```bash
+> GATSBY_CPU_COUNT=2 npm run develop
+> ```
 
 ### Build the website
 
@@ -228,6 +249,27 @@ You can navigate to settings.json by using Command Pallete (CMD+Shift+P) and the
 To enable Prettier go to Preferences -> Settings -> type "Format". Then check that you have esbenp.prettier-vscode as default formatter, and also enable "Format On Save".
 
 Reload VS Code and auto-format will work for you.
+
+### Development Commands
+
+This project uses a Makefile to simplify common tasks. Below are the available commands:
+
+```bash
+make install       # Install dependencies
+make env           # Setup environment file (.env)
+make start         # Start dev server (fast, skips image processing)
+make start-full    # Start dev server (full build with image processing)
+make build         # Build the site for production
+make serve         # Serve production build locally
+make clean         # Clean Gatsby cache
+make lint          # Run ESLint linter
+make lint-fix      # Fix ESLint issues
+
+make docker-build   # Build the Docker image
+make docker-run     # Run the project inside Docker (production mode)
+make docker-run-dev # Run the project inside Docker (development mode with hot reload)
+make docker-shell   # Open a shell inside the Docker container
+```
 
 ## How to create blog post
 

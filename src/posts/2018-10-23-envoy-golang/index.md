@@ -444,7 +444,7 @@ to upgrade your Cilium deployment. Feel free to ping us on
 - Release Notes & Binaries: [1.3.0](https://github.com/cilium/cilium/releases/tag/1.3.0)
 - Container image: `docker.io/cilium/cilium:v1.3.0`
 
-[slack]: http://cilium.io/slack
+[slack]: https://slack.cilium.io/
 [envoy]: https://github.com/envoyproxy/envoy
 [go]: https://golang.org/
 [vitess]: https://vitess.io/

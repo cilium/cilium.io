@@ -15,7 +15,7 @@ tags:
 
 ![](kubeconcover.png)
 
-The Cilium community is buzzing to reunite again this November in Atlanta for KubeCon + CloudNativeCon and CiliumCon North America 2025. Learn where to find Cilium during the show, which talks to attend, and how to engage with end users, core contributors, and industry leaders. 
+The Cilium community is buzzing to reunite again this November in Atlanta for [KubeCon + CloudNativeCon and CiliumCon North America 2025](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/?utm_source=celium&utm_medium=homepage&utm_campaign=10608228-KubeCon-NA-2025&utm_content=hero). Learn where to find Cilium during the show, which talks to attend, and how to engage with end users, core contributors, and industry leaders. 
 
 ## A look back at KubeCon + CloudNativeCon and CiliumCon Europe in London
 
