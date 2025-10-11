@@ -155,5 +155,5 @@ using BPF + Cilium Sockmap should be a no-brainer way to reduce CPU/memory usage
 With BPF + Cilium, the Linux kernel can now be optimized for the age of Kubernetes, Docker and Mesos and the API-driven microservices that are deployed at scale on such platforms. We’re excited about what we’ve built so far with Cilium 1.0, but we’re just getting started! We are continuing to work with the upstream Linux community as well as open source projects like Envoy and Istio to push the boundaries of dataplane performance and add deeper and richer capabilities around service identity and API-aware visibility and security.
 
 We look forward to hearing from you on how Cilium and BPF can continue to reinvent Linux networking for a world filled with
-API-driven microservices, so [try it out](https://www.cilium.io/try), ask a question on [Cilium Slack](https://slack.cilium.io/),
+API-driven microservices, so [try it out](https://www.cilium.io/try), ask a question on [Cilium Slack](https://slack.cilium.io),
 and if you like it, consider contributing on [Cilium GitHub](https://github.com/cilium/cilium).

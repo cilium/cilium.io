@@ -144,7 +144,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      'World-leading consulting companies are now turning to Cilium, leveraging its capabilities to deliver secure, high-performance, and observable cloud native solutions to clients ranging from startups, nationwide banks, and large enterprises.',
+      'World-leading consulting companies use Cilium, leveraging its capabilities to deliver secure, high-performance, and observable cloud native solutions to clients ranging from startups, nationwide banks, and large enterprises.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

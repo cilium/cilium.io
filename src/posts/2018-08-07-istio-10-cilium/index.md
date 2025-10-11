@@ -292,4 +292,4 @@ If you are interested to learn more:
 
 - **[Try a Getting Started Guide](http://docs.cilium.io/en/stable/gettingstarted/)**
 - **[Learn more about Cilium concepts](http://docs.cilium.io/en/stable/concepts/)**
-- **[Join our Slack channel](https://cilium.io/slack)**
+- **[Join our Slack channel](https://slack.cilium.io/)**

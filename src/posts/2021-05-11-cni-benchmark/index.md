@@ -589,7 +589,7 @@ of all aspects of Cilium.
 
 - **Other Ideas?** Do you have other ideas? Let us know! What would you like us
   to benchmark or improve on? We are eager to hear your thoughts. Drops us a
-  line on the [Cilium Slack](https://cilium.io/slack) or reach out to us on
+  line on the [Cilium Slack](https://slack.cilium.io) or reach out to us on
   [Twitter](https://twitter.com/ciliumproject).
 
 ## Further Reading

@@ -184,6 +184,7 @@ const {
   openai,
   preferredNetworks,
   batumbu,
+  fptTelecom,
 } = caseStudiesData;
 
 const hero = {
@@ -279,6 +280,7 @@ const userCommunity1 = {
     cornerBanca,
     canopus,
     bytedance,
+    nutanix,
     openai,
   ],
 };
@@ -292,7 +294,6 @@ const userCommunity2 = {
   isTitleCentered: true,
   items: [
     scigility,
-    nutanix,
     cloutomate,
     qpoint,
     seatgeek,
@@ -379,6 +380,7 @@ const userCommunity2 = {
     ovh,
     preferredNetworks,
     batumbu,
+    fptTelecom,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -443,6 +445,7 @@ const logos2 = {
     'alauda',
     'kubelift',
     'guida',
+    'nutanix',
   ],
   spaceXSize: 'sm',
 };

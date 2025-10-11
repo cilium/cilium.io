@@ -227,4 +227,4 @@ to upgrade your Cilium deployment. Feel free to ping us on [Slack].
 
 - Container image: `docker.io/cilium/cilium:v1.2.0`
 
-[slack]: https://slack.cilium.io/
+[slack]: https://slack.cilium.io
