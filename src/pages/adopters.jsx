@@ -17,6 +17,8 @@ const {
   syseleven,
   icos,
   nutanix,
+  cloudera,
+  uwmadison,
   cloutomate,
   qpoint,
   seatgeek,
@@ -281,6 +283,7 @@ const userCommunity1 = {
     canopus,
     bytedance,
     nutanix,
+    cloudera,
     openai,
   ],
 };
@@ -380,6 +383,7 @@ const userCommunity2 = {
     ovh,
     preferredNetworks,
     batumbu,
+    uwmadison,
     fptTelecom,
   ],
   buttonText: 'Add Your Company',
@@ -419,6 +423,7 @@ const logos1 = {
     'coreweave',
     'outscale',
     'ovh',
+    'cloudera',
   ],
   spaceXSize: 'sm',
 };

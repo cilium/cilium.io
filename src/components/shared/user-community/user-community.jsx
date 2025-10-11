@@ -48,6 +48,7 @@ import CanopusLogo from './images/canopus.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
+import CloudEraLogo from './images/cloudera.inline.svg';
 import CloutomateLogo from './images/cloutomate.inline.svg';
 import CogniteLogo from './images/cognite.inline.svg';
 import ConfluentLogo from './images/confluent.inline.svg';
@@ -69,8 +70,8 @@ import EntrywanLogo from './images/entrywan.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FHNWLogo from './images/fhnw.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
-import FPTTelecomLogo from './images/fpttelecom.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
+import FPTTelecomLogo from './images/fpttelecom.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
 import GcoreLogo from './images/gcore.inline.svg';
 import GdataLogo from './images/gdata.inline.svg';
@@ -177,6 +178,7 @@ import TwilioLogo from './images/twilio.inline.svg';
 import UngleichLogo from './images/ungleich.inline.svg';
 import UnitedCloudLogo from './images/unitedcloud.inline.svg';
 import UtmostLogo from './images/utmost.inline.svg';
+import UWMadisonLogo from './images/uwmadison.inline.svg';
 import VeepeeLogo from './images/veepee.inline.svg';
 import ViasatLogo from './images/viasat.inline.svg';
 import VirtuozzoLogo from './images/virtuozzo.inline.svg';
@@ -272,6 +274,8 @@ const icons = {
   ect888: Ect888Logo,
   accuknox: AccuKnoxLogo,
   capitalOne: CapitalOneLogo,
+  cloudera: CloudEraLogo,
+  uwmadison: UWMadisonLogo,
   alibabaCloud: AlibabaCloudLogo,
   cengn: CengnLogo,
   digitalOcean: DigitalOceanLogo,
