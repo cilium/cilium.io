@@ -157,7 +157,7 @@ Interesting post on tracing experiences.
   - [[PATCH 3/3] selinux: bpf: Implement the selinux checks for eBPF object](https://www.spinics.net/lists/netdev/msg453074.html)
 - Eric Dumazet, [[PATCH net-next] x86: `bpf_jit`: small optimization in `emit_bpf_tail_call()`](https://www.spinics.net/lists/netdev/msg452960.html)
 - Tariq Toukan, [[PATCH net-next] samples/bpf: Fix compilation issue in redirect dummy program](https://patchwork.ozlabs.org/patch/808209/)
-- Colin Ian King, [[PATCH][net-next][V3] bpf: `test_maps`: fix typos, "conenct" and "listeen"](https://patchwork.kernel.org/patch/9930285/)
+- Colin Ian King, [PATCH net-next V3 bpf: `test_maps`: fix typos, "conenct" and "listeen"](https://patchwork.kernel.org/patch/9930285/)
 - Phil Sutter, [[iproute PATCH] lib/bpf: Fix bytecode-file parsing](https://patchwork.ozlabs.org/patch/807148/)
 - Jesper Dangaard Brouer, [[PATCH net-next 0/7] XDP redirect tracepoints](https://patchwork.ozlabs.org/cover/807122/)
   - [[PATCH net-next 1/7] xdp: remove redundant argument to `trace_xdp_redirect`](https://patchwork.ozlabs.org/patch/807123/)

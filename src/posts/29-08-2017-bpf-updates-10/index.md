@@ -146,7 +146,7 @@ While grav itself is not strictly BPF related, the tools in the repository utili
 - Daniel Borkmann, [[PATCH net-next] bpf: netdev is never null in `__dev_map_flush`](https://www.spinics.net/lists/netdev/msg451399.html)
 - Brenden Blanco, [[iovisor-dev] [RFC] pktgen: add bpf fill support](https://lists.iovisor.org/pipermail/iovisor-dev/2017-August/001001.html)
 - Yonghong Song, [[llvm] r311567 - bpf: close the file descriptor after probe inside getHostCPUNameForBPF](http://llvm.org/viewvc/llvm-project?view=revision&revision=311567)
-- Colin King, [[PATCH][net-next] MIPS,bpf: fix missing break in switch statement](https://www.spinics.net/lists/netdev/msg451169.html)
+- Colin King, [PATCH net-next: MIPS, bpf: fix missing break in switch statement](https://www.spinics.net/lists/netdev/msg451169.html)
 - Daniel Borkmann, [[PATCH net] bpf: fix map value attribute for hash of maps](https://www.spinics.net/lists/netdev/msg451161.html)
 - Daniel Borkmann, [[PATCH net-next 0/2] Two minor BPF cleanups](https://www.spinics.net/lists/netdev/msg451175.html)
   - [[PATCH net-next 1/2] bpf: misc xdp redirect cleanups](https://www.spinics.net/lists/netdev/msg451173.html)
