@@ -124,7 +124,7 @@ npm run start
 > To reduce heat and memory usage during development, you can limit Gatsby to fewer CPU cores:
 >
 > ```bash
-> GATSBY_CPU_COUNT=2 npm run develop
+> NODE_OPTIONS="--max-old-space-size=6144" GATSBY_CPU_COUNT=2 npm run develop
 > ```
 
 ### Build the website
