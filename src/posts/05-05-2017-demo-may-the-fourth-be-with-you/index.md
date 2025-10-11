@@ -4,12 +4,15 @@ date: '2017-05-05T00:08:35.000Z'
 title: 'Demo: May the Fourth be with you'
 categories:
   - How-To
+  - Tutorials
 tags:
   - star wars
   - http
   - policy
   - demo
-ogSummary: "In celebration of today's date, May 4th, we are posting our Star Wars demo of Cilium that we showed at CNCF/KubeCon in Berlin or DockerCon in Austin. You can either watch the video linked below which starts directly at the time the demo begins or you can jump to the transcript of the demo embedded in the blog post. May the fourth be with you."
+  - microservices
+  - network-policy
+ogSummary: 'Learn how Cilium applies network and HTTP-level security policies in this Star Wars–themed Docker demo showcased at KubeCon and DockerCon.'
 ---
 
 In celebration of today's date, May 4th, we are posting our Star Wars demo of Cilium that we showed at CNCF/KubeCon in Berlin or DockerCon in Austin. You can either watch the video linked below which starts directly at the time the demo begins or you can jump to the transcript of the demo embedded in the blog post. May the fourth be with you.
@@ -18,12 +21,10 @@ In celebration of today's date, May 4th, we are posting our Star Wars demo of Ci
 
 ```
 # A long time ago, in a container cluster far, far away....
-#
 # It is a period of civil war. The Empire has adopted
 # microservices and continuous delivery, despite this,
 # Rebel spaceships, striking from a hidden cluster, have
 # won their first victory against the evil Galactic Empire.
-#
 # During the battle, Rebel spies managed to steal the
 # swagger API specification to the Empire's ultimate weapon,
 # the deathstar.

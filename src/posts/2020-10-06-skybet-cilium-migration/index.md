@@ -13,11 +13,7 @@ tags:
   - CNI
   - Migration
 ogImage: ogimage.png
-ogSummary: "This is a guest blog by Josh Van Leeuwen and covers how Josh implemented a CNI
-live migration for a customer, Sky Betting and Gaming,
-to live migrate a cluster running the Canal CNI plugin (Flannel+Calico) to
-Cilium. Josh is working as a Customer Reliability Engineer for Jetstack. Read
-on to hear what Josh has to say..."
+ogSummary: 'Guest post by Josh Van Leeuwen on how Sky Betting and Gaming successfully migrated their Kubernetes cluster from the Canal CNI plugin (Flannel+Calico) to Cilium with zero downtime.'
 ---
 
 import authors from 'utils/author-data';
@@ -33,7 +29,7 @@ on to hear what Josh has to say...
 In this post we'll discuss why one might want to change CNIs, what I have learnt
 developing a solution for live migration, and how it all works.
 
-# What is CNI, and why change it?
+## What is CNI, and why change it?
 
 Container Network Interface (CNI) is a big topic, but in short, CNI is a set of
 specifications that define an interface used by container orchestrators to set
@@ -87,7 +83,7 @@ replace it, and bring up all workloads again on the new CNI. This of course
 causes downtime, or at the least, requires a full cluster migration. For some
 companies this might be unacceptable. So, how about a live migration instead?
 
-# Designing a live CNI Migration
+## Designing a live CNI Migration
 
 When a Pod is created, the installed CNI is called which will attach a network
 interface to the Pod. If all goes well, this network interface will join that Pod
@@ -146,7 +142,7 @@ disruption budgets and probes, a conservative roll of the cluster at each
 migration step should ensure that the entire cluster remains healthy at all
 times.
 
-# Implementation
+## Implementation
 
 The end result of the project is a [CLI
 tool](https://github.com/JoshVanL/cni-migration) that runs the migration from
@@ -565,7 +561,7 @@ installation from Canal to Cilium, live.
 
 ---
 
-# Further Reading
+## Further Reading
 
 - [Original Jetstack blog post](https://www.blog.jetstack.io/blog/cni-migration/)
 - [Cilium Overview](https://cilium.io/)

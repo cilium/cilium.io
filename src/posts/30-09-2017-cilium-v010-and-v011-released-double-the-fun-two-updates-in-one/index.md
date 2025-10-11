@@ -6,7 +6,7 @@ categories:
   - Release
 tags:
   - release
-ogSummary: "We're happy to announce our 2 recent Cilium releases:v0.10 and v0.11! This is a brief recap of noteworthy functionality, including the expansion of Network Policy, simplifying deployments, Kubernetes integration updates, and Mesos integration."
+ogSummary: 'Two major Cilium releases — v0.10 and v0.11 — bring better Kubernetes and Mesos support, stronger policies, simpler deployment, and improved tracing.'
 ---
 
 Over the last 2 months, we have released two new versions of Cilium:

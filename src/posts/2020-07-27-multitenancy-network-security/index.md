@@ -14,7 +14,7 @@ tags:
   - Multitenancy
   - CVE-2020-8558
 ogImage: ogimage.png
-ogSummary: 'Multitenancy is a common pattern in Kubernetes. Many organizations deploy Kubernetes-as-a-Service, where one cluster houses many tenants and workloads. This pattern might sound familiar, as cloud computing services like AWS, Azure, and GCP have enabled multiple customers (tenants) to run their business-critical workloads in a single cluster for years.'
+ogSummary: 'Cilium uses eBPF to secure multitenant Kubernetes clusters, providing identity-aware network isolation and Zero-Trust protections by design.'
 ---
 
 ![Introduction](ogimage.png)

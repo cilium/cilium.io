@@ -5,7 +5,7 @@ title: 'Agentic Bee: How to get AI Agents to talk to Tetragon?'
 isPopular: true
 isFeatured: false
 ogImage: cover.png
-ogSummary: 'Learn how Canopus uses eBPF Tetragon & AI Agents to find top 1% of vulnerabilities'
+ogSummary: ' Learn how Canopus combined Tetragon and AI agents to cut through vulnerability noise and focus on the top 1% of real security risks.'
 categories:
   - Community
 tags:

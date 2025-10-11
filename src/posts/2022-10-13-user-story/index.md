@@ -5,7 +5,7 @@ title: 'Cilium User Story: Securing 100,000+ RPS in a Multi-Tenant Environment'
 isPopular: true
 isFeatured: false
 ogImage: Publishing-user.png
-ogSummary: "Learn how a publishing platform created a secure multi-tenant environment with Cilium"
+ogSummary: 'Publishing platform secures 100K+ RPS with Cilium eBPF network policies, Hubble observability, and multi-tenant isolation in large Kubernetes clusters.'
 categories:
   - Community
 tags:
@@ -14,10 +14,10 @@ tags:
 
 ![Cilium User Story - Securing 100,000+ RPS in a Multi-Tenant Environment](Publishing-user.png)
 
-*October 13th, 2022*  
-*Author: Bill Mulligan, Isovalent*
+_October 13th, 2022_  
+_Author: Bill Mulligan, Isovalent_
 
-*This User Story comes from a company in the publishing industry*
+_This User Story comes from a company in the publishing industry_
 
 With today's technology and new cycles, news "fresh off the press" means something quite different than the days of just printing presses. Publishing companies today need to keep their technology up to speed with the pace the world moves. For one publishing company, Cilium became their solution to connect their worlds together.
 

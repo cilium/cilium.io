@@ -4,8 +4,7 @@ date: '2021-12-02T17:00:00.000Z'
 title: 'Try eBPF-powered Cilium Service Mesh - join the beta program!'
 isPopular: false
 ogImage: sidecar-sweep.png
-ogSummary: "Cilium is bringing the power of eBPF to the world of Service Mesh,
-and we're inviting you to be amongst the first to try it out."
+ogSummary: 'Cilium brings the power of eBPF to Service Mesh with advanced connectivity, traffic management, and observability—join the beta today.'
 categories:
   - Community
 tags:

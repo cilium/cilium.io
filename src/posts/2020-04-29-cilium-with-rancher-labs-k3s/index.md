@@ -11,13 +11,7 @@ tags:
   - eBPF
   - k3s
 ogImage: ogimage.png
-ogSummary: "In this guide, we will walk through the steps required to build a multi-node
-Kubernetes cluster on your local workstation or laptop using K3s and Cilium.
-Then we'll show how you can use Hubble to inspect traffic in the cluster
-and visualize data exposed by the superpowers of eBPF and Cilium. We
-will also show you how to restrict the flow of traffic between applications.
-Finally, we will see how Cilium and Hubble can provide detailed information
-to help you solve problems related to compliance and regulations."
+ogSummary: 'Build a multi-node Kubernetes cluster with K3s and Cilium, inspect traffic with Hubble, enforce policies, and troubleshoot network issues efficiently.'
 ---
 
 ![Introduction](ogimage.jpg)

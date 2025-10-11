@@ -6,16 +6,11 @@ categories:
   - Release
 tags:
   - release
-ogSummary: 'We are excited to announce Cilium 1.0.0-rc9 with many,
-many bugfixes and the delivery of the final feature we were waiting on prior for
-1.0: Egress policy enforcement support. It is therefore only logical that we
-announce full feature freeze with rc9. This means that we will only merge
-critical bugfixes and release 1.0 as soon as we have resolved all release
-blockers. More on this below. We are thrilled to have come this far and
-appreciate all of the efforts by the wide range of contributors that have
-helped to get us here. As usual, the full release notes are attached at the end of the blog but can be found on the 1.0.0-rc9 release page. The vast
-majority of the work in this release has been around bugfixes and testing. Here
-is a list of some highlights:'
+  - kubernetes
+  - ebpf
+  - security
+  - network-policy
+ogSummary: 'Cilium 1.0.0-rc9 introduces complete egress policy enforcement with identity-based and L7 HTTP rules for Kubernetes. Final feature freeze before 1.0 GA release. Includes scale improvements, configurable HTTP responses, and enhanced connection tracking.'
 ---
 
 We are excited to announce [Cilium
@@ -202,8 +197,6 @@ first.
 
 ## Release binaries
 
-## Release binaries
-
 - [cilium-agent-x86_64](http://releases.cilium.io/v1.0.0-rc9/cilium-agent-x86_64) ([45085a62027fa2b30858](http://releases.cilium.io/v1.0.0-rc9/cilium-agent-x86_64.sha256sum))
 - [cilium-bugtool-x86_64](http://releases.cilium.io/v1.0.0-rc9/cilium-bugtool-x86_64) ([f1d14a36f7c804d60c92](http://releases.cilium.io/v1.0.0-rc9/cilium-bugtool-x86_64.sha256sum))
 - [cilium-health-x86_64](http://releases.cilium.io/v1.0.0-rc9/cilium-health-x86_64) ([f6f1b21fe7e45417109c](http://releases.cilium.io/v1.0.0-rc9/cilium-health-x86_64.sha256sum))
@@ -212,4 +205,4 @@ first.
 - [v1.0.0-rc9.tar.gz](http://releases.cilium.io/v1.0.0-rc9/v1.0.0-rc9.tar.gz) ([30cebb959aa508d04814](http://releases.cilium.io/v1.0.0-rc9/v1.0.0-rc9.tar.gz.sha256sum))
 - [v1.0.0-rc9.zip](http://releases.cilium.io/v1.0.0-rc9/v1.0.0-rc9.zip) ([8b5752cf20d6cb5cbc92](http://releases.cilium.io/v1.0.0-rc9/v1.0.0-rc9.zip.sha256sum))
 
-As usual, let us know on [Slack](http://cilium.io/slack) if you have any questions.
+As usual, let us know on [Slack](https://slack.cilium.io/) if you have any questions.

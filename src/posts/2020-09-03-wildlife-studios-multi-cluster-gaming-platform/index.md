@@ -14,13 +14,7 @@ tags:
   - Benchmark
   - Clustermesh
 ogImage: ogimage.png
-ogSummary: "Wildlife Studios is a Brazil-based global gaming company, one of the twenty
-largest mobile gaming companies in the world, with more than 700 employees
-and offices in Brazil, Argentina, Ireland, and the United States. Their games
-are distributed in over 150 countries, and have been downloaded over
-two billion times. Their online gaming infrastructure relies on several
-services deployed all over the globe, which are shipped from around 30,000
-Kubernetes pods running on 2,500 nodes."
+ogSummary: 'Wildlife Studios built a global multi-cluster gaming infrastructure using Cilium and eBPF, powering millions of players with scalable, low-latency networking.'
 ---
 
 import authors from 'utils/author-data';
@@ -182,13 +176,11 @@ These data were obtained from the project [Kubernetes Netperf](https://github.co
 - Kubernetes version: v1.10.7
 
 - Control Plane
-
   - instances: 3
   - zones: us-east-1b, us-east-1c, us-east-1d
   - instance type: m4.xlarge
 
 - Node
-
   - instances: 200
   - zones: us-east-1b, us-east-1c, us-east-1d
   - instance type: c4.2xlarge

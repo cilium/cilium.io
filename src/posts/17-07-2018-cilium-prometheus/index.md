@@ -7,8 +7,8 @@ categories:
 tags:
   - howto
   - releases
-ogSummary: 'In Kubernetes deployments, Prometheus is a popular monitoring system and time-series database for storing health and performance metrics of all the components. Equally popular is Grafana for plotting the metrics. In this post, we will provide steps to setup Prometheus and Grafana for
-understanding important Cilium metrics related to the security and health of service interactions in a Kubernetes cluster.'
+  - Cilium
+ogSummary: 'Monitor Kubernetes networking and security with Cilium metrics in Prometheus and Grafana. Track policy enforcement, packet drops, L7 requests, and cluster health for complete observability.'
 ---
 
 Cilium provides complete L3/L4 and L7 (API-aware) security for Kubernetes services. Cilium is deployed as a CNI and has deep visibility into the health and performance of both the networking and security enforcement. Cilium exposes several metrics in the popular Prometheus format along with
@@ -122,4 +122,4 @@ while true; do kubectl exec tiefighter -- curl -sL -XGET deathstar.default.svc.c
 
 ## Conclusion
 
-Cilium's support for the standard Prometheus format makes it easy to monitor valuable metrics related to the effectiveness of security policies and health of service interactions. In upcoming releases, we will continue to add more metrics from Cilium. If you are already using Cilium and have suggestions for other useful metrics then let us know on [Cilium slack](https://cilium.slack.com/).
+Cilium's support for the standard Prometheus format makes it easy to monitor valuable metrics related to the effectiveness of security policies and health of service interactions. In upcoming releases, we will continue to add more metrics from Cilium. If you are already using Cilium and have suggestions for other useful metrics then let us know on [Cilium slack](https://slack.cilium.io/).

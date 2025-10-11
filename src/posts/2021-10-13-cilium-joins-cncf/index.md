@@ -1,10 +1,9 @@
 ---
-path: "/blog/2021/10/13/cilium-joins-cncf"
-date: "2021-10-13T17:00:00.000Z"
-title: "Cilium joins the CNCF"
+path: '/blog/2021/10/13/cilium-joins-cncf'
+date: '2021-10-13T17:00:00.000Z'
+title: 'Cilium joins the CNCF'
 ogImage: cilium-cncf-card.png
-ogSummary: "CNCF TOC chair Liz Rice explains why she's excited about the future of
-Cilium as an Incubation project in the CNCF." 
+ogSummary: 'Cilium joins the CNCF as an Incubation project, marking a major milestone for the eBPF ecosystem and its growing community of cloud-native innovators.'
 categories:
   - Community
 tags:

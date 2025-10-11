@@ -4,9 +4,13 @@ date: '2018-02-16T19:30:43.000Z'
 title: 'Cilium 1.0.0-rc4 released'
 categories:
   - Release
+  - cilium-1-0
+  - envoy
+  - health-monitoring
+  - kubernetes-cni
 tags:
   - release
-ogSummary: 'We are excited to have released Cilium 1.0.0-rc4. The release contains a lot of bugfixes as usual plus a lot of CI work to ensure quality long term but there are also some enhancements highlights and tooling worth mentioning.'
+ogSummary: 'Cilium 1.0.0-rc4 makes Envoy the default HTTP/gRPC proxy, adds cilium-health for connectivity monitoring, introduces controller status tracking, and improves kvstore scalability.'
 ---
 
 We are excited to have released Cilium 1.0.0-rc4. The release contains a lot of
@@ -166,4 +170,4 @@ documentation, the highlights are:
 - [v1.0.0-rc4.tar.gz](http://releases.cilium.io/v1.0.0-rc4/v1.0.0-rc4.tar.gz) ([39ff5357ea5920af6bca](http://releases.cilium.io/v1.0.0-rc4/v1.0.0-rc4.tar.gz.sha256sum))
 - [v1.0.0-rc4.zip](http://releases.cilium.io/v1.0.0-rc4/v1.0.0-rc4.zip) ([1c371d84ccad990c6915](http://releases.cilium.io/v1.0.0-rc4/v1.0.0-rc4.zip.sha256sum))
 
-As usual, let us know on [Slack](http://cilium.io/slack) if you have any questions.
+As usual, let us know on [Slack](https://slack.cilium.io/) if you have any questions.

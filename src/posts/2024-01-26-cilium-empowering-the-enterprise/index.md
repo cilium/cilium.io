@@ -7,6 +7,8 @@ ogImage: cover.png
 ogSummary: 'This article aims to trace Cilium’s journey from its early days to becoming a go-to solution for enterprises in search of a rock-solid networking, observability, and security solution.'
 categories:
   - Technology
+tags:
+  - Cilium
 ---
 
 ![](cover.png)

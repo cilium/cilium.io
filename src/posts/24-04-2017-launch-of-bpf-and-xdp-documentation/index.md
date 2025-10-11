@@ -10,7 +10,7 @@ tags:
   - xdp
   - documentation
   - guide
-ogSummary: 'We are excited to announce the BPF & XDP Reference Guide as part of the Cilium project documentation. We have received various requests on further technical information about BPF and XDP with the desire to learn more about the technology that is driving the Cilium project.'
+ogSummary: 'The Cilium team is excited to sponsor GlueCon 2017 near Denver, CO, showcasing API, microservices, and container security demos this week.'
 ---
 
 We are excited to announce the "**BPF & XDP Reference Guide**" as part of the Cilium project documentation. We have received various requests on further technical information about BPF and XDP with the desire to learn more about the technology that is driving the Cilium project.

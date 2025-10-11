@@ -6,4 +6,6 @@ ogSummary: 'In this second part of the network policy series, explore the comple
 externalUrl: 'https://isovalent.com/blog/post/tutorial-cilium-network-policy/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise'
 categories:
   - How-To
+tags:
+  - Cilium
 ---

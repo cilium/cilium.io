@@ -4,7 +4,7 @@ date: '2021-12-20T17:00:00.000Z'
 title: 'An Amazing Milestone for Cilium - 10,000 stars!'
 isPopular: false
 ogImage: ogimage.png
-ogSummary: "We're going to need another digit ⭐️"
+ogSummary: 'Cilium hits 10K GitHub stars! Celebrating CNCF incubation, AWS EKS & Google GKE adoption, Service Mesh beta launch, and an incredible community milestone. ⭐️'
 categories:
   - Community
 tags:

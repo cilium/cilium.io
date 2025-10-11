@@ -1,12 +1,12 @@
 ---
 path: '/blog/2017/5/31/cilium-v09-released-hello-kubernetes'
 date: '2017-06-01T20:14:07.000Z'
-title: 'Cilium v0.9 Released:  Hello Kubernetes!'
+title: 'Cilium v0.9 Released: Kubernetes DaemonSet, NetworkPolicy, and L7 HTTP Security'
 categories:
   - Release
 tags:
   - release
-ogSummary: "The team is excited to announce the v0.9 release of Cilium.We've received a lot of great feedback since we released Cilium v0.8 at the end of March with support for L7 HTTP-aware network security. By far the biggest requests have been:1) Making it easier to deploy and use Cilium in Kubernetes environments 2) Testing and hardening Cilium to enable production deployments."
+ogSummary: 'Cilium v0.9 brings seamless Kubernetes integration with DaemonSet deployment, Kubernetes NetworkPolicy support, L7 HTTP security via YAML, RBAC integration, and Minikube quick start. Production-ready eBPF networking for Kubernetes clusters.'
 ---
 
 The team is excited to announce the [v0.9 release](https://github.com/cilium/cilium/releases/tag/v0.9.0) of Cilium.

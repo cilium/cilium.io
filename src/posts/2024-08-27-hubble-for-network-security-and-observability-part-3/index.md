@@ -8,6 +8,8 @@ ogSummary: "In part 3 of the series, you'll learn how Hubble's rich observabilit
 categories:
   - How-To
   - Technology
+tags:
+  - Cilium
 ---
 
 ![](cover.png)

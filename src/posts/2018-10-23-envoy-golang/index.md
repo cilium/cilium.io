@@ -14,7 +14,7 @@ tags:
   - security
   - Kubernetes
 ogImage: ogimage.png
-ogSummary: 'We are excited to announce the Cilium 1.3 release. The release introduces several new features. The major highlight of the release is the addition of Go extensions for Envoy as well as Cassandra and Memcached protocol parsers with policy enforcement capability, both implemented as Envoy Go extension.'
+ogSummary: 'Cilium 1.3 adds Envoy Go extensions, plus Cassandra and Memcached protocol parsers with policy enforcement for enhanced security.'
 ---
 
 ![Cilium Kubernetes](gopher_intro.png)

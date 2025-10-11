@@ -11,14 +11,7 @@ tags:
   - Conference
   - Summit
 ogImage: ogimage.png
-ogSummary: "The first ever eBPF Summit is just over one week out and we are already well
-past 1'000 registrations. We have been blown away by the number of talk and
-keynote proposals. This also meant that we had to turn down many fantastic
-talks and we hope that our selection provides an interesting and diverse set of
-talks. Some of the content that did not make the schedule will be posted as
-blog posts on ebpf.io over the coming weeks. In this post, we'll give a quick
-preview of what to be excited about and how to plan to attend the event.
-"
+ogSummary: "The first-ever eBPF Summit is just over a week away, with over 1,000 registrations and an incredible lineup of speakers. Here's what to expect and how to participate."
 ---
 
 import authors from 'utils/author-data';
@@ -34,7 +27,7 @@ preview of what to be excited about and how to plan to attend the event.
 If you have not registered for the event, [register
 here](https://ebpf.io/summit-2020/). The event is free and held fully virtual.
 
-# What is eBPF Summit?
+## What is eBPF Summit?
 
 eBPF is quickly becoming one of the most talked about technologies in our
 industry - enabling a new generation of networking, tracing, observability and
@@ -49,7 +42,7 @@ eBPF maintainers, various eBPF-based projects, eBPF book authors but most
 importantly, we'll hear from a wide set of eBPF users sharing their experience
 on how they leverage and utilize eBPF.
 
-# Keynotes
+## Keynotes
 
 On both days, we will feature a set of 15 min keynotes from interesting people
 in the eBPF space. We'll hear from both eBPF Co-Maintainers, eBPF-based project

@@ -6,7 +6,7 @@ categories:
   - Technology
 tags:
   - bpf-updates
-ogSummary: 'This is issue 12 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.'
+ogSummary: 'Issue 12 of the BPF newsletter by Alexander Alemayhu, covering recent developments, presentations, videos, and updates on BPF and XDP.'
 ---
 
 This is issue 12 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
@@ -176,7 +176,7 @@ A couple of new GitHub projects. Please star if you like the projects ;)
   - [[PATCH net-next v2 7/7] bpf: write back the verifier log buffer as it gets filled](https://patchwork.ozlabs.org/patch/823384/)
 - Jiong Wang, [[PATCH, bpf-llvm] Fix bug on silently truncating 64-bit immediate](https://lists.iovisor.org/pipermail/iovisor-dev/2017-October/001123.html)
 - Richard Weinberger, [[PATCH] bpf: devmap: Check attr->max_entries more carefully](https://patchwork.kernel.org/patch/10009601/)
-- Colin King, [[PATCH][bpf-next] bpf: remove redundant variable old_flags](https://patchwork.kernel.org/patch/9999311/)
+- Colin King, [PATCH bpf-next: bpf: remove redundant variable old_flags](https://patchwork.kernel.org/patch/9999311/)
 - Steven Rostedt, [[PATCH] tracing: bpf: Hide bpf trace events when they are not used](https://www.mail-archive.com/linux-kernel@vger.kernel.org/msg1511785.html)
 - Jakub Kicinski, [[PATCH net-next 00/15] nfp: bpf ABIv2 and multi port](https://patchwork.ozlabs.org/cover/823052/)
   - [[PATCH net-next 01/15] nfp: output control messages to `trace_devlink_hwmsg()`](https://patchwork.ozlabs.org/patch/823063/)

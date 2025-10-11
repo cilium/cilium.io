@@ -7,9 +7,7 @@ categories:
 tags:
   - announcement
   - releases
-ogSummary: "We are excited to announce Cilium 1.1. 33 contributors have contributed 965 commits to this release. Below is a list of highlighted features and
-architectural improvements that have made the 1.1 release in addition to the
-countless bugfixes."
+ogSummary: 'Cilium 1.1 brings deep Istio integration, CRI-O/containerd support, improved network security, efficiency, and scalability, along with numerous bug fixes.'
 ---
 
 We are excited to announce Cilium 1.1. 33 contributors have contributed 964

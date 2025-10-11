@@ -11,6 +11,7 @@ categories:
 tags:
   - Cilium
   - Clustermesh
+  - Load balance
 ---
 
 ![USwitch logo](uswitchheader.svg)
@@ -22,13 +23,13 @@ _Author: Joseph Irving, Platform Lead at RVU (Uswitch)_
 
 Setting up networking for one Kubernetes cluster can be a challenge but it becomes even more fun once you add multiple clusters into the mix. In this blog, we’ll go over the solutions that [RVU](https://www.rvu.co.uk/) ([Uswitch](https://www.uswitch.com/)) came up with to allow their applications to talk between clusters and the rationale behind them, from [building our own tools](https://labs.rvu.co.uk/multi-cluster-kubernetes-load-balancing-in-aws-with-yggdrasil-c1583ea7d78f) like [Yggdrasil](https://github.com/uswitch/yggdrasil) (Envoy controller) to implementing other tools such as Cilium. We’ll see what benefits and drawbacks the different approaches can have and also explore why we opted to avoid using a traditional service mesh to achieve our multi-cluster networking goals.
 
-# Background
+## Background
 
 Over the course of around two years, we had a relatively rapid shift in how we thought about infrastructure at our company. Historically, every product team ran their own infrastructure and were almost entirely independent of each other. We realised that teams were duplicating effort and spending far too much time maintaining and building infrastructure instead of developing new features for our websites. To reduce this replication effort, we decided to centralise the infrastructure on a common platform built on top of Kubernetes.
 
 As we did this one of the biggest concerns from our teams was: what happens if a cluster has an outage? As these clusters had so much of the website running on them this could be very disruptive. To alleviate these concerns, we built multiple Kubernetes clusters for failover. However, this then created the problem of how do we route traffic between them?
 
-# Building our own tool
+## Building our own tool
 
 Our first approach centred around the open source proxy called [Envoy](https://www.envoyproxy.io/), its ability to dynamically change its configuration via GRPC was of particular interest to us as we saw a way to leverage our existing infrastructure to configure it. Our idea was to configure Envoy to send traffic to our Kubernetes clusters based on the Ingress objects that were already present in the clusters. We built an Envoy control plane called Yggdrasil. It takes Ingress resources across multiple Kubernetes clusters and turns them into Envoy configuration.
 
@@ -75,7 +76,7 @@ After looking at more ‘traditional’ service meshes, we discovered Cilium whi
 
 This all sounded great, so the next step was to try it out!
 
-# Cilium Time
+## Cilium Time
 
 So let's compare Cilium to our original requirements, first real pod IPs:
 
@@ -109,7 +110,7 @@ We even extended this to go across clouds by setting up a VPN between Google Clo
 
 ![VPN from Google Cloud to AWS](multicloud1.png)
 
-# What’s Next?
+## What’s Next?
 
 Cilium proved to be a great option for us, giving us the functionality we wanted without all the complication that the more traditional service meshes typically imposed on a user. However, it wasn’t completely without its drawbacks. The lack of a dedicated proxy in Cilium meant that apps had to implement things like retries and load-balancing when talking to other services (something our old setup or going through Envoy did for them). Another thing to be aware of is that Cilium differs from more traditional IPTables based implementations, so it is a good idea to familiarise yourself with how Cilium operates and how it uses eBPF maps. The Cilium community was always very helpful if we did ever find any bugs though, so rest assured someone will help you!
 

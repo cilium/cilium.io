@@ -14,13 +14,7 @@ tags:
   - eBPF
   - BPF
 ogImage: ogimage.png
-ogSummary: "We are excited to announce the Cilium 1.5 release. Cilium 1.5 is the first
-release where we primarily focused on scalability with respect to number of
-nodes, pods and services. Our goal was to scale to 5k nodes, 20k pods and 10k
-services. We went well past that goal with the 1.5 release and are now
-officially supporting 5k nodes, 100k pods and 20k services. Along the way, we
-learned a lot, some expected, some unexpected, this blog post will dive into
-what we learned and how we improved."
+ogSummary: 'Cilium 1.5 focuses on extreme scalability, supporting 5k nodes, 100k pods, BPF-based SNAT, and improved load balancing and encryption.'
 ---
 
 We are excited to announce the Cilium 1.5 release. Cilium 1.5 is the first

@@ -14,10 +14,7 @@ tags:
   - session affinity
   - scalability
 ogImage: ogimage.png
-ogSummary: "We are excited to announce the Cilium 1.8 release. A total of 2162 commits have
-been contributed by a community of 182 developers, many of whom made their first
-contributions this cycle. Cilium 1.8 brings with it a trove of exciting new
-features"
+ogSummary: 'Cilium 1.8 brings XDP acceleration, cluster-wide visibility, host network policies, session affinity, and performance improvements with CRD-mode scalability.'
 ---
 
 ![](ogimage.png)
@@ -87,7 +84,7 @@ Congratulations to the new core team members based on 1.8 contributions:
 - Chris Tarazi, Ilya Dmitrichenko, Quentin Monnet, Paul Chaignon, Robin Hahling, Tobias Klauser (Isovalent)
 - Weilong Cui, Yongkun Gui, Zang Li (Google)
 
-# What is Cilium?
+## What is Cilium?
 
 Cilium is open source software for transparently providing and securing the
 network and API connectivity between application services deployed using Linux
@@ -111,7 +108,7 @@ introduction to Cilium.
 <a name="kubeproxy-removal"></a>
 <a name="kube-proxy-replacement-at-the-xdp-layer"></a>
 
-# Kube-proxy replacement at the XDP layer
+## Kube-proxy replacement at the XDP layer
 
 _Contributed by Daniel Borkmann (Isovalent)_
 
@@ -223,7 +220,7 @@ Kubernetes without kube-proxy</a> getting started guide.
 
 <a name="hubblerelay"></a>
 
-# Cluster-wide observability with Hubble Relay
+## Cluster-wide observability with Hubble Relay
 
 _Contributed by Robin Hahling (Isovalent) and Michi Mutsuzaki (Isovalent)_
 
@@ -256,11 +253,11 @@ In Cilium 1.8, Hubble Relay is required for Hubble UI.
 
 <a name="policy"></a>
 
-# Improved Policy visibility and control
+## Improved Policy visibility and control
 
 <a name="hostfw"></a>
 
-## Host-level Network Policies
+### Host-level Network Policies
 
 _Contributed by Paul Chaignon (Isovalent)_
 
@@ -533,11 +530,11 @@ See <a href="https://docs.cilium.io/en/v1.8/gettingstarted/hubble/">networking a
 <a name="iptables-free"></a>
 <a name="voyaging-towards-iptables-free"></a>
 
-# Voyaging towards iptables-free
+## Voyaging towards iptables-free
 
 <a name="affinity"></a>
 
-## eBPF Session Affinity
+### eBPF Session Affinity
 
 _Contributed by Martynas Pumputis (Isovalent) and Daniel Borkmann (Isovalent)_
 
@@ -766,7 +763,7 @@ platforms and production environments.
 
 <a name="kernel"></a>
 
-# Upstream Linux kernel contributions
+## Upstream Linux kernel contributions
 
 _Contributed by Daniel Borkmann (Isovalent), John Fastabend (Isovalent) and Joe Stringer (Isovalent)_
 
@@ -889,7 +886,7 @@ See the merged patch sets for further information: <a href="https://lore.kernel.
 
 <a name="18Highlights"></a>
 
-# 1.8 Release Highlights
+## 1.8 Release Highlights
 
 - **Hubble**
   - New hubble-relay agent for multinode support
@@ -942,16 +939,16 @@ See the merged patch sets for further information: <a href="https://lore.kernel.
 See the [Changelog](https://github.com/cilium/cilium/blob/v1.8/CHANGELOG.md)
 for full notes on changes during the Cilium 1.8 development cycle.
 
-# Getting Started
+## Getting Started
 
 New to Cilium? Follow one of the [Getting Started Guides](https://docs.cilium.io/en/v1.8/gettingstarted/).
 
-# Upgrade Instructions
+## Upgrade Instructions
 
 As usual, follow the [upgrade guide](https://cilium.readthedocs.io/en/v1.8/install/upgrade/#upgrading-minor-versions)
 to upgrade your Cilium deployment. Feel free to ping us on [Slack].
 
-# Release
+## Release
 
 - Release Notes & Binaries: [1.8.0](https://github.com/cilium/cilium/releases/tag/v1.8.0)
 - Container image: `docker.io/cilium/cilium:v1.8.0`

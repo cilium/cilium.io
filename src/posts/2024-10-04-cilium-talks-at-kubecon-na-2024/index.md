@@ -7,6 +7,8 @@ isPopular: true
 ogSummary: 'Find all the Cilium talks at KubeCon NA 2024'
 categories:
   - Community
+tags:
+  - Cilium
 ---
 
 ![Cilium Talks at KubeCon](kubeconNA.png)

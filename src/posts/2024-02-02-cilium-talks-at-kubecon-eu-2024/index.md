@@ -6,6 +6,9 @@ ogImage: cover.png
 ogSummary: 'A list of all Cilium talks and sessions at KubeCon EU 2024'
 categories:
   - Community
+tags:
+  - Cilium
+  - Kubecon
 ---
 
 ![cover image](./cover.png)

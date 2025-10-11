@@ -8,7 +8,7 @@ tags:
   - announcement
   - releases
 ogImage: k8s_ship.png
-ogSummary: 'The last couple of months have been tremendously exciting for everyone working on Cilium and BPF. We have witnessed a fast growing community of Cilium users as well as the rapid increase of BPF usage and development with companies such as Google joining the existing already strong BPF community of engineers from Facebook, Netflix, Red Hat and many more.'
+ogSummary: 'The past few months have been incredibly exciting for the Cilium and BPF community, with rapid adoption and contributions from major companies like Google, Facebook, Netflix, and Red Hat.'
 ---
 
 ![Kubernetes BPF ship](k8s_ship.png)
@@ -65,7 +65,6 @@ section of the Cilium documentation.
   incredible performance. Read more about the powers of BPF in [this
   blog](/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables#bpf)
   or in the [BPF reference guide](http://docs.cilium.io/en/doc-1.0/bpf/).
-
   - **Fully Distributed:** All datapath elements are fully distributed
     across the cluster and run at the most efficient layer in the operating
     system on each cluster node.
@@ -90,7 +89,6 @@ section of the Cilium documentation.
   authorization](http://docs.cilium.io/en/doc-1.0/policy/language/#layer-7-examples)
   to provide security for both traditional deployments and evolving
   microservices architectures.
-
   - **[Identity Based](http://docs.cilium.io/en/doc-1.0/concepts/#arch-id-security):**
     Instead of relying on source IP addresses to identify workloads, Cilium
     encodes the workload identity in every packet to provide highly scalable
@@ -118,7 +116,6 @@ section of the Cilium documentation.
   hashtable based implementation provides O(1) performance which means that the
   performance will not drop as you increase the number of services. The load
   balancer can be configured in two ways:
-
   - **Kubernetes Service Implementation:** All Kubernetes ClusterIP services
     will be automatically implemented in BPF to provide a highly scalable
     alternative to kube-proxy for in-cluster load-balancing.
@@ -132,7 +129,6 @@ section of the Cilium documentation.
   for all endpoints which are then segmented and secured using the
   policy layer on top. This simplicity tremendously helps scaling and
   troubleshooting. Networking can be configured in two modes:
-
   - **[Overlay/VXLAN](http://docs.cilium.io/en/doc-1.0/concepts/#overlay-network-mode):**
     The simplest integration that allows carrying workload identities for any
     IP based protocol. Hardware assisted VXLAN offloads ensure close to native

@@ -12,10 +12,7 @@ tags:
   - eBPF
   - BPF
 ogImage: ogimage.png
-ogSummary: "Hubble is a fully distributed networking and security observability platform for cloud native workloads. Hubble is open source software and built on top of
-Cilium and eBPF to enable deep visibility into the communication and
-behavior of services as well as the networking infrastructure in a completely
-transparent manner."
+ogSummary: 'Hubble delivers real-time network, service, and security observability for Kubernetes. Built on Cilium and eBPF, it offers deep, transparent insights.'
 ---
 
 Hubble is a fully distributed networking and security observability platform
@@ -71,9 +68,9 @@ overhead while providing deep and detailed visibility where required. Hubble
 has been created and specifically designed to make best use of these new [eBPF]
 powers.
 
-# Features
+## Features
 
-## Service Dependency Graph
+### Service Dependency Graph
 
 Troubleshooting microservices application connectivity is a challenging task.
 Simply looking at "kubectl get pods" does not indicate dependencies between
@@ -183,7 +180,7 @@ starwars/enterprise-5775b56c4b-thtwl:37800   starwars/deathstar-695d8f7ddc-lvj84
 starwars/enterprise-5775b56c4b-thtwl:37800   starwars/deathstar-695d8f7ddc-lvj84:80(http)   Policy denied (L3)   TCP Flags: SYN
 ```
 
-# Getting Started
+## Getting Started
 
 See the links below to get started. While doing so, make sure to join the
 `#hubble` channel on the [Cilium Slack] to share your experiences with others

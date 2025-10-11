@@ -7,6 +7,8 @@ ogImage: cover.png
 ogSummary: "In part 1 of the series, you'll learn about Cilium and Hubble and why they're essential in modern Kubernetes environments"
 categories:
   - Technology
+tags:
+  - Cilium
 ---
 
 ![](cover.png)

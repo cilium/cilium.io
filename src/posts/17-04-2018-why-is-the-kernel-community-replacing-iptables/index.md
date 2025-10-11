@@ -11,13 +11,14 @@ tags:
   - kernel
   - ebpf
   - superpowers
-ogSummary: "The Linux kernel community recently announced bpfilter, which will replace the long-standing in-kernel implementation of iptables with high-performance
-network filtering powered by Linux BPF, all while guaranteeing a non-disruptive
-transition for Linux users."
+  - packet-filtering
+ogSummary: 'bpfilter replaces iptables with BPF-powered packet filtering in Linux kernel. Facebook sees 10x performance gains, Google and Netflix adopt BPF for networking and tracing.'
 ---
 
-Author Note: this is a post by long-time Linux kernel networking developer and
-creator of the Cilium project, Thomas Graf
+> Author Note: this is a post by long-time Linux kernel networking developer and
+> creator of the Cilium project, Thomas Graf
+
+---
 
 The Linux kernel community recently announced [bpfilter], which will replace
 the long-standing in-kernel implementation of iptables with high-performance
@@ -81,7 +82,7 @@ received or transmitted is matched against a list of rules, one by one.
 However, linear processing has an obvious massive disadvantage, the cost of
 filtering a packet can increase linearly with the number of rules added.
 
-### The intermediate workaround: ipset
+## The intermediate workaround: ipset
 
 Some time passed, network speeds increased and iptables setups had grown from a
 dozen rules to sets of thousands of rules. Traversing sequential iptables lists
@@ -215,7 +216,7 @@ the performance problems caused by iptables's use of sequential lists. Doing so
 will require native use of BPF such as done by the [Cilium](https://cilium.io/)
 project.
 
-### How has the kernel community reacted?
+## How has the kernel community reacted?
 
 Some of the Linux kernel mailing lists are famous for their flame wars. Have
 flamewars burst out in this case? No, in fact, there have been immediate

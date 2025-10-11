@@ -20,7 +20,7 @@ _Author: Ondrej Blazek, Infrastructure Engineer @ Seznam.cz_
 
 Seznam.cz is a Czech technological company developing a custom search engine, advertising platform, online maps, content management system, and also private cloud services, custom hardware, and datacenters.
 
-# Architecture
+## Architecture
 
 Seznam's infrastructure historically used F5 hardware load balancers but we switched to software load balancers a few years ago. Up until now we've been using a [multiple tier](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer) setup - [ECMP routing](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer#first-tier-ecmp-routing) as the first tier + [IPVS](http://www.linuxvirtualserver.org/software/ipvs.html) as the second tier ([L4 load balancer (L4LB)](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer#second-tier-l4-load-balancing)) + [Envoy proxy](https://www.envoyproxy.io/) as the third tier ([L7 load balancer](https://vincent.bernat.ch/en/blog/2018-multi-tier-loadbalancer#last-tier-l7-load-balancing)). Unfortunately as traffic increased and, thanks to COVID, we started running short on hardware supplies, we had to look for alternatives to use our hardware more effectively.
 
@@ -53,7 +53,7 @@ supports-priv-flags: yes
 c1:00.0 Ethernet controller: Intel Corporation Ethernet Controller XXV710 for 25GbE SFP28 (rev 02)
 ```
 
-# Launching Standalone L4LB
+## Launching Standalone L4LB
 
 Cilium itself is released as a Docker image which we tried running on the IPVS node itself. As we wanted to persist the state when the Cilium container is restarted/upgraded, we created a systemd service to mount the bpf filesystem:
 
@@ -110,7 +110,7 @@ systemctl start sys-fs-bpf.mount; docker run \
 
 We serve around 3k services and use 30+ L7 nodes so we quickly reached the defaults for lbmap size. However, it is possible to extend it so we added the `--bpf-lb-map-max 512000` option.
 
-# Setting Up Services
+## Setting Up Services
 
 Cilium provides an API to set up the lbmaps. We used the following command to configure all the services:
 
@@ -127,7 +127,7 @@ For BGP announcement, [we use BIRD](https://docs.cilium.io/en/stable/gettingstar
 # systemctl start bird6
 ```
 
-# Comparison Under Load
+## Comparison Under Load
 
 - [SynFlood](https://www.cloudflare.com/learning/ddos/syn-flood-ddos-attack/)
 - [MoonGen](https://github.com/emmericp/MoonGen)
@@ -202,7 +202,7 @@ Curl client output:
 
 At 14.8Mpps there were a few packet drops here and there but because we were hitting NIC limits this was totally expected.
 
-# Production Traffic
+## Production Traffic
 
 The biggest surprise came when we deployed the L4LB XDP to one of our production nodes (which was previously running IPVS). As we have full access to our nodes and are able to start/stop BIRD at any point in time, we were able to cleanly pass traffic between L4LB XDP nodes and IPVS nodes. At approx 11:00 AM, we stopped BIRD on the IPVS nodes so that the L4LB XDP node was handling all the traffic and at approx 11:14 AM, we switched to the 2 nodes running IPVS.
 
@@ -217,7 +217,7 @@ The wow effect really came when we started to look at CPU usage. At one point, w
 
 _Note: The pictures were taken from our production grafana. CPU Load (Lower is better)_
 
-# Endnotes
+## Endnotes
 
 The screenshots speak for themselves, but the key take away for us was, **L4LB XDP at the driver layer with a majority of HTTP traffic (~90% of our traffic is HTTP requests) saves us an unbelievable amount of CPUs needed to handle our production traffic**.
 
