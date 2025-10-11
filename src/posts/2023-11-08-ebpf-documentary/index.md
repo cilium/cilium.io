@@ -4,7 +4,7 @@ date: '2023-11-08T17:00:00.000Z'
 title: 'eBPF’s Journey – Unlocking The Kernel'
 isFeatured: false
 ogImage: cover.webp
-ogSummary: 'Learn about the journey of eBPF from its inception to the successful merge into the Linux kernel and witness how it has grown to be deployed everywhere'
+ogSummary: 'The journey of eBPF from concept to kernel integration and how Cilium helped unlock secure, programmable networking for the modern cloud ecosystem.'
 categories:
   - Community
 tags:

@@ -14,7 +14,7 @@ tags:
   - eBPF
   - BPF
 ogImage: ogimage.png
-ogSummary: " This is a deep dive into ClusterMesh, Cilium's multi-cluster implementation."
+ogSummary: 'A comprehensive guide to Cilium ClusterMesh Cilium’s multi-cluster networking model for Kubernetes that supports service discovery, encryption, and global network policies.'
 ---
 
 This is a deep dive into ClusterMesh, Cilium's multi-cluster implementation. In

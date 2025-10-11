@@ -5,18 +5,19 @@ title: 'Cilium Talks at KubeCon EU 2022'
 isPopular: false
 isFeatured: false
 ogImage: ciliumtalks.jpg
-ogSummary: "Find all the Cilium talk at KubeCon EU"
+ogSummary: 'Find all the Cilium talk at KubeCon EU'
 categories:
   - Community
 tags:
   - Cilium
   - KubeCon
+  - Talks
 ---
 
 ![Cilium Talks at KubeCon](ciliumtalks.jpg)
 
-*May 6th, 2022*  
-*Author: Bill Mulligan, Isovalent*
+_May 6th, 2022_  
+_Author: Bill Mulligan, Isovalent_
 
 The first in-person KubeCon + CloudNativeCon EU since 2019 is just around the corner and we can’t wait to see the Cilium community again outside a Zoom meeting. In case you lost track, that means we last met in Europe at [Cilium 1.5](https://cilium.io/blog/2019/04/24/cilium-15) and boy have there been a lot of updates to Cilium in the meantime (we were able to meet at KubeCon NA in the fall, but missed most of the people outside the US). With that much of a gap, there is a lot to catch up on and the KubeCon schedule has not failed to deliver. The talks cover both technical talks from Cilium contributors and end user stories from people putting Cilium into production. You will be able to catch presentations on everything from Cilium Clustermesh to Cilium for telco workloads to a tour of the Cilium service mesh. Let’s dive into each of the talks below.
 
@@ -24,14 +25,12 @@ The first in-person KubeCon + CloudNativeCon EU since 2019 is just around the co
 
 Monday May 16, 2022 10:45 - 11:15 CEST
 
-The digital systems of IKEA are situated in public cloud and private data centers around the world. In this talk we’ll highlight some of the challenges – and opportunities - we faced in setting up a large scale, multi-cluster distributed Kubernetes environment across our data centers. We’ll share how we have used Cilium and its eBPF features to have a better scaling profile, to improve observability and even to replace some of our proprietary load balancers. 
+The digital systems of IKEA are situated in public cloud and private data centers around the world. In this talk we’ll highlight some of the challenges – and opportunities - we faced in setting up a large scale, multi-cluster distributed Kubernetes environment across our data centers. We’ll share how we have used Cilium and its eBPF features to have a better scaling profile, to improve observability and even to replace some of our proprietary load balancers.
 
-
-
-* Connecting Kubernetes workloads across our BGP network 
-* Protecting multi-tenant workloads with multi-cluster network policy 
-* Cilium support for multi-homed pods * Mimicking availability zones with Cilium ClusterMesh 
-* Use Cilium with XDP, ServiceType Loadbalancer and Ingress to replace our proprietary load balancer fronting workload. 
+- Connecting Kubernetes workloads across our BGP network
+- Protecting multi-tenant workloads with multi-cluster network policy
+- Cilium support for multi-homed pods \* Mimicking availability zones with Cilium ClusterMesh
+- Use Cilium with XDP, ServiceType Loadbalancer and Ingress to replace our proprietary load balancer fronting workload.
 
 You’ll leave this talk understanding how you can use Cilium and its eBPF capabilities to build and instrument your network and obtain great observability.
 

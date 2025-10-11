@@ -6,7 +6,10 @@ categories:
   - How-To
 tags:
   - troubleshooting
-ogSummary: As we approach the upcoming 1.0 release, the Cilium community has been putting a lot of effort towards monitoring and troubleshooting. This has led to the development of several new tools in the project which we'll explore in this blog series. In this first part, we will cover **cilium-health**, a tool for troubleshooting intra-cluster connectivity issues.`
+  - cilium-health
+  - cluster-monitoring
+  - debugging
+ogSummary: 'Diagnose and resolve Kubernetes networking issues with cilium-health - monitor cluster connectivity, identify network problems, and troubleshoot endpoint failures.'
 ---
 
 As we approach the upcoming 1.0 release, the Cilium community has been putting a lot of effort towards monitoring and troubleshooting. This has led to the development of several new tools in the project which we'll explore in this blog series. In this first part, we will cover **cilium-health**, a tool for troubleshooting intra-cluster connectivity issues.

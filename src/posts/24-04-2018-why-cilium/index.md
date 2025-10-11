@@ -4,8 +4,13 @@ date: '2018-04-24T12:30:43.000Z'
 title: 'Cilium - Rethinking Linux Networking and Security for the Age of Microservices'
 categories:
   - Technology
+tags:
+  - Cilium
+  - BPF
+  - Linux Networking
+  - Cloud Native
 ogImage: k8s_ship.png
-ogSummary: "To celebrate the Cilium project hitting 1.0, we wanted to take a moment to share the broader story behind how BPF and Cilium are driving the biggest change in the past two decades of Linux networking and security, and invite you to join in on the fun. We're just getting started!"
+ogSummary: 'As Cilium celebrates its 1.0 release, we explore how BPF and Cilium are transforming Linux networking and security for the microservices era—and why this is just the beginning.'
 ---
 
 ![](k8s_ship.png)
@@ -150,5 +155,5 @@ using BPF + Cilium Sockmap should be a no-brainer way to reduce CPU/memory usage
 With BPF + Cilium, the Linux kernel can now be optimized for the age of Kubernetes, Docker and Mesos and the API-driven microservices that are deployed at scale on such platforms. We’re excited about what we’ve built so far with Cilium 1.0, but we’re just getting started! We are continuing to work with the upstream Linux community as well as open source projects like Envoy and Istio to push the boundaries of dataplane performance and add deeper and richer capabilities around service identity and API-aware visibility and security.
 
 We look forward to hearing from you on how Cilium and BPF can continue to reinvent Linux networking for a world filled with
-API-driven microservices, so [try it out](https://www.cilium.io/try), ask a question on [Cilium Slack](https://www.cilium.io/slack),
+API-driven microservices, so [try it out](https://www.cilium.io/try), ask a question on [Cilium Slack](https://slack.cilium.io/),
 and if you like it, consider contributing on [Cilium GitHub](https://github.com/cilium/cilium).

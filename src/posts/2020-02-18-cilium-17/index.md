@@ -16,10 +16,7 @@ tags:
   - dsr
   - endpointslices
 ogImage: ogimage.png
-ogSummary: "We are excited to announce the Cilium 1.7 release. A total of 1551 commits have
-been contributed by a community of 141 developers, many of whom made their
-first contributions this cycle. Cilium 1.7 brings with it a trove of exciting
-new features"
+ogSummary: 'Cilium 1.7 introduces the new Hubble UI, cluster-wide network policies, eBPF-based DSR, TLS visibility, and a pure Go eBPF library for better performance.'
 ---
 
 ![Introduction](ogimage.png)
@@ -70,7 +67,7 @@ new features:
   [distributing Cilium via Helm repositories](#helm)... **and much more!**
   For more highlights, see the [1.7 Release Highlights](#17Highlights).
 
-# What is Cilium?
+## What is Cilium?
 
 Cilium is open source software for transparently providing and securing the
 network and API connectivity between application services deployed using Linux
@@ -91,7 +88,7 @@ container configuration.
 See the section **[Introduction to Cilium](https://cilium.readthedocs.io/en/stable/intro/)** for a more detailed general
 introduction to Cilium.
 
-# New [USERS.md](https://github.com/cilium/cilium/blob/master/USERS.md) file: Who is using Cilium?
+## New [USERS.md](https://github.com/cilium/cilium/blob/master/USERS.md) file: Who is using Cilium?
 
 ```
 * N: Adobe, Inc.
@@ -127,7 +124,7 @@ you about your use of Cilium on Slack, add your Slack nick as well.
 
 <a name="hubble"></a>
 
-# Hubble
+## Hubble
 
 _Contributed by Sebastian Wicki and Sergey Generalov_
 
@@ -167,7 +164,7 @@ During Cilium 1.7 development cycle several performance improvements were made t
 <a name="ccnp"></a>
 <a name="cilium-cluster-wide-network-policies"></a>
 
-# Cilium Cluster-wide Network Policies
+## Cilium Cluster-wide Network Policies
 
 _Contributed by Deepesh Pathak and André Martins_
 
@@ -222,7 +219,7 @@ it's now simpler to create network policies which apply to the entire cluster.
 
 <a name="kubeproxy-removal"></a>
 
-# Kube-proxy replacement with Direct Server Return
+## Kube-proxy replacement with Direct Server Return
 
 _Contributed by Martynas Pumputis, Daniel Borkmann, Sebastian Wicki and André Martins_
 
@@ -362,7 +359,7 @@ of security identities of remote Cilium-managed nodes.
 
 <a name="tls-visibility"></a>
 
-# TLS visibility for L7 policies (beta)
+## TLS visibility for L7 policies (beta)
 
 _Contributed by Jarno Rajahalme_
 
@@ -395,7 +392,7 @@ potentially malicious exfiltration of data, for example.
 
 <a name="visibility-annotations"></a>
 
-# L7 protocol visibility via pod annotations
+## L7 protocol visibility via pod annotations
 
 _Contributed by Ian Vernon and Joe Stringer_
 
@@ -423,7 +420,7 @@ detail](http://docs.cilium.io/en/stable/policy/visibility/).
 <a name="ebpf-library"></a>
 <a name="pure-go-ebpf-library"></a>
 
-# Pure Go eBPF library
+## Pure Go eBPF library
 
 _Contributed by Joe Stringer_
 
@@ -458,7 +455,7 @@ To learn more about the eBPF library, visit the project under Cilium's GitHub or
 
 <a name="endpoint-slice"></a>
 
-# Kubernetes EndpointSlice support
+## Kubernetes EndpointSlice support
 
 _Contributed by André Martins_
 
@@ -476,7 +473,7 @@ the cluster.
 
 <a name="scalability"></a>
 
-# Scalability
+## Scalability
 
 _Contributed by Ian Vernon and André Martins_
 
@@ -516,7 +513,7 @@ the memory footprint of Cilium.
 
 <a name="upstream-linux"></a>
 
-# Linux kernel changes
+## Linux kernel changes
 
 _Contributed by Daniel Borkmann_
 
@@ -677,7 +674,7 @@ See the [merged patch set](https://lore.kernel.org/bpf/cover.1572649915.git.dani
 
 <a name="managed-ci"></a>
 
-# Supporting Cilium testing on managed Kubernetes offerings
+## Supporting Cilium testing on managed Kubernetes offerings
 
 _Contributed by Maciej Kwiek and Ray Bejjani_
 
@@ -694,7 +691,7 @@ faster cluster provisioning.
 
 <a name="helm"></a>
 
-# Helm 3 and Helm repository
+## Helm 3 and Helm repository
 
 _Contributed by Arthur Evstifeev and Joe Stringer_
 
@@ -720,7 +717,7 @@ helm install cilium cilium/cilium \
 
 <a name="17Highlights"></a>
 
-# 1.7 Release Highlights
+## 1.7 Release Highlights
 
 - **Enhancements to kube-proxy replacement in eBPF**
   - New Direct Server Return (DSR) mode for better latency and client source IP preservation
@@ -776,19 +773,19 @@ helm install cilium cilium/cilium \
 See the [Changelog](https://github.com/cilium/cilium/blob/v1.7/CHANGELOG.md)
 for full notes on changes during the Cilium 1.7 development cycle.
 
-# Getting Started
+## Getting Started
 
 New to Cilium? Follow one of the [Getting Started
 Guides](https://docs.cilium.io/en/v1.7/gettingstarted/).
 
-# Upgrade Instructions
+## Upgrade Instructions
 
 As usual, follow the [upgrade
 guide](https://cilium.readthedocs.io/en/v1.7/install/upgrade/#upgrading-minor-versions)
 to upgrade your Cilium deployment. Feel free to ping us on
 [Slack].
 
-# Release
+## Release
 
 - Release Notes & Binaries: [1.7.0](https://github.com/cilium/cilium/releases/tag/v1.7.0)
 - Container image: `docker.io/cilium/cilium:v1.7.0`

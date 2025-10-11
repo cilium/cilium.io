@@ -8,7 +8,9 @@ tags:
   - bpf-updates
   - bpf
   - ebpf
-ogSummary: 'Linux 4.12-rc4 was released this week. No new BPF changes were in this release, but several patches were applied on netdev.'
+  - xdp
+  - linux
+ogSummary: 'BPF and XDP development updates: BPF ID patches merged, perf events support added, XDP tutorials released, and verifier improvements for Linux kernel networking.'
 ---
 
 This is issue 06 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.

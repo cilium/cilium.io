@@ -5,11 +5,18 @@ title: 'Cilium User Story: Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev 
 isPopular: false
 isFeatured: false
 ogImage: User-story-telecommunications.png
-ogSummary: 'Learn how a telecommunication company used Cilium to satisfy business zero-trust networking requirements'
+ogSummary: 'Telecom company implements zero-trust with Cilium FQDN policies across 20K+ vCPUs. Default-deny egress, granular controls, and full audit logs for 100+ teams.'
 categories:
   - Community
 tags:
   - Cilium
+  - Zero Trust
+  - FQDN Policies
+  - Multi-Tenant
+  - Network Security
+  - Hubble
+  - Egress Control
+  - Telecommunications
 ---
 
 ![](User-story-telecommunications.png)

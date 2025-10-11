@@ -9,7 +9,9 @@ tags:
   - Kubernetes
   - network policies
   - dns-based policies
-ogSummary: "We’re very excited to always be pushing the envelop of what is possible using open source technology like Cilium with Kubernetes, and its one of the reason’s we’re so excited about Cilium's support for DNS-aware egress security policies. In this post, we’ll explain why this capability is a big win for users locking down their Kubernetes clusters, and walk through a few key use cases."
+  - kubernetes-security
+  - egress-filtering
+ogSummary: 'Cilium enables DNS-based egress filtering for Kubernetes. Control pod access to AWS S3, SaaS APIs, and external databases using stable DNS names instead of dynamic IP addresses.'
 ---
 
 ## The Need for Least Privilege Egress Filtering in Kubernetes
@@ -79,4 +81,4 @@ The access control to SaaS services from AWS, Google, Twilio, Salesforce, Stripe
 
 ## Future Work
 
-The support for wildcards will be useful for allowing access to groups of trusted services (for e.g., \*.awsamazon.com). And as we saw in the kafka example above, combining DNS with L7 policies can provide granular control. Supporting an expanded set of L7 protocols in Cilium policies was made very easy by introduction of [Envoy Golang extensions](https://cilium.io/blog/2018/10/23/cilium-13-envoy-go) in Cilium 1.3. Talking about L7, the visibility into TLS is a key aspect and there is ongoing kernel work for [kTLS](https://netdevconf.org/1.2/papers/ktls.pdf) that will make it possible to gain TLS visibility without requiring cumbersome man-in-the-middle models. Join us on [slack](https://cilium.slack.com) to engage with conversations around securing Kubernetes and microservices using Cilium and BPF.
+The support for wildcards will be useful for allowing access to groups of trusted services (for e.g., \*.awsamazon.com). And as we saw in the kafka example above, combining DNS with L7 policies can provide granular control. Supporting an expanded set of L7 protocols in Cilium policies was made very easy by introduction of [Envoy Golang extensions](https://cilium.io/blog/2018/10/23/cilium-13-envoy-go) in Cilium 1.3. Talking about L7, the visibility into TLS is a key aspect and there is ongoing kernel work for [kTLS](https://netdevconf.org/1.2/papers/ktls.pdf) that will make it possible to gain TLS visibility without requiring cumbersome man-in-the-middle models. Join us on [slack](https://slack.cilium.io/) to engage with conversations around securing Kubernetes and microservices using Cilium and BPF.

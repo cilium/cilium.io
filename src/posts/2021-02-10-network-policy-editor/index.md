@@ -17,7 +17,7 @@ tags:
   - Automation
   - Visualization
 ogImage: ogimage.png
-ogSummary: 'Implementing Network Policy is a critical part of building a secure Kubernetes-based platform, but the learning curve from simple examples to more complex real-world policies is steep. Not only can it be painful to get the YAML syntax and formatting just right, but more importantly, there are many subtleties in the behavior of the network policy specification (e.g. default allow/deny, namespacing, wildcarding, rules combination, etc.). Even an experienced Kubernetes YAML-wrangler can still easily tie their brain in knots working through an advanced network policy use case.'
+ogSummary: 'NetworkPolicy Editor simplifies building secure Kubernetes network policies, addressing the steep learning curve from YAML syntax to advanced real-world policies.'
 ---
 
 import authors from 'utils/author-data';
@@ -223,6 +223,6 @@ To make sharing network policy examples easy, we have added a simple Share butto
 
 Tweet us at <a href="https://twitter.com/@ciliumproject" target="_blank">@ciliumproject</a> to share your examples, and in the next few weeks we’ll pick a few favorites and send the creators some exclusive Cilium SWAG!
 
-We’d love to hear your feedback and questions on both the editor and Network Policy in the **#networkpolicy** channel of <a href="https://cilium.io/slack" target="_blank">Cilium Slack</a>. See you there!
+We’d love to hear your feedback and questions on both the editor and Network Policy in the **#networkpolicy** channel of <a href="https://slack.cilium.io/" target="_blank">Cilium Slack</a>. See you there!
 
 <BlogAuthor {...authors.sergeyGeneralov} />

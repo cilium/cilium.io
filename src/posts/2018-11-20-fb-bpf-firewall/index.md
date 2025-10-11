@@ -12,9 +12,7 @@ tags:
   - iptables
   - security
 ogImage: ogimage.png
-ogSummary: "We have covered Facebook's BPF-based load balancer with DDoS protection in a previous blog post. This post provides further details on Facebook's BPF use by covering Anant
-Deepak's talk at the BPF/networking microconference on Facebook's BPF-based
-edge firewall running in production."
+ogSummary: 'Facebook uses BPF to power its edge firewall, boosting performance, flexibility, and protection against DDoS compared to iptables.'
 ---
 
 ![Facebook Infrastructure Logo](ogimage.png)
@@ -144,7 +142,6 @@ unnecessary load on the infrastructure.
 ![Performance](performance_overview.png)
 
 - iptables has a linearly increasing CPU utilization as packets hit lower rules
-
   - Best when packets match earlier rules
   - Worst for default policy (match attempted for each rule)
 
@@ -269,7 +266,7 @@ a look at [Cilium].
 - [SIGCOMM 2018 - Accelerating Linux Security with eBPF iptables](https://dl.acm.org/citation.cfm?id=3234228)
 - [Why is the kernel community replacing iptables with BPF?](https://cilium.io/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables/)
 
-[slack]: http://cilium.io/slack
+[slack]: https://slack.cilium.io/
 [cilium]: https://github.com/cilium/cilium
 [slides]: http://vger.kernel.org/lpc_net2018_talks/ebpf-firewall-LPC.pdf
 [paper]: http://vger.kernel.org/lpc_net2018_talks/ebpf-firewall-paper-LPC.pdf

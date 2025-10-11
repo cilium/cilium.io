@@ -5,7 +5,7 @@ title: 'Meet the Maintainer - Laurent Bernaille'
 isPopular: false
 isFeatured: false
 ogImage: laurent.jpeg
-ogSummary: 'Learn more about Laurent and how he got involved in Cilium'
+ogSummary: 'Meet Laurent Bernaille, Cilium maintainer at Datadog. Learn how he scaled Kubernetes with eBPF, became a kube-proxy maintainer, and optimized cloud networking.'
 categories:
   - Community
 tags:

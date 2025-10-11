@@ -18,15 +18,7 @@ tags:
   - WireGuard
   - BGP
 ogImage: ogimage.png
-ogSummary: "The Cilium core team are excited to announce the Cilium 1.10 release. A total
-of 2042 new commits have been contributed by a growing community of 280
-developers. Contributions have come from a wide list of different companies
-including Alibaba, Datadog, Google, Isovalent, SuSE, Palantir among many
-others. We heard from users who are increasingly interested in better
-integration with the broader network, whether you're running Cilium in your own
-datacenter environments or in the cloud. Thus, a major focus of this release
-was ensuring a seamless integration between the Kubernetes network and
-enterprise on-prem infrastructure."
+ogSummary: 'Cilium 1.10 delivers WireGuard encryption, BGP support, an Egress IP Gateway, a new CLI, XDP load balancer, and Alibaba Cloud integration for better networking.'
 ---
 
 ![](intro.png)
@@ -94,7 +86,7 @@ features:
   New guides for Rancher and Rancher Kubernetes Engine make it easier
   to deploy Cilium in on-prem Kubernetes environments.
 
-# What is Cilium?
+## What is Cilium?
 
 Cilium is open source software for transparently providing and securing the
 network and API connectivity between application services deployed using Linux
@@ -117,7 +109,7 @@ introduction to Cilium.
 
 <a name="egressgateway"></a>
 
-# Egress IP Gateway
+## Egress IP Gateway
 
 _Primary contributors: Yongkun Gui (Google) and Bolun Zhao (Google)_
 
@@ -249,7 +241,7 @@ See the [Alibaba Cloud Getting Started Guide][] for more details.
 
 <a name="wireguard"></a>
 
-# Transparent Encryption with WireGuard
+## Transparent Encryption with WireGuard
 
 _Primary contributors: Martynas Pumputis (Isovalent) and Sebastian Wicki (Isovalent)_
 
@@ -301,7 +293,7 @@ in the Cilium documentation.
 
 <a name="dualstack"></a>
 
-# Kubernetes Dual-Stack support
+## Kubernetes Dual-Stack support
 
 _Primary contributors: Deepesh Pathak (Microsoft), André Martins (Isovalent)_
 
@@ -332,7 +324,7 @@ coredns-755cd654d4-msqgm   2205          11023         ready            10.16.11
 
 <a name="arm64"></a>
 
-# Official ARM64 Cilium images
+## Official ARM64 Cilium images
 
 _Primary contributors: André Martins (Isovalent)_
 
@@ -355,7 +347,7 @@ wild, running on a smartphone!
 
 <a name="cli"></a>
 
-# Cilium CLI
+## Cilium CLI
 
 A new [CLI](https://github.com/cilium/cilium-cli) is available that can be used
 to install and manage Cilium clusters. The CLI talks directly to the Kubernetes
@@ -418,7 +410,7 @@ $ cilium connectivity test
 
 <a name="performance"></a>
 
-# Improving Cilium Network Performance
+## Improving Cilium Network Performance
 
 _Primary contributors: Gilberto Bertin (Isovalent), Kornilios Kourtis (Isovalent) and Daniel Borkmann (Isovalent)_
 
@@ -510,7 +502,7 @@ rate.
 
 <a name="standalonelb"></a>
 
-# XDP-based Standalone Load Balancer
+## XDP-based Standalone Load Balancer
 
 _Primary contributors: Daniel Borkmann (Isovalent), Martynas Pumputis (Isovalent), Chris Tarazi (Isovalent) and Sebastian Wicki (Isovalent)_
 
@@ -654,16 +646,16 @@ The PCAP recorder is currently only available in the Cilium's new XDP L4LB mode,
 but it is planned to also extend support to regular east-west traffic when running
 in Kubernetes CNI mode in an upcoming release.
 
-# Getting Started
+## Getting Started
 
 New to Cilium? Follow one of the [Getting Started Guides].
 
-# Upgrade Instructions
+## Upgrade Instructions
 
 As usual, follow the [upgrade guide] to upgrade your Cilium deployment.
 Feel free to ping us on [Slack] if you have any questions.
 
-# Release
+## Release
 
 - Release Notes: [1.10.0](https://github.com/cilium/cilium/releases/tag/v1.10.0)
 

@@ -14,13 +14,7 @@ tags:
   - eBPF
   - BPF
 ogImage: ogimage.png
-ogSummary: "DNS is a common cause for outages and incidents in Kubernetes clusters. For
-real-world stories, swing by Kubernetes Failure Stories. How
-do you debug and troubleshoot DNS issues? How do you know a problem is related
-to DNS? This guide provides a step by step tutorial on how to systematically
-troubleshoot DNS issues in Kubernetes clusters. We will be using [Hubble] to
-identify and inspect DNS issues as well as set up monitoring so we can locate
-DNS issues early on to react even before incidents occur."
+ogSummary: 'Learn how to systematically debug and monitor DNS issues in Kubernetes using Hubble. This guide shows how to identify, analyze, and prevent DNS-related outages with step-by-step examples and metrics setup.'
 ---
 
 ![Kubernetes DNS resolution](ogimage.png)
@@ -37,7 +31,7 @@ If you are not running [Hubble] yet, deploy it into your cluster by following
 the [installation
 instructions](https://github.com/cilium/hubble/blob/v0.5/Documentation/installation.md).
 
-# Kubernetes DNS 101
+## Kubernetes DNS 101
 
 In case you are not entirely familiar with how Kubernetes leverages DNS for
 service discovery, this section will give you a brief introduction. You can
@@ -75,7 +69,7 @@ If you want to learn more about how Kubernetes uses DNS, see [DNS for Services
 and Pods](https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/)
 of the Kubernetes documentation.
 
-# How to monitor DNS errors in a Kubernetes Cluster
+## How to monitor DNS errors in a Kubernetes Cluster
 
 Network related errors can be challenging to troubleshoot as most applications
 will only log a generic timeout error when a network connection fails. Even
@@ -116,7 +110,7 @@ indicates DNS requests remaining unanswered:
 Understanding the presence of DNS errors is a vital first step. The next step
 is to track down the source of DNS errors and identify affected pods.
 
-# How to identify Pods receiving DNS errors
+## How to identify Pods receiving DNS errors
 
 Knowing that DNS errors are occurring is excellent, but we need to know which
 application pods are being affected by DNS errors. Using the Hubble CLI, we can
@@ -158,7 +152,7 @@ pod `jar-jar-binks-59cdcc8dc4-hxl6w` in namespace `starwars` consistently
 failing to look up the FQDN `unknown-galaxy` while attempting to resolve all
 the variants of the DNS suffix search list.
 
-# Tracking Pod Context in Metrics
+## Tracking Pod Context in Metrics
 
 The standard configuration will not attach any additional context, and the
 metric will describe the DNS errors and DNS response balance for an entire
@@ -184,7 +178,7 @@ Counting the number of DNS errors per pod helps to quickly identify which pods
 are subject to DNS resolution failures but doesn't yet tell us why the
 resolution is failing.
 
-# How to debug the DNS resolution of a pod
+## How to debug the DNS resolution of a pod
 
 Continuing the troubleshooting process of the previous section, we can use
 Hubble to retrieve the detailed flow log and gain insights into the entire DNS
@@ -239,7 +233,7 @@ not be found.
 
 If the DNS server is returning any errors, you will see it in the output.
 
-# How to debug missing DNS responses
+## How to debug missing DNS responses
 
 What if the symptom isn't DNS errors, but DNS responses are missing altogether?
 Assuming that the pod `starwars/jar-jar-binks-5bcd4b9b9f-cn7vc` is failing to
@@ -284,7 +278,7 @@ the request, the parsed DNS request, the parsed DNS response, and the UDP
 packet carrying the DNS response delivered back to the endpoint. If any of them
 are missing, then you will know where the packet is being dropped.
 
-# Summary
+## Summary
 
 DNS issues are a frequent cause of outages and incidents in Kubernetes
 clusters. DNS issues have typically been hard to detect and troubleshoot. In

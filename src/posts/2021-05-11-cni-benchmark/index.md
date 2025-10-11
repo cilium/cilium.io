@@ -14,19 +14,14 @@ tags:
   - performance
   - latency
 ogImage: ogimage.png
-ogSummary: "As more crucial workloads are being migrated to Kubernetes, network performance
-benchmarks are becoming an important selection criteria when deciding what
-network layer to leverage in a Kubernetes cluster. In this blog post, we'll
-explore the performance characteristics of Cilium based on extensive benchmarks
-that we have run in the past few weeks. Upon popular request, we are also
-including measurements for Calico to allow for a direct comparison."
+ogSummary: 'Cilium vs Calico CNI performance benchmark results. Compare eBPF-based networking latency, throughput, and CPU usage in Kubernetes production workloads.'
 ---
 
 import authors from 'utils/author-data';
 
 ![](cover.png)
 
-# Understanding Cilium Network Performance
+## Understanding Cilium Network Performance
 
 Hello 👋
 
@@ -52,7 +47,7 @@ the topic of container networking benchmarking a bit deeper and look at:
 
 <a name="summary"></a>
 
-# Summary of the Results
+## Summary of the Results
 
 Before we dive into the detailed numbers and benchmarks, the following list is a
 summary of our findings. Feel free to skip it if you want to derive your own
@@ -99,7 +94,7 @@ conclusions after reading the details first.
 
 <a name="throughput"></a>
 
-# The Throughput Benchmark
+## The Throughput Benchmark
 
 The usual benchmarking disclaimer:
 
@@ -131,7 +126,7 @@ It is somewhat unexpected because container networking is generally believed to
 add overhead compared to node to node networking. Let's hold this thought for
 a moment, we'll explore this aspect as we dig deeper.
 
-# CPU resources required to transfer 100Gbit/s
+## CPU resources required to transfer 100Gbit/s
 
 The results for the `TCP_STREAM` benchmark already hinted which configurations
 are the most efficient to achieve high transfer rates but let's look at the
@@ -165,7 +160,7 @@ this post which better represent typical microservices workload.
 
 <a name="overhead"></a>
 
-# Does Container Networking add Overhead?
+## Does Container Networking add Overhead?
 
 The initial benchmark indicates that there is some overhead when performing
 container networking compared to node networking. Why is this? Let's look at
@@ -187,7 +182,7 @@ fundamental overhead point is shared between all of them.
 
 <a name="ebpfhostrouting"></a>
 
-# Breaking the Rules: eBPF Host-Routing
+## Breaking the Rules: eBPF Host-Routing
 
 You may be wondering about the difference between the configurations "Cilium
 eBPF" and "Cilium eBPF (legacy host-routing)" in the benchmarks before and why
@@ -214,7 +209,7 @@ Calico eBPF is applying some of the same bypasses to iptables but as we'll
 learn later on, is not quite identical. However, it proves that the most impact
 can by made by bypassing slow kernel subsystems such as iptables.
 
-# Pushing for 100Gbit/s Line-Rate
+## Pushing for 100Gbit/s Line-Rate
 
 Earlier in the blog post, we looked at results while mostly involving just a
 single CPU core in all of the processing. Let's open up the flood gates and
@@ -239,7 +234,7 @@ any business logic that the application would typically perform.
 
 <a name="rr"></a>
 
-# Measuring Latency: Requests per Second
+## Measuring Latency: Requests per Second
 
 The requests per second metric is almost the exact opposite of the throughput
 metric. It measures the rate of single byte round-trips that can be performed
@@ -288,7 +283,7 @@ requests/s on our test system with eBPF host-routing.
 
 <a name="flamegraph"></a>
 
-# Comparing CPU Flamegraphs Cilium eBPF vs Calico eBPF
+## Comparing CPU Flamegraphs Cilium eBPF vs Calico eBPF
 
 Overall, the performance for Cilium eBPF and Calico eBPF are relatively
 similar, are they using the same datapath? Not really. There is no such thing
@@ -336,7 +331,7 @@ the interactive SVG versions of the images that will allow to zoom in:
 
 <a name="crr"></a>
 
-# Rate of new Connections
+## Rate of new Connections
 
 The connection rate benchmark builds on top of the requests per second
 benchmark but initiates a new connection for each request. This benchmark
@@ -409,7 +404,7 @@ connections per second than you can initiate.
 
 <a name="encryption"></a>
 
-# The Cost of Encryption - Wireguard vs IPsec
+## The Cost of Encryption - Wireguard vs IPsec
 
 Everybody will expect Wireguard to outperform IPsec so let's look at Wireguard
 first and see how Wireguard performance is tied to the configured MTU:
@@ -479,7 +474,7 @@ The difference in latency is much more significant than the consumed CPU:
 
 <a name="env"></a>
 
-# Performance Impact of Sidecars on a Service Mesh
+## Performance Impact of Sidecars on a Service Mesh
 
 Besides avoiding the sheer amount of proxies that need to be run in a sidecar service mesh model, a significant advantage of sidecarless service mesh is that we can avoid requiring running two proxies in between any connection. More details about Cilium's sidecarless service mesh can be found in this blog [Next-Generation Mutual Authentication with Cilium Service Mesh](https://isovalent.com/blog/post/2022-05-03-servicemesh-security/)
 
@@ -489,7 +484,7 @@ Reducing the number of proxies in the network path and choosing the type of Envo
 
 <a name="sidecar"></a>
 
-# Test Environment
+## Test Environment
 
 This is the spec of our bare metal, off-the-shelf test environment. Two identical
 systems are used. The systems are directly connected to each other.
@@ -543,7 +538,7 @@ best possible comparison:
 All scripts required to reproduce the above numbers can be found in the git
 repository [cilium/cilium-perf-networking](https://github.com/cilium/cilium-perf-networking).
 
-# What is Next?
+## What is Next?
 
 We feel like we have already achieved a lot in optimizing performance, but we
 still have many ideas to pursue and will continue to improve the performance
@@ -597,7 +592,7 @@ of all aspects of Cilium.
   line on the [Cilium Slack](https://cilium.io/slack) or reach out to us on
   [Twitter](https://twitter.com/ciliumproject).
 
-# Further Reading
+## Further Reading
 
 - All of the above numbers have been published in the [CNI Performance
   Benchmark](https://docs.cilium.io/en/latest/operations/performance/benchmark/)

@@ -12,10 +12,7 @@ tags:
   - cloud native
   - eBPF
 ogImage: ogimage.png
-ogSummary: "This post provides the background on how [Trip.com] uses Cilium and what lead
-the team to standardize on Cilium as their networking and network security
-platform for the years to come. It is a summary with some commentary of the
-original trip.com blog post by ArthurChiao from Trip.com/Ctrip which provides extensive details into the decision-making process and experiences while running Cilium in production."
+ogSummary: 'Trip.com standardized on Cilium for scalable, Kubernetes-aware networking powered by eBPF, replacing iptables and legacy bottlenecks.'
 ---
 
 ![Network evolution](ogimage.png)
@@ -90,7 +87,7 @@ several real challenges:
 - **Network policy:** Host or application-level network security rules on each node
 - **Bare-metal & Cloud:** Single solution covering both on-premises (bare-metal) and AWS
 
-# Evaluation - eBPF beats iptables
+## Evaluation - eBPF beats iptables
 
 Trip.com has looked at several options to pick its next-generation networking
 platform, including Calico, Flannel, and Cilium. All of the solutions are
@@ -171,7 +168,7 @@ to all Cilium users as Kubernetes gains underlying support on the scheduler side
 ![Dashboard2](dashboard-agent-status.png)
 ![Dashboard3](dashboard-top-n.png)
 
-# Conclusion
+## Conclusion
 
 > We have been stably running Cilium in our production environments for several
 > months.
@@ -182,7 +179,7 @@ to all Cilium users as Kubernetes gains underlying support on the scheduler side
 > This only accounts for a very small part of our total Pods, and in year 2020,
 > we will start to migrate those legacy Pods to Cilium.
 
-# Getting started with Cilium
+## Getting started with Cilium
 
 - Install Cilium using any of the [Installation instrutions](http://docs.cilium.io/en/v1.6/gettingstarted/#installation)
 - Getting started with AWS ENI: [AWS ENI guide](https://docs.cilium.io/en/v1.6/gettingstarted/aws-eni/)

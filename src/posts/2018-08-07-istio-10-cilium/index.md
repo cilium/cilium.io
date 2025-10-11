@@ -12,8 +12,7 @@ tags:
   - envoy
   - ebpf
   - security
-ogSummary: "Istio 1.0 was released last week. From the Cilium community, we would like to congratulate all Istio contributors for this massive effort. We have been
-fortunate to participate in the community by contributing to Istio and by helping several users moving towards production with Istio and Cilium."
+ogSummary: 'Istio 1.0 marks a major milestone for service mesh technology. This article shares how Cilium strengthens Istio with socket-aware BPF programs to boost security, performance, and visibility.'
 ---
 
 Istio 1.0 was [released](https://istio.io/blog/2018/announcing-1.0/) last week.
@@ -250,7 +249,6 @@ in particular important if the data is being used to authorize a request.
 ## Summary
 
 - **Increased Istio Security:**
-
   - **Least privilege security inside of pod:** By locking down communication
     on container and process level inside of the pod using socket-aware BPF
     programs, a security breach in one of the containers no longer leads to the

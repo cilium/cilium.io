@@ -11,9 +11,7 @@ tags:
   - Conference
   - Summit
 ogImage: ogimage.png
-ogSummary: "The first day of the eBPF Summit is a wrap and it certainly was an amazing
-day full of information about eBPF, the technology that is changing the shape
-of Linux networking, observability, and performance."
+ogSummary: 'Day 1 of the eBPF Summit delivered insightful talks on how eBPF is reshaping Linux networking, observability, and security — with over 2,200 attendees from around the world.'
 ---
 
 # eBPF Summit Day One

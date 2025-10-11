@@ -5,7 +5,7 @@ title: 'Open Source Elasticsearch Security: Using Cilium for Elasticsearch Acces
 ogImage: esblog_preview.png
 categories:
   - How-To
-ogSummary: 'Elasticsearch is a dominanting open source platform for storing and analyzing all different types of data ranging from application logs, to user payment transactions and network audit logs.'
+ogSummary: 'Secure your Elasticsearch clusters with API-aware access controls using Cilium—no application changes required.'
 ---
 
 ![](esblog_preview.png)
@@ -81,6 +81,6 @@ The Cilium agents on each Kubernetes worker node monitor for new _CiliumNetworkP
 
 Cilium leverages BPF, a powerful new Linux kernel technology, to provide API-aware network visibility and security with zero changes to the application code or containers. Cilium runs fully distributed on the Linux nodes running your workloads, avoiding any centralized network choke-points. The integration with orchestration frameworks such as Kubernetes allows Cilium to combine the traffic visibility with the pod identity, and enforce right security policies even as services scale-up/down or pods get restarted on different nodes. Applying Cilium's API-aware security policies to the Elasticsearch API enables least privilege security on an Elasticsearch cluster efficiently, without interfering with the application.
 
-We welcome feedback/questions about using Cilium with Elasticsearch. Please reach out to us on [Slack](http://www.cilium.io/slack) or [Twitter](http://www.twitter.com/ciliumproject).
+We welcome feedback/questions about using Cilium with Elasticsearch. Please reach out to us on [Slack](https://slack.cilium.io/) or [Twitter](http://www.twitter.com/ciliumproject).
 
 And while you're at it, we encourage you to try out our Cilium Getting Started Guide for securing other common API protocols such as [HTTP](http://cilium.readthedocs.io/en/stable/gettingstarted/minikube/), [Kafka](http://cilium.readthedocs.io/en/stable/gettingstarted/kafka/) and [gRPC](http://cilium.readthedocs.io/en/stable/gettingstarted/grpc/).

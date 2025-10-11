@@ -4,10 +4,12 @@ date: '2017-09-18T18:30:41.000Z'
 title: 'BPF Updates 11'
 categories:
   - Technology
+  - Newsletter
 tags:
   - bpf-updates
   - bpf
-ogSummary: 'Linux 4.13 was released last week and net-next closed around the same time. The last `[GIT] Networking` pull request includes a couple of BPF fixes and so do the two after the merge window opened up as well. See the dates for all the details'
+  - kernel-development
+ogSummary: 'BPF Updates 11: Linux 4.13 released with BPF improvements. New perf helpers, LLVM assembly support, and LRU optimizations headline this weeks updates.'
 ---
 
 This is issue 11 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.

@@ -6,7 +6,7 @@ categories:
   - Technology
 tags:
   - bpf-updates
-ogSummary: 'This is issue 12 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.'
+ogSummary: 'Issue 12 of the BPF newsletter by Alexander Alemayhu, covering recent developments, presentations, videos, and updates on BPF and XDP.'
 ---
 
 This is issue 12 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.

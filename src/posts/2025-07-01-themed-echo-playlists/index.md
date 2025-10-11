@@ -33,7 +33,7 @@ grouped into six themes that mirror the Cilium journey: Cilium in Production (in
 (policies and datapath), Runtime Security (Tetragon), Mesh Networking (service and cluster mesh), Gateway-API & Traffic Management,
 All Things eBPF (development and observability), and Ecosystem & Community (releases, conferences, culture).
 
-# 🚀 Cilium in Production
+## 🚀 Cilium in Production
 
 Running Cilium in a home lab is fun, but running it in anger across EKS, bare-metal, and on-prem clusters requires repeatable workflows and a few battle-tested tricks. The Cilium in Production playlist condenses those lessons into one place.
 
@@ -58,7 +58,7 @@ playlists={[
 - Hands-on lab: [Install Cilium on EKS](https://isovalent.com/resource-library/labs/) – spin up a sandbox in minutes.
 - Book: [Cilium Up and Running](https://isovalent.com/books/cilium-up-and-running/)
 
-# 🌐 Networking for Kubernetes
+## 🌐 Networking for Kubernetes
 
 Kubernetes ships with an “allow-all” networking and leaves the policy enforcement and performance tuning to your CNI.
 The Networking for Kubernetes playlist tackles everything from writing first NetworkPolicy to packet-level performance tuning.
@@ -83,7 +83,7 @@ playlists={[
 - Hands-on lab: [Isovalent Enterprise for Cilium: Network Policies](https://isovalent.com/labs/cilium-network-policies/)
 - eBook: [Kubernetes Networking and Cilium for the Network Engineer](https://isovalent.com/blog/post/introducing-the-new-kubernetes-networking-and-cilium-for-the-network-engineer-ebook/)
 
-# 🔀 Mesh Networking
+## 🔀 Mesh Networking
 
 From in-cluster L7 routing to cross-cluster fail-over, Cilium delivers mesh traffic without sidecars or iptables overhead.
 The two playlists below cover both layers: one for the Service Mesh inside a cluster,
@@ -204,7 +204,7 @@ playlists={[
 |                               | [**eCHO Recaps: Conferences**](https://www.youtube.com/playlist?list=PLDg_GiBbAx-mPS0Y5X86Gj_M1D_gY-Zf4)                        | Key take-aways and demos from KubeCon, eBPF Summit and beyond.          |
 |                               | [**eCHO Recaps: Community & Culture**](https://www.youtube.com/playlist?list=PLDg_GiBbAx-mAs5fGNhVcr6QnTTp9Uvyt)                | AMAs, contributor spotlights and behind-the-scenes stories.             |
 
-# 📺 See you live!
+## 📺 See you live!
 
 - Subscribe on [YouTube](https://www.youtube.com/@eBPFCilium) and tap the bell 🔔 for stream reminders.
 - Find all the notes for each episode on [HackMD](https://hackmd.io/@eCHO-live).

@@ -8,4 +8,6 @@ externalUrl: 'https://isovalent.com/blog/post/cilium-1-18//?utm_source=website-c
 categories:
   - Community
   - Release
+tags:
+  - Cilium
 ---
