@@ -14,7 +14,6 @@ import AWSLogo from './images/aws.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
 import AzureKsLogo from './images/azureks.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
-import CloudEraLogo from './images/cloudera.inline.svg';
 import ConstellationLogo from './images/constellation.inline.svg';
 import CoreweaveLogo from './images/coreweave.inline.svg';
 import CraneLogo from './images/crane.inline.svg';
@@ -101,7 +100,6 @@ const logos = {
   outscale: OutScaleLogo,
   ovh: OVHcloudLogo,
   fptTelecom: FPTTelecomLogo,
-  cloudera: CloudEraLogo,
 };
 
 const spaceXClassNames = {

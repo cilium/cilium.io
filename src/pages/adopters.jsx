@@ -423,7 +423,6 @@ const logos1 = {
     'coreweave',
     'outscale',
     'ovh',
-    'cloudera',
   ],
   spaceXSize: 'sm',
 };
