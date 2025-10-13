@@ -157,6 +157,18 @@ export default {
       },
     ],
   },
+  cloudera: {
+    iconName: 'cloudera',
+    text: '<b>Cloudera</b> uses eBPF and Cilium to enhance network observability, security, and performance in its cloud-native data platform.',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl:
+          'https://aws.amazon.com/blogs/migration-and-modernization/scaling-clouderas-development-environment-leveraging-amazon-eks-karpenter-bottlerocket-and-cilium-for-hybrid-cloud/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   alibabaCloud: {
     iconName: 'alibabaCloud',
     text: '<b>Alibaba Cloud</b> uses Cilium as the CNI for their managed Kubernetes offering',
@@ -1522,6 +1534,10 @@ export default {
     iconName: 'immerok',
     text: '<b>Immerok</b> uses Cilium for cross-cluster communication and network isolation for their serverless Apache Flink cloud',
   },
+  uwmadison: {
+    iconName: 'uwmadison',
+    text: '<b>University of Wisconsin - Madison</b> leverages Cilium in production clusters',
+  },
   magicLeap: {
     iconName: 'magicLeap',
     text: '<b>Magic Leap</b> uses Hubble for observability',
@@ -1626,8 +1642,8 @@ export default {
     iconName: 'batumbu',
     text: '<b>Batumbu</b> uses Cilium as the CNI in their GKE clusters',
   },
-  fptTelecom: { 
-    iconName: 'fptTelecom', 
-    text: '<b>FPT Telecom</b> uses Cilium as their CNI plugin to handle the massive CPE Management traffic to the backends', 
+  fptTelecom: {
+    iconName: 'fptTelecom',
+    text: '<b>FPT Telecom</b> uses Cilium as their CNI plugin to handle the massive CPE Management traffic to the backends',
   },
 };
