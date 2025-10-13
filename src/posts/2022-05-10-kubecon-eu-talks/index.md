@@ -5,7 +5,7 @@ title: 'Cilium Talks at KubeCon EU 2022'
 isPopular: false
 isFeatured: false
 ogImage: ciliumtalks.jpg
-ogSummary: 'Find all the Cilium talk at KubeCon EU'
+ogSummary: 'Find all the Cilium talks at KubeCon EU 2022'
 categories:
   - Community
 tags:
