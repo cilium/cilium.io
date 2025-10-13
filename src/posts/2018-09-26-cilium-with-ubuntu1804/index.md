@@ -7,7 +7,7 @@ categories:
 tags:
   - How-To
 ogImage: ogimage.png
-ogSummary: 'Cilium provides API-aware network security for cloud-native applications. A step-by-step How-To guide for setting up Kubernetes and Cilium on Ubuntu 18.04 LTS.'
+ogSummary: 'Cilium provides API-aware network security for cloud native applications. A step-by-step guide for setting up Kubernetes and Cilium on Ubuntu 18.04 LTS.'
 ---
 
 Several users are looking to run Kubernetes with Cilium on Ubuntu 18.04 LTS. The Bionic Beaver (codename for Ubuntu 18.04) is an easy choice for deploying Kubernetes with Cilium as it ships with the default Linux kernel version 4.15.
