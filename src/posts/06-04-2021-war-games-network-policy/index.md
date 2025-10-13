@@ -15,7 +15,7 @@ tags:
   - Network
   - Cloud Native
 ogImage: ogimage.png
-ogSummary: 'Traditional firewalls can’t keep up with the dynamic nature of Kubernetes. Learn why network policies are essential for securing cloud-native workloads and how tools like Cilium can help enforce them effectively.'
+ogSummary: 'We’ve just launched a new community resource:networkpolicy.io, to help people learn how to apply Kubernetes network policies to protect their business-critical workloads.'
 ---
 
 import authors from 'utils/author-data';
