@@ -15,7 +15,7 @@ tags:
   - Network
   - Cloud Native
 ogImage: ogimage.png
-ogSummary: 'We’ve just launched a new community resource:networkpolicy.io, to help people learn how to apply Kubernetes network policies to protect their business-critical workloads.'
+ogSummary: 'We’ve just launched a new community resource networkpolicy.io, to help people learn how to apply Kubernetes network policies to protect their business-critical workloads.'
 ---
 
 import authors from 'utils/author-data';

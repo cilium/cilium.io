@@ -1,7 +1,7 @@
 ---
 path: '/blog/2017/5/2/cicd-and-why-we-love-the-packetnet-cloud'
 date: '2017-05-03T16:17:00.000Z'
-title: 'Building CI/CD for Container Networking: Why Bare Metal Beats Nested Virtualization'
+title: 'Why we love the packet.net cloud for CI/CD'
 categories:
   - How-To
 tags:

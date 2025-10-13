@@ -126,7 +126,7 @@ you about your use of Cilium on Slack, add your Slack nick as well.
 
 ## Hubble
 
-## Contributed by Sebastian Wicki and Sergey Generalov
+_Contributed by Sebastian Wicki and Sergey Generalov_
 
 ![Hubble Architecture](hubble-arch.png)
 
@@ -166,7 +166,7 @@ During Cilium 1.7 development cycle several performance improvements were made t
 
 ## Cilium Cluster-wide Network Policies
 
-## Contributed by Deepesh Pathak and André Martins
+_Contributed by Deepesh Pathak and André Martins_
 
 ![Cluster-wide Network Policies](ccnp.png)
 
@@ -221,7 +221,7 @@ it's now simpler to create network policies which apply to the entire cluster.
 
 ## Kube-proxy replacement with Direct Server Return
 
-## Contributed by Martynas Pumputis, Daniel Borkmann, Sebastian Wicki and André Martins
+_Contributed by Martynas Pumputis, Daniel Borkmann, Sebastian Wicki and André Martins_
 
 ![DSR Gopher](dsr.png)
 
@@ -361,7 +361,7 @@ of security identities of remote Cilium-managed nodes.
 
 ## TLS visibility for L7 policies (beta)
 
-## Contributed by Jarno Rajahalme
+_Contributed by Jarno Rajahalme_
 
 Cilium Network Policy (CNP) specification has two new experimental extensions
 (subject to change in coming releases) for policy enforcement on TLS protected
@@ -394,7 +394,7 @@ potentially malicious exfiltration of data, for example.
 
 ## L7 protocol visibility via pod annotations
 
-## Contributed by Ian Vernon and Joe Stringer
+_Contributed by Ian Vernon and Joe Stringer_
 
 When users run Cilium as the CNI, by default the only visibility that is
 available via tools like [Hubble] or `cilium monitor` is information at layers
@@ -422,7 +422,7 @@ detail](http://docs.cilium.io/en/stable/policy/visibility/).
 
 ## Pure Go eBPF library
 
-## Contributed by Joe Stringer
+_Contributed by Joe Stringer_
 
 During the [Linux Plumbers 2019 eBPF track](https://linuxplumbersconf.org/event/4/sessions/62/#20190911),
 Cilium core developers and Cloudflare engineers co-presented a [proposal](https://linuxplumbersconf.org/event/4/contributions/449/)
@@ -457,7 +457,7 @@ To learn more about the eBPF library, visit the project under Cilium's GitHub or
 
 ## Kubernetes EndpointSlice support
 
-## Contributed by André Martins
+_Contributed by André Martins_
 
 In order to have better scalability for a large number of endpoints backed by
 a service, Kubernetes 1.16 has introduced [EndpointSlice](https://kubernetes.io/docs/concepts/services-networking/endpoint-slices/).
@@ -475,7 +475,7 @@ the cluster.
 
 ## Scalability
 
-## Contributed by Ian Vernon and André Martins
+_Contributed by Ian Vernon and André Martins_
 
 ### CNP node status
 
@@ -515,7 +515,7 @@ the memory footprint of Cilium.
 
 ## Linux kernel changes
 
-## Contributed by Daniel Borkmann
+_Contributed by Daniel Borkmann_
 
 During the Cilium 1.7 development window, we've also worked on a number of
 improvements to the Linux kernel's eBPF subsystem which we co-maintain. The selected
@@ -676,7 +676,7 @@ See the [merged patch set](https://lore.kernel.org/bpf/cover.1572649915.git.dani
 
 ## Supporting Cilium testing on managed Kubernetes offerings
 
-## Contributed by Maciej Kwiek and Ray Bejjani
+_Contributed by Maciej Kwiek and Ray Bejjani_
 
 Running Cilium end-to-end tests has always been a bit painful because of tight
 coupling between our testing framework and assumptions about the cluster that
@@ -693,7 +693,7 @@ faster cluster provisioning.
 
 ## Helm 3 and Helm repository
 
-## Contributed by Arthur Evstifeev and Joe Stringer
+_Contributed by Arthur Evstifeev and Joe Stringer_
 
 [Helm3] was recently released, simplifying the use of helm charts repositories
 and allowing installation without requiring Tiller to be installed in your

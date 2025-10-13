@@ -21,10 +21,12 @@ In celebration of today's date, May 4th, we are posting our Star Wars demo of Ci
 
 ```
 # A long time ago, in a container cluster far, far away....
+#
 # It is a period of civil war. The Empire has adopted
 # microservices and continuous delivery, despite this,
 # Rebel spaceships, striking from a hidden cluster, have
 # won their first victory against the evil Galactic Empire.
+#
 # During the battle, Rebel spies managed to steal the
 # swagger API specification to the Empire's ultimate weapon,
 # the deathstar.

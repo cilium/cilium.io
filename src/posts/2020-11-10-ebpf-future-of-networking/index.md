@@ -13,7 +13,7 @@ tags:
   - GKE
   - Google
 ogImage: ogimage.png
-ogSummary: 'Isovalent, the company behind Cilium, is announcing its $29M Series A financing round. Let's take a deeper look into where eBPF-based networking is coming from.'
+ogSummary: 'Isovalent, the company behind Cilium, is announcing its $29M Series A financing round. Lets take a deeper look into where eBPF-based networking is coming from.'
 ---
 
 import authors from 'utils/author-data';
