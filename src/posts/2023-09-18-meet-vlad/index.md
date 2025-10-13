@@ -5,7 +5,7 @@ title: 'Meet the Maintainer - Vlad Ungureanu'
 isPopular: false
 isFeatured: false
 ogImage: vlad.jpeg
-ogSummary: 'Meet Vlad Ungureanu, Cilium maintainer at Palantir. Built native routing for Azure & AWS, improved IPsec encryption, and enhanced OpenShift integration.'
+ogSummary: 'Meet Vlad Ungureanu, Cilium maintainer at Palantir. He helped build native routing for Azure & AWS, improved IPsec encryption, and enhanced the OpenShift integration.'
 categories:
   - Community
 tags:
