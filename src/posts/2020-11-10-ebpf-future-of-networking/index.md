@@ -13,7 +13,7 @@ tags:
   - GKE
   - Google
 ogImage: ogimage.png
-ogSummary: 'Day 2 of the eBPF Summit featured keynote talks and lightning sessions exploring safe BPF programs, kernel tracing, performance wins, and the future of eBPF-based networking and security.'
+ogSummary: 'Isovalent, the company behind Cilium, is announcing its $29M Series A financing round. Let's take a deeper look into where eBPF-based networking is coming from.'
 ---
 
 import authors from 'utils/author-data';
