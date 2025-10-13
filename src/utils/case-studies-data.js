@@ -1536,7 +1536,7 @@ export default {
   },
   uwmadison: {
     iconName: 'uwmadison',
-    text: '<b>University of Wisconsin - Madison</b> Leveraged Cilium in production clusters',
+    text: '<b>University of Wisconsin - Madison</b> leverages Cilium in production clusters',
   },
   magicLeap: {
     iconName: 'magicLeap',
