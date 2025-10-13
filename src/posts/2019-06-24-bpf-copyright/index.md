@@ -7,7 +7,7 @@ categories:
 tags:
   - eBPF
   - copyright
-ogSummary: "We found Calico using Cilium's eBPF code without proper attribution or license compliance. We're fully transparent and offer dual-licensing."
+ogSummary: "It was brought to our attention that some of the new eBPF code committed to the Calico repository is violating the license of source code in the Cilium repository. We follow open source best practices and choose a public forum for the sake of transparency."
 ---
 
 # TL;DR
