@@ -5,7 +5,7 @@ ogImage: ogimage.png
 ogSummary: 'Gain a deeper understanding how to construct and deploy Cilium Network Policies'
 categories:
   - Community
-  - How-to
+  - How-To
 externalUrl: 'https://https://veducate.co.uk/cilium-network-policies-from-first-principles-to-production/'
 tags:
   - Cilium
