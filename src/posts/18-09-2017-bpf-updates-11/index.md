@@ -4,7 +4,6 @@ date: '2017-09-18T18:30:41.000Z'
 title: 'BPF Updates 11'
 categories:
   - Technology
-  - Newsletter
 tags:
   - bpf-updates
   - bpf

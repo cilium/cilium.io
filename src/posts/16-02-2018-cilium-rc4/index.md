@@ -4,12 +4,12 @@ date: '2018-02-16T19:30:43.000Z'
 title: 'Cilium 1.0.0-rc4 released'
 categories:
   - Release
+tags:
+  - release
   - cilium-1-0
   - envoy
   - health-monitoring
   - kubernetes-cni
-tags:
-  - release
 ogSummary: 'Cilium 1.0.0-rc4 makes Envoy the default HTTP/gRPC proxy, adds cilium-health for connectivity monitoring, introduces controller status tracking, and improves kvstore scalability.'
 ---
 

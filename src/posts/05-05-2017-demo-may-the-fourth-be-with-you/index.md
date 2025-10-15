@@ -4,7 +4,6 @@ date: '2017-05-05T00:08:35.000Z'
 title: 'Demo: May the Fourth be with you'
 categories:
   - How-To
-  - Tutorials
 tags:
   - star wars
   - http

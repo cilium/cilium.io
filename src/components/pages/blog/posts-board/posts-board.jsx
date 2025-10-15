@@ -13,17 +13,17 @@ import BlogPostsList from './blog-posts-list';
 const PostsBoard = ({ categories, posts, currentCategory, basePath, currentPage, numPages }) => {
   const blockTitle = currentCategory === '*' ? 'All posts' : currentCategory;
   const [searchQuery, setSearchQuery] = useState('');
-  
+
   const allPosts = useAllPostsSearch();
 
   const filteredPosts = useMemo(() => {
     if (!searchQuery.trim()) {
-      return posts; 
+      return posts;
     }
-    
+
     const query = searchQuery.toLowerCase();
-    
-    return allPosts.filter(post => {
+
+    return allPosts.filter((post) => {
       const title = post.frontmatter?.title?.toLowerCase() || '';
       return title.includes(query);
     });
@@ -66,7 +66,12 @@ const PostsBoard = ({ categories, posts, currentCategory, basePath, currentPage,
               className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           )}
@@ -78,7 +83,7 @@ const PostsBoard = ({ categories, posts, currentCategory, basePath, currentPage,
           activeLabel={currentCategory}
           className="mt-6 md:mt-10 lg:mt-14"
         />
-        
+
         {filteredPosts.length > 0 ? (
           <BlogPostsList posts={filteredPosts} />
         ) : searchQuery ? (
