@@ -14,15 +14,9 @@ tags:
   - cluster-mesh
   - dns
   - Kubernetes
+  - cilium
 ogImage: ogimage.png
-ogSummary: "We are excited to announce the Cilium 1.4 release. The release introduces
-several new features as well as optimization and scalability work. The
-highlights include the addition of global services to provide Kubernetes
-service routing across multiple clusters, DNS request/response aware
-authorization and visibility, transparent encryption (beta), IPVLAN support for
-better performance and latency (beta), integration with Flannel, GKE on COS
-support, AWS metadata based policy enforcement (alpha) as well as significant
-efforts into optimizing memory and CPU usage."
+ogSummary: 'Cilium 1.4 introduces major advancements including multi-cluster service routing, DNS-aware authorization, transparent encryption, IPVLAN support, Flannel integration, and improved scalability for Kubernetes networking.'
 ---
 
 ![Release Overview](ogimage.png)

@@ -9,7 +9,9 @@ tags:
   - grpc
   - cilium
   - bpf
-ogSummary: 'The Cilium community has been hard at work over the past weeks to get us closer to what we consider is required for a 1.0 release. We have made a ton of progress and are happy to announce the release of 1.0.0-rc2 at this point.'
+  - Service Mesh
+  - cilium 1.0 release
+ogSummary: 'Cilium 1.0.0-rc2 introduces support for gRPC and Kafka security policies, expanded tooling, and enhanced documentation as it moves closer to the official 1.0 release.'
 ---
 
 The Cilium community has been hard at work over the past weeks to get us closer to what we consider is required for a 1.0 release. We have made a ton of progress and are happy to announce the release of 1.0.0-rc2 at this point.
@@ -32,7 +34,6 @@ There are many different philosophies around when exactly to release version 1.0
 The following is what the community has defined to be the requirements for the 1.0 release:
 
 - Completeness of functionality to cover the initial problem definition scope. This includes:
-
   - Robust, flexible and scalable networking based on BPF technology in the Linux kernel for both IPv4 and IPv6.
 
   - Efficient and scalable BPF based L3-L4 load balancing between endpoints managed by Cilium.
@@ -85,4 +86,4 @@ There are several areas of focus that will define the direction after 1.0 has be
 
 - Continued integration with the Istio project to make the Cilium datapath available to components such as Istio Mixer and to integrate with Istio Auth.
 
-How does that sound? Let us know on [Slack](https://cilium.herokuapp.com) or by filling a [GitHub](https://github.com/cilium/cilium) issues.
+How does that sound? Let us know on [Slack](https://slack.cilium.io/) or by filling a [GitHub](https://github.com/cilium/cilium) issues.

@@ -13,9 +13,7 @@ tags:
   - GKE
   - Google
 ogImage: ogimage.png
-ogSummary: "Today is an exciting day for the Cilium community: Isovalent, the company behind Cilium, is announcing its $29M Series A financing round backed by Andreessen Horowitz, Google, and Cisco. This is a perfect occasion to take a deeper look
-into where eBPF-based networking is coming from and to understand what the
-excitement is all about."
+ogSummary: 'Isovalent, the company behind Cilium, is announcing its $29M Series A financing round. Lets take a deeper look into where eBPF-based networking is coming from.'
 ---
 
 import authors from 'utils/author-data';
@@ -59,7 +57,7 @@ This moment is a great opportunity to provide a deeper dive into the motivation
 to use eBPF for networking. What are all these users seeing in Cilium? What is
 so special about eBPF?
 
-# The Roots of Programmability: Software Defined Networking
+## The Roots of Programmability: Software Defined Networking
 
 To really understand the shift, let's briefly look back at the history of
 networking. In the 90s, networking was almost entirely physical. Cables,
@@ -89,7 +87,7 @@ This programmability aspect can still be found in eBPF-based networking today
 and is one of the corner stones. eBPF-based networking has its roots in SDN and
 evolves it by removing the device-centric model from the equation.
 
-# The Rise of Containers and Kubernetes
+## The Rise of Containers and Kubernetes
 
 The year 2013 brought Docker. Docker primarily inherited the networking from
 the virtualization layers and containers were treated like miniature VMs from a
@@ -113,7 +111,7 @@ packet filter in the Linux kernel I personally worked on while still using a
 dial-up modem. Clearly not perfectly suited for the task, but widely available
 and good enough to get started.
 
-# The eBPF Revolution Begins
+## The eBPF Revolution Begins
 
 The same year that Kubernetes started, eBPF was first merged into the Linux
 kernel as a successor to the long-standing packet filter BPF. Hence the
@@ -133,7 +131,7 @@ becomes more and more powerful every year. The general-purpose nature of eBPF
 allowed for a diverse community to form around it, spanning networking,
 tracing, security, profiling, and observability.
 
-# Cilium & eBPF - An ideal match for the Cloud-Native World
+## Cilium & eBPF - An ideal match for the Cloud-Native World
 
 To recap history, with hardware networking, the functionality and scale were
 mostly defined by the hardware. With software-defined networking a lot of it
@@ -229,7 +227,7 @@ All of this makes eBPF incredibly powerful, but it is also a low-level
 technology intended to be used primarily by Linux kernel developers. This is
 where Cilium comes into play.
 
-# Cilium - eBPF-based Networking, Observability, and Security
+## Cilium - eBPF-based Networking, Observability, and Security
 
 Cilium is an open source project that has been designed on top of eBPF to
 address the networking, security, and visibility requirements of container
@@ -241,7 +239,7 @@ cgroups, and seccomp. The right abstraction layer on top.
 
 Let's dive into particular use cases that Cilium is solving:
 
-## Networking
+### Networking
 
 - **Network connectivity:** In its most basic form, Cilium is a CNI to provide
   network connectivity to Kubernetes workloads. The eBPF-based datapath
@@ -321,7 +319,7 @@ For more details, check out the [Functionality
 Overview](https://docs.cilium.io/en/stable/intro/#functionality-overview) in
 the Cilium documentation.
 
-# Conclusion
+## Conclusion
 
 Our team has had its fair share of exciting moments. The public launch of
 Isovalent as a company is yet another major milestone.
@@ -335,7 +333,7 @@ building to me.
 I'm looking forward to work with many of you, as users, contributors, or
 customers.
 
-# Further Reading
+## Further Reading
 
 - [Learn more about Cilium](https://cilium.io/)
 - [Learn more about eBPF](https://ebpf.io/)

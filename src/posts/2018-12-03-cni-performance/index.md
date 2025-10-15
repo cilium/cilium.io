@@ -9,8 +9,10 @@ tags:
   - ebpf
   - performance
   - benchmark
+  - cni
+  - networking
 ogImage: ogimage.png
-ogSummary: 'This blog post documents the investigation we have done so far of what looked like a performance regression of HTTP/FTP traffic over pure TCP.'
+ogSummary: 'Investigation of apparent Cilium performance regression reveals optimistic pod scheduling behavior and memory pre-allocation strategies. Upcoming releases will provide better defaults and configuration options.'
 ---
 
 ![Title](ogimage.png)

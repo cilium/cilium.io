@@ -5,7 +5,7 @@ title: 'Open Source Elasticsearch Security: Using Cilium for Elasticsearch Acces
 ogImage: esblog_preview.png
 categories:
   - How-To
-ogSummary: 'Elasticsearch is a dominanting open source platform for storing and analyzing all different types of data ranging from application logs, to user payment transactions and network audit logs.'
+ogSummary: 'Secure your Elasticsearch clusters with API-aware access controls using Cilium—no application changes required.'
 ---
 
 ![](esblog_preview.png)

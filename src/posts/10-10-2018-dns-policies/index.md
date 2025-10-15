@@ -9,7 +9,9 @@ tags:
   - Kubernetes
   - network policies
   - dns-based policies
-ogSummary: "We’re very excited to always be pushing the envelop of what is possible using open source technology like Cilium with Kubernetes, and its one of the reason’s we’re so excited about Cilium's support for DNS-aware egress security policies. In this post, we’ll explain why this capability is a big win for users locking down their Kubernetes clusters, and walk through a few key use cases."
+  - kubernetes-security
+  - egress-filtering
+ogSummary: 'Cilium enables DNS-based egress filtering for Kubernetes. Control pod access to AWS S3, SaaS APIs, and external databases using stable DNS names instead of dynamic IP addresses.'
 ---
 
 ## The Need for Least Privilege Egress Filtering in Kubernetes

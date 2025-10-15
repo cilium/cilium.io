@@ -6,7 +6,9 @@ categories:
   - How-To
 tags:
   - ci/cd
-ogSummary: 'A while ago we started thinking about how to build a continous integration (CI) testing infrastructure that would help us maintain the reliability and stability of Cilium as we add more features and integrate with orchestration systems like Kubernetes and Docker. This post describes our process for building a CI environment capable of testing a container networking & security infrastructure.'
+  - kubernetes
+  - testing
+ogSummary: 'How Cilium built a reliable CI/CD pipeline for eBPF container networking using packet.net bare metal cloud. Learn why nested containers in CI platforms fail for network testing and how bare metal infrastructure solved our Kubernetes and Docker integration testing challenges.'
 ---
 
 A while ago we started thinking about how to build a continous integration (CI) testing infrastructure that would help us maintain the reliability and stability of Cilium as we add more features and integrate with orchestration systems like Kubernetes and Docker. This post describes our process for building a CI environment capable of testing a container networking & security infrastructure. It's also a thank you to packet.net for supporting Cilium along with many other open source projects. For more, read on...

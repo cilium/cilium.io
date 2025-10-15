@@ -10,9 +10,7 @@ tags:
   - eBPF
   - BPF
 ogImage: ogimage.png
-ogSummary: "The Linux Plumbers Conference 2019 is
-coming up September 9-11 in Lisbon, Portugal. There are several tracks
-featuring eBPF related topics"
+ogSummary: 'The Linux Plumbers Conference 2019 in Lisbon features multiple eBPF sessions across BPF, Networking, and Tracing tracks from top kernel experts.'
 ---
 
 ![LPC](ogimage.png)
@@ -25,7 +23,7 @@ featuring eBPF related topics:
 - [Linux Networking Summit](https://linuxplumbersconf.org/event/4/sessions/41/#all)
 - [Tracing Microconference](https://linuxplumbersconf.org/event/4/sessions/49/#20190911)
 
-# BPF Microconference
+## BPF Microconference
 
 The microconference is hosted by the two eBPF upstream maintainers Alexei
 Starovoitov and Daniel Borkmann.
@@ -36,7 +34,7 @@ Starovoitov and Daniel Borkmann.
 
 As usual, presentation material will be made available after the event.
 
-## Agenda
+### Agenda
 
 - **Bringing BPF developer experience to the next level** ([details](https://linuxplumbersconf.org/event/4/contributions/448/)), Andrii Nakryiko (Facebook)
 - **BPF Debugging** ([details](https://linuxplumbersconf.org/event/4/contributions/447/)), Yonghong Song (Facebook)
@@ -48,11 +46,11 @@ As usual, presentation material will be made available after the event.
 - **Kernel Runtime Security Instrumentation (KRSI)** ([more details](https://linuxplumbersconf.org/event/4/contributions/454/)), KP Singh (Google)
 - **Map batch processing** ([more details](https://linuxplumbersconf.org/event/4/contributions/488/)), Yonghong Song (Facebook)
 
-# Networking Summit
+## Networking Summit
 
 The track is hosted by David Miller and Daniel Borkmann.
 
-## eBPF related Agenda
+### eBPF related Agenda
 
 - **BPF packet capture helpers, libbpf interfaces** ([more details](https://linuxplumbersconf.org/event/4/contributions/489/)), Alan Maguire (Oracle)
 - **Programmable socket lookup with BPF** ([more details](https://linuxplumbersconf.org/event/4/contributions/487/)), Jakub Sitnicki (Cloudflare), Lorenz Bauer (Cloudflare), Marek Majkowski (Cloudflare)
@@ -64,11 +62,11 @@ The track is hosted by David Miller and Daniel Borkmann.
 - **XDP: the Distro View** ([more details](https://linuxplumbersconf.org/event/4/contributions/460/)), Jiri Benc (Red Hat)
 - **An Evaluation of Host Bandwidth Manager** ([more details](https://linuxplumbersconf.org/event/4/contributions/486/)), Lawrence Brakmo (Facebook)
 
-# Tracing Microconference
+## Tracing Microconference
 
 The track is hosted by Steven Rostedt.
 
-## eBPF related Agenda
+### eBPF related Agenda
 
 - **bpftrace** ([more details](https://linuxplumbersconf.org/event/4/contributions/441/)), Alastair Robertson (Yellowbrick)
 - **BPF Tracing Tools: New Observability for Performance Analysis** ([more details](https://linuxplumbersconf.org/event/4/contributions/444/)), Brendan Gregg (Netflix)

@@ -9,7 +9,9 @@ tags:
   - http
   - policy
   - demo
-ogSummary: "In celebration of today's date, May 4th, we are posting our Star Wars demo of Cilium that we showed at CNCF/KubeCon in Berlin or DockerCon in Austin. You can either watch the video linked below which starts directly at the time the demo begins or you can jump to the transcript of the demo embedded in the blog post. May the fourth be with you."
+  - microservices
+  - network-policy
+ogSummary: 'Learn how Cilium applies network and HTTP-level security policies in this Star Wars–themed Docker demo showcased at KubeCon and DockerCon.'
 ---
 
 In celebration of today's date, May 4th, we are posting our Star Wars demo of Cilium that we showed at CNCF/KubeCon in Berlin or DockerCon in Austin. You can either watch the video linked below which starts directly at the time the demo begins or you can jump to the transcript of the demo embedded in the blog post. May the fourth be with you.

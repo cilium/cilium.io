@@ -8,6 +8,8 @@ ogSummary: "In part 2 of the series, you'll learn more about Hubble's powerful o
 categories:
   - How-To
   - Technology
+tags:
+  - Cilium
 ---
 
 ![](cover.png)
@@ -15,7 +17,6 @@ categories:
 **_Author: Shedrack Akintayo, Isovalent_**
 
 In this second installment of this series, we'll delve deeper into Hubble's powerful observability features and explore how they can enhance your Kubernetes network observability strategy. We'll also examine practical use cases, such as monitoring network traffic for dropped packets and identifying abnormal patterns in your network.
-
 
 In the [first part of the series](https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/), we introduced Cilium and Hubble, highlighting their significance in modern Kubernetes environments. We guided you through their setup process and showcased real-world case studies of organizations successfully leveraging Cilium and Hubble in production environments.
 

@@ -7,6 +7,8 @@ ogImage: cilium_on_digitalocean.png
 ogSummary: 'Exclusive Interview with DigitalOcean on Integrating Hubble into their Kubernetes Offering'
 categories:
   - Community
+tags:
+  - Cilium
 ---
 
 In late 2018, DigitalOcean Kubernetes made a strategic move, migrating its infrastructure to Cilium. Fast forward to today, and over 30,000 clusters in DigitalOcean cloud are powered by Cilium, with thousands leveraging Cilium Network Policies for micro-segmentation and enhanced security.

@@ -3,7 +3,7 @@ path: '/blog/2022/10/17/constellation-network-encryption'
 date: '2023-07-20T17:00:00.000Z'
 title: 'Securing Constellation’s Kubernetes data in transit - network encryption with Cilium'
 ogImage: header-img.png
-ogSummary: "Learn how Constellation uses Cilium to secure Kubernetes networking"
+ogSummary: 'Learn how Constellation uses Cilium’s eBPF-powered encryption to secure Kubernetes data in transit while maintaining performance and connectivity.'
 isPopular: true
 categories:
   - Technology
@@ -13,8 +13,8 @@ tags:
 
 ![Header Image](header-img.png)
 
-*July 20th, 2023*
-*Author: Leonard Cohnen & Moritz Eckert, Edgeless Systems*
+_July 20th, 2023_
+_Author: Leonard Cohnen & Moritz Eckert, Edgeless Systems_
 
 [Constellation](https://github.com/edgelesssys/constellation) is a Kubernetes engine that aims to provide the best possible data security by shielding your entire Kubernetes cluster from the underlying cloud infrastructure. Everything inside a cluster is always encrypted, including at runtime in memory. For this, Constellation leverages a technology called [confidential computing](https://content.edgeless.systems/hubfs/Confidential%20Computing%20Whitepaper.pdf).
 
@@ -32,18 +32,17 @@ Thus, for Constellation, we opted to implement network encryption at the CNI lev
 
 From the get go, our goals for the network encryption in Constellation were the following:
 
-- A)      Do not get into the user's way.
-- B)      Make the default secure.
-- C)      Minimize the chance of misconfiguration.
+- A) Do not get into the user's way.
+- B) Make the default secure.
+- C) Minimize the chance of misconfiguration.
 
-Cilium conveniently achieves all three. Unfortunately, with the latest release (1.13.4), there is still a [known issue](https://docs.cilium.io/en/v1.13/security/network/encryption/#known-issues-and-workarounds) that pod-to-pod is not immediately encrypted under certain conditions. 
+Cilium conveniently achieves all three. Unfortunately, with the latest release (1.13.4), there is still a [known issue](https://docs.cilium.io/en/v1.13/security/network/encryption/#known-issues-and-workarounds) that pod-to-pod is not immediately encrypted under certain conditions.
 
 To address this issue, currently, the admin needs to disable all pod-to-Internet communication. While this is a viable workaround in certain scenarios it is not ours. Thus we began an investigation for a better solution roughly a year ago...
 
-
 ## The consistency problem in IPCache
 
-Both Cilium's identity-based policy enforcement and encryption rely on an [eBPF map](https://docs.kernel.org/bpf/maps.html) called *IPCache* to reason about the source and destination identity of network packets. If a packet originates from a pod inside the pod network and the IPCache indicates that the destination is also a pod, then the packet is re-routed through the WireGuard interface. This interface then takes care of encapsulating and encrypting the packet and sending it to the destination pod's node. So far so good. However, as it turns out, the IPCache is only *eventually* updated with new endpoints. If a newly created endpoint is not yet in the IPCache, network traffic to it is not encrypted. This is the core of the problem and our goal is to fix this.
+Both Cilium's identity-based policy enforcement and encryption rely on an [eBPF map](https://docs.kernel.org/bpf/maps.html) called _IPCache_ to reason about the source and destination identity of network packets. If a packet originates from a pod inside the pod network and the IPCache indicates that the destination is also a pod, then the packet is re-routed through the WireGuard interface. This interface then takes care of encapsulating and encrypting the packet and sending it to the destination pod's node. So far so good. However, as it turns out, the IPCache is only _eventually_ updated with new endpoints. If a newly created endpoint is not yet in the IPCache, network traffic to it is not encrypted. This is the core of the problem and our goal is to fix this.
 
 ### Triggering the issue
 
@@ -55,11 +54,11 @@ To trigger and observe the issue, we analyzed the path from the new endpoint cre
 4. Cilium-agent watches and consumes all CiliumEndpointSlices
 5. Cilium-agent writes a new entry in IPCache
 
-By disabling the Cilium-operator in step 3, we are able to reliably trigger the issue, resulting in Cilium sending the corresponding traffic unencrypted over the wire. Note that the disabling is equivalent to adding a long delay into step 3. Our concrete test code can be found [here](https://github.com/cilium/cilium/blob/5da5882754569e118e713532b89dc4ca89ab76fd/test/k8s/datapath_configuration.go#L387). 
+By disabling the Cilium-operator in step 3, we are able to reliably trigger the issue, resulting in Cilium sending the corresponding traffic unencrypted over the wire. Note that the disabling is equivalent to adding a long delay into step 3. Our concrete test code can be found [here](https://github.com/cilium/cilium/blob/5da5882754569e118e713532b89dc4ca89ab76fd/test/k8s/datapath_configuration.go#L387).
 
 ### Solution
 
-Our approach is simple. We add a filter as an eBPF program to Cilium's packet routing stack called the ["datapath"](https://docs.cilium.io/en/stable/network/ebpf/intro/) that drops unencrypted network packets between pods. This raises two questions: 
+Our approach is simple. We add a filter as an eBPF program to Cilium's packet routing stack called the ["datapath"](https://docs.cilium.io/en/stable/network/ebpf/intro/) that drops unencrypted network packets between pods. This raises two questions:
 
 1. How do we identify pod-to-pod traffic?
 2. How do we know if traffic is encrypted or not?
@@ -76,7 +75,8 @@ To address this, for VXLAN, we extend our filter to identify nodes via the IPCac
 
 ### Implementation
 
-The Cilium was very welcoming and helped us with the implementation of the strict mode described above. Specifically, the Cilium maintainers suggested a location [in the datapath](https://docs.cilium.io/en/v1.13/network/ebpf/lifeofapacket/#life-of-a-packet) to add our [filter](https://github.com/cilium/cilium/pull/21856/files#diff-f1851842acdc4e195dcd1b102c3c2597c293c1bfd04dc7e1bca8e02050102915R110). After some trial and error, we finally found the correct spots in [`bpf/bpf_host.c`](https://github.com/cilium/cilium/pull/21856/files#diff-ff0cc41af3fc733a268ec48f09df41cc2bf321f9191d8df1722b6d195e88e193R1495) and [`bpf/overlay. c`](https://github.com/cilium/cilium/pull/21856/files#diff-01b3b17d448a4cf12c8ce37729576da934f2c3ed8801216b33d4e13a39299193R684), which made our code pass the test. For the eBPF connoisseurs, we’ve listed the actual packet filter code below. 
+The Cilium was very welcoming and helped us with the implementation of the strict mode described above. Specifically, the Cilium maintainers suggested a location [in the datapath](https://docs.cilium.io/en/v1.13/network/ebpf/lifeofapacket/#life-of-a-packet) to add our [filter](https://github.com/cilium/cilium/pull/21856/files#diff-f1851842acdc4e195dcd1b102c3c2597c293c1bfd04dc7e1bca8e02050102915R110). After some trial and error, we finally found the correct spots in [`bpf/bpf_host.c`](https://github.com/cilium/cilium/pull/21856/files#diff-ff0cc41af3fc733a268ec48f09df41cc2bf321f9191d8df1722b6d195e88e193R1495) and [`bpf/overlay. c`](https://github.com/cilium/cilium/pull/21856/files#diff-01b3b17d448a4cf12c8ce37729576da934f2c3ed8801216b33d4e13a39299193R684), which made our code pass the test. For the eBPF connoisseurs, we’ve listed the actual packet filter code below.
+
 ```c
 /* strict_allow checks whether the packet is allowed to pass through the strict mode. */
 static __always_inline bool
@@ -129,12 +129,11 @@ strict_allow(struct __ctx_buff *ctx) {
 
 Description: Basic eBPF IPv4 packet filter based on CIDR.
 
-The full implementation was [merged into Cilium](https://github.com/cilium/cilium/pull/21856) and will be released with v1.15. It is already used and configured automatically by Constellation. 
+The full implementation was [merged into Cilium](https://github.com/cilium/cilium/pull/21856) and will be released with v1.15. It is already used and configured automatically by Constellation.
 
 ### What's next
 
-With the [v1.14 release]([https://github.com/cilium/cilium/milestone/37](https://github.com/cilium/cilium/milestone/42)) Cilium will also introduce [node-to-node](https://github.com/cilium/cilium/pull/19401) encryption. For Constellation, our plan is to switch from pod-to-pod encryption + strict mode to node-to-node encryption + strict mode in the coming months. The same benefits of our filter apply to node-to-node encryption. Dropping unencrypted packets between nodes.  However, it removes the need to explicitly identify pod-to-pod traffic.
-
+With the [v1.14 release](<[https://github.com/cilium/cilium/milestone/37](https://github.com/cilium/cilium/milestone/42)>) Cilium will also introduce [node-to-node](https://github.com/cilium/cilium/pull/19401) encryption. For Constellation, our plan is to switch from pod-to-pod encryption + strict mode to node-to-node encryption + strict mode in the coming months. The same benefits of our filter apply to node-to-node encryption. Dropping unencrypted packets between nodes. However, it removes the need to explicitly identify pod-to-pod traffic.
 
 ## Conclusion
 

@@ -11,19 +11,19 @@ _This is a guest post by Daniel Borkmann who was recently recognized through the
 
 Our open source project, called [Cilium](https://github.com/cilium/cilium), started as an experiment for Linux container networking tackling four requirements:
 
-### Scale
+## Scale
 
 How can we scale in terms of addressing and with regards to network policy?
 
-### Extensibility
+## Extensibility
 
 Can we be as extensible as user space networking in the Linux kernel itself?
 
-### Simplicity
+## Simplicity
 
 What is an appropriate abstraction away from traditional networking?
 
-### Performance
+## Performance
 
 Do we sacrifice performance in the process of implementing the aforementioned aspects?
 

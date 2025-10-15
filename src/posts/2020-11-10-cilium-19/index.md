@@ -16,9 +16,7 @@ tags:
   - Maglev
   - bandwidth management
 ogImage: ogimage.png
-ogSummary: "We are excited to announce the Cilium 1.9 release. A total of 2816 commits have
-been contributed by a community of 251 developers, many of whom made their first
-contributions this cycle. Cilium 1.9 brings with it several brand new features"
+ogSummary: 'Day 2 of the eBPF Summit featured keynote talks and lightning sessions exploring safe BPF programs, kernel tracing, performance wins, and the future of eBPF-based networking and security.'
 ---
 
 ![](intro.png)
@@ -75,7 +73,7 @@ contributions this cycle. Cilium 1.9 brings with it several brand new features:
   Support](#tproxy) in eBPF, and a new [Performance Testing
   Framework](#perftest).
 
-# What is Cilium?
+## What is Cilium?
 
 Cilium is open source software for transparently providing and securing the
 network and API connectivity between application services deployed using Linux
@@ -96,7 +94,7 @@ container configuration.
 See the section **[Introduction to Cilium]** for a more detailed general
 introduction to Cilium.
 
-# eBPF Summit 2020 - Recordings are now available
+## eBPF Summit 2020 - Recordings are now available
 
 We hosted the first ever eBPF Summit in October this year. The recordings
 including all keynotes and lightning talks are now available on the [eBPF
@@ -105,7 +103,7 @@ Summit website](https://ebpf.io/summit-2020).
 <a name="maglev"></a>
 <a name="maglev-load-balancing"></a>
 
-# Maglev Load Balancing
+## Maglev Load Balancing
 
 _Contributed by Daniel Borkmann and Martynas Pumputis_
 
@@ -163,7 +161,7 @@ found in its [getting started guide](https://docs.cilium.io/en/v1.9/gettingstart
 
 <a name="deny-policy"></a>
 
-# Deny-based Network Policy
+## Deny-based Network Policy
 
 _Contributed by André Martins_
 
@@ -250,7 +248,7 @@ an operator that will be submitted for RedHat certification.
 
 <a name="hubble"></a>
 
-# Making Observability Easier with Hubble
+## Making Observability Easier with Hubble
 
 _Contributed by Alexandre Perrin, Robin Hahling, Sebastian Wicki and others_
 
@@ -375,7 +373,7 @@ the full list of changes.
 
 <a name="lrp"></a>
 
-# Node-Local Redirect Policies
+## Node-Local Redirect Policies
 
 _Contributed by Aditi Ghag and Weilong Cui_
 
@@ -419,7 +417,7 @@ setting up NodeLocal DNSCache and KIAM proxy.
 
 <a name="operator-ha"></a>
 
-# High Availability for cilium-operator
+## High Availability for cilium-operator
 
 _Contributed by Deepesh Pathak_
 
@@ -447,7 +445,7 @@ cilium-operator   3/3     3            3           46s
 
 <a name="bwmanager"></a>
 
-# Bandwidth Manager
+## Bandwidth Manager
 
 _Contributed by Daniel Borkmann_
 
@@ -613,7 +611,7 @@ forwards.
 <a name="perftest"></a>
 <a name="performance-testing-framework"></a>
 
-# Performance Testing Framework
+## Performance Testing Framework
 
 _Contributed by Kornilios Kourtis and Paul Chaignon_
 
@@ -638,11 +636,11 @@ documentation](https://docs.cilium.io/en/v1.9/operations/performance/), and
 allows users to easily reproduce our results. Looking forwards, we plan to extend
 our tools with more benchmarks and add this infrastructure to our CI process.
 
-# Getting Started
+## Getting Started
 
 New to Cilium? Follow one of the [Getting Started Guides].
 
-# Upgrade Instructions
+## Upgrade Instructions
 
 Follow the [upgrade guide] to upgrade your Cilium deployment. Cilium 1.9
 deprecates the use of Helm 2 for managing deployments, as it is reaching
@@ -650,7 +648,7 @@ deprecates the use of Helm 2 for managing deployments, as it is reaching
 option names for most Helm settings, see the guide for more details.
 Feel free to ping us on [Slack] if you have any questions.
 
-# Release
+## Release
 
 - Release Notes: [1.9.0](https://github.com/cilium/cilium/releases/tag/v1.9.0)
 - Container images: `quay.io/cilium/cilium:v1.9.0`, `docker.io/cilium/cilium:v1.9.0`

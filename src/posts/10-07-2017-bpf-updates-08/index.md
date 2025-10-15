@@ -8,7 +8,7 @@ tags:
   - bpf-updates
   - bpf
   - ebpf
-ogSummary: 'Linux 4.12 was released and net-next is closed. The Kernel Newbies release notes is still under construction but worth checking out for the BPF commits in 4.12.'
+ogSummary: 'Linux 4.12 released with BPF improvements. i40e driver gains XDP support for drop, pass, and TX actions. New BPF_PROG_TYPE_SOCKET_OPS enables TCP connection control.'
 ---
 
 This is issue 08 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
@@ -171,7 +171,7 @@ Below is a list of random projects on Github. Check them out and Remember to giv
   - [[PATCH net-next 7/8] xdp: add reporting of offload mode](https://www.spinics.net/lists/netdev/msg441797.html)
   - [[PATCH net-next 8/8] nfp: xdp: report if program is offloaded](https://www.spinics.net/lists/netdev/msg441798.html)
 - Wang Nan, [[PATCH] perf test llvm: Avoid error when `PROFILE_ALL_BRANCHES` is set](https://patchwork.kernel.org/patch/9795735/)
-- Jeff Kirsher, [[net-next 00/15][pull request] 40GbE Intel Wired LAN Driver Updates 2017-06-20](https://www.spinics.net/lists/netdev/msg441505.html)
+- - Jeff Kirsher, [net-next 00/15 pull request\: 40GbE Intel Wired LAN Driver Updates 2017-06-20](https://www.spinics.net/lists/netdev/msg441505.html)
   - [[net-next 01/15] i40e: add XDP support for pass and drop actions](https://www.spinics.net/lists/netdev/msg441507.html)
   - [[net-next 02/15] i40e: add support for XDP_TX action](https://www.spinics.net/lists/netdev/msg441518.html)
   - [[net-next 03/15] i40evf: assign `num_active_queues` inside `i40evf_alloc_queues`](https://www.spinics.net/lists/netdev/msg441520.html)

@@ -4,7 +4,7 @@ date: '2021-10-25T17:00:00.000Z'
 title: 'New Weekly Community InstallFest and Live QA'
 isPopular: false
 ogImage: ogimage.png
-ogSummary: 'With Cilium joining the CNCF we have had a lot of people showing interest in Cilium and wanting to learn about it. We are excited to introduce two new community events available to everybody in the community to learn and explore Cilium: Weekly Community InstallFest & Weekly Cilium Introduction with live Q&A'
+ogSummary: 'Join our weekly Cilium InstallFest and Live Q&A to learn, explore, and connect with maintainers as Cilium grows under the CNCF community umbrella.'
 categories:
   - Community
 tags:
@@ -25,7 +25,7 @@ everybody in the community to learn and explore Cilium:
 
 <a name="liveqa"></a>
 
-# Weekly Cilium Introduction with Live Q&A
+## Weekly Cilium Introduction with Live Q&A
 
 ![](live_qa.png)
 
@@ -49,7 +49,7 @@ Simply click the link below to sign up for one of the available time slots:
 
 <a name="installfest"></a>
 
-# Weekly Community InstallFest
+## Weekly Community InstallFest
 
 ![](installfest.png)
 
@@ -67,7 +67,7 @@ confirmation to the event
 - [Join InstallFest in Americas](https://calendly.com/cilium-events/cilium-installfest-na)
 - [cilium/installfest](https://github.com/cilium/installfest)
 
-# Further Reading
+## Further Reading
 
 - [Learn more about Cilium](https://cilium.io/learn)
 - [Join the Cilium Slack](https://slack.cilium.io)

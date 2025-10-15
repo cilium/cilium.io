@@ -7,9 +7,7 @@ categories:
 tags:
   - eBPF
   - copyright
-ogSummary: "As with everything we do, we are fully transparent. As it becomes obvious that a simple resolution in this matter is not possible, we follow open source best practices and choose a public forum for the sake of transparency.
-It was brought to our attention that some of the new eBPF
-code committed to the Calico repository is violating the license of source code in the Cilium repository."
+ogSummary: "It was brought to our attention that some of the new eBPF code committed to the Calico repository is violating the license of source code in the Cilium repository. We follow open source best practices and choose a public forum for the sake of transparency."
 ---
 
 # TL;DR

@@ -60,7 +60,7 @@ first time. Cilium 1.6 introduces several exciting new features:
 - **... and much more:** For the full list of changes, see the [1.6 Release
   Notes](#16Highlights).
 
-# What is Cilium?
+## What is Cilium?
 
 Cilium is open source software for transparently providing and securing the
 network and API connectivity between application services deployed using Linux
@@ -121,7 +121,7 @@ section in the documentation.
 
 <a name="kubeproxy-removal"></a>
 
-# Kube-proxy Removal
+## Kube-proxy Removal
 
 _Contributed by Daniel Borkmann and Martynas Pumputis_
 
@@ -134,7 +134,7 @@ networking. The new feature allows to finally run a fully functioning
 Kubernetes cluster without kube-proxy. This means that long lists of iptables
 rules are no longer needed to enable the Kubernetes Service abstraction.
 
-## Why does it matter?
+### Why does it matter?
 
 The plot below shows a latency per HTTP GET request (lower is better) via a
 Kubernetes service to a `nginx` Pod running on a remote host measured with `ab`
@@ -193,7 +193,7 @@ KUBE-NODEPORTS
 
 <a name="nodeport"></a>
 
-## Native eBPF NodePort and SNAT implementation
+### Native eBPF NodePort and SNAT implementation
 
 Under the hood, we attach a NodePort eBPF program to a network device which has
 a default route on the host. This makes a NodePort service to be accessible via
@@ -211,7 +211,7 @@ for more configuration options.
 
 <a name="hostservices"></a>
 
-# Socket-based load-balancing
+## Socket-based load-balancing
 
 _Contributed by Daniel Borkmann and Martynas Pumputis_
 
@@ -269,7 +269,7 @@ can be set to one of the two for older kernel compatibility.
 
 <a name="chaining"></a>
 
-# Generic CNI Chaining
+## Generic CNI Chaining
 
 _Contributed by Thomas Graf and Laurent Bernaille_
 
@@ -291,7 +291,7 @@ bit of Go code to define the interface between Cilium and that CNI plugin.
 
 <a name="policyscale"></a>
 
-# Policy Scalability
+## Policy Scalability
 
 _Contributed by Ian Vernon, Jarno Rajahalme, and Joe Stringer_
 
@@ -388,7 +388,7 @@ destined for the new endpoints in the cluster.
 
 <a name="eni"></a>
 
-# Native AWS ENI Datapath
+## Native AWS ENI Datapath
 
 _Contributed by Thomas Graf, Vlad Ungureanu, and Ryan McNamara_
 
@@ -411,7 +411,7 @@ multi-cluster, policy enforcement and load-balancing subsystem.
 
 <a name="encryption"></a>
 
-# High-scale Dataplane for Transparent Encryption
+## High-scale Dataplane for Transparent Encryption
 
 _Contributed by John Fastabend, Laurent Bernaille, and Robert Boll_
 
@@ -431,7 +431,7 @@ Kubernetes pod.
 
 <a name="helm"></a>
 
-# Helm Charts
+## Helm Charts
 
 With the growing number of supported datapath and control plane configurations,
 maintaining pre-generated YAML resources for deployments has become hard. As
@@ -455,7 +455,7 @@ kubectl create -f cilium.yaml
 
 <a name="16Highlights"></a>
 
-# 1.6 Release Highlights
+## 1.6 Release Highlights
 
 - **Policy**
   - New selector cache to massively speed up correlation of label based
@@ -523,19 +523,19 @@ kubectl create -f cilium.yaml
 - **Istio**
   - Support for 1.2.4
 
-# Getting Started
+## Getting Started
 
 New to Cilium? Follow one of the [Getting Started
 Guides](https://docs.cilium.io/en/v1.6/gettingstarted/).
 
-# Upgrade Instructions
+## Upgrade Instructions
 
 As usual, follow the [upgrade
 guide](https://cilium.readthedocs.io/en/v1.6/install/upgrade/#upgrading-minor-versions)
 to upgrade your Cilium deployment. Feel free to ping us on
 [Slack].
 
-# Release
+## Release
 
 - Release Notes & Binaries: [1.6.0](https://github.com/cilium/cilium/releases/tag/v1.6.0)
 - Container image: `docker.io/cilium/cilium:v1.6.0`

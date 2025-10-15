@@ -8,8 +8,9 @@ tags:
   - Kubernetes
   - network policies
   - kube-dns policy
+  - bpf-updates
 ogImage: overview.png
-ogSummary: 'Kubernetes clusters are used by multiple tenants to run their containerized workloads. Often, the tenant workloads are mapped to namespaces and strict access control is required for inter-namespace communications. The access control could be needed for separation of concerns such as monitoring namespace vs application namespace; for compliance such as PCI vs non-PCI workloads; or to meet requirements of serving different end customers such as workloads serving Pepsi vs Coke. In this post, we will look at namespace based segmentation of traffic along with examples of allowing specific inter-namespace communications.'
+ogSummary: 'Issue #11 of the BPF Updates newsletter covers new helper functions, BPF assembly support in LLVM, and LRU map lookup improvements introduced in Linux 4.13. Plus, slides, talks, and useful community resources.'
 ---
 
 ![](overview.png)
@@ -238,4 +239,4 @@ $ kubectl exec -it tiefighter -n empire -- curl -sL google.com
 
 Kubernetes services are exposed outside the cluster using either NodePort, LoadBalancer or Ingress Controllers. The IP-address of the original client may not be available depending on the load balancing behavior and/or SNAT scenarios for NodePort. This topic requires broader consideration and will be covered in a dedicated post.
 
-We hope the above namespace based access control examples will help you secure your multi-tenant Kubernetes clusters. If you have use cases, questions, or want to discuss Cilium Kubernetes networking and security then join us on [slack](https://cilium.slack.com/)
+We hope the above namespace based access control examples will help you secure your multi-tenant Kubernetes clusters. If you have use cases, questions, or want to discuss Cilium Kubernetes networking and security then join us on [slack](https://slack.cilium.io/)

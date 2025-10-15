@@ -1,12 +1,14 @@
 ---
 path: '/blog/2017/5/2/bpf-updates-01-2017-05-02'
 date: '2017-05-02T17:20:46.000Z'
-title: 'BPF Updates 01'
+title: 'BPF Updates 01: SPARC eBPF JIT, Generic XDP, and ixgbe Support'
 categories:
   - Technology
 tags:
   - bpf
   - bpf-updates
+  - xdf
+  - networking
 ogSummary: 'This is the start of a regular newsletter around BPF written by Alexander Alemayhu. It will summarize ongoing development, presentations, videos and other information related to BPF and XDP. It will be released roughly once a week.'
 ---
 

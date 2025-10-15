@@ -5,7 +5,7 @@ title: 'How DB Schenker Migrated from Calico to Cilium'
 isPopular: true
 isFeatured: false
 ogImage: after-removing-calico-resources.png
-ogSummary: 'Learn how DB Schneker migrated their Kubernetes platform CNI from Calico to Cilium'
+ogSummary: 'DB Schenker migrated Kubernetes CNI from Calico to Cilium with minimal downtime. Step-by-step guide using CiliumNodeConfig for live production migration.'
 categories:
   - Community
   - Technology

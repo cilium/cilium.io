@@ -14,9 +14,7 @@ tags:
   - Anthos
   - Google
 ogImage: ogimage.png
-ogSummary: "Today marks an exciting day for the Cilium community and all Cilium
-contributors, Google just announced that Cilium has been selected and made
-available as the new datapath for GKE and Anthos.In this post, we will take a look behind the scenes that lead up to this."
+ogSummary: 'Google adopts Cilium and eBPF as the new GKE dataplane, enabling scalable, secure, and high-performance networking across Kubernetes and Anthos.'
 ---
 
 import authors from 'utils/author-data';
@@ -35,7 +33,7 @@ You can read all the details in the official
 [announcement](https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebpf-and-cilium-to-google-kubernetes-engine).
 In this post, we will take a look behind the scenes that lead up to this.
 
-# How it all started
+## How it all started
 
 As it often does, large adventures start with a small innocent
 Git [commit](https://github.com/cilium/cilium/commit/ba85129ea4558ae03eca07f07e88bf169f2c9307).
@@ -83,7 +81,7 @@ and reliability of Cilium on GKE and Anthos. All of this lead to today’s
 announcement and the availability of Cilium as the new eBPF networking data
 plane for GKE.
 
-# Why Cilium on GKE?
+## Why Cilium on GKE?
 
 What is behind this decision? In today’s announcement, Google provides some
 context on this decision:
@@ -121,7 +119,7 @@ exciting things being built with eBPF and Cilium:
 > list of possible use cases. We are as excited about the future of Kubernetes
 > and eBPF as you are, so stay tuned for more innovations.
 
-# What is eBPF?
+## What is eBPF?
 
 How does this magic eBPF technology work exactly? We can't go into all of the
 details of eBPF in this post but the following is extracted from
@@ -136,7 +134,7 @@ eBPF:
 
 ![](goebpf.png)
 
-# What is Cilium?
+## What is Cilium?
 
 For those hearing about Cilium for the first time:
 Cilium is an open source project that has been designed on top of eBPF to
@@ -152,7 +150,6 @@ and much more.
 Overview of what Cilium brings to Kubernetes using eBPF:
 
 - **Networking**
-
   - eBPF-based in-kernel networking datapath featuring IPv4 and IPv6 with the
     ability to support both direct-routing and encapsulation/overlay
     topologies. Highly scalable kube-proxy replacement with direct server
@@ -162,7 +159,6 @@ Overview of what Cilium brings to Kubernetes using eBPF:
     routing capabilities with service load-balancing across clusters.
 
 - **Security**
-
   - Identity-based network policy implementation that decouples security
     enforcement from IP addresses for increased scalability and compatibility
     with service mesh identity concepts. FQDN/DNS-based policy support to
@@ -171,13 +167,12 @@ Overview of what Cilium brings to Kubernetes using eBPF:
     L7-aware policies and policy-driven SSL termination.
 
 - **Observability**
-
   - Programmable flow logging capabilities for visibility into security verdicts,
     networking forwarding decisions, and to understand service topologies and
     connectivity patterns. Programmable metrics system to monitor traffic
     patterns, security status, and error conditions.
 
-# Try it Out
+## Try it Out
 
 You can get started running Cilium as the GKE dataplane using the GKE rapid channel:
 
@@ -191,7 +186,7 @@ If you don't want to use the rapid channel, the existing [GKE installation
 instructions](https://docs.cilium.io/en/stable/gettingstarted/k8s-install-gke/)
 will of course still work.
 
-# What is next?
+## What is next?
 
 Working together with Google's GKE team has been incredibly exciting and
 rewarding. Having Google as a main contributor to the project will yield many

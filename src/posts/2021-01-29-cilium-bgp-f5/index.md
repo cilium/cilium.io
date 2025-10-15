@@ -14,14 +14,14 @@ tags:
   - BGP
   - BIRD
 ogImage: ogimage.png
-ogSummary: "This is a guest blog by Howard Hao. Howard is working as a Kubernetes infrastructure SRE for Ect888.com. In this guest post, Howard will share how Ect888 uses Cilium & F5 to build a scalable load-balancing infrastructure with BGP for Ect888's production environment."
+ogSummary: 'Learn how Ect888.com uses Cilium & F5 to build a scalable load-balancing infrastructure with BGP for their production environment.'
 ---
 
 import authors from 'utils/author-data';
 
 ![](intro.png)
 
-# Kubernetes Networking with Cilium and F5
+## Kubernetes Networking with Cilium and F5
 
 This is a guest blog by Howard Hao. Howard is working as a Kubernetes
 infrastructure SRE for [Ect888.com](http://www.ect888.com). In this post,
