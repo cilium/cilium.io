@@ -1,7 +1,6 @@
 ---
 path: '/blog/grpc'
 date: '2017-12-06T09:13:48.000Z'
-author: 'Cilium Team'
 title: 'Cilium Now Speaks gRPC: Fine-Grained Network Security for Modern Microservices'
 categories:
   - Technology
