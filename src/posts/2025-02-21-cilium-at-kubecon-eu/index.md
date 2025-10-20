@@ -1,6 +1,7 @@
 ---
 path: '/blog/2025/02/21/cilium-at-kubecon-eu-2025'
 date: '2025-02-21T12:00:00.000Z'
+author: 'Paul Arah'
 title: 'Cilium at KubeCon + CloudNativeCon Europe 2025 and CiliumCon'
 isFeatured: false
 ogImage: cover.png

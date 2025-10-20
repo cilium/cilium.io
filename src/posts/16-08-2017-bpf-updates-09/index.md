@@ -1,6 +1,7 @@
 ---
 path: '/blog/2017/8/15/bpf-updates-09'
 date: '2017-08-16T13:43:16.000Z'
+author: 'Alexander Alemayhu'
 title: 'BPF updates 09'
 categories:
   - Technology

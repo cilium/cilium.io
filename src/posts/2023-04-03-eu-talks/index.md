@@ -1,6 +1,7 @@
 ---
 path: '/blog/2023/04/03/cilium-kubecon-eu-2023-talks'
 date: '2023-04-03T17:00:00.000Z'
+author: ' Bill Mulligan'
 title: 'Cilium Talks at KubeCon EU 2023'
 isPopular: false
 isFeatured: false

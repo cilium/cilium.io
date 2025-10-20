@@ -259,7 +259,8 @@ export default NetworkAutomationPage;
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
-    description: 'How Cilium delivers Network Automation',
+    description:
+      'Automate Kubernetes networking with Cilium. Identity-based policies, dynamic service discovery, and eBPF-powered automation that adapts to workload changes.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

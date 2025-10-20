@@ -1,6 +1,7 @@
 ---
 path: '/blog/2021/05/20/cilium-110'
 date: '2021-05-20T17:00:00.000Z'
+author: 'Cilium Core Team'
 title: 'Cilium 1.10: WireGuard, BGP Support, Egress IP Gateway, New Cilium CLI, XDP Load Balancer, Alibaba Cloud Integration and more'
 isPopular: true
 categories:

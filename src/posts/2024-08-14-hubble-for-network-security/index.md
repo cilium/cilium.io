@@ -1,6 +1,7 @@
 ---
 path: '/blog/2024/08/14/hubble-for-network-security-and-observability-part-1'
 date: '2024-08-14T12:00:00.000Z'
+author: 'Shedrack Akintayo'
 title: 'Hubble for Network Observability and Security (Part 1): Introduction to Cilium and Hubble'
 isFeatured: false
 ogImage: cover.png

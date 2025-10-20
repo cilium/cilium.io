@@ -1,6 +1,7 @@
 ---
 path: '/blog/2025/05/15/tetragon-ai-agents-canopus'
 date: '2025-05-15T10:00:00.000Z'
+author: 'Himal Kumar, Bhaskar Dutta, Arman Pashamokhtari'
 title: 'Agentic Bee: How to get AI Agents to talk to Tetragon?'
 isPopular: true
 isFeatured: false

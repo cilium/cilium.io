@@ -1,6 +1,7 @@
 ---
 path: '/blog/2020/10/06/skybet-cilium-migration'
 date: '2020-10-06T09:00:00.000Z'
+author: 'Josh Van Leeuwen'
 isPopular: true
 title: 'How to perform a CNI Live Migration from Flannel+Calico to Cilium'
 categories:

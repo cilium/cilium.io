@@ -1,6 +1,7 @@
 ---
 path: '/blog/2025/16/01/themed-echo-playlists'
 date: '2025-07-01T10:00:00.000Z'
+author: 'Donia Chaiehloudj'
 title: 'Explore Our New eCHO Playlist Library'
 isPopular: false
 isFeatured: false

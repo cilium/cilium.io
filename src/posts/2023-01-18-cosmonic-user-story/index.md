@@ -1,6 +1,7 @@
 ---
 path: '/blog/2023/01/18/cosmonic-user-story'
 date: '2023-01-18T17:00:00.000Z'
+author: 'Bill Mulligan'
 title: 'Cosmonic User Story: Running Cilium on Nomad for Wasm Workloads'
 isPopular: true
 isFeatured: false

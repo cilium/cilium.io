@@ -1,6 +1,7 @@
 ---
 path: '/blog/2022/05/05/meet-maintainer-laurent-bernaille'
 date: '2022-05-05T17:00:00.000Z'
+author: 'Bill Mulligan'
 title: 'Meet the Maintainer - Laurent Bernaille'
 isPopular: false
 isFeatured: false

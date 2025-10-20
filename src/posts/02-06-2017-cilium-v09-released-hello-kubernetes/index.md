@@ -1,6 +1,7 @@
 ---
 path: '/blog/2017/5/31/cilium-v09-released-hello-kubernetes'
 date: '2017-06-01T20:14:07.000Z'
+author: 'Cilium Team'
 title: 'Cilium v0.9 Released: Kubernetes DaemonSet, NetworkPolicy, and L7 HTTP Security'
 categories:
   - Release

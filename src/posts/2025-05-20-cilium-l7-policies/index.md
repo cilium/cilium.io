@@ -1,6 +1,7 @@
 ---
 path: '/blog/2025/05/20/cilium-l7-policies'
 date: '2025-05-20T10:00:00.000Z'
+author: 'Paul Arah'
 title: 'Application-Aware Security Policies with Cilium Layer 7 Network Policies'
 isPopular: false
 isFeatured: false

@@ -190,7 +190,8 @@ export default MultiCloudPage;
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
-    description: 'How Cilium enables Multi-Cloud Connectivity',
+    description:
+      'Connect workloads across multiple clouds seamlessly with Cilium. Native service discovery, identity-aware security, and unified networking for any environment.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

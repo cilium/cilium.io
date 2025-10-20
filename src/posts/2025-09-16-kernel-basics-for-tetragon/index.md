@@ -1,6 +1,7 @@
 ---
 path: '/blog/2025/09/16/kernel-basics-for-tetragon'
 date: '2025-09-16T12:00:00.000Z'
+author: 'Paul Arah'
 title: 'Linux Kernel Fundamentals for Effectively Writing Tetragon Tracing Policies '
 ogImage: cover.png
 isFeatured: false

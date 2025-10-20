@@ -1,6 +1,7 @@
 ---
 path: '/blog/2023/10/30/cilium-kubecon-na-talks'
 date: '2023-10-30T17:00:00.000Z'
+author: 'Shedrack Akintayo'
 title: 'Cilium Talks at KubeCon NA 2023'
 isFeatured: false
 ogImage: cover.png

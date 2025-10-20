@@ -1,6 +1,7 @@
 ---
 path: '/blog/2024/12/31/tetragon-2024-year-in-review'
 date: '2024-12-31T12:00:00.000Z'
+author: 'Paul Arah'
 title: 'Tetragon: 2024 in Review'
 isFeatured: false
 ogImage: cover.png

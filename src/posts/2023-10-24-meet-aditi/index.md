@@ -1,6 +1,7 @@
 ---
 path: '/blog/2023/10/24/meet-maintainer-aditi-Ghag'
 date: '2023-10-24T10:00:00.000Z'
+author: 'Shedrack Akintayo'
 title: 'Meet the Maintainer - Aditi Ghag'
 isPopular: false
 isFeatured: false

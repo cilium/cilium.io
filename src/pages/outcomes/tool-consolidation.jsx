@@ -204,7 +204,8 @@ export default ToolConsolidationPage;
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
-    description: 'How Cilium enables Tool Consolidation',
+    description:
+      'Simplify your networking stack with Cilium. Replace multiple tools with one eBPF platform for connectivity, security, and observability in Kubernetes.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

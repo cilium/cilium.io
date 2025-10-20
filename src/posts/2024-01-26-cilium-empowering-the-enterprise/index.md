@@ -1,6 +1,7 @@
 ---
 path: '/blog/2024/01/26/cilium-empowering-the-enterprise'
 date: '2024-01-26T12:00:00.000Z'
+author: 'Shedrack Akintayo'
 title: 'Cilium - Empowering the Enterprise'
 isFeatured: false
 ogImage: cover.png

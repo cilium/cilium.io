@@ -1,10 +1,11 @@
 ---
 path: '/blog/2022/10/17/cilium-kubecon-na-talks'
 date: '2022-10-17T17:00:00.000Z'
+author: 'Bill Mulligan'
 title: 'Cilium Talks at KubeCon NA 2022'
 isFeatured: false
 ogImage: ciliumkubeconna.jpg
-ogSummary: "Find all the Cilium talk at KubeCon NA"
+ogSummary: 'Find all the Cilium talk at KubeCon NA'
 categories:
   - Community
 tags:
@@ -14,16 +15,16 @@ tags:
 
 ![Cilium Talks at KubeCon](ciliumkubeconna.jpg)
 
-*October 17th, 2022*  
-*Author: Bill Mulligan, Isovalent*
+_October 17th, 2022_  
+_Author: Bill Mulligan, Isovalent_
 
 KubeCon + CloudNativeCon is already back around upon us and Cilium is represented in full force! There are 12 talks, workshops, and meetings that cover technical talks from Cilium contributors, tutorials to get people started, and end user stories from people putting Cilium into production. You will be able to catch presentations on everything from Cilium NetworkPolicies to Cilium for telco workloads to a tour of the Cilium for security. Let’s dive into each of the talks below.
 
 ## Cloud Native eBPF Day
 
 ### [Keynote: eBPF - Everything You Need to Know in 5 Minutes - Thomas Graf, CTO, Isovalent](https://sched.co/1Auye)
- 
- Monday, October 24 • 9:15am - 9:20am
+
+Monday, October 24 • 9:15am - 9:20am
 
 eBPF has become the key technology for infrastructure software. This session tells you everything you need to know about eBPF in 5 minutes. Why eBPF matters and why it exists. What it can do. What it can’t do. Who uses it for what. And finally, what the future holds.
 
@@ -73,7 +74,7 @@ Until now, validating the build environment and detecting tampered tooling in a 
 
 Tuesday, October 25 • 3:30pm - 4:00pm
 
-To provide app-level network functionality like L7 load balancing and TLS termination, Service Meshes use a proxy component that terminates L7 connections on behalf of applications. Traditionally the proxy has been co-located in each application pod as a sidecar container, but Cilium Service Mesh changed this with the innovation of sidecarless service mesh. Istio have also now adopted a sidecarless approach that was recently announced as Istio Ambient Mesh. 
+To provide app-level network functionality like L7 load balancing and TLS termination, Service Meshes use a proxy component that terminates L7 connections on behalf of applications. Traditionally the proxy has been co-located in each application pod as a sidecar container, but Cilium Service Mesh changed this with the innovation of sidecarless service mesh. Istio have also now adopted a sidecarless approach that was recently announced as Istio Ambient Mesh.
 
 But “sidecarless” doesn’t mean “proxyless”! It’s a question of where you deploy the proxies, and how you create the relationship between apps and proxies. In this talk we’ll explore the pro’s and con’s of different models, and explain where eBPF makes a difference (and where it doesn’t) in not only network performance, but also to provide observability and security capabilities.
 

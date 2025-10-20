@@ -1,6 +1,7 @@
 ---
 path: '/blog/2024/03/07/cloud-provider-user-story'
 date: '2024-03-07T17:00:00.000Z'
+author: 'Shedrack Akintayo'
 title: 'Cilium User Story: Scaling and Enhancing Networking in a Managed Kubernetes Service with Cilium'
 ogImage: Cloud_Provider_User_Story.png
 ogSummary: 'Learn how a cloud provider used Cilium to handle scalability issues and enhance networking their managed Kubernetes service'

@@ -1,6 +1,7 @@
 ---
 path: '/blog/2025/04/15/tetragon-user-sinad'
 date: '2025-04-25T10:00:00.000Z'
+author: 'Paul Arah'
 title: 'Sinad User Story: Delivering Security and Observability for Workloads with Confidence'
 isPopular: true
 isFeatured: false

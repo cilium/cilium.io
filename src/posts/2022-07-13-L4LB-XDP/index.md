@@ -1,6 +1,7 @@
 ---
 path: '/blog/2022/04/12/cilium-standalone-L4LB-XDP'
 date: '2022-07-13T17:00:00.000Z'
+author: 'Ondrej Blazek'
 title: 'Cilium Standalone Layer 4 Load Balancer XDP'
 isPopular: true
 isFeatured: false

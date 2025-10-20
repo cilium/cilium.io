@@ -1,6 +1,7 @@
 ---
 path: '/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables'
 date: '2018-04-17T09:01:01.000Z'
+author: 'Thomas Graf'
 title: 'Why is the kernel community replacing iptables with BPF?'
 draft: false
 categories:

@@ -1,6 +1,7 @@
 ---
 path: '/blog/2024/08/27/hubble-for-network-security-and-observability-part-3'
 date: '2024-08-27T12:00:00.000Z'
+author: 'Shedrack Akintayo'
 title: 'Hubble for Network Observability and Security (Part 3): Leveraging Hubble Data for Network Security'
 isFeatured: false
 ogImage: cover.png
