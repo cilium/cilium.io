@@ -213,7 +213,7 @@ const SavingsPage = () => (
 
 export default SavingsPage;
 
-// eslint-disable-next-line react/prop-types
+// eslint-disable-next-line react/prop-types.
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
