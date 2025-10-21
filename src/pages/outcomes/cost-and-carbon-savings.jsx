@@ -218,7 +218,7 @@ export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
     description:
-      "Reduce infrastructure costs and carbon emissions with Cilium's eBPF networking. Cut CPU overhead, optimize IPs, and eliminate cloud load balancer fees.",
+      "Reduce infrastructure costs and carbon emissions with Cilium's eBPF based networking. Cut CPU overhead, optimize IPs, and eliminate cloud load balancer fees.",
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;
