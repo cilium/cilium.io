@@ -1,7 +1,7 @@
 ---
 path: '/blog/2017/10/24/bpf-updates-12'
 date: '2017-10-25T13:35:41.000Z'
-author: ' Alexander Alemayhu'
+author: 'Alexander Alemayhu'
 title: 'BPF Updates 12'
 categories:
   - Technology
