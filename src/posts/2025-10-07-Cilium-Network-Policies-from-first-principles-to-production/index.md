@@ -6,7 +6,7 @@ ogSummary: 'Gain a deeper understanding how to construct and deploy Cilium Netwo
 categories:
   - Community
   - How-To
-externalUrl: 'https://https://veducate.co.uk/cilium-network-policies-from-first-principles-to-production/'
+externalUrl: 'https://veducate.co.uk/cilium-network-policies-from-first-principles-to-production/'
 tags:
   - Cilium
 ---
