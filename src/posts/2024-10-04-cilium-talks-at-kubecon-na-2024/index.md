@@ -1,7 +1,6 @@
 ---
 path: '/blog/2024/10/04/cilium-kubecon-na-2024'
 date: '2024-10-04T12:00:00.000Z'
-author: 'Shedrack Akintayo'
 title: 'Cilium Talks at KubeCon NA 2024'
 ogImage: kubeconNA.png
 isPopular: true
@@ -11,6 +10,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 ![Cilium Talks at KubeCon](kubeconNA.png)
 

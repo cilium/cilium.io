@@ -1,7 +1,6 @@
 ---
 path: '/blog/2017/5/17/bpf-updates-03'
 date: '2017-05-18T21:40:44.000Z'
-author: ' Alexander Alemayhu'
 title: 'BPF updates 03'
 categories:
   - Technology
@@ -11,6 +10,8 @@ tags:
   - ebpf
 ogSummary: 'This issue of the BPF Updates newsletter covers kernel 4.12-rc1 changes, ARM 32-bit JIT progress, alignment tracking in the verifier, and useful learning resources on eBPF, ELF loaders, and XDP.'
 ---
+
+import authors from 'utils/author-data';
 
 This is issue 03 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

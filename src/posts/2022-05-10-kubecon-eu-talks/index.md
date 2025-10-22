@@ -1,7 +1,6 @@
 ---
 path: '/blog/2022/05/06/cilium-kubecon-eu-talks'
 date: '2022-05-06T17:00:00.000Z'
-author: 'Bill Mulligan'
 title: 'Cilium Talks at KubeCon EU 2022'
 isPopular: false
 isFeatured: false

@@ -1,7 +1,6 @@
 ---
 path: '/blog/2022/10/17/constellation-network-encryption'
 date: '2023-07-20T17:00:00.000Z'
-author: 'Leonard Cohnen & Moritz Eckert'
 title: 'Securing Constellation’s Kubernetes data in transit - network encryption with Cilium'
 ogImage: header-img.png
 ogSummary: 'Learn how Constellation uses Cilium’s eBPF-powered encryption to secure Kubernetes data in transit while maintaining performance and connectivity.'
@@ -11,6 +10,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 ![Header Image](header-img.png)
 

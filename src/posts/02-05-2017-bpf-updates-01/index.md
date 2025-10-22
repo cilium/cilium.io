@@ -12,6 +12,8 @@ tags:
 ogSummary: 'This is the start of a regular newsletter around BPF written by Alexander Alemayhu. It will summarize ongoing development, presentations, videos and other information related to BPF and XDP. It will be released roughly once a week.'
 ---
 
+import authors from 'utils/author-data';
+
 This is the start of a regular newsletter around BPF written by Alexander Alemayhu. It will summarize ongoing development, presentations, videos and other information related to BPF and XDP. It will be released roughly once a week.
 
 ---

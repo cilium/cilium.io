@@ -1,7 +1,6 @@
 ---
 path: '/blog/2022/04/12/cilium-multi-cluster-networking'
 date: '2022-04-12T17:00:00.000Z'
-author: 'Joseph Irving'
 title: 'Multi Cluster Networking with Cilium and Friends'
 isPopular: true
 isFeatured: false
@@ -14,6 +13,8 @@ tags:
   - Clustermesh
   - Load balance
 ---
+
+import authors from 'utils/author-data';
 
 ![USwitch logo](uswitchheader.svg)
 

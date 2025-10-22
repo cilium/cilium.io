@@ -1,7 +1,6 @@
 ---
 path: '/blog/2023/09/07/db-schenker-migration-to-cilium'
 date: '2023-09-07T12:12:00.000Z'
-author: 'Amir Kheirkhahan'
 title: 'How DB Schenker Migrated from Calico to Cilium'
 isPopular: true
 isFeatured: false
@@ -13,6 +12,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 _Author: Amir Kheirkhahan, DB Schenker_
 

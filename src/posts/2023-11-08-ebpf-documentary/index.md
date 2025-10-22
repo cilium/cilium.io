@@ -1,7 +1,6 @@
 ---
 path: '/blog/2023/10/30/the-ebpf-documentary'
 date: '2023-11-08T17:00:00.000Z'
-author: 'Shedrack Akintayo'
 title: 'eBPF’s Journey – Unlocking The Kernel'
 isFeatured: false
 ogImage: cover.webp
@@ -12,6 +11,8 @@ tags:
   - Cilium
   - ebpf
 ---
+
+import authors from 'utils/author-data';
 
 ![Unlocking the Kernel](cover.webp)
 

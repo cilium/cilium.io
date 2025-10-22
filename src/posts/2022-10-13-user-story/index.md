@@ -1,7 +1,6 @@
 ---
 path: '/blog/2022/10/13/publishing-user-story'
 date: '2022-10-13T17:00:00.000Z'
-author: 'Bill Mulligan'
 title: 'Cilium User Story: Securing 100,000+ RPS in a Multi-Tenant Environment'
 isPopular: true
 isFeatured: false
@@ -12,6 +11,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 ![Cilium User Story - Securing 100,000+ RPS in a Multi-Tenant Environment](Publishing-user.png)
 

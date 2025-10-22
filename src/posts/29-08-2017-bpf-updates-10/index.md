@@ -1,7 +1,6 @@
 ---
 path: '/blog/2017/8/29/bpf-updates-10'
 date: '2017-08-29T15:50:18.000Z'
-author: 'Alexander Alemayhu'
 title: 'BPF updates 10'
 categories:
   - Technology
@@ -11,6 +10,8 @@ tags:
   - bpf
 ogSummary: 'Issue 10 of the BPF newsletter by Alexander Alemayhu, covering updates, presentations, videos, and ongoing developments around BPF and XDP.'
 ---
+
+import authors from 'utils/author-data';
 
 This is issue 10 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

@@ -1,7 +1,6 @@
 ---
 path: '/blog/2025/06/19/eks-eni-install'
 date: '2025-06-19T10:00:00.000Z'
-author: 'Paul Arah'
 title: 'Installing Cilium on EKS in ENI Mode'
 isPopular: true
 isFeatured: false
@@ -12,6 +11,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 ![](cover.png)
 

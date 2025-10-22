@@ -46,4 +46,78 @@ export default {
     promising. I've learned a lot from it, such as BPF, XDP and how to replace
     kube-proxy in a elegant way and I'd love to contribute to it.`,
   },
+  alexanderAlemayhu: {
+    header: `Alexander Alemayhu`,
+    bio: `Alexander Alemayhu is a software engineer at Isovalent, the company behind Cilium. He has been working on eBPF and Linux kernel technologies for several years, focusing on networking and observability solutions.`,
+  },
+  DanielBorkmann: {
+    header: `Daniel Borkmann`,
+    bio: `Daniel Borkmann who was recently recognized through the Google Open Source Peer Bonus
+    program for his work on the Cilium project. We invited Daniel to share his project on our blog.`
+  },
+  ThomasGraf: {
+    header: `Thomas Graf`,
+    bio: `long-time Linux kernel networking developer and creator of the Cilium project, Thomas Graf`,
+  },
+  JedSalazar: {
+    header: `Jed Salazar`,
+    bio: `Jed Salazar, Senior Solutions Architect, Isovalent`,
+  },
+  JedSalazarandJoeStringer: {
+    header: `Jed Salazar and Joe Stringer`,
+    bio: `Jed Salazar and Joe Stringer, Isovalent`,
+  },
+  JosephIrving: {
+    header: `Joseph Irving`,
+    bio: `Jed Salazar, Senior Solutions Architect, and Martynas Pumputis, Software Engineer`,
+  },
+  BillMulligan: {
+    header: `Bill Mulligan`,
+    bio: `Bill Mulligan Isovalent.`,
+  },
+  OndrejBlazek: {
+    header: `Ondrej Blazek`,
+    bio: `Ondrej Blazek, Infrastructure Engineer @ Seznam.cz`,
+  },
+  LeonardCohnenandMoritzEckert: {
+    header: `Leonard Cohnen and Moritz Eckert`,
+    bio: `Edgeless Systems`,
+  },
+  PolArroyo: {
+    header: `Pol Arroyo`,
+    bio: `Hi, I'm Pol Arroyo, a DevOps Engineer at Hetzner Cloud.`
+  },
+  MartynasPumputis: {
+    header: `Martynas Pumputis`,
+    bio: `Isovalent`,
+  },
+  ShedrackAkintayo: {
+    header: `Shedrack Akintayo`,
+    bio: `Isovalent`,
+  },
+  AmirKheirkhahan: {
+    header: `Amir Kheirkhahan`,
+    bio: `Author`,
+  },
+  DBSchenker: {
+    header: `DB Schenker`,
+    bio: `Author`,
+  },
+  PaulArah: {
+    header: `Paul Arah`,
+    bio: `Isovalent`,
+  },
+  HimalKumar: {
+    header: `Himal Kumar, Bhaskar Dutta, Arman Pashamokhtari`,
+    bio: `@CanopusAI.com`,
+  },
+  DoniaChaiehloudj: {
+    header: `Donia Chaiehloudj`,
+    bio: `Isovalent@Cisco`,
+  },
+  KatieMeinders: {
+    header: `Katie Meinders`,
+    bio: `Isovalent`,
+  },
 };
+

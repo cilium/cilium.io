@@ -1,7 +1,6 @@
 ---
 path: '/blog/2017/9/18/bpf-updates-11'
 date: '2017-09-18T18:30:41.000Z'
-author: 'Alexander Alemayhu'
 title: 'BPF Updates 11'
 categories:
   - Technology
@@ -11,6 +10,8 @@ tags:
   - kernel-development
 ogSummary: 'BPF Updates 11: Linux 4.13 released with BPF improvements. New perf helpers, LLVM assembly support, and LRU optimizations headline this weeks updates.'
 ---
+
+import authors from 'utils/author-data';
 
 This is issue 11 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

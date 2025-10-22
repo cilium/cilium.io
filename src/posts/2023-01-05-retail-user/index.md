@@ -1,7 +1,6 @@
 ---
 path: '/blog/2023/01/05/retail-user-story'
 date: '2023-01-05T17:00:00.000Z'
-author: 'Bill Mulligan'
 title: 'Cilium User Story: Connecting 390+ Stores and 4.3 Billion Website Visitors'
 isPopular: true
 isFeatured: false
@@ -12,6 +11,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 ![Cilium User Story: Connecting 390+ Stores and 4.3 Billion Website Visitors](Retail_User_Story.png)
 

@@ -1,7 +1,6 @@
 ---
 path: '/blog/2025/08/20/cilium-at-kubecon-na-2025'
 date: '2025-08-20T12:00:00.000Z'
-author: 'Katie Meinders'
 title: 'Cilium at KubeCon + CloudNativeCon and CiliumCon North America 2025'
 ogImage: kubeconcover.png
 isFeatured: true
@@ -11,6 +10,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 **_Author: Katie Meinders, Isovalent_**
 

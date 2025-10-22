@@ -1,7 +1,6 @@
 ---
 path: '/blog/2023/03/22/packet-where-are-you'
 date: '2023-03-22T17:00:00.000Z'
-author: 'Martynas Pumputis and Bill Mulligan'
 title: 'Going from Packet Where Aren’t You to pwru'
 isFeatured: false
 ogImage: 1.png
@@ -11,6 +10,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 _February 8th, 2023_  
 _Authors: Martynas Pumputis and Bill Mulligan, Isovalent_

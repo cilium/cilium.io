@@ -1,7 +1,6 @@
 ---
 path: '/blog/2025/04/15/tetragon-social-networking-user-story'
 date: '2025-04-15T10:00:00.000Z'
-author: 'Paul Arah'
 title: 'Tetragon User Story: Why This Social Networking Company Made Tetragon a Default for their Kubernetes Clusters'
 isPopular: true
 isFeatured: false
@@ -12,6 +11,8 @@ categories:
 tags:
   - Tetragon
 ---
+
+import authors from 'utils/author-data';
 
 ![](cover.png)
 

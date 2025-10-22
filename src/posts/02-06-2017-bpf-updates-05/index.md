@@ -12,6 +12,8 @@ tags:
 ogSummary: 'Weekly eBPF newsletter covering Linux 4.12-rc3 release, MIPS eBPF JIT implementation, ARM 32-bit JIT v2, stack depth tracking for BPF-to-BPF function calls, BPF ID system introduction, and hardware offload improvements. Essential updates for kernel developers.'
 ---
 
+import authors from 'utils/author-data';
+
 This is issue 05 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 
 ---

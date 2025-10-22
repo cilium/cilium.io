@@ -1,7 +1,6 @@
 ---
 path: '/blog/2025/07/08/byonci-overlay-install'
 date: '2025-07-08T10:00:00.000Z'
-author: 'Paul Arah'
 title: 'Installing Cilium on EKS in Overlay(BYOCNI) and CNI Chaining Mode'
 isPopular: true
 isFeatured: false
@@ -12,6 +11,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 ![](cover.png)
 

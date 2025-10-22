@@ -1,7 +1,6 @@
 ---
 path: '/blog/2017/11/20/bpf-updates-13'
 date: '2017-11-20T16:32:45.000Z'
-author: ' Alexander Alemayhu'
 title: 'BPF Updates 13'
 categories:
   - Technology
@@ -13,6 +12,8 @@ tags:
   - linux-kernel
 ogSummary: 'Summary of ongoing BPF and XDP development, presentations, and patches for Linux kernel v4.15.'
 ---
+
+import authors from 'utils/author-data';
 
 This is issue 13 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

@@ -1,7 +1,6 @@
 ---
 path: '/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables'
 date: '2018-04-17T09:01:01.000Z'
-author: 'Thomas Graf'
 title: 'Why is the kernel community replacing iptables with BPF?'
 draft: false
 categories:
@@ -15,6 +14,8 @@ tags:
   - packet-filtering
 ogSummary: 'bpfilter replaces iptables with BPF-powered packet filtering in Linux kernel. Facebook sees 10x performance gains, Google and Netflix adopt BPF for networking and tracing.'
 ---
+
+import authors from 'utils/author-data';
 
 > Author Note: this is a post by long-time Linux kernel networking developer and
 > creator of the Cilium project, Thomas Graf

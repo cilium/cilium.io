@@ -13,6 +13,8 @@ tags:
 ogSummary: 'BPF and XDP development updates: BPF ID patches merged, perf events support added, XDP tutorials released, and verifier improvements for Linux kernel networking.'
 ---
 
+import authors from 'utils/author-data';
+
 This is issue 06 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 
 ---

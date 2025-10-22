@@ -1,7 +1,6 @@
 ---
 path: '/blog/2022/11/04/cilium-kubecon-na-wrapup'
 date: '2022-11-04T17:00:00.000Z'
-author: 'Bill Mulligan'
 title: 'Cilium at KubeCon NA 2022 Wrap Up'
 isPopular: true
 isFeatured: false
@@ -13,6 +12,8 @@ tags:
   - Cilium
   - KubeCon
 ---
+
+import authors from 'utils/author-data';
 
 _November 4th, 2022_  
 _Author: Bill Mulligan, Isovalent_

@@ -1,7 +1,6 @@
 ---
 path: '/blog/2023/05/04/telecommunications-user-story'
 date: '2023-05-04T10:00:00.000Z'
-author: 'Shedrack Akintayo'
 title: 'Cilium User Story: Zero Trust Networking at Scale (20k+ VCPUs, 100+ Dev Teams)'
 isPopular: false
 isFeatured: false
@@ -19,6 +18,8 @@ tags:
   - Egress Control
   - Telecommunications
 ---
+
+import authors from 'utils/author-data';
 
 ![](User-story-telecommunications.png)
 

@@ -1,7 +1,6 @@
 ---
 path: '/blog/2017/5/24/bpf-updates-04'
 date: '2017-05-24T21:53:54.000Z'
-author: 'Alexander Alemayhu'
 title: 'BPF updates 04'
 categories:
   - Technology
@@ -11,6 +10,8 @@ tags:
   - ebpf
 ogSummary: 'Linux 4.12-rc2 was released last week. One usual [GIT] Networking pull request made it in which includes two BPF fixes. See 18th May for the details.'
 ---
+
+import authors from 'utils/author-data';
 
 This is issue 04 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 

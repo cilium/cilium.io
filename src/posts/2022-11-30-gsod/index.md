@@ -1,7 +1,6 @@
 ---
 path: '/blog/2022/11/30/cilium-google-season-of-docs-2022'
 date: '2022-11-30T17:00:00.000Z'
-author: 'Bill Mulligan'
 title: 'Cilium Google Season of Docs Case Study'
 ogImage: GSoD.png
 ogSummary: 'Learn how Google Season of Docs went for Cilium'
@@ -10,6 +9,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 **Cilium Google Season of Docs Case Study: Reorganize Cilium Features and Getting Started**
 

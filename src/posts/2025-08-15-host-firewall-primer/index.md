@@ -1,7 +1,6 @@
 ---
 path: '/blog/2025/08/15/host-firewall-primer'
 date: '2025-08-15T10:00:00.000Z'
-author: 'Paul Arah'
 title: 'Securing the Node: A Primer on Cilium’s Host Firewall'
 isPopular: false
 isFeatured: false
@@ -14,6 +13,8 @@ tags:
   - Cilium
   - eBPF
 ---
+
+import authors from 'utils/author-data';
 
 ##### July 6th, 2025
 

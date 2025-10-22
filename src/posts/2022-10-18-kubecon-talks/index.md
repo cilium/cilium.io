@@ -1,7 +1,6 @@
 ---
 path: '/blog/2022/10/17/cilium-kubecon-na-talks'
 date: '2022-10-17T17:00:00.000Z'
-author: 'Bill Mulligan'
 title: 'Cilium Talks at KubeCon NA 2022'
 isFeatured: false
 ogImage: ciliumkubeconna.jpg
@@ -12,6 +11,8 @@ tags:
   - Cilium
   - KubeCon
 ---
+
+import authors from 'utils/author-data';
 
 ![Cilium Talks at KubeCon](ciliumkubeconna.jpg)
 

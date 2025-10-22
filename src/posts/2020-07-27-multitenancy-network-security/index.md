@@ -1,7 +1,6 @@
 ---
 path: '/blog/2020/07/27/2020-07-27-multitenancy-network-security'
 date: '2020-07-27T17:00:00.000Z'
-author: 'Jed Salazar and Joe Stringer'
 isPopular: false
 title: 'Multitenancy and Network Security in Kubernetes with Cilium'
 categories:
@@ -17,6 +16,8 @@ tags:
 ogImage: ogimage.png
 ogSummary: 'Cilium uses eBPF to secure multitenant Kubernetes clusters, providing identity-aware network isolation and Zero-Trust protections by design.'
 ---
+
+import authors from 'utils/author-data';
 
 ![Introduction](ogimage.png)
 

@@ -1,7 +1,6 @@
 ---
 path: '/blog/2023/01/25/hetzner-performance-testing'
 date: '2023-01-25T17:00:00.000Z'
-author: 'Pol Arroyo'
 title: 'Performance Testing Cilium Ingress at Hetzner Cloud'
 ogImage: architecture.png
 isPopular: true
@@ -12,6 +11,8 @@ categories:
 tags:
   - Cilium
 ---
+
+import authors from 'utils/author-data';
 
 _January 25th, 2023_  
 _Author: Pol Arroyo, DevOps Engineer @ Hetzner Cloud_
