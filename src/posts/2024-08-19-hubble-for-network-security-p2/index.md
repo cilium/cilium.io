@@ -220,3 +220,5 @@ As Federico, Principal Engineer at Meltwater notes:
 Hubble brings much-needed clarity to the complex world of Kubernetes networking. Providing deep, real-time visibility into network flows empowers operations teams to maintain robust, secure, and efficient Kubernetes environments.
 
 In the next post, we'll explore how Hubble's observability features can be leveraged for advanced security enforcement, taking your Kubernetes network security to the next level.
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

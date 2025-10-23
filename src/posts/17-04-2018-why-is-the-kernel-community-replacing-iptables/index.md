@@ -257,3 +257,5 @@ Interested in learning more about BPF or Cilium? Talk to us on
 [facebook]: https://www.netdevconf.org/2.1/slides/apr6/zhou-netdev-xdp-2017.pdf
 [netflix]: http://www.brendangregg.com/Slides/BSidesSF2017_BPF_security_monitoring.pdf
 [superpowers]: http://www.brendangregg.com/blog/2016-03-05/linux-bpf-superpowers.html
+
+<BlogAuthor {...authors.thomasGraf} />

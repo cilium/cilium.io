@@ -89,3 +89,5 @@ For the Tetragon Community:
 
 Paul Arah
 Community Builder – Security
+
+<BlogAuthor {...authors.PaulArah} />

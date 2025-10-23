@@ -88,3 +88,5 @@ eBPF was chosen for its unparalleled ability to observe and act on runtime event
 ## Next Steps
 
 Canopus is expanding its use of eBPF with Tetragon to develop a runtime threat detection system. This new system will: (a) Leverage behavioral evidence to detect anomalies and malicious activities; (b) Use AI agents to classify threats against the Kubernetes Threat Matrix; and (c) Enforce real-time policies (e.g., kill processes, block commands) directly in the kernel using Tetragon's enforcement features.
+
+<BlogAuthor {...authors.DoniaChaiehloudj} />

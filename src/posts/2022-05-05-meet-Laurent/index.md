@@ -67,3 +67,5 @@ Catch his two talks about Cilium at KubeCon EU 2022
 [Cilium: Welcome, Vision and Updates](https://sched.co/ytq0) Thursday May 19, 2022 15:25 - 16:00 CEST
 
 Follow him on Twitter [@lbernail](https://twitter.com/lbernail)
+
+<BlogAuthor {...authors.BillMulligan} />

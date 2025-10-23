@@ -53,3 +53,5 @@ _Figure 2. The same packet path from the pwru point of view_
 That’s the beautiful thing about pwru. Network flow debugging in Linux historically required you to know what you don't know. Because there is no end-to-end-what-happened-to-it facility, you have to know where the packet is getting lost to trace the right thing. pwru provides that end-to-end knowledge and lets you find the culprit even when you didn't know the culprit existed in the first place, which was the case here for me.
 
 pwru is an open source project under the Cilium organization. You can [download it from Github](https://github.com/cilium/pwru) and get started today. If you have any questions, make sure to drop into the #pwru channel on the [Cilium slack](https://slack.cilium.io).
+
+<BlogAuthor {...authors.BillMulligan} />

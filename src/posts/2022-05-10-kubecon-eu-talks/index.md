@@ -95,3 +95,5 @@ Friday May 20, 2022 16:00 - 16:35 CEST
 The Cilium project is adding Service Mesh features to its existing eBPF-enabled, identity-aware Kubernetes networking capabilities. This demo-driven talk explores how this works, and shows why it’s now possible to create a service mesh without sidecars. - Demonstrate why, before eBPF, the sidecar model was necessary for accessing an application pod’s network traffic - Explore how Cilium uses eBPF programs to connect Kubernetes endpoints - Show how this makes the sidecar model unnecessary for identity-aware connectivity - Demonstrate an example Cilium Service Mesh in use - Compare the resources used (in both userspace and the kernel) for both models Along the way, this talk will clarify some container and kernel concepts so that attendees can leave with a mental model of how eBPF-enabled service mesh really works.
 
 Make sure you stop by the Cilium booth to get your Cilium swag and if you are visiting virtually, we will have virtual office hours on Wednesday 18th May 12:30-13:15 CEST. See you there!
+
+<BlogAuthor {...authors.BillMulligan} />

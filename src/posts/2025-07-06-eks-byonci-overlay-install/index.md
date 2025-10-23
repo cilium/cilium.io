@@ -250,3 +250,5 @@ In this two-part series, we explored how to deploy Cilium on EKS using different
 - [AWS ENI - Cilium Docs](https://docs.cilium.io/en/latest/network/concepts/routing/#aws-eni-datapath)
 - [Routing - Cilium Docs](https://docs.cilium.io/en/latest/network/concepts/routing/#aws-eni-datapath)
 - [Helm Reference](https://docs.cilium.io/en/stable/helm-reference/)
+
+<BlogAuthor {...authors.PaulArah} />

@@ -63,3 +63,5 @@ In the future, they aim to harness the power of eBPF to offer advanced capabilit
 _“Cilium is the next generation for container networking. We can build so many things with it because of the potential it brings with eBPF._
 
 _Our customers get all the benefits from a scalability and performance perspective which is key for a platform to provide as they are setting up their cloud native applications for the next set of challenges.”_ - Principal Group Software Engineering Manager
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

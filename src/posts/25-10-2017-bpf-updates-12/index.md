@@ -296,3 +296,5 @@ A couple of new GitHub projects. Please star if you like the projects ;)
 - Edward Cree, [[PATCH net] bpf/verifier: reject `BPF_ALU64|BPF_END`](https://patchwork.ozlabs.org/patch/814279/)
 
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

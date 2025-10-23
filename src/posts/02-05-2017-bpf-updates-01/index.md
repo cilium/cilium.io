@@ -109,3 +109,5 @@ You can subscribe by sending a email to `majordomo@vger.kernel.org`, with a mess
   - [[net-next PATCH 2/2] samples/bpf: fix `XDP_FLAGS_SKB_MODE` detach for `xdp_tx_iptunnel`](https://www.mail-archive.com/netdev@vger.kernel.org/msg166372.html)
 
 Please note that netdev receives a lot of patches and the list above is not meant to be complete.
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

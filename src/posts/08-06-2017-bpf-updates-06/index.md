@@ -94,3 +94,5 @@ You can subscribe by sending a email to `majordomo@vger.kernel.org`, with a mess
   - [[RFC PATCH net-next 5/5] selftests/bpf: change test_verifier expectations](https://www.spinics.net/lists/kernel/msg2526950.html)
 
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

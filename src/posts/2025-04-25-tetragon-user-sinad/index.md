@@ -71,3 +71,5 @@ By integrating Tetragon into EzyKube, SINAD streamlined compliance efforts, whic
 SINAD plans to expand its use of Tetragon within EzyKube by introducing more user-friendly, easily accessible Kubernetes and cloud computing capabilities.
 
 _“Tetragon stands as a powerhouse within EzyKube, delivering real-time enforcement, deep observability, and streamlined security; Maximizing return on investment (ROI) while reducing operational complexity,”_ said the co-founder of SINAD, Arezki OUHENIA
+
+<BlogAuthor {...authors.PaulArah} />

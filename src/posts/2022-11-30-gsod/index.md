@@ -115,3 +115,5 @@ For future projects, we would recommend:
 ### **Acknowledgments**
 
 Our team would like to thank the whole Google Season of Docs team for running the program. We found it to be very smooth and a great experience overall. We hope to participate again in the future.
+
+<BlogAuthor {...authors.BillMulligan} />

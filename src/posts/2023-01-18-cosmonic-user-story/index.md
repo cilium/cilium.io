@@ -56,3 +56,5 @@ Cilium is also used for transparent encryption. “With WireGuard, all the inter
 As customer adoption grows on Cosmonic, Dan knows he will eventually have to deal with abuse and bad actors on the platform. He will need to identify them at a network level and tie that back to a particular account. Cilium (and Hubble once they start using it) gives them forensics insight on network flow logs at a particular moment in time: “without Cilium, we would have had to analyze VPC flow logs and figure out how to tie it back to an individual workload on a particular box, with zero insight.”
 
 The combination of wasmCloud, Nomad, and Cilium has enabled Cosmonic to build a scalable and secure PaaS for running portable business logic across any cloud. Cosmonic is now available in Developer Preview. If you are interested in learning more and to try it out, head out to [Cosmonic](https://cosmonic.com/). If you have any questions on Cilium, join the Slack channel [Slack](https://slack.cilium.io/).
+
+<BlogAuthor {...authors.BillMulligan} />

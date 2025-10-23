@@ -172,3 +172,5 @@ Interesting post on tracing experiences.
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
 
 Happy eBPF hacking! ;)
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

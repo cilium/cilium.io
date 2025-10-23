@@ -59,3 +59,5 @@ Once an ecosystem has a standard, it makes it massively easier to provide integr
 Cilium everywhere will also bring the power and functionality of eBPF everywhere. The ecosystem around Cilium can leverage this data and functionality to build better platforms to end users. And this is just the kick-off!
 
 ![Bill at the Cilium booth](booth.png)
+
+<BlogAuthor {...authors.BillMulligan} />

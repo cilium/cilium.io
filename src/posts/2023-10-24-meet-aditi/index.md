@@ -62,3 +62,5 @@ To summarize it all, the best way to get started is to deploy a cluster with Cil
 I love playing badminton and I'm always striving to improve my skills. I'm also an avid lover of nature, so I find great joy in hiking, which is both mentally stimulating and meditative. Nature photography is another passion of mine, and recently, I've taken up gardening as a hobby which has been a lot of fun.
 
 To engage with the Cilium community and contribute to the project, follow Aditi's lead: join our [Slack](https://slack.cilium.io), check out a [good first issue](https://github.com/cilium/cilium/issues?q=is%3Aopen+is%3Aissue+label%3Agood-first-issue) you can work on, and explore our [community page](https://cilium.io/get-involved/) for more information.
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

@@ -240,3 +240,5 @@ A new batch of random projects from Github. Check them out and Remember to give 
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
 
 Happy eBPF hacking! ;)
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

@@ -326,3 +326,5 @@ Please note that netdev and llvm-commits receive a lot of patches and the list b
 - Quentin Monnet, [[PATCH net-next] tools: bpftool: try to mount bpffs if required for pinning objects](https://patchwork.ozlabs.org/patch/830083/)
 - John Fastabend, [[net PATCH] bpf: devmap fix arithmetic overflow in bitmap_size calculation](https://patchwork.ozlabs.org/patch/828187/)
 - Alexei Starovoitov, [[PATCH v2 net-next] selftests/bpf: fix broken build of test_maps](https://patchwork.ozlabs.org/patch/829064/)
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

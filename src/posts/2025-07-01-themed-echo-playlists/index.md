@@ -216,3 +216,5 @@ playlists={[
 ---
 
 Happy watching and happy building with Cilium & eBPF! 🐝
+
+<BlogAuthor {...authors. HimalKumar} />

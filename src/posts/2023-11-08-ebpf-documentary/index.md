@@ -33,3 +33,5 @@ Join us in exploring the untold story of eBPF from its inception to its adoption
 You can watch the eBPF documentary [here](https://www.youtube.com/watch?v=Wb_vD3XZYOA)
 
 <YoutubeIframe embedId="Wb_vD3XZYOA?controls=0"/>
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

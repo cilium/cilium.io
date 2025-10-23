@@ -189,3 +189,5 @@ This talk shares the journey of making Cilium work for IPv6 only Kubernetes, hig
 **Cilium Project Booth:** Be sure to visit Cilium’s booth in the Project Pavilion to see live demos, explore new features, and connect with the community.
 
 Whether you are attending hands-on workshops, lightning talks, or networking with industry peers, you will find countless opportunities to interact with the Cilium community. Be sure to stop by with any questions or just say hello!
+
+<BlogAuthor {...authors.KatieMeinders} />

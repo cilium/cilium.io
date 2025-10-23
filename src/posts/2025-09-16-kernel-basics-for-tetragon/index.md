@@ -225,3 +225,5 @@ The investment in kernel knowledge pays dividends in the form of more effective,
 - [File Monitoring with eBPF and Tetragon](https://isovalent.com/blog/post/file-monitoring-with-ebpf-and-tetragon-part-1/)
 - [Tetragon Documentation](https://tetragon.io/docs/)
 - [The Linux Programming Interface](https://www.amazon.com/Linux-Programming-Interface-System-Handbook/dp/1593272200)
+
+<BlogAuthor {...authors.PaulArah} />

@@ -98,3 +98,5 @@ The Cilium BPF and XDP reference guide has a growing collection of links to BPF 
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
 
 Happy eBPF hacking!
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

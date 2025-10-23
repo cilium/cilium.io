@@ -75,3 +75,5 @@ It's also highly beneficial to use the GitHub label "first good issue" to discov
 During winter, I enjoy skiing and in summer I find pleasure in hiking. Aside from these activities, I have a fondness for traveling to warm destinations, especially during the winter, to escape the cold. I also recently rekindled an old passion of mine – flying model airplanes, specifically RC airplanes. I used to do this during high school but had to put it on hold when I entered university.
 
 To engage with the Cilium community and contribute to the project, follow Vlad's lead: join our [Slack](https://slack.cilium.io), check out a [good first issue](https://github.com/cilium/cilium/issues?q=is%3Aopen+is%3Aissue+label%3Agood-first-issue) you can work on, and explore our [community page](https://cilium.io/get-involved/) for more information.
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

@@ -85,3 +85,5 @@ If you're using (or are looking to use) Cilium for secure multitenancy, head ove
 
 - [https://unsplash.com/photos/0Yiy0XajJHQ](https://unsplash.com/photos/0Yiy0XajJHQ)
 - [https://unsplash.com/photos/M5tzZtFCOfs](https://unsplash.com/photos/M5tzZtFCOfs)
+
+<BlogAuthor {...authors.JedSalazarandMartynasPumputis} />
