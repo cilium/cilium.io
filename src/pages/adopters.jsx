@@ -285,6 +285,7 @@ const userCommunity1 = {
     nutanix,
     cloudera,
     openai,
+    cybozu,
   ],
 };
 
@@ -311,7 +312,6 @@ const userCommunity2 = {
     netways,
     sealos,
     sianalytics,
-    cybozu,
     plusserver,
     twilio,
     unitedcloud,
