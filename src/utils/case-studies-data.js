@@ -1372,6 +1372,13 @@ export default {
   cybozu: {
     iconName: 'cybozu',
     text: '<b>Cybozu</b> uses Cilium as a CNI in their on-prem Kubernetes clusters',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/cybozu/',
+        linkTarget: '_blank',
+      },
+    ],
   },
   twilio: {
     iconName: 'twilio',
