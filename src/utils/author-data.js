@@ -28,7 +28,7 @@ export default {
   },
   howardHao: {
     header: `Howard Hao`,
-    bio: ` Howard Hao have been working as a Site Reliability Engineer for five years at
+    bio: ` Howard Hao has been working as a Site Reliability Engineer for five years at
     Ect888.com since graduating from Shanghai Jiao Tong University. His team
     consists of 7 members and has been focusing on the construction of
     container orchestration platform like Kubernetes for one and a half years.`,
@@ -100,11 +100,11 @@ export default {
   ShedrackAkintayo: {
     header: `Shedrack Akintayo`,
     bio: `Shedrack Akintayo is a Community Manager at 
-    Isovalent Helping build the eBPF and Cilium open source community`,
+    Isovalent helping build the eBPF and Cilium open source communities`,
   },
   AmirKheirkhahan: {
     header: `Amir Kheirkhahan`,
-    bio: `Amir Kheirkhahan is a DevOps Specialist at DB Schenker handling Design, development,
+    bio: `Amir Kheirkhahan is a DevOps Specialist at DB Schenker handling design, development,
      deployment and maintenance of wide range of devops toolchain on top of Kubernetes clusters`,
   },
   PaulArah: {
@@ -118,14 +118,14 @@ export default {
   },
   DoniaChaiehloudj: {
     header: `Donia Chaiehloudj`,
-    bio: `Donia Chaiehloudj is a Senior Software Engineer at Isovalent,
+    bio: `Donia Chaiehloudj is a Senior Software Engineer at Isovalent.
     She has a background in computer science and has been working on
     eBPF and Linux kernel technologies, focusing on networking and security solutions.`,
   },
   KatieMeinders: {
     header: `Katie Meinders`,
     bio: `Katie Meinders is a Community Builder at Isovalent where 
-    She helps grow the Cilium and eBPF communities through storytelling, 
+    she helps grow the Cilium and eBPF communities through storytelling, 
     social media, showcasing user success, and building connections across the open source ecosystem.`,
   },
 };
