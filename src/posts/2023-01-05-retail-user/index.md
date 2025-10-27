@@ -5,21 +5,23 @@ title: 'Cilium User Story: Connecting 390+ Stores and 4.3 Billion Website Visito
 isPopular: true
 isFeatured: false
 ogImage: Retail_User_Story.png
-ogSummary: "Learn how a retail company used Cilium to connect their multi cloud environment"
+ogSummary: 'Learn how a retail company used Cilium to connect their multi cloud environment'
 categories:
   - Community
 tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 ![Cilium User Story: Connecting 390+ Stores and 4.3 Billion Website Visitors](Retail_User_Story.png)
 
-*January 05th, 2022*  
-*Author: Bill Mulligan, Isovalent*
+_January 05th, 2022_  
+_Author: Bill Mulligan, Isovalent_
 
-*This User Story comes from a company in the retail industry*
+_This User Story comes from a company in the retail industry_
 
-Retail experiences are increasingly moving online with consumers wanting to be able to buy when and where they want. For one retail company, that meant supporting 392 stores with 657 million visitors, 4.3  billion visits to their website, 23.9  million downloads of their app, and 3,000 co-workers in their Digital Organization. 
+Retail experiences are increasingly moving online with consumers wanting to be able to buy when and where they want. For one retail company, that meant supporting 392 stores with 657 million visitors, 4.3 billion visits to their website, 23.9 million downloads of their app, and 3,000 co-workers in their Digital Organization.
 
 They needed to modernize to meet the needs of the rapidly changing retail industry. A key part of that strategy was adopting a multi-cloud strategy, across an on-premises private cloud platform and multiple public cloud providers. While their digital presence is incrementally moving to the public cloud, an on-premises environment is still required for the foreseeable future. Their private cloud needed a developer experience similar to what would be offered in the public cloud to keep pace.
 
@@ -31,11 +33,11 @@ The Cloud Center of Excellence was tasked with building out a cloud native platf
 
 They selected Kubernetes as the foundation for their private cloud due to its API-first architecture and extensibility. Their private cloud architecture also follows public cloud principles such as region/availability zones, multi-tenancy, and a zero-trust approach to security. However, to meet these demands, they required an advanced cloud native networking platform to provide:
 
-* Multi-cluster connectivity and security across AZs
-* Integration with the existing network data center fabric and firewall
-* Support for non-Kubernetes workloads such as bare-metal
-* High level of observability
-* IPv6-readiness for future requirements
+- Multi-cluster connectivity and security across AZs
+- Integration with the existing network data center fabric and firewall
+- Support for non-Kubernetes workloads such as bare-metal
+- High level of observability
+- IPv6-readiness for future requirements
 
 ## Migrating from Calico to Cilium
 
@@ -52,3 +54,5 @@ With zero trust networking, it can be difficult for developers to understand why
 Besides just consuming open source, the retail company has committed patches and bug fixes to Cilium too. “The amount of help and guidance from opening our first issue to getting our commits merged has been amazing! The maintainers are so valuable to the community and make people feel very welcome” Senior Digital Technology Engineer.
 
 In the future, the retail company would love to run IPv6-only within their data centers, but they have a large legacy estate with limited IPv6 support. Cilium’s [new Nat46/64 feature](https://isovalent.com/blog/post/cilium-release-112/#nat46-nat64) will simplify their IPv6 roll-out. They also want to examine [Cilium sidecarless service mesh](https://isovalent.com/blog/post/cilium-service-mesh/) and are looking at [Tetragon](https://isovalent.com/blog/post/2022-05-16-tetragon/) in collaboration with their security team to improve the security posture across all of their environments.
+
+<BlogAuthor {...authors.BillMulligan} />

@@ -13,6 +13,8 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 _Author: Amir Kheirkhahan, DB Schenker_
 
 ![After removing calico resources](after-removing-calico-resources.png)
@@ -331,3 +333,5 @@ We now have all new nodes only with Cilium as the CNI. We removed Calico resourc
 ## Conclusion
 
 This blog post walked through how we migrated from Calico to Cilium using the new `CiliumNodeConfig` feature. Overall, we found the process to be smooth and are excited for the possibilities that switching to Cilium will unlock for our platform.
+
+<BlogAuthor {...authors.AmirKheirkhahan} />

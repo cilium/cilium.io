@@ -10,9 +10,9 @@ export default {
   },
   luanGuimaraes: {
     header: `Luan Guimarães`,
-    bio: `Hi, my name is Luan, I'm a Brazilian rock climber, amateur musician, and
+    bio: `Luan is a Brazilian rock climber, amateur musician, and
    programmer and am enthusiastic about free software communities and other
-   open knowledge initiatives. I’ve been working as a Site Reliability
+   open knowledge initiatives. He has been working as a Site Reliability
    Engineer at Wildlife Studios, using and building infrastructure tools on
    top of Kubernetes in order to support millions of users around the world.`,
   },
@@ -28,14 +28,17 @@ export default {
   },
   howardHao: {
     header: `Howard Hao`,
-    bio: ` Hi, I have been working as a Site Reliability Engineer for five years at
-    Ect888.com since graduating from Shanghai Jiao Tong University. Our team
+    bio: ` Howard Hao has been working as a Site Reliability Engineer for five years at
+    Ect888.com since graduating from Shanghai Jiao Tong University. His team
     consists of 7 members and has been focusing on the construction of
     container orchestration platform like Kubernetes for one and a half years.`,
   },
   sergeyGeneralov: {
     header: `Sergey Generalov`,
-    bio: `Sergey is a member of the technical staff at Isovalent and focuses on helping Cilium users solve challenges related to network policies, monitoring, and connectivity troubleshooting by building tools like Network Policy Editor, Hubble UI and more.`,
+    bio: `Sergey is a member of the technical staff at Isovalent 
+    and focuses on helping Cilium users solve challenges related 
+    to network policies, monitoring, and connectivity troubleshooting 
+    by building tools like Network Policy Editor, Hubble UI and more.`,
   },
   liWenquan: {
     header: `Li Wenquan`,
@@ -46,4 +49,84 @@ export default {
     promising. I've learned a lot from it, such as BPF, XDP and how to replace
     kube-proxy in a elegant way and I'd love to contribute to it.`,
   },
+  alexanderAlemayhu: {
+    header: `Alexander Alemayhu`,
+    bio: `Alexander Alemayhu is a software engineer at Isovalent, 
+    the company behind Cilium. He has been working on eBPF and Linux
+     kernel technologies for several years, focusing on networking and observability solutions.`,
+  },
+  DanielBorkmann: {
+    header: `Daniel Borkmann`,
+    bio: `Daniel Borkmann is a Distinguished Software Engineer, Isovalent at Cisco`
+  },
+  ThomasGraf: {
+    header: `Thomas Graf`,
+    bio: `Thomas Graf is the CTO & Co-Founder Isovalent and also the Vice President Security Cisco`,
+  },
+  JedSalazar: {
+    header: `Jed Salazar`,
+    bio: `Jed Salazar is a Senior Solutions Architect, Isovalent`,
+  },
+  JedSalazarandJoeStringer: {
+    header: `Jed Salazar and Joe Stringer`,
+    bio: `Jed Salazar is a Senior Solutions Architect at Isovalent 
+    and Joe Stringer is a Principal Engineer, Isovalent at Cisco`,
+  },
+  JosephIrving: {
+    header: `Joseph Irving`,
+    bio: `Joseph Irving is a Platform Engineer Lead at RVU (Uswitch)`,
+  },
+  BillMulligan: {
+    header: `Bill Mulligan`,
+    bio: `Bill Mulligan is a Cilium and eBPF Community Pollinator, 
+    Isovalent at Cisco and a Governing Board Member of the eBPF Foundation.`,
+  },
+  OndrejBlazek: {
+    header: `Ondrej Blazek`,
+    bio: `Ondrej Blazek is an Infrastructure Engineer at Seznam.cz`,
+  },
+  LeonardCohnenandMoritzEckert: {
+    header: `Leonard Cohnen and Moritz Eckert`,
+    bio: `Leonard Cohnen and Moritz Eckert are team members at Edgeless Systems`,
+  },
+  PolArroyo: {
+    header: `Pol Arroyo`,
+    bio: `Pol Arroyo is a DevOps Engineer at Hetzner Cloud.`
+  },
+  JedSalazarandMartynasPumputis: {
+    header: `Jed Salazar and Martynas Pumputis`,
+    bio: `Jed Salazar is a Senior Solutions Architect, Isovalent and Martynas Pumputis is a Principal Software Engineer, Isovalent at Cisco`,
+  },
+  ShedrackAkintayo: {
+    header: `Shedrack Akintayo`,
+    bio: `Shedrack Akintayo is a Community Manager at 
+    Isovalent helping build the eBPF and Cilium open source communities`,
+  },
+  AmirKheirkhahan: {
+    header: `Amir Kheirkhahan`,
+    bio: `Amir Kheirkhahan is a DevOps Specialist at DB Schenker handling design, development,
+     deployment and maintenance of wide range of devops toolchain on top of Kubernetes clusters`,
+  },
+  PaulArah: {
+    header: `Paul Arah`,
+    bio: `Paul Arah is a Community Builder focused on Security at Isovalent (Cisco)`,
+  },
+  HimalKumar: {
+    header: `Himal Kumar, Bhaskar Dutta, Arman Pashamokhtari`,
+    bio: `Himal Kumar, Bhaskar Dutta, Arman Pashamokhtari are all part of the
+     CanopusAI team Real Time Network Observability, powered by eBPF and Agentic AI`,
+  },
+  DoniaChaiehloudj: {
+    header: `Donia Chaiehloudj`,
+    bio: `Donia Chaiehloudj is a Senior Software Engineer at Isovalent.
+    She has a background in computer science and has been working on
+    eBPF and Linux kernel technologies, focusing on networking and security solutions.`,
+  },
+  KatieMeinders: {
+    header: `Katie Meinders`,
+    bio: `Katie Meinders is a Community Builder at Isovalent where 
+    she helps grow the Cilium and eBPF communities through storytelling, 
+    social media, showcasing user success, and building connections across the open source ecosystem.`,
+  },
 };
+

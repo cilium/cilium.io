@@ -11,11 +11,13 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 **_Author: Katie Meinders, Isovalent_**
 
 ![](kubeconcover.png)
 
-The Cilium community is buzzing to reunite again this November in Atlanta for [KubeCon + CloudNativeCon and CiliumCon North America 2025](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/?utm_source=celium&utm_medium=homepage&utm_campaign=10608228-KubeCon-NA-2025&utm_content=hero). Learn where to find Cilium during the show, which talks to attend, and how to engage with end users, core contributors, and industry leaders. 
+The Cilium community is buzzing to reunite again this November in Atlanta for [KubeCon + CloudNativeCon and CiliumCon North America 2025](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/register/?utm_source=celium&utm_medium=homepage&utm_campaign=10608228-KubeCon-NA-2025&utm_content=hero). Learn where to find Cilium during the show, which talks to attend, and how to engage with end users, core contributors, and industry leaders.
 
 ## A look back at KubeCon + CloudNativeCon and CiliumCon Europe in London
 
@@ -23,7 +25,7 @@ Earlier this year, the community gathered in London during KubeCon + CloudNative
 
 ![](ciliumcon.jpg)
 
-KubeCon keynote attendees also heard the latest Cilium updates from Liz Rice from reporting live at London landmarks. 
+KubeCon keynote attendees also heard the latest Cilium updates from Liz Rice from reporting live at London landmarks.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/thCrfsVJz4g?si=4a6jFCWO0Vs3HmKn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -31,7 +33,7 @@ Contributors also gathered during the [Cilium Developer Summit](https://github.c
 
 ![](dev-summit-25-eu.jpg)
 
-During the Maintainers track, the community came together to celebrate nearly a decade of Cilium, to hear the latest updates to CIlium, Hubble, and Tetragon, and hear how DBSchenker is using Cilium for networking and observability and why Cilium provides the core networking features in the GKE dataplane. 
+During the Maintainers track, the community came together to celebrate nearly a decade of Cilium, to hear the latest updates to CIlium, Hubble, and Tetragon, and hear how DBSchenker is using Cilium for networking and observability and why Cilium provides the core networking features in the GKE dataplane.
 
 From co-los to demos and lightning and maintainer talks, we will continue the celebration of 10 years of Cilium in Atlanta!
 
@@ -164,7 +166,7 @@ Expect kernel spelunking, performance graphs, and a vision for adding a fast lan
 
 [Community Capital: Making OSS and Businesses Successful Together - Liz Rice, Isovalent at Cisco](https://kccncna2025.sched.com/event/27FaR/community-capital-making-oss-and-businesses-successful-together-liz-rice-isovalent-at-cisco?iframe=yes&w=100%&sidebar=yes&bg=no)
 
-Wednesday, November 12, 3:00 - 3:30 PM 
+Wednesday, November 12, 3:00 - 3:30 PM
 
 Just as open source success is about more than great code, building a successful business on OSS relies on more than pricing. This talk explores how ecosystems thrive when maintainers, vendors, and users build on shared values and trust. We'll unpack why timing matters when open sourcing a project or contributing it to a foundation, how vendors can grow real businesses by adding value around open source rather than trying to control it, and why vendor success matters to the projects themselves.
 
@@ -184,7 +186,8 @@ Cilium has been the standard for Kubernetes networking and security. TikTok migr
 
 This talk shares the journey of making Cilium work for IPv6 only Kubernetes, highlighting the limitations and techniques to overcome them. First, Cilium doesn't support tunneling over IPv6, native routing mode must be configured. Second, we encountered several bugs related to IPv6 only: NDP traffic getting dropped by Cilium Network Policy due to incorrect identification; DNS policy not allowing traffic for IPv6 DNS servers; broken cilium debug tools when IPv4 related BPF maps not found. Finally, the NodePort timeout issue was blocking us from enabling Cilium to fully replace kube-proxy.
 
-
 **Cilium Project Booth:** Be sure to visit Cilium’s booth in the Project Pavilion to see live demos, explore new features, and connect with the community.
 
 Whether you are attending hands-on workshops, lightning talks, or networking with industry peers, you will find countless opportunities to interact with the Cilium community. Be sure to stop by with any questions or just say hello!
+
+<BlogAuthor {...authors.KatieMeinders} />

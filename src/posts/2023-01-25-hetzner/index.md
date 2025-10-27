@@ -12,6 +12,8 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 _January 25th, 2023_  
 _Author: Pol Arroyo, DevOps Engineer @ Hetzner Cloud_
 

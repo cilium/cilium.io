@@ -11,6 +11,8 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 ![](cover.png)
 
 _Author: Shedrack Akintayo, Isovalent_
@@ -121,3 +123,5 @@ In G DATA's infrastructure, where visibility and control are paramount, Hubble h
 Cilium and Hubble represent a significant leap forward in Kubernetes network security and observability. By providing deep, context-aware visibility and high-performance security enforcement, they address many of the challenges faced in securing modern, dynamic Kubernetes environments.
 
 In the next part of this series, we'll explore how to utilize Hubble for comprehensive network observability. We will dive into its features and show you how to extract valuable insights from your Kubernetes network traffic.
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

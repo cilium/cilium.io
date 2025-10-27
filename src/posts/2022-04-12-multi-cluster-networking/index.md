@@ -14,6 +14,8 @@ tags:
   - Load balance
 ---
 
+import authors from 'utils/author-data';
+
 ![USwitch logo](uswitchheader.svg)
 
 _April 12, 2022_  
@@ -115,3 +117,5 @@ We even extended this to go across clouds by setting up a VPN between Google Clo
 Cilium proved to be a great option for us, giving us the functionality we wanted without all the complication that the more traditional service meshes typically imposed on a user. However, it wasn’t completely without its drawbacks. The lack of a dedicated proxy in Cilium meant that apps had to implement things like retries and load-balancing when talking to other services (something our old setup or going through Envoy did for them). Another thing to be aware of is that Cilium differs from more traditional IPTables based implementations, so it is a good idea to familiarise yourself with how Cilium operates and how it uses eBPF maps. The Cilium community was always very helpful if we did ever find any bugs though, so rest assured someone will help you!
 
 It’s also worth noting that Cilium have now started the beta of their Cilium based service mesh which promises to add some more service-meshy features like retries and canary deployments, but with the same transparent sidecar-less approach that vanilla Cilium provides. We’ll be watching this one closely!
+
+<BlogAuthor {...authors.JosephIrving} />

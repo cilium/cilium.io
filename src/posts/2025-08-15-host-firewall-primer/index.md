@@ -14,6 +14,8 @@ tags:
   - eBPF
 ---
 
+import authors from 'utils/author-data';
+
 ##### July 6th, 2025
 
 ##### Author: Paul Arah, Isovalent@Cisco
@@ -199,3 +201,5 @@ Cilium Host Firewall brings Kubernetes-native, eBPF-powered network security to 
 - [eCHO Episode 40: Cilium Host Firewall](https://www.youtube.com/watch?v=GLLLcz398K0&t=288s)
 - [eCHO Episode 184: Securing Kubernetes Nodes with Cilium Host Firewall](https://www.youtube.com/watch?v=fLYHG07VdNc)
 - [Kubernetes Node Firewalling from the Inside Out - Jef Spaleta & Justin Garrison](https://www.youtube.com/watch?v=-3Fbb3BNjjE)
+
+<BlogAuthor {...authors.PaulArah} />

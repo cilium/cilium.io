@@ -13,6 +13,8 @@ tags:
 ogSummary: 'BPF and XDP development updates: BPF ID patches merged, perf events support added, XDP tutorials released, and verifier improvements for Linux kernel networking.'
 ---
 
+import authors from 'utils/author-data';
+
 This is issue 06 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 
 ---
@@ -92,3 +94,5 @@ You can subscribe by sending a email to `majordomo@vger.kernel.org`, with a mess
   - [[RFC PATCH net-next 5/5] selftests/bpf: change test_verifier expectations](https://www.spinics.net/lists/kernel/msg2526950.html)
 
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

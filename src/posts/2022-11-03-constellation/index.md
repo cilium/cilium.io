@@ -11,6 +11,8 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 ![Header Image](header-img.png)
 
 _July 20th, 2023_
@@ -143,3 +145,5 @@ Let us know if you found our deep dive insightful and if you want to learn more 
 
 Thanks to [@benschlueter](https://github.com/benschlueter) for the joint work. Thanks to [@pchaigno](https://github.com/pchaigno), [@brb](https://github.com/brb), and [@gandro](https://github.com/gandro) from Cilium for the helpful hints and discussions.
 Thanks to [@xmulligan](https://github.com/xmulligan) for reviewing and helping with the blog post.
+
+<BlogAuthor {...authors.LeonardCohnenandMoritzEckert} />

@@ -9,6 +9,8 @@ tags:
 ogSummary: 'Issue 12 of the BPF newsletter by Alexander Alemayhu, covering recent developments, presentations, videos, and updates on BPF and XDP.'
 ---
 
+import authors from 'utils/author-data';
+
 This is issue 12 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 
 ---
@@ -294,3 +296,5 @@ A couple of new GitHub projects. Please star if you like the projects ;)
 - Edward Cree, [[PATCH net] bpf/verifier: reject `BPF_ALU64|BPF_END`](https://patchwork.ozlabs.org/patch/814279/)
 
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

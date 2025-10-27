@@ -5,7 +5,7 @@ title: 'Cilium at KubeCon NA 2022 Wrap Up'
 isPopular: true
 isFeatured: false
 ogImage: kubecon_stage.webp
-ogSummary: "Find out the buzz from around the community at KubeCon"
+ogSummary: 'Find out the buzz from around the community at KubeCon'
 categories:
   - Community
 tags:
@@ -13,15 +13,16 @@ tags:
   - KubeCon
 ---
 
-*November 4th, 2022*  
-*Author: Bill Mulligan, Isovalent*
+import authors from 'utils/author-data';
+
+_November 4th, 2022_  
+_Author: Bill Mulligan, Isovalent_
 
 KubeCon + CloudNativeCon NA 2022 was a buzz with activity around Cilium. In this post, I will try to sum up all the big annoucements and moments so the people that weren't able to attend in person can feel like they were there too.
 
-
 ### Announcement Microsoft AKS picking Cilium
 
-Cilium is now the default CNI for all major cloud providers. If it wasn't obvious already, Cilium has become the standard networking layer for Kubernetes everywhere. Here's the [announcement](https://azure.microsoft.com/en-us/updates/public-preview-azure-cni-powered-by-cilium/) from Microsoft, [blog](https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-cni-powered-by-cilium-for-azure-kubernetes-service-aks/ba-p/3662341), and [docs](https://learn.microsoft.com/en-us/azure/aks/azure-cni-powered-by-cilium). There's also a blog from Isovalent about it [here](https://isovalent.com/blog/post/azure-cni-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog). 
+Cilium is now the default CNI for all major cloud providers. If it wasn't obvious already, Cilium has become the standard networking layer for Kubernetes everywhere. Here's the [announcement](https://azure.microsoft.com/en-us/updates/public-preview-azure-cni-powered-by-cilium/) from Microsoft, [blog](https://techcommunity.microsoft.com/t5/azure-networking-blog/azure-cni-powered-by-cilium-for-azure-kubernetes-service-aks/ba-p/3662341), and [docs](https://learn.microsoft.com/en-us/azure/aks/azure-cni-powered-by-cilium). There's also a blog from Isovalent about it [here](https://isovalent.com/blog/post/azure-cni-cilium/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-blog).
 
 ![AKS + Cilium logos](azure_cni_ogimage2.webp)
 
@@ -53,8 +54,10 @@ Cilium hosted its first project meeting at KubeCon. I wasn't quite sure what to 
 
 Looking back on the show, I think we will see this KubeCon as the kick-off of the ecosystem around Cilium. With the Microsoft announcement, Cilium has cemented its status as the standard way of doing networking in cloud native environments.
 
-Once an ecosystem has a standard, it makes it massively easier to provide integrations and extensions since everyone is using the same thing. We can already see this with the Grafana announcement too. With Cilium everywhere capturing observability data with eBPF, it makes total sense to connect it to Grafana and visualize the data. 
+Once an ecosystem has a standard, it makes it massively easier to provide integrations and extensions since everyone is using the same thing. We can already see this with the Grafana announcement too. With Cilium everywhere capturing observability data with eBPF, it makes total sense to connect it to Grafana and visualize the data.
 
 Cilium everywhere will also bring the power and functionality of eBPF everywhere. The ecosystem around Cilium can leverage this data and functionality to build better platforms to end users. And this is just the kick-off!
 
 ![Bill at the Cilium booth](booth.png)
+
+<BlogAuthor {...authors.BillMulligan} />

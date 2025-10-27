@@ -11,6 +11,8 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 ![](cover.png)
 
 _Author: Shedrack Akintayo, Isovalent_
@@ -96,3 +98,5 @@ Through the lens of real-world implementations at Bloomberg, Meltwater, and Tren
 If you want to learn more about Cilium read through [Cilium’s documentation](https://docs.cilium.io/en/stable/), engage with hands-on [Cilium labs](https://cilium.io/labs/), or follow the [getting-started guides](https://cilium.io/get-started/) to learn more about its capabilities. For those keen on engaging in discussions or staying updated with the latest information, joining [Cilium’s Slack community](https://slack.cilium.io) is a way to add to the conversation.
 
 If you're geared towards contributing to Cilium, the project is [open to your contributions](https://github.com/cilium/cilium/issues?q=is%3Aopen+is%3Aissue+label%3Agood-first-issue). Every code commitment, documentation enhancement, or community interaction nudges Cilium closer to addressing the dynamic challenges in the cloud native networking observability, and security platforms.
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

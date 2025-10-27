@@ -11,6 +11,8 @@ tags:
 ogSummary: 'BPF Updates 11: Linux 4.13 released with BPF improvements. New perf helpers, LLVM assembly support, and LRU optimizations headline this weeks updates.'
 ---
 
+import authors from 'utils/author-data';
+
 This is issue 11 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 
 ---
@@ -170,3 +172,5 @@ Interesting post on tracing experiences.
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
 
 Happy eBPF hacking! ;)
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

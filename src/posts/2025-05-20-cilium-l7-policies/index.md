@@ -12,6 +12,8 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 ![](cover.png)
 
 _May 20th, 2025_
@@ -167,3 +169,5 @@ If you have questions or feedback, reach out via the network policy channel in t
 - [Securing gRPC - Cilium docs](https://docs.cilium.io/en/stable/security/grpc/)
 - [eCHO Episode 180: Enforcing Kafka-aware Security Policies with Cilium](https://www.youtube.com/watch?v=IIeUIcwwhmE)
 - [Cloud Native Live: Using Cilium to enforce gRPC-aware security policies](https://www.youtube.com/watch?v=00b1KN3141k&t=1s)
+
+<BlogAuthor {...authors.PaulArah} />

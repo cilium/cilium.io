@@ -12,6 +12,8 @@ tags:
   - KubeCon
 ---
 
+import authors from 'utils/author-data';
+
 ![Cilium Talks at KubeCon](cover.png)
 
 _October 30th, 2023_
@@ -190,3 +192,5 @@ Make sure you stop by the Cilium booth to get your Cilium swag and as you naviga
 **Thursday, November 9 • 2:55 pm - 3:30pm**
 
 Setting up clusters with thousands of nodes can be challenging especially when running sophisticated networking like Cilium, which is required when serving internet-scale applications. In this session, you will learn best practices around scaling Cilium and Kubernetes from tech leads from Google Cloud (which allows 15,000 node clusters) and Isovalent (which scales Cilium Cluster Mesh-based clusters up to 256 clusters/100k nodes). It will compare two perspectives - a large single-cluster as well as an alternative - managing multiple smaller clusters and how these decisions impact performance/scalability/reliability. You’ll be able to hear from practitioners in the space how to configure your clusters, what metrics to monitor, and how to improve the reliability of your production environment. If you want to understand how networking features impact the Kubernetes control plane, how to minimize the blast radius of outages, and learn about large-scale incidents, this session is for you!
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

@@ -11,6 +11,8 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 ![Cilium Talks at KubeCon](kubeconNA.png)
 
 #### _October 4th, 2024_
@@ -175,3 +177,5 @@ Containers in Kubernetes share a common Linux kernel so how can we limit access 
 Friday, November 15, 2024 2:55 pm - 3:30 pm MST
 
 Cilium defaults to using Kubernetes Custom Resources to hold Cilium specific internal state, however when the cluster is large enough, the Kubernetes API becomes a bottleneck on performance. To scale a cluster to hundreds of nodes, Cilium can be configured to use a dedicated external etcd instance. This talk will discuss the details of what the external etcd looks like from an operator perspective, and explore why Cilium uses an external etcd for enhanced scalability. It will cover how to manage a cluster by bypassing the Kubernetes API and interacting only with the cluster's etcd key-value store - and also why it might be a bad idea. Get a taste of what's possible by bypassing the Kubernetes API and interacting with the etcd API directly, and learn why Cilium has an option to use a dedicated etcd deployment, not shared by the Kubernetes API, for holding Cilium state and the scalability benefits it can bring to your cluster.
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

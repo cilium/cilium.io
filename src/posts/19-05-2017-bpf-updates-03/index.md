@@ -11,6 +11,8 @@ tags:
 ogSummary: 'This issue of the BPF Updates newsletter covers kernel 4.12-rc1 changes, ARM 32-bit JIT progress, alignment tracking in the verifier, and useful learning resources on eBPF, ELF loaders, and XDP.'
 ---
 
+import authors from 'utils/author-data';
+
 This is issue 03 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 
 ---
@@ -95,3 +97,5 @@ You can subscribe by sending a email to `majordomo@vger.kernel.org`, with a mess
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
 
 Happy eBPF hacking!
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

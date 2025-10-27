@@ -12,6 +12,8 @@ tags:
   - Tetragon
 ---
 
+import authors from 'utils/author-data';
+
 ![](cover.png)
 
 _April 15th, 2025_
@@ -80,3 +82,5 @@ The team plans to expand their usage of Tetragon to include various use cases su
 Enforcement capabilities, though not yet fully implemented, are also a promising feature for the company. _“Tetragon allows us to block activities at runtime, which becomes crucial when managing a large number of violations. The SOC team cannot manually intervene with each developer, saying, ‘Hey, this is something you should not be doing.’ Tetragon allows us to automate the shift left to the first deployment, which is very helpful because once things are deployed in production, reversing them is challenging,”_ the security engineer noted
 
 Tetragon has revolutionized the company’s approach to security observability, transforming a once-frustrating process into an efficient, proactive system. By providing detailed visibility without compromising performance, Tetragon empowers the company to secure its rapidly growing Kubernetes infrastructure. The security engineer summarized, _“Tetragon has become the baseline of our security observability strategy.”_
+
+<BlogAuthor {...authors.PaulArah} />

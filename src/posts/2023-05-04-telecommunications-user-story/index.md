@@ -19,6 +19,8 @@ tags:
   - Telecommunications
 ---
 
+import authors from 'utils/author-data';
+
 ![](User-story-telecommunications.png)
 
 _May 4th, 2023_
@@ -65,3 +67,5 @@ Cilium was a crucial component in the platform team’s ability to deliver the r
 
 _“Cilium, and specifically its FQDN rule features, also enabled us to adhere to our platform principles of developer empowerment while also ensuring our business stakeholders were satisfied with the security stance of the platform as a whole.
 We would like our experience in this area to serve as encouragement and an example to teams seeking to integrate best-in-class OSS tools from the Kubernetes ecosystem with their own organization-specific requirements.”_ - A member of their Infrastructure team.
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

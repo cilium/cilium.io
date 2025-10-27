@@ -11,8 +11,10 @@ tags:
   - Cilium
 ---
 
-*February 8th, 2023*  
-*Authors: Martynas Pumputis and Bill Mulligan, Isovalent*
+import authors from 'utils/author-data';
+
+_February 8th, 2023_  
+_Authors: Martynas Pumputis and Bill Mulligan, Isovalent_
 
 _This story comes from an open source pwru user_
 
@@ -34,11 +36,11 @@ _Figure 1. Packet path on the affected system_
 
 Once I discovered [pwru](https://github.com/cilium/pwru), I just started it up with a filter to match the packets I was losing and got traces of a flow that worked and one that didn't. With that in hand, it was pretty easy to just diff what happened in the cases that worked versus the ones that did not.
 
-It turned out the problem was that IP Masquerade in Linux dynamically chooses the source address to use based on the route the packet is going out. I would have thought IP Masquerade would apply an IPv4 address from the route being used. It does not. 
+It turned out the problem was that IP Masquerade in Linux dynamically chooses the source address to use based on the route the packet is going out. I would have thought IP Masquerade would apply an IPv4 address from the route being used. It does not.
 
-IP Masquerade only looked for an address on the physical interface the packet was leaving on.   If there is no IPv4 address attached to the next-hop interface, it just picks an IPv4 address at random from the other interfaces that do have an IPv4 address (?!?). In this case, the source address on the next hop route was attached to a dummy interface.
+IP Masquerade only looked for an address on the physical interface the packet was leaving on. If there is no IPv4 address attached to the next-hop interface, it just picks an IPv4 address at random from the other interfaces that do have an IPv4 address (?!?). In this case, the source address on the next hop route was attached to a dummy interface.
 
-If IP Masquerade unwittingly picked the right interface to borrow an address from, everything worked.  However, if it picked a different one, then it would send the packet with a source address that was on a different interface and the Linux AppArmor and/or reverse path filter code would silently intercept and drop the packet.
+If IP Masquerade unwittingly picked the right interface to borrow an address from, everything worked. However, if it picked a different one, then it would send the packet with a source address that was on a different interface and the Linux AppArmor and/or reverse path filter code would silently intercept and drop the packet.
 
 To make this more nefarious, when packets are dropped in this way iptables says nothing about it. You can see with the trace that the masquerade rule was applied and then nothing when it is dropped because the following stages never happen. It is just gone. I didn't know there was more code in that path that could decide to drop packets outside of iptables.
 
@@ -51,3 +53,5 @@ _Figure 2. The same packet path from the pwru point of view_
 That’s the beautiful thing about pwru. Network flow debugging in Linux historically required you to know what you don't know. Because there is no end-to-end-what-happened-to-it facility, you have to know where the packet is getting lost to trace the right thing. pwru provides that end-to-end knowledge and lets you find the culprit even when you didn't know the culprit existed in the first place, which was the case here for me.
 
 pwru is an open source project under the Cilium organization. You can [download it from Github](https://github.com/cilium/pwru) and get started today. If you have any questions, make sure to drop into the #pwru channel on the [Cilium slack](https://slack.cilium.io).
+
+<BlogAuthor {...authors.BillMulligan} />

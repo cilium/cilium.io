@@ -12,6 +12,8 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 ![Cilium User Story - Securing 100,000+ RPS in a Multi-Tenant Environment](Publishing-user.png)
 
 _October 13th, 2022_  
@@ -44,3 +46,5 @@ Cilium has already become the one solution that fits multiple problems from netw
 From a security and compliance perspective, they are looking at egress filtering and Tetragon for defense in depth. It would allow them to understand which processes are doing what and drop suspicious traffic. As their platform grows to multiple clusters, they are also looking at Cluster Mesh to enable communication across regions and clouds.
 
 “I’m excited to use Cilium because we have a great solution in place for our current needs and flexibility to meet our future needs. Cilium is backed by the Community, backed by enterprises, backed by the cloud providers, and is the top choice for Kubernetes networking.” - Staff Software Engineer
+
+<BlogAuthor {...authors.BillMulligan} />

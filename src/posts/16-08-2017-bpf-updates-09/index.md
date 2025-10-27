@@ -9,6 +9,8 @@ tags:
 ogSummary: 'This is issue 09 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.'
 ---
 
+import authors from 'utils/author-data';
+
 This is issue 09 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 
 ---
@@ -238,3 +240,5 @@ A new batch of random projects from Github. Check them out and Remember to give 
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
 
 Happy eBPF hacking! ;)
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

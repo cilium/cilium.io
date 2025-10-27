@@ -11,6 +11,8 @@ tags:
 ogSummary: 'Issue 10 of the BPF newsletter by Alexander Alemayhu, covering updates, presentations, videos, and ongoing developments around BPF and XDP.'
 ---
 
+import authors from 'utils/author-data';
+
 This is issue 10 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 
 ---
@@ -203,3 +205,5 @@ While grav itself is not strictly BPF related, the tools in the repository utili
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
 
 Happy eBPF hacking! ;)
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

@@ -17,8 +17,6 @@ ogImage: ogimage.png
 ogSummary: '现代数据中心的应用系统已经逐渐转向基于微服务架构的开发体系，一个微服务架构的应用系统是由多个小的独立的服务组成，它们之间通过轻量通信协议如 HTTP、gRPC、Kafka 等进行通信。微服务架构下的服务天然具有动态变化的特点，结合容器化部署，时常会引起大规模的容器实例启动或重启。要确保这种向高度动态化的微服务应用之间的安全可达，既是挑战，也是机遇。'
 ---
 
-import authors from 'utils/author-data';
-
 <BlogAuthor theme="secondary" header="Guest Blog Post:" bio={`This is a guest blog by a Cilium user based on the <a href="https://davidlovezoe.club/wordpress/archives/851">the original blog post</a>. If you would like to publish a blog post as well, contact us on Slack.`} />
 <BlogAuthor {...authors.liWenquan} />
 

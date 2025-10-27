@@ -11,6 +11,8 @@ tags:
   - Tetragon
 ---
 
+import authors from 'utils/author-data';
+
 **_Author: Paul Arah, Isovalent_**
 
 ![](cover.png)
@@ -87,3 +89,5 @@ For the Tetragon Community:
 
 Paul Arah
 Community Builder – Security
+
+<BlogAuthor {...authors.PaulArah} />

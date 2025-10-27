@@ -13,6 +13,8 @@ tags:
 ogSummary: 'Summary of ongoing BPF and XDP development, presentations, and patches for Linux kernel v4.15.'
 ---
 
+import authors from 'utils/author-data';
+
 This is issue 13 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 
 ---
@@ -324,3 +326,5 @@ Please note that netdev and llvm-commits receive a lot of patches and the list b
 - Quentin Monnet, [[PATCH net-next] tools: bpftool: try to mount bpffs if required for pinning objects](https://patchwork.ozlabs.org/patch/830083/)
 - John Fastabend, [[net PATCH] bpf: devmap fix arithmetic overflow in bitmap_size calculation](https://patchwork.ozlabs.org/patch/828187/)
 - Alexei Starovoitov, [[PATCH v2 net-next] selftests/bpf: fix broken build of test_maps](https://patchwork.ozlabs.org/patch/829064/)
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

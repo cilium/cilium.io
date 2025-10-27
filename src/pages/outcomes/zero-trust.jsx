@@ -267,7 +267,8 @@ export default ZeroTrustNetworkingPage;
 export const Head = ({ location: { pathname } }) => {
   const pageMetadata = {
     title: heroContent.heading,
-    description: 'How Cilium scales Zero Trust Networking',
+    description:
+      'Implement Zero Trust Networking with Cilium. Identity-aware policies, Layer 7 security, and eBPF-powered enforcement from kernel to API in Kubernetes.',
     slug: pathname,
   };
   return <SEO data={pageMetadata} />;

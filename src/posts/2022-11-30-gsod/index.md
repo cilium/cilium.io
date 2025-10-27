@@ -3,16 +3,18 @@ path: '/blog/2022/11/30/cilium-google-season-of-docs-2022'
 date: '2022-11-30T17:00:00.000Z'
 title: 'Cilium Google Season of Docs Case Study'
 ogImage: GSoD.png
-ogSummary: "Learn how Google Season of Docs went for Cilium"
+ogSummary: 'Learn how Google Season of Docs went for Cilium'
 categories:
   - Community
 tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 **Cilium Google Season of Docs Case Study: Reorganize Cilium Features and Getting Started**
 
-*Authors: _Bill Mulligan_*
+_Authors: Bill Mulligan_
 
 Organization Description: Cilium (current version 1.12, first released in 2017) is an Apache 2.0-licensed project for providing, securing, and observing network connectivity between container workloads - cloud native, and built around the revolutionary Linux Kernel technology eBPF. Our users adopt Cilium to solve their cloud networking, observability, and security issues at scale including running some of the largest Kubernetes clusters in the world. Cilium has a large community of contributors from over 50 countries around the world. Multiple companies have staff paid to work on Cilium too. Cilium is an incubating project in the Cloud Native Computing Foundation and is the networking data plane for Google Kubernetes Engine and Anthos.
 
@@ -40,11 +42,11 @@ After our interviews, we really liked two of the applicants and were having a ha
 
 The core team working on this project was:
 
-* Liz Rice (Cilium)
-* Quentin Monnet (Cilium)
-* Bill Mulligan (Cilium)
-* Yoyo Wu (Technical Writer)
-* Divine Odazie (Developer Relations)
+- Liz Rice (Cilium)
+- Quentin Monnet (Cilium)
+- Bill Mulligan (Cilium)
+- Yoyo Wu (Technical Writer)
+- Divine Odazie (Developer Relations)
 
 To find our technical writer, we created a Google Form to apply and promoted it on Twitter, the Cilium Slack, and our newsletter. We had 26 applications and ended up interviewing 5 people. Of the people interviewed, we really liked Yoyo Wu’s previous experience restructuring documentation with Google Season of Docs and Divine’s excitement for Cilium (he even made some PRs leading up to the application).
 
@@ -68,10 +70,10 @@ We were happy with our estimation of the amount of time it would take and were s
 
 Across the project, we were able to merge [14 pull requests](https://github.com/cilium/cilium/pulls?q=is%3Apr+is%3Aclosed+label%3Agsod-22). These included:
 
-* Restructuring each section of our documentation
-* Adding relevant video content to our docs
-* Updating our navigation bar and fixing formatting issues
-* Retiring old documentation
+- Restructuring each section of our documentation
+- Adding relevant video content to our docs
+- Updating our navigation bar and fixing formatting issues
+- Retiring old documentation
 
 In addition, Divine was able to make his first contribution to the Kubernetes project and Yoyo has continued to contribute to the Cilium documentation!
 
@@ -79,9 +81,9 @@ In addition, Divine was able to make his first contribution to the Kubernetes pr
 
 In our proposal, we proposed three metrics:
 
-* The number of Slack questions covered in the documentation decreasing
-* The number of Github issues covered in the documentation decreasing
-* The number of pull requests from new contributors increasing
+- The number of Slack questions covered in the documentation decreasing
+- The number of Github issues covered in the documentation decreasing
+- The number of pull requests from new contributors increasing
 
 Because of the metrics we chose, it wasn’t easy to capture the data and it was difficult to determine the trends exactly. The number of PRs from new contributors increased over the whole project and anecdotally the number of slack questions and Github issues also decreased. We also found that maintainers of the project were more happy with the documentation structure too.
 
@@ -105,11 +107,13 @@ We really liked the opportunity to work with both of our technical writers and w
 
 For future projects, we would recommend:
 
-* Don’t be afraid to split your project between technical writers if they can each bring something different to the project. Be sure to talk with them to make sure they are ok with it, but if they all agree, it can be fun to bring multiple perspectives to the work
-* Find a good process to track your work from the beginning and make sure you have clear end goals. What starts out simple can quickly grow and be harder to piece back together. Know where everything is and where it ends.
-* Meet regularly with your technical writer and welcome them to the community! It's fun to have new people in the community and they bring a fresh set of eyes.
-* Go ahead and apply for Google Season of Docs! We weren’t sure if we had the time to do the project, but it has been a great experience overall and we hope to do it again in the future.
+- Don’t be afraid to split your project between technical writers if they can each bring something different to the project. Be sure to talk with them to make sure they are ok with it, but if they all agree, it can be fun to bring multiple perspectives to the work
+- Find a good process to track your work from the beginning and make sure you have clear end goals. What starts out simple can quickly grow and be harder to piece back together. Know where everything is and where it ends.
+- Meet regularly with your technical writer and welcome them to the community! It's fun to have new people in the community and they bring a fresh set of eyes.
+- Go ahead and apply for Google Season of Docs! We weren’t sure if we had the time to do the project, but it has been a great experience overall and we hope to do it again in the future.
 
 ### **Acknowledgments**
 
 Our team would like to thank the whole Google Season of Docs team for running the program. We found it to be very smooth and a great experience overall. We hope to participate again in the future.
+
+<BlogAuthor {...authors.BillMulligan} />

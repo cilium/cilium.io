@@ -13,6 +13,8 @@ tags:
 ogSummary: 'This is issue 02 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week'
 ---
 
+import authors from 'utils/author-data';
+
 This is issue 02 of the regular newsletter around BPF written by Alexander Alemayhu. It summarizes ongoing development, presentations, videos and other information related to BPF and XDP. It is released roughly once a week.
 
 ---
@@ -148,3 +150,5 @@ You can subscribe by sending a email to `majordomo@vger.kernel.org`, with a mess
 Please note that netdev receives a lot of patches and the list above is not meant to be comprehensive.
 
 Happy eBPF hacking!
+
+<BlogAuthor {...authors.alexanderAlemayhu} />

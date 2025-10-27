@@ -11,6 +11,8 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 **_Author: Paul Arah, Isovalent_**
 
 ![](cover.png)
@@ -119,3 +121,5 @@ We’ll explore features like multi-cluster networking, scaling to 65,000 nodes,
 Whether you are attending hands-on workshops, lightning talks, or networking with industry peers, you will find countless opportunities to interact with the Cilium community. Be sure to say Hi!
 
 See you in London!
+
+<BlogAuthor {...authors.PaulArah} />

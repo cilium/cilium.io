@@ -14,6 +14,8 @@ tags:
   - eBPF
 ---
 
+import authors from 'utils/author-data';
+
 ![](cover.png)
 
 ###### July 01st, 2025
@@ -214,3 +216,5 @@ playlists={[
 ---
 
 Happy watching and happy building with Cilium & eBPF! 🐝
+
+<BlogAuthor {...authors. HimalKumar} />

@@ -12,6 +12,8 @@ tags:
   - Cilium
 ---
 
+import authors from 'utils/author-data';
+
 ![](cover.png)
 
 **_Author: Shedrack Akintayo, Isovalent_**
@@ -141,3 +143,5 @@ In [Part 1](https://cilium.io/blog/hubble-for-network-security-and-observability
 [Part 2](https://cilium.io/blog/hubble-for-network-security-and-observability-part-2/) focused on Hubble's core capabilities, demonstrating how its deep, granular visibility into network flows, real-time metrics, and intuitive visualizations empower teams to monitor, troubleshoot, and optimize their Kubernetes networks effectively.
 
 Finally, in this part, we explored leveraging Hubble's rich data to enhance network security. We discussed practical use cases, from detecting potential threats to improving incident response strategies, and even touched on how including Tetragon can take your platform security to the next level.
+
+<BlogAuthor {...authors.ShedrackAkintayo} />

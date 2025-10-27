@@ -13,6 +13,8 @@ tags:
   - Clustermesh
 ---
 
+import authors from 'utils/author-data';
+
 ![Seznam.cz logo](Seznam.cz_logo.png)
 
 _July 13th, 2022_  
@@ -224,3 +226,5 @@ The screenshots speak for themselves, but the key take away for us was, **L4LB X
 The only thing we found missing in Cilium, before we can fully switch to L4LB XDP, are weighted backends which we are currently working on - [maglev: support setting a weight of a backend in a service spec via new cmdline argument](https://github.com/cilium/cilium/pull/18306). After this is done there is nothing stopping us from saying goodbye to IPVS.
 
 With this we would like to thank the Cilium community for building such a great project and for their support!
+
+<BlogAuthor {...authors.OndrejBlazek} />
