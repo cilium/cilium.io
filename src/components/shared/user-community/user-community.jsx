@@ -181,6 +181,7 @@ import UtmostLogo from './images/utmost.inline.svg';
 import UWMadisonLogo from './images/uwmadison.inline.svg';
 import VeepeeLogo from './images/veepee.inline.svg';
 import ViasatLogo from './images/viasat.inline.svg';
+import VietnamPostCloudLogo from './images/vietnampostcloud.inline.svg';
 import VirtuozzoLogo from './images/virtuozzo.inline.svg';
 import VkcloudLogo from './images/vkcloud.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
@@ -364,6 +365,7 @@ const icons = {
   preferredNetworks: PreferredNetworksLogo,
   batumbu: BatumbuLogo,
   fptTelecom: FPTTelecomLogo,
+  vietnamPostCloud: VietnamPostCloudLogo,
 };
 
 const UserCommunity = ({
