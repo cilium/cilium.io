@@ -187,6 +187,7 @@ const {
   preferredNetworks,
   batumbu,
   fptTelecom,
+  ost,
 } = caseStudiesData;
 
 const hero = {
