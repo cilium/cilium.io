@@ -185,6 +185,7 @@ import VirtuozzoLogo from './images/virtuozzo.inline.svg';
 import VkcloudLogo from './images/vkcloud.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
+import OSTLogo from './images/ost.inline.svg';
 
 const icons = {
   fhnw: FHNWLogo,
@@ -364,6 +365,7 @@ const icons = {
   preferredNetworks: PreferredNetworksLogo,
   batumbu: BatumbuLogo,
   fptTelecom: FPTTelecomLogo,
+  ost: OSTLogo,
 };
 
 const UserCommunity = ({
