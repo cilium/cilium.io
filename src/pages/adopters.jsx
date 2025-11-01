@@ -460,13 +460,13 @@ const Adopters = () => (
   <MainLayout className="overflow-x-hidden">
     <HeroWithoutImage {...hero} />
     <UserCommunity
-      className="max-w-full pt-6 pb-10 overflow-x-auto md:pt-10 md:pb-20 lg:pt-14 lg:pb-32"
+      className="pt-6 pb-10 md:pt-10 md:pb-20 lg:pt-14 lg:pb-32 overflow-x-auto max-w-full"
       {...userCommunity1}
     />
     <Logos {...logos1} id="preferred-cloud" />
     <Logos {...logos2} id="kubernetes-distribution" />
     <UserCommunity
-      className="max-w-full py-10 mt-10 overflow-x-auto md:mt-20 md:py-20 lg:mt-28 lg:py-28"
+      className="mt-10 py-10 md:mt-20 md:py-20 lg:mt-28 lg:py-28 overflow-x-auto max-w-full"
       {...userCommunity2}
       id="cilium-is-everywhere"
     />
