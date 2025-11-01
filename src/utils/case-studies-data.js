@@ -1648,6 +1648,6 @@ export default {
   },
   ost: {
     iconName: 'ost',
-    text: '<b>Eastern Switzerland University of Applied Sciences (OST)</b> is using Cilium.',
+    text: '<b>Eastern Switzerland University of Applied Sciences (OST)</b> uses Cilium in their production clusters (self-hosted, bare-metal, private cloud) and in their Cloud Native training courses',
   },
 };
