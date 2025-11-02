@@ -299,6 +299,4 @@ To get started:
 [prometheus]: https://github.com/prometheus/prometheus
 [grafana]: https://github.com/grafana/grafana
 [prometheus alert]: https://prometheus.io/docs/practices/alerting/
-[cilium]: https://github.com/cilium/cilium
-[ebpf]: http://docs.cilium.io/en/v1.6/bpf/
 [dns config]: https://kubernetes.io/docs/concepts/services-networking/dns-pod-service/#pod-s-dns-config

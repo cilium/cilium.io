@@ -4,7 +4,6 @@ import FeatureSection from 'components/pages/use-cases/feature-section';
 import Hero from 'components/pages/use-cases/hero';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
-import HostFirewallImage1 from 'images/pages/usecase/hostfirewall-1.gif';
 import NetworkingBeeImage from 'images/pages/usecase/networking-bee.png';
 import MainLayout from 'layouts/main/main';
 

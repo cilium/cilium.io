@@ -34,7 +34,7 @@ The digital systems of IKEA are situated in public cloud and private data center
 
 You’ll leave this talk understanding how you can use Cilium and its eBPF capabilities to build and instrument your network and obtain great observability.
 
-[Leveraging Cilium and SRv6 for Telco Networking ](https://sched.co/zso2)
+[Leveraging Cilium and SRv6 for Telco Networking](https://sched.co/zso2)
 
 Monday May 16, 2022 10:50 - 11:20 CEST
 

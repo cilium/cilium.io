@@ -5,8 +5,8 @@ import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 import Pagination from 'components/shared/pagination';
 import Tabs from 'components/shared/tabs';
-import SearchIcon from 'images/search.inline.svg';
 import useAllPostsSearch from 'hooks/use-all-posts-search';
+import SearchIcon from 'images/search.inline.svg';
 
 import BlogPostsList from './blog-posts-list';
 
@@ -57,13 +57,13 @@ const PostsBoard = ({ categories, posts, currentCategory, basePath, currentPage,
             type="text"
             placeholder="Search post titles..."
             value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors dark:bg-gray-800 dark:border-gray-600 dark:text-white dark:placeholder-gray-400"
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
           {searchQuery && (
             <button
-              onClick={() => setSearchQuery('')}
               className="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+              onClick={() => setSearchQuery('')}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
@@ -92,8 +92,8 @@ const PostsBoard = ({ categories, posts, currentCategory, basePath, currentPage,
               No posts found with titles matching "{searchQuery}"
             </div>
             <button
-              onClick={() => setSearchQuery('')}
               className="mt-4 text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 underline"
+              onClick={() => setSearchQuery('')}
             >
               Clear search
             </button>

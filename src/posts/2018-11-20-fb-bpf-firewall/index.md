@@ -266,11 +266,9 @@ a look at [Cilium].
 - [SIGCOMM 2018 - Accelerating Linux Security with eBPF iptables](https://dl.acm.org/citation.cfm?id=3234228)
 - [Why is the kernel community replacing iptables with BPF?](https://cilium.io/blog/2018/04/17/why-is-the-kernel-community-replacing-iptables/)
 
-[slack]: https://slack.cilium.io/
 [cilium]: https://github.com/cilium/cilium
 [slides]: http://vger.kernel.org/lpc_net2018_talks/ebpf-firewall-LPC.pdf
 [paper]: http://vger.kernel.org/lpc_net2018_talks/ebpf-firewall-paper-LPC.pdf
 [bpf/networking microconference]: http://vger.kernel.org/lpc-networking.html
-[lpc]: https://www.linuxplumbersconf.org/
 [tcam]: https://en.wikipedia.org/wiki/Content-addressable_memory#Ternary_CAMs
 [bpfilter]: https://lwn.net/Articles/747551

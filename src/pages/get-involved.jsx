@@ -2,9 +2,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
+import CalendarIntegration from 'components/pages/get-involved/calendar-integration';
 import Guidelines from 'components/pages/get-involved/guidelines';
 import ReportBugs from 'components/pages/get-involved/report-bugs';
-import CalendarIntegration from 'components/pages/get-involved/calendar-integration';
 import Subscribe from 'components/pages/get-involved/subscribe';
 import Cards from 'components/shared/cards';
 import HandsOn from 'components/shared/hands-on';

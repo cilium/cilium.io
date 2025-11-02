@@ -87,7 +87,7 @@ introduction to Cilium.
 
 # KVStore Free Operation (CRD storage)
 
-_Contributed by Ray Bejjani and others_
+### Contributed by Ray Bejjani and others
 
 This has been one of the long awaited features and it has finally landed. We
 have completed all work to run Cilium without requiring a key-value store.
@@ -123,7 +123,7 @@ section in the documentation.
 
 ## Kube-proxy Removal
 
-_Contributed by Daniel Borkmann and Martynas Pumputis_
+### Contributed by Daniel Borkmann and Martynas Pumputis
 
 ![Mic drop](kube-proxy-removal.png)
 
@@ -168,7 +168,7 @@ couple of dozen services, will have noticed, the vast amount of iptables rules
 generated. The following is an example of _one_ Kubernetes service of type
 NodePort with two endpoints as backends:
 
-**Rules with kube-proxy (iptables)**
+### Rules with kube-proxy (iptables)
 
 ```bash
 -A KUBE-NODEPORTS -p tcp -m comment --comment "default/nginx:" -m tcp --dport 30905 -j KUBE-MARK-MASQ
@@ -185,7 +185,7 @@ KUBE-NODEPORTS
 -A KUBE-SVC-253L2MOZ6TC5FE7P -j KUBE-SEP-UFVSO22B5A7KHVMO
 ```
 
-**Rules with eBPF-based k8s services**
+### Rules with eBPF-based k8s services
 
 ```bash
 # This snippet is intentionally left blank
@@ -213,7 +213,7 @@ for more configuration options.
 
 ## Socket-based load-balancing
 
-_Contributed by Daniel Borkmann and Martynas Pumputis_
+### Contributed by Daniel Borkmann and Martynas Pumputis
 
 ![Socket-based load-balancing](socket_based_lb.png)
 
@@ -271,7 +271,7 @@ can be set to one of the two for older kernel compatibility.
 
 ## Generic CNI Chaining
 
-_Contributed by Thomas Graf and Laurent Bernaille_
+### Contributed by Thomas Graf and Laurent Bernaille
 
 CNI (Container Networking interface) is the Kubernetes API for plugins to
 provide networking to Kubernetes pods. While Cilium directly implements this
@@ -293,7 +293,7 @@ bit of Go code to define the interface between Cilium and that CNI plugin.
 
 ## Policy Scalability
 
-_Contributed by Ian Vernon, Jarno Rajahalme, and Joe Stringer_
+### Contributed by Ian Vernon, Jarno Rajahalme, and Joe Stringer
 
 While Cilium release 1.5 focused on scalability for Cilium running in clusters
 with a large number of nodes, release 1.6 improves scalability of node-local
@@ -390,7 +390,7 @@ destined for the new endpoints in the cluster.
 
 ## Native AWS ENI Datapath
 
-_Contributed by Thomas Graf, Vlad Ungureanu, and Ryan McNamara_
+### Contributed by Thomas Graf, Vlad Ungureanu, and Ryan McNamara
 
 ![AWS ENI](awseni.png)
 
@@ -413,7 +413,7 @@ multi-cluster, policy enforcement and load-balancing subsystem.
 
 ## High-scale Dataplane for Transparent Encryption
 
-_Contributed by John Fastabend, Laurent Bernaille, and Robert Boll_
+### Contributed by John Fastabend, Laurent Bernaille, and Robert Boll
 
 Cilium provides transparent encryption support utilizing eBPF to orchestrate
 encryption using the Linux kernel crypto subsystem. The Cilium 1.6 release
@@ -439,7 +439,7 @@ part of this, we have integrated with [Helm] and now provide several Helm
 charts which can be used for templating and deployment. All guides have been
 converted to use [Helm].
 
-**Example: Configuring Cilium for GKE**
+### Example: Configuring Cilium for GKE
 
 ```bash
 helm template cilium \
@@ -542,5 +542,3 @@ to upgrade your Cilium deployment. Feel free to ping us on
 
 [slack]: https://slack.cilium.io
 [helm]: https://helm.sh/
-[external ips]: https://kubernetes.io/docs/concepts/services-networking/service/#external-ips
-[cni chaining mode]: http://docs.cilium.io/en/v1.6/gettingstarted/cni-chaining/

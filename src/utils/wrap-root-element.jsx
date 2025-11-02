@@ -5,6 +5,8 @@ import BlogAuthor from 'components/shared/blog-author';
 
 const components = { BlogAuthor };
 
-export const wrapRootElement = ({ element }) => (
+const wrapRootElement = ({ element }) => (
   <MDXProvider components={components}>{element}</MDXProvider>
 );
+
+export default wrapRootElement;

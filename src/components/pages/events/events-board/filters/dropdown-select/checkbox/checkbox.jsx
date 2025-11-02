@@ -15,7 +15,11 @@ const Checkbox = React.forwardRef((props, ref) => {
         ref={ref}
         {...otherProps}
       />
-      <label className="checkbox__label_event" htmlFor={id}>
+      <label
+        className="checkbox__label_event"
+        htmlFor={id}
+        aria-label={label.replace(/<[^>]*>/g, '')} // strip HTML for screen readers
+      >
         <span dangerouslySetInnerHTML={{ __html: label }} />
       </label>
     </div>

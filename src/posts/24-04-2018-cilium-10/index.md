@@ -233,9 +233,6 @@ issue](https://github.com/cilium/cilium/issues/3585). Feel free to comment or
 open GitHub issues if you would like to see particular functionality in future
 Cilium releases.
 
-[http]: http://docs.cilium.io/en/doc-1.0/gettingstarted/minikube/
-[grpc]: http://docs.cilium.io/en/doc-1.0/gettingstarted/grpc/
-[kafka]: http://docs.cilium.io/en/doc-1.0/gettingstarted/kafka/
 [slack]: https://slack.cilium.io
 [github]: https://github.com/cilium/cilium/issues/new
 [google]: https://www.socallinuxexpo.org/sites/default/files/presentations/bcc-scale.pdf
