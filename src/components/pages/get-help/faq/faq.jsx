@@ -35,12 +35,12 @@ const items = [
   {
     question: 'How can I contribute to Cilium?',
     answer:
-      'As an open-source, cloud-native networking solution, Cilium welcomes contributions to its codebase, documentation, and community. You can get involved by following the project on GitHub, joining discussions on Slack, engaging on Twitter, subscribing to the newsletter, or watching tutorials on YouTube. Contributions can include reporting issues, submitting code improvements, writing guides, or helping others in the community.',
+      'Cilium is an open-source, cloud-native networking project that welcomes all kinds of contributions. Learn how you can get involved by visiting the [Get Involved](https://cilium.io/get-involved/) page.',
   },
   {
     question: 'Where can I find Cilium tutorial or workshop?',
     answer:
-      'Get hands-on experience with Cilium through interactive courses, tutorials, and official documentation. Practice using Cilium’s networking, observability, and security features in labs provided by companies within the Cilium ecosystem.',
+      'Get hands-on experience with Cilium through interactive courses, tutorials, and official documentation. Practice using Cilium’s networking, observability, and security features in labs provided by companies within the Cilium ecosystem. Check out the [Cilium Labs](https://cilium.io/labs/) to get started.',
   },
 ];
 
