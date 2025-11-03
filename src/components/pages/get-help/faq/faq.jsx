@@ -35,17 +35,17 @@ const items = [
   {
     question: 'How can I contribute to Cilium?',
     answer:
-      'Cilium is an open-source, cloud-native networking project that welcomes all kinds of contributions. Learn how you can get involved by visiting the [Get Involved](https://cilium.io/get-involved/) page.',
+      'Cilium is an open-source, cloud-native networking project that welcomes all kinds of contributions. Learn how you can get involved by visiting the <a href="https://cilium.io/get-involved/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">Get Involved</a> page.',
   },
   {
     question: 'Where can I find Cilium tutorial or workshop?',
     answer:
-      'Get hands-on experience with Cilium through interactive courses, tutorials, and official documentation. Practice using Cilium’s networking, observability, and security features in labs provided by companies within the Cilium ecosystem. Check out the [Cilium Labs](https://cilium.io/labs/) to get started.',
+      'Get hands-on experience with Cilium through interactive courses, tutorials, and official documentation. Practice using Cilium’s networking, observability, and security features in labs provided by companies within the Cilium ecosystem. Check out the <a href="https://cilium.io/labs/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">Cilium Labs</a> to get started.',
   },
 ];
 
 const Faq = () => (
-  <section className="mt-10 md:mt-20 lg:mt-28 xl:mt-40">
+  <section className="bg-white mt-10 md:mt-20 lg:mt-28 xl:mt-40">
     <Container size="xs">
       <Heading className="text-center" size="lg" tag="h2">
         {title}
