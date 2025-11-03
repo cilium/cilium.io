@@ -20,7 +20,7 @@ const items = [
   {
     question: 'Why should I choose Cilium over traditional Kubernetes networking solutions?',
     answer:
-      'Cilium offers a modern, eBPF-powered alternative to traditional Kubernetes networking.Unlike kube-proxy, which relies on iptables and manual rule management, Cilium uses an eBPF dataplane that eliminates this complexity. The result is faster, more reliable, and highly scalable service routing, especially in large or dynamic Kubernetes clusters.',
+      'Cilium offers a modern, eBPF-powered alternative to traditional Kubernetes networking. Unlike kube-proxy, which relies on iptables and manual rule management, Cilium uses an eBPF dataplane for scalability and performance. The result is faster, more reliable, and highly scalable service routing, especially in large or dynamic Kubernetes clusters.',
   },
   {
     question: 'Does Cilium support multi-cluster networking?',
