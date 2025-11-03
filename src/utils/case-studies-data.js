@@ -1653,4 +1653,8 @@ export default {
     iconName: 'fptTelecom',
     text: '<b>FPT Telecom</b> uses Cilium as their CNI plugin to handle the massive CPE Management traffic to the backends',
   },
+  ost: {
+    iconName: 'ost',
+    text: '<b>Eastern Switzerland University of Applied Sciences (OST)</b> uses Cilium in their production clusters (self-hosted, bare-metal, private cloud) and in their Cloud Native training courses',
+  },
 };

@@ -52,6 +52,7 @@ import SovereignLogo from './images/sovereign.inline.svg';
 import SysElevenLogo from './images/syseleven.inline.svg';
 import TencentCloudLogo from './images/tencent-cloud.inline.svg';
 import VKCloudLogo from './images/vkcloud.inline.svg';
+import OSTLogo from './images/ost.inline.svg';
 
 const logos = {
   syseleven: SysElevenLogo,
@@ -100,6 +101,7 @@ const logos = {
   outscale: OutScaleLogo,
   ovh: OVHcloudLogo,
   fptTelecom: FPTTelecomLogo,
+  ost: OSTLogo,
 };
 
 const spaceXClassNames = {

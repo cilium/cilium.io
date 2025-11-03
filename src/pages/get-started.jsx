@@ -3,7 +3,7 @@ import React from 'react';
 
 import Architecture from 'components/pages/get-started/architecture';
 import Hero from 'components/pages/get-started/hero/hero';
-import Learn from 'components/pages/get-started/learn';
+import Faq from 'components/pages/get-help/faq/faq';
 import News from 'components/pages/get-started/news';
 import RelatedProjects from 'components/pages/get-started/related-projects';
 import Highlights from 'components/pages/home/highlights';
@@ -50,7 +50,7 @@ const LearnPage = () => (
     <Architecture />
     <HandsOn />
     <CNCFBanner />
-    <Learn />
+    <Faq />
     <RelatedProjects />
     <UserCommunity
       className="py-10 mt-10 md:py-20 lg:py-32 md:mt-20 lg:mt-32"
