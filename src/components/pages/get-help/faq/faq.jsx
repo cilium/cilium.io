@@ -45,7 +45,7 @@ const items = [
 ];
 
 const Faq = () => (
-  <section className="bg-white mt-10 md:mt-20 lg:mt-28 xl:mt-40">
+  <section className="bg-white py-10 md:py-16 lg:py-20 mt-10 md:mt-20 lg:mt-28 xl:mt-40">
     <Container size="xs">
       <Heading className="text-center" size="lg" tag="h2">
         {title}
