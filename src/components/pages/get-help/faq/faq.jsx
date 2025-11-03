@@ -15,12 +15,12 @@ const items = [
   {
     question: 'How does Cilium use eBPF?',
     answer:
-      'Cilium uses eBPF programs attached to various points in the Linux kernel, such as network interfaces and system calls. This allows it to inspect, modify, and route network packets in real-time. Kubernetes network policies are automatically translated into eBPF code, ensuring secure communication.',
+      'Cilium uses eBPF programs attached to various points in the Linux kernel, such as network interfaces and system calls. This allows it to inspect, modify, route, and secure network packets in real-time.',
   },
   {
     question: 'Why should I choose Cilium over traditional Kubernetes networking solutions?',
     answer:
-      'Cilium offers a modern, eBPF-powered alternative to traditional Kubernetes networking.Unlike kube-proxy, which relies on iptables and manual rule management, Cilium uses an eBPF dataplane that eliminates this complexity. The result is faster, more reliable, and highly scalable service routing, especially in large or dynamic Kubernetes clusters.',
+      'Cilium offers a modern, eBPF-powered alternative to traditional Kubernetes networking. Unlike kube-proxy, which relies on iptables and manual rule management, Cilium uses an eBPF dataplane for scalability and performance. The result is faster, more reliable, and highly scalable service routing, especially in large or dynamic Kubernetes clusters.',
   },
   {
     question: 'Does Cilium support multi-cluster networking?',
