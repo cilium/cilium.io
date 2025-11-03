@@ -15,7 +15,7 @@ const items = [
   {
     question: 'How does Cilium use eBPF?',
     answer:
-      'Cilium uses eBPF programs attached to various points in the Linux kernel, such as network interfaces and system calls. This allows it to inspect, modify, and route network packets in real-time. Kubernetes network policies are automatically translated into eBPF code, ensuring secure communication.',
+      'Cilium uses eBPF programs attached to various points in the Linux kernel, such as network interfaces and system calls. This allows it to inspect, modify, route, and secure network packets in real-time.',
   },
   {
     question: 'Why should I choose Cilium over traditional Kubernetes networking solutions?',
