@@ -187,6 +187,7 @@ const {
   preferredNetworks,
   batumbu,
   fptTelecom,
+  ost,
 } = caseStudiesData;
 
 const hero = {
@@ -381,6 +382,7 @@ const userCommunity2 = {
     guida,
     outscale,
     ovh,
+    ost,
     preferredNetworks,
     batumbu,
     uwmadison,
