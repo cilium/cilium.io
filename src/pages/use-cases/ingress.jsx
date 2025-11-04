@@ -28,6 +28,8 @@ const sectionContent1 = {
   description:
     'Cilium Ingress introduces flexible load balancer modes, enabling you to choose between dedicated and shared configurations tailored to your needs. In shared mode, resources are conserved by utilizing a single load balancer across all ingress resources. In dedicated mode, each ingress receives an independent load balancer, preventing conflicts like overlapping path prefixes. This adaptability ensures that scaling your application architecture never compromises performance or resource efficiency.',
   videoSrc: 'https://www.youtube.com/embed/t5nP_JT8qUg',
+  imageAlt:
+    'Diagram showing flexible load balancing with Cilium Ingress in shared and dedicated modes',
 };
 
 const sectionContent2 = {
@@ -35,6 +37,8 @@ const sectionContent2 = {
   description:
     'Cilium Ingress ensures that backend applications retain access to the original source IP, a common pain point with other solutions. By leveraging TPROXY and the intelligent configuration of Envoy, Cilium maintains transparency in HTTP headers such as X-Forwarded-For and X-Envoy-External-Address. This seamless visibility is vital for debugging, logging, and implementing IP-based access controls without additional overhead.',
   imageSrc: IngressImage1,
+  imageAlt:
+    'Visualization of Cilium Ingress maintaining original source IP visibility using Envoy and TPROXY',
 };
 
 const sectionContent3 = {
@@ -42,6 +46,7 @@ const sectionContent3 = {
   description:
     'With support for TLS termination and passthrough, Cilium Ingress simplifies secure traffic handling. It enables multi-TLS backend sharing while dynamically routing based on SNI. This eliminates configuration complexity and ensures robust security, even in highly dynamic environments. Applications benefit from simplified setup and seamless performance.',
   imageSrc: IngressImage2,
+  imageAlt: 'Diagram illustrating TLS termination and passthrough management in Cilium Ingress',
   imageRight: false,
 };
 
@@ -50,6 +55,8 @@ const sectionContent4 = {
   description:
     "Cilium embeds security directly into the network layer using eBPF. This approach allows fine-grained enforcement of CiliumNetworkPolicies for traffic entering and exiting the cluster. Traffic passes through an Envoy proxy integrated with Cilium's policy engine, enabling precise control over network behavior. This dual-layer security ensures compliance with organizational policies while protecting against advanced threats.",
   imageSrc: IngressImage3,
+  imageAlt:
+    'Diagram showing eBPF-based network policy enforcement and Envoy proxy integration in Cilium',
   imageRight: true,
 };
 

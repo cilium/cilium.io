@@ -36,7 +36,7 @@ const FeaturedStory = ({
             <GatsbyImage
               imgClassName="rounded-2xl"
               image={getImage(ogImage)}
-              alt=""
+              alt={title}
               loading="eager"
             />
           )}
