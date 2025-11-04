@@ -1,6 +1,6 @@
 ---
-path: '/blog/2025/09/16/process-tetragon'
-date: '2025-10-04T12:00:00.000Z'
+path: '/blog/2025/11/4/process-tetragon'
+date: '2025-11-04T12:00:00.000Z'
 title: 'Securing the Modern Process with Tetragon: Runtime Security for the Cloud-Native Kernel'
 ogImage: cover.png
 isFeatured: false
