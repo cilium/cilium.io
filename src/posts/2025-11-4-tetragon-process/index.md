@@ -49,7 +49,7 @@ The Runc container escape [(CVE-2019-5736)](https://kubernetes.io/blog/2019/02/1
 
 From a process perspective, this attack exploited how runc handles file descriptors. The malicious container would write to `/proc/self/exe`, a symbolic link pointing to the running process's binary. Because runc was the process executing into the container, this link pointed to the host's runc binary. The write operation could overwrite the actual runc binary on the host filesystem, bypassing container isolation entirely.
 
-What makes this particularly deadly is that the attack leverages legitimate behaviour. Writing to `/proc/self/ex`e` isn't inherently suspicious in all contexts, but from a container it absolutely is. This is where context-aware monitoring becomes crucial. We can write tracing policies that can detect this pattern by monitoring file write operations to sensitive paths with awareness of whether the acting process is containerized:
+What makes this particularly deadly is that the attack leverages legitimate behaviour. Writing to `/proc/self/exe` isn't inherently suspicious in all contexts, but from a container it absolutely is. This is where context-aware monitoring becomes crucial. We can write tracing policies that can detect this pattern by monitoring file write operations to sensitive paths with awareness of whether the acting process is containerized:
 
 ```yaml
 spec:
