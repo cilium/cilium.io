@@ -6,31 +6,30 @@ const fontsBasePath = '/fonts';
 
 const fontsPaths = ['/inter-regular.woff2', '/inter-bold.woff2'];
 
-export default function HTML(props) {
-  // Organization schema for the entire site
-  const orgSchema = {
-    '@context': 'https://schema.org',
+const orgSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Cilium',
+  url: 'https://cilium.io',
+  logo: 'https://cilium.io/logo.svg',
+  description:
+    'Cilium is an open source, cloud native solution for providing, securing, and observing network connectivity between workloads, fueled by the revolutionary Kernel technology eBPF',
+  foundingDate: '2015-12',
+  sameAs: [
+    'https://github.com/cilium',
+    'https://twitter.com/ciliumproject',
+    'https://www.linkedin.com/company/cilium',
+    'https://slack.cilium.io',
+    'https://www.youtube.com/channel/UCJFUxkVQTBJh3LD1wYBWvuQ',
+  ],
+  memberOf: {
     '@type': 'Organization',
-    name: 'Cilium',
-    url: 'https://cilium.io',
-    logo: 'https://cilium.io/logo.svg',
-    description:
-      'Cilium is an open source, cloud native solution for providing, securing, and observing network connectivity between workloads, fueled by the revolutionary Kernel technology eBPF',
-    foundingDate: '2015-12',
-    sameAs: [
-      'https://github.com/cilium',
-      'https://twitter.com/ciliumproject',
-      'https://www.linkedin.com/company/cilium',
-      'https://slack.cilium.io',
-      'https://www.youtube.com/channel/UCJFUxkVQTBJh3LD1wYBWvuQ',
-    ],
-    memberOf: {
-      '@type': 'Organization',
-      name: 'Cloud Native Computing Foundation',
-      url: 'https://www.cncf.io',
-    },
-  };
+    name: 'Cloud Native Computing Foundation',
+    url: 'https://www.cncf.io',
+  },
+};
 
+export default function HTML(props) {
   return (
     <html {...props.htmlAttributes} lang="en">
       <head>
@@ -51,7 +50,6 @@ export default function HTML(props) {
           />
         ))}
         {props.headComponents}
-        {/* Schema.org Organization markup for SEO */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
