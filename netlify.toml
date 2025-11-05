@@ -1,13 +1,14 @@
 [build]
   publish = "public"
   command = "gatsby build"
-  
+
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Security-Policy-Report-Only = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com; frame-src 'self' https://www.youtube.com"
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://static.hotjar.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://www.google-analytics.com; font-src 'self' https://fonts.gstatic.com data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.hotjar.com wss://*.hotjar.com; frame-src 'self' https://www.youtube.com https://vars.hotjar.com; worker-src 'self' blob:; upgrade-insecure-requests"
     Permissions-Policy = "accelerometer=(), ambient-light-sensor=(), autoplay=(), camera=(), clipboard-read=(), clipboard-write=(), display-capture=(), encrypted-media=(), fullscreen=(self), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), picture-in-picture=(self), usb=(), xr-spatial-tracking=(), browsing-topics=()"
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "DENY"
     Strict-Transport-Security = "max-age=31536000"
+
