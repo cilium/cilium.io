@@ -118,6 +118,7 @@ import NorthflankLogo from './images/northflank.inline.svg';
 import NutanixLogo from './images/nutanix.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
 import OpenAiLogo from './images/openai.inline.svg';
+import OSTLogo from './images/ost.inline.svg';
 import OutscaleLogo from './images/outscale.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import OVHcloudLogo from './images/ovh.inline.svg';
@@ -366,6 +367,7 @@ const icons = {
   batumbu: BatumbuLogo,
   fptTelecom: FPTTelecomLogo,
   vietnamPostCloud: VietnamPostCloudLogo,
+  ost: OSTLogo,
 };
 
 const UserCommunity = ({

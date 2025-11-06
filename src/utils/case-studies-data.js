@@ -1653,8 +1653,8 @@ export default {
     iconName: 'fptTelecom',
     text: '<b>FPT Telecom</b> uses Cilium as their CNI plugin to handle the massive CPE Management traffic to the backends',
   },
-  vietnamPostCloud: {
-    iconName: 'vietnamPostCloud',
-    text: '<b>Vietnam Post Cloud</b> is using Cilium in their production, staging, and development clusters for Networking, NetworkPolicy, Services, and IPVLAN',
+  ost: {
+    iconName: 'ost',
+    text: '<b>Eastern Switzerland University of Applied Sciences (OST)</b> uses Cilium in their production clusters (self-hosted, bare-metal, private cloud) and in their Cloud Native training courses',
   },
 };

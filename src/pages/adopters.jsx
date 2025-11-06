@@ -187,7 +187,7 @@ const {
   preferredNetworks,
   batumbu,
   fptTelecom,
-  vietnamPostCloud,
+  ost,
 } = caseStudiesData;
 
 const hero = {
@@ -382,11 +382,11 @@ const userCommunity2 = {
     guida,
     outscale,
     ovh,
+    ost,
     preferredNetworks,
     batumbu,
     uwmadison,
     fptTelecom,
-    vietnamPostCloud,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',

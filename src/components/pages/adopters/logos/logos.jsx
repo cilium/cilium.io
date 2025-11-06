@@ -42,6 +42,7 @@ import NineLogo from './images/nine.inline.svg';
 import NutanixLogo from './images/nutanix.inline.svg';
 import OpenShiftLogo from './images/openshift.inline.svg';
 import OpenStackLogo from './images/openstack.inline.svg';
+import OSTLogo from './images/ost.inline.svg';
 import OutScaleLogo from './images/outscale.inline.svg';
 import OVHcloudLogo from './images/ovh.inline.svg';
 import QingCloudLogo from './images/qingcloud.inline.svg';
@@ -100,6 +101,7 @@ const logos = {
   outscale: OutScaleLogo,
   ovh: OVHcloudLogo,
   fptTelecom: FPTTelecomLogo,
+  ost: OSTLogo,
 };
 
 const spaceXClassNames = {
