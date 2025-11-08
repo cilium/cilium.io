@@ -1657,7 +1657,7 @@ export default {
     iconName: 'vnpost',
     name: 'Vietnam Post Cloud',
     description:
-      'Vietnam Post Cloud is using Cilium in their production, staging, and development clusters',
+      'Vietnam Post Cloud uses Cilium in their production, staging, and development clusters',
   },
   ost: {
     iconName: 'ost',
