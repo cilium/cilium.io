@@ -21,6 +21,7 @@ import DaoCloudLogo from './images/daocloud.inline.svg';
 import DeckhouseLogo from './images/deckhouse.inline.svg';
 import DigitalOceanLogo from './images/digitalocean.inline.svg';
 import EquinixLogo from './images/equinix.inline.svg';
+import ESnetLogo from './images/esnet.inline.svg';
 import ExoscaleLogo from './images/exoscale.inline.svg';
 import FPTTelecomLogo from './images/fpttelecom.inline.svg';
 import GardernerLogo from './images/gardener.inline.svg';
@@ -42,6 +43,7 @@ import NineLogo from './images/nine.inline.svg';
 import NutanixLogo from './images/nutanix.inline.svg';
 import OpenShiftLogo from './images/openshift.inline.svg';
 import OpenStackLogo from './images/openstack.inline.svg';
+import OSTLogo from './images/ost.inline.svg';
 import OutScaleLogo from './images/outscale.inline.svg';
 import OVHcloudLogo from './images/ovh.inline.svg';
 import QingCloudLogo from './images/qingcloud.inline.svg';
@@ -52,7 +54,6 @@ import SovereignLogo from './images/sovereign.inline.svg';
 import SysElevenLogo from './images/syseleven.inline.svg';
 import TencentCloudLogo from './images/tencent-cloud.inline.svg';
 import VKCloudLogo from './images/vkcloud.inline.svg';
-import OSTLogo from './images/ost.inline.svg';
 
 const logos = {
   syseleven: SysElevenLogo,
@@ -102,6 +103,7 @@ const logos = {
   ovh: OVHcloudLogo,
   fptTelecom: FPTTelecomLogo,
   ost: OSTLogo,
+  esnet: ESnetLogo,
 };
 
 const spaceXClassNames = {
