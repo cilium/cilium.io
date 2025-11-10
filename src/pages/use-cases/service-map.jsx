@@ -87,7 +87,7 @@ const testimonials = [
     person: 'Lakmal Warusawithana, Senior Director - Cloud Architecture, WSO2',
   },
   {
-  title: 'Enhancing Network Observability for Scientific Computing with Hubble',
+    title: 'Transforming Scientific Computing Infrastructure for IPv6 with Cilium at ESnet',
     logo: ESnetLogo,
     CTAs: [
       {
@@ -95,9 +95,10 @@ const testimonials = [
         url: 'https://www.cncf.io/case-studies/esnet/',
       },
     ],
-    description: `ESnet leverages Hubble for advanced observability and visibility into its Kubernetes-based scientific computing infrastructure, enabling real-time insights into network performance and traffic behavior across complex distributed environments.`,
-    quote: true,
-    person: 'ESnet Engineering Team',
+    description:
+      'ESnet modernized its scientific computing infrastructure by consolidating hundreds of VM-based workloads into multi-tenant Kubernetes clusters using Cilium for eBPF-based networking and IPv6-native routing. This transformation enabled unprecedented observability with Hubble and established a reusable blueprint for IPv6-only Kubernetes deployments across national laboratories.',
+    quote: false,
+    person: '',
   },
 ];
 
