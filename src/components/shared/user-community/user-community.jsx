@@ -88,6 +88,7 @@ import ImmerokLogo from './images/immerok.inline.svg';
 import IncentiveLogo from './images/incentive.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
 import InnoqLogo from './images/innoq.inline.svg';
+import IONXLogo from './images/ionx.inline.svg';
 import IsovalentLogo from './images/isovalent.inline.svg';
 import JarLogo from './images/jar.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
@@ -368,6 +369,7 @@ const icons = {
   fptTelecom: FPTTelecomLogo,
   ost: OSTLogo,
   esnet: ESnetLogo,
+  ionx: IONXLogo,
 };
 
 const UserCommunity = ({

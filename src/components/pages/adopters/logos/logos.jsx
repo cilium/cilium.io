@@ -30,6 +30,7 @@ import GoogleKeLogo from './images/gke.inline.svg';
 import GoogleCloudLogo from './images/google-cloud.inline.svg';
 import GuidaLogo from './images/guida.inline.svg';
 import HetznerLogo from './images/hetzner.inline.svg';
+import IONXLogo from './images/ionx.inline.svg';
 import K8ELogo from './images/k8e.inline.svg';
 import KindLogo from './images/kind.inline.svg';
 import KopsLogo from './images/kops.inline.svg';
@@ -104,6 +105,7 @@ const logos = {
   fptTelecom: FPTTelecomLogo,
   ost: OSTLogo,
   esnet: ESnetLogo,
+  ionx: IONXLogo,
 };
 
 const spaceXClassNames = {
