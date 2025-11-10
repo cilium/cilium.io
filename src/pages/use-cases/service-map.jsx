@@ -8,11 +8,10 @@ import SEO from 'components/shared/seo';
 import AscendLogo from 'icons/logo-ascend.inline.svg';
 import CapitalOneLogo from 'icons/logo-capitalone.inline.svg';
 import Wso2Logo from 'icons/wso2.inline.svg';
+import ESnetLogo from 'images/pages/usecase/esnet.inline.svg';
 import KubernetesBee from 'images/pages/usecase/k8s-bee.png';
 import ServiceMapImage1 from 'images/pages/usecase/servicemap-1.png';
 import MainLayout from 'layouts/main/main';
-
-import ESnetLogo from '../adopters/logos/images/esnet.inline.svg';
 
 const heroContent = {
   title: 'Service Map',
