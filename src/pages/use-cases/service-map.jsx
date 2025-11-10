@@ -95,7 +95,7 @@ const testimonials = [
         url: 'https://www.cncf.io/case-studies/esnet/',
       },
     ],
-    description: `<b>ESnet</b> leverages <b>Hubble</b> for advanced observability and visibility into its Kubernetes-based scientific computing infrastructure, enabling real-time insights into network performance and traffic behavior across complex distributed environments.`,
+    description: `ESnet leverages Hubble for advanced observability and visibility into its Kubernetes-based scientific computing infrastructure, enabling real-time insights into network performance and traffic behavior across complex distributed environments.`,
     quote: true,
     person: 'ESnet Engineering Team',
   },
