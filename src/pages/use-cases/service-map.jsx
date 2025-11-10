@@ -87,7 +87,7 @@ const testimonials = [
     person: 'Lakmal Warusawithana, Senior Director - Cloud Architecture, WSO2',
   },
   {
-    title: 'IPv6-First Kubernetes Networking for Scientific Computing',
+  title: 'Enhancing Network Observability for Scientific Computing with Hubble',
     logo: ESnetLogo,
     CTAs: [
       {
@@ -95,9 +95,9 @@ const testimonials = [
         url: 'https://www.cncf.io/case-studies/esnet/',
       },
     ],
-    description: `<b>ESnet</b> uses Cilium for IPv6-first Kubernetes networking for scientific computing infrastructure.`,
-    quote: false,
-    person: '', // No specific person quoted in linked case study
+    description: `<b>ESnet</b> leverages <b>Hubble</b> for advanced observability and visibility into its Kubernetes-based scientific computing infrastructure, enabling real-time insights into network performance and traffic behavior across complex distributed environments.`,
+    quote: true,
+    person: 'ESnet Engineering Team',
   },
 ];
 
