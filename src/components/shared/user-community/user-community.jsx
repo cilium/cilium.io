@@ -67,6 +67,7 @@ import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
 import EntrywanLogo from './images/entrywan.inline.svg';
+import ESnetLogo from './images/esnet.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FHNWLogo from './images/fhnw.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
@@ -87,6 +88,7 @@ import ImmerokLogo from './images/immerok.inline.svg';
 import IncentiveLogo from './images/incentive.inline.svg';
 import InfomaniakLogo from './images/infomaniak.inline.svg';
 import InnoqLogo from './images/innoq.inline.svg';
+import IONXLogo from './images/ionx.inline.svg';
 import IsovalentLogo from './images/isovalent.inline.svg';
 import JarLogo from './images/jar.inline.svg';
 import JumoLogo from './images/jumo.inline.svg';
@@ -118,6 +120,7 @@ import NorthflankLogo from './images/northflank.inline.svg';
 import NutanixLogo from './images/nutanix.inline.svg';
 import NYTLogo from './images/nyt.inline.svg';
 import OpenAiLogo from './images/openai.inline.svg';
+import OSTLogo from './images/ost.inline.svg';
 import OutscaleLogo from './images/outscale.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import OVHcloudLogo from './images/ovh.inline.svg';
@@ -185,7 +188,6 @@ import VirtuozzoLogo from './images/virtuozzo.inline.svg';
 import VkcloudLogo from './images/vkcloud.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
-import OSTLogo from './images/ost.inline.svg';
 
 const icons = {
   fhnw: FHNWLogo,
@@ -366,6 +368,8 @@ const icons = {
   batumbu: BatumbuLogo,
   fptTelecom: FPTTelecomLogo,
   ost: OSTLogo,
+  esnet: ESnetLogo,
+  ionx: IONXLogo,
 };
 
 const UserCommunity = ({

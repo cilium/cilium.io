@@ -148,6 +148,7 @@ const {
   kubeOvn,
   mobilab,
   ect888,
+  esnet,
   skybet,
   plaid,
   isovalent,
@@ -189,6 +190,7 @@ const {
   fptTelecom,
   ost,
   vnpost,
+  ionx,
 } = caseStudiesData;
 
 const hero = {
@@ -280,6 +282,7 @@ const userCommunity1 = {
     qingcloud,
     imagineLearning,
     ecco,
+    esnet,
     gResearch,
     cornerBanca,
     canopus,
@@ -389,6 +392,7 @@ const userCommunity2 = {
     uwmadison,
     fptTelecom,
     vnpost,
+    ionx,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',

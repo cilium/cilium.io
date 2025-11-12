@@ -45,6 +45,7 @@ const Hero = ({ className, title, description, size }) => (
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           loading="eager"
+          referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         />
       </div>

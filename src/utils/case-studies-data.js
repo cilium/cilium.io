@@ -1133,6 +1133,17 @@ export default {
       },
     ],
   },
+  esnet: {
+    iconName: 'esnet',
+    text: '<b>ESnet</b> uses Cilium for IPv6-first Kubernetes networking for scientific computing infrastructure',
+    links: [
+      {
+        linkText: 'Read Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/esnet/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   gdata: {
     iconName: 'gdata',
     text: '<b>G Data</b> uses Cilium in their Kubernetes clusters for networking, security and observability',
@@ -1662,5 +1673,9 @@ export default {
   ost: {
     iconName: 'ost',
     text: '<b>Eastern Switzerland University of Applied Sciences (OST)</b> uses Cilium in their production clusters (self-hosted, bare-metal, private cloud) and in their Cloud Native training courses',
+  },
+  ionx: {
+    iconName: 'ionx',
+    text: '<b>IONX Networks Limited</b> uses Cilium as CNI plugin in their infrastructure',
   },
 };
