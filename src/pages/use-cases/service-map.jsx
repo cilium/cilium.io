@@ -95,10 +95,9 @@ const testimonials = [
         url: 'https://www.cncf.io/case-studies/esnet/',
       },
     ],
-    description:
-      'ESnet modernized its scientific computing infrastructure by consolidating hundreds of VM-based workloads into multi-tenant Kubernetes clusters using Cilium for eBPF-based networking and IPv6-native routing. This transformation enabled unprecedented observability with Hubble and established a reusable blueprint for IPv6-only Kubernetes deployments across national laboratories.',
-    quote: false,
-    person: '',
+    description: `“The power of Hubble is a godsend. If there’s one tool I use day in and day out, that’s Hubble.”`,
+    quote: true,
+    person: 'Kapil Agrawal, Platform Security Engineer, ESnet',
   },
 ];
 
