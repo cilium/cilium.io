@@ -188,6 +188,7 @@ import VirtuozzoLogo from './images/virtuozzo.inline.svg';
 import VkcloudLogo from './images/vkcloud.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
+import vnpostLogo from './images/vncloud.inline.svg';
 
 const icons = {
   fhnw: FHNWLogo,
@@ -368,6 +369,7 @@ const icons = {
   batumbu: BatumbuLogo,
   fptTelecom: FPTTelecomLogo,
   ost: OSTLogo,
+  vnpost: vnpostLogo,
   esnet: ESnetLogo,
   ionx: IONXLogo,
 };
