@@ -40,6 +40,8 @@ Trip.com, Skyscanner, and Ctrip.com, all of which are online travel agencies.
 
 _Source: [Wikipedia](https://en.wikipedia.org/wiki/Trip.com_Group)_ and [vstat.info](https://vstat.info/ctrip.com)
 
+<a id="the-cloud-native-networking-challenge"></a>
+
 ## The Cloud-Native Networking Challenge
 
 With the status quo evolving in the era of OpenStack, the networking platform
@@ -86,6 +88,8 @@ several real challenges:
 - **Kubernetes-native:** Support all Kubernetes functionalities natively
 - **Network policy:** Host or application-level network security rules on each node
 - **Bare-metal & Cloud:** Single solution covering both on-premises (bare-metal) and AWS
+
+<a id="evaluation-ebpf-beats-iptables"></a>
 
 ## Evaluation - eBPF beats iptables
 

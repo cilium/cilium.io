@@ -81,6 +81,8 @@ FlowPulse utilizes the ReAct (Reason & Act) agentic framework from CrewAI to bui
 The system also consists of a no-dashboard interactive UI using which the security teams can perform further investigative queries to understand the context better, or prompt the agents to generate reports for the next set of vulnerabilities having fixed all that were flagged.
 The exact number of LLM calls per report is unpredictable, however, we observed that the crew invokes the underlying LLM approximately 10 times per report, with each report taking between one to two minutes to generate. LLM tokens consumption varies significantly, ranging from 30,000 to 60,000 tokens, which results in a cost of $0.13 to $0.23 USD per report.
 
+<a id="why-ebpf"></a>
+
 ## Why eBPF?
 
 eBPF was chosen for its unparalleled ability to observe and act on runtime events directly in the kernel, capturing critical signals such as process, network, and filesystem activity with minimal overhead. This high-fidelity data is foundational to Canopus’s proactive security architecture and the effectiveness of its AI-driven workflows.

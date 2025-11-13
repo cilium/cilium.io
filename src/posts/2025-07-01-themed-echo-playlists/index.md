@@ -35,6 +35,8 @@ grouped into six themes that mirror the Cilium journey: Cilium in Production (in
 (policies and datapath), Runtime Security (Tetragon), Mesh Networking (service and cluster mesh), Gateway-API & Traffic Management,
 All Things eBPF (development and observability), and Ecosystem & Community (releases, conferences, culture).
 
+<a id="cilium-in-production"></a>
+
 ## 🚀 Cilium in Production
 
 Running Cilium in a home lab is fun, but running it in anger across EKS, bare-metal, and on-prem clusters requires repeatable workflows and a few battle-tested tricks. The Cilium in Production playlist condenses those lessons into one place.
@@ -59,6 +61,8 @@ playlists={[
 
 - Hands-on lab: [Install Cilium on EKS](https://isovalent.com/resource-library/labs/) – spin up a sandbox in minutes.
 - Book: [Cilium Up and Running](https://isovalent.com/books/cilium-up-and-running/)
+
+<a id="networking-for-kubernetes"></a>
 
 ## 🌐 Networking for Kubernetes
 
@@ -85,6 +89,8 @@ playlists={[
 - Hands-on lab: [Isovalent Enterprise for Cilium: Network Policies](https://isovalent.com/labs/cilium-network-policies/)
 - eBook: [Kubernetes Networking and Cilium for the Network Engineer](https://isovalent.com/blog/post/introducing-the-new-kubernetes-networking-and-cilium-for-the-network-engineer-ebook/)
 
+<a id="mesh-networking"></a>
+
 ## 🔀 Mesh Networking
 
 From in-cluster L7 routing to cross-cluster fail-over, Cilium delivers mesh traffic without sidecars or iptables overhead.
@@ -108,7 +114,9 @@ playlists={[
 - Hands-on lab: [Cilium Cluster Mesh Lab](https://isovalent.com/labs/cilium-cluster-mesh/), [Cilium Gateway API](https://isovalent.com/labs/cilium-gateway-api/)
 - Blog post: [Cilium Mesh - One Mesh to Connect Them All](https://isovalent.com/blog/post/introducing-cilium-mesh/)
 
-# 🔒 Runtime Security with Tetragon
+<a id="runtime-security-with-tetragon"></a>
+
+## 🔒 Runtime Security with Tetragon
 
 Need process-level enforcement and instant CVE detection? The Tetragon playlist shows how eBPF can hook every `execve`,
 file write, and socket call before turning them into actionable policies.
@@ -130,6 +138,8 @@ playlists={[
 - Hands-on lab: [Tetragon Getting Started](https://isovalent.com/labs/tetragon-getting-started/)
 - Blog post: [Detecting the XZ Utils CVE with Tetragon](https://isovalent.com/blog/post/ebpf-tetragon-xz-utils-cve-policy/)
 - Doc: Quick-start guide — [docs.tetragon.io](http://docs.tetragon.io)
+
+<a id="all-things-ebpf"></a>
 
 # 🐝 All Things eBPF
 
@@ -154,6 +164,8 @@ playlists={[
 
 - Hands-on lab: [Getting started with eBPF](https://isovalent.com/labs/ebpf-getting-started/)
 - Book: [Learning eBPF](https://isovalent.com/books/learning-ebpf/), O'Reilly book by Liz Rice
+
+<a id="ecosystem-and-community"></a>
 
 # 🎉 Ecosystem & Community
 

@@ -34,6 +34,8 @@ The SINAD team discovered Tetragon through Cilium, which they already used for K
 
 Using Tetragon’s monitoring and enforcement capabilities, SINAD is able to effectively observe and secure its client’s environments and workloads. Tetragon has enabled SINAD to offer its clients a wide array of benefits, such as deep visibility into workloads, network traffic, and file integrity while maintaining fine-tuned control over security policies, leading to increased trust in SINAD’s solutions. Tetragon’s unique efficiency and ease of use empowers SINAD to equip organizations to maximize their return on investment in Kubernetes and cloud native technologies. Integrating Tetragon into the EzyKube platform also helps teams streamline compliance, making it easier to meet regulatory requirements. In summary, Tetragon enables SINAD’s customers to focus on security outcomes rather than infrastructure challenges.
 
+<a id="simplifying-security-and-observability-for-kubernetes"></a>
+
 ## Simplifying Security and Observability for Kubernetes
 
 SINAD was founded with a mission to make Kubernetes easier to manage, providing consulting services and developing in-house solutions like EzyKube, their flagship Kubernetes management platform. From the outset, SINAD wanted to provide deeper control over observability and security capabilities.
@@ -41,6 +43,8 @@ SINAD was founded with a mission to make Kubernetes easier to manage, providing 
 eBPF offered the visibility and enforcement capabilities SINAD needed, but using it directly was too complex and resource-intensive. _“We knew eBPF was the ideal solution for our security and observability needs,”_ explained Arezki OUHENIA, co-founder of SINAD. _“But managing maps, using helpers, and writing safe kernel code is extremely complex. It’s the kernel after all.”_
 
 The challenge of using eBPF directly extended beyond the scope and specialty of the SINAD team. A tool that required manual eBPF programming or kernel modifications would be impractical. “
+
+<a id="discovering-tetragon-through-cilium"></a>
 
 ## Discovering Tetragon Through Cilium
 
@@ -50,11 +54,15 @@ The powerful and flexible abstraction Tetragon provides on top of eBPF eliminate
 
 The simplicity of collecting various security significant events with Tetragon meant that the SINAD team could be as broad or granular as possible with the data they collected depending on the use case. In Arezki’s words: _“Tetragon gave us the flexibility to decide what data we want to collect without enforcing any restrictions on us.” This flexibility empowered SINAD Team to customize their solution to the varying needs and requirements of their target clients._
 
+<a id="real-time-observability-without-overhead"></a>
+
 ## Real-Time Observability Without Overhead
 
 Tetragon’s efficiency and lightweight design were also major selling points. Unlike many, it didn’t introduce unnecessary performance overhead. _“Tetragon provides real-time visibility into workloads and allows us to enforce policies at the kernel level,”_ Arezki OUHENIA explained. _“That kind of deep insight was something we needed but couldn’t easily achieve before.”_
 
 Another key advantage was network observability. _“Being able to track and enforce network policies in real time without introducing latency is crucial,”_ Arezki OUHENIA noted. Tetragon’s fine-grained controls offer several capabilities, for example, they enable SINAD to monitor live production sessions, promptly detect unauthorized network connections, and log critical file modifications in real time.
+
+<a id="building-a-tetragon-enabled-platform"></a>
 
 ## Building a Tetragon Enabled Platform
 

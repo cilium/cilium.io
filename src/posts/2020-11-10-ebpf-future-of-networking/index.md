@@ -57,6 +57,8 @@ This moment is a great opportunity to provide a deeper dive into the motivation
 to use eBPF for networking. What are all these users seeing in Cilium? What is
 so special about eBPF?
 
+<a id="the-roots-of-programmability-software-defined-networking"></a>
+
 ## The Roots of Programmability: Software Defined Networking
 
 To really understand the shift, let's briefly look back at the history of
@@ -87,6 +89,8 @@ This programmability aspect can still be found in eBPF-based networking today
 and is one of the corner stones. eBPF-based networking has its roots in SDN and
 evolves it by removing the device-centric model from the equation.
 
+<a id="the-rise-of-containers-and-kubernetes"></a>
+
 ## The Rise of Containers and Kubernetes
 
 The year 2013 brought Docker. Docker primarily inherited the networking from
@@ -111,6 +115,8 @@ packet filter in the Linux kernel I personally worked on while still using a
 dial-up modem. Clearly not perfectly suited for the task, but widely available
 and good enough to get started.
 
+<a id="the-ebpf-revolution-begins"></a>
+
 ## The eBPF Revolution Begins
 
 The same year that Kubernetes started, eBPF was first merged into the Linux
@@ -130,6 +136,8 @@ Ever since, eBPF is in an incredibly steep trajectory to evolve further and
 becomes more and more powerful every year. The general-purpose nature of eBPF
 allowed for a diverse community to form around it, spanning networking,
 tracing, security, profiling, and observability.
+
+<a id="cilium-ebpf-an-ideal-match-for-the-cloud-native-world"></a>
 
 ## Cilium & eBPF - An ideal match for the Cloud-Native World
 
@@ -186,6 +194,8 @@ vSwitch, or nftables.
 
 ![](ebpf_arch.png)
 
+<a id="embedded-in-the-linux-kernel"></a>
+
 ## Embedded in the Linux kernel
 
 Some of you may correctly state that programmability already existed in the
@@ -226,6 +236,8 @@ native execution speed of eBPF bytecode.
 All of this makes eBPF incredibly powerful, but it is also a low-level
 technology intended to be used primarily by Linux kernel developers. This is
 where Cilium comes into play.
+
+<a id="cilium-ebpf-based-networking-observability-and-security"></a>
 
 ## Cilium - eBPF-based Networking, Observability, and Security
 

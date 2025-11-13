@@ -21,6 +21,8 @@ import authors from 'utils/author-data';
 _April 12, 2022_  
 _Author: Joseph Irving, Platform Lead at RVU (Uswitch)_
 
+<a id="multi-cluster-networking-with-cilium-and-friends"></a>
+
 # Multi Cluster Networking with Cilium and Friends
 
 Setting up networking for one Kubernetes cluster can be a challenge but it becomes even more fun once you add multiple clusters into the mix. In this blog, we’ll go over the solutions that [RVU](https://www.rvu.co.uk/) ([Uswitch](https://www.uswitch.com/)) came up with to allow their applications to talk between clusters and the rationale behind them, from [building our own tools](https://labs.rvu.co.uk/multi-cluster-kubernetes-load-balancing-in-aws-with-yggdrasil-c1583ea7d78f) like [Yggdrasil](https://github.com/uswitch/yggdrasil) (Envoy controller) to implementing other tools such as Cilium. We’ll see what benefits and drawbacks the different approaches can have and also explore why we opted to avoid using a traditional service mesh to achieve our multi-cluster networking goals.
@@ -52,6 +54,8 @@ There were a few major drawbacks with this approach. First, a user would talk to
 
 This kind of cross-cluster functionality was clearly useful to our development teams, however the implementation was less than ideal. We concluded that we would need something more like a service mesh for service to service communication to work in a sensible way.
 
+<a id="searching-for-a-service-mesh"></a>
+
 # Searching for a Service Mesh
 
 When evaluating the various different service meshes that existed we started with three main requirements:
@@ -77,6 +81,8 @@ After looking at more ‘traditional’ service meshes, we discovered Cilium whi
 - No application changes needed to leverage its capabilities - everything is done at the host level and is transparent to the applications using it.
 
 This all sounded great, so the next step was to try it out!
+
+<a id="cilium-time"></a>
 
 ## Cilium Time
 

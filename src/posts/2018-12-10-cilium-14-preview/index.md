@@ -31,6 +31,8 @@ Some of the highlights:
 As always, we love hearing from you, so stop by our KubeCon booth and chat with
 us and other Cilium users.
 
+<a id="multi-cluster-service-routing"></a>
+
 ## Multi-Cluster Service Routing
 
 Cilium 1.3 has introduced the basic pod IP routing capability between multiple
@@ -64,6 +66,8 @@ regular IPSec based VPN gateways and tunnels and then expose the Cilium control
 plane via an internal Kubernetes Loadbalancer to expose it to the internal
 VPCs. TLS is used to authenticate the client and server with the certificates
 and keys managed as regular Kubernetes secrets.
+
+<a id="dns-request-response-aware-security-and-visibility"></a>
 
 ## DNS Request/Response Aware Security & Visibility
 
@@ -143,6 +147,8 @@ request not matching the pattern will receive a `request refused` DNS response.
 It further grants the pod egress access on port 443/TCP to the IPs returned in
 the DNS response. Any attempt to access any IP address not previously returned
 in a DNS response is rejected.
+
+<a id="transparent-encryption-and-authentication"></a>
 
 ## Transparent Encryption & Authentication
 

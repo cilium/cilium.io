@@ -257,7 +257,7 @@ In Cilium 1.8, Hubble Relay is required for Hubble UI.
 
 <a name="hostfw"></a>
 
-### Host-level Network Policies
+### <a id="host-level-network-policies"></a>Host-level Network Policies
 
 _Contributed by Paul Chaignon (Isovalent)_
 
@@ -451,7 +451,7 @@ resulting in both, reduced memory footprint and reduced binary size.
 
 <a name="container-size"></a>
 
-## Cilium Container Image Optimizations
+## <a id="cilium-container-image-optimizations"></a>Cilium Container Image Optimizations
 
 _Contributed by Daniel Borkmann (Isovalent)_
 
@@ -939,14 +939,20 @@ See the merged patch sets for further information: <a href="https://lore.kernel.
 See the [Changelog](https://github.com/cilium/cilium/blob/v1.8/CHANGELOG.md)
 for full notes on changes during the Cilium 1.8 development cycle.
 
+<a id="getting-started"></a>
+
 ## Getting Started
 
 New to Cilium? Follow one of the [Getting Started Guides](https://docs.cilium.io/en/v1.8/gettingstarted/).
+
+<a id="upgrade-instructions"></a>
 
 ## Upgrade Instructions
 
 As usual, follow the [upgrade guide](https://cilium.readthedocs.io/en/v1.8/install/upgrade/#upgrading-minor-versions)
 to upgrade your Cilium deployment. Feel free to ping us on [Slack].
+
+<a id="release"></a>
 
 ## Release
 
