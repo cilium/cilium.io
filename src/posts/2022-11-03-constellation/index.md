@@ -22,6 +22,8 @@ _Author: Leonard Cohnen & Moritz Eckert, Edgeless Systems_
 
 For network encryption, Constellation uses Cilium. This blog dives into why we chose Cilium, how we integrated it, and what we learned along the way. We’ll dive into the technical challenges and difficulties we encountered and how we overcame these. If you’re all into Kubernetes networking, eBPF, and Cilium, this should be for you. If not, don’t worry, we’ll highlight the important takeaways, and you’ll learn a thing or two about the inner workings of Cilium.
 
+<a id="encryption-vs-access"></a>
+
 ## Encryption vs. access
 
 Constellation must ensure all communication in a cluster is protected while still allowing access to the outside world. This includes the pod network carrying the application traffic and the Kubernetes communication itself. Simply put, all node-to-node traffic must be encrypted. However, for most applications, the nodes should still be reachable from the outside to support LoadBalancer and NodePort services.
@@ -29,6 +31,8 @@ Constellation must ensure all communication in a cluster is protected while stil
 Isolating the entire cluster in a VPN on the host level might be the first solution that comes to mind, and it solves the first part of encrypting all traffic. However, it makes communication with the outside cumbersome and impractical.
 
 Thus, for Constellation, we opted to implement network encryption at the CNI level. Our CNI solution of choice is [Cilium](https://cilium.io/). It combines great performance with [transparent network encryption](https://docs.cilium.io/en/stable/gettingstarted/encryption/). Cilium supports both [IPSec](https://docs.cilium.io/en/stable/gettingstarted/encryption-ipsec/) and [WireGuard](https://docs.cilium.io/en/stable/gettingstarted/encryption-wireguard/). Essentially, it establishes a VPN network between nodes while maintaining features allowing access outside the cluster, such as service exposure and load balancing.
+
+<a id="implementing-transparent-network-encryption"></a>
 
 ## Implementing transparent network encryption
 
@@ -42,9 +46,13 @@ Cilium conveniently achieves all three. Unfortunately, with the latest release (
 
 To address this issue, currently, the admin needs to disable all pod-to-Internet communication. While this is a viable workaround in certain scenarios it is not ours. Thus we began an investigation for a better solution roughly a year ago...
 
+<a id="the-consistency-problem-in-ipcache"></a>
+
 ## The consistency problem in IPCache
 
 Both Cilium's identity-based policy enforcement and encryption rely on an [eBPF map](https://docs.kernel.org/bpf/maps.html) called _IPCache_ to reason about the source and destination identity of network packets. If a packet originates from a pod inside the pod network and the IPCache indicates that the destination is also a pod, then the packet is re-routed through the WireGuard interface. This interface then takes care of encapsulating and encrypting the packet and sending it to the destination pod's node. So far so good. However, as it turns out, the IPCache is only _eventually_ updated with new endpoints. If a newly created endpoint is not yet in the IPCache, network traffic to it is not encrypted. This is the core of the problem and our goal is to fix this.
+
+<a id="triggering-the-issue"></a>
 
 ### Triggering the issue
 

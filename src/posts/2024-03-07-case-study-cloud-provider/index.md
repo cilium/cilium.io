@@ -34,6 +34,8 @@ This integration allowed them to pivot their networking dataplane from iptables 
 
 By switching the dataplane of their managed Kubernetes service from iptables to Cilium powered by eBPF, their customers have more scalability, performance, and features for their Kubernetes networking layer. The Cilium community has also benefited from this cloud provider's contributions back to the project. These contributions back to the open source community have also helped build trust and confidence with their customers.
 
+<a id="migrating-to-cilium-for-performance-scalability-and-more-features"></a>
+
 ## Migrating to Cilium for Performance, Scalability, and More Features
 
 When this cloud provider created their managed Kubernetes service, they needed a Container Network Interface (CNI) to provide container networking and built a proprietary one based on iptables.
@@ -49,6 +51,8 @@ _“We chose Cilium because it is the best-in-class eBPF solution. In the open s
 They also worked with Isovalent to migrate their managed Kubernetes service platform to Cilium as the CNI. Once they had Cilium in place, they were able to significantly enhance the [speed and scalability](https://azure.microsoft.com/en-us/blog/azure-cni-with-cilium-most-scalable-and-performant-container-networking-in-the-cloud/) of their data plane. The shift also allowed then to add more network policies and set them up to add additional capability in the future.
 
 _“The whole switch to Cilium was smooth. Cilium’s documentation and GitHub is on point and really good with self-troubleshooting and integrations.”_ - Senior Software Engineer
+
+<a id="preparing-customers-and-platforms-for-future-cloud-native-challenges"></a>
 
 ## Preparing Customers and Platforms For Future Cloud Native Challenges
 

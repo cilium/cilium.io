@@ -21,6 +21,8 @@ When you write Tetragon tracing policies, you’re not writing arbitrary sets of
 
 This blog post is meant to be a pointer guide; it won’t make you a kernel hacker overnight, but it aims to cover some core Linux knowledge essential for crafting effective Tetragon tracing policies. We’ll connect kernel fundamentals such as user vs. kernel space, system calls, process structures, namespaces, and more to practical tracing policy examples. A basic familiarity with Linux and a base-level understanding of what Tetragon is will be enough to follow along.
 
+<a id="kernel-space-vs-user-space"></a>
+
 ## Kernel Space vs User Space
 
 One of the most fundamental concepts in Linux system programming is the distinction between kernel space and user space.
@@ -28,6 +30,8 @@ One of the most fundamental concepts in Linux system programming is the distinct
 **User space** is where apps like Bash, Nginx, VS Code run. Userspace programs run with restricted privileges and cannot do things like access arbitrary memory locations, execute privileged instructions, directly control hardware, or access kernel data structures.
 
 **Kernel space** is where kernel code runs with unrestricted access to all system resources. Here, code can access any memory location, execute privileged CPU instructions, directly control hardware devices, modify system-wide data structures, and more.
+
+<a id="the-system-call-interface"></a>
 
 ## The System Call Interface
 
@@ -37,9 +41,13 @@ Most programming languages offer some sort of standard library that provides a h
 
 ![](syscall.png)
 
+<a id="hook-points"></a>
+
 ## Hook Points
 
 When you write a tracing policy, you have to tell Tetragon where to look in the system. These attachment points are called hook points. There are two complementary perspectives we can view this from: how the Linux kernel itself defines them, and how Tetragon exposes them for us. Understanding both perspectives helps us choose the right hook point for the security observability scenario.
+
+<a id="the-linux-kernel-point-of-view"></a>
 
 ### The Linux Kernel’s Point of View
 
@@ -51,6 +59,8 @@ In the kernel, a hook point is just a place in the execution flow where code can
 - **BPF LSM** essentially allows instrumenting Linux Security Module (LSM) hooks at runtime. A good way to think of LSM hooks is as some kind of built-in checkpoint that asks, “Is this action allowed?” before letting a process do something sensitive. Security systems like SELinux or AppArmor use LSM hooks. Tetragon can also use LSM hooks for access control and observability. LSM hooks are reliable, less prone to race conditions like TOCTOU, and always represent real enforcement points.
 
 This blog post titled: [Linux tracing systems & how they fit together](https://jvns.ca/blog/2017/07/05/linux-tracing-systems/) by Julia Evans, is a good resource for learning about the tracing systems in the Linux kernel.
+
+<a id="tetragon-points-of-view"></a>
 
 ### Tetragon Points of View
 
@@ -102,6 +112,8 @@ spec:
 
 Tetragon automatically translates `sys_write` to the correct architecture-specific function name. This abstraction is crucial for policies that need to work across diverse environments.
 
+<a id="choosing-the-right-hook-point"></a>
+
 ### Choosing the Right Hook Point
 
 The best hook point for your policy depends on your specific security observability objective and how much stability you need across environments. If your goal prioritizes portability, tracepoints are often the safest choice. They are built into the kernel source and tend to remain stable across kernel versions.
@@ -110,10 +122,14 @@ When you need fine-grained insight into kernel internals, kprobes give you the f
 Finally, if your focus is on application-level behavior, uprobes let you trace functions inside user-space binaries and libraries. The prerequisite here is being able to explore how a particular program is laid out at the binary level.
 Whichever option you choose, the common theme is that you’re navigating the Linux kernel (or user-space program) at the level of functions, structures, and symbols. An understanding of these internals is what allows you to pick the right hook.
 
+<a id="process-management"></a>
+
 ## Process Management
 
 In the kernel's view, every running program is represented by a `task_struct` data structure. This massive structure (over 1,000 lines in recent kernels) contains everything the kernel needs to know about a process, including the process and thread group IDs (PID/TGID), memory management information, file descriptor table, security credentials, scheduling information, and signal handling state.
 When your Tetragon examines process-related information, it is often looking at fields within the current process's task_struct. Process lifecycle monitoring is a core use case for Tetragon, and by default, without deploying any additional tracing policy, Tetragon observes the process lifecycle. The process section of the [Linux kernel teaching lab](https://linux-kernel-labs.github.io/refs/heads/master/lectures/processes.html) covers in detail how processes work in Linux.
+
+<a id="process-monitoring-with-tetragon"></a>
 
 ### Process Monitoring with Tetragon
 
@@ -135,6 +151,8 @@ spec:
 This policy hooks into the scheduler subsystem when a new program is executed. The `resolve: "pid"` directive tells Tetragon to extract the PID from the first argument (a `task_struct` pointer), while the `linux_binprm` type captures information about the binary being executed.
 
 Understanding that process creation involves multiple kernel subsystems (the scheduler, memory manager, and file system) helps you choose the right hook points for your monitoring and enforcement objectives.
+
+<a id="process-hierarchies-and-namespaces"></a>
 
 ### Process Hierarchies and Namespaces
 
@@ -178,6 +196,8 @@ spec:
 
 The big idea here is that every file action in Linux is funneled through file descriptors, and by watching them, you can write focused policies that only report on the paths you care about.
 
+<a id="networking-and-sockets"></a>
+
 ## Networking and Sockets
 
 In Linux, all network traffic flows through sockets. A socket works like a file descriptor, but instead of pointing to a file, it represents a network connection (IP + port). When an app calls connect() or send(), the kernel manages the socket. This means every HTTP request, DNS lookup, or database call is visible at the socket layer.
@@ -214,6 +234,8 @@ Start by focusing on the areas most relevant to your monitoring objectives:
 - For container security: understand namespaces, cgroups, and container runtime interactions
 
 The investment in kernel knowledge pays dividends in the form of more effective, efficient, and reliable tracing policies. Remember that kernel internals can change between versions, so staying current with kernel development and testing your policies across different kernel versions is essential for production deployments
+
+<a id="resources-and-references"></a>
 
 ## Resources and References:
 

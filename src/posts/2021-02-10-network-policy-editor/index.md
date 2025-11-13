@@ -47,6 +47,8 @@ The <a href="https://editor.cilium.io" target="_blank">Kubernetes NetworkPolicy 
  target="_blank">Try Network Policy Editor</a>
 </p>
 
+<a id="how-exactly-does-editor-cilium-io-help"></a>
+
 ## How exactly does editor.cilium.io help?
 
 To make this more concrete, let’s explore five common gotchas we see trip up those working with Network Policy, both newbies and sometimes (gulp!) those of us who have been doing this for a while. At the end of each mistake, you’ll find a link to a short (3-5 minute) tutorial in the tool that walks you through each step required to fix the mistake.

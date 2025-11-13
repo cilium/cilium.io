@@ -57,6 +57,8 @@ without any changes to the application code or container configuration.
 See the section **[Introduction to Cilium](http://docs.cilium.io/en/v1.1/intro/)**
 for a more detailed general introduction to Cilium.
 
+<a id="what-is-istio"></a>
+
 ## What is Istio?
 
 Istio provides an easy way to create a network of deployed services with load
@@ -72,6 +74,8 @@ You can read more about Istio's concept and architecture in the [Istio
 documentation](https://istio.io/docs/).
 
 ## Efficient networking for Istio
+
+<a id="socket-level-redirection-to-accelerate-istio-and-envoy"></a>
 
 The most basic form of collaboration is the Cilium CNI plugin providing
 networking to Istio by connecting all sidecar proxies together and by providing
@@ -126,6 +130,8 @@ If you are interested to learn more about this use case, refer to the presentati
 ([recording](https://t.co/cx6CQhn1xl),
 [slides](https://www.slideshare.net/ThomasGraf5/accelerating-envoy-and-istio-with-cilium-and-the-linux-kernel))**
 as presented at KubeCon 2018 in Austin.
+
+<a id="enhancing-istio-security-with-cilium"></a>
 
 ## Enhancing Istio Security with Cilium
 
@@ -195,6 +201,8 @@ using socket-aware BPF programs.
 **Fun fact:** Socket-aware BPF programs are not limited to IP-based sockets.
 The security policies can be extended to cover UNIX domain sockets as well.
 
+<a id="tls-visibility-for-external-services-work-in-progress"></a>
+
 ## TLS visibility for external services (Work in Progress)
 
 Istio relies on visibility into the application protocol layer such as HTTP to
@@ -234,6 +242,8 @@ this data available to the sidecar to unleash Istio on connections to external
 services.
 
 ![Cilium + Istio Architecture](cilium_istio_feature_overview.png)
+
+<a id="how-can-ktls-be-transparent-without-requiring-application-changes"></a>
 
 ### How can kTLS be transparent without requiring application changes?
 

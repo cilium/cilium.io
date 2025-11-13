@@ -10,6 +10,8 @@ tags:
   - Cilium
 ---
 
+<a id="improving-the-security-of-ciliums-mutual-authentication"></a>
+
 ## Improving the security of Cilium's Mutual Authentication
 
 Traditionally, service meshes have achieved mutual authentication and encryption by setting up an mTLS connection between workload proxies running in sidecar containers within the pods at either end of the connection. As you might recall if you've been following this space, last year Cilium introduced an innovative approach to providing [mutual authentication between workloads](https://docs.cilium.io/en/stable/network/servicemesh/mutual-authentication/mutual-authentication/). It splits mutual authentication and encryption (the two fundamentals of mutual TLS) into two separate channels. This removes the overhead of per-pod proxy sidecars, and opens up the possibility of authenticating traffic that uses protocols other than TCP.
@@ -45,6 +47,8 @@ The flow for a packet is that, when the packet passes through Cilium's policy en
 
 Once this handshake succeeds, the userspace cilium-agent adds the details into the Auth Table, and any future packets will be allowed to proceed.
 
+<a id="cilium-identities"></a>
+
 ## Cilium Identities
 
 To understand the details of how the Auth table stores authentication information, it's important to understand how Cilium's Policy engine assigns identity to network traffic.
@@ -62,6 +66,8 @@ Many Cilium installs use either VXLAN (it's the default networking mode), or Wir
 
 However, for many different reasons, other Cilium installs need not to use any encapsulation. This is called Direct Routing or Native Routing in Cilium's documentation, and when it's involved with no Wireguard encryption, the ipcache is used as the main method of imputing identity to network traffic. This will be important later.
 
+<a id="auth-table-and-its-implications"></a>
+
 ## Auth table and its implications
 
 The Auth table stores the following details:
@@ -77,6 +83,8 @@ Doing things in this way allows some big advantages:
 - Similarly, because the mutual auth is performed per identity, only one TLS handshake is required for each identity-identity-node tuple. So a pod can open as many TCP connections as it likes without having to pay a TLS handshake overhead for each one. This can result in a significant amount of time saved, and speed up connections by a large amount for workloads that don't make good use of shared connection mechanisms like HTTP/2.
 - Because the auth mechanism is handled out-of-band of the actual traffic, then key rotations can be performed by the userspace agent before the old keypair expires, and update the auth table with the new expiry time. This means that _key rotation is completely invisible_, connections are _not_ interrupted by the key rotation process.
 - Lastly, if users wish to, they can use mutual auth in the absence of encryption, and avoid paying the latency cost of encrypting every packet. For users who do not wish to pay the compute and latency cost of encryption, this tradeoff may be worthwhile.
+
+<a id="issue-with-the-current-approach"></a>
 
 ## Issue with the current approach
 
@@ -140,6 +148,8 @@ The CFP lays out a proposal to mitigate this risk in two ways:
 
 The first idea makes cache manipulation irrelevant, because the inbound packets include the security identity in a header.
 
+<a id="requiring-encryption-or-encapsulation-resolves-cache-manipulation"></a>
+
 ## Requiring encryption or encapsulation resolves cache manipulation
 
 This assertion depends on two things that may not be clear:
@@ -170,6 +180,8 @@ However, it's after that there is a difference:
 ![Node state after cache manipulation exploit, with identity in packet](after-exploit-with-auth-and-encryption.png)
 
 Even though the ipcache entries don't match on both nodes, the identity being included in the packets means that the datapath relies on that instead of the ipcache, so any cache manipulation is irrelevant.
+
+<a id="connection-based-mutual-authentication-method"></a>
 
 ## Connection-based mutual authentication method
 

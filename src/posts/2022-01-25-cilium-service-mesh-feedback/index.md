@@ -18,6 +18,8 @@ tags:
 
 Last month we kicked off beta testing for [Cilium as an efficient data plane implementation for Service Mesh](https://cilium.io/blog/2021/12/01/cilium-service-mesh-beta). Here’s an update on what we’ve learned so far, and some thoughts on next steps. If you’ve tried out the beta already we’d love your feedback in this [short survey](https://docs.google.com/forms/d/e/1FAIpQLScp2TRX63V1Pz0yk4Ec7kN0LnTse6LPDrhBxBV9x2p1IGnDqg/viewform?usp=sf_link).
 
+<a id="who-joined-the-beta-so-far"></a>
+
 ## Who joined the beta so far?
 
 We’ve had well over 300 responses to the Cilium Service Mesh Beta so far, with
@@ -76,6 +78,8 @@ We also offered free-form text for people to tell us about other features they w
 - **Multi-cluster** support was a popular response. Cilium already supports service routing across multiple clusters through Cilium Clustermesh, so it should be straightforward evolution for Cilium Service Mesh to be easily configured to run across multiple clusters.
 
 - Several people called out **network policy** support. This is another benefit of supporting service mesh capabilities from within the networking data plane - it’s natural to consider service-level network policies when designing how your service mesh should operate.
+
+<a id="whats-next-in-the-cilium-service-mesh-beta"></a>
 
 ## What’s next in the Cilium Service Mesh beta?
 

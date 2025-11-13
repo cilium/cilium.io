@@ -35,6 +35,8 @@ BPF](http://vger.kernel.org/lpc_bpf2018_talks/lpc-bpf-2018-shaping.pdf) where
 Vlad and others share their experience deploying BPF to production solving
 scalable traffic shaping.
 
+<a id="problems-of-the-existing-iptables-firewall"></a>
+
 ## Problems of the existing iptables firewall
 
 Anant started his [talk](http://vger.kernel.org/lpc_net2018_talks/ebpf-firewall-LPC.pdf)
@@ -82,6 +84,8 @@ established connections as seen in common iptables rules sets? The overhead of
 the iptables/netfilter connection tracker would simply bring any machine to its
 knees when being hit with the common Facebook traffic pattern.
 
+<a id="benefits-of-a-bpf-based-firewall"></a>
+
 # Benefits of a BPF-based firewall
 
 What exactly can BPF do better? The slide that Anant presented listed the
@@ -114,6 +118,8 @@ policy can be decoupled from the network topology by creating a logical mapping
 via packet attributes, visibility at any network layer is a matter of writing
 the respective program. An extensive userspace API allows interacting with
 programs to export statistics, update maps and atomically replace BPF programs.
+
+<a id="bpf-program-details"></a>
 
 # BPF Program Details
 
@@ -158,6 +164,8 @@ which has the most specific performance requirements. There are many other use
 cases for firewalls where performance is still important but reconfigurability
 and flexibility start becoming more important as well. For this reason, Anant
 also provided insights into some ongoing projects:
+
+<a id="iptables-style-bpf-firewall-prototype"></a>
 
 ## IPtables-style BPF firewall Prototype
 

@@ -20,9 +20,13 @@ import authors from 'utils/author-data';
 
 In this final part of the series, we'll focus on a critical aspect of network observability: security. In today's rapidly evolving threat landscape, the ability to leverage observability data for security observability is not just beneficial—it's essential. Let's take a look at how Hubble's rich observability data can be used to enhance your Kubernetes network security posture.
 
+<a id="how-do-i-interpret-hubble-data"></a>
+
 ## How Do I Interpret Hubble Data?
 
 Hubble provides a wealth of security-relevant data that can be invaluable for identifying potential threats. Let's dive deeper into the types of data Hubble offers and how to interpret them:
+
+<a id="flow-logs"></a>
 
 ### Flow Logs
 
@@ -39,11 +43,15 @@ Just like PostFinance does:
 
 **_“We export the Hubble metrics, flows, and particularly the connection drops. With the source label and namespace label, we can quickly help when one of our customers or teams is having issues or a bad configuration in the namespace.”_** - Clément Nussbaumer, Systems Engineer, PostFinance ([Read the case study](https://www.cncf.io/case-studies/postfinance/))
 
+<a id="policy-verdicts"></a>
+
 ### Policy Verdicts
 
 Hubble logs whether traffic was allowed or denied based on your network policies. In a situation where you constantly see a high number of denied connections, this could indicate either an attempted attack or a misconfigured policy. Use the Hubble service map to visualize and investigate the source and destination of denied traffic to determine the cause.
 
 ![Hubble Observe in Action](images/policy-verdict.png 'Hubble policy verdict flow')
+
+<a id="dns-queries"></a>
 
 ### DNS Queries
 
@@ -51,15 +59,21 @@ Hubble captures DNS-related traffic, including query types and responses. You ca
 
 ![Hubble Observe in Action](images/dns.png 'Hubble DNS flow')
 
+<a id="http-header"></a>
+
 ### HTTP Header
 
 For HTTP traffic, Hubble can provide information about methods, paths, and headers. With this data, you can investigate suspicious user agents, unexpected request patterns, or attempts to access sensitive endpoints.
 
 ![Hubble Observe in Action](images/http.png 'Hubble HTTP flow')
 
+<a id="tls-information"></a>
+
 ### TLS Information
 
 Hubble provides details about TLS versions and cipher suites used in encrypted connections. This data can help you identify potentially insecure TLS versions or cipher suites that could cause vulnerable connections.
+
+<a id="performance-metrics"></a>
 
 ### Performance Metrics
 
@@ -69,9 +83,13 @@ The API company, WS02 spoke about how Hubble helps them fix performance issues t
 
 **_“If a customer has some performance issues, we directly use the Hubble CLI to look at the Layer 3 packets to see where things are failing and what optimization we can do.”_** - Lakmal Warusawithana, Senior Director – Cloud Architecture, WSO2 ([Read the case study](https://www.cncf.io/case-studies/wso2/))
 
+<a id="how-can-i-make-security-decisions-with-hubble-data"></a>
+
 ## How Can I Make Security Decisions with Hubble Data?
 
 With Hubble's observability data, you can make informed security decisions. Let's explore some common scenarios and how Hubble can help:
+
+<a id="detecting-potential-intrusions"></a>
 
 ### Detecting Potential Intrusions
 
@@ -79,11 +97,15 @@ With Hubble's observability data, you can make informed security decisions. Let'
 
 **Action**: Use Hubble to trace the source of these connections. If they come from an unauthorized pod or external IP, investigate immediately and consider tightening your network policies.
 
+<a id="identifying-misconfigured-policies"></a>
+
 ### Identifying Misconfigured Policies
 
 **Scenario**: Hubble shows a high number of denied connections between services that should be able to communicate.
 
 **Action**: Review your network policies and adjust them to allow legitimate traffic while maintaining the principle of least privilege.
+
+<a id="spotting-data-exfiltration-attempts"></a>
 
 ### Spotting Data Exfiltration Attempts
 
@@ -103,11 +125,15 @@ With Hubble's observability data, you can make informed security decisions. Let'
 
 **Action**: Use Hubble's flow logs to trace all connections made by the compromised pod, identifying any potential spread of the attack.
 
+<a id="optimizing-network-policies"></a>
+
 ### Optimizing Network Policies
 
 **Scenario**: You want to implement a zero-trust network model in your cluster.
 
 **Action**: Analyze Hubble's flow logs to understand the actual communication patterns between services. Use this information to create precise, least-privilege network policies.
+
+<a id="what-are-some-best-practices-for-incident-response"></a>
 
 ## What Are Some Best Practices for Incident Response?
 
@@ -122,6 +148,8 @@ Incorporating Hubble into your incident response strategy can significantly impr
 - **Practice Forensics**: In the event of an incident, use Hubble's detailed logs to perform thorough forensic analysis.
 
 - **Regular Policy Reviews**: Leverage Hubble's policy verdict data to review and refine your network policies regularly.
+
+<a id="taking-your-platform-and-network-security-to-the-next-level-with-tetragon"></a>
 
 ## Taking Your Platform And Network Security to The Next Level With Tetragon
 

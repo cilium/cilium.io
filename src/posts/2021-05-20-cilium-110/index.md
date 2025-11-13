@@ -86,6 +86,8 @@ features:
   New guides for Rancher and Rancher Kubernetes Engine make it easier
   to deploy Cilium in on-prem Kubernetes environments.
 
+<a id="what-is-cilium"></a>
+
 ## What is Cilium?
 
 Cilium is open source software for transparently providing and securing the

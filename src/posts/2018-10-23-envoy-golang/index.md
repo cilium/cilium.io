@@ -27,6 +27,8 @@ policy enforcement capability, both implemented as Envoy Go extension.
 As usual, a big shout out to the entire community of Cilium developers who have
 contributed 785 commits in the time period between 1.2 and 1.3.
 
+<a id="what-are-envoy-go-extensions"></a>
+
 ## What are Envoy Go extensions?
 
 We have been relying on [Envoy] for all processing of HTTP and gRPC as well as
@@ -97,6 +99,8 @@ See the section **[Introduction to
 Cilium](https://cilium.readthedocs.io/en/v1.3/intro/)** for a more detailed general
 introduction to Cilium.
 
+<a id="what-is-envoy"></a>
+
 ## What is Envoy?
 
 Envoy is an L7 proxy and communication bus designed for large modern
@@ -109,6 +113,8 @@ service-oriented architectures. The project was born out of the belief that:
 You can learn more about Envoy in the section [What is
 Envoy](https://www.envoyproxy.io/docs/envoy/latest/intro/what_is_envoy) of the
 Envoy documentation.
+
+<a id="how-to-write-an-envoy-go-extension"></a>
 
 # How to write an Envoy Go extension
 
@@ -343,6 +349,8 @@ For a full example using Memcached, see the [Memcached getting started guide](ht
 
 # Community
 
+<a id="linux-foundation-core-infrastructure-initiative-best-practices"></a>
+
 ## Linux Foundation Core Infrastructure Initiative Best Practices
 
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/1269/badge)](https://bestpractices.coreinfrastructure.org/projects/1269)
@@ -354,6 +362,8 @@ Practices](https://bestpractices.coreinfrastructure.org/en) of the Linux
 Foundation [Core Infrastructure
 Initiative](https://www.coreinfrastructure.org/). You can learn
 more about the badge program [here](https://www.coreinfrastructure.org/programs/badge-program/).
+
+<a id="introduction-of-special-interest-groups-sigs"></a>
 
 ## Introduction of Special Interest Groups (SIGs)
 

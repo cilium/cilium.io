@@ -35,6 +35,8 @@ This three-part series dives deep into Hubble, exploring how it can transform yo
 
 One of Cilium's standout benefits is its ability to enforce network policies at the kernel level, providing both enhanced security and improved performance compared to traditional [iptables-based solutions](https://isovalent.com/blog/post/why-replace-iptables-with-ebpf/).
 
+<a id="what-is-hubble"></a>
+
 ### What is Hubble?
 
 Hubble is Cilium's observability layer, offering deep insights into your Kubernetes cluster's network. It's like a powerful microscope for your cluster's network traffic, allowing you to see and understand what's happening at a granular level.
@@ -48,6 +50,8 @@ Hubble is Cilium's observability layer, offering deep insights into your Kuberne
 
 Hubble's integration with Cilium provides contextual information about network flows, making it easier to understand and troubleshoot complex networking scenarios in Kubernetes environments.
 
+<a id="why-use-cilium-and-hubble-for-network-security"></a>
+
 ### Why Use Cilium and Hubble for Network Security?
 
 Traditional network security tools often need help to keep up with the dynamic nature of Kubernetes environments. Cilium and Hubble offer several advantages:
@@ -57,6 +61,8 @@ Traditional network security tools often need help to keep up with the dynamic n
 - **Deep visibility**: Hubble provides unprecedented visibility into network flows, making detecting and responding to security threats easier.
 - **API-aware visibility and security**: Cilium can understand and secure application-layer (L7) protocols, allowing for more granular and effective security policies, Hubble can provide application-level visibility such as HTTP request headers and DNS Queries
 
+<a id="setting-up-cilium-and-hubble"></a>
+
 ### Setting Up Cilium and Hubble
 
 The best way to get started with Cilium and Hubble in your environment is to read through the [official introduction](https://docs.cilium.io/en/stable/overview/intro/#intro) in the Cilium documentation. The [official documentation](https://docs.cilium.io/en/stable/gettingstarted/hubble_setup/#hubble-setup) guides you through installing Cilium and Hubble, configuring Hubble to suit your environment, and using the Hubble UI.
@@ -64,6 +70,8 @@ The best way to get started with Cilium and Hubble in your environment is to rea
 Explore the Isovalent repository of [hands-on Labs](http://cilium.io/labs) for a live approach to learning how to use Cilium and Hubble in your Kubernetes cluster. These labs educate you on the various features that both Cilium and Hubble provide and how to use them effectively.
 
 However, if you're not ready to fully switch to Cilium as your CNI, don't worry. You can still leverage Hubble's powerful observability features through CNI chaining. This approach allows you to benefit from Hubble's insights while maintaining your current networking setup. To learn more about this method, check out this detailed guide on [using Cilium Hubble for observability in CNI chaining mode](https://isovalent.com/blog/post/cilium-hubble-observability-cni-chaining-mode/). This flexibility ensures that you can benefit from Hubble's capabilities regardless of your current setup.
+
+<a id="hubble-in-the-wild"></a>
 
 ### Hubble In The Wild
 

@@ -42,6 +42,8 @@ have 4.18 kernels and can use eBPF capabilities](https://access.redhat.com/docum
 As a result we're seeing Cilium adoption in more and more deployments, with the
 field hardening that implies.
 
+<a id="the-natural-default-cni"></a>
+
 ## The natural default CNI
 
 The big public cloud providers have taken an interest along the way. Google uses

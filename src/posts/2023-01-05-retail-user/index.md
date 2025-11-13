@@ -25,9 +25,13 @@ Retail experiences are increasingly moving online with consumers wanting to be a
 
 They needed to modernize to meet the needs of the rapidly changing retail industry. A key part of that strategy was adopting a multi-cloud strategy, across an on-premises private cloud platform and multiple public cloud providers. While their digital presence is incrementally moving to the public cloud, an on-premises environment is still required for the foreseeable future. Their private cloud needed a developer experience similar to what would be offered in the public cloud to keep pace.
 
+<a id="building-a-secure-private-cloud"></a>
+
 ## Building a Secure Private Cloud
 
 The Cloud Center of Excellence was tasked with building out a cloud native platform for their private cloud. With a complex set of data centers, stores, and regulated environments they needed to be careful about their technology selection because it could quickly become an unmaintainable stack of tools customized to each environment. They turned towards open source to give them the speed and flexibility that they needed. By working with the projects, they could learn what assumptions were made, what the roadmap is, and how they could influence or even drive feature development. The company took the philosophy that they would look for a CNCF project before actually developing anything on their own.
+
+<a id="cloud-native-networking-requirements"></a>
 
 ## Cloud Native Networking Requirements
 
@@ -39,11 +43,15 @@ They selected Kubernetes as the foundation for their private cloud due to its AP
 - High level of observability
 - IPv6-readiness for future requirements
 
+<a id="migrating-from-calico-to-cilium"></a>
+
 ## Migrating from Calico to Cilium
 
 The retail company originally started building their network with Calico, but ran into problems. They wanted to run routing daemons on the boxes as routers in their network, outside the CNI and Kubernetes, they also wanted to be able to mesh clusters together, and needed a BGP environment. When looking for alternative solutions, they landed upon Cilium and decided to work with [Isovalent](https://isovalent.com/) to implement it.
 
 They set up a new environment and started to migrate workloads from their existing infrastructure to the new one. This provided the smoothest transition from a consumer point of view because they just had to switch the routing in the back door. With Cilium enabled, they were able to take advantage of many new features including Cilium Cluster Mesh to provide cross cluster service discovery, load balancing, and network policies, integration with their existing firewall and leaf/spine network with Egress Gateway and BGP respectively, and flow observability of their network traffic with Hubble.
+
+<a id="cilium-benefits-and-future-direction"></a>
 
 ## Cilium Benefits and Future Direction
 

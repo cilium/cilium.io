@@ -31,6 +31,8 @@ To celebrate the [Cilium project hitting 1.0](https://www.cilium.io/blog/2018/04
 we wanted to take a moment to share the broader story behind how BPF and Cilium are driving the biggest change in the past
 two decades of Linux networking and security, and invite you to join in on the fun.
 
+<a id="why-linux-is-the-right-place-for-network-routing-visibility-and-security"></a>
+
 ## Why Linux is the Right Place for Network Routing, Visibility, and Security
 
 Despite almost everything about how we design and run our applications changing, in-kernel capabilities like
@@ -41,6 +43,8 @@ Why? It comes down to the fact that in-kernel network and security has several k
 - **Performance:** Workload data is already traversing the local kernel, so additional data processing can be efficient in terms of both throughput and latency.
 - **Transparency:** Applications code and containers require no changes/reconfiguration, as they are already sending/receiving data using TCP/IP sockets.
 - **Security:** A compromised or misconfigured application faces a very high barrier to bypass or disable kernel-level enforcement.
+
+<a id="the-limits-of-a-general-purpose-ip-port-based-firewall"></a>
 
 ## The Limits of a General Purpose IP/port-based Firewall
 
@@ -55,12 +59,16 @@ via an API running on a single port (e.g., HTTP).
 So we found it worth asking: what would an in-kernel Linux networking and security approach look like if it was being designed from
 scratch today for the era of microservices?
 
+<a id="enter-bpf-flexibly-and-safety-extending-the-linux-kernel"></a>
+
 ## Enter BPF: Flexibly and Safety Extending the Linux Kernel
 
 BPF is a powerful new capability for extending the Linux kernel without compromising on safety or speed. BPF is a framework for running custom logic at various hook points in the kernel, including many points in the Linux networking stack. BPF logic is written as simple “BPF programs” that are run through a programmatic verifier to ensure that they under no circumstances could compromise, crash, or hang the kernel that evokes it. After verification, these programs are then JIT-compiled to native assembly code (e.g., x86), meaning they run at the same speed as code compiled into the kernel.
 
 BPFs capabilities have grown incredibly the past few years, and Linux-centric tech companies that are operating at massive scales have already taken notice: [Netflix](http://www.brendangregg.com/Slides/BSidesSF2017_BPF_security_monitoring.pdf),
 [Facebook](https://www.netdevconf.org/2.1/slides/apr6/zhou-netdev-xdp-2017.pdf), and [Google](https://www.socallinuxexpo.org/sites/default/files/presentations/bcc-scale.pdf) have all made significant bets on BPF as a mechanism for kernel extensibility. Readers curious for a deep-dive on BPF bytecode verification, JIT-compilation and more will enjoy our [BPF and XDP Reference Guide](http://cilium.readthedocs.io/en/stable/bpf/), but Cilium hides this complexity from end users, providing simple integrations with container orchestrators like Kubernetes, Mesos, and Docker.
+
+<a id="cilium-empowering-kubernetes-networking-and-security-with-bpf"></a>
 
 ## Cilium: Empowering Kubernetes Networking and Security with BPF
 
@@ -69,6 +77,8 @@ for running API-driven microservices on platforms like Kubernetes. We’ll focus
 
 - Moving beyond a simple focus on packets, IP addresses, and ports, and instead treating service identity and API protocols (e.g., HTTP, gRPC, and Kafka) as first-class citizens in the platform.
 - Optimizing Linux network forwarding, visibility, and filtering for the scale, dynamism and deployment patterns (e.g., service mesh proxies) that are increasingly common in microservices environments.
+
+<a id="service-centric-identity-and-api-awareness"></a>
 
 ### Service-Centric Identity and API-Awareness
 
@@ -113,9 +123,13 @@ cilium-microscope --to-selector id=app1 --type l7
 
 With Cilium, there is no need to worry about how many container replicas are implementing service ‘app1’, what hosts these containers are running on, or what IP addresses the containers were assigned at any point in time.
 
+<a id="bpf-optimized-dataplane-performance"></a>
+
 ### BPF-optimized Dataplane Performance
 
 Cilium leverages BPF to customize the in-kernel data flow, algorithms, and data structures used for forwarding data, optimizing for the exact use case and container identity. This can yield some amazing benefits at many points in data forwarding, but we will focus on just two below.
+
+<a id="kubernetes-service-load-balancing"></a>
 
 ##### Kubernetes Service Load Balancing
 
@@ -149,6 +163,8 @@ resulting in approximately 2X the throughput compared to iptables redirect when 
 
 Long story short, if you see the use of local proxies either directly or via a service mesh as part of your future architecture,
 using BPF + Cilium Sockmap should be a no-brainer way to reduce CPU/memory usage and drive down latency.
+
+<a id="join-the-cilium-community"></a>
 
 ## Join The Cilium Community...
 

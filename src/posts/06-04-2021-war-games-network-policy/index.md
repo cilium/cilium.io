@@ -28,17 +28,23 @@ Network security isn’t a new concept. The term “firewall”in the context of
 
 Fortunately, Kubernetes brings with it the built-in concept[^1] of Network Policy that takes us in the right direction. Even better, Network Policies can be the basis for even stronger, more granular network security than we enjoyed in the old days of monoliths and firewalls.
 
+<a id="ip-addresses-are-in-flux"></a>
+
 ## IP addresses are in flux
 
 The main reason we can’t just rely on old-fashioned firewalls is that Kubernetes deployments are dynamic. Pods appear and disappear frequently, and they get scheduled onto different machines across the deployment. Each pod gets assigned an IP address, but that IP address is ephemeral, like the pod itself, and the set of IP addresses being used across your application today might be very different tomorrow.
 
 In the old days, firewall rules would be defined in terms of IP addresses and ports, but that makes no sense when IP addresses are constantly in flux.
 
+<a id="application-code-is-distributed-across-nodes"></a>
+
 ## Application code is distributed across nodes
 
 Another problem with traditional firewalls is that they don’t have visibility into traffic flowing within any given node. In the traditional approach, you would know what application code is running on each (virtual) machine in your deployment. You might have a set of machines handling the front end, another set handling the database and so on. A network firewall can police the traffic flowing into and out of each node, with rules that reflect the code that’s running on the machine in question.
 
 But in the cloud native world, there is a much looser relationship between host machines and the code that runs on them. Kubernetes schedules each new pod to a suitable node in the cluster, such that any given node could have a variety of different pods running on it. A traditional firewall wouldn’t have visibility into the traffic between pods that happen to be co-located on the same machine.
+
+<a id="network-policy-objects"></a>
 
 ## Network Policy objects
 
@@ -48,6 +54,8 @@ The Kubernetes NetworkPolicy resource also lets us define what external traffic 
 
 Some network plugins extend the basic concepts of Kubernetes Network Policy to provide additional capabilities. One simple example is that Cilium lets you define egress rules in terms of DNS names. This means you can set up a policy to allow your pods to send messages to some-domain.com without needing to worry about the possibility of the domain moving to a different IP address.
 
+<a id="increasing-the-granularity-of-security"></a>
+
 ## Increasing the granularity of security
 
 The cloud native approach encourages us to architect applications in the form of services or even microservices, so that they can be developed, deployed and scaled independently. A useful corollary is that they can also be secured independently, and Network Policies give us a tool to help us do exactly that. We can build network policies that only permit the expected traffic to and from each microservice.
@@ -55,6 +63,8 @@ The cloud native approach encourages us to architect applications in the form of
 For example, in an e-commerce application, we expect to see a product search microservice to respond to requests from a frontend service, and look up information in a product database. There is no need to give the product search service the ability to make any other network connections except to that database. Then if an attacker does manage to compromise the product search app code (perhaps through a vulnerability in its code or one of its dependencies), it’s much harder for the attacker to move laterally from the product search pod to any other part of the system.
 
 Fine-grained network policy definitions allow us to give minimal, least-privilege permissions to the different microservices in our application. This limits the possible blast radius of a successful exploit of any part of the system.
+
+<a id="learning-about-network-policies"></a>
 
 ## Learning about Network Policies
 
