@@ -10,6 +10,7 @@ const YoutubeIframe = ({ embedId }) => (
       src={`https://www.youtube.com/embed/${embedId}`}
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       title="Embedded YouTube"
+      referrerPolicy="strict-origin-when-cross-origin"
       allowFullScreen
     />
   </figure>

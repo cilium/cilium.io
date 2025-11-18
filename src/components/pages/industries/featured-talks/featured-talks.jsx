@@ -24,6 +24,7 @@ const FeaturedTalks = ({ heading, talks, className }) => (
               title="YouTube video player"
               className="aspect-video w-full rounded-lg border border-gray-3"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
             />
             <Heading
