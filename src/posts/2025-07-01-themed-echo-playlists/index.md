@@ -116,7 +116,7 @@ playlists={[
 
 <a id="runtime-security-with-tetragon"></a>
 
-## 🔒 Runtime Security with Tetragon
+# 🔒 Runtime Security with Tetragon
 
 Need process-level enforcement and instant CVE detection? The Tetragon playlist shows how eBPF can hook every `execve`,
 file write, and socket call before turning them into actionable policies.
