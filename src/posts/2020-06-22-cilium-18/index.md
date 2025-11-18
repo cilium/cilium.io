@@ -257,7 +257,9 @@ In Cilium 1.8, Hubble Relay is required for Hubble UI.
 
 <a name="hostfw"></a>
 
-### <a id="host-level-network-policies"></a>Host-level Network Policies
+<a id="host-level-network-policies"></a>
+
+### Host-level Network Policies
 
 _Contributed by Paul Chaignon (Isovalent)_
 
@@ -451,7 +453,7 @@ resulting in both, reduced memory footprint and reduced binary size.
 
 <a name="container-size"></a>
 
-## <a id="cilium-container-image-optimizations"></a>Cilium Container Image Optimizations
+## Cilium Container Image Optimizations
 
 _Contributed by Daniel Borkmann (Isovalent)_
 
