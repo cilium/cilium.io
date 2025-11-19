@@ -51,6 +51,8 @@ logical step in a BPF’s journey to revitalize the Linux networking stack for
 the modern area. To understand why this shift is so exciting, allow me to take
 you on a bit of a tour through the history of iptables in the kernel.
 
+<a id="iptables-and-the-roots-of-sequential-filtering"></a>
+
 ## iptables and the roots of sequential filtering
 
 iptables has been the primary tool to implement firewalls and packet filters on
@@ -83,6 +85,8 @@ received or transmitted is matched against a list of rules, one by one.
 
 However, linear processing has an obvious massive disadvantage, the cost of
 filtering a packet can increase linearly with the number of rules added.
+
+<a id="the-intermediate-workaround-ipset"></a>
 
 ## The intermediate workaround: ipset
 
@@ -123,6 +127,8 @@ nodes in a cluster must be constantly aware of the latest IP to container
 mapping. While this is barely difficult within a cluster, it becomes incredibly
 challenging across clusters. Diving into the details is outside of the scope of
 this blog post so we will save it for a future post.
+
+<a id="the-rise-of-bpf"></a>
 
 ## The rise of BPF
 
@@ -192,6 +198,8 @@ maintaining a more complete list of [projects using
 BPF](http://cilium.readthedocs.io/en/stable/bpf/#projects-using-bpf) in the
 [BPF reference guide](http://docs.cilium.io/en/stable/bpf/).
 
+<a id="one-bpf-to-rule-them-all"></a>
+
 ## One BPF to rule them all
 
 The most recent development in the evolution of BPF is an exciting proposal to
@@ -217,6 +225,8 @@ the power of BPF. It must be noted that bpfilter and BPF itself will not solve
 the performance problems caused by iptables's use of sequential lists. Doing so
 will require native use of BPF such as done by the [Cilium](https://cilium.io/)
 project.
+
+<a id="how-has-the-kernel-community-reacted"></a>
 
 ## How has the kernel community reacted?
 

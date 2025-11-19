@@ -45,6 +45,8 @@ As mentioned above both the hardware **and** the evolution of the application ar
 You could potentially manage a copy of a kernel with your network code in and accept a huge amount of technical debt moving forward. Kernel modules are also a potential option, but they still come with the overhead and technical debt of managing a continuing stream of new releases and patching for older kernels, not to mention the risk of bugs bringing down the whole server.
 For commercial operating systems such as Windows, there are no clear routes to have code added to their kernel.
 
+<a id="enter-ebpf"></a>
+
 ## Enter eBPF 🐝
 
 The demands of the applications, the improved hardware, and the limitations/restrictions of the operating system have been met with the innovation of eBPF. Simply put, eBPF technology allows developers to write code that will run in a sandbox environment inside the kernel. Suddenly, this technology allowed developers to write code that runs in a highly efficient and privileged environment and can interact with the network stack with minimal performance penalties.
@@ -57,6 +59,8 @@ Originally, eBPF allowed connectivity through to the Linux Kernel Packet Schedul
 - eBPF programs can be loaded by the NIC driver (if supported) to run on the NIC itself, effectively offloading various processing activities from both the Kernel and the server CPU itself
 
 With the innovations from eBPF programs and hooks in the Kernel, we can now start to realize the high levels of performance of commercial hardware that before were only available through specific-purpose silicon. An example of this was discussed by the developers of Cilium at [KubeCon North America 2022](https://kccncna2022.sched.com/event/182DB/100gbits-clusters-with-cilium-building-tomorrows-networking-data-plane-daniel-borkmann-nikolay-aleksandrov-isovalent), where they talked about reaching 100Gbit/S with IPv6 clusters.
+
+<a id="taking-ebpf-to-the-next-level-with-cilium"></a>
 
 ## Taking eBPF to the next level with Cilium
 

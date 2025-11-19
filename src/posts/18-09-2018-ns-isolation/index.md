@@ -17,6 +17,8 @@ ogSummary: 'Issue #11 of the BPF Updates newsletter covers new helper functions,
 
 Kubernetes provides [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/) for controlling traffic going in and out of the pods. Cilium implements the Kubernetes Network Policies for L3/L4 level and extends with L7 policies for granular API-level security for common protocols such as HTTP, Kafka, gRPC, etc. As per the Kubernetes Network Policy model, Cilium policies follow the whitelist model. When a policy is enabled for a pod, all ingress and egress traffic are denied by default unless the policy specification allows specific traffic. As a result, inter-namespace communication will be denied by default and we need policy specifications to whitelist traffic within namespace and legitimate traffic in and out of a namespace.
 
+<a id="setup-to-test-the-policies"></a>
+
 ## Setup to test the policies
 
 - Kubernetes cluster running on AWS created using [Cilium Kubespray guide](http://docs.cilium.io/en/latest/kubernetes/install/kubespray/#k8s-install-kubespray)
@@ -26,6 +28,8 @@ Kubernetes provides [Network Policies](https://kubernetes.io/docs/concepts/servi
 kubectl create ns empire
 kubectl create -f https://raw.githubusercontent.com/cilium/cilium/v1.2.2/examples/minikube/http-sw-app.yaml -n empire
 ```
+
+<a id="allowing-all-traffic-within-a-namespace-while-blocking-inter-namespace-traffic"></a>
 
 ## Allowing all traffic within a namespace while blocking inter-namespace traffic
 
@@ -123,6 +127,8 @@ kubectl exec -it tiefighter -n empire -- curl -sL kubernetes-dashboard.kube-syst
 ^C
 ```
 
+<a id="allowing-select-ingress-from-other-namespaces"></a>
+
 ## Allowing select ingress from other namespaces
 
 Similar to whitelisting the `kube-dns` access, there is often need to whitelist specific ingress traffic from other namespaces. A common example is Prometheus monitoring, which makes `HTTP GET` calls to pods to pull metrics. We will create a simple Prometheus pod in `monitoring` namespace and apply the following policy which allows traffic from Prometheus to all the pods in the `empire` namespace. Additionally, we will restrict the Prometheus pod access to specific port, `8080`, and to specific `HTTP GET /metrics` call. This is an example of combining L3, L4 and L7 policies for strict least privilege access.
@@ -186,6 +192,8 @@ kubectl exec -it prometheus-core-84677d797f-wrhm7 -n monitoring -- wget -O metri
 kubectl exec -it prometheus-core-84677d797f-wrhm7 -n monitoring -- wget -O random_get deathstar.empire.svc.cluster.local:80/v1
 ^C
 ```
+
+<a id="allowing-select-egress-to-outside-the-cluster"></a>
 
 ## Allowing select egress to outside the cluster
 

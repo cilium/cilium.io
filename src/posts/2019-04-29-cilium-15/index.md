@@ -73,9 +73,10 @@ introduction to Cilium.
 
 # Scalability
 
-_Thank You: we would like to thank Google for providing us with [Google
+\_Thank You: we would like to thank Google for providing us with [Google
 Cloud](https://cloud.google.com) credits to run extensive scalability tests and
-benchmarks._
+
+benchmarks.\_
 
 On our quest to unlocking scalability, we have encountered several challenges.
 Some of them were expected problems known to most software engineers:
@@ -118,6 +119,8 @@ Other challenges were a bit more surprising:
   apiserver. For most of them, the rate limiting is dependent on the cluster
   size. When scaling up quickly, the rate limiting can lag behind
   significantly.
+
+<a id="new-unlocked-scalability"></a>
 
 ## New Unlocked Scalability
 
@@ -184,6 +187,8 @@ etcd itself but in grpc-go and has been fixed by [gprpc-go PR#2695](https://gith
 [etcd PR#10624](https://github.com/etcd-io/etcd/pull/10624) has been opened as well
 to rebase on top of the fixed grpc-go.
 
+<a id="scaling-kubernetes-events"></a>
+
 ## Scaling Kubernetes Events
 
 Cilium uses the Kubernetes node resource to detect other nodes in the
@@ -230,6 +235,8 @@ thus only distribute an event when significant fields have changed. It also
 means that the heavy-weight event is sent once to the single-instance operator
 and a light-weight event is distributed to the 5000 worker nodes.
 
+<a id="optimizing-kubernetes-resource-caches"></a>
+
 ## Optimizing Kubernetes Resource Caches
 
 Another problem that appears at scale is the amount of memory it requires to
@@ -245,6 +252,8 @@ By introducing a slimmed down of various Kubernetes resources that only defines
 the fields of relevance, the memory consumption of the agent in each node can
 be reduced significantly. The graph above shows the difference in memory
 consumption in a 2K nodes GKE cluster.
+
+<a id="dealing-with-apiserver-rate-limiting"></a>
 
 ## Dealing with apiserver rate-limiting
 
@@ -325,7 +334,6 @@ templating](https://lore.kernel.org/bpf/CAADnVQKaPEi5-vjG_fvt0o8e9b9wAC665++3s48
 which will be part of the Linux 5.2 release later this year.
 
 <a name="BpfMasquerading"></a>
-<a name="bpf-based-masquerading-support"></a>
 
 # BPF-based masquerading support
 

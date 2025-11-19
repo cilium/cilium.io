@@ -23,6 +23,8 @@ As the cloud native ecosystem has matured, simplifying complexities without comp
 
 This article aims to trace Cilium’s journey from its early days to becoming a go-to solution for enterprises in search of a rock-solid networking, observability and security solution. Understanding this journey is significant as it mirrors the broader industry's transition towards cloud native technologies, which is essential in harnessing the full potential of application teams and modern infrastructure.
 
+<a id="the-evolution-of-cilium"></a>
+
 ## The Evolution of Cilium
 
 In 2014, the Linux networking ecosystem experienced a wave of innovation that reshaped it.
@@ -35,6 +37,8 @@ The initial implementation of Cilium was as an eBPF-based Container Networking I
 
 Cilium’s evolution is a great example of innovation spurred by necessity and an evolving journey towards creating a platform that meets the requirements of the cloud native world.
 
+<a id="ebpf-the-heart-of-cilium"></a>
+
 ## eBPF - The Heart of Cilium
 
 eBPF is the core technology powering Cilium, providing high-performance networking, security, and deep observability in cloud native environments like Kubernetes clusters and even beyond​.
@@ -44,6 +48,8 @@ eBPF has high performance because it is [JIT (Just-In-Time) compiled](https://en
 Major organizations and projects such as [Meta](https://www.youtube.com/watch?v=ZYBXZFKPS28), [Netflix](https://netflixtechblog.com/how-netflix-uses-ebpf-flow-logs-at-scale-for-network-insight-e3ea997dca96), and [Google](https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebpf-and-cilium-to-google-kubernetes-engine) use eBPF across their organization for its ability to enhance system performance, provide granular observability, and provide better security. Additionally, its [wide adoption](https://ebpf.io/case-studies/) and contributions from various organizations underline its importance and the pivotal role it plays in modern technology solutions.
 
 Harnessing the power of eBPF enables dynamic insertion of powerful security, visibility, and networking control logic right into the Linux kernel. This is the cornerstone of Cilium's capabilities in providing [high-performance](https://cilium.io/use-cases/cni/) and [multi-cluster](https://cilium.io/use-cases/cluster-mesh/) networking, [advanced load balancing](https://cilium.io/use-cases/load-balancer/), [observability](https://cilium.io/use-cases/protocol-visibility/), [transparent encryption](https://cilium.io/use-cases/transparent-encryption/), and [extensive network security](https://cilium.io/use-cases/runtime-enforcement/) capabilities, to name a few.
+
+<a id="cloud-native-challenges-meet-their-match-with-cilium"></a>
 
 ## Cloud Native Challenges Meet Their Match with Cilium
 
@@ -58,6 +64,8 @@ High-performance networking is not just a need but a critical requisite for real
 As enterprises grow, the scalability of networking solutions also becomes a focal point. Cilium offers a high-performance [layer 4 load balancer](https://cilium.io/use-cases/load-balancer/) designed to efficiently handle the networking demands of large-scale, distributed architectures. Cilium’s [Kube-proxy replacement](https://cilium.io/use-cases/kube-proxy/) can also provide enhanced networking speed and efficiency for enterprises building on Kubernetes. These features of Cilium ensure that as the enterprise grows, the networking solutions evolve equally, meeting the dynamic demands head-on.
 
 The narrative of Cilium being referred to as a game-changer in the enterprise domain comes from its ability to simplify the complex world of cloud native networking, security, and observability, making it a critical component of modern cloud native platforms.
+
+<a id="cilium-in-action-case-studies"></a>
 
 ## Cilium in Action: Case Studies
 
@@ -88,6 +96,8 @@ After rigorous performance testing of various solutions, Trendyol opted for Cili
 Cilium is now the default CNI for Trendyol’s Kubernetes clusters. The migration to Cilium’s advanced networking from Flannel increased their network performance **by over 40%**, according to their internal benchmarks, significantly transcending their expectations. You can read more about this case study [here](https://www.cncf.io/case-studies/trendyol/).
 
 The practical implementation of Cilium in Bloomberg, Meltwater, and Trendyol’s systems showcases its robust, adaptable nature in addressing distinct challenges in varied enterprise environments. From enhancing data security and observability to significantly improving networking performance and scalability, Cilium emerges as a comprehensive platform.
+
+<a id="cilium-built-for-the-enterprise"></a>
 
 ## Cilium: Built For The Enterprise
 
