@@ -45,7 +45,6 @@ const items = [
 ];
 
 const Faq = () => {
-  // Generate FAQ Schema as JSON-LD
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
