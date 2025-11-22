@@ -30,7 +30,7 @@ const items = [
   {
     question: 'How does Cilium handle security policies?',
     answer:
-      'Cilium enforces security policies using identity-based controls, runtime enforcement, and transparent encryption.Instead of relying on traditional IP-based rules, Cilium assigns identities to workloads and applies fine-grained, context-aware policies that secure communication between services in modern, dynamic environments.',
+      'Cilium enforces security policies using identity-based controls, runtime enforcement, and transparent encryption. Instead of relying on traditional IP-based rules, Cilium assigns identities to workloads and applies fine-grained, context-aware policies that secure communication between services in modern, dynamic environments.',
   },
   {
     question: 'How can I contribute to Cilium?',
@@ -40,24 +40,43 @@ const items = [
   {
     question: 'Where can I find Cilium tutorial or workshop?',
     answer:
-      'Get hands-on experience with Cilium through interactive courses, tutorials, and official documentation. Practice using Cilium’s networking, observability, and security features in labs provided by companies within the Cilium ecosystem. Check out the <a href="https://cilium.io/labs/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">Cilium Labs</a> to get started.',
+      'Get hands-on experience with Cilium through interactive courses, tutorials, and official documentation. Practice using Cilium\'s networking, observability, and security features in labs provided by companies within the Cilium ecosystem. Check out the <a href="https://cilium.io/labs/" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">Cilium Labs</a> to get started.',
   },
 ];
 
-const Faq = () => (
-  <section className="bg-white py-10 md:py-16 lg:py-20 mt-10 md:mt-20 lg:mt-28 xl:mt-40">
-    <Container size="xs">
-      <Heading className="text-center" size="lg" tag="h2">
-        {title}
-      </Heading>
-      <dl className="mt-6 md:mt-10 lg:mt-14">
-        {items.map((item, index) => {
-          const faqId = `faq${index + 1}`;
-          return <Item {...item} faqId={faqId} key={index} isDefaultOpen={index === 0} />;
-        })}
-      </dl>
-    </Container>
-  </section>
-);
+const Faq = () => {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
+
+  return (
+    <section className="bg-white py-10 md:py-16 lg:py-20 mt-10 md:mt-20 lg:mt-28 xl:mt-40">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Container size="xs">
+        <Heading className="text-center" size="lg" tag="h2">
+          {title}
+        </Heading>
+        <dl className="mt-6 md:mt-10 lg:mt-14">
+          {items.map((item, index) => {
+            const faqId = `faq${index + 1}`;
+            return <Item {...item} faqId={faqId} key={index} isDefaultOpen={index === 0} />;
+          })}
+        </dl>
+      </Container>
+    </section>
+  );
+};
 
 export default Faq;
