@@ -33,6 +33,8 @@ Telecommunications involves connecting people across the world. In order to achi
 
 They have a large multi-tenanted Kubernetes platform with Cilium as the CNI but needed to update their security model fundamentally because of the new business mandates. They required a performant and secure solution to help them implement zero-trust network security and landed on leveraging additional features in Cilium as the answer.
 
+<a id="leveraging-more-features-in-cilium-to-meet-new-business-requirements"></a>
+
 ## Leveraging More Features in Cilium to Meet New Business Requirements
 
 The platform team manages a large, highly multi-tenanted Kubernetes platform with >20,000 vCPUs across seven production regions and >100 tenant teams of developers pushing code to the platform. As a platform provider in the telecommunications industry, they always needed to ensure that their 100+ tenant teams could all work on the same platform without blocking each other while providing the teams with good guardrails required for security and compliance.
@@ -44,6 +46,8 @@ In other business areas, using cloud provider-level solutions or integrating tra
 To achieve this level of control and ensure developer happiness, they had to take a different approach with Cilium at the forefront.
 
 _“We were certain that Cilium would be the key to successfully implementing the requirements in the context of our platform – and this proved to be the case.”_ - A member of their Infrastructure team.
+
+<a id="leveraging-cilium-to-satisfy-business-zero-trust-networking-requirements"></a>
 
 ## Leveraging Cilium to Satisfy Business Zero Trust Networking Requirements
 
@@ -60,6 +64,8 @@ To ensure each platform tenant could manage their network policies with a compli
 Through the design and operation of this system, they were able to satisfy business requirements around the control and traceability of updates to the egress approval list while also allowing tenants to have direct supervision and responsibility over the restrictions that affect their applications.
 
 _“The use of Cilium proved a key element of our ability to successfully deliver these requirements due to the level of control and visibility it provides over traffic flows on our platform and the native integration with the Kubernetes API on which our platform is based.”_
+
+<a id="empowering-developers-and-meeting-security-requirements"></a>
 
 ## Empowering Developers and Meeting Security Requirements
 

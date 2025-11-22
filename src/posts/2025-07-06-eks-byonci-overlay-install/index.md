@@ -20,10 +20,14 @@ import authors from 'utils/author-data';
 
 ##### Author: Paul Arah, Isovalent@Cisco
 
+<a id="installing-cilium-on-eks-in-overlay-byocni-and-cni-chaining-mode"></a>
+
 ## Installing Cilium on EKS in Overlay(BYOCNI) and CNI Chaining Mode
 
 In the first part of this EKS series, we covered setting up an EKS cluster and installing Cilium in ENI mode.
 In this second and last of the EKS series, we’ll cover installing Cilium in overlay mode and CNI chaining mode.
+
+<a id="installing-cilium-on-eks-in-cni-chaining-mode"></a>
 
 ## Installing Cilium on EKS in CNI chaining mode
 
@@ -149,6 +153,8 @@ kubectl -n kube-system exec ds/cilium -- cilium status
 
 - Additionally, you can run the connectivity tests to ensure your installation works properly.
 
+<a id="installing-cilium-on-eks-in-byocni-or-overlay-mode"></a>
+
 ## Installing Cilium on EKS in BYOCNI or Overlay Mode
 
 BYOCNI mode ("Bring your own CNI"), or overlay, creates an overlay network for pods using UDP-based encapsulation protocols such as VXLAN or Geneve. This installation mode has the advantage of being independent of pod network sizing/IP addressing limitations of AWS ENI.
@@ -222,6 +228,8 @@ eksctl create nodegroup -f nodegroup.yaml
 
 - Afterwards, we can check the status of the nodes to ensure that they are in a ready state, use the Cilium health tool and connectivity tests to validate our installation.
 
+<a id="a-primer-on-encapsulation-vs-native-direct-routing-in-cilium"></a>
+
 ## A Primer on Encapsulation vs Native/Direct Routing in Cilium
 
 Throughout this series, we’ve explored different ways to install Cilium in an EKS cluster. To better understand the trade-offs between these methods and help determine which one is right for you, it's important to examine a core concept in Cilium: routing.
@@ -231,6 +239,8 @@ Cilium supports two primary networking modes for routing traffic between Kuberne
 Encapsulation uses overlay networks like VXLAN or Geneve to tunnel traffic between nodes, forming a mesh of virtual paths. This simplifies setup, avoids IP conflicts, and works well in complex or multi-cloud environments. However, it comes with performance overhead and potential [maximum transfer unit(MTU)](https://docs.cilium.io/en/stable/network/concepts/routing/) issues due to the added packet headers.
 
 Native routing, on the other hand, skips tunneling entirely and relies on the underlying network to route PodCIDRs directly. This results in better performance and eliminates MTU concerns, but it requires a network that is aware of all pod IPs typically achievable in on-prem setups or cloud environments.
+
+<a id="is-aws-eni-considered-a-form-of-native-routing-in-cilium"></a>
 
 ## Is AWS ENI is considered a form of native routing in Cilium?
 

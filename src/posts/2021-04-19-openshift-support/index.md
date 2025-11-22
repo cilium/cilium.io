@@ -17,6 +17,8 @@ ogSummary: 'Cilium is now a Red Hat Certified OpenShift CNI Plug-in, ensuring re
 
 ![](cover.png)
 
+<a id="certified-red-hat-openshift-cni-plug-in"></a>
+
 ## Certified Red Hat OpenShift CNI Plug-in
 
 We are pleased to introduce the availability of Cilium in the

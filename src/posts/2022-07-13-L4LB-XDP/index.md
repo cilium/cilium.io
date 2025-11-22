@@ -55,6 +55,8 @@ supports-priv-flags: yes
 c1:00.0 Ethernet controller: Intel Corporation Ethernet Controller XXV710 for 25GbE SFP28 (rev 02)
 ```
 
+<a id="launching-standalone-l4lb"></a>
+
 ## Launching Standalone L4LB
 
 Cilium itself is released as a Docker image which we tried running on the IPVS node itself. As we wanted to persist the state when the Cilium container is restarted/upgraded, we created a systemd service to mount the bpf filesystem:
@@ -128,6 +130,8 @@ For BGP announcement, [we use BIRD](https://docs.cilium.io/en/stable/gettingstar
 # systemctl start bird
 # systemctl start bird6
 ```
+
+<a id="comparison-under-load"></a>
 
 ## Comparison Under Load
 
@@ -203,6 +207,8 @@ Curl client output:
 ![L4LB 14.8Mpps curl](14_8Mpps-xdp-curl.png)
 
 At 14.8Mpps there were a few packet drops here and there but because we were hitting NIC limits this was totally expected.
+
+<a id="production-traffic"></a>
 
 ## Production Traffic
 

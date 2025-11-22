@@ -29,6 +29,8 @@ on to hear what Josh has to say...
 In this post we'll discuss why one might want to change CNIs, what I have learnt
 developing a solution for live migration, and how it all works.
 
+<a id="what-is-cni-and-why-change-it"></a>
+
 ## What is CNI, and why change it?
 
 Container Network Interface (CNI) is a big topic, but in short, CNI is a set of
@@ -82,6 +84,8 @@ that the only solution for changing a CNI is to take the entire cluster down,
 replace it, and bring up all workloads again on the new CNI. This of course
 causes downtime, or at the least, requires a full cluster migration. For some
 companies this might be unacceptable. So, how about a live migration instead?
+
+<a id="designing-a-live-cni-migration"></a>
 
 ## Designing a live CNI Migration
 
@@ -335,6 +339,8 @@ In this config, we have defined `k8s-pod-network` to be the master CNI network
 to Kubernetes. Cilium is the second CNI to be called. Finally, this config
 should apply to all namespaces (`"systemNamespaces": [""]`).
 
+<a id="cni-ordering"></a>
+
 ### CNI Ordering
 
 When CNIs are installed on a cluster, they are naturally run as a DaemonSet to
@@ -398,6 +404,8 @@ $ kubectl exec knet-stress-2-br2t5 -- ip route
 default via 172.29.197.231 dev net1
 172.29.197.231 dev net1 scope link
 ```
+
+<a id="encapsulation-mode"></a>
 
 ### Encapsulation Mode
 

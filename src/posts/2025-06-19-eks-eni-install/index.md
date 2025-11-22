@@ -20,15 +20,21 @@ _June 19th, 2025_
 
 _Author: Paul Arah, Isovalent@Cisco_
 
+<a id="installing-cilium-on-eks-in-eni-mode"></a>
+
 ## Installing Cilium on EKS in ENI Mode
 
 Amazon EKS is one of the most widely used managed Kubernetes services, chosen by many teams to offload the complexity of cluster management. Deploying Cilium on EKS unlocks powerful networking, security, and observability capabilities that go far beyond the default setup.
 In this blog post series, we’ll explore the different ways to install Cilium on Amazon EKS. This first post focuses on deploying and configuring Cilium in ENI mode.
 
+<a id="why-cilium-on-eks"></a>
+
 ## Why Cilium on EKS?
 
 EKS provides a managed Kubernetes control plane backed by AWS scalable infrastructure. Since Kubernetes doesn't include a native network interface, networking plugins like Cilium and the default AWS VPC CNI provide this functionality. Cilium elevates EKS networking by offering a consistent, high-performance cloud native experience. Cilium seamlessly integrates with AWS's software-defined networking (SDN) while adding eBPF-based policy enforcement, advanced observability, multi-cluster capabilities, service mesh functionalities, all with superior performance. It is also noteworthy to mention that Cilium is the default built-in networking addon for EKS-Anywhere.
 ![alt text](image.png)
+
+<a id="what-is-eni-mode"></a>
 
 ## What is ENI Mode?
 
@@ -40,6 +46,8 @@ The following prerequisites need to be taken into account:
 
 - An active AWS Account
 - Install [kubectl](https://kubernetes.io/releases/download/#kubectl), [Helm](https://helm.sh/docs/intro/install/), [eksctl](https://docs.aws.amazon.com/eks/latest/userguide/setting-up.html), [awscli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html), and [Cilium CLI](https://docs.cilium.io/en/stable/gettingstarted/k8s-install-default/#install-the-cilium-cli)
+
+<a id="creating-our-eks-cluster"></a>
 
 ## Creating our EKS cluster
 
@@ -69,6 +77,8 @@ eksctl create cluster -f cilium-eks-config.yaml
 ```
 
 - Check the status of the pods; the core-dns pods should be running in a pending state. This is because we currently do not have a CNI in the cluster.
+
+<a id="installing-and-configuring-cilium"></a>
 
 ## Installing and Configuring Cilium
 

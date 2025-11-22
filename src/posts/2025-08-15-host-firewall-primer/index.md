@@ -26,15 +26,21 @@ When discussing Kubernetes network security, much of the attention focuses on po
 
 Cilium host firewall is built to lock down the host network namespace with precision, visibility, and control, extending the same familiar declarative Kubernetes network policy model to the underlying host. In this blog post, we’ll explore what Cilium Host Firewall is, how it works, and why it should be a core part of your Kubernetes security.
 
+<a id="the-node-as-a-blind-spot"></a>
+
 ## The Node as a Blind Spot
 
 Kubernetes native network policies don’t apply to host-level traffic. This means any communication that enters or leaves the host directly (for example, SSH, kubelet, or external monitoring agents) is largely invisible to traditional Kubernetes policy enforcement. While some firewalling is possible via firewalld or external systems, managing those rules is brittle and lacks integration with Kubernetes. At the core of it, this is the problem Cilium host firewall solves. Leveraging eBPF, Cilium introduces host firewalling directly into the fabric of the cluster.
+
+<a id="how-cilium-host-firewall-works"></a>
 
 ## How Cilium’s Host Firewall Works
 
 Cilium treats the node as a special type of endpoint with the label reserved:host. This lets us apply policies just like we would for pods, except these apply to traffic to and from the node(s) themselves. Cilium host firewall operates at the interface level. You can explicitly set which devices it attaches to (eth0, eth1, etc.), or let Cilium auto-detect them.
 
 ![alt text](host_bastion_anim.gif)
+
+<a id="enabling-host-firewall"></a>
 
 ## Enabling Host Firewall
 
@@ -78,6 +84,8 @@ kubectl label node k8s1 node-access=ssh
 
 This allows you to scope policies to specific nodes based on purpose or function (e.g., node-access=ssh, type=ingress-worker).
 
+<a id="audit-mode"></a>
+
 ## Audit Mode
 
 Before enforcing a new host policy, you can enable Policy Audit Mode. This mode logs what would have been dropped without actually enforcing the rules. It's an essential step to avoid self-inflicted outages such as accidentally cutting off access to the kube-apiserver or SSH.
@@ -94,6 +102,8 @@ Monitor traffic verdicts with:
 
 This provides real-time insights into which flows would have been denied, letting you fine-tune policies before flipping the enforcement switch.
 
+<a id="observe-network-traffic-with-hubble"></a>
+
 ## Observe Network Traffic with Hubble
 
 Cilium assigns a special identity of “1” to the nodes in a cluster. We can use this identity to filter and observe the node’s network traffic.
@@ -101,6 +111,8 @@ Cilium assigns a special identity of “1” to the nodes in a cluster. We can u
 ```shell
     hubble observe --to-identity 1 --port 22 -f
 ```
+
+<a id="writing-host-network-policies"></a>
 
 ## Writing Host Network Policies
 
@@ -139,6 +151,8 @@ spec:
             - type: EchoRequest
               family: IPv4
 ```
+
+<a id="enforcing-the-policy"></a>
 
 ## Enforcing the Policy
 
@@ -182,6 +196,8 @@ spec:
             - port: '8472'
               protocol: UDP # VXLAN
 ```
+
+<a id="best-practices-and-troubleshooting-tips"></a>
 
 ## Best Practices and Troubleshooting Tips
 

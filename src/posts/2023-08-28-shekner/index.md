@@ -19,11 +19,15 @@ _Author: Amir Kheirkhahan, DB Schenker_
 
 ![After removing calico resources](after-removing-calico-resources.png)
 
+<a id="history-behind-the-migration-to-cilium"></a>
+
 ## History behind the Migration to Cilium
 
 In the past, the IT unit for the land transportation business of [DB Schenker](https://www.dbschenker.com/de-de) used Calico as a Container Network Interface ([CNI](https://www.cni.dev/)) for in-Kubernetes-Cluster communication, like pod-to-pod communication. Recently our team had the chance to participate in the 2023 [KubeCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/) in Amsterdam, where we learned a lot about [eBPF](https://ebpf.io/) and especially [Cilium](https://cilium.io/), which was an important driver for us to question our CNI strategy.
 
 Although Calico offers eBPF as well and leverages some important features of it, Cilium was built natively on top of eBPF. In parallel we saw wide adoption in the market and a very feature rich tooling and ecosystem around Cilium, like [Tetragon](https://github.com/cilium/tetragon) for security observability and [Hubble](https://github.com/cilium/hubble) for network visibility. All of these factors together made the decision clear that we needed to migrate to Cilium to prepare our platform for the next steps in our cloud native journey.
+
+<a id="live-migration-considerations"></a>
 
 ## Live migration Considerations
 
