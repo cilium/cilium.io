@@ -54,7 +54,7 @@ const Faq = () => {
       name: item.question,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: item.answer.replace(/<[^>]*>/g, ''),
+        text: item.answer,
       },
     })),
   };
