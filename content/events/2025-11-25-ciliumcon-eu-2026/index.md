@@ -1,5 +1,5 @@
 ---
-date: '2025-11-25T11:00:00.000Z'
+date: '2026-03-23T11:00:00.000Z'
 region: Europe
 place: Amsterdam, The Netherlands
 title: 'CiliumCon Europe 2026'
