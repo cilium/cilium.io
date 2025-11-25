@@ -5,7 +5,7 @@ place: Amsterdam, The Netherlands
 title: 'CiliumCon EU 2023'
 ogSummary: 'You’ll hear from end users who will share their experiences, and from contributors who will teach you about Cilium’s technology, and its use of eBPF to provide high-performance networking, observability, and security features'
 ogImage: talkseu.jpg
-externalUrl: 'https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/'
+externalUrl: 'https://events.linuxfoundation.org/archive/2023/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/'
 type: Conference
 isFeatured: false
 ---
