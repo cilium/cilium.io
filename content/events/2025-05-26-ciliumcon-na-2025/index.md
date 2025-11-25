@@ -1,5 +1,5 @@
 ---
-date: '2025-05-28T11:00:00.000Z'
+date: '2025-11-10T11:00:00.000Z'
 region: North America
 place: Atlanta, Georgia
 title: 'CiliumCon North America 2025'
