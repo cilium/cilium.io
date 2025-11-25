@@ -54,19 +54,30 @@ What makes this particularly deadly is that the attack leverages legitimate beha
 ```yaml
 spec:
   kprobes:
-    - call: 'fd_install'
-      syscall: false
+    - call: '__x64_sys_openat'
+      syscall: true
       args:
-        - index: 0
-          type: 'int'
         - index: 1
-          type: 'file'
+          type: string
+        - index: 2
+          type: int
       selectors:
         - matchArgs:
             - index: 1
-              operator: 'Equal'
+              operator: Equal
               values:
                 - '/proc/self/exe'
+            #Require write access (flags & 3 != 0 → not O_RDONLY)
+            - index: 2
+              operator: Mask
+              values:
+                - '3'
+          #Only suspicious when NOT in the host PID namespace
+          matchNamespaces:
+            - namespace: Pid
+              operator: NotIn
+              values:
+                - 'host_ns'
           matchActions:
             - action: Sigkill
 ```
