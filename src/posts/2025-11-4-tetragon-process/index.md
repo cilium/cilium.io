@@ -88,33 +88,39 @@ Modern attackers increasingly use legitimate system tools for malicious purposes
 ![](chain.png)
 
 A web server process spawning bash is unusual. That bash process immediately running curl to download from the internet is even more suspicious. The downloaded script executing a find for SSH keys and database credentials seals the deal.
-Tetragon's process ancestry tracking is crucial here. You can create policies that understand parent-child relationships:
+Tetragon's child process visibility is crucial here. You can create policies that understand parent-child relationships. For example, you monitor unexpected shells launched from web-facing applications. To detect these behaviors, you can match on the parent binary and ask Tetragon to automatically follow all child processes it spawns.
 
 ```yaml
 spec:
   kprobes:
     - call: 'sys_execve'
+      syscall: true
+      args:
+        - index: 0
+          type: 'string'
       selectors:
         - matchBinaries:
-            - operator: 'In'
-              values:
-                - '/bin/bash'
-                - '/bin/sh'
-          matchParentBinaries:
             - operator: 'In'
               values:
                 - '/usr/sbin/nginx'
                 - '/usr/bin/node'
                 - '/usr/local/bin/python'
+              followChildren: true
+          matchArgs:
+            - index: 0
+              operator: 'Equal'
+              values:
+                - '/bin/bash'
+                - '/bin/sh'
           matchActions:
             - action: Post
 ```
 
-This tracing policy detects when shells spawn from web server processes, a common indicator of remote code execution.
+This sample tracing policy monitors execution starting from nginx, node, or python and follows the children they spawn. If any of those processes create a shell, Tetragon detects this with full lineage visibility. An activity like this is a strong signal of remote code execution or “living off the land” activity.
 
 ## Building Observability-Driven Prevention Policies
 
-The most powerful of Tetragon is translating detection events into prevention policies. This is different from traditional security tools that rely on signature-based detection or predefined rule sets. Instead, you observe actual behavior of your workloads in your environment, understand what the expected behavior is, and finally create policies that block deviations from this expected behavior. There are two ways to go about this:
+The most powerful of Tetragon is translating detection events into prevention policies. This is different from traditional security tools that rely on signature-based detection or predefined rule sets. Instead, you observe actual behavior of your workloads in your environment, understand what the expected behavior is, and finally create policies that block deviations from this expected behavior. There are generally two ways to go about this:
 
 ### The Allowlist Approach: Least Privilege
 
