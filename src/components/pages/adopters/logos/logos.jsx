@@ -55,6 +55,7 @@ import SovereignLogo from './images/sovereign.inline.svg';
 import SysElevenLogo from './images/syseleven.inline.svg';
 import TencentCloudLogo from './images/tencent-cloud.inline.svg';
 import VKCloudLogo from './images/vkcloud.inline.svg';
+import vnpostLogo from './images/vncloud.inline.svg';
 
 const logos = {
   syseleven: SysElevenLogo,
@@ -104,6 +105,7 @@ const logos = {
   ovh: OVHcloudLogo,
   fptTelecom: FPTTelecomLogo,
   ost: OSTLogo,
+  vnpost: vnpostLogo,
   esnet: ESnetLogo,
   ionx: IONXLogo,
 };
