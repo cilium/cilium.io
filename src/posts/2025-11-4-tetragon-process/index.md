@@ -127,7 +127,7 @@ spec:
             - action: Post
 ```
 
-This sample tracing policy monitors execution starting from nginx, node, or python and follows the children they spawn. If any of those processes create a shell, Tetragon detects this with full lineage visibility. An activity like this is a strong signal of remote code execution or “living off the land” activity.
+This sample tracing policy monitors execution starting from nginx, node, or python and follows the children they spawn. If any of those processes creates a shell, Tetragon detects this with full lineage visibility. An activity like this is a strong signal of remote code execution or “living off the land” activity.
 
 ## Building Observability-Driven Prevention Policies
 
