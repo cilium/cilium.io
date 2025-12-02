@@ -2,7 +2,7 @@
 path: '/blog/2025/11/29/peacesandy-cilium-internship-experience'
 date: '2025-11-29T13:00:00.000Z'
 title: 'Contributing to Cilium Through the LFX Mentorship Program'
-ogImage: LFXAcceptanceEmail.jpg
+ogImage: lfxacceptanceemail.png
 isFeatured: false
 ogSummary: 'A detailed reflection on my 3-month LFX Mentorship improving Cilium’s SEO, AEO, and AIO to enhance discoverability, structured data, and AI-driven search performance.'
 categories:
@@ -73,4 +73,4 @@ The Cilium ecosystem will always hold a special place in my heart.
 
 And finally, thank you to the Linux Foundation for creating the LFX Mentorship Program. It is truly a life-changing opportunity.
 
-<BlogAuthor {...authors.peaceSandy} />
+<BlogAuthor {...authors.PeaceSandy} />
