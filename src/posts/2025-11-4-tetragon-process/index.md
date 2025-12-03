@@ -105,12 +105,10 @@ Tetragon's child process visibility is crucial here. You can create policies tha
 
 ```yaml
 spec:
-  kprobes:
-    # https://www.kernel.org/doc/html/latest/core-api/kernel-api.html#c.security_bprm_check
-    - call: 'security_bprm_check'
-      syscall: false
+  # https://www.kernel.org/doc/html/latest/core-api/kernel-api.html#c.security_bprm_check
+  lsmhooks:
+    - hook: 'bprm_check_security'
       args:
-        # Resolve filename of the program being executed
         - index: 0
           type: 'string'
           resolve: 'filename'
@@ -121,7 +119,7 @@ spec:
                 - '/usr/sbin/nginx'
                 - '/usr/bin/node'
                 - '/usr/local/bin/python'
-              followChildren: true # also follow their children
+              followChildren: true
           matchArgs:
             - index: 0
               operator: 'In'
@@ -129,7 +127,7 @@ spec:
                 - '/bin/bash'
                 - '/bin/sh'
           matchActions:
-            - action: Sigkill
+            - action: Post
 ```
 
 This sample tracing policy monitors execution starting from nginx, node, or python and follows the children they spawn. If any of those processes creates a shell, Tetragon detects this with full lineage visibility. An activity like this is a strong signal of remote code execution or “living off the land” activity.
