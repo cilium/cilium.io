@@ -128,5 +128,10 @@ export default {
     she helps grow the Cilium and eBPF communities through storytelling, 
     social media, showcasing user success, and building connections across the open source ecosystem.`,
   },
+  PeaceSandy: {
+    header: `Peace Sandy`,
+    bio: `Peace Sandy is an LFX mentee who contributed to improving Cilium SEO, AEO, and 
+    AIO during her mentorship period.`,
+  },
 };
 
