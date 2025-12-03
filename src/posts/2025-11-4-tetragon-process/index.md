@@ -54,30 +54,32 @@ What makes this particularly deadly is that the attack leverages legitimate beha
 ```yaml
 spec:
   kprobes:
-    - call: '__x64_sys_openat'
-      syscall: true
+    # https://www.kernel.org/doc/html/latest/core-api/kernel-api.html#c.security_file_permission
+    - call: 'security_file_permission'
+      syscall: false
       args:
+        - index: 0
+          type: 'file'
         - index: 1
-          type: string
-        - index: 2
-          type: int
+          type: 'int'
       selectors:
         - matchArgs:
+            - index: 0
+              operator: 'Equal'
+              values:
+                - '/usr/bin/runc' #adjust to your actual runc path
+            # MAY_WRITE
             - index: 1
-              operator: Equal
+              operator: 'Mask'
               values:
-                - '/proc/self/exe'
-            #Require write access (flags & 3 != 0 → not O_RDONLY)
-            - index: 2
-              operator: Mask
-              values:
-                - '3'
+                - '2'
           #Only suspicious when NOT in the host PID namespace
           matchNamespaces:
             - namespace: Pid
               operator: NotIn
               values:
                 - 'host_ns'
+          #kill the offending process
           matchActions:
             - action: Sigkill
 ```
@@ -104,11 +106,14 @@ Tetragon's child process visibility is crucial here. You can create policies tha
 ```yaml
 spec:
   kprobes:
-    - call: 'sys_execve'
-      syscall: true
+    # https://www.kernel.org/doc/html/latest/core-api/kernel-api.html#c.security_bprm_check
+    - call: 'security_bprm_check'
+      syscall: false
       args:
+        # Resolve filename of the program being executed
         - index: 0
           type: 'string'
+          resolve: 'filename'
       selectors:
         - matchBinaries:
             - operator: 'In'
@@ -116,15 +121,15 @@ spec:
                 - '/usr/sbin/nginx'
                 - '/usr/bin/node'
                 - '/usr/local/bin/python'
-              followChildren: true
+              followChildren: true # also follow their children
           matchArgs:
             - index: 0
-              operator: 'Equal'
+              operator: 'In'
               values:
                 - '/bin/bash'
                 - '/bin/sh'
           matchActions:
-            - action: Post
+            - action: Sigkill
 ```
 
 This sample tracing policy monitors execution starting from nginx, node, or python and follows the children they spawn. If any of those processes creates a shell, Tetragon detects this with full lineage visibility. An activity like this is a strong signal of remote code execution or “living off the land” activity.
