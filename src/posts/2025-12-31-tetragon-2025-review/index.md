@@ -15,7 +15,7 @@ tags:
 
 ![](cover.png)
 
-As we close out another incredible year, we want to pause and say thank you to the entire Tetragon community. From contributors and maintainers to users, speakers, and the entire community, this year was shaped by your energy, curiosity, and commitment to advancing the standard of runtime security forward.
+As we close out another incredible year, we want to pause and say thank you to the entire Tetragon community. From contributors and maintainers to users, speakers, and the entire community, this year was shaped by your energy, curiosity, and commitment to advancing the standard of runtime security.
 
 Tetragon has continued to grow because of the amazing people behind it: those writing code, testing edge cases, sharing feedback, publishing blogs, and teaching others what’s possible with eBPF-powered security observability and runtime enforcement. Together, we made meaningful progress both technically and as a community, laying a strong foundation for the future.
 
