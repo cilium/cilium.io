@@ -102,4 +102,4 @@ See you in 2026!
 
 For the Tetragon Community:
 
-Paul Arah, Community Builder – Security
+<BlogAuthor {...authors.PaulArah} />
