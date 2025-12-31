@@ -29,7 +29,7 @@ This year marked an important milestone with the ongoing work to bring Tetragon�
 
 ### Persistent Enforcement
 
-First introduced in the Tetragon 1.12 release in late 2024, persistent enforcement remains one of the most impactful features that shipped lately. With this persistent enforcement, enforcement policies continue running even if the Tetragon agent goes down, closing a critical security gap during agent restarts or failures. To enable persistent enforcement, configure Tetragon with `--keep-sensors-on-exit`. This ensures that when the tetragon process exits, enforcements policies stays active because they’re pinned in sysfs bpf tree under `/sys/fs/bpf/tetragon` directory.
+First introduced in the Tetragon 1.12 release in late 2024, persistent enforcement remains one of the most impactful features. With persistent enforcement, policies continue running even if the Tetragon agent goes down, closing a critical security gap during agent restarts or failures. To enable persistent enforcement, configure Tetragon with `--keep-sensors-on-exit`. This ensures that when the Tetragon process exits, enforcements policies stays active because they’re pinned in sysfs bpf tree under the `/sys/fs/bpf/tetragon` directory.
 
 ### Flexible Enforcement Modes for Tracing Policies
 
