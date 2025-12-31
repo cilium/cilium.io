@@ -64,8 +64,9 @@ A major portion of userspace tracing support landed this year with uprobes and U
 
 ### Community Voices
 
-_One quote from a security engineer at a large social networking company captured this sentiment perfectly:
-“The best situation is when other services and teams don't even realize that a security tool is running. That’s when you know you’ve done your job well, and that’s what Tetragon gives us… Tetragon had the best performance among all the tools we tested.”_
+One quote from a security engineer at a large social networking company captured this sentiment perfectly:
+
+_“The best situation is when other services and teams don't even realize that a security tool is running. That’s when you know you’ve done your job well, and that’s what Tetragon gives us. Tetragon had the best performance among all the tools we tested.”_
 
 ### Community Talks & Learning
 
