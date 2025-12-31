@@ -11,7 +11,7 @@ tags:
   - Tetragon
 ---
 
-**_Author: Paul Arah, Isovalent@Cisco_**
+import authors from 'utils/author-data';
 
 ![](cover.png)
 
