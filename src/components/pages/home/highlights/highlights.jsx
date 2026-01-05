@@ -79,6 +79,11 @@ const list = [
         path: 'multicast',
       },
       {
+        icon: BandWidthIcon,
+        title: 'IPv6',
+        path: 'ipv6',
+      },
+      {
         icon: MulticastIcon,
         title: 'Host Firewall',
         path: 'host-firewall',
