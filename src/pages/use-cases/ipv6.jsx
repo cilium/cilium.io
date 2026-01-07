@@ -40,7 +40,7 @@ const sectionContent2 = {
 const sectionContent3 = {
   title: 'A Unified IPv6 Datapath Built on eBPF',
   description:
-    'IPv6 in Cilium is implemented across the same eBPF-based datapath that powers networking, security, and observability. This creates a unified model in which IPv4, IPv6, and dual-stack clusters share the same architecture and operational semantics. For platform teams, this means fewer special cases, simpler troubleshooting, and confidence that IPv6 workloads behave exactly as expected at scale.',
+    'IPv6 in Cilium is implemented with the same eBPF-based datapath that powers IPv4 networking, security, and observability. This creates a unified model in which IPv4, IPv6, and dual-stack clusters share the same architecture and operational semantics. For platform teams, this means fewer special cases, simpler troubleshooting, and confidence that IPv6 workloads behave exactly as expected at scale.',
   videoSrc: 'https://www.youtube.com/embed/R7QrjZMeZhM?si=SzZmba9sL_RlRP9D',
 };
 
