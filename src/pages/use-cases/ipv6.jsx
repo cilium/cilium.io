@@ -12,7 +12,7 @@ import MainLayout from 'layouts/main/main';
 const heroContent = {
   title: 'IPv6-Native Kubernetes Networking with Cilium',
   category: 'Networking',
-  tagline: 'Cloud-native networking at IPv6 scale, powered by eBPF',
+  tagline: 'Cloud native networking at IPv6 scale, powered by eBPF',
   subHeading: 'IPv6-Native Kubernetes Networking with Cilium',
   description:
     'IPv6 adoption is accelerating across modern infrastructure. Address exhaustion, large-scale cluster growth, and cloud native connectivity are pushing platform teams toward IPv6-first designs.
