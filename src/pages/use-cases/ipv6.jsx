@@ -25,7 +25,9 @@ const heroContent = {
 const sectionContent1 = {
   title: 'IPv6 Underlay with Overlay Simplicity',
   description:
-    'Operating Kubernetes across diverse infrastructure often requires abstraction from the physical network. Encapsulation modes such as VXLAN and Geneve provide that abstraction, allowing clusters to behave consistently regardless of where they run. Cilium enables these overlays to operate on top of an IPv6-only physical network. The underlay can be entirely IPv6 while pod-to-pod traffic continues to flow through a stable encapsulated datapath. This allows platform teams to modernize their networks to IPv6 without rethinking how Kubernetes connectivity is designed or operated. The result is an IPv6-native foundation with the same predictable networking model teams already trust.',
+    'Operating Kubernetes across diverse infrastructure often requires abstraction from the physical network. Encapsulation modes such as VXLAN and Geneve provide that abstraction, allowing clusters to behave consistently regardless of where they run.
+    
+    Cilium enables these overlays to operate on top of an IPv6-only physical network. The underlay can be entirely IPv6 while pod-to-pod traffic continues to flow through a stable encapsulated datapath. This allows platform teams to modernize their networks to IPv6 without rethinking how Kubernetes connectivity is designed or operated. The result is an IPv6-native foundation with the same predictable networking model teams already trust.',
   videoSrc: 'https://www.youtube.com/embed/y0qlhiKtDGo?si=hMjwt1sCejRJJpJG',
 };
 
