@@ -55,7 +55,7 @@ const testimonials = [
       },
     ],
     description:
-      'TikTok’s global private VPC networks use a flat network topology with strict compliance controls. This means each machine and VM in the network has a unique IP address globally. There are about four five million machines and VMs in the network. This greatly simplified networking for the team but came with trade off of IPv4 address exhaustion and cluster administrators having no control over the network configuration. When Cilium 1.18 was released in May 2025, the team immediately tried it out in the test environment, and it met all the requirements we were looking for. In September 2025, they finally rolled out Cilium in production to four IPv6-only Kubernetes clusters.',
+      'TikTok’s global private VPC networks use a flat network topology with strict compliance controls. This means each of the five million machines and VMs in the network has a unique IP address globally. This greatly simplifies networking for the team but came with the trade-off of IPv4 address exhaustion and cluster administrators having no control over the network configuration.',
   },
 ];
 
