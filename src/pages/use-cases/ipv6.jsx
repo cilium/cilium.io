@@ -15,7 +15,9 @@ const heroContent = {
   tagline: 'Cloud-native networking at IPv6 scale, powered by eBPF',
   subHeading: 'IPv6-Native Kubernetes Networking with Cilium',
   description:
-    'IPv6 adoption is accelerating across modern infrastructure. Address exhaustion, large-scale cluster growth, and cloud-native connectivity are pushing platform teams toward IPv6-first designs. Cilium brings IPv6 deep into the Kubernetes datapath, enabling clusters to operate at scale without sacrificing performance, visibility, or control. Rather than treating IPv6 as a compatibility layer, Cilium integrates it directly into how traffic flows through the cluster. IPv6 unlocks massive address space, simplified routing, and long-term scalability. Cilium turns those advantages into practical outcomes for Kubernetes by combining IPv6-native networking with high-performance eBPF data paths. The result is a Kubernetes networking layer ready for the next decade of growth.',
+    'IPv6 adoption is accelerating across modern infrastructure. Address exhaustion, large-scale cluster growth, and cloud native connectivity are pushing platform teams toward IPv6-first designs.
+    
+    Cilium brings IPv6 deep into the Kubernetes datapath, enabling clusters to operate at scale without sacrificing performance, visibility, or control. Rather than treating IPv6 as a compatibility layer, Cilium integrates it directly into how traffic flows through the cluster. IPv6 unlocks massive address space, simplified routing, and long-term scalability. Cilium turns those advantages into practical outcomes for Kubernetes by combining IPv6-native networking with high-performance eBPF data paths. The result is a Kubernetes networking layer ready for the next decade of growth.',
   imageSrc: MultiNetworkBee,
   imageAlt: 'Multi network bee Bee',
   imageWidth: 350,
