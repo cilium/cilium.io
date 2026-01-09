@@ -40,15 +40,19 @@ const EsnetTestimonial = {
 
 const sectionContent1 = {
   title: 'IPv6 Underlay with Overlay Simplicity',
-  description:
-    'Operating Kubernetes across diverse infrastructure often requires abstraction from the physical network. Encapsulation modes such as VXLAN and Geneve provide that abstraction, allowing clusters to behave consistently regardless of where they run. Cilium enables these overlays to operate on top of an IPv6-only physical network. The underlay can be entirely IPv6 while pod-to-pod traffic continues to flow through a stable encapsulated datapath. This allows platform teams to modernize their networks to IPv6 without rethinking how Kubernetes connectivity is designed or operated. The result is an IPv6-native foundation with the same predictable networking model teams already trust.',
+  description: [
+    'Operating Kubernetes across diverse infrastructure often requires abstraction from the physical network. Encapsulation modes such as VXLAN and Geneve provide that abstraction, allowing clusters to behave consistently regardless of where they run.',
+    'Cilium enables these overlays to operate on top of an IPv6-only physical network. The underlay can be entirely IPv6 while pod-to-pod traffic continues to flow through a stable encapsulated datapath. This allows platform teams to modernize their networks to IPv6 without rethinking how Kubernetes connectivity is designed or operated. The result is an IPv6-native foundation with the same predictable networking model teams already trust.',
+  ],
   videoSrc: 'https://www.youtube.com/embed/y0qlhiKtDGo?si=hMjwt1sCejRJJpJG',
 };
 
 const sectionContent2 = {
   title: 'IPv6-Aware Egress Control',
-  description:
-    'Service networking is one of the most performance-sensitive paths in Kubernetes. Legacy approaches based on iptables introduce latency, complexity, and scaling challenges, problems that become more pronounced in large IPv6 environments. Cilium delivers IPv6 service handling directly in eBPF. Load balancing, service translation, and traffic steering all happen at the kernel level without relying on iptables or kube-proxy. IPv6 traffic benefits from the same high-performance, low-latency datapath that has made Cilium a standard for large-scale clusters. This creates a clean, efficient service model for IPv6 workloads that scales naturally as clusters grow.',
+  description: [
+    'Service networking is one of the most performance-sensitive paths in Kubernetes. Legacy approaches based on iptables introduce latency, complexity, and scaling challenges, problems that become more pronounced in large IPv6 environments.',
+    'Cilium delivers IPv6 service handling directly in eBPF. Load balancing, service translation, and traffic steering all happen at the kernel level without relying on iptables or kube-proxy. IPv6 traffic benefits from the same high-performance, low-latency datapath that has made Cilium a standard for large-scale clusters. This creates a clean, efficient service model for IPv6 workloads that scales naturally as clusters grow.',
+  ],
   videoSrc: 'https://www.youtube.com/embed/QdNVtSlecYo?si=s7uU8e9PxBeuNkiv',
   imageRight: false,
 };
