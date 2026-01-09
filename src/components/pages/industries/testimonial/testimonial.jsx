@@ -16,6 +16,7 @@ import CiliumLogo from 'icons/logo-cilium.inline.svg';
 import DatadogLogo from 'icons/logo-datadog.inline.svg';
 import DbSchenkerLogo from 'icons/logo-dbschenker.inline.svg';
 import EficodeLogo from 'icons/logo-efficode.inline.svg';
+import EsnetLogo from 'icons/logo-esnet.inline.svg';
 import GDataLogo from 'icons/logo-gdata.inline.svg';
 import GoogleCloudLogo from 'icons/logo-googlecloud.inline.svg';
 import HetznerLogo from 'icons/logo-hetzner.inline.svg';
@@ -65,6 +66,7 @@ const logos = {
   alibaba: AlibabaCloudLogo,
   trip: TripLogo,
   gdata: GDataLogo,
+  esnet: EsnetLogo,
 };
 
 const AdopterTestimonial = ({
