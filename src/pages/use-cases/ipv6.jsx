@@ -29,7 +29,7 @@ const EsnetTestimonial = {
   description:
     "ESnet is the US Department of Energy's sole high-performance networking facility, serving as the DOE's data circulatory system for its world-changing scientific research",
   quotedText: [
-    'The recent IPv6 improvements with Cilium mean you can rely on the defaults. You no longer need to be an IPv6 or networking wizard to run IPV6-only clusters. This saved us from complex workarounds and makes it easier for us to validate that our applications work in an IPv6-only world. ',
+    'The recent IPv6 improvements with Cilium mean you can rely on the defaults. You no longer need to be an IPv6 or networking wizard to run IPv6-only clusters. This saved us from complex workarounds and makes it easier for us to validate that our applications work in an IPv6-only world. ',
   ],
   withPerson: true,
   name: 'Kapil Agrawal',
