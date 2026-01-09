@@ -2,55 +2,44 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Container from 'components/shared/container';
+import Container from 'components/shared/container/container';
 import Heading from 'components/shared/heading';
 
-const FeatureSection = ({
-  title,
-  description,
+const BulletSection = ({
+  heading,
+  className,
   imageSrc,
-  imageWidth,
-  imageHeight,
-  imageAlt,
   imageRight,
   videoSrc,
+  paragraphs,
+  imageAlt,
+  imageStyle,
   withBackground,
-  className,
-}) => {
-  const descriptionList = Array.isArray(description) ? description : [description];
-
-  return (
-    <section className={classNames(withBackground && 'bg-gray-4')}>
-      <Container
+}) => (
+  <section className={classNames(withBackground && 'bg-gray-4 ')}>
+    <Container className={classNames('grid grid-cols-12 gap-y-6 gap-x-6 xl:gap-x-8', className)}>
+      <div
         className={classNames(
-          'grid grid-cols-12 gap-y-6 gap-x-6 pb-10 md:pb-20 lg:pb-28 xl:gap-x-8 xl:pb-32',
-          className
+          'col-span-full lg:col-span-5 flex flex-col justify-center',
+          !imageRight ? 'lg:col-start-8' : 'lg:col-start-1'
         )}
       >
-        <div
-          className={classNames(
-            'col-span-full lg:col-span-5 flex flex-col justify-center',
-            !imageRight ? 'lg:col-start-8' : 'lg:col-start-1'
-          )}
-        >
-          <Heading
-            className="mb-5 leading-tight lg:leading-tight xl:leading-tight dark:text-white text-black"
-            tag="h3"
-            size="md"
+        <Heading className="mb-5 leading-tight dark:text-white text-black" tag="h2" size="sm">
+          {heading}
+        </Heading>
+        {paragraphs.map((paragraph, index) => (
+          <p
+            key={index}
+            className={classNames(
+              'dark:text-gray-2 text-black',
+              index < paragraphs.length - 1 && 'mb-4'
+            )}
           >
-            {title}
-          </Heading>
-          {descriptionList.map((item, index) => (
-            <p
-              key={index}
-              className={classNames(
-                'text-lg leading-normal dark:text-gray-2 text-black',
-                index < descriptionList.length - 1 && 'mb-4'
-              )}
-              dangerouslySetInnerHTML={{ __html: item }}
-            />
-          ))}
-        </div>
+            {paragraph}
+          </p>
+        ))}
+      </div>
+      {(imageSrc || videoSrc) && (
         <div
           className={classNames(
             'col-span-full col-start-1 pt-6 md:col-span-8 md:col-start-3 lg:col-span-7 lg:pt-0',
@@ -59,21 +48,21 @@ const FeatureSection = ({
               : 'pl-0 lg:pl-10 xl:pl-[72px]'
           )}
         >
-          {imageSrc && (
+          {imageSrc && !videoSrc && (
             <img
-              className="h-auto w-full"
-              width={imageWidth}
-              height={imageHeight}
+              className={classNames('h-auto w-full', imageStyle)}
+              width={592}
+              height={350}
               src={imageSrc}
-              loading="lazy"
               alt={imageAlt}
+              loading="lazy"
             />
           )}
           {videoSrc && (
             <iframe
-              className="w-full"
-              width="560"
-              height="315"
+              className="max-h-full w-full lg:max-h-[350px] rounded"
+              width={592}
+              height={350}
               src={videoSrc}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -82,34 +71,32 @@ const FeatureSection = ({
             />
           )}
         </div>
-      </Container>
-    </section>
-  );
-};
+      )}
+    </Container>
+  </section>
+);
 
-FeatureSection.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
-    .isRequired,
+BulletSection.propTypes = {
+  heading: PropTypes.string.isRequired,
+  paragraphs: PropTypes.arrayOf(PropTypes.string),
+  className: PropTypes.string,
   imageSrc: PropTypes.string,
-  imageWidth: PropTypes.number,
-  imageHeight: PropTypes.number,
+  videoSrc: PropTypes.string,
   imageAlt: PropTypes.string,
+  imageStyle: PropTypes.string,
   imageRight: PropTypes.bool,
   withBackground: PropTypes.bool,
-  videoSrc: PropTypes.string,
-  className: PropTypes.string,
 };
 
-FeatureSection.defaultProps = {
+BulletSection.defaultProps = {
+  className: null,
+  imageSrc: null,
+  videoSrc: null,
+  imageAlt: null,
+  imageStyle: '',
+  paragraphs: [],
   imageRight: true,
   withBackground: false,
-  videoSrc: null,
-  imageWidth: 592,
-  imageHeight: 350,
-  imageSrc: null,
-  imageAlt: null,
-  className: null,
 };
 
-export default FeatureSection;
+export default BulletSection;
