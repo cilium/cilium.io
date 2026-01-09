@@ -45,7 +45,7 @@ const FeatureSection = ({
               key={index}
               className={classNames(
                 'text-lg leading-normal dark:text-gray-2 text-black',
-                index < descriptionList.length - 1 && 'mb-4'
+                index < descriptionList.length - 1 && 'mb-2'
               )}
               dangerouslySetInnerHTML={{ __html: item }}
             />
