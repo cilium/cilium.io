@@ -72,7 +72,6 @@ import ESnetLogo from './images/esnet.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FHNWLogo from './images/fhnw.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
-import FlipkartLogo from './images/flipkart.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
 import FPTTelecomLogo from './images/fpttelecom.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
@@ -241,7 +240,6 @@ const icons = {
   testifysec: TestifysecLogo,
   trendyol: TrendyolLogo,
   eficode: EficodeLogo,
-  flipkart: FlipkartLogo,
   tietoevry: TietoevryLogo,
   unitedcloud: UnitedCloudLogo,
   kubehetzner: KubehetznerLogo,
