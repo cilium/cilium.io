@@ -13,6 +13,7 @@ import AppuioLogo from './images/appuio.inline.svg';
 import AWSLogo from './images/aws.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
 import AzureKsLogo from './images/azureks.inline.svg';
+import CelonisLogo from './images/celonis-inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ConstellationLogo from './images/constellation.inline.svg';
 import CoreweaveLogo from './images/coreweave.inline.svg';
@@ -106,6 +107,7 @@ const logos = {
   ost: OSTLogo,
   esnet: ESnetLogo,
   ionx: IONXLogo,
+  celonis: CelonisLogo,
 };
 
 const spaceXClassNames = {

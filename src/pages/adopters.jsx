@@ -291,7 +291,6 @@ const userCommunity1 = {
     cloudera,
     openai,
     cybozu,
-    celonis,
   ],
 };
 
