@@ -371,7 +371,7 @@ const icons = {
   ost: OSTLogo,
   esnet: ESnetLogo,
   ionx: IONXLogo,
-  vntp: VNTPLogo
+  vntp: VNTPLogo,
 };
 
 const UserCommunity = ({
