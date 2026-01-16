@@ -1672,4 +1672,9 @@ export default {
     iconName: 'ionx',
     text: '<b>IONX Networks Limited</b> uses Cilium as CNI plugin in their infrastructure',
   },
+  vntp: {
+    iconName: 'vntp',
+    text: '<b>VNTP</b> leverages Cilium for secure and scalable Kubernetes networking',
+  },
+
 };
