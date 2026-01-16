@@ -1674,6 +1674,6 @@ export default {
   },
   vnpt: {
     iconName: 'vnpt',
-    text: '<b>Vietnam Post Cloud<b> uses Cilium in their production, staging, and development clusters'
+    text: '<b>Vietnam Posts and Telecommunications Group<b> leverages Cilium as a foundational component for its modern, cloud-native infrastructure'
   }
 };
