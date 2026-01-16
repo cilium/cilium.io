@@ -291,7 +291,6 @@ const userCommunity1 = {
     cloudera,
     openai,
     cybozu,
-    vnpt,
   ],
 };
 
@@ -393,6 +392,7 @@ const userCommunity2 = {
     uwmadison,
     fptTelecom,
     ionx,
+    vnpt,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
