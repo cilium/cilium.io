@@ -190,7 +190,6 @@ const {
   fptTelecom,
   ost,
   ionx,
-  vntp,
 } = caseStudiesData;
 
 const hero = {
@@ -291,7 +290,6 @@ const userCommunity1 = {
     cloudera,
     openai,
     cybozu,
-    vntp,
   ],
 };
 
@@ -393,6 +391,7 @@ const userCommunity2 = {
     uwmadison,
     fptTelecom,
     ionx,
+    vntp,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
