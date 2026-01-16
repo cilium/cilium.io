@@ -190,6 +190,7 @@ const {
   fptTelecom,
   ost,
   ionx,
+  vnpt,
 } = caseStudiesData;
 
 const hero = {
@@ -290,6 +291,7 @@ const userCommunity1 = {
     cloudera,
     openai,
     cybozu,
+    vnpt,
   ],
 };
 

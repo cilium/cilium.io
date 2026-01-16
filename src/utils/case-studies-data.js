@@ -1672,4 +1672,8 @@ export default {
     iconName: 'ionx',
     text: '<b>IONX Networks Limited</b> uses Cilium as CNI plugin in their infrastructure',
   },
+  vnpt: {
+    iconName: 'vnpt',
+    text: '<b>Vietnam Post Cloud uses Cilium in their production, staging, and development clusters'
+  }
 };
