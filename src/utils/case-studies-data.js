@@ -1674,6 +1674,6 @@ export default {
   },
   vnpt: {
     iconName: 'vnpt',
-    text: '<b>Vietnam Posts and Telecommunications Group<b> leverages Cilium as a foundational component for its modern, cloud-native infrastructure'
+    text: '<b>Vietnam Posts and Telecommunications Group</b> leverages Cilium as a foundational component for its modern, cloud-native infrastructure',
   }
 };
