@@ -1674,7 +1674,6 @@ export default {
   },
   vntp: {
     iconName: 'vntp',
-    text: '<b>VNTP</b> leverages Cilium for secure and scalable Kubernetes networking',
+    text: '**Vietnam Post (VNPost)** leverages Cilium for secure and scalable Kubernetes networking',
   },
-
 };
