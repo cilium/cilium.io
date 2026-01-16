@@ -190,7 +190,6 @@ const {
   fptTelecom,
   ost,
   ionx,
-  celonis,
 } = caseStudiesData;
 
 const hero = {
