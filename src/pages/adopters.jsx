@@ -393,6 +393,7 @@ const userCommunity2 = {
     uwmadison,
     fptTelecom,
     ionx,
+    flipkart,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
