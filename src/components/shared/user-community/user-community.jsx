@@ -45,6 +45,7 @@ import BmcLogo from './images/bmc.inline.svg';
 import BytedanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
 import CanopusLogo from './images/canopus.inline.svg';
+import CelonisLogo from './images/celonis.inline.svg'
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
@@ -372,6 +373,7 @@ const icons = {
   ost: OSTLogo,
   esnet: ESnetLogo,
   ionx: IONXLogo,
+  celonis: CelonisLogo,
 };
 
 const UserCommunity = ({

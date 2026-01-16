@@ -1674,13 +1674,17 @@ export default {
   },
   flipkart: {
     iconName: 'flipkart',
-    text: '<b>Flipkart</b> uses Cilium as its CNI for its large-scale cloud infrastructure',
+    text: '<b>Flipkart</b> uses Cilium as the CNI for its large scale cloud infrastructure',
     links: [
       {
-        linkText: 'Talk',
+        linkText: 'Watch Talk',
         linkUrl: 'https://youtu.be/0ZnxpVkBxpo?si=Zjo0LLLydg8U5enZ&t=420',
         linkTarget: '_blank',
       },
     ],
   },
+  celonis: {
+  iconName: 'celonis',
+  text: '<b>Celonis</b> leverages Cilium for secure and scalable Kubernetes networking',
+},
 };
