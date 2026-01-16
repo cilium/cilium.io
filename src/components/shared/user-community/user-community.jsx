@@ -404,6 +404,10 @@ const UserCommunity = ({
       >
         {items.map(({ iconName, text, links }, index) => {
           const Icon = icons[iconName];
+          if (!Icon) {
+            console.warn(`Icon not found for: ${iconName}`);
+            return null;
+          }
           return (
             <div
               className={classNames(
@@ -411,7 +415,7 @@ const UserCommunity = ({
               )}
               key={index}
             >
-              <Icon className="h-8 sm:h-12 flex-shrink-0" aria-label={`${iconName} logo`} />
+              <Icon className="h-8 sm:h-12 flex-shrink-0 w-auto max-w-full" aria-label={`${iconName} logo`} />
               <p
                 className={classNames(
                   'mt-3 sm:mt-5 text-sm sm:text-base break-words',
