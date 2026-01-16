@@ -1672,4 +1672,15 @@ export default {
     iconName: 'ionx',
     text: '<b>IONX Networks Limited</b> uses Cilium as CNI plugin in their infrastructure',
   },
+  celonis: {
+    iconName: 'celonis',
+    text: '<b>Celonis</b> has standardized on Cilium as the primary CNI across its entire global cluster fleet',
+    links: [
+      {
+        linkText: 'Website',
+        linkUrl: 'https://www.celonis.com',
+        linkTarget: '_blank',
+      },
+    ],
+  },
 };
