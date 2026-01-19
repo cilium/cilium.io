@@ -23,6 +23,7 @@ import DigitalOceanLogo from './images/digitalocean.inline.svg';
 import EquinixLogo from './images/equinix.inline.svg';
 import ESnetLogo from './images/esnet.inline.svg';
 import ExoscaleLogo from './images/exoscale.inline.svg';
+import FlipkartLogo from './images/flipkart-inline.svg';
 import FPTTelecomLogo from './images/fpttelecom.inline.svg';
 import GardernerLogo from './images/gardener.inline.svg';
 import GcoreLogo from './images/gcore.inline.svg';
@@ -55,7 +56,6 @@ import SovereignLogo from './images/sovereign.inline.svg';
 import SysElevenLogo from './images/syseleven.inline.svg';
 import TencentCloudLogo from './images/tencent-cloud.inline.svg';
 import VKCloudLogo from './images/vkcloud.inline.svg';
-import FlipkartLogo from './images/flipkart-inline.svg';
 
 const logos = {
   syseleven: SysElevenLogo,
