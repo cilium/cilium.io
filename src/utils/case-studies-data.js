@@ -1673,11 +1673,11 @@ export default {
     text: '<b>IONX Networks Limited</b> uses Cilium as CNI plugin in their infrastructure',
   },
   celonis: {
-  iconName: 'celonis',
-  text: '<b>Celonis</b> leverages Cilium for secure and scalable Kubernetes networking',
-},
+    iconName: 'celonis',
+    text: '<b>Celonis</b> leverages Cilium for secure and scalable Kubernetes networking',
+  },
   vnpt: {
     iconName: 'vnpt',
     text: '<b>Vietnam Posts and Telecommunications Group</b> uses Cilium in their production, staging, and development clusters',
-  }
+  },
 };
