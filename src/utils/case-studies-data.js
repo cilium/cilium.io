@@ -1683,4 +1683,8 @@ export default {
       },
     ],
   },
+  vnpt: {
+    iconName: 'vnpt',
+    text: '<b>Vietnam Posts and Telecommunications Group</b> uses Cilium in their production, staging, and development clusters',
+  }
 };
