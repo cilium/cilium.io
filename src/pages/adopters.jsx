@@ -190,7 +190,7 @@ const {
   fptTelecom,
   ost,
   ionx,
-  celonis,
+  vnpt,
 } = caseStudiesData;
 
 const hero = {
@@ -393,6 +393,7 @@ const userCommunity2 = {
     fptTelecom,
     ionx,
     celonis,
+    vnpt,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',

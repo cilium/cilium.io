@@ -1676,4 +1676,8 @@ export default {
   iconName: 'celonis',
   text: '<b>Celonis</b> leverages Cilium for secure and scalable Kubernetes networking',
 },
+  vnpt: {
+    iconName: 'vnpt',
+    text: '<b>Vietnam Posts and Telecommunications Group</b> uses Cilium in their production, staging, and development clusters',
+  }
 };
