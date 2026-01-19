@@ -190,6 +190,7 @@ const {
   fptTelecom,
   ost,
   ionx,
+  vnpt,
 } = caseStudiesData;
 
 const hero = {
@@ -391,6 +392,7 @@ const userCommunity2 = {
     uwmadison,
     fptTelecom,
     ionx,
+    vnpt,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
