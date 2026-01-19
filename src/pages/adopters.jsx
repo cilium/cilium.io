@@ -394,10 +394,6 @@ const userCommunity2 = {
     fptTelecom,
     ionx,
     flipkart,
-  ],
-  buttonText: 'Add Your Company',
-  buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
-  buttonTarget: '_blank',
 };
 
 userCommunity2.items.sort((a, b) =>

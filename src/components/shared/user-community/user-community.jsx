@@ -187,6 +187,7 @@ import VeepeeLogo from './images/veepee.inline.svg';
 import ViasatLogo from './images/viasat.inline.svg';
 import VirtuozzoLogo from './images/virtuozzo.inline.svg';
 import VkcloudLogo from './images/vkcloud.inline.svg';
+import VnptLogo from './images/vnpt.inline.svg'
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
@@ -372,6 +373,7 @@ const icons = {
   ost: OSTLogo,
   esnet: ESnetLogo,
   ionx: IONXLogo,
+  vnpt: VnptLogo,
 };
 
 const UserCommunity = ({
