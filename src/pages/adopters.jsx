@@ -191,6 +191,7 @@ const {
   ost,
   ionx,
   flipkart,
+  vnpt,
 } = caseStudiesData;
 
 const hero = {
@@ -393,7 +394,8 @@ const userCommunity2 = {
     uwmadison,
     fptTelecom,
     ionx,
-    flipkart,
+    vnpt,
+  ],
 };
 
 userCommunity2.items.sort((a, b) =>
