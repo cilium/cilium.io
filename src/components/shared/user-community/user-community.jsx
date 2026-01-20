@@ -71,6 +71,7 @@ import ESnetLogo from './images/esnet.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FHNWLogo from './images/fhnw.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
+import FlipkartLogo from './images/flipkart.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
 import FPTTelecomLogo from './images/fpttelecom.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
@@ -361,6 +362,7 @@ const icons = {
   gResearch: GresearchLogo,
   corner: CornerBancaLogo,
   canopus: CanopusLogo,
+  flipkart: FlipkartLogo,
   guida: GuidaLogo,
   outscale: OutscaleLogo,
   ovh: OVHcloudLogo,
@@ -390,7 +392,7 @@ const UserCommunity = ({
         <Link
           className={classNames(
             isTitleCentered &&
-              'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
+            'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
           )}
           to={`#${id}`}
         >
