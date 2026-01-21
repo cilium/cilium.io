@@ -18,6 +18,7 @@ import ByteDanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
 import CapitalOneLogo from './images/capitalone.inline.svg';
 import CengnLogo from './images/cengn.inline.svg';
+import CelonisLogo from './images/celonis.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
@@ -105,6 +106,7 @@ const logos = {
   capitalone: CapitalOneLogo,
   canonical: CanonicalLogo,
   cengn: CengnLogo,
+  celonis: CelonisLogo,
   cistec: CistecLogo,
   civo: CivoLogo,
   clickhouse: ClickHouseLogo,

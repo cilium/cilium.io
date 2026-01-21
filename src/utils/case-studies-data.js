@@ -169,6 +169,10 @@ export default {
       },
     ],
   },
+  celonis: {
+    iconName: 'celonis',
+    text: '<b>Celonis</b> leverages Cilium for secure and scalable Kubernetes networking',
+  },
   alibabaCloud: {
     iconName: 'alibabaCloud',
     text: '<b>Alibaba Cloud</b> uses Cilium as the CNI for their managed Kubernetes offering',

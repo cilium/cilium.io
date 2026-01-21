@@ -147,6 +147,7 @@ const ecommerceLogos = [
   'trip',
   'trendyol',
   'backmarket',
+  'celonis',
   'nemlig',
   'uswitch',
   'elasticpath',
