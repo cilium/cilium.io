@@ -745,7 +745,7 @@ export default {
   },
   flipkart: {
     iconName: 'flipkart',
-    text: '<b>Flipkart</b> uses Cilium as the CNI for large scale Kubernetes networking.',
+    text: '<b>Flipkart</b> uses Cilium as the CNI for high scale Kubernetes networking',
     links: [
       {
         linkText: 'Watch Talk',
