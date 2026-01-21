@@ -32,6 +32,7 @@ import ElasticPathLogo from './images/elasticpath.inline.svg';
 import EquinixLogo from './images/equinix.inline.svg';
 import Et888Logo from './images/et888.inline.svg';
 import F5Logo from './images/f5.inline.svg';
+import FlipkartLogo from './images/flipkart.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
 import FRSCALogo from './images/frsca.inline.svg';
 import GcoreLogo from './images/gcore.inline.svg';
@@ -118,6 +119,7 @@ const logos = {
   equinix: EquinixLogo,
   et888: Et888Logo,
   f5: F5Logo,
+  flipkart: FlipkartLogo,
   form3: Form3Logo,
   gcore: GcoreLogo,
   rabobank: RabobankLogo,
