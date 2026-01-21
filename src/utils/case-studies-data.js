@@ -747,6 +747,17 @@ export default {
       },
     ],
   },
+  flipkart: {
+    iconName: 'flipkart',
+    text: '<b>Flipkart</b> uses Cilium as the CNI for high scale Kubernetes networking',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://youtu.be/0ZnxpVkBxpo?si=Zjo0LLLydg8U5enZ&t=420',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   yahoo: {
     iconName: 'yahoo',
     text: '<b>Yahoo</b> uses Cilium for L4 North-South Load Balancing for Kubernetes Services',

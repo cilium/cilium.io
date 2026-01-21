@@ -153,6 +153,7 @@ const ecommerceLogos = [
   'dbschenker',
   'overstock',
   'tailorbrands',
+  'flipkart',
 ];
 
 const commerceUsecases = [
