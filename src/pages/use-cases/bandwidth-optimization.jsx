@@ -5,6 +5,7 @@ import Hero from 'components/pages/use-cases/hero';
 import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import Community from 'components/shared/community';
 import SEO from 'components/shared/seo';
+import FlipkartLogo from 'icons/logo-flipkart.inline.svg';
 import IsovalentLogo from 'icons/logo-isovalent.inline.svg';
 import BandWidthImage1 from 'images/pages/usecase/bandwidth-1.png';
 import BandWidthImage2 from 'images/pages/usecase/bandwidth-2.png';
@@ -54,6 +55,14 @@ const sectionContent3 = {
 };
 
 const testimonials = [
+  {
+    logo: FlipkartLogo,
+    title: 'How Flipkart Implements Bandwidth QoS with Cilium',
+    CTAtext: 'Watch The Talk',
+    url: 'https://youtu.be/0ZnxpVkBxpo?si=Zjo0LLLydg8U5enZ&t=420',
+    description:
+      'Flipkart uses Cilium for bandwidth QoS and rate limiting across their Kubernetes clusters, enabling efficient network resource management at scale.',
+  },
   {
     logo: IsovalentLogo,
     title: 'BIG Performances with BIG TCP on Cilium',
