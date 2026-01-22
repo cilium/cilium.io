@@ -1,4 +1,24 @@
 export default {
+  Airbnb: {
+    iconName: 'airbnb',
+    text: '<b>Airbnb</b> uses Cilium to power its dataplane and unlock new networking capabilities',
+    links: [
+     {
+       linkText: 'Watch Talk',
+       linkUrl: 'https://youtu.be/8sAm3TF4TCI?si=jCudXCBd4KmIkOC1&t=765',
+     },
+   ],
+  },
+  TikTok: {
+    iconName: 'tiktok',
+    text: '<b>TikTok</b> uses Cilium for advanced security features like mutual authentication, high performance networking, and enhanced observability in an IPv6 only environment.',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=y0qlhiKtDGo',
+      },
+    ],
+  },
   wildLife: {
     iconName: 'wildLife',
     text: 'Building a Global Multi Cluster Gaming Infrastructure with Cilium',
