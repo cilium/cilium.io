@@ -192,6 +192,8 @@ const {
   ost,
   ionx,
   vnpt,
+  airbnb,
+  tiktok,
 } = caseStudiesData;
 
 const hero = {
@@ -293,6 +295,8 @@ const userCommunity1 = {
     cloudera,
     openai,
     cybozu,
+    airbnb,
+    tiktok,
   ],
 };
 
