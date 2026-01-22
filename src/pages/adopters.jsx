@@ -293,6 +293,7 @@ const userCommunity1 = {
     cloudera,
     openai,
     cybozu,
+    uwmadison,
   ],
 };
 
@@ -391,7 +392,6 @@ const userCommunity2 = {
     ost,
     preferredNetworks,
     batumbu,
-    uwmadison,
     fptTelecom,
     ionx,
     vnpt,
