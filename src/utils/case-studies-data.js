@@ -1,5 +1,5 @@
 export default {
-  Airbnb: {
+  airbnb: {
     iconName: 'airbnb',
     text: '<b>Airbnb</b> uses Cilium to power its dataplane and unlock new networking capabilities',
     links: [
@@ -10,7 +10,7 @@ export default {
      },
    ],
   },
-  TikTok: {
+  tiktok: {
     iconName: 'tiktok',
     text: '<b>TikTok</b> uses Cilium for advanced security features like mutual authentication, high performance networking, and enhanced observability in an IPv6 only environment.',
     links: [
