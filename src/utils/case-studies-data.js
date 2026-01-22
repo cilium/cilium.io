@@ -1573,7 +1573,7 @@ export default {
       linkTarget: '_blank',
      },
      {
-      linkText: 'Watch Talk',
+      linkText: 'Talk',
       linkUrl: 'https://www.youtube.com/watch?v=lwgHMDOY_Zs&list=PLj6h78yzYM2NupzP0zYgT3dLzARalT1By&index=6',
       linkTarget: '_blank',  
        },
