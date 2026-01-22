@@ -4,8 +4,9 @@ export default {
     text: '<b>Airbnb</b> uses Cilium to power its dataplane and unlock new networking capabilities',
     links: [
      {
-       linkText: 'Watch Talk',
+       linkText: 'Talk',
        linkUrl: 'https://youtu.be/8sAm3TF4TCI?si=jCudXCBd4KmIkOC1&t=765',
+       linkTarget: '_blank',
      },
    ],
   },
@@ -14,8 +15,9 @@ export default {
     text: '<b>TikTok</b> uses Cilium for advanced security features like mutual authentication, high performance networking, and enhanced observability in an IPv6 only environment.',
     links: [
       {
-        linkText: 'Watch Talk',
+        linkText: 'Talk',
         linkUrl: 'https://www.youtube.com/watch?v=y0qlhiKtDGo',
+        linkTarget: '_blank',
       },
     ],
   },
@@ -1171,8 +1173,11 @@ export default {
       {
         linkText: 'Read Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/esnet/',
-        linkTarget: '_blank',
       },
+       {
+        linkText: 'Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=QdNVtSlecYo&list=PLj6h78yzYM2NXW8pHCgic_I1yEwwOhPCq&index=8',
+        linkTarget: '_blank',
     ],
   },
   gdata: {
