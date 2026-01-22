@@ -105,12 +105,6 @@ Falco users rely on Falcosidekick as a central component of their alert forwardi
 
 When migrating to Tetragon, it is crucial to understand that there is no direct equivalent of Falcosidekick in the open source Tetragon ecosystem. Similar to Falco outputs, Tetragon emits events using a gRPC endpoint or JSON logs. It does not provide a built-in multi-destination alert routing layer like Falcosidekick. This layer can be achieved with minimal effort using a variety of tools in the CNCF open source ecosystem. With minimal effort, Tetragon can be integrated with SIEMs, incident response tools, log stores, and more.
 
-### What About Enterprise Features?
-
-Isovalent, the creators of Cilium and Tetragon, offers an enterprise-grade distribution of Tetragon that features alerting and forwarding capabilities, 24/7 enterprise support with SLA, additional SecOps, governance, analytics, and observability features.
-
-This blog focuses exclusively on the open source workflow, so we will not cover enterprise-only functionality. All the details discussed in this blog post reflect the capabilities available in the open source Tetragon project.
-
 ### Conclusion
 
 Beyond syscall monitoring, Tetragon extends runtime security to include deep kernel-level visibility and real-time enforcement, leveraging the full capabilities of eBPF. Successfully migrating from Falco to Tetragon requires a rethink of how security intent is expressed, choosing the appropriate kernel hook points for each security intent rather than relying exclusively on syscalls. Some Falco use cases, especially those derived from non-kernel event sources, will remain outside the scope of Tetragon and should instead be handled by SIEMs or log analytics platforms, where they can be correlated for full context.
