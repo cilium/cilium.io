@@ -15,6 +15,7 @@ import PublicSPeakingBee from 'images/pages/industries/media-entertainment/publi
 import SkyOfficeImage from 'images/pages/industries/media-entertainment/skyoffice.png';
 import SmartNewsOfficeImage from 'images/pages/industries/media-entertainment/smartnewsOffice.png';
 import YahooOfficeImage from 'images/pages/industries/media-entertainment/yahoooffice.png';
+import TikTokOfficeImage from 'images/pages/industries/media-entertainment/tiktokoffice.png';
 import MainLayout from 'layouts/main';
 
 const heroContent = {
