@@ -15,6 +15,7 @@ import CodeIcon from 'images/pages/industries/e-commerce/code.inline.svg';
 import DbIcon from 'images/pages/industries/e-commerce/db.inline.svg';
 import EccoOfficeImage from 'images/pages/industries/e-commerce/ecco-office.webp';
 import EcommerceImage1 from 'images/pages/industries/e-commerce/ecommerce-1.png';
+import FlipkartOfficeImage from 'images/pages/industries/e-commerce/flipkart-office.png';
 import IkeaOfficeImage from 'images/pages/industries/e-commerce/ikeaoffice.png';
 import LockIcon from 'images/pages/industries/e-commerce/lock.inline.svg';
 import NemligOfficeImage from 'images/pages/industries/e-commerce/nemlig.png';
@@ -94,6 +95,15 @@ const dbSchenkerTestimonial = {
 };
 
 const commerceResources = [
+  {
+    imageSrc: FlipkartOfficeImage,
+    imageAlt: 'flipkart office building',
+    title: 'How Flipkart Scales Kubernetes Networking to Millions of RPS with Cilium',
+    buttonText: 'Watch The Talk',
+    buttonLink: 'https://youtu.be/0ZnxpVkBxpo?si=Zjo0LLLydg8U5enZ&t=420',
+    description:
+      'Flipkart shares how it uses Cilium and eBPF to run large-scale Kubernetes clusters, enabling high-performance networking, bandwidth QoS, and reliable service connectivity across its e-commerce platform.',
+  },
   {
     imageSrc: TrendyolOfficeImage,
     imageAlt: 'holding a trenydol shipping box',

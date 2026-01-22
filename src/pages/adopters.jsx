@@ -297,6 +297,7 @@ const userCommunity1 = {
     cybozu,
     airbnb,
     tiktok,
+    uwmadison,
   ],
 };
 
@@ -395,7 +396,6 @@ const userCommunity2 = {
     ost,
     preferredNetworks,
     batumbu,
-    uwmadison,
     fptTelecom,
     ionx,
     vnpt,
