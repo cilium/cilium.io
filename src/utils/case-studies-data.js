@@ -1568,7 +1568,7 @@ export default {
     text: '<b>University of Wisconsin - Madison</b> leverages Cilium in production clusters',
     links: [
      {
-      linkText: 'Read Case Study',
+      linkText: 'Case Study',
       linkUrl: 'https://www.cncf.io/case-studies/university-of-wisconsin-madison/',
       linkTarget: '_blank',
      },
