@@ -72,6 +72,16 @@ const seznamTestimonial = {
 };
 
 const mediaResources = [
+   {
+    imageSrc: TikTokOfficeImage,
+    imageAlt: 'tiktok office building',
+    title: 'TikTok's IPv6 Journey To Cilium',
+    buttonText: 'Watch the Talk',
+    buttonLink: 'https://www.youtube.com/watch?v=y0qlhiKtDGo',
+    description:
+      'TikTok migrated clusters to use Cilium for its advanced security features like mutual authentication, along with high performance networking and enhanced observability.',
+  },
+  
   {
     imageSrc: YahooOfficeImage,
     imageAlt: 'yahoo office building',
