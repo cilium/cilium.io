@@ -15,7 +15,7 @@ export default {
     text: '<b>TikTok</b> uses Cilium for advanced security features like mutual authentication, high performance networking, and enhanced observability in an IPv6 only environment.',
     links: [
       {
-        linkText: 'Talk',
+        linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=y0qlhiKtDGo',
         linkTarget: '_blank',
       },
