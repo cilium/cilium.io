@@ -12,7 +12,7 @@ export default {
   },
   tiktok: {
     iconName: 'tiktok',
-    text: '<b>TikTok</b> uses Cilium for advanced security features like mutual authentication, high performance networking, and enhanced observability in an IPv6 only environment.',
+    text: '<b>TikTok</b> uses Cilium for advanced security features like mutual authentication, high performance networking, and enhanced observability in an IPv6 only environment',
     links: [
       {
         linkText: 'Watch Talk',
