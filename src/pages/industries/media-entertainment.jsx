@@ -76,7 +76,7 @@ const mediaResources = [
    {
     imageSrc: TikTokOfficeImage,
     imageAlt: 'tiktok office building',
-    title: 'TikTok's IPv6 Journey To Cilium',
+    title: 'TikTok\'s IPv6 Journey To Cilium',
     buttonText: 'Watch the Talk',
     buttonLink: 'https://www.youtube.com/watch?v=y0qlhiKtDGo',
     description:
