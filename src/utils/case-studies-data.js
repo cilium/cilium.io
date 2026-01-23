@@ -1176,7 +1176,7 @@ export default {
       },
        {
         linkText: 'Talk',
-        linkUrl: 'https://www.youtube.com/watch?v=QdNVtSlecYo&list=PLj6h78yzYM2NXW8pHCgic_I1yEwwOhPCq&index=8',
+        linkUrl: 'https://youtu.be/4Y8fEN_MhYo?si=xdJ5DSwch0U4OHMw',
         linkTarget: '_blank',
     ],
   },
