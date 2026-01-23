@@ -1171,7 +1171,7 @@ export default {
     text: '<b>ESnet</b> uses Cilium for IPv6-first Kubernetes networking for scientific computing infrastructure',
     links: [
       {
-        linkText: 'Read Case Study',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/esnet/',
       },
        {
