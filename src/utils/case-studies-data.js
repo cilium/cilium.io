@@ -1173,11 +1173,13 @@ export default {
       {
         linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/esnet/',
+        linkTarget: '_blank',
       },
        {
         linkText: 'Talk',
         linkUrl: 'https://youtu.be/4Y8fEN_MhYo?si=xdJ5DSwch0U4OHMw',
         linkTarget: '_blank',
+       },
     ],
   },
   gdata: {
