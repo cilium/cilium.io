@@ -2,7 +2,7 @@
 path: '/blog/2026/01/23/cilium-at-kubecon-eu-2026'
 date: '2025-01-23T12:00:00.000Z'
 title: 'Cilium at KubeCon + CloudNativeCon and CiliumCon Europe 2026'
-ogImage: kubeconcover.png
+ogImage: Social-Snackable-kubecon-europe26.png
 isFeatured: true
 ogSummary: 'Learn how to engage with the Cilium community at KubeCon + CloudNativeCon Europe 2026'
 categories:
