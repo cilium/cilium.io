@@ -92,8 +92,10 @@ Explore the [Development Commands](#development-commands) section for more avail
 ### Run the website
 
 ```bash
-npm run start
+make start
 ```
+
+> **Note:** `make start` is the recommended way to run the site locally, as it sets additional environment variables for faster and more consistent development.
 
 > **Note:** If you encounter the error:
 >
