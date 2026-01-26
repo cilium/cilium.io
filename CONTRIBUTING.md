@@ -11,7 +11,8 @@ Content guidelines:
 - Posts should be valuable content for the Cilium community
 - Posts should not be vendor pitches, and should focus on the open source Cilium project
 - Posts hosted on cilium.io should be original content. You can submit a link to an external article instead of copying content.
-- All content is contributed under the CC-BY-4.0 license
+- Content contributions (blog posts, documentation, images) are licensed under the [CC BY 4.0](LICENSE-CC-BY-4.0) license
+- Code contributions are licensed under the [Apache License 2.0](LICENSE)
 
 Each post should be in one of the following categories:
 
