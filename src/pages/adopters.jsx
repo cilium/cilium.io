@@ -191,6 +191,7 @@ const {
   fptTelecom,
   ost,
   ionx,
+  celonis,
   vnpt,
 } = caseStudiesData;
 
@@ -394,6 +395,7 @@ const userCommunity2 = {
     batumbu,
     fptTelecom,
     ionx,
+    celonis,
     vnpt,
   ],
   buttonText: 'Add Your Company',
