@@ -242,7 +242,7 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-canonical-urls',
     options: {
-      siteUrl: 'http://localhost:8000',
+      siteUrl: process.env.GATSBY_DEFAULT_SITE_URL,
     },
   },
   {
@@ -281,7 +281,8 @@ module.exports = {
     // pathPrefix: "",
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',
-    siteUrl: 'http://localhost:8000',
+    siteUrl: process.env.GATSBY_DEFAULT_SITE_URL,
+
     /* author */
     authorName: 'cilium',
     authorTwitterAccount: '@ciliumproject',
