@@ -113,7 +113,6 @@ const cloudAdoptersLogo = [
   'aws',
   'azure',
   'alibaba',
-  'celonis',
   'digitalocean',
   'syseleven',
   'hetzner',
