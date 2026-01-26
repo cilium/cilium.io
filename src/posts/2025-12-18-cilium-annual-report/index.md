@@ -2,7 +2,7 @@
 date: '2025-12-18T12:00:00.000Z'
 title: 'Cilium Annual Report 2025: A Decade of Cilium'
 ogImage: annualreport.png
-isFeatured: true
+isPopular: true
 ogSummary: 'Celebrate a decade of Cilium solving cloud native networking while looking forward to the next.'
 categories:
   - Community
