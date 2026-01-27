@@ -108,7 +108,6 @@ const cloudTalks = [
       'EKS-Anywhere comes with Cilium as its default CNI. Liz Rice and Duffie Cooley talk about the details',
   },
 ];
-
 const cloudAdoptersLogo = [
   'google',
   'aws',

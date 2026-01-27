@@ -93,8 +93,11 @@ Explore the [Development Commands](#development-commands) section for more avail
 ### Run the website
 
 ```bash
-npm run start
+npm install
+npm start
 ```
+
+> **Note:** If you prefer using the Makefile, you can also run `make start`, which is a convenience wrapper around the same workflow.
 
 > **Note:** If you encounter the error:
 >

@@ -282,6 +282,7 @@ module.exports = {
     siteImage: '/images/social-preview.jpg',
     siteLanguage: 'en',
     siteUrl: process.env.GATSBY_DEFAULT_SITE_URL,
+
     /* author */
     authorName: 'cilium',
     authorTwitterAccount: '@ciliumproject',
