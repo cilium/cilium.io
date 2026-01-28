@@ -409,14 +409,14 @@ const UserCommunity = ({
           return (
             <div
               className={classNames(
-                'flex flex-col rounded-lg p-4 sm:p-6 xl:p-8 bg-white dark:bg-gray-2 shadow-card min-w-0'
+                'flex flex-col rounded-lg p-4 sm:p-6 xl:p-8 bg-white dark:bg-[linear-gradient(14deg,#1A2236_0%,#1E253A_248.18%)] dark:border-[#37415B] shadow-card min-w-0'
               )}
               key={index}
             >
-              <Icon className="h-8 sm:h-12 flex-shrink-0" aria-label={`${iconName} logo`} />
+              <Icon className="h-8 sm:h-12 flex-shrink-0 dark:text-white" aria-label={`${iconName} logo`} />
               <p
                 className={classNames(
-                  'mt-3 sm:mt-5 text-sm sm:text-base break-words',
+                  'mt-3 sm:mt-5 text-sm sm:text-base break-words dark:text-white',
                   links && 'mb-4'
                 )}
                 dangerouslySetInnerHTML={{ __html: text }}
@@ -425,7 +425,7 @@ const UserCommunity = ({
                 <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-3 dark:border-gray-600 pt-4 leading-none text-sm">
                   {links.map(({ linkUrl, linkText, linkTarget }, index) => (
                     <Link
-                      className="relative after:absolute after:top-1/2 after:-right-2.5 after:inline-block after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-5 after:dark:bg-gray-600 last:after:hidden break-words"
+                      className="flex items-center dark:bg-[#152755] bg-slate-500 hover:bg-[#0e87ff] dark:hover:bg-[#0e87ff] px-3 py-2 text-white hover:text-white font-normal rounded-md break-words transition-colors"
                       key={index}
                       type="text"
                       theme="primary"
@@ -433,7 +433,9 @@ const UserCommunity = ({
                       target={linkTarget || null}
                       rel={linkTarget ? 'noopener noreferrer' : null}
                     >
+                      
                       {linkText}
+                      <span className="text-sm transition-transform group-hover:translate-x-0.5 pl-2">→</span>
                     </Link>
                   ))}
                 </div>
