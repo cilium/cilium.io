@@ -66,6 +66,7 @@ const sectionContent1 = {
   ],
   imageSrc: ZeroTrustImage1,
   imageAlt: 'cilium TLS keys and certificate illustration',
+  imageStyle:"bg-white p-2 rounded-lg"
 };
 
 const sectionContent2 = {
@@ -79,6 +80,7 @@ const sectionContent2 = {
   imageHeight: 431,
   imageAlt: 'identities with cilium',
   imageRight: true,
+  imageStyle:"bg-white p-2 rounded-lg"
 };
 
 const sectionContent3 = {

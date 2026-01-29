@@ -68,6 +68,7 @@ const bulletSection3 = {
   ],
   imageSrc: TelcoImage3,
   imageAlt: 'cilium SRv6',
+  imageStyle:"bg-white p-2 rounded-lg"
 };
 
 const telcoTalks = [
