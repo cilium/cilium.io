@@ -98,6 +98,7 @@ const bulletSection1 = {
   imageSrc: FinanceImage3,
   imageAlt: 'cilium TLS keys and certificate illustration',
   imageRight: false,
+  imageStyle:"bg-white p-2 rounded-lg"
 };
 
 const bulletSection3 = {
