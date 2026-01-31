@@ -1,0 +1,122 @@
+---
+# Frontend Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+    tier: frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+        tier: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25
+        ports:
+        - containerPort: 80
+---
+# Frontend Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  selector:
+    app: frontend
+  ports:
+  - port: 80
+    targetPort: 80
+  type: LoadBalancer
+---
+# Backend API Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+    tier: backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+        tier: backend
+    spec:
+      containers:
+      - name: api
+        image: hashicorp/http-echo:latest
+        args:
+        - "-text=Hello from Backend API"
+        - "-listen=:8080"
+        ports:
+        - containerPort: 8080
+---
+# Backend Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  selector:
+    app: backend
+  ports:
+  - port: 8080
+    targetPort: 8080
+  type: ClusterIP
+---
+# Database Deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: database
+  labels:
+    app: database
+    tier: database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: database
+  template:
+    metadata:
+      labels:
+        app: database
+        tier: database
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:15-alpine
+        env:
+        - name: POSTGRES_PASSWORD
+          value: "example"
+        - name: POSTGRES_DB
+          value: "app"
+        ports:
+        - containerPort: 5432
+---
+# Database Service
+apiVersion: v1
+kind: Service
+metadata:
+  name: database
+spec:
+  selector:
+    app: database
+  ports:
+  - port: 5432
+    targetPort: 5432
+  type: ClusterIP
