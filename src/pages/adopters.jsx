@@ -192,6 +192,7 @@ const {
   ost,
   ionx,
   vnpt,
+  celonis,
 } = caseStudiesData;
 
 const hero = {
@@ -237,6 +238,7 @@ const userCommunity1 = {
     trendyol,
     kubermatic,
     yahoo,
+    celonis,
     eficode,
     clickhouse,
     tietoevry,
