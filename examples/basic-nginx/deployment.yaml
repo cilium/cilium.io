@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-nginx
+  labels:
+    app: example-nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: example-nginx
+  template:
+    metadata:
+      labels:
+        app: example-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: example-nginx
+spec:
+  selector:
+    app: example-nginx
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP
