@@ -89,7 +89,7 @@ const BlogPostCard = ({
     <Link
       to={url || path}
       className={classNames(
-        'group flex rounded-lg border border-gray-3 dark:border dark:border-gray-800 dark:bg-[linear-gradient(14deg,#1A2236_0%,#1E253A_248.18%)] p-5 transition-all duration-200 hover:border-transparent hover:shadow-tertiary bg-white dark:bg-gray-2 dark:hover:shadow-darkprimary',
+        'group flex rounded-lg border border-gray-3 dark:border-gray-600 p-5 transition-all duration-200 hover:border-transparent hover:shadow-tertiary bg-white dark:bg-gray-2',
         isLandscapeView
           ? 'flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-7'
           : 'flex-col space-y-7',
@@ -106,10 +106,10 @@ const BlogPostCard = ({
         coverClassNames={coverClassNames}
       />
       <article className="flex grow flex-col">
-        <span className="text-sm font-medium leading-none text-gray-1 dark:text-gray-200">{date}</span>
+        <span className="text-sm font-medium leading-none text-gray-1">{date}</span>
         <h3
           className={classNames(
-            'mt-3 leading-normal transition-colors duration-200 line-clamp-3 text-black dark:text-white group-hover:text-primary-1 md:leading-normal lg:leading-normal',
+            'mt-3 leading-normal transition-colors duration-200 line-clamp-3 group-hover:text-primary-1 md:leading-normal lg:leading-normal',
             titleStyles[size]
           )}
         >
@@ -119,7 +119,7 @@ const BlogPostCard = ({
           <>
             <p
               className={classNames(
-                'mt-2 mb-4 leading-relaxed line-clamp-5 text-gray-900 dark:text-gray-100',
+                'mt-2 mb-4 leading-relaxed line-clamp-5',
                 size === 'lg' && 'md:text-lg'
               )}
             >
@@ -135,9 +135,8 @@ const BlogPostCard = ({
                 </span>
               ))}
               {url && (
-                <div className="inline-flex h-8 items-center rounded bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider 
-                text-primary-1 border-gray-3 dark:border-gray-600 dark:bg-[#152755] bg-[#d6ebffb3] dark:hover:bg-[#0e87ff] hover:scale-110 transition-transform ease-in-out duration-300">
-                  <span className='text-[#0073e6] dark:text-gray-3 dark:hover:text-white'>External</span>
+                <div className="inline-flex h-8 items-center rounded bg-additional-4 bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider text-primary-1">
+                  <span>External</span>
                   <ExternalLinkIcon className="ml-1" />
                 </div>
               )}
