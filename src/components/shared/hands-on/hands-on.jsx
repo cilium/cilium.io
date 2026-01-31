@@ -64,7 +64,7 @@ const HandsOn = () => {
   ];
 
   return (
-    <section className="py-10 md:py-20 lg:py-32 bg-white dark:bg-[#0f1d3e]">
+    <section className="pt-10 md:pt-20 lg:pt-32 bg-white dark:bg-[#0f1d3e]">
       <Container>
         <Heading className="text-center dark:text-gray-3 text-black" tag="h2">
           {title}

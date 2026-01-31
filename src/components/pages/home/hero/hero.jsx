@@ -14,7 +14,7 @@ const Hero = () => (
   <section className="overflow-hidden bg-gray-4 dark:bg-gray-900 pt-5 pb-0 md:pt-16 md:pb-20 lg:pt-28 lg:pb-36">
     <Container className="grid grid-cols-12 md:gap-x-8">
       <div className="relative z-10 col-span-full lg:col-span-6 2xl:col-span-7">
-        <Heading className="dark:text-white" tag="h1" size="lg" asHTML>
+        <Heading className="dark:text-[#579dd6]" tag="h1" size="lg" asHTML>
           {title}
         </Heading>
         <div
