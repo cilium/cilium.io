@@ -1,0 +1,85 @@
+---
+# Default Deny All Traffic
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: default-deny
+spec:
+  endpointSelector: {}
+  ingress:
+  - {}
+  egress:
+  - {}
+---
+# Allow Frontend to Backend
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: allow-frontend-to-backend
+spec:
+  endpointSelector:
+    matchLabels:
+      app: backend
+  ingress:
+  - fromEndpoints:
+    - matchLabels:
+        app: frontend
+    toPorts:
+    - ports:
+      - port: "8080"
+        protocol: TCP
+---
+# Allow Backend to Database
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: allow-backend-to-database
+spec:
+  endpointSelector:
+    matchLabels:
+      app: database
+  ingress:
+  - fromEndpoints:
+    - matchLabels:
+        app: backend
+    toPorts:
+    - ports:
+      - port: "5432"
+        protocol: TCP
+---
+# Allow Frontend to receive external traffic
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: allow-frontend-ingress
+spec:
+  endpointSelector:
+    matchLabels:
+      app: frontend
+  ingress:
+  - fromEntities:
+    - world
+    toPorts:
+    - ports:
+      - port: "80"
+        protocol: TCP
+---
+# Allow DNS for all pods
+apiVersion: cilium.io/v2
+kind: CiliumNetworkPolicy
+metadata:
+  name: allow-dns
+spec:
+  endpointSelector: {}
+  egress:
+  - toEndpoints:
+    - matchLabels:
+        k8s:io.kubernetes.pod.namespace: kube-system
+        k8s-app: kube-dns
+    toPorts:
+    - ports:
+      - port: "53"
+        protocol: UDP
+      rules:
+        dns:
+        - matchPattern: "*"
