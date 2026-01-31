@@ -57,8 +57,10 @@
     "react-modal": "^3.16.3",
     "react-paginate": "^8.3.0",
     "react-share": "^4.4.1",
+    "react-slick": "^0.30.3",
     "react-use": "^17.6.0",
     "remark-gfm": "^1.0.0",
+    "slick-carousel": "^1.8.1",
     "swiper": "^11.2.10",
     "tiny-slider": "^2.9.4",
     "yup": "^1.6.1"
