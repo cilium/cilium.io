@@ -1702,12 +1702,5 @@ export default {
   celonis: {
     iconName: 'celonis',
     text: '<b>Celonis</b> has standardized on Cilium as the primary CNI across its entire global cluster fleet',
-    links: [
-      {
-        linkText: 'Website',
-        linkUrl: 'https://www.celonis.com',
-        linkTarget: '_blank',
-      },
-    ],
   },
 };
