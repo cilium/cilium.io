@@ -11,7 +11,7 @@ import submitHubspotForm from 'utils/submit-hubspot-form';
 import ActiveIcon from './images/active.inline.svg';
 
 const APPEAR_AND_EXIT_ANIMATION_DURATION = 0.5;
-const HUBSPOT_FORM_ID = 'ef11d76b-e770-455f-903b-246d91db193d';
+const HUBSPOT_FORM_ID = process.env.GATSBY_HUBSPOT_SUBSCRIBE_FORM_ID;
 
 const emailRegexp =
   // eslint-disable-next-line no-control-regex, no-useless-escape
