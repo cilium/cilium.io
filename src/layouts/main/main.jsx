@@ -116,6 +116,7 @@ const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
         text="Join us for KubeCon Europe and CiliumCon 2026"
         url="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/"
       />
+      <div className="sticky top-0 z-50 w-full">
       <Header
         navigation={navigation}
         withSearch={headerWithSearch}
@@ -123,6 +124,7 @@ const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
         handleOverlay={handleOverlay}
         handleCloseClick={handleCloseClick}
       />
+      </div>
       <main className="transition-colors duration-200">{children}</main>
       <Footer withTopBorder={footerWithTopBorder} />
     </div>
