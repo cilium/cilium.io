@@ -192,6 +192,7 @@ const {
   ost,
   ionx,
   vnpt,
+  celonis,
 } = caseStudiesData;
 
 const hero = {
@@ -334,6 +335,7 @@ const userCommunity2 = {
     arangodb,
     acoss,
     canonical,
+    celonis,
     melenion,
     civo,
     kubesphere,

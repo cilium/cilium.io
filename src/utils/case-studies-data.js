@@ -1698,5 +1698,9 @@ export default {
   vnpt: {
     iconName: 'vnpt',
     text: '<b>Vietnam Posts and Telecommunications Group</b> uses Cilium in their production, staging, and development clusters',
-  }
+  },
+  celonis: {
+    iconName: 'celonis',
+    text: '<b>Celonis</b> has standardized on Cilium as the primary CNI across its entire global cluster fleet',
+  },
 };
