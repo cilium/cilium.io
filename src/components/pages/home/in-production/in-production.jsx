@@ -80,9 +80,9 @@ const InProduction = () => (
                 <p>“{text}”</p>
               </blockquote>
             </div>
-            <div className="mt-auto flex justify-center border-gray-3 dark:border-gray-600 p-4 leading-none dark:bg-[#152755] bg-slate-500 hover:bg-[#0e87ff] dark:hover:bg-[#0e87ff]  font-normal rounded-md break-words transition-colors">
+            <div className="mt-auto flex border-t border-gray-3 dark:border-gray-600 pt-6 leading-none">
               <Link
-                className="relative text-white dark:text-white hover:text-white"
+                className="relative inline-flex items-center text-primary-1 hover:text-primary-2 dark:text-white dark:hover:text-primary-1 dark:px-4 dark:py-2 transition-colors"
                 key={index}
                 type="text"
                 theme="primary"

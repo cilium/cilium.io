@@ -104,7 +104,7 @@ const Community = ({ className, theme, isTitleCentered }) => (
               />
               <span
                 className={classNames(
-                  'ml-4 text-center font-bold leading-snug truncate md:m-0 md:mt-[18px] md:text-lg md:leading-snug lg:whitespace-normal xl:mt-3.5 xl:text-base xl:leading-tight text-black dark:text-white',
+                  'ml-4 text-center font-bold leading-snug truncate md:m-0 md:mt-[18px] md:text-lg md:leading-snug lg:whitespace-normal xl:mt-3.5 xl:text-base xl:leading-tight text-black dark:text-white hover:text-gray-1 dark:hover:text-gray-1',
                   titleWidth
                 )}
               >

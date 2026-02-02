@@ -136,7 +136,7 @@ const BlogPostCard = ({
               ))}
               {url && (
                 <div className="inline-flex h-8 items-center rounded bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider 
-                text-primary-1 border-gray-3 dark:border-gray-600 dark:bg-[#152755] bg-[#d6ebffb3] dark:hover:bg-[#0e87ff] hover:scale-110 transition-transform ease-in-out duration-300">
+                text-primary-1 border-gray-3 dark:border-gray-600 dark:bg-[#152755] bg-[#d6ebffb3] dark:hover:bg-blue-800 hover:scale-110 transition-transform ease-in-out duration-300">
                   <span className='text-[#0073e6] dark:text-gray-3 dark:hover:text-white'>External</span>
                   <ExternalLinkIcon className="ml-1" />
                 </div>

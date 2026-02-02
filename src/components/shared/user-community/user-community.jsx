@@ -425,7 +425,7 @@ const UserCommunity = ({
                 <div className="mt-auto flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-3 dark:border-gray-600 pt-4 leading-none text-sm">
                   {links.map(({ linkUrl, linkText, linkTarget }, index) => (
                     <Link
-                      className="flex items-center dark:bg-[#152755] bg-slate-500 hover:bg-[#0e87ff] dark:hover:bg-[#0e87ff] px-3 py-2 text-white hover:text-white font-normal rounded-md break-words transition-colors"
+                      className="relative after:absolute after:top-1/2 after:-right-2.5 after:inline-block after:h-1 after:w-1 after:-translate-y-1/2 after:rounded-full after:bg-gray-5 after:dark:bg-gray-600 last:after:hidden break-words"
                       key={index}
                       type="text"
                       theme="primary"
@@ -435,7 +435,6 @@ const UserCommunity = ({
                     >
                       
                       {linkText}
-                      <span className="text-sm transition-transform group-hover:translate-x-0.5 pl-2">→</span>
                     </Link>
                   ))}
                 </div>
