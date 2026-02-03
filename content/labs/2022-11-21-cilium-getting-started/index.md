@@ -13,3 +13,12 @@ In this track, we provide you a fully fledged Cilium installation on a small clu
 draft: false
 from: 'Isovalent'
 ---
+
+# Getting Started with Cilium
+
+## What you will learn
+
+- How to install Cilium in a Kubernetes cluster
+- Core concepts behind Cilium and eBPF
+- How to verify basic networking and connectivity
+- How to observe traffic using built-in Cilium tools
