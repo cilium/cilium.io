@@ -133,6 +133,7 @@ const companyLogos = [
   'wildlife',
   'yahoo',
   'smartnews',
+  'tiktok',
 ];
 
 const mediaUsecases = [
