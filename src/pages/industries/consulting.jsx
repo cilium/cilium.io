@@ -59,6 +59,7 @@ const bulletSection1 = {
   ],
   imageSrc: ConsultingImage1,
   imageAlt: 'cilium mesh architecture illustration',
+  imageStyle:"bg-white p-2 rounded-lg"
 };
 
 const bulletSection2 = {

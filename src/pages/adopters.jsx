@@ -194,6 +194,7 @@ const {
   vnpt,
   airbnb,
   tiktok,
+  celonis,
 } = caseStudiesData;
 
 const hero = {
@@ -338,6 +339,7 @@ const userCommunity2 = {
     arangodb,
     acoss,
     canonical,
+    celonis,
     melenion,
     civo,
     kubesphere,

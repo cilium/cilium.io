@@ -45,6 +45,7 @@ import BmcLogo from './images/bmc.inline.svg';
 import BytedanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
 import CanopusLogo from './images/canopus.inline.svg';
+import CelonisLogo from './images/celonis.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
@@ -187,7 +188,7 @@ import VeepeeLogo from './images/veepee.inline.svg';
 import ViasatLogo from './images/viasat.inline.svg';
 import VirtuozzoLogo from './images/virtuozzo.inline.svg';
 import VkcloudLogo from './images/vkcloud.inline.svg';
-import VnptLogo from './images/vnpt.inline.svg'
+import VnptLogo from './images/vnpt.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 
@@ -374,6 +375,7 @@ const icons = {
   esnet: ESnetLogo,
   ionx: IONXLogo,
   vnpt: VnptLogo,
+  celonis: CelonisLogo,
 };
 
 const UserCommunity = ({
@@ -392,7 +394,7 @@ const UserCommunity = ({
         <Link
           className={classNames(
             isTitleCentered &&
-            'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
+              'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
           )}
           to={`#${id}`}
         >
