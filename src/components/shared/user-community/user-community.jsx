@@ -34,6 +34,7 @@ import Button from '../button';
 import AccuKnoxLogo from './images/accuknox.inline.svg';
 import AcossLogo from './images/acoss.inline.svg';
 import AenixLogo from './images/aenix.inline.svg';
+import AirbnbLogo from './images/airbnb.inline.svg';
 import AlaudaLogo from './images/alauda.inline.svg';
 import ArangoDbLogo from './images/arangodb.inline.svg';
 import AyedoLogo from './images/ayedo.inline.svg';
@@ -178,6 +179,7 @@ import TailorBrandsLogo from './images/tailor-brands.inline.svg';
 import TanzuLogo from './images/tanzu.inline.svg';
 import TestifysecLogo from './images/testifysec.inline.svg';
 import TietoevryLogo from './images/tietoevry.inline.svg';
+import TiktokLogo from './images/tiktok.inline.svg';
 import TrendyolLogo from './images/trendyol.inline.svg';
 import TwilioLogo from './images/twilio.inline.svg';
 import UngleichLogo from './images/ungleich.inline.svg';
@@ -376,6 +378,8 @@ const icons = {
   ionx: IONXLogo,
   vnpt: VnptLogo,
   celonis: CelonisLogo,
+  airbnb: AirbnbLogo, 
+  tiktok: TiktokLogo, 
 };
 
 const UserCommunity = ({
