@@ -1,4 +1,26 @@
 export default {
+  airbnb: {
+    iconName: 'airbnb',
+    text: '<b>Airbnb</b> uses Cilium to power its dataplane and unlock new networking capabilities',
+    links: [
+     {
+       linkText: 'Talk',
+       linkUrl: 'https://youtu.be/8sAm3TF4TCI?si=jCudXCBd4KmIkOC1&t=765',
+       linkTarget: '_blank',
+     },
+   ],
+  },
+  tiktok: {
+    iconName: 'tiktok',
+    text: '<b>TikTok</b> uses Cilium for advanced security features like mutual authentication, high performance networking, and enhanced observability in an IPv6 only environment',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=y0qlhiKtDGo',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   wildLife: {
     iconName: 'wildLife',
     text: 'Building a Global Multi Cluster Gaming Infrastructure with Cilium',
@@ -1149,10 +1171,15 @@ export default {
     text: '<b>ESnet</b> uses Cilium for IPv6-first Kubernetes networking for scientific computing infrastructure',
     links: [
       {
-        linkText: 'Read Case Study',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/esnet/',
         linkTarget: '_blank',
       },
+       {
+        linkText: 'Talk',
+        linkUrl: 'https://youtu.be/4Y8fEN_MhYo?si=xdJ5DSwch0U4OHMw',
+        linkTarget: '_blank',
+       },
     ],
   },
   gdata: {
@@ -1563,20 +1590,20 @@ export default {
     iconName: 'immerok',
     text: '<b>Immerok</b> uses Cilium for cross-cluster communication and network isolation for their serverless Apache Flink cloud',
   },
-  uwmadison: {
+ uwmadison: {
     iconName: 'uwmadison',
     text: '<b>University of Wisconsin - Madison</b> leverages Cilium in production clusters',
     links: [
-     {
-      linkText: 'Case Study',
-      linkUrl: 'https://www.cncf.io/case-studies/university-of-wisconsin-madison/',
-      linkTarget: '_blank',
-     },
-     {
-      linkText: 'Talk',
-      linkUrl: 'https://www.youtube.com/watch?v=lwgHMDOY_Zs&list=PLj6h78yzYM2NupzP0zYgT3dLzARalT1By&index=6',
-      linkTarget: '_blank',  
-       },
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/university-of-wisconsin-madison/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=lwgHMDOY_Zs&list=PLj6h78yzYM2NupzP0zYgT3dLzARalT1By&index=6',
+        linkTarget: '_blank',
+      },
     ],
   },
   magicLeap: {

@@ -192,6 +192,8 @@ const {
   ost,
   ionx,
   vnpt,
+  airbnb,
+  tiktok,
   celonis,
 } = caseStudiesData;
 
@@ -294,6 +296,8 @@ const userCommunity1 = {
     cloudera,
     openai,
     cybozu,
+    airbnb,
+    tiktok,
     uwmadison,
   ],
 };
