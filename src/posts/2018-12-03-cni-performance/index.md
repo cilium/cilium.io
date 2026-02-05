@@ -338,7 +338,7 @@ Transfer/sec:      9.01MB
 ```
 
 wrk is able to roughly send 40'0000 requests per second. Let's look at the CPU
-consumption on both the sender and reciever:
+consumption on both the sender and receiver:
 
 ```
 top - 03:03:12 up 1 day,  8:36,  3 users,  load average: 1.16, 0.70, 0.37
@@ -398,8 +398,4 @@ and disable IPv6 to optimize the memory footprint.
 A big thank-you again to Alexis Ducastel for sharing the results. Feedback like
 this helps everybody improve.
 
-[slack]: https://slack.cilium.io
-[cilium]: https://github.com/cilium/cilium
-[benchmark]: https://itnext.io/benchmark-results-of-kubernetes-network-plugins-cni-over-10gbit-s-network-36475925a560
-[pr #6357]: https://github.com/cilium/cilium/pull/6357
 [pr #6082]: https://github.com/cilium/cilium/pull/6082
