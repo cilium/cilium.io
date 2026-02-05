@@ -84,7 +84,7 @@ conclusions after reading the details first.
 - **Wireguard vs IPsec:** Somewhat surprising, even though Wireguard has been
   able to achieve higher maximum throughputs in our tests, IPsec can be more
   efficient in terms of CPU resources to achieve the same throughput. This is
-  very likely strictly dependant on the availability of AES-NI CPU instructions
+  very likely strictly dependent on the availability of AES-NI CPU instructions
   which allow to offload the crypto work for IPsec whereas Wireguard cannot
   benefit from this. The cards will obviously turn when AES-NI offload is not
   available.

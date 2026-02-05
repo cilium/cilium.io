@@ -60,7 +60,7 @@ The following is what we consider the missing pieces before declaring 1.0:
 
 - Maturing of the recently merged integration with the [Envoy](https://github.com/envoyproxy/envoy) proxy providing enforcement for HTTP and gRPC going forward as well as the recently added Kafka protocol policy enforcement capability. While Envoy itself is already in heavy use by many users, the integration with Cilium is new.
 
-- Completing the policy enforcement functionality on layer 7\. This includes the ability to integrate with services like Istio Auth for certificate management and the introduction of source dependant layer 7 rules to the Envoy proxy.
+- Completing the policy enforcement functionality on layer 7\. This includes the ability to integrate with services like Istio Auth for certificate management and the introduction of source dependent layer 7 rules to the Envoy proxy.
 
 We looked at several options on what exactly to call this release and how to proceed. Just declaring 1.0 now did not make sense as the layer 7 functionality is at the core of what many users expect of Cilium. We are well past what is considered a beta. We have thus decided to call it a release candidate.
 
