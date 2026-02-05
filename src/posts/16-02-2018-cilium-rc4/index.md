@@ -143,7 +143,7 @@ documentation, the highlights are:
 ### Bugfixes Changes
 
 - Avoid concurrent access of rand.Rand (#2823, @tgraf)
-- kafka: Use policy identity cache to lookup identity for L3 dependant rules (#2813, @manalibhutiyani)
+- kafka: Use policy identity cache to lookup identity for L3 dependent rules (#2813, @manalibhutiyani)
 - envoy: Set source identity correctly in access log. (#2807, @jrajahalme)
 - replaced sysctl invocation with echo redirects (#2789, @aanm)
 - Set up the k8s watchers based on the kube-apiserver version 2731 (##2735, @aanm)
