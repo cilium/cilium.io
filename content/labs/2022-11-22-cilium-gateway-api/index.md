@@ -12,3 +12,15 @@ In this lab, you will learn how you can use the Cilium Gateway API functionality
 draft: false
 from: 'Isovalent'
 ---
+## What you will learn
+
+- What the Kubernetes Gateway API is and how it improves on Ingress
+- Core Gateway API concepts such as Gateway, HTTPRoute, and listeners
+- How Cilium implements Gateway API for L7 traffic management
+- How to route HTTP and HTTPS traffic using Cilium Gateway API
+
+## Prerequisites
+
+- A running Kubernetes cluster
+- `kubectl` configured to access the cluster
+- Basic understanding of Kubernetes networking and security concepts
