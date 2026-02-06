@@ -12,6 +12,7 @@ const Banner = () => (
       to="https://github.com/cilium/cilium.io/blob/main/CONTRIBUTING.md#listing-labs"
       theme="primary-1"
       target="_blank"
+      rel="noopener noreferrer"
     >
       Submit a PR
     </Button>

@@ -23,6 +23,7 @@ const Hero = () => (
         className="mx-auto mt-6 !rounded-md !px-5 sm:mt-7 sm:!px-7"
         to="/data/cilium-brandbook.pdf"
         target="_blank"
+        rel="noopener noreferrer"
         theme="primary-1"
         asDefaultLink
       >

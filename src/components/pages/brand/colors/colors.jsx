@@ -25,6 +25,7 @@ const Colors = ({ title, description, linkUrl = null, colors }) => (
             className="w-full !rounded-md !px-7 sm:w-auto lg:h-[50px] lg:self-end"
             to={linkUrl}
             target="_blank"
+            rel="noopener noreferrer"
             theme="primary-1"
             asDefaultLink
           >
