@@ -78,7 +78,7 @@ const SubscribeForm = ({ className, inputClassName, buttonClassName, divClassNam
               'remove-autocomplete-styles w-full appearance-none rounded border py-3 pl-6 pr-6 leading-normal shadow-input transition-colors duration-200 xs:rounded-xl xs:py-4 xs:pr-36 md:text-lg lg:py-[22px] lg:text-xl xl:pr-44 bg-white dark:bg-[#dfe5ed]',
               'outline-none hover:border-gray-2 focus:border-primary-1',
               (errors?.email?.message || errorMessage) &&
-                'border-additional-1 hover:border-additional-1 focus:border-additional-1',
+              'border-additional-1 hover:border-additional-1 focus:border-additional-1',
               inputClassName
             )}
             type="email"
@@ -116,11 +116,11 @@ const SubscribeForm = ({ className, inputClassName, buttonClassName, divClassNam
           >
             <div className="flex flex-col items-center justify-center space-y-3 xs:flex-row xs:space-y-0 xs:space-x-2.5">
               <ActiveIcon className="h-9 w-9 shrink-0" />
-              <span className="text-xl font-bold leading-none xs:text-2xl">
+              <span className="text-xl font-bold leading-none xs:text-2xl text-black dark:text-white">
                 Thanks for subscribing!
               </span>
             </div>
-            <span className="mt-3.5 max-w-[280px] text-base leading-normal xs:max-w-none">
+            <span className="mt-3.5 max-w-[280px] text-base leading-normal xs:max-w-none text-black dark:text-gray-2">
               Explore previous releases of eCHO News right now
             </span>
             <Button className="mt-5 lg:text-base" theme="primary-1" size="md" to="#archive">
