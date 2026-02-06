@@ -18,3 +18,9 @@ from: 'Isovalent'
 - Core Gateway API concepts such as Gateway, HTTPRoute, and listeners
 - How Cilium implements Gateway API for L7 traffic management
 - How to route HTTP and HTTPS traffic using Cilium Gateway API
+
+## Prerequisites
+
+- A running Kubernetes cluster
+- `kubectl` configured to access the cluster
+- Basic understanding of Kubernetes networking and security concepts
