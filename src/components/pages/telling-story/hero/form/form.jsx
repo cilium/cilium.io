@@ -217,10 +217,10 @@ const Form = ({ formClassName }) => {
               }}
             >
               <img src={successHero} alt="" loading="eager" />
-              <h3 className="text-center text-xl font-semibold leading-none lg:text-3xl">
+              <h3 className="text-center text-xl font-semibold leading-none lg:text-3xl text-black dark:text-white">
                 Thanks for your story!
               </h3>
-              <span className="mt-3 text-center text-sm lg:text-base">
+              <span className="mt-3 text-center text-sm lg:text-base text-gray-1 dark:text-gray-5">
                 We will get in touch with you as soon as possible
               </span>
               <Link className="mt-8 mb-12" type="text" theme="primary" to="/get-involved">
