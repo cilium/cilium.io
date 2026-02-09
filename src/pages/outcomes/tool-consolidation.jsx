@@ -99,7 +99,7 @@ const testimonials = [
     CTAs: [
       {
         CTAtext: 'Read The Case Study',
-        url: 'https://www.cncf.io/case-studies/sicredi',
+        url: 'https://www.cncf.io/case-studies/digitalocean/',
       },
     ],
     description:
