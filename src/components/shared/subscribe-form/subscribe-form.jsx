@@ -116,11 +116,11 @@ const SubscribeForm = ({ className, inputClassName, buttonClassName, divClassNam
           >
             <div className="flex flex-col items-center justify-center space-y-3 xs:flex-row xs:space-y-0 xs:space-x-2.5">
               <ActiveIcon className="h-9 w-9 shrink-0" />
-              <span className="text-xl font-bold leading-none xs:text-2xl text-black dark:text-white">
+              <span className="text-xl font-bold leading-none xs:text-2xl text-black">
                 Thanks for subscribing!
               </span>
             </div>
-            <span className="mt-3.5 max-w-[280px] text-base leading-normal xs:max-w-none text-black dark:text-gray-2">
+            <span className="mt-3.5 max-w-[280px] text-base leading-normal xs:max-w-none text-gray-1">
               Explore previous releases of eCHO News right now
             </span>
             <Button className="mt-5 lg:text-base" theme="primary-1" size="md" to="#archive">
