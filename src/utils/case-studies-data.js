@@ -3,12 +3,12 @@ export default {
     iconName: 'airbnb',
     text: '<b>Airbnb</b> uses Cilium to power its dataplane and unlock new networking capabilities',
     links: [
-     {
-       linkText: 'Talk',
-       linkUrl: 'https://youtu.be/8sAm3TF4TCI?si=jCudXCBd4KmIkOC1&t=765',
-       linkTarget: '_blank',
-     },
-   ],
+      {
+        linkText: 'Talk',
+        linkUrl: 'https://youtu.be/8sAm3TF4TCI?si=jCudXCBd4KmIkOC1&t=765',
+        linkTarget: '_blank',
+      },
+    ],
   },
   tiktok: {
     iconName: 'tiktok',
@@ -17,6 +17,17 @@ export default {
       {
         linkText: 'Watch Talk',
         linkUrl: 'https://www.youtube.com/watch?v=y0qlhiKtDGo',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  bedrock: {
+    iconName: 'bedrock',
+    text: '<b>Bedrock</b> uses Cilium for eBPF-powered networking and deeper Kubernetes network visibility.',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://tech.bedrockstreaming.com/2026/02/02/how-blue-green-helped-migrating-with-zero-downtime.html',
         linkTarget: '_blank',
       },
     ],
@@ -1175,11 +1186,11 @@ export default {
         linkUrl: 'https://www.cncf.io/case-studies/esnet/',
         linkTarget: '_blank',
       },
-       {
+      {
         linkText: 'Talk',
         linkUrl: 'https://youtu.be/4Y8fEN_MhYo?si=xdJ5DSwch0U4OHMw',
         linkTarget: '_blank',
-       },
+      },
     ],
   },
   gdata: {
@@ -1590,7 +1601,7 @@ export default {
     iconName: 'immerok',
     text: '<b>Immerok</b> uses Cilium for cross-cluster communication and network isolation for their serverless Apache Flink cloud',
   },
- uwmadison: {
+  uwmadison: {
     iconName: 'uwmadison',
     text: '<b>University of Wisconsin - Madison</b> leverages Cilium in production clusters',
     links: [
