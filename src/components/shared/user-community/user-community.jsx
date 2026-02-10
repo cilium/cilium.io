@@ -40,6 +40,7 @@ import ArangoDbLogo from './images/arangodb.inline.svg';
 import AyedoLogo from './images/ayedo.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
 import BatumbuLogo from './images/batumbu.inline.svg';
+import BedrockLogo from './images/bedrock.inline.svg';
 import BitnamiLogo from './images/bitnami.inline.svg';
 import BloombergLogo from './images/bloomberg.inline.svg';
 import BmcLogo from './images/bmc.inline.svg';
@@ -378,8 +379,9 @@ const icons = {
   ionx: IONXLogo,
   vnpt: VnptLogo,
   celonis: CelonisLogo,
-  airbnb: AirbnbLogo, 
-  tiktok: TiktokLogo, 
+  airbnb: AirbnbLogo,
+  tiktok: TiktokLogo,
+  bedrock: BedrockLogo,
 };
 
 const UserCommunity = ({
@@ -398,7 +400,7 @@ const UserCommunity = ({
         <Link
           className={classNames(
             isTitleCentered &&
-              'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
+            'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
           )}
           to={`#${id}`}
         >

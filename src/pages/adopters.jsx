@@ -194,6 +194,7 @@ const {
   vnpt,
   airbnb,
   tiktok,
+  bedrock,
   celonis,
 } = caseStudiesData;
 
@@ -298,6 +299,7 @@ const userCommunity1 = {
     cybozu,
     airbnb,
     tiktok,
+    bedrock,
     uwmadison,
   ],
 };
