@@ -93,6 +93,7 @@ Explore the [Development Commands](#development-commands) section for more avail
 ### Run the website
 
 ```bash
+npm install
 npm run start
 ```
 
