@@ -91,7 +91,7 @@ const Search = ({ buttonClassName, indices }) => {
             backgroundColor: 'rgba(25, 25, 40, 0.6)',
             backdropFilter: 'blur(0px)',
             WebkitBackdropFilter: 'blur(0px)',
-            zIndex: '30',
+            zIndex: '50',
           },
         }}
         isOpen={isOpen}
