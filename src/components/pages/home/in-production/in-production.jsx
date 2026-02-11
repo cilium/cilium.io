@@ -43,7 +43,7 @@ const ITEMS = [
     title: 'Form3',
     icon: { src: form3, width: 133 },
     text: 'The value Cilium added to our FPS platform was massively simplifying our problem. If Cilium did not exist, it would have been much tougher to solve that requirement of being able to switch off one data center and have everything carry on running.',
-    link: 'https://www.cncf.io/case-studies/form3/ ',
+    link: 'https://www.cncf.io/case-studies/form3/',
   },
   {
     title: 'Bloomberg',
@@ -71,7 +71,7 @@ const InProduction = () => (
       <Slider>
         {ITEMS.map(({ title, icon, text, link }, index) => (
           <figure
-            className="!flex bg-white  dark:bg-gray-2 h-full shadow-card flex-col rounded-xl p-6 xl:p-8 xl:pb-7"
+            className="!flex bg-white dark:bg-gray-2 h-full shadow-card flex-col rounded-xl p-6 xl:p-8 xl:pb-7"
             key={index}
           >
             <div>

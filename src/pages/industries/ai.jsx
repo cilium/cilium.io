@@ -77,7 +77,7 @@ const bulletSection2 = {
 };
 
 const bulletSection3 = {
-  heading: ' Deep Observability for AI/ML Infrastructure and Workloads',
+  heading: 'Deep Observability for AI/ML Infrastructure and Workloads',
   paragraphs: [
     'AI/ML workflows can be incredibly complex, with data flowing across multiple services and clusters. Monitoring performance, debugging issues, or optimizing resource usage without deep observability becomes a hassle. Cilium’s Hubble observability platform provides granular insights into network traffic, API calls, and service dependencies. You can monitor DNS performance, HTTP latency, and error rates with real-time metrics, ensuring AI/ML workloads run smoothly.',
   ],
@@ -103,7 +103,7 @@ const bulletSection5 = {
   imageAlt: 'hetzner cilium test illustration',
 };
 
-const aiResouces = [
+const aiResources = [
   {
     imageSrc: EccoOfficeImage,
     imageAlt: 'ecco office building',
@@ -151,17 +151,17 @@ const aiTalks = [
     title: 'Building the core fabric of accelerated hybrid AI clusters using Cilium',
     videoSrc: 'https://www.youtube.com/embed/nYOG41fUO1s?si=dTWw_yRkSwNFicR6',
     description:
-      "This talk covers why and how Backend.ai switched from  Docker's own overlay network driver to Cilium and how this transition resulted in extra capabilities such as fine-grained control over both inter-container and external traffic and also achieving the sensitive throughput and latency requirements of their target workloads.",
+      "This talk covers why and how Backend.ai switched from Docker's own overlay network driver to Cilium and how this transition resulted in extra capabilities such as fine-grained control over both inter-container and external traffic and also achieving the sensitive throughput and latency requirements of their target workloads.",
   },
   {
     title: 'High-Scale Networking for ML Workloads With Cilium',
     videoSrc: 'https://www.youtube.com/embed/kjSFN34dROQ?si=ZTJSByzu-6BMT4QQ',
     description:
-      'This talks covers how G-Research leverages Cilium as the core network for their on-prem ML environment of over 1,000 nodes.',
+      'This talk covers how G-Research leverages Cilium as the core network for their on-prem ML environment of over 1,000 nodes.',
   },
 ];
 
-const MediaEntertainmentPage = () => (
+const AIPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} imageStyle="h-auto lg:w-[350px]" />
     <BulletSection {...bulletSection1} className="mt-10 md:mt-20 lg:mt-32" />
@@ -174,13 +174,13 @@ const MediaEntertainmentPage = () => (
     <FeaturedTalks talks={aiTalks} className="mt-10" />
     <ResourcesCard
       heading="See Real World Stories of Companies using Cilium for AI/ML"
-      resources={aiResouces}
+      resources={aiResources}
     />
     <Community className="mt-10 md:mt-20 lg:mt-32" theme="gray" isTitleCentered />
   </MainLayout>
 );
 
-export default MediaEntertainmentPage;
+export default AIPage;
 
 // eslint-disable-next-line react/prop-types
 export const Head = ({ location: { pathname } }) => {

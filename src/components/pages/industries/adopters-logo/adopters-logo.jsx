@@ -95,7 +95,7 @@ const logos = {
   syseleven: SysElevenLogo,
   adobe: AdobeLogo,
   alibaba: AlibabaCloudLogo,
-  arrango: ArangodbLogo,
+  arangodb: ArangodbLogo,
   ascend: AscendLogo,
   aws: AWSLogo,
   ayedo: AyedoLogo,

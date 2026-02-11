@@ -79,7 +79,7 @@ const Footer = ({ withTopBorder }) => {
             </span>{' '}
             website is licensed under a{' '}
             <span>
-              <a href="https://creativecommons.org/licenses/by/4.0/">
+              <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">
                 Creative Commons Attribution 4.0 International License.
               </a>
             </span>

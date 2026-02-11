@@ -200,7 +200,7 @@ const {
 const hero = {
   title: 'Adopters',
   description:
-    'Here are some of the organizations we know are using Cilium.<br/> If you’re using Cilium and aren’t on this list, <a href="https://github.com/cilium/cilium/blob/master/USERS.md" target="_blank">please submit a pull request</a>!',
+    'Here are some of the organizations we know are using Cilium.<br/> If you’re using Cilium and aren’t on this list, <a href="https://github.com/cilium/cilium/blob/master/USERS.md" target="_blank" rel="noopener noreferrer">please submit a pull request</a>!',
 };
 
 const userCommunity1 = {

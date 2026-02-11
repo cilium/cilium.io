@@ -26,7 +26,7 @@ import ExecelBee from 'images/pages/usecase/excel-bee.png';
 import MainLayout from 'layouts/main';
 
 const heroContent = {
-  heading: 'Financial Services ',
+  heading: 'Financial Services',
   texts: [
     "Regulatory oversight is a hallmark of the financial industry. Cilium's detailed traffic monitoring and logging mechanisms support institutions in establishing transparent audit trails, complying with stringent regulations, and conducting forensic investigations.",
     "The world of fintech revolves around APIs – from mobile banking apps to trading platforms. Cilium's API-aware network security ensures that these critical APIs can be secured, empowering teams with the toolsets needed to understand and guard against malicious patterns in API calls. Cilium supports L7 policies (e.g., allow HTTP GET /foo) for fine-grained access control to shared API services running common cloud native protocols like HTTP, gRPC, Kafka, etc. Cilium also supports deny-based, cluster-wide, and host-layer firewall network policies.",
@@ -82,14 +82,14 @@ const postfinanceStats = {
 const bulletSection2 = {
   heading: 'Weave Compliance and Security Throughout the DevOps Process',
   paragraphs: [
-    "By moving from IP to identity, Cilium empowers you to free your security and operations teams from the need to manually review and audit every policy change. Cilium's native integration with the Kubernetes ecosystem enables it to seamlessly weaves compliance and security governance into the DevOps process. For example, operators can write network policies based on namespaces or labels rather than hardcoding IPs.",
+    "By moving from IP to identity, Cilium empowers you to free your security and operations teams from the need to manually review and audit every policy change. Cilium's native integration with the Kubernetes ecosystem enables it to seamlessly weave compliance and security governance into the DevOps process. For example, operators can write network policies based on namespaces or labels rather than hardcoding IPs.",
   ],
   imageSrc: FinanceImage2,
   imageAlt: 'cilium TLS keys and certificate illustration',
 };
 
 const bulletSection1 = {
-  heading: 'Enforce Zero-Trust Security with Ease. No Disparate Tools,  No Performance Hits',
+  heading: 'Enforce Zero-Trust Security with Ease. No Disparate Tools, No Performance Hits',
   paragraphs: [
     'Adopting a Zero Trust-based approach to network security architecture is essential for companies in the financial service industry to maintain compliance with stringent regulations and keep customer data secure.',
     'Cilium provides a unified tool that implements a range of features to enforce Zero Trust networking security principles. These features include identity-aware service to service communication and observability, advanced network policies with native HTTP and DNS protocol support, transparent encryption, and using in-kernel IPsec or WireGuard. Enforcement of TLS via Network Policy allows operators to restrict the allowed TLS SNIs in their network, and provide a more secure environment.',
@@ -98,7 +98,7 @@ const bulletSection1 = {
   imageSrc: FinanceImage3,
   imageAlt: 'cilium TLS keys and certificate illustration',
   imageRight: false,
-  imageStyle:"bg-white p-2 rounded-lg"
+  imageStyle: "bg-white p-2 rounded-lg"
 };
 
 const bulletSection3 = {
@@ -113,17 +113,17 @@ const bulletSection3 = {
 const financialUsecases = [
   {
     icon: 'encryption',
-    title: 'Transparent Encryption ',
+    title: 'Transparent Encryption',
     buttonLink: '/use-cases/transparent-encryption',
     description:
-      'Elevate compliance and lower risk with Cilium transparent encryption. With just one switch, no application changes, service meshes  or additional proxies',
+      'Elevate compliance and lower risk with Cilium transparent encryption. With just one switch, no application changes, service meshes or additional proxies',
   },
   {
     icon: 'networkPolicy',
-    title: 'Network Policy ',
+    title: 'Network Policy',
     buttonLink: '/use-cases/network-policy',
     description:
-      'Maintain identity based policies effectively at scale with Cilium’s advanced network polices ',
+      'Maintain identity based policies effectively at scale with Cilium’s advanced network policies',
   },
   {
     icon: 'egressGateway',
@@ -159,7 +159,7 @@ const financialResources = [
   {
     imageSrc: PostFinanceOfficeImage,
     imageAlt: 'post finance office',
-    title: ' Post Finance picks Cilium for Cloud Native Networking',
+    title: 'Post Finance picks Cilium for Cloud Native Networking',
     buttonLink: 'https://www.cncf.io/case-studies/postfinance/',
     buttonText: 'Read The Case Study',
     description:
@@ -168,7 +168,7 @@ const financialResources = [
   {
     imageSrc: CapitalOnefficeImage,
     imageAlt: 'capital office building',
-    title: ' How Capital One used eBPF and Cilium to build a secure, maintainable PaaS',
+    title: 'How Capital One used eBPF and Cilium to build a secure, maintainable PaaS',
     buttonLink: 'https://www.youtube.com/watch?v=hwOpCKBaJ-w',
     buttonText: 'Watch The Talk',
     description:
@@ -177,7 +177,7 @@ const financialResources = [
 
   {
     imageSrc: RobinhoodOfficeImage,
-    imageAlt: 'robinhoo office building',
+    imageAlt: 'robinhood office building',
     title: 'More Churn No Problem: Lessons Learned Running Cilium in Production',
     buttonLink: 'https://www.youtube.com/watch?v=qdr9XQ6h5zs',
     buttonText: 'Watch The Talk',
@@ -191,16 +191,16 @@ const financialResources = [
     buttonLink: 'https://www.youtube.com/watch?v=MSqI-gBiCrc',
     buttonText: 'Watch the Talk',
     description:
-      "Sicredi, Brazil's largest credit union, leverages Cilium to reduced operational and maintenance complexity while increasing performance across clouds and on premise.",
+      "Sicredi, Brazil's largest credit union, leverages Cilium to reduce operational and maintenance complexity while increasing performance across clouds and on premise.",
   },
   {
     imageSrc: From3Image,
     imageAlt: 'form3 office building',
-    title: 'Building a Resilient Payments Platform with Cilium ',
+    title: 'Building a Resilient Payments Platform with Cilium',
     buttonLink: 'https://www.cncf.io/case-studies/form3/',
     buttonText: 'Read The Case Study',
     description:
-      ' Form3 integrated Cilium into their platform as their primary solution for networking, security, and observability, enabling them to meet their FPS gateway business requirement of seamlessly switching between data centers without any downtime.',
+      'Form3 integrated Cilium into their platform as their primary solution for networking, security, and observability, enabling them to meet their FPS gateway business requirement of seamlessly switching between data centers without any downtime.',
   },
   {
     imageSrc: RabobankOfficeImage,
@@ -218,7 +218,7 @@ const financialResources = [
     buttonLink: 'https://www.youtube.com/watch?v=HVPKSefazl4',
     buttonText: 'Watch The Talk',
     description:
-      'Corner Banca SA is a Swiss Bank and they use Cilium as the CNI for their on-prem Kubernetes clusters. Industry regulations require that traffic from a Kubernetes pods is identifiable for authentication, encryption and application of firewall rules. Corner Banca uses the Cilium egress gateway which allows routing outgoing traffic from one or more workloads to a specific egress IP.',
+      'Corner Banca SA is a Swiss Bank and they use Cilium as the CNI for their on-prem Kubernetes clusters. Industry regulations require that traffic from a Kubernetes pods are identifiable for authentication, encryption and application of firewall rules. Corner Banca uses the Cilium egress gateway which allows routing outgoing traffic from one or more workloads to a specific egress IP.',
   },
   {
     title: 'High-Scale Networking for ML Workloads With Cilium',
@@ -254,7 +254,7 @@ const FinancialServicesPage = () => (
     <FeaturedTalks talks={financialTalks} />
     <AdoptersLogo items={financeLogos} className="mt-10 md:mt-20 lg:mt-32" />
     <ResourcesCard
-      heading="Join Global Financial Leaders in the Cloud Native Networking Revolution "
+      heading="Join Global Financial Leaders in the Cloud Native Networking Revolution"
       resources={financialResources}
     />
     <IndustryUseCases

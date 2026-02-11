@@ -19,7 +19,7 @@ import wso2OfficeImage from 'images/pages/industries/software/wso2OfficeImage.jp
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
-  heading: 'SaaS, Software, and  DBaaS',
+  heading: 'SaaS, Software, and DBaaS',
   texts: [
     "In today's fast-evolving software landscape, teams behind SaaS, standalone software, and DBaaS offerings grapple with networking, security, and scalability challenges. Traditional networking solutions often fail to support distributed systems' complex demands spanning multiple clusters and clouds. Furthermore, the rise of microservices intensifies the need for fine-grained security measures and deep visibility into application communications.",
     'Cilium is purpose-built to secure and accelerate the delivery of cloud native applications. It leverages eBPF to provide API-aware networking and security with unparalleled granularity without compromising performance. With Cilium, SaaS, software, and DBaaS teams can establish infrastructure capable of scaling their products globally to reach customers wherever they may be. Cilium enables the creation of secure Kubernetes multi-tenant environments, empowering these companies to meet the challenges of modern software deployment head-on.',
@@ -78,7 +78,7 @@ const ascendTestimonial = {
 };
 
 const bulletSection1 = {
-  heading: 'Align with DevOps  and  GitOps Principles',
+  heading: 'Align with DevOps and GitOps Principles',
   paragraphs: [
     "One of the core tenets of DevOps is automation. Cilium's architecture ensures that all its components can be deployed automatically, integrating into existing workflows and augmenting automation capabilities. Platform engineering teams can seamlessly integrate Cilium into their CI/CD pipelines, ensuring continuous delivery and integration without manual intervention.",
     'Cilium is designed to be configured using an API. This aligns with the GitOps principles, where the desired state of infrastructure is declared in code and stored in Git repositories. The API-driven model of Cilium enables organizations to manage, scale, and modify their infrastructure using code, ensuring consistency and repeatability.',
@@ -100,7 +100,7 @@ const bulletSection2 = {
 };
 
 const bulletSection3 = {
-  heading: 'Build Secure Kubernetes Multi-tenant Environments With Cilium ',
+  heading: 'Build Secure Kubernetes Multi-tenant Environments With Cilium',
   paragraphs: [
     "For enterprises building muti-tenant architectures, Cilium enforces isolation between tenants and ensures different teams can safely run on the same platform. With Cilium's multi-tenant observability features, teams can easily access application metrics without compromising security. Traditional logging systems often fall short when segregating data by tenants. Cilium provides multi-tenant, self-service access using the OpenID Connect (OIDC) standard. Teams can have RBAC-based access to relevant data and connectivity metrics, such as network policy drops, DNS lookup failures, and more.",
   ],
@@ -151,7 +151,7 @@ const softwareResources = [
   {
     title: 'Implementing Zero Trust Security with Cilium',
     description:
-      'WSO2 leveraged Cilium to implement zero trust security in their internal Developer Platform as a Service, Choreo ',
+      'WSO2 leveraged Cilium to implement zero trust security in their internal Developer Platform as a Service, Choreo',
     buttonLink: 'https://www.cncf.io/case-studies/ws02/',
     imageSrc: wso2OfficeImage,
     imageAlt: 'wso2 banner',
@@ -160,7 +160,7 @@ const softwareResources = [
 
 const softwareLogos = [
   'adobe',
-  'arrango',
+  'arangodb',
   'cosmonic',
   'ascend',
   'datadog',
