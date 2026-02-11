@@ -30,10 +30,19 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
   );
 
   const smoothScroll = (e, to) => {
-    e.preventDefault();
+    
+    if (e.ctrlKey || e.metaKey || e.shiftKey) {
+      return;
+    }
+
     const section = document.querySelector(to);
     if (section) {
+      e.preventDefault();
       section.scrollIntoView({ behavior: 'smooth' });
+      
+      if (window.history.pushState) {
+        window.history.pushState(null, null, to);
+      }
     }
   };
 
@@ -63,9 +72,7 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
       <a
         className={className}
         href={to}
-        onClick={(e) => {
-          smoothScroll(e, to);
-        }}
+        onClick={(e) => smoothScroll(e, to)}
         {...otherProps}
       >
         {content}
