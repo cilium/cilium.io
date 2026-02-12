@@ -3,12 +3,12 @@ export default {
     iconName: 'airbnb',
     text: '<b>Airbnb</b> uses Cilium to power its dataplane and unlock new networking capabilities',
     links: [
-     {
-       linkText: 'Talk',
-       linkUrl: 'https://youtu.be/8sAm3TF4TCI?si=jCudXCBd4KmIkOC1&t=765',
-       linkTarget: '_blank',
-     },
-   ],
+      {
+        linkText: 'Talk',
+        linkUrl: 'https://youtu.be/8sAm3TF4TCI?si=jCudXCBd4KmIkOC1&t=765',
+        linkTarget: '_blank',
+      },
+    ],
   },
   tiktok: {
     iconName: 'tiktok',
@@ -158,11 +158,6 @@ export default {
       },
       {
         linkText: 'Talk 3',
-        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 4',
         linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
         linkTarget: '_blank',
       },
@@ -506,11 +501,6 @@ export default {
       },
       {
         linkText: 'Talk 5',
-        linkUrl: 'https://www.youtube.com/watch?v=-pOUM1ObAtI',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 6',
         linkUrl: 'https://www.youtube.com/watch?v=CcOKo4BrU2w',
         linkTarget: '_blank',
       },
@@ -648,11 +638,6 @@ export default {
       },
       {
         linkText: 'Talk 3',
-        linkUrl: 'https://www.youtube.com/watch?v=cnNUfQKhYiM',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 4',
         linkUrl: 'https://www.youtube.com/watch?v=LjIgQZZAYDo',
         linkTarget: '_blank',
       },
@@ -733,11 +718,6 @@ export default {
       },
       {
         linkText: 'Talk',
-        linkUrl: 'https://www.youtube.com/watch?v=jevKiqz7dNU',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 2',
         linkUrl: 'https://www.youtube.com/watch?v=jevKiqz7dNU',
         linkTarget: '_blank',
       },
@@ -1175,11 +1155,11 @@ export default {
         linkUrl: 'https://www.cncf.io/case-studies/esnet/',
         linkTarget: '_blank',
       },
-       {
+      {
         linkText: 'Talk',
         linkUrl: 'https://youtu.be/4Y8fEN_MhYo?si=xdJ5DSwch0U4OHMw',
         linkTarget: '_blank',
-       },
+      },
     ],
   },
   gdata: {
@@ -1590,7 +1570,7 @@ export default {
     iconName: 'immerok',
     text: '<b>Immerok</b> uses Cilium for cross-cluster communication and network isolation for their serverless Apache Flink cloud',
   },
- uwmadison: {
+  uwmadison: {
     iconName: 'uwmadison',
     text: '<b>University of Wisconsin - Madison</b> leverages Cilium in production clusters',
     links: [
@@ -1696,7 +1676,7 @@ export default {
   },
   outscale: {
     iconName: 'outscale',
-    text: '<b>Outscale</b> uses Cilium as the the default Container Network Interface (CNI) for their managed Kubernetes offering',
+    text: '<b>Outscale</b> uses Cilium as the default Container Network Interface (CNI) for their managed Kubernetes offering',
   },
   ovh: {
     iconName: 'ovh',

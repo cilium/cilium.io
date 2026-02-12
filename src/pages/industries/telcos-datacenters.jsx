@@ -35,7 +35,7 @@ const bellTestimonial = {
     'With Cilium, Kubernetes Pods now have a single interface with only a default route. Nothing complex, no forwarding rules, no insanities of IPv6 static routes! And from a developer perspective, you just assign a VRF and the rest is really quite simple.',
   withPerson: true,
   name: 'Daniel Bernier',
-  role: 'Technical  Director, Bell Canada',
+  role: 'Technical Director, Bell Canada',
   url: 'https://www.youtube.com/watch?v=vJaOKGWiyvU',
 };
 
@@ -68,7 +68,7 @@ const bulletSection3 = {
   ],
   imageSrc: TelcoImage3,
   imageAlt: 'cilium SRv6',
-  imageStyle:"bg-white p-2 rounded-lg"
+  imageStyle: "bg-white p-2 rounded-lg"
 };
 
 const telcoTalks = [
@@ -86,7 +86,7 @@ const telcoTalks = [
   {
     title: 'BGP with Cilium',
     description:
-      'Interconnect Cilium-managed clusters with an existing network without using a  3rd party tool.',
+      'Interconnect Cilium-managed clusters with an existing network without using a 3rd party tool.',
     videoSrc: 'https://www.youtube.com/embed/AXTKS0WCXjE',
   },
 ];
@@ -110,7 +110,7 @@ const telcoResources = [
     buttonLink:
       'https://www.segment-routing.net/images/MPLS-WC-2023/20230419-SR-Paris-Bell-slides.pdf',
     description:
-      'The race to 5G has seen the global operators  movement like Bell collaborate with hyper scaler clouds to deliver next generation network experiences for customers leveraging tools like Cilium and eBPF ',
+      'The race to 5G has seen the global operators movement like Bell collaborate with hyperscaler clouds to deliver next generation network experiences for customers leveraging tools like Cilium and eBPF',
   },
 ];
 
@@ -141,7 +141,7 @@ const telcoUsecases = [
   },
 ];
 
-const MediaEntertainmentPage = () => (
+const TelcosDataCenterPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} />
     <Testimonial {...bellTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
@@ -162,7 +162,7 @@ const MediaEntertainmentPage = () => (
   </MainLayout>
 );
 
-export default MediaEntertainmentPage;
+export default TelcosDataCenterPage;
 
 // eslint-disable-next-line react/prop-types
 export const Head = ({ location: { pathname } }) => {
