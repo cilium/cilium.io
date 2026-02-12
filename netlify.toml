@@ -1,3 +1,17 @@
 [build]
   publish = "public"
   command = "gatsby build"
+
+[build.environment]
+  GATSBY_CONTINUE_BUILD_ON_MISSING_ADAPTER = "true"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "frame-ancestors instruqt.com play.instruqt.com"
+

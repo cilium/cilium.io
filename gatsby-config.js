@@ -151,15 +151,6 @@ const plugins = [
   'gatsby-plugin-sitemap',
   'gatsby-plugin-image',
   {
-    resolve: 'gatsby-plugin-netlify',
-    options: {
-      headers: {
-        '/fonts/*': ['Cache-Control: public, max-age=31536000, immutable'],
-        '/*': ['Content-Security-Policy: frame-ancestors instruqt.com play.instruqt.com'],
-      },
-    },
-  },
-  {
     resolve: `gatsby-plugin-feed`,
     options: {
       query: `

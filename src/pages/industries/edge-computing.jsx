@@ -51,7 +51,7 @@ const rocheTestimonial = {
 const bulletSection1 = {
   heading: 'Deep Visibility for Edge Operations',
   paragraphs: [
-    "Cilium revolutionizes observability in complex edge environments where traditional monitoring tools fall short. By leveraging Hubble for real-time network flow analysis and Tetragon for security event monitoring, Cilium provides deep security and visibility across distributed edge topologies. Cilium's seamless integration with SIEM and monitoring platforms allows organizations to maintain consistency in their security and observability practices from cloud to edge. ",
+    "Cilium revolutionizes observability in complex edge environments where traditional monitoring tools fall short. By leveraging Hubble for real-time network flow analysis and Tetragon for security event monitoring, Cilium provides deep security and visibility across distributed edge topologies. Cilium's seamless integration with SIEM and monitoring platforms allows organizations to maintain consistency in their security and observability practices from cloud to edge.",
     'With Cilium, operators gain deep, actionable insights into their edge infrastructure, empowering them to quickly identify, troubleshoot, and resolve issues across their entire network, thereby maintaining optimal performance and security in even the most challenging edge computing scenarios.',
   ],
   imageSrc: EdgeImage2,
@@ -70,7 +70,7 @@ const bulletSection2 = {
 };
 
 const bulletSection3 = {
-  heading: 'Seamless Connectivity  for Edge Infrastructures',
+  heading: 'Seamless Connectivity for Edge Infrastructures',
   paragraphs: [
     "Cilium's ClusterMesh feature revolutionizes edge computing by seamlessly extending Cilium's powerful networking and security capabilities across multiple clusters. It enables secure, high-performance connectivity between edge locations, data centers, and cloud resources without complex VPN setups. ClusterMesh facilitates global service discovery, unified security policies, and intelligent cross-cluster load balancing, ensuring consistent protection and optimal performance across your entire edge infrastructure.",
     'This unified approach significantly reduces operational complexity while enhancing the resilience and efficiency of distributed edge applications.',
@@ -94,9 +94,9 @@ const cloudTalks = [
   },
   {
     title: 'Meshing It up Securely: How Roche Manages Network Connectivity for 1000+ Edge Clusters',
-    videoSrc: 'https://www.youtube.com/embed/kC8efabCH6s?si=Pbs7_jaDxplL9s6-"',
+    videoSrc: 'https://www.youtube.com/embed/kC8efabCH6s?si=Pbs7_jaDxplL9s6-',
     description:
-      'This talk discuss the challenges of highly protected environments and show how leveraging Cilium Service Mesh can bring “the firewall” closer to the workloads',
+      'This talk discusses the challenges of highly protected environments and shows how leveraging Cilium Service Mesh can bring “the firewall” closer to the workloads',
   },
 ];
 
