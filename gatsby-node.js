@@ -505,11 +505,6 @@ async function getHubspotEmails({ actions: { createNode }, createContentDigest }
             },
           }
         );
-
-        if (!hubspotEmails.ok) {
-          throw new Error(`Hubspot API error: ${hubspotEmails.status} ${hubspotEmails.statusText}`);
-        }
-
         hubspotEmailsData = await hubspotEmails.json();
       } catch (error) {
         console.log(error);
@@ -557,11 +552,6 @@ async function getGithubStars({ actions: { createNode }, createContentDigest, ca
       stars = cacheStarsData.stars;
     } else {
       const response = await fetch(`https://api.github.com/repos/cilium/cilium`);
-
-      if (!response.ok) {
-        throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
-      }
-
       const { stargazers_count } = await response.json();
 
       if (typeof stargazers_count !== 'number') {

@@ -60,7 +60,7 @@ const sectionContent4 = {
   imageRight: true,
 };
 
-const IngressPage = () => (
+const KubeProxyReplacementPage = () => (
   <MainLayout theme="gray">
     <Hero {...heroContent} />
     <FeatureSection {...sectionContent1} />
@@ -71,7 +71,7 @@ const IngressPage = () => (
   </MainLayout>
 );
 
-export default IngressPage;
+export default KubeProxyReplacementPage;
 
 // eslint-disable-next-line react/prop-types
 export const Head = ({ location: { pathname } }) => {
