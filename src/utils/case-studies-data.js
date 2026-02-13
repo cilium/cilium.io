@@ -21,6 +21,17 @@ export default {
       },
     ],
   },
+  bedrock: {
+    iconName: 'bedrock',
+    text: '<b>Bedrock</b> uses Cilium for eBPF-powered networking and deeper Kubernetes network visibility.',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://tech.bedrockstreaming.com/2026/02/02/how-blue-green-helped-migrating-with-zero-downtime.html',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   wildLife: {
     iconName: 'wildLife',
     text: 'Building a Global Multi Cluster Gaming Infrastructure with Cilium',
