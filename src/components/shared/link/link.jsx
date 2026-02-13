@@ -29,9 +29,21 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
     additionalClassName
   );
 
-  const smoothScroll = (to) => {
+  const smoothScroll = (e, to) => {
+    
+    if (e.ctrlKey || e.metaKey || e.shiftKey) {
+      return;
+    }
+
     const section = document.querySelector(to);
-    section.scrollIntoView({ behavior: 'smooth' });
+    if (section) {
+      e.preventDefault();
+      section.scrollIntoView({ behavior: 'smooth' });
+      
+      if (window.history.pushState) {
+        window.history.pushState(null, null, to);
+      }
+    }
   };
 
   const content = type === 'arrow' ? <span>{children}</span> : children;
@@ -39,7 +51,7 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
 
   if (to.startsWith('/#')) {
     return (
-      <a className={className} href={to} {...otherProps} aria-hidden="true">
+      <a className={className} href={to} {...otherProps}>
         {content}
         {arrow}
       </a>
@@ -59,11 +71,9 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
     return (
       <a
         className={className}
-        onClick={() => {
-          smoothScroll(to);
-        }}
+        href={to}
+        onClick={(e) => smoothScroll(e, to)}
         {...otherProps}
-        aria-hidden="true"
       >
         {content}
         {arrow}
