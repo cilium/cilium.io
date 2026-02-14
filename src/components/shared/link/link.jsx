@@ -30,7 +30,6 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
   );
 
   const smoothScroll = (e, to) => {
-    
     if (e.ctrlKey || e.metaKey || e.shiftKey) {
       return;
     }
@@ -39,7 +38,6 @@ const Link = ({ className: additionalClassName, to, type, theme, children, ...ot
     if (section) {
       e.preventDefault();
       section.scrollIntoView({ behavior: 'smooth' });
-      
       if (window.history.pushState) {
         window.history.pushState(null, null, to);
       }
