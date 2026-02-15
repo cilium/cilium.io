@@ -13,12 +13,8 @@ const slugifyCategory = (item, pagePath) =>
   item === '*' ? `/${pagePath}/` : `/${pagePath}/categories/${slugify(item)}/`;
 
 // Create Blog Posts
-async function createBlogPosts({ graphql, actions }) {
-  const {
-    data: {
-      allMdx: { nodes: blogPosts },
-    },
-  } = await graphql(
+async function createBlogPosts({ graphql, actions, reporter }) {
+  const result = await graphql(
     `
       query BlogPosts($draftFilter: [Boolean]!) {
         allMdx(
@@ -42,6 +38,15 @@ async function createBlogPosts({ graphql, actions }) {
     { draftFilter: DRAFT_FILTER }
   );
 
+  if (result.errors) {
+    reporter.panicOnBuild('GraphQL query failed', result.errors);
+    return;
+  }
+
+  const {
+    allMdx: { nodes: blogPosts },
+  } = result.data;
+
   blogPosts.forEach(({ id, frontmatter: { path }, internal: { contentFilePath } }) => {
     if (!path) {
       return;
@@ -61,13 +66,7 @@ async function createBlogPosts({ graphql, actions }) {
 async function createBlogPages({ graphql, actions, reporter }) {
   const { createPage } = actions;
 
-  const {
-    data: {
-      featuredPostEdges: { edges: featuredPost },
-      allCategories: { group: allCategories },
-      allPosts: { edges: allPosts },
-    },
-  } = await graphql(
+  const result = await graphql(
     `
       query ($draftFilter: [Boolean]!) {
         allCategories: allMdx(filter: { internal: { contentFilePath: { regex: "/posts/" } } }) {
@@ -99,6 +98,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
             fields: { isFeatured: { eq: false }, draft: { in: $draftFilter } }
           }
           sort: { frontmatter: { date: DESC } }
+          limit: 2000
         ) {
           edges {
             node {
@@ -113,6 +113,17 @@ async function createBlogPages({ graphql, actions, reporter }) {
     `,
     { draftFilter: DRAFT_FILTER }
   );
+
+  if (result.errors) {
+    reporter.panicOnBuild('GraphQL query failed', result.errors);
+    return;
+  }
+
+  const {
+    featuredPostEdges: { edges: featuredPost },
+    allCategories: { group: allCategories },
+    allPosts: { edges: allPosts },
+  } = result.data;
 
   if (featuredPost?.length > 1) {
     const featuredPosts = featuredPost.map(
@@ -317,6 +328,7 @@ async function createLabsPage({ graphql, actions }) {
             fields: { draft: { in: $draftFilter } }
           }
           sort: { frontmatter: { title: ASC } }
+          limit: 2000
         ) {
           edges {
             node {
