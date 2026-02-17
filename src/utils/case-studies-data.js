@@ -27,7 +27,8 @@ export default {
     links: [
       {
         linkText: 'Read Blog',
-        linkUrl: 'https://tech.bedrockstreaming.com/2026/02/02/how-blue-green-helped-migrating-with-zero-downtime.html',
+        linkUrl:
+          'https://tech.bedrockstreaming.com/2026/02/02/how-blue-green-helped-migrating-with-zero-downtime.html',
         linkTarget: '_blank',
       },
     ],
@@ -154,7 +155,7 @@ export default {
     links: [
       {
         linkText: 'Case Study',
-        linkUrl: 'https://isovalent.com/blog/post/adobe-achieves-with-isovalent-and-cilium/',
+        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
         linkTarget: '_blank',
       },
       {
@@ -300,6 +301,7 @@ export default {
       {
         linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/trip-com-group/',
+        linkTarget: '_blank',
       },
       {
         linkText: 'Talk',
@@ -373,7 +375,7 @@ export default {
       {
         linkText: 'Read Blog',
         linkUrl:
-          'https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebfp-and-cilium-to-google-kubernetes-engine',
+          'https://cloud.google.com/blog/products/networking/gke-network-interface-from-kubenet-to-ebpfcilium-to-dranet',
         linkTarget: '_blank',
       },
       {
@@ -600,7 +602,7 @@ export default {
     links: [
       {
         linkText: 'Story',
-        linkUrl: 'https://cilium.io/blog/2022/10/13/publishing-user-story/',
+        linkUrl: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
         linkTarget: '_blank',
       },
       {
@@ -1592,7 +1594,8 @@ export default {
       },
       {
         linkText: 'Talk',
-        linkUrl: 'https://www.youtube.com/watch?v=lwgHMDOY_Zs&list=PLj6h78yzYM2NupzP0zYgT3dLzARalT1By&index=6',
+        linkUrl:
+          'https://www.youtube.com/watch?v=lwgHMDOY_Zs&list=PLj6h78yzYM2NupzP0zYgT3dLzARalT1By&index=6',
         linkTarget: '_blank',
       },
     ],
