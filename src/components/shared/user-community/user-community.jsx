@@ -401,7 +401,7 @@ const UserCommunity = ({
         <Link
           className={classNames(
             isTitleCentered &&
-            'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
+              'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
           )}
           to={`#${id}`}
         >
@@ -426,12 +426,12 @@ const UserCommunity = ({
                 key={index}
               >
                 <Icon
-                  className="h-8 sm:h-10 mb-4 flex-shrink-0 text-black dark:bg-white dark:rounded-md dark:px-2 dark:py-1"
+                  className="h-8 sm:h-10 mb-4 flex-shrink-0 text-black dark:bg-white dark:rounded-md dark:px-2 dark:py-1 max-w-full w-auto"
                   aria-label={`${iconName} logo`}
                 />
                 {links && links.length > 0 && (
                   <Link
-                    className="inline-flex items-center justify-center rounded-full bg-additional-green px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:opacity-90"
+                    className="inline-flex items-center justify-center rounded-full bg-primary-1 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-hover-1"
                     to={links[0].linkUrl}
                     target={links[0].linkTarget || null}
                     rel={links[0].linkTarget ? 'noopener noreferrer' : null}
