@@ -154,8 +154,13 @@ export default {
     text: 'What Makes a Good Multi-tenant Kubernetes Solution',
     links: [
       {
-        linkText: 'Case Study',
+        linkText: 'Talk 3',
         linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://isovalent.com/blog/post/adobe-achieves-with-isovalent-and-cilium/',
         linkTarget: '_blank',
       },
       {
@@ -166,11 +171,6 @@ export default {
       {
         linkText: 'Talk 2',
         linkUrl: 'https://www.youtube.com/watch?v=39FLsSc2P-Y&feature=youtu.be&t=116',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 3',
-        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
         linkTarget: '_blank',
       },
     ],
@@ -376,6 +376,12 @@ export default {
         linkText: 'Read Blog',
         linkUrl:
           'https://cloud.google.com/blog/products/networking/gke-network-interface-from-kubenet-to-ebpfcilium-to-dranet',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Read Blog 2',
+        linkUrl:
+          'https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebfp-and-cilium-to-google-kubernetes-engine',
         linkTarget: '_blank',
       },
       {
@@ -601,13 +607,13 @@ export default {
     text: '<b>The New York Times</b> uses Cilium on EKS for multi-region multi-tenant shared clusters',
     links: [
       {
-        linkText: 'Story',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Talk 1',
-        linkUrl: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
+        linkText: 'Story',
+        linkUrl: 'https://cilium.io/blog/2022/10/13/publishing-user-story/',
         linkTarget: '_blank',
       },
       {
