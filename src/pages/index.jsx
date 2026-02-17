@@ -9,6 +9,7 @@ import Learn from 'components/pages/home/learn';
 import CNCFBanner from 'components/shared/cncf-banner';
 import Community from 'components/shared/community';
 import HandsOn from 'components/shared/hands-on';
+import CommunityInviter from 'components/shared/inviter';
 import SEO from 'components/shared/seo';
 import UserCommunity from 'components/shared/user-community';
 import MainLayout from 'layouts/main';
@@ -55,6 +56,7 @@ const IndexPage = () => (
     <FeaturedTalks talks={talks} />
     <Learn />
     <Community className="pt-10 md:pt-20 lg:pt-32" isTitleCentered />
+    <CommunityInviter />
   </MainLayout>
 );
 
