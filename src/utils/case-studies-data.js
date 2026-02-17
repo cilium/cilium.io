@@ -23,7 +23,7 @@ export default {
   },
   bedrock: {
     iconName: 'bedrock',
-    text: '<b>Bedrock</b> uses Cilium for eBPF-powered networking and deeper Kubernetes network visibility.',
+    text: '<b>Bedrock</b> uses Cilium for eBPF-powered networking and deeper Kubernetes network visibility',
     links: [
       {
         linkText: 'Read Blog',
