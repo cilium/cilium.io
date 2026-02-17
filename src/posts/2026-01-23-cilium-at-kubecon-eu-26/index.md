@@ -41,8 +41,8 @@ Discover how Roche is solving DNS challenges in protected environments where ext
 
 See how Marvell is transparently offloading Cilium to DPUs with minimal code changes, including metrics on resource savings and a demo of hardware-accelerated security policies.
 
-[**Sponsored Keynote**](https://colocatedeventseu2026.sched.com/event/2DZMf/ciliumcon-sponsored-keynote-tba-isovalent-at-cisco?iframe=yes&w=100%&sidebar=yes&bg=no)  
-*TBA, Isovalent at Cisco | 14:55 - 15:00*
+[**Sponsored Keynote - Built in the Open: Why Cisco Is Betting on eBPF, Cilium, and Tetragon**](https://colocatedeventseu2026.sched.com/event/2DZMf/ciliumcon-sponsored-keynote-tba-isovalent-at-cisco?iframe=yes&w=100%&sidebar=yes&bg=no)  
+*Bill Mulligan, Isovalent at Cisco | 14:55 - 15:00*
 
 [**Connecting the World: Your Hands-on Guide To Cilium ClusterMesh and MCS-API**](https://colocatedeventseu2026.sched.com/event/2DY6j/connecting-the-world-your-hands-on-guide-to-cilium-clustermesh-and-mcs-api-arthur-outhenin-chalandre-ledger-quentin-swiech-s3ns?iframe=yes&w=100%&sidebar=yes&bg=no)  
 *Arthur Outhenin-Chalandre, Ledger & Quentin Swiech, S3NS | 15:20 - 15:45*
