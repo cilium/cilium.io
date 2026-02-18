@@ -5,7 +5,7 @@ ogSummary: 'Learn how to observe and troubleshoot pod-to-pod traffic in Kubernet
 ogImage: ogimage.png
 categories:
   - How-To
-  - community
+  - Community
 externalUrl: 'https://medium.com/@0.all_existence.0/uncovering-pod-to-pod-traffic-in-kubernetes-using-cilium-and-hubble-0e59a096cce9'
 tags:
   - Kubernetes
