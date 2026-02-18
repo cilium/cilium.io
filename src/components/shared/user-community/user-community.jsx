@@ -393,6 +393,7 @@ const UserCommunity = ({
   buttonUrl,
   buttonTarget,
   id,
+  type = 'default',
 }) => (
   <section className={classNames(className)} id={id}>
     <Container className="flex flex-col overflow-x-hidden p-2">
@@ -400,7 +401,7 @@ const UserCommunity = ({
         <Link
           className={classNames(
             isTitleCentered &&
-            'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
+              'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
           )}
           to={`#${id}`}
         >
@@ -409,11 +410,40 @@ const UserCommunity = ({
       )}
       <div
         className={classNames(
-          'grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:auto-rows-fr lg:grid-cols-4 lg:gap-4 xl:gap-8'
+          'grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:auto-rows-fr lg:gap-4 xl:gap-8',
+          type === 'simple' ? 'lg:grid-cols-4 xl:grid-cols-7' : 'lg:grid-cols-4'
         )}
       >
         {items.map(({ iconName, text, links }, index) => {
           const Icon = icons[iconName];
+
+          if (type === 'simple') {
+            return (
+              <div
+                className={classNames(
+                  'flex flex-col items-center justify-between min-w-0 h-full py-2'
+                )}
+                key={index}
+              >
+                <Icon
+                  className="h-8 sm:h-10 mb-4 flex-shrink-0 text-black dark:bg-white dark:rounded-md dark:px-2 dark:py-1 max-w-full w-auto"
+                  aria-label={`${iconName} logo`}
+                />
+                {links && links.length > 0 && (
+                  <Link
+                    className="inline-flex items-center justify-center rounded-full bg-primary-1 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-hover-1"
+                    to={links[0].linkUrl}
+                    target={links[0].linkTarget || null}
+                    rel={links[0].linkTarget ? 'noopener noreferrer' : null}
+                  >
+                    Case Study
+                    <span className="ml-1">→</span>
+                  </Link>
+                )}
+              </div>
+            );
+          }
+
           return (
             <div
               className={classNames(
@@ -486,6 +516,7 @@ UserCommunity.propTypes = {
   buttonUrl: PropTypes.string,
   buttonTarget: PropTypes.string,
   id: PropTypes.string,
+  type: PropTypes.oneOf(['default', 'simple']),
 };
 
 UserCommunity.defaultProps = {
@@ -496,6 +527,7 @@ UserCommunity.defaultProps = {
   buttonUrl: null,
   buttonTarget: null,
   id: null,
+  type: 'default',
 };
 
 export default UserCommunity;

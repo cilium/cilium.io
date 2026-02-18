@@ -27,7 +27,8 @@ export default {
     links: [
       {
         linkText: 'Read Blog',
-        linkUrl: 'https://tech.bedrockstreaming.com/2026/02/02/how-blue-green-helped-migrating-with-zero-downtime.html',
+        linkUrl:
+          'https://tech.bedrockstreaming.com/2026/02/02/how-blue-green-helped-migrating-with-zero-downtime.html',
         linkTarget: '_blank',
       },
     ],
@@ -153,6 +154,11 @@ export default {
     text: 'What Makes a Good Multi-tenant Kubernetes Solution',
     links: [
       {
+        linkText: 'Talk 3',
+        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
+        linkTarget: '_blank',
+      },
+      {
         linkText: 'Case Study',
         linkUrl: 'https://isovalent.com/blog/post/adobe-achieves-with-isovalent-and-cilium/',
         linkTarget: '_blank',
@@ -165,11 +171,6 @@ export default {
       {
         linkText: 'Talk 2',
         linkUrl: 'https://www.youtube.com/watch?v=39FLsSc2P-Y&feature=youtu.be&t=116',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 3',
-        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
         linkTarget: '_blank',
       },
     ],
@@ -300,6 +301,7 @@ export default {
       {
         linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/trip-com-group/',
+        linkTarget: '_blank',
       },
       {
         linkText: 'Talk',
@@ -372,6 +374,12 @@ export default {
     links: [
       {
         linkText: 'Read Blog',
+        linkUrl:
+          'https://cloud.google.com/blog/products/networking/gke-network-interface-from-kubenet-to-ebpfcilium-to-dranet',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Read Blog 2',
         linkUrl:
           'https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebfp-and-cilium-to-google-kubernetes-engine',
         linkTarget: '_blank',
@@ -599,13 +607,13 @@ export default {
     text: '<b>The New York Times</b> uses Cilium on EKS for multi-region multi-tenant shared clusters',
     links: [
       {
-        linkText: 'Story',
-        linkUrl: 'https://cilium.io/blog/2022/10/13/publishing-user-story/',
+        linkText: 'Talk 1',
+        linkUrl: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Talk 1',
-        linkUrl: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
+        linkText: 'Story',
+        linkUrl: 'https://cilium.io/blog/2022/10/13/publishing-user-story/',
         linkTarget: '_blank',
       },
       {
@@ -1592,7 +1600,8 @@ export default {
       },
       {
         linkText: 'Talk',
-        linkUrl: 'https://www.youtube.com/watch?v=lwgHMDOY_Zs&list=PLj6h78yzYM2NupzP0zYgT3dLzARalT1By&index=6',
+        linkUrl:
+          'https://www.youtube.com/watch?v=lwgHMDOY_Zs&list=PLj6h78yzYM2NupzP0zYgT3dLzARalT1By&index=6',
         linkTarget: '_blank',
       },
     ],
