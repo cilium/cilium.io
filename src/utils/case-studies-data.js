@@ -1,4 +1,38 @@
 export default {
+  airbnb: {
+    iconName: 'airbnb',
+    text: '<b>Airbnb</b> uses Cilium to power its dataplane and unlock new networking capabilities',
+    links: [
+      {
+        linkText: 'Talk',
+        linkUrl: 'https://youtu.be/8sAm3TF4TCI?si=jCudXCBd4KmIkOC1&t=765',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  tiktok: {
+    iconName: 'tiktok',
+    text: '<b>TikTok</b> uses Cilium for advanced security features like mutual authentication, high performance networking, and enhanced observability in an IPv6 only environment',
+    links: [
+      {
+        linkText: 'Watch Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=y0qlhiKtDGo',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  bedrock: {
+    iconName: 'bedrock',
+    text: '<b>Bedrock</b> uses Cilium for eBPF-powered networking and deeper Kubernetes network visibility',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl:
+          'https://tech.bedrockstreaming.com/2026/02/02/how-blue-green-helped-migrating-with-zero-downtime.html',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   wildLife: {
     iconName: 'wildLife',
     text: 'Building a Global Multi Cluster Gaming Infrastructure with Cilium',
@@ -120,6 +154,11 @@ export default {
     text: 'What Makes a Good Multi-tenant Kubernetes Solution',
     links: [
       {
+        linkText: 'Talk 3',
+        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
+        linkTarget: '_blank',
+      },
+      {
         linkText: 'Case Study',
         linkUrl: 'https://isovalent.com/blog/post/adobe-achieves-with-isovalent-and-cilium/',
         linkTarget: '_blank',
@@ -132,16 +171,6 @@ export default {
       {
         linkText: 'Talk 2',
         linkUrl: 'https://www.youtube.com/watch?v=39FLsSc2P-Y&feature=youtu.be&t=116',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 3',
-        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 4',
-        linkUrl: 'https://www.youtube.com/watch?v=YfdShLZcxGQ',
         linkTarget: '_blank',
       },
     ],
@@ -272,6 +301,7 @@ export default {
       {
         linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/trip-com-group/',
+        linkTarget: '_blank',
       },
       {
         linkText: 'Talk',
@@ -344,6 +374,12 @@ export default {
     links: [
       {
         linkText: 'Read Blog',
+        linkUrl:
+          'https://cloud.google.com/blog/products/networking/gke-network-interface-from-kubenet-to-ebpfcilium-to-dranet',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Read Blog 2',
         linkUrl:
           'https://cloud.google.com/blog/products/containers-kubernetes/bringing-ebfp-and-cilium-to-google-kubernetes-engine',
         linkTarget: '_blank',
@@ -484,11 +520,6 @@ export default {
       },
       {
         linkText: 'Talk 5',
-        linkUrl: 'https://www.youtube.com/watch?v=-pOUM1ObAtI',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 6',
         linkUrl: 'https://www.youtube.com/watch?v=CcOKo4BrU2w',
         linkTarget: '_blank',
       },
@@ -576,13 +607,13 @@ export default {
     text: '<b>The New York Times</b> uses Cilium on EKS for multi-region multi-tenant shared clusters',
     links: [
       {
-        linkText: 'Story',
-        linkUrl: 'https://cilium.io/blog/2022/10/13/publishing-user-story/',
+        linkText: 'Talk 1',
+        linkUrl: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
         linkTarget: '_blank',
       },
       {
-        linkText: 'Talk 1',
-        linkUrl: 'https://www.youtube.com/watch?v=9FDpMNvPrCw',
+        linkText: 'Story',
+        linkUrl: 'https://cilium.io/blog/2022/10/13/publishing-user-story/',
         linkTarget: '_blank',
       },
       {
@@ -626,11 +657,6 @@ export default {
       },
       {
         linkText: 'Talk 3',
-        linkUrl: 'https://www.youtube.com/watch?v=cnNUfQKhYiM',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 4',
         linkUrl: 'https://www.youtube.com/watch?v=LjIgQZZAYDo',
         linkTarget: '_blank',
       },
@@ -711,11 +737,6 @@ export default {
       },
       {
         linkText: 'Talk',
-        linkUrl: 'https://www.youtube.com/watch?v=jevKiqz7dNU',
-        linkTarget: '_blank',
-      },
-      {
-        linkText: 'Talk 2',
         linkUrl: 'https://www.youtube.com/watch?v=jevKiqz7dNU',
         linkTarget: '_blank',
       },
@@ -1149,8 +1170,13 @@ export default {
     text: '<b>ESnet</b> uses Cilium for IPv6-first Kubernetes networking for scientific computing infrastructure',
     links: [
       {
-        linkText: 'Read Case Study',
+        linkText: 'Case Study',
         linkUrl: 'https://www.cncf.io/case-studies/esnet/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk',
+        linkUrl: 'https://youtu.be/4Y8fEN_MhYo?si=xdJ5DSwch0U4OHMw',
         linkTarget: '_blank',
       },
     ],
@@ -1567,16 +1593,17 @@ export default {
     iconName: 'uwmadison',
     text: '<b>University of Wisconsin - Madison</b> leverages Cilium in production clusters',
     links: [
-     {
-      linkText: 'Case Study',
-      linkUrl: 'https://www.cncf.io/case-studies/university-of-wisconsin-madison/',
-      linkTarget: '_blank',
-     },
-     {
-      linkText: 'Talk',
-      linkUrl: 'https://www.youtube.com/watch?v=lwgHMDOY_Zs&list=PLj6h78yzYM2NupzP0zYgT3dLzARalT1By&index=6',
-      linkTarget: '_blank',  
-       },
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/university-of-wisconsin-madison/',
+        linkTarget: '_blank',
+      },
+      {
+        linkText: 'Talk',
+        linkUrl:
+          'https://www.youtube.com/watch?v=lwgHMDOY_Zs&list=PLj6h78yzYM2NupzP0zYgT3dLzARalT1By&index=6',
+        linkTarget: '_blank',
+      },
     ],
   },
   magicLeap: {
@@ -1669,7 +1696,7 @@ export default {
   },
   outscale: {
     iconName: 'outscale',
-    text: '<b>Outscale</b> uses Cilium as the the default Container Network Interface (CNI) for their managed Kubernetes offering',
+    text: '<b>Outscale</b> uses Cilium as the default Container Network Interface (CNI) for their managed Kubernetes offering',
   },
   ovh: {
     iconName: 'ovh',
@@ -1698,5 +1725,9 @@ export default {
   vnpt: {
     iconName: 'vnpt',
     text: '<b>Vietnam Posts and Telecommunications Group</b> uses Cilium in their production, staging, and development clusters',
-  }
+  },
+  celonis: {
+    iconName: 'celonis',
+    text: '<b>Celonis</b> has standardized on Cilium as the primary CNI across its entire global cluster fleet',
+  },
 };

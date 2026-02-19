@@ -50,6 +50,7 @@
     - [VS Code](#vs-code)
     - [Development Commands](#development-commands)
   - [How to create blog post](#how-to-create-blog-post)
+  - [License](#license)
 
 ## Contributing
 
@@ -92,6 +93,7 @@ Explore the [Development Commands](#development-commands) section for more avail
 ### Run the website
 
 ```bash
+npm install
 npm run start
 ```
 
@@ -353,3 +355,10 @@ header="Guest Blog Post:"
 bio={`This is a guest blog by a Cilium user based on the <a href="https://davidlovezoe.club/wordpress/archives/851">the original blog post</a>. If you would like to publish a blog post as well, contact us on Slack.`}
 />
 ```
+
+## License
+
+This project is dual-licensed:
+
+- **Source code** is licensed under the [Apache License 2.0](LICENSE)
+- **Website content** (documentation, blog posts, images, and other media) is licensed under [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-CC-BY-4.0)

@@ -192,6 +192,10 @@ const {
   ost,
   ionx,
   vnpt,
+  airbnb,
+  tiktok,
+  bedrock,
+  celonis,
 } = caseStudiesData;
 
 const hero = {
@@ -293,6 +297,9 @@ const userCommunity1 = {
     cloudera,
     openai,
     cybozu,
+    airbnb,
+    tiktok,
+    bedrock,
     uwmadison,
   ],
 };
@@ -334,6 +341,7 @@ const userCommunity2 = {
     arangodb,
     acoss,
     canonical,
+    celonis,
     melenion,
     civo,
     kubesphere,

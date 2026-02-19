@@ -14,7 +14,7 @@ const FeaturedPosts = ({ featuredStory }) => (
         {...featuredStory.fields}
       />
       <PopularPosts
-        className="col-span-full -mx-4 flex flex-col md:-mx-6 lg:-mx-10"
+        className="col-span-full -mx-4 flex flex-col lg:mx-0"
         titleTheme="gray"
       />
     </Container>

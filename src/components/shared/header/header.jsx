@@ -52,13 +52,13 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
                 <div className="hidden items-center [@media(min-width:1210px)]:inline-flex">
                   <GithubStars
                     className={classNames(
-                      'ml-4 bg-white dark:bg-gray-800 lg:ml-8',
+                      'ml-4 bg-white dark:bg-gray-800 lg:ml-0 xl:ml-2 2xl:ml-8',
                       withSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                     )}
                   />
                   <Button
                     className={classNames(
-                      'ml-4 items-center bg-white dark:bg-gray-800 leading-none',
+                      'ml-4 items-center bg-white dark:bg-gray-800 leading-none lg:ml-0 xl:ml-2 2xl:ml-4',
                       withSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                     )}
                     to="https://slack.cilium.io"
@@ -67,10 +67,10 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
                     theme="outline-gray"
                     size="xs"
                   >
-                    <SlackIcon className="w-4 h-4" />
+                    <SlackIcon className="w-4 h-4 lg:w-3 lg:h-3 xl:w-4 xl:h-4" />
                     <span
                       className={classNames(
-                        'hidden lg:ml-1.5 dark:text-gray-2 text-black',
+                        'hidden lg:ml-1 dark:text-gray-2 text-black',
                         withSearch ? '2xl:block' : '2xl:block'
                       )}
                     >
@@ -97,14 +97,14 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
                 <Burger isToggled={isMobileMenuOpen} onClick={handleCloseClick} />
               </div>
             </div>
-            <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-7 [@media(min-width:1210px)]:flex">
+            <div className="hidden w-full space-x-5 lg:items-center lg:justify-end lg:space-x-1 xl:space-x-3 2xl:space-x-7 [@media(min-width:1210px)]:flex">
               {withSearch && (
                 <Search
                   buttonClassName="rounded h-8 w-8 border border-gray-2 dark:border-gray-600 p-[7px]"
                   indices={searchIndices}
                 />
               )}
-              <ul className="flex items-center lg:space-x-5 2xl:space-x-9">
+              <ul className="flex items-center lg:text-xs xl:text-base lg:space-x-3 xl:space-x-5 2xl:space-x-9">
                 {navigation.map((item, index) => {
                   if (item.isThemeToggle) {
                     const ThemeIcon = item.name;

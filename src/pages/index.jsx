@@ -14,10 +14,41 @@ import UserCommunity from 'components/shared/user-community';
 import MainLayout from 'layouts/main';
 import caseStudiesData from 'utils/case-studies-data';
 
-const { google, bell, aws, adobe } = caseStudiesData;
+const {
+  google,
+  theNewYorkTimes,
+  bell,
+  azure,
+  adobe,
+  airbnb,
+  tiktok,
+  datadog,
+  bloomberg,
+  flipkart,
+  alibabaCloud,
+  trip,
+  dbschenker,
+  ebay,
+} = caseStudiesData;
 
 const userCommunity = {
-  items: [google, bell, adobe, aws],
+  items: [
+    google,
+    theNewYorkTimes,
+    bell,
+    azure,
+    adobe,
+    airbnb,
+    tiktok,
+    datadog,
+    bloomberg,
+    flipkart,
+    alibabaCloud,
+    trip,
+    dbschenker,
+    ebay,
+  ],
+  type: 'simple',
 };
 
 const talks = [

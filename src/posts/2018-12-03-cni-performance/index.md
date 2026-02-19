@@ -338,7 +338,7 @@ Transfer/sec:      9.01MB
 ```
 
 wrk is able to roughly send 40'0000 requests per second. Let's look at the CPU
-consumption on both the sender and reciever:
+consumption on both the sender and receiver:
 
 ```
 top - 03:03:12 up 1 day,  8:36,  3 users,  load average: 1.16, 0.70, 0.37

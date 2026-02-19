@@ -258,7 +258,7 @@ truth for network connectivity.
 
 ## Step 1: Prepare
 
-This step is for installing all our dependant resources, and labelling nodes.
+This step is for installing all our dependent resources, and labelling nodes.
 
 ### Node Labels
 

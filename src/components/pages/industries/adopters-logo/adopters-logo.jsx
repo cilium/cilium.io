@@ -81,6 +81,7 @@ import TelenorLogo from './images/telenor.inline.svg';
 import TencentCloudLogo from './images/tencentcloud.inline.svg';
 import TestifyLogo from './images/testify.inline.svg';
 import TietoevryLogo from './images/tietoevry.inline.svg';
+import TikTokLogo from './images/tiktok.inline.svg';
 import TrendyolLogo from './images/trendyol.inline.svg';
 import TripLogo from './images/trip.inline.svg';
 import TsystemsLogo from './images/tsystems.inline.svg';
@@ -167,6 +168,7 @@ const logos = {
   tencent: TencentCloudLogo,
   testify: TestifyLogo,
   tietoevry: TietoevryLogo,
+  tiktok: TikTokLogo,
   trendyol: TrendyolLogo,
   trip: TripLogo,
   uswitch: USwitchLogo,

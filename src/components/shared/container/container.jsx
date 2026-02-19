@@ -8,7 +8,7 @@ const sizeClassNames = {
   xs: 'max-w-[800px]',
   sm: 'max-w-[1008px]',
   md: 'max-w-[1216px]',
-  lg: 'max-w-[1472px] xl:px-10 2xl:px-0',
+  lg: 'max-w-[1472px] xl:px-3 2xl:px-0',
 };
 
 const Container = ({ className: additionalClassName, size, children, tag: Tag, ...otherProps }) => {

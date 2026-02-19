@@ -29,7 +29,7 @@
     "babel-loader": "^9.2.1",
     "classnames": "^2.5.1",
     "framer-motion": "^12.12.1",
-    "gatsby": "^5.15.0",
+    "gatsby": "^5.16.1",
     "gatsby-adapter-netlify": "^1.2.1",
     "gatsby-plugin-algolia-search": "^0.5.7",
     "gatsby-plugin-canonical-urls": "^5.14.0",
@@ -93,7 +93,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/cilium/cilium.io"

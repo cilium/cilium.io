@@ -16,7 +16,7 @@ const Banner = () => (
         theme="outline"
         size="sm"
         to="https://github.com/isovalent/echo"
-        rel="noopner noreferrer"
+        rel="noopener noreferrer"
         target="_blank"
       >
         {buttonText}

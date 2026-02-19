@@ -21,7 +21,7 @@ const LegalBox = () => (
         </a>{' '}
         as may be updated from time to time. You also acknowledge that CNCF is the sole owner of
         CNCF trademarks, promise not to interfere with CNCFs rights in them, and acknowledge that
-        goodwill derived from their use accrues only to CNCF. CNCF may rev'ew use of the branding
+        goodwill derived from their use accrues only to CNCF. CNCF may review use of the branding
         materials at any time and reserves the right to terminate or modify any use.
       </p>
     </Container>
