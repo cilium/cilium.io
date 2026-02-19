@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import React, { useEffect } from 'react';
+import React from 'react';
 import SlickSlider from 'react-slick';
 
 import 'slick-carousel/slick/slick-theme.css';
@@ -15,7 +15,7 @@ const Arrow = (props) => {
   return (
     <button
       className={classNames(
-        'group absolute top-1/2 h-8 w-8 shrink-0 border -translate-y-1/2 items-center transition-colors duration-300 outline-none justify-center overflow-hidden rounded-full',
+        'group absolute top-1/2 h-8 w-8 shrink-0 border -translate-y-1/2 items-center transition-colors duration-300 outline-none focus-visible:ring-2 focus-visible:ring-primary-1 justify-center overflow-hidden rounded-full',
         'bg-gray-4 border-gray-1/60 text-gray-2',
         'md:flex hidden',
         isNext ? '-right-9' : '-left-9 scale-x-[-1]',
@@ -42,25 +42,6 @@ Arrow.defaultProps = {
 };
 
 const Slider = ({ children, className }) => {
-  useEffect(() => {
-    const showAllSlides = () => {
-      document.querySelectorAll('.slick-slide[aria-hidden]').forEach((slide) => {
-        slide.removeAttribute('aria-hidden');
-      });
-    };
-
-    showAllSlides(); // iinitial run
-
-    const observer = new MutationObserver(showAllSlides);
-    observer.observe(document.body, {
-      attributes: true,
-      subtree: true,
-      attributeFilter: ['aria-hidden'],
-    });
-
-    return () => observer.disconnect();
-  }, []);
-
   const settings = {
     dots: false,
     infinite: false,
