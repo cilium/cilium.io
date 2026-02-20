@@ -39,7 +39,7 @@ async function createBlogPosts({ graphql, actions, reporter }) {
   );
 
   if (result.errors) {
-    reporter.panicOnBuild('GraphQL query failed', result.errors);
+    reporter.panicOnBuild('GraphQL query failed', result.errors[0]);
     return;
   }
 
@@ -98,7 +98,6 @@ async function createBlogPages({ graphql, actions, reporter }) {
             fields: { isFeatured: { eq: false }, draft: { in: $draftFilter } }
           }
           sort: { frontmatter: { date: DESC } }
-          limit: 2000
         ) {
           edges {
             node {
@@ -115,7 +114,7 @@ async function createBlogPages({ graphql, actions, reporter }) {
   );
 
   if (result.errors) {
-    reporter.panicOnBuild('GraphQL query failed', result.errors);
+    reporter.panicOnBuild('GraphQL query failed', result.errors[0]);
     return;
   }
 
@@ -146,17 +145,19 @@ async function createBlogPages({ graphql, actions, reporter }) {
       basePath: slugifyCategory(category, 'blog'),
     }));
 
+  const postsByCategory = new Map();
+  allPosts.forEach(({ node }) => {
+    const postCategories = node.frontmatter.categories || [];
+    postCategories.forEach((cat) => {
+      if (!postsByCategory.has(cat)) {
+        postsByCategory.set(cat, []);
+      }
+      postsByCategory.get(cat).push({ node });
+    });
+  });
+
   categories.forEach(({ label, basePath }) => {
-    const posts =
-      label === '*'
-        ? allPosts
-        : allPosts.filter(
-            ({
-              node: {
-                frontmatter: { categories },
-              },
-            }) => categories.includes(label)
-          );
+    const posts = label === '*' ? allPosts : postsByCategory.get(label) || [];
 
     const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
 
@@ -328,7 +329,6 @@ async function createLabsPage({ graphql, actions }) {
             fields: { draft: { in: $draftFilter } }
           }
           sort: { frontmatter: { title: ASC } }
-          limit: 2000
         ) {
           edges {
             node {
@@ -366,17 +366,19 @@ async function createLabsPage({ graphql, actions }) {
     basePath: slugifyCategory(category, 'labs'),
   }));
 
+  const labsByCategory = new Map();
+  allLabs.forEach(({ node }) => {
+    const labCategories = node.frontmatter.categories || [];
+    labCategories.forEach((cat) => {
+      if (!labsByCategory.has(cat)) {
+        labsByCategory.set(cat, []);
+      }
+      labsByCategory.get(cat).push({ node });
+    });
+  });
+
   categories.forEach((category) => {
-    const labsList =
-      category === '*'
-        ? allLabs
-        : allLabs.filter(
-            ({
-              node: {
-                frontmatter: { categories },
-              },
-            }) => categories.includes(category)
-          );
+    const labsList = category === '*' ? allLabs : labsByCategory.get(category) || [];
     const totalPageCount = Math.ceil(labsList.length / LABS_PER_PAGE);
 
     Array.from({ length: totalPageCount }).forEach((_, i) => {
