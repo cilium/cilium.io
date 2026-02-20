@@ -7,16 +7,16 @@ const LegalBox = () => (
     <Container>
       <p className="with-link-primary text-sm leading-normal tracking-normal text-gray-1">
         By using CNCF brand materials you agree to the
-        <a href="https://www.linuxfoundation.org/terms/" target="_blank" rel="noreferrer">
+        <a href="https://www.linuxfoundation.org/terms/" target="_blank" rel="noopener noreferrer">
           {' '}
           Linux Foundation Terms of Use
         </a>
         , the{' '}
-        <a href="https://www.linuxfoundation.org/trademark-usage/" target="_blank" rel="noreferrer">
+        <a href="https://www.linuxfoundation.org/trademark-usage/" target="_blank" rel="noopener noreferrer">
           Trademark Usage Guidelines
         </a>
         , these CNCF branding guidelines, and all{' '}
-        <a href="https://www.cncf.io/brand-guidelines/#legal" target="_blank" rel="noreferrer">
+        <a href="https://www.cncf.io/brand-guidelines/#legal" target="_blank" rel="noopener noreferrer">
           CNCF rules and policies
         </a>{' '}
         as may be updated from time to time. You also acknowledge that CNCF is the sole owner of
