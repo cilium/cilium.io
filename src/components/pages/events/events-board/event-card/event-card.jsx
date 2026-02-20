@@ -48,7 +48,7 @@ const EventCard = ({
   <Link
     to={externalUrl}
     className={classNames(
-      'group flex flex-col rounded-lg border-2 border-gray-6 dark:border-gray-1 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
+      'group flex flex-col rounded-lg border-2 border-gray-3 dark:border-gray-1 transition-all duration-200 hover:border-transparent hover:shadow-tertiary',
       className
     )}
     target="_blank"
