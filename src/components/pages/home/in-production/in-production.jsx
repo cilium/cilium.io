@@ -71,18 +71,18 @@ const InProduction = () => (
       <Slider>
         {ITEMS.map(({ title, icon, text, link }, index) => (
           <figure
-            className="!flex bg-white  dark:bg-gray-2 h-full shadow-card flex-col rounded-xl p-6 xl:p-8 xl:pb-7"
+            className="!flex bg-white dark:bg-[linear-gradient(14deg,#1A2236_0%,#1E253A_248.18%)] h-full shadow-card flex-col rounded-xl p-6 xl:p-8 xl:pb-7"
             key={index}
           >
             <div>
               <img src={icon.src} alt={title} height={40} width={icon.width} loading="lazy" />
-              <blockquote className="mt-7 mb-5" cite={link}>
+              <blockquote className="mt-7 mb-5 dark:text-white" cite={link}>
                 <p>“{text}”</p>
               </blockquote>
             </div>
             <div className="mt-auto flex border-t border-gray-3 dark:border-gray-600 pt-6 leading-none">
               <Link
-                className="relative"
+                className="relative inline-flex items-center text-primary-1 hover:text-primary-2 dark:text-white dark:hover:text-primary-1 dark:px-4 dark:py-2 transition-colors"
                 key={index}
                 type="text"
                 theme="primary"
@@ -91,6 +91,7 @@ const InProduction = () => (
                 target="_blank"
               >
                 Read <span className="sr-only">{title}</span> case study
+                <span className="text-sm transition-transform group-hover:translate-x-0.5 pl-2">→</span>
               </Link>
             </div>
           </figure>
