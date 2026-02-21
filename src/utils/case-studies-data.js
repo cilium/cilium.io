@@ -445,9 +445,9 @@ export default {
       },
     ],
   },
-  homeRetailer: {
-    iconName: 'homeRetailer',
-    text: 'Home furnishings retailer uses Cilium for their self-hosted bare-metal private cloud',
+  ikea: {
+    iconName: 'ikea',
+    text: '<b>IKEA</b> uses Cilium for their self-hosted bare-metal private cloud',
     links: [
       {
         linkText: 'Blog',
