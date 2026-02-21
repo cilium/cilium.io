@@ -27,7 +27,7 @@ import TripLogo from 'icons/logo-trip.inline.svg';
 import UswitchLogo from 'icons/logo-uswitch.inline.svg';
 import VshnLogo from 'icons/logo-vshn.inline.svg';
 import WildLifeLogo from 'icons/logo-wild-life.inline.svg';
-import Placeholder from 'icons/placeholder.inline.svg';
+import IkeaLogo from './images/ikea.inline.svg';
 
 import Button from '../button';
 
@@ -301,7 +301,7 @@ const icons = {
   sky: SkyLogo,
   skybet: SkybetLogo,
   planetscale: PlanetscaleLogo,
-  homeRetailer: Placeholder,
+  ikea: IkeaLogo,
   datadog: DatadogLogo,
   cosmonic: CosmonicLogo,
   canonical: CanonicalLogo,
@@ -401,7 +401,7 @@ const UserCommunity = ({
         <Link
           className={classNames(
             isTitleCentered &&
-              'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
+            'mb-6 self-center text-center md:mb-10 lg:mb-16 dark:text-gray-3 text-black'
           )}
           to={`#${id}`}
         >
