@@ -89,7 +89,7 @@ const BlogPostCard = ({
     <Link
       to={url || path}
       className={classNames(
-        'group flex rounded-lg border border-gray-3 dark:border dark:border-gray-800 dark:bg-[linear-gradient(14deg,#1A2236_0%,#1E253A_248.18%)] p-5 transition-all duration-200 hover:border-transparent hover:shadow-tertiary bg-white dark:bg-gray-2 dark:hover:shadow-darkprimary',
+        'group flex rounded-lg border border-gray-3 dark:border dark:border-gray-800 dark:bg-[linear-gradient(14deg,#1A2236_0%,#1E253A_248.18%)] p-5 transition-all duration-200 hover:border-transparent hover:shadow-tertiary bg-white dark:hover:shadow-darkprimary',
         isLandscapeView
           ? 'flex-col space-y-7 sm:flex-row sm:space-y-0 sm:space-x-7'
           : 'flex-col space-y-7',
@@ -135,9 +135,8 @@ const BlogPostCard = ({
                 </span>
               ))}
               {url && (
-                <div className="inline-flex h-8 items-center rounded bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider 
-                text-primary-1 border-gray-3 dark:border-gray-600 dark:bg-[#152755] bg-[#d6ebffb3] dark:hover:bg-blue-800 hover:scale-110 transition-transform ease-in-out duration-300">
-                  <span className='text-[#0073e6] dark:text-gray-3 dark:hover:text-white'>External</span>
+                <div className="inline-flex h-8 items-center rounded bg-opacity-70 p-2.5 text-xs font-bold uppercase leading-none tracking-wider text-primary-1 border border-gray-3 dark:border-gray-600 dark:bg-[#152755] bg-[#d6ebffb3] dark:hover:bg-blue-800 hover:scale-110 transition-transform ease-in-out duration-300">
+                  <span className="text-[#0073e6] dark:text-gray-3 dark:hover:text-white">External</span>
                   <ExternalLinkIcon className="ml-1" />
                 </div>
               )}

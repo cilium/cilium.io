@@ -433,7 +433,6 @@ const UserCommunity = ({
                       target={linkTarget || null}
                       rel={linkTarget ? 'noopener noreferrer' : null}
                     >
-                      
                       {linkText}
                     </Link>
                   ))}
