@@ -44,6 +44,8 @@ See how Marvell is transparently offloading Cilium to DPUs with minimal code cha
 [**Sponsored Keynote - Built in the Open: Why Cisco Is Betting on eBPF, Cilium, and Tetragon**](https://colocatedeventseu2026.sched.com/event/2DZMf/ciliumcon-sponsored-keynote-tba-isovalent-at-cisco?iframe=yes&w=100%&sidebar=yes&bg=no)  
 *Bill Mulligan, Isovalent at Cisco | 14:55 - 15:00*
 
+Learn how, by investing upstream in Cilium, eBPF, and Tetragon, Cisco is aligning product innovation with community driven standards ensuring that what runs in Kubernetes today can extend consistently across clouds, data centers, and the network itself.
+
 [**Connecting the World: Your Hands-on Guide To Cilium ClusterMesh and MCS-API**](https://colocatedeventseu2026.sched.com/event/2DY6j/connecting-the-world-your-hands-on-guide-to-cilium-clustermesh-and-mcs-api-arthur-outhenin-chalandre-ledger-quentin-swiech-s3ns?iframe=yes&w=100%&sidebar=yes&bg=no)  
 *Arthur Outhenin-Chalandre, Ledger & Quentin Swiech, S3NS | 15:20 - 15:45*
 
