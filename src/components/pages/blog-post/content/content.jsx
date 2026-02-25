@@ -6,6 +6,7 @@ import BlogAuthor from 'components/shared/blog-author';
 import Container from 'components/shared/container';
 import Heading from 'components/shared/heading';
 
+import ImageGallery from './image-gallery';
 import SocialShare from './social-share';
 import YoutubeIframe from './youtube-iframe';
 import YoutubePlaylistGallery from './youtube-playlist-gallery';
@@ -25,6 +26,7 @@ Wrapper.propTypes = {
 const components = {
   wrapper: Wrapper,
   BlogAuthor,
+  ImageGallery,
   YoutubeIframe,
   YoutubePlaylistGallery,
   undefined: (props) => <div {...props} />,
