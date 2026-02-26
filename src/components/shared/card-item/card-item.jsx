@@ -23,7 +23,7 @@ const buttonIconClassNames = {
 const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
   const isSmallSize = size === 'sm';
   return (
-    <li className="flex h-full w-full max-w-[650px] flex-col place-self-center rounded-xl shadow-card bg-white dark:bg-gray-2">
+    <li className="flex h-full w-full max-w-[650px] flex-col place-self-center rounded-xl shadow-card border border-gray-200 dark:border dark:border-gray-800 bg-white dark:bg-[linear-gradient(14deg,#1A2236_0%,#1E253A_248.18%)]">
       {imageData ? (
         <div className="relative self-center">
           <img
@@ -56,7 +56,7 @@ const CardItem = ({ imageData, svgData, name, text, buttons, size }) => {
       )}
       <div
         className={classNames(
-          'flex grow flex-col px-6 pb-8 text-center xl:px-8',
+          'flex grow flex-col px-6 pb-8 dark:text-white text-center xl:px-8',
           isSmallSize ? '' : 'pt-4'
         )}
       >
