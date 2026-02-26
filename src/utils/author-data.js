@@ -57,7 +57,7 @@ export default {
   },
   DanielBorkmann: {
     header: `Daniel Borkmann`,
-    bio: `Daniel Borkmann is a Distinguished Software Engineer, Isovalent at Cisco`
+    bio: `Daniel Borkmann is a Distinguished Software Engineer, Isovalent at Cisco`,
   },
   ThomasGraf: {
     header: `Thomas Graf`,
@@ -91,7 +91,7 @@ export default {
   },
   PolArroyo: {
     header: `Pol Arroyo`,
-    bio: `Pol Arroyo is a DevOps Engineer at Hetzner Cloud.`
+    bio: `Pol Arroyo is a DevOps Engineer at Hetzner Cloud.`,
   },
   JedSalazarandMartynasPumputis: {
     header: `Jed Salazar and Martynas Pumputis`,
@@ -118,9 +118,8 @@ export default {
   },
   DoniaChaiehloudj: {
     header: `Donia Chaiehloudj`,
-    bio: `Donia Chaiehloudj is a Senior Software Engineer at Isovalent.
-    She has a background in computer science and has been working on
-    eBPF and Linux kernel technologies, focusing on networking and security solutions.`,
+    bio: `Donia Chaiehloudj is a Senior Software Engineer and Community Oriented at Isovalent.
+    She has been working on Cilium and eBPF technologies, focusing on networking and security solutions.`,
   },
   KatieMeinders: {
     header: `Katie Meinders`,
@@ -134,4 +133,3 @@ export default {
     AIO during her mentorship period.`,
   },
 };
-
