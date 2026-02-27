@@ -129,6 +129,7 @@ const cloudAdoptersLogo = [
   'gcore',
   'infomaniak',
   'scaleway',
+  'ovh',
 ];
 
 const cloudResouces = [
