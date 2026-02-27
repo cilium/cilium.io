@@ -16,6 +16,7 @@ import CloudImage2 from 'images/pages/industries/cloud-providers/cloud-2.png';
 import DigitalOceanOffice from 'images/pages/industries/cloud-providers/DigitalOceanOffice.png';
 import GoogleOfficeImage from 'images/pages/industries/cloud-providers/googleoffice.png';
 import MicrosoftOffice from 'images/pages/industries/cloud-providers/microsoftoffice.png';
+import OvhOfficeImage from 'images/pages/industries/cloud-providers/OVHcloud-office.jpg';
 import QingCloudOffice from 'images/pages/industries/cloud-providers/qingcloud-office.jpeg';
 import SysElevenOffice from 'images/pages/industries/cloud-providers/syselvenoffice.jpg';
 import MainLayout from 'layouts/main/main';
@@ -129,6 +130,7 @@ const cloudAdoptersLogo = [
   'gcore',
   'infomaniak',
   'scaleway',
+  'ovh',
 ];
 
 const cloudResouces = [
@@ -188,6 +190,14 @@ const cloudResouces = [
     buttonLink: 'https://www.cncf.io/case-studies/qingcloud/',
     imageSrc: QingCloudOffice,
     imageAlt: 'Qingcloud office buidling',
+  },
+  {
+    title: 'OVHcloud uses Cilium as the default CNI for their Managed Kubernetes Service',
+    description:
+      'OVHcloud turned to Cilium to ensure multi-tenant security and high performance across their managed Kubernetes clusters, scaling efficiently worldwide.',
+    buttonLink: 'https://www.cncf.io/case-studies/ovhcloud/',
+    imageSrc: OvhOfficeImage,
+    imageAlt: 'OVHcloud logo',
   },
 ];
 

@@ -1701,6 +1701,13 @@ export default {
   ovh: {
     iconName: 'ovh',
     text: '<b>OVHcloud</b> uses Cilium as the default CNI for their Managed Kubernetes Service offering',
+    links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/ovhcloud/',
+        linkTarget: '_blank',
+      },
+    ],
   },
   preferredNetworks: {
     iconName: 'preferredNetworks',

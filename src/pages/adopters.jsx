@@ -301,6 +301,7 @@ const userCommunity1 = {
     tiktok,
     bedrock,
     uwmadison,
+    ovh,
   ],
 };
 
@@ -396,7 +397,6 @@ const userCommunity2 = {
     streamSecurity,
     guida,
     outscale,
-    ovh,
     ost,
     preferredNetworks,
     batumbu,

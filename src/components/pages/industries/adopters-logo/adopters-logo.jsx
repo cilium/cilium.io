@@ -55,6 +55,7 @@ import NineNavigatorsLogo from './images/nine.inline.svg';
 import OpenshiftLogo from './images/openshift.inline.svg';
 import OpenStackLogo from './images/openstack.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
+import OvhCloudLogo from './images/ovh.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
 import PalarkLogo from './images/palark.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
@@ -143,6 +144,7 @@ const logos = {
   openshift: OpenshiftLogo,
   openstack: OpenStackLogo,
   overstock: OverstockLogo,
+  ovh: OvhCloudLogo,
   palantir: PalantirLogo,
   palark: PalarkLogo,
   planetscale: PlanetscaleLogo,
