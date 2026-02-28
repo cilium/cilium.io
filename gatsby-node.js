@@ -13,84 +13,20 @@ const slugifyCategory = (item, pagePath) =>
   item === '*' ? `/${pagePath}/` : `/${pagePath}/categories/${slugify(item)}/`;
 
 // Create Blog Posts
-async function createBlogPosts({ graphql, actions }) {
-  const {
-    data: {
-      allMdx: { nodes: blogPosts },
-    },
-  } = await graphql(`
-    query BlogPosts {
-      allMdx(filter: { internal: { contentFilePath: { regex: "/src/posts/" } } }) {
-        nodes {
-          id
-          frontmatter {
-            path
+async function createBlogPosts({ graphql, actions, reporter }) {
+  const result = await graphql(
+    `
+      query BlogPosts($draftFilter: [Boolean]!) {
+        allMdx(
+          filter: {
+            internal: { contentFilePath: { regex: "/src/posts/" } }
+            fields: { draft: { in: $draftFilter } }
           }
-          fields {
-            draft
-          }
-          internal {
-            contentFilePath
-          }
-        }
-      }
-    }
-  `);
-
-  blogPosts.forEach(
-    ({ id, frontmatter: { path }, internal: { contentFilePath }, fields: { draft } }) => {
-      // skip page creation if post has `draft` flag
-      if (process.env.NODE_ENV === 'production' && draft) {
-        return;
-      }
-
-      if (!path) {
-        return;
-      }
-
-      const postTemplate = Path.resolve('./src/templates/blog-post.jsx');
-
-      actions.createPage({
-        path,
-        component: `${postTemplate}?__contentFilePath=${contentFilePath}`,
-        context: { id },
-      });
-    }
-  );
-}
-
-// Create Blog Pages
-async function createBlogPages({ graphql, actions, reporter }) {
-  const { createPage } = actions;
-
-  const {
-    data: {
-      featuredPostEdges: { edges: featuredPost },
-      allCategories: { group: allCategories },
-    },
-  } = await graphql(`
-    {
-      allCategories: allMdx(filter: { internal: { contentFilePath: { regex: "/posts/" } } }) {
-        group(field: { frontmatter: { categories: SELECT } }) {
-          fieldValue
-        }
-        nodes {
-          frontmatter {
-            categories
-          }
-        }
-      }
-      featuredPostEdges: allMdx(
-        filter: {
-          internal: { contentFilePath: { regex: "/posts/" } }
-          frontmatter: { isFeatured: { eq: true } }
-        }
-      ) {
-        edges {
-          node {
+        ) {
+          nodes {
             id
             frontmatter {
-              isFeatured
+              path
             }
             internal {
               contentFilePath
@@ -98,8 +34,96 @@ async function createBlogPages({ graphql, actions, reporter }) {
           }
         }
       }
+    `,
+    { draftFilter: DRAFT_FILTER }
+  );
+
+  if (result.errors) {
+    reporter.panicOnBuild('GraphQL query failed', result.errors[0]);
+    return;
+  }
+
+  const {
+    allMdx: { nodes: blogPosts },
+  } = result.data;
+
+  blogPosts.forEach(({ id, frontmatter: { path }, internal: { contentFilePath } }) => {
+    if (!path) {
+      return;
     }
-  `);
+
+    const postTemplate = Path.resolve('./src/templates/blog-post.jsx');
+
+    actions.createPage({
+      path,
+      component: `${postTemplate}?__contentFilePath=${contentFilePath}`,
+      context: { id },
+    });
+  });
+}
+
+// Create Blog Pages
+async function createBlogPages({ graphql, actions, reporter }) {
+  const { createPage } = actions;
+
+  const result = await graphql(
+    `
+      query ($draftFilter: [Boolean]!) {
+        allCategories: allMdx(filter: { internal: { contentFilePath: { regex: "/posts/" } } }) {
+          group(field: { frontmatter: { categories: SELECT } }) {
+            fieldValue
+          }
+        }
+        featuredPostEdges: allMdx(
+          filter: {
+            internal: { contentFilePath: { regex: "/posts/" } }
+            frontmatter: { isFeatured: { eq: true } }
+          }
+        ) {
+          edges {
+            node {
+              id
+              frontmatter {
+                isFeatured
+              }
+              internal {
+                contentFilePath
+              }
+            }
+          }
+        }
+        allPosts: allMdx(
+          filter: {
+            internal: { contentFilePath: { regex: "/posts/" } }
+            fields: { isFeatured: { eq: false }, draft: { in: $draftFilter } }
+          }
+          sort: { frontmatter: { date: DESC } }
+        ) {
+          edges {
+            node {
+              id
+              frontmatter {
+                categories
+              }
+            }
+          }
+        }
+      }
+    `,
+    { draftFilter: DRAFT_FILTER }
+  );
+
+  if (result.errors) {
+    reporter.panicOnBuild('GraphQL query failed', result.errors[0]);
+    return;
+  }
+
+  const {
+    featuredPostEdges: { edges: featuredPost },
+    allCategories: { group: allCategories },
+    allPosts: { edges: allPosts },
+  } = result.data;
+
   if (featuredPost?.length > 1) {
     const featuredPosts = featuredPost.map(
       ({
@@ -121,58 +145,40 @@ async function createBlogPages({ graphql, actions, reporter }) {
       basePath: slugifyCategory(category, 'blog'),
     }));
 
-  // Create category pages
-  await Promise.all(
-    categories.map(async ({ label, basePath }) =>
-      graphql(
-        `
-          query CategoryPostsQuery($tag: String!, $draftFilter: [Boolean]!) {
-            allMdx(
-              filter: {
-                internal: { contentFilePath: { regex: "/posts/" } }
-                fields: {
-                  isFeatured: { eq: false }
-                  categories: { glob: $tag }
-                  draft: { in: $draftFilter }
-                }
-              }
-              limit: 1000
-            ) {
-              edges {
-                node {
-                  id
-                }
-              }
-            }
-          }
-        `,
-        { tag: label, draftFilter: DRAFT_FILTER }
-      ).then((result) => {
-        if (result.errors) throw result.errors;
-        const posts = result.data.allMdx.edges;
-        const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
+  const postsByCategory = new Map();
+  allPosts.forEach(({ node }) => {
+    const postCategories = node.frontmatter.categories || [];
+    postCategories.forEach((cat) => {
+      if (!postsByCategory.has(cat)) {
+        postsByCategory.set(cat, []);
+      }
+      postsByCategory.get(cat).push({ node });
+    });
+  });
 
-        Array.from({ length: numPages }).forEach((_, i) => {
-          const path = i === 0 ? basePath : `${basePath}${i + 1}`;
-          createPage({
-            path,
-            component: Path.resolve('./src/templates/blog.jsx'),
-            context: {
-              limit: BLOG_POSTS_PER_PAGE,
-              skip: i * BLOG_POSTS_PER_PAGE,
-              numPages,
-              currentPage: i + 1,
-              basePath,
-              currentCategory: label,
-              categories,
-              // get all posts with draft: 'false' if NODE_ENV is production, otherwise render them all
-              draftFilter: DRAFT_FILTER,
-            },
-          });
-        });
-      })
-    )
-  );
+  categories.forEach(({ label, basePath }) => {
+    const posts = label === '*' ? allPosts : postsByCategory.get(label) || [];
+
+    const numPages = Math.ceil(posts.length / BLOG_POSTS_PER_PAGE);
+
+    Array.from({ length: numPages }).forEach((_, i) => {
+      const path = i === 0 ? basePath : `${basePath}${i + 1}`;
+      createPage({
+        path,
+        component: Path.resolve('./src/templates/blog.jsx'),
+        context: {
+          limit: BLOG_POSTS_PER_PAGE,
+          skip: i * BLOG_POSTS_PER_PAGE,
+          numPages,
+          currentPage: i + 1,
+          basePath,
+          currentCategory: label,
+          categories,
+          draftFilter: DRAFT_FILTER,
+        },
+      });
+    });
+  });
 }
 
 // Create Events Page
@@ -312,23 +318,34 @@ async function createLabsPage({ graphql, actions }) {
   const result = await graphql(
     `
       query ($labsRegex: String!, $draftFilter: [Boolean]!) {
-        allMdx(
+        allCategories: allMdx(filter: { internal: { contentFilePath: { regex: $labsRegex } } }) {
+          group(field: { frontmatter: { categories: SELECT } }) {
+            fieldValue
+          }
+        }
+        allLabs: allMdx(
           filter: {
             internal: { contentFilePath: { regex: $labsRegex } }
             fields: { draft: { in: $draftFilter } }
           }
+          sort: { frontmatter: { title: ASC } }
         ) {
           edges {
             node {
               frontmatter {
+                date(formatString: "MMM DD, YYYY")
                 categories
+                title
+                ogSummary
+                externalUrl
+                from
+                ogImage {
+                  childImageSharp {
+                    gatsbyImageData(width: 601)
+                  }
+                }
               }
             }
-          }
-        }
-        allCategories: allMdx(filter: { internal: { contentFilePath: { regex: $labsRegex } } }) {
-          group(field: { frontmatter: { categories: SELECT } }) {
-            fieldValue
           }
         }
       }
@@ -340,6 +357,7 @@ async function createLabsPage({ graphql, actions }) {
 
   const {
     allCategories: { group: allCategories },
+    allLabs: { edges: allLabs },
   } = result.data;
 
   const categories = ['*'].concat(allCategories.map((category) => category.fieldValue));
@@ -347,88 +365,41 @@ async function createLabsPage({ graphql, actions }) {
     label: category,
     basePath: slugifyCategory(category, 'labs'),
   }));
-  const labList = result.data.allMdx.edges.map(({ node: { frontmatter: lab } }) => ({ ...lab }));
 
-  const promiseList = [];
-
-  categories.forEach((category) => {
-    const totalCount =
-      category === '*'
-        ? labList.length
-        : labList.filter(({ categories }) => categories.includes(category)).length;
-    const totalPageCount = Math.ceil(totalCount / LABS_PER_PAGE);
-
-    Array.from({ length: totalPageCount }).forEach((_, i) => {
-      promiseList.push(
-        graphql(
-          `
-            query CategoryLabsQuery(
-              $labsRegex: String!
-              $tag: String!
-              $draftFilter: [Boolean]!
-              $limit: Int!
-              $skip: Int!
-            ) {
-              allMdx(
-                filter: {
-                  internal: { contentFilePath: { regex: $labsRegex } }
-                  fields: { categories: { glob: $tag }, draft: { in: $draftFilter } }
-                }
-                sort: { frontmatter: { title: ASC } }
-                limit: $limit
-                skip: $skip
-              ) {
-                edges {
-                  node {
-                    frontmatter {
-                      date(formatString: "MMM DD, YYYY")
-                      categories
-                      title
-                      ogSummary
-                      externalUrl
-                      from
-                      ogImage {
-                        childImageSharp {
-                          gatsbyImageData(width: 601)
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          `,
-          {
-            labsRegex: LABS_REGEX,
-            tag: category,
-            draftFilter: DRAFT_FILTER,
-            limit: LABS_PER_PAGE,
-            skip: i * LABS_PER_PAGE,
-          }
-        ).then((result) => {
-          if (result.errors) throw new Error(result.errors);
-          const labs = result.data.allMdx.edges;
-          const pathBase = slugifyCategory(category, 'labs');
-          const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
-
-          createPage({
-            path,
-            component: template,
-            context: {
-              labs,
-              basePath: pathBase,
-              categories: categoriesWithBasePath,
-              currentCategory: category,
-              totalPageCount,
-              currentPage: i + 1,
-            },
-          });
-        })
-      );
+  const labsByCategory = new Map();
+  allLabs.forEach(({ node }) => {
+    const labCategories = node.frontmatter.categories || [];
+    labCategories.forEach((cat) => {
+      if (!labsByCategory.has(cat)) {
+        labsByCategory.set(cat, []);
+      }
+      labsByCategory.get(cat).push({ node });
     });
   });
 
-  await Promise.all(promiseList);
+  categories.forEach((category) => {
+    const labsList = category === '*' ? allLabs : labsByCategory.get(category) || [];
+    const totalPageCount = Math.ceil(labsList.length / LABS_PER_PAGE);
+
+    Array.from({ length: totalPageCount }).forEach((_, i) => {
+      const pathBase = slugifyCategory(category, 'labs');
+      const path = i === 0 ? pathBase : `${pathBase}${i + 1}`;
+      const labs = labsList.slice(i * LABS_PER_PAGE, (i + 1) * LABS_PER_PAGE);
+
+      createPage({
+        path,
+        component: template,
+        context: {
+          labs,
+          basePath: pathBase,
+          categories: categoriesWithBasePath,
+          currentCategory: category,
+          totalPageCount,
+          currentPage: i + 1,
+        },
+      });
+    });
+  });
 }
 
 exports.createPages = async (options) => {
