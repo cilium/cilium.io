@@ -90,7 +90,7 @@ const InProduction = () => (
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                Read <span className="sr-only">{title}</span> case study
+                Read&nbsp;<span className="sr-only">{title}</span>case study
                 <span className="text-sm transition-transform group-hover:translate-x-0.5 pl-2">→</span>
               </Link>
             </div>
