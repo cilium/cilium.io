@@ -17,6 +17,8 @@ ogImage: ogimage.png
 ogSummary: 'Google adopts Cilium and eBPF as the new GKE dataplane, enabling scalable, secure, and high-performance networking across Kubernetes and Anthos.'
 ---
 
+import authors from 'utils/author-data';
+
 ![](ogimage.png)
 
 Today marks an exciting day for the Cilium community and all Cilium
