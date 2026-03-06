@@ -1,4 +1,15 @@
 export default {
+  zynga: {
+    iconName: 'zynga',
+    text: '<b>Zynga</b> uses Cilium for eBPF-native networking and to scale past connection tracking limits',
+    links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/zynga/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   airbnb: {
     iconName: 'airbnb',
     text: '<b>Airbnb</b> uses Cilium to power its dataplane and unlock new networking capabilities',

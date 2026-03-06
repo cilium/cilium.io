@@ -194,6 +194,7 @@ import VkcloudLogo from './images/vkcloud.inline.svg';
 import VnptLogo from './images/vnpt.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
+import ZyngaLogo from './images/zynga.inline.svg';
 
 const icons = {
   fhnw: FHNWLogo,
@@ -382,6 +383,7 @@ const icons = {
   airbnb: AirbnbLogo,
   tiktok: TiktokLogo,
   bedrock: BedrockLogo,
+  zynga: ZyngaLogo,
 };
 
 const UserCommunity = ({

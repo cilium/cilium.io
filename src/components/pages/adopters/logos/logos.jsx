@@ -56,6 +56,7 @@ import SysElevenLogo from './images/syseleven.inline.svg';
 import TencentCloudLogo from './images/tencent-cloud.inline.svg';
 import VKCloudLogo from './images/vkcloud.inline.svg';
 import VnptLogo from './images/vnpt.inline.svg';
+import ZyngaLogo from './images/zynga.inline.svg';
 
 const logos = {
   syseleven: SysElevenLogo,
@@ -108,6 +109,7 @@ const logos = {
   esnet: ESnetLogo,
   ionx: IONXLogo,
   vnpt: VnptLogo,
+  zynga: ZyngaLogo,
 };
 
 const spaceXClassNames = {

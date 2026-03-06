@@ -14,8 +14,9 @@ import NewyorkTimeOfficeImage from 'images/pages/industries/media-entertainment/
 import PublicSPeakingBee from 'images/pages/industries/media-entertainment/public-speaking-bee.png';
 import SkyOfficeImage from 'images/pages/industries/media-entertainment/skyoffice.png';
 import SmartNewsOfficeImage from 'images/pages/industries/media-entertainment/smartnewsOffice.png';
-import YahooOfficeImage from 'images/pages/industries/media-entertainment/yahoooffice.png';
 import TikTokOfficeImage from 'images/pages/industries/media-entertainment/tiktokoffice.png';
+import YahooOfficeImage from 'images/pages/industries/media-entertainment/yahoooffice.png';
+import ZyngaOfficeImage from 'images/pages/industries/media-entertainment/zynga-office.jpg';
 import MainLayout from 'layouts/main';
 
 const heroContent = {
@@ -73,16 +74,16 @@ const seznamTestimonial = {
 };
 
 const mediaResources = [
-   {
+  {
     imageSrc: TikTokOfficeImage,
     imageAlt: 'tiktok office building',
-    title: 'TikTok\'s IPv6 Journey To Cilium',
+    title: "TikTok's IPv6 Journey To Cilium",
     buttonText: 'Watch the Talk',
     buttonLink: 'https://www.youtube.com/watch?v=y0qlhiKtDGo',
     description:
       'TikTok migrated clusters to use Cilium for its advanced security features like mutual authentication, along with high performance networking and enhanced observability.',
   },
-  
+
   {
     imageSrc: YahooOfficeImage,
     imageAlt: 'yahoo office building',
@@ -121,9 +122,19 @@ const mediaResources = [
     description:
       "Cilium has become the go-to solution for replacing kube-proxy in SmartNews' new Kubernetes clusters. It boosted their network performance and offered a cost-efficient solution during peak loads. Overall, Cilium has significantly improved the team's capability to offer a secure and high-performance Kubernetes platform, enhancing user experience.",
   },
+  {
+    imageSrc: ZyngaOfficeImage,
+    imageAlt: 'zynga office building',
+    title: 'How Zynga Scaled Past Conntrack Limits with Cilium',
+    buttonText: 'Read Case Study',
+    buttonLink: 'https://www.cncf.io/case-studies/zynga/',
+    description:
+      'Zynga uses Cilium’s eBPF-native networking to replace kube-proxy and eliminate connection tracking limits, enabling highly scalable multiplayer experiences.',
+  },
 ];
 
 const companyLogos = [
+  'zynga',
   'bytedance',
   'newyorktimes',
   'skybet',
