@@ -196,6 +196,7 @@ const {
   tiktok,
   bedrock,
   celonis,
+  zynga,
 } = caseStudiesData;
 
 const hero = {
@@ -302,6 +303,7 @@ const userCommunity1 = {
     bedrock,
     uwmadison,
     ovh,
+    zynga,
   ],
 };
 

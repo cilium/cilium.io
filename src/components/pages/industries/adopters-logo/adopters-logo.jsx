@@ -91,6 +91,7 @@ import vkCloudLogo from './images/vkcloud.inline.svg';
 import WildLifeLogo from './images/wildlife.inline.svg';
 import Wso2Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
+import ZyngaLogo from './images/zynga.inline.svg';
 
 const logos = {
   syseleven: SysElevenLogo,
@@ -180,6 +181,7 @@ const logos = {
   yahoo: YahooLogo,
   tsystems: TsystemsLogo,
   docaposte: DocaposteLogo,
+  zynga: ZyngaLogo,
 };
 
 const AdoptersLogo = ({ items, className }) => (
