@@ -9,6 +9,21 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+  #CommunityInviter,
+  #CommunityInviter * {
+    font-family: inherit !important;
+  }
+  #CommunityInviter {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto !important;
+    font-family: inherit !important;
+    max-width: 80%;
+  }
+
+  #CommunityInviter img {
+    display: none !important;
+  }
 
   /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {

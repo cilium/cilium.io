@@ -61,7 +61,7 @@ const Header = ({ withSearch, isMobileMenuOpen, handleCloseClick, navigation, ha
                       'ml-4 items-center bg-white dark:bg-gray-800 leading-none lg:ml-0 xl:ml-2 2xl:ml-4',
                       withSearch ? 'hidden xl:inline-flex' : 'inline-flex'
                     )}
-                    to="https://slack.cilium.io"
+                    to="https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack"
                     target="_blank"
                     rel="noopener noreferrer"
                     theme="outline-gray"

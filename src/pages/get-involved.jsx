@@ -2,9 +2,9 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 
+import CalendarIntegration from 'components/pages/get-involved/calendar-integration';
 import Guidelines from 'components/pages/get-involved/guidelines';
 import ReportBugs from 'components/pages/get-involved/report-bugs';
-import CalendarIntegration from 'components/pages/get-involved/calendar-integration';
 import Subscribe from 'components/pages/get-involved/subscribe';
 import Cards from 'components/shared/cards';
 import HandsOn from 'components/shared/hands-on';
@@ -21,7 +21,7 @@ const cardItems1 = [
     title: 'Slack',
     description: 'For live conversation and quick questions, join the Cilium Slack workspace.',
     buttonText: 'Join slack workspace',
-    buttonUrl: 'https://slack.cilium.io',
+    buttonUrl: 'https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack',
     buttonTarget: '_blank',
   },
   {
