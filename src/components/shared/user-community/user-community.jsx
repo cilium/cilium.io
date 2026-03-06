@@ -447,14 +447,14 @@ const UserCommunity = ({
           return (
             <div
               className={classNames(
-                'flex flex-col rounded-lg p-4 sm:p-6 xl:p-8 bg-white dark:bg-gray-2 shadow-card min-w-0'
+                'flex flex-col rounded-lg p-4 sm:p-6 xl:p-8 bg-white dark:bg-[linear-gradient(14deg,#1A2236_0%,#1E253A_248.18%)] dark:border-[#37415B] shadow-card min-w-0'
               )}
               key={index}
             >
-              <Icon className="h-8 sm:h-12 flex-shrink-0" aria-label={`${iconName} logo`} />
+              <Icon className="h-8 sm:h-12 flex-shrink-0 dark:text-white" aria-label={`${iconName} logo`} />
               <p
                 className={classNames(
-                  'mt-3 sm:mt-5 text-sm sm:text-base break-words',
+                  'mt-3 sm:mt-5 text-sm sm:text-base break-words dark:text-white',
                   links && 'mb-4'
                 )}
                 dangerouslySetInnerHTML={{ __html: text }}

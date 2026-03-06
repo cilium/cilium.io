@@ -88,7 +88,7 @@ const Community = ({ className, theme, isTitleCentered }) => (
               to={url}
               target={target}
               className={classNames(
-                'flex items-center rounded-lg p-6 md:flex-col md:pb-8 md:pt-7 lg:pt-9 lg:pb-11 xl:p-7 bg-white dark:bg-gray-2',
+                'flex items-center rounded-lg p-6 md:flex-col md:pb-8 md:pt-7 lg:pt-9 lg:pb-11 xl:p-7 bg-white dark:bg-[linear-gradient(14deg,#1A2236_0%,#1E253A_248.18%)] dark:border dark:border-gray-800',
                 themeClassNames[theme].card
               )}
               type="text"
@@ -104,7 +104,7 @@ const Community = ({ className, theme, isTitleCentered }) => (
               />
               <span
                 className={classNames(
-                  'ml-4 text-center font-bold leading-snug truncate md:m-0 md:mt-[18px] md:text-lg md:leading-snug lg:whitespace-normal xl:mt-3.5 xl:text-base xl:leading-tight',
+                  'ml-4 text-center font-bold leading-snug truncate md:m-0 md:mt-[18px] md:text-lg md:leading-snug lg:whitespace-normal xl:mt-3.5 xl:text-base xl:leading-tight text-black dark:text-white hover:text-gray-1 dark:hover:text-gray-1',
                   titleWidth
                 )}
               >
