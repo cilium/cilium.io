@@ -13,6 +13,7 @@ const {
   FHNW,
   koyeb,
   bmc,
+  labyrinthLabs,
   scigility,
   syseleven,
   icos,
@@ -315,6 +316,7 @@ const userCommunity2 = {
   title: 'Cilium is everywhere',
   isTitleCentered: true,
   items: [
+    labyrinthLabs,
     scigility,
     cloutomate,
     qpoint,
