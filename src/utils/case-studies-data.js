@@ -12,7 +12,7 @@ export default {
   },
   labyrinthLabs: {
     iconName: 'labyrinthLabs',
-    text: '<b>Labyrinth Labs</b> uses Cilium for networking, network policies, and Hubble for network visibility.',
+    text: '<b>Labyrinth Labs</b> uses Cilium for networking, network policies, and Hubble for network visibility',
   },
   airbnb: {
     iconName: 'airbnb',
