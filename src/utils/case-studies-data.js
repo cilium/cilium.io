@@ -10,6 +10,10 @@ export default {
       },
     ],
   },
+  labyrinthLabs: {
+    iconName: 'labyrinthLabs',
+    text: '<b>Labyrinth Labs</b> uses Cilium for networking, network policies, and Hubble for network visibility',
+  },
   airbnb: {
     iconName: 'airbnb',
     text: '<b>Airbnb</b> uses Cilium to power its dataplane and unlock new networking capabilities',

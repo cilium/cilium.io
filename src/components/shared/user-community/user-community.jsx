@@ -106,6 +106,7 @@ import KubehetznerLogo from './images/kube-hetzner.inline.svg';
 import KubeOvnLogo from './images/kube-ovn.inline.svg';
 import KubermaticLogo from './images/kubermatic.inline.svg';
 import KubesphereLogo from './images/kubesphere.inline.svg';
+import LabyrinthLabsLogo from './images/labyrinthlabs.inline.svg';
 import LinkPoolLogo from './images/linkpool.inline.svg';
 import LiquidReplyLogo from './images/liquid-reply.inline.svg';
 import MagicLeapLogo from './images/magic-leap.inline.svg';
@@ -362,6 +363,7 @@ const icons = {
   ecco: EccoLogo,
   coreweave: CoreweaveLogo,
   kanabell: KanabellLogo,
+  labyrinthLabs: LabyrinthLabsLogo,
   entrywan: EntrywanLogo,
   streamsecurity: StreamSecurityLogo,
   gResearch: GresearchLogo,
