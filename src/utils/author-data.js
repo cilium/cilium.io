@@ -6,7 +6,7 @@ export default {
   },
   lizRice: {
     header: `<a href="https://twitter.com/lizrice">Liz Rice</a>`,
-    bio: `Liz is Chief Open Source Officer at <a href="https://isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise" target="_blank">Isovalent</a>, the company behind Cilium. She is also chair of the CNCF's Technical Oversight Committee, and the author of Container Security published by O'Reilly.`,
+    bio: `Liz is Chief Open Source Officer at <a href="https://isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise" target="_blank" rel="noopener noreferrer">Isovalent</a>, the company behind Cilium. She is also chair of the CNCF's Technical Oversight Committee, and the author of Container Security published by O'Reilly.`,
   },
   luanGuimaraes: {
     header: `Luan Guimarães`,
