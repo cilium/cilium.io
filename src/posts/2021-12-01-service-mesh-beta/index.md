@@ -41,7 +41,7 @@ so that sidecars for each application pod are no longer required. Because eBPF
 allows us to intercept packets at the socket as well as at the network
 interface, Cilium can dramatically shorten the overall path for each packet.
 (Read more about <a target="_blank"
-href="https://thenewstack.io/how-ebpf-streamlines-the-service-mesh/">sidecarless,
+href="https://thenewstack.io/how-ebpf-streamlines-the-service-mesh/" rel="noopener noreferrer">sidecarless,
 eBPF-based Service Mesh</a>.)
 
 ![](sidecarless.png)

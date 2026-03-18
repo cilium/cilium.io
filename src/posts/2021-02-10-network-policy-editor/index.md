@@ -24,13 +24,13 @@ import authors from 'utils/author-data';
 
 Implementing Network Policy is a critical part of building a secure Kubernetes-based platform, but the learning curve from simple examples to more complex real-world policies is steep. Not only can it be painful to get the YAML syntax and formatting just right, but more importantly, there are many subtleties in the behavior of the network policy specification (e.g. default allow/deny, namespacing, wildcarding, rules combination, etc.). Even an experienced Kubernetes YAML-wrangler can still easily tie their brain in knots working through an advanced network policy use case.
 
-Over the past years, we have learned a lot about the common challenges while working with many of you in the Cilium community implementing Kubernetes Network Policy. Today, we are excited to announce a new free tool for the community to assist you in your journey with Kubernetes NetworkPolicy: <a href="https://editor.cilium.io" target="_blank">editor.cilium.io</a>:
+Over the past years, we have learned a lot about the common challenges while working with many of you in the Cilium community implementing Kubernetes Network Policy. Today, we are excited to announce a new free tool for the community to assist you in your journey with Kubernetes NetworkPolicy: <a href="https://editor.cilium.io" target="_blank" rel="noopener noreferrer">editor.cilium.io</a>:
 
 <YoutubeIframe embedId='_ebbAeYT2z8?controls=0&autoplay=1&mute=1&loop=1'/>
 
 <div style={{ paddingTop: '30px' }}>
 
-The <a href="https://editor.cilium.io" target="_blank">Kubernetes NetworkPolicy Editor</a> helps you build, visualize, and understand Kubernetes NetworkPolicies.
+The <a href="https://editor.cilium.io" target="_blank" rel="noopener noreferrer">Kubernetes NetworkPolicy Editor</a> helps you build, visualize, and understand Kubernetes NetworkPolicies.
 
 - **Tutorial:** Follow the assisted tutorial to go from not using NetworkPolicies yet to a good security posture.
 - **Interactive Creation:** Create policies in an assisted and interactive way.
@@ -44,7 +44,7 @@ The <a href="https://editor.cilium.io" target="_blank">Kubernetes NetworkPolicy 
 
 <p style={{ marginTop: '40px', fontSize: '120%', fontWeight: 'bold', textAlign: 'center' }}>
   <a href="https://editor.cilium.io" style={{ padding: '8px 12px', color: 'white', textAlign: 'center', background: '#0a53a5', borderRadius: '4px' }}
- target="_blank">Try Network Policy Editor</a>
+ target="_blank" rel="noopener noreferrer">Try Network Policy Editor</a>
 </p>
 
 <a id="how-exactly-does-editor-cilium-io-help"></a>
@@ -87,7 +87,7 @@ As you can see in the editor's visualization, the above network policy will only
 
 How do you do this right?
 
-🤓 <a href="https://editor.cilium.io/?policy-tutorial=allow-cross-namespace" target="_blank">Click here to see how to easily visualize and fix this policy in the editor.</a>
+🤓 <a href="https://editor.cilium.io/?policy-tutorial=allow-cross-namespace" target="_blank" rel="noopener noreferrer">Click here to see how to easily visualize and fix this policy in the editor.</a>
 
 <a name="mistake-2-there-is-a-no-way-its-dns"></a>
 
@@ -129,7 +129,7 @@ Pods will typically reach other Kubernetes services via their DNS name (e.g., se
 
 So how do you solve this?
 
-🤓 <a href="https://editor.cilium.io/?policy-tutorial=allow-kube-dns" target="_blank">Click here to see and fix the mistake in the editor</a>
+🤓 <a href="https://editor.cilium.io/?policy-tutorial=allow-kube-dns" target="_blank" rel="noopener noreferrer">Click here to see and fix the mistake in the editor</a>
 
 ### Mistake 3: Using Traditional Networking Constructs
 
@@ -159,7 +159,7 @@ spec:
 
 However, Pod IPs are ephemeral and unpredictable, and depending on a network plugin implementation, ipBlock rules might only allow egress traffic to destinations outside of the cluster. <a href="https://kubernetes.io/docs/concepts/services-networking/network-policies/#behavior-of-to-and-from-selectors" target="_block">Kubernetes documentation</a> recommends using ipBlocks only for IP addresses outside of your cluster. So how do you solve this?
 
-🤓 <a href="https://editor.cilium.io/?policy-tutorial=allow-egress-to-pod" target="_blank">Click to learn how to allow egress to Pod.</a>
+🤓 <a href="https://editor.cilium.io/?policy-tutorial=allow-egress-to-pod" target="_blank" rel="noopener noreferrer">Click to learn how to allow egress to Pod.</a>
 
 ### Mistake 4: Misunderstanding How Policy Rules Combine
 
@@ -193,7 +193,7 @@ Wait... while this is valid YAML and a valid network policy, one extra character
 
 How do you prevent these mistakes?
 
-🤓 <a href="https://editor.cilium.io/?policy-tutorial=combine-policy-rules" target="_blank">Click to inspect the example in the Network Policy Editor</a>
+🤓 <a href="https://editor.cilium.io/?policy-tutorial=combine-policy-rules" target="_blank" rel="noopener noreferrer">Click to inspect the example in the Network Policy Editor</a>
 
 ### Mistake 5: Confusing Different Uses for “{}”
 
@@ -215,7 +215,7 @@ In Network Policy, empty curly braces (i.e., “{}”) can have a different mean
   </div>
 </div>
 
-🤓 <a href="https://editor.cilium.io/?policy-tutorial=empty-selectors" target="_blank">Get the answer with the Network Policy Editor</a>
+🤓 <a href="https://editor.cilium.io/?policy-tutorial=empty-selectors" target="_blank" rel="noopener noreferrer">Get the answer with the Network Policy Editor</a>
 
 ## What's Next?
 
@@ -223,8 +223,8 @@ We hope you found these examples useful, and would love to hear from you if you 
 
 To make sharing network policy examples easy, we have added a simple Share button that leverages Github Gist on the backend, enabling you to convert any example you have created into an easily shared link.
 
-Tweet us at <a href="https://twitter.com/@ciliumproject" target="_blank">@ciliumproject</a> to share your examples, and in the next few weeks we’ll pick a few favorites and send the creators some exclusive Cilium SWAG!
+Tweet us at <a href="https://twitter.com/@ciliumproject" target="_blank" rel="noopener noreferrer">@ciliumproject</a> to share your examples, and in the next few weeks we’ll pick a few favorites and send the creators some exclusive Cilium SWAG!
 
-We’d love to hear your feedback and questions on both the editor and Network Policy in the **#networkpolicy** channel of <a href="https://slack.cilium.io/" target="_blank">Cilium Slack</a>. See you there!
+We’d love to hear your feedback and questions on both the editor and Network Policy in the **#networkpolicy** channel of <a href="https://slack.cilium.io/" target="_blank" rel="noopener noreferrer">Cilium Slack</a>. See you there!
 
 <BlogAuthor {...authors.sergeyGeneralov} />
