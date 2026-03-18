@@ -216,7 +216,7 @@ const Form = ({ formClassName }) => {
                 transition: { delay: APPEAR_AND_EXIT_ANIMATION_DURATION },
               }}
             >
-              <img src={successHero} alt="" loading="eager" />
+              <img src={successHero} alt="" width={736} height={224} loading="eager" />
               <h3 className="text-center text-xl font-semibold leading-none lg:text-3xl text-black dark:text-white">
                 Thanks for your story!
               </h3>
