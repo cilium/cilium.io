@@ -409,7 +409,7 @@ const UserCommunity = ({
           return (
             <div
               className={classNames(
-                'flex flex-col rounded-lg p-4 sm:p-6 xl:p-8 bg-white dark:bg-[linear-gradient(14deg,#1A2236_0%,#1E253A_248.18%)] dark:border-[#37415B] shadow-card min-w-0'
+                'flex flex-col rounded-lg p-4 sm:p-6 xl:p-8 bg-white dark:bg-[linear-gradient(14deg,#1A2236_0%,#1E253A_248.18%)] dark:border dark:border-[#37415B] shadow-card min-w-0'
               )}
               key={index}
             >
