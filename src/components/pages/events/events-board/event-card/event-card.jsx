@@ -30,7 +30,14 @@ const EventCover = ({ ogImage, title }) => {
       ref={placeholder}
       style={{ height: placeholderHeight }}
     >
-      <img className="h-full w-full py-2.5" src={placeholderIllustration} alt="" aria-hidden />
+      <img
+        className="h-full w-full py-2.5"
+        src={placeholderIllustration}
+        alt=""
+        width={220}
+        height={162}
+        aria-hidden
+      />
     </div>
   );
 };
