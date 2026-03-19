@@ -20,6 +20,8 @@ tags:
   - CNCF
 ---
 
+import authors from 'utils/author-data';
+
 # Native mTLS for Cilium: Transparent Encryption Meets Cloud Native Identity
 
 *Announcing native mutual TLS in the Cilium datapath — zero-drop, inline encryption with Kubernetes-native identity, no sidecars required.*
@@ -64,11 +66,12 @@ Another factor, which may be important to some users, is that WireGuard and IPse
 When we started looking at [bringing ztunnel support into Cilium](https://github.com/cilium/cilium/issues/38548), it seemed like we could combine the best of both worlds. The top-tier performance of ztunnel, combined with Cilium’s ease of policy control, and the ability to support all types of IP traffic.
 
 Bringing ztunnel support into Cilium brings native mTLS to the data path and enables enhanced performance for ztunnel encrypted connections.
-## The Challenge: Authentication Without Encryption
 
-Cilium's [existing mutual authentication](https://isovalent.com/blog/post/2022-05-03-servicemesh-security/) capability (introduced as beta in Cilium 1.14) was a significant innovation, using eBPF to verify workload identity at the datapath level. However, it addressed only half of the mTLS promise:
+## The Challenge: Network-Level Authentication, Not Session-Based
 
-- **Session vs network based authentication.** The mutual authentication handshake had nodes authenticate each other and encapsulate all network traffic to build an authenticated and encrypted virtual network rather than doing session based authentication.
+Cilium's [existing mutual authentication](https://isovalent.com/blog/post/2022-05-03-servicemesh-security/) capability (introduced as beta in Cilium 1.14) was a significant innovation, using eBPF to verify workload identity at the datapath level. However, it had some important limitations:
+
+- **Network-level, not session-based authentication.** The mutual authentication handshake had nodes authenticate each other and then encapsulate all network traffic to build an authenticated and encrypted virtual network. This meant authentication happened at the node level rather than on a per-session basis — so, for example, pod-to-pod encryption on the same node was not possible (though arguably this has limited security benefit in practice).
 - **First packets were dropped.** When a new identity pair communicated for the first time, the initial packet was dropped while an out-of-band TLS 1.3 handshake completed between Cilium agents. Applications had to tolerate this retry penalty.
 - **External dependencies were required.** A full SPIRE deployment was mandatory — adding infrastructure complexity for teams that simply wanted encrypted pod-to-pod communication.
 
@@ -110,9 +113,11 @@ While this approach is elegant for pure identity verification, it leaves a criti
 
 Cilium's native mTLS is powered by a [forked version of ztunnel](https://github.com/cilium/ztunnel) — a lightweight, per-node Rust proxy originally from Istio's ambient mesh — reengineered to integrate directly with the Cilium control plane and **SPIRE** as the certificate authority. We introduced native SPIRE support into ztunnel ([cilium/ztunnel#4](https://github.com/cilium/ztunnel/pull/4)), replacing the upstream CA dependency with SPIRE's Delegated Identity API. SPIRE is the **only** CA mode supported in Cilium's mTLS solution, providing a production-grade, [CNCF-graduated](https://www.cncf.io/projects/spiffe/) identity foundation.
 
+Critically, because ztunnel operates at the pod level rather than the node level, **mTLS encryption applies to all pod-to-pod communication — whether the pods are on the same node or on different nodes**. Even two pods scheduled on the same host have their traffic encrypted through ztunnel, ensuring consistent security guarantees regardless of pod placement.
+
 While we are currently maintaining a fork to accelerate these capabilities, our goal is to align with and eventually upstream these improvements to the broader ecosystem.
 
-Here is what this looks like in practice:
+Here is what this looks like in practice for cross-node communication:
 
 ```
   Pod A             Ztunnel              Ztunnel              Pod B
@@ -130,7 +135,25 @@ Here is what this looks like in practice:
     |                  |                    |                    |
 ```
 
-**Every packet is encrypted.** There is no plaintext window, no dropped first packets, and no separate WireGuard or IPsec layer to configure. The connection is held inline by ztunnel until the mTLS tunnel is established, then traffic flows bidirectionally through an [HBONE](https://istio.io/latest/docs/ambient/architecture/hbone/) (HTTP/2 CONNECT) tunnel.
+For same-node communication, the flow is similar — traffic from Pod A is still intercepted by ztunnel, encrypted via mTLS, and delivered to Pod B through ztunnel, even though both pods reside on the same host:
+
+```
+                        Same Node
+  Pod A             Ztunnel                   Pod B
+  (enrolled)        (local)                   (enrolled)
+    |                  |                        |
+    |-- App traffic -->|                        |
+    |   (plaintext)    |                        |
+    |                  |-- ENCRYPTED mTLS ----->|
+    |                  |   HBONE tunnel         |
+    |                  |   (loopback)           |
+    |                  |   [ztunnel encrypts,   |
+    |                  |    then decrypts and   |
+    |                  |    delivers into pod]  |
+    |                  |                        |
+```
+
+**Every packet from an enrolled pod is encrypted — regardless of where the destination pod is scheduled.** There is no plaintext window, no dropped first packets, and no separate WireGuard or IPsec layer to configure. The connection is held inline by ztunnel until the mTLS tunnel is established, then traffic flows bidirectionally through an [HBONE](https://istio.io/latest/docs/ambient/architecture/hbone/) (HTTP/2 CONNECT) tunnel.
 
 ### How It Works
 
@@ -343,3 +366,6 @@ Come see native mTLS in action at [CiliumCon](https://events.linuxfoundation.org
 ---
 
 *Native mTLS for Cilium — transparent, inline encryption with SPIRE-backed SPIFFE identity. No sidecars. No dropped packets. No compromises.*
+
+<BlogAuthor {...authors.NehaAggarwal} />
+<BlogAuthor {...authors.thomasGraf} />
