@@ -47,7 +47,7 @@ This was a major inflection point. By removing the operational burden of sidecar
 
 # Enter ztunnel
 
-Cilium’s introduction of the sidecarless approach led to months of debate and discussion about the pros and cons. In our view, healthy discussion and probing different technical positions can lead to real progress. The following year, Istio Ambient was announced, proposing a new data plane model for Istio that eliminates sidecars in favor of a per-node ztunnel component for Layer 4 security, and an optional Layer 7 proxy layer for application traffic control.
+Cilium’s introduction of the sidecarless approach led to months of debate and discussion about the pros and cons. In our view, healthy discussion and probing different technical positions can lead to real progress. The following year, Istio Ambient was announced (listen to an interview with the authors on why they created it [here](https://kubernetespodcast.com/episode/189-ambient-mesh/)), proposing a new data plane model for Istio that eliminates sidecars in favor of a per-node ztunnel component for Layer 4 security, and an optional Layer 7 proxy layer for application traffic control. 
 
 [Performance results](https://arxiv.org/pdf/2411.02267) for Ambient are promising—lower CPU usage, faster pod starts, and improved network efficiency compared to Istio’s traditional sidecar deployments. But what really piqued our interest is that for encrypted TCP connections, the ztunnel approach even out-performs Cilium. 
 
