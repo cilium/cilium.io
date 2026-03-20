@@ -1,10 +1,10 @@
 ---
 path: /blog/2026/03/23/native-mtls-cilium
 date: 2026-03-23T09:00:00.000Z
-title: "Native mTLS for Cilium: Transparent Encryption Meets Cloud Native Identity"
+title: "Native mTLS for Cilium: Transparent Encryption Meets Cloud Native Identity with ztunnel"
 isFeatured: false
 ogImage: native-mtls-cover.png
-ogSummary: "Cilium now brings native, inline mTLS to the Kubernetes datapath — unifying authentication and encryption in a single step, with zero application changes."
+ogSummary: "Cilium now brings native, inline mTLS to the Kubernetes datapath with ztunnel, unifying authentication and encryption in a single step, with zero application changes."
 categories:
   - Technology
 tags:
@@ -39,7 +39,7 @@ In the Cilium project, we’ve always believed that open source isn’t just a w
 
 When the service mesh pattern first emerged, sidecars were the dominant model. Projects like Istio and Linkerd standardized on injecting a proxy alongside each application instance, offering consistent L7 observability, security, and traffic management. But as these meshes grew in adoption, so did the operational complexity and performance overhead of sidecar-heavy architectures.
 
-Interestingly, Linkerd actually started with a per-node proxy model in its earliest versions. The idea was to avoid the complexity of managing sidecars altogether. However, they encountered real limitations which led them to pivot toward a sidecar-based approach. It was a pragmatic move: sidecars gave them per-pod context and control, which was hard to achieve with the technologies available at the time.
+Interestingly, Linkerd actually started with a per-node proxy model in its earliest versions. However, they encountered real limitations which led them to pivot toward a sidecar-based approach. It was a pragmatic move: sidecars gave them per-pod context and control, which was hard to achieve with the technologies available at the time.
 
 # Cilium: Rethinking Service Mesh with eBPF
 
@@ -59,7 +59,7 @@ But this performance boost does come with a few trade-offs.
 
 One area to consider is upgrades. Cilium’s eBPF programs can be left in the kernel during a control plane upgrade, allowing data to continue flowing while user space components are replaced or restarted. With ztunnel, any TCP connections will need to be torn down during upgrade.
 
-Another factor, which may be important to some users, is that WireGuard and IPsec can be used to encrypt any IP traffic, whereas ztunnel is limited to TCP traffic.
+Another factor, which may be important to some users, is that WireGuard and IPsec can be used to encrypt any IP traffic, whereas ztunnel is limited to TCP traffic for now.
 
 # Bringing ztunnel to Cilium
 
@@ -71,7 +71,7 @@ Bringing ztunnel support into Cilium brings native mTLS to the data path and ena
 
 Cilium's [existing mutual authentication](https://isovalent.com/blog/post/2022-05-03-servicemesh-security/) capability (introduced as beta in Cilium 1.14) was a significant innovation, using eBPF to verify workload identity at the datapath level. However, it had some important limitations:
 
-- **Network-level, not session-based authentication.** The mutual authentication handshake had nodes authenticate each other and then encapsulate all network traffic to build an authenticated and encrypted virtual network. This meant authentication happened at the node level rather than on a per-session basis — so, for example, pod-to-pod encryption on the same node was not possible (though arguably this has limited security benefit in practice).
+- **Network-level, not session-based authentication.** The mutual authentication handshake had nodes authenticate each other and then encapsulate all network traffic to build an authenticated and encrypted virtual network. This meant authentication happened at the node level rather than on a per-session basis — so, for example, pod-to-pod encryption on the same node was not possible.
 - **First packets were dropped.** When a new identity pair communicated for the first time, the initial packet was dropped while an out-of-band TLS 1.3 handshake completed between Cilium agents. Applications had to tolerate this retry penalty.
 - **External dependencies were required.** A full SPIRE deployment was mandatory — adding infrastructure complexity for teams that simply wanted encrypted pod-to-pod communication.
 
@@ -111,7 +111,7 @@ While this approach is elegant for pure identity verification, it leaves a criti
 
 ## Introducing Native mTLS: Ztunnel Integration
 
-Cilium's native mTLS is powered by a [forked version of ztunnel](https://github.com/cilium/ztunnel) — a lightweight, per-node Rust proxy originally from Istio's ambient mesh — reengineered to integrate directly with the Cilium control plane and **SPIRE** as the certificate authority. We introduced native SPIRE support into ztunnel ([cilium/ztunnel#4](https://github.com/cilium/ztunnel/pull/4)), replacing the upstream CA dependency with SPIRE's Delegated Identity API. SPIRE is the **only** CA mode supported in Cilium's mTLS solution, providing a production-grade, [CNCF-graduated](https://www.cncf.io/projects/spiffe/) identity foundation.
+Cilium's native mTLS is powered by [ztunnel](https://github.com/cilium/ztunnel) — a lightweight, per-node Rust proxy originally from Istio's ambient mesh — reengineered to integrate directly with the Cilium control plane and **SPIRE** as the certificate authority. We introduced native SPIRE support into ztunnel ([cilium/ztunnel#4](https://github.com/cilium/ztunnel/pull/4)), replacing the upstream CA dependency with SPIRE's Delegated Identity API. SPIRE is the **only** CA mode supported in Cilium's mTLS solution, providing a production-grade, [CNCF-graduated](https://www.cncf.io/projects/spiffe/) identity foundation.
 
 Critically, because ztunnel operates at the pod level rather than the node level, **mTLS encryption applies to all pod-to-pod communication — whether the pods are on the same node or on different nodes**. Even two pods scheduled on the same host have their traffic encrypted through ztunnel, ensuring consistent security guarantees regardless of pod placement.
 
