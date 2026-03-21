@@ -132,4 +132,8 @@ export default {
     bio: `Peace Sandy is an LFX mentee who contributed to improving Cilium SEO, AEO, and 
     AIO during her mentorship period.`,
   },
+  NehaAggarwal: {
+    header: `Neha Aggarwal`,
+    bio: `Neha Aggarwal is a Principal Engineer at Microsoft.`,
+  },
 };
