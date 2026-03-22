@@ -3,7 +3,7 @@ path: '/blog/2026/03/23/2026-03-23-ciliumcon-momentum'
 date: '2026-03-23T12:00:00.000Z'
 title: 'Celebrating 10 Years of Cilium: What’s New and What’s Next'
 ogImage: CiliumCon2026.png
-isFeatured: true
+isPopular: true
 ogSummary: 'As Cilium turns 10, learn what the next decade of Cilium holds from CiliumCon and KubeCon in Amsterdam.'
 categories:
   - Community
