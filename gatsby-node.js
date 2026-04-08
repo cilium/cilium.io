@@ -38,8 +38,14 @@ async function createBlogPosts({ graphql, actions, reporter }) {
     { draftFilter: DRAFT_FILTER }
   );
 
-  if (result.errors) {
-    reporter.panicOnBuild('GraphQL query failed', result.errors[0]);
+  if (result.errors && result.errors.length > 0) {
+    const errorMessage =
+      `GraphQL query failed:\n${ 
+      result.errors
+        .map((error) => (error && error.message ? error.message : String(error)))
+        .join('\n')}`;
+
+    reporter.panicOnBuild(errorMessage);
     return;
   }
 
@@ -113,8 +119,14 @@ async function createBlogPages({ graphql, actions, reporter }) {
     { draftFilter: DRAFT_FILTER }
   );
 
-  if (result.errors) {
-    reporter.panicOnBuild('GraphQL query failed', result.errors[0]);
+  if (result.errors && result.errors.length > 0) {
+    const errorMessage =
+      `GraphQL query failed:\n${ 
+      result.errors
+        .map((error) => (error && error.message ? error.message : String(error)))
+        .join('\n')}`;
+
+    reporter.panicOnBuild(errorMessage);
     return;
   }
 
