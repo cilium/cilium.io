@@ -266,7 +266,7 @@ Briefly after this blogpost was released we finished implementing backend weight
 --enable-ipv6-masquerade=false
 ```
 
-_Note: the important flags in the newer cilium versions are `--enable-k8s=false`, `--lb-state-file=...`
+_Note: the important flags in the newer cilium versions are_ `--enable-k8s=false`, `--lb-state-file=...`
 
 The code/functionality still exists, but the burden of maintaining a separate flag in control plane part is no longer needed. Also the ServiceAPI has been modified and it's previous functionality is now fully replaced in this context by `--lb-state-file`. It has support for inotify/fsnotify which watches for updates of the state file which we update frequently.
 
@@ -339,6 +339,6 @@ An example state can be this:
 
 With the move from ServiceAPI to the state file, we observed a significant improvement in state-handling speed, so in this case "new is always better". :)
 
-A big shoutout to Jussi (one of the maintainers) for the support and work on this.
+A big shoutout to [Jussi](https://github.com/joamaki) (one of the maintainers) for the support and work on this.
 
 <BlogAuthor {...authors.OndrejBlazek} />
