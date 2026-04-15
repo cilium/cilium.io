@@ -12,6 +12,20 @@ const BLOG_POSTS_PER_PAGE = 9;
 const slugifyCategory = (item, pagePath) =>
   item === '*' ? `/${pagePath}/` : `/${pagePath}/categories/${slugify(item)}/`;
 
+function panicOnGraphqlError(result, reporter) {
+  if (result.errors && result.errors.length > 0) {
+    const errorMessage =
+      `GraphQL query failed:\n${result.errors
+        .map((error) => (error && error.message ? error.message : String(error)))
+        .join('\n')}`;
+
+    reporter.panicOnBuild(errorMessage);
+    return true;
+  }
+
+  return false;
+}
+
 // Create Blog Posts
 async function createBlogPosts({ graphql, actions, reporter }) {
   const result = await graphql(
@@ -38,14 +52,7 @@ async function createBlogPosts({ graphql, actions, reporter }) {
     { draftFilter: DRAFT_FILTER }
   );
 
-  if (result.errors && result.errors.length > 0) {
-    const errorMessage =
-      `GraphQL query failed:\n${ 
-      result.errors
-        .map((error) => (error && error.message ? error.message : String(error)))
-        .join('\n')}`;
-
-    reporter.panicOnBuild(errorMessage);
+  if (panicOnGraphqlError(result, reporter)) {
     return;
   }
 
