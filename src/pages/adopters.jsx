@@ -198,6 +198,10 @@ const {
   bedrock,
   celonis,
   zynga,
+  asana,
+  etraveli,
+  s3ns,
+  suse,
 } = caseStudiesData;
 
 const hero = {
@@ -305,6 +309,10 @@ const userCommunity1 = {
     uwmadison,
     ovh,
     zynga,
+    asana,
+    etraveli,
+    s3ns,
+    suse,
   ],
 };
 
