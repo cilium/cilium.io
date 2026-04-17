@@ -5,7 +5,7 @@ export default {
   links: [
     {
       linkText: 'Talk',
-      linkUrl: 'https://www.youtube.com/watch?v=TODO_ASANA_VIDEO_ID',
+      linkUrl: 'https://www.youtube.com/watch?v=mxjiSCnrb3c',
       linkTarget: '_blank',
     },
   ],
