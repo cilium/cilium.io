@@ -1752,4 +1752,16 @@ export default {
     iconName: 'celonis',
     text: '<b>Celonis</b> has standardized on Cilium as the primary CNI across its entire global cluster fleet',
   },
+  telefonica: {
+    iconName: 'telefonica',
+    text: "<b>Telefónica's acens</b> uses Cilium to drive next-generation cloud native services",
+    links: [
+      {
+        linkText: 'Blog',
+        linkUrl:
+          'https://blogs.cisco.com/sp/telefonicas-acens-and-cisco-driving-the-next-generation-of-cloud-native-services-with-isovalent',
+        linkTarget: '_blank',
+      },
+    ],
+  },
 };
