@@ -1179,7 +1179,7 @@ zynga: {
     text: '<b>Roche</b> uses Cilium for managing the network connectivity of their edge clusters',
     links: [
       {
-        linkText: 'Talk',
+        linkText: 'Talk 1',
         linkUrl: 'https://www.youtube.com/watch?v=kC8efabCH6s',
         linkTarget: '_blank',
       },
