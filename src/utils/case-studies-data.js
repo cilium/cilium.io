@@ -1,7 +1,7 @@
 export default {
   asana: {
   iconName: 'asana',
-  text: '<b>Asana</b> uses Cilium for cloud native networking and security',
+  text: '<b>Asana</b> uses Cilium for cloud native networking, observability, and security',
   links: [
     {
       linkText: 'Talk',
