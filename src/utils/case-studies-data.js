@@ -1184,7 +1184,7 @@ zynga: {
         linkTarget: '_blank',
       },
       {
-      linkText: 'Talk',
+      linkText: 'Talk 2',
       linkUrl: 'https://www.youtube.com/watch?v=6rCzYpLEZg4',
       linkTarget: '_blank',
       },
