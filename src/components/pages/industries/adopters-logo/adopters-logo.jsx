@@ -78,6 +78,7 @@ import SportRadarLogo from './images/sportradar.inline.svg';
 import SuperOrbitalLogo from './images/superorbital.inline.svg';
 import SysElevenLogo from './images/syseleven.inline.svg';
 import TailorBrandsLogo from './images/tailorbrands.inline.svg';
+import TelefonicaLogo from './images/telefonica.inline.svg';
 import TelenorLogo from './images/telenor.inline.svg';
 import TencentCloudLogo from './images/tencentcloud.inline.svg';
 import TestifyLogo from './images/testify.inline.svg';
@@ -182,6 +183,7 @@ const logos = {
   tsystems: TsystemsLogo,
   docaposte: DocaposteLogo,
   zynga: ZyngaLogo,
+  telefonica: TelefonicaLogo,
 };
 
 const AdoptersLogo = ({ items, className }) => (

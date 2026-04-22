@@ -198,6 +198,7 @@ const {
   bedrock,
   celonis,
   zynga,
+  telefonica,
 } = caseStudiesData;
 
 const hero = {
@@ -305,6 +306,7 @@ const userCommunity1 = {
     uwmadison,
     ovh,
     zynga,
+    telefonica,
   ],
 };
 

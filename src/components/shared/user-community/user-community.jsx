@@ -195,6 +195,7 @@ import VkcloudLogo from './images/vkcloud.inline.svg';
 import VnptLogo from './images/vnpt.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
+import TelefonicaLogo from './images/telefonica.inline.svg';
 import ZyngaLogo from './images/zynga.inline.svg';
 
 const icons = {
@@ -386,6 +387,7 @@ const icons = {
   tiktok: TiktokLogo,
   bedrock: BedrockLogo,
   zynga: ZyngaLogo,
+  telefonica: TelefonicaLogo,
 };
 
 const UserCommunity = ({
