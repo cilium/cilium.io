@@ -50,7 +50,7 @@ Read More: [https://isovalent.com/blog/post/what-is-kubernetes-networking/](http
 ### Core Networking Requirements
 
 - Highly coupled Container to Container communications: containers within the same pod share the same network namespace. Communication is done via localhost.
-- Pod-to-Pod communications: _How does Kubernetes Pod-to-Pod communication work?_
+- Pod-to-Pod communications:
   Every pod can communicate directly with any other pod across nodes without NAT since each pod is assigned a real IP. This enables all naming or discovery mechanisms to work out of the box.
 - Pod to Service communications: A service is an abstraction of a group of pods. Services are assigned Virtual IPs proxied to pods in a service, since pods are ephemeral workloads, don’t need to care about pod IP changes; Kubernetes automatically tracks these via Service EndpointSlice. Kube Proxy keeps track of the iptables to track VIP services; Cilium does this smartly by replacing iptables with eBPF. With eBPF, packet decisions happen at the earliest hook, and faster network policy evaluation with a low CPU overhead.
 - External to Internal communications: Exposing and accessing services, such as external services or databases, from outside the Kubernetes cluster.
