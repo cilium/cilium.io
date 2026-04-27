@@ -1,7 +1,7 @@
 ---
 path: /blog/2026/04/25/understanding-kubernetes-load-balancing
 date: 2026-04-25T09:13:00.000Z
-title: 'Understanding Kubernetes Load balancing'
+title: 'Understanding Kubernetes Load Balancing'
 isFeatured: false
 ogImage: images/understanding-kubernetes-load-balancing-cover.png
 ogSummary: 'Explore the Kubernetes load balancing model. This comprehensive guide describing Services, Ingress, north-south vs. east-west traffic, and how eBPF & Cilium enables scalable, high-performance kube-proxy replacement.'
