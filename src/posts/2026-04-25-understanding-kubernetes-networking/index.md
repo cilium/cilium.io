@@ -208,7 +208,6 @@ The Kubernetes networking model requires an understanding of the shift from stat
 
 Cilium doesn't just fulfill the CNI specification; it has become the industry-standard foundation for cloud native infrastructure by moving networking logic directly into the Linux kernel via eBPF. This shift has led to massive adoption across the ecosystem, with major cloud providers (including Google, AWS, and Azure) choosing Cilium as their default networking layer. As a CNCF-graduated project with a vibrant, global community, Cilium has effectively set the new benchmark for networking, security, observability, and scale in the modern enterprise.
 
-As organizations increasingly deploy compute-intensive AI and machine learning workloads across hybrid environments, the requirements for security, observability, and operational scale have become non-negotiable. Cilium has set a standard in Kubernetes networking by leveraging eBPF to provide the high-performance, identity-based networking infrastructure necessary to meet these modern demands.
 
 [^1]: Flat network is a network architecture where all devices can communicate to each other without going through any NAT.
 
