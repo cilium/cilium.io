@@ -96,9 +96,6 @@ Before Kubernetes can distribute traffic to pods, the external network must firs
 
 #### L2-Aware Load Balancing and Service Announcement in Cilium
 
-An L2-aware load balancer is a networking solution designed to bridge the gap between a physical network (Layer 2 of the OSI model) and a virtualized environment like Kubernetes.
-
-Standard load balancers usually operate at Layer 4 (IPs and Ports) or Layer 7 (URLs and Cookies), and an L2-aware load balancer handles the first mile of a packet's journey, finding the physical machine that owns a specific Virtual IP.
 
 L2-Aware Load Balancer introduces the ability for Kubernetes services to be reachable via Address Resolution Protocol (ARP) announcements. L2 Announcements is a feature that makes services visible and reachable on the local area network. This feature is primarily intended for on-premises deployments within networks without BGP-based routing, such as office or campus networks or home labs.
 
