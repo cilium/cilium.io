@@ -28,9 +28,9 @@ import authors from 'utils/author-data';
 
 # I.Introduction
 
-Since pods are ephemeral, constantly changing, replaced, scaled up, scaled down, and, the IP addresses change. To ensure proper utilization and desired performance, each healthy running instance of your application has to get a portion of the traffic. Traffic has to be distributed by load balancing between these instances; the distribution weight will depend on the algorithm.
+Kubernetes Load Balancing is a means to distribute network traffic to application instances. This can be within the same cluster or different compute regions or clusters.
 
-**Kubernetes Load Balancing** is a means to distribute network traffic to application instances. This can be within the same cluster or different compute regions or clusters.
+To ensure proper utilization and desired performance, each healthy running instance of your application has to get a portion of the traffic. Traffic has to be distributed by load balancing between these instances; the distribution weight will depend on the algorithm.
 
 ## Services in Kubernetes
 
