@@ -59,7 +59,7 @@ Read More: [https://github.com/kubernetes/design-proposals-archive/blob/main/net
 
 ### Why does traditional networking fail in a dynamic, containerized world?
 
-Containerised environments run resources with an ephemeral nature, and hence it’s hard to have the same traditional networking principles.
+Containerised environments often run resources with an ephemeral nature, and traditional networking technologies struggle to keep up with quickly changing environments.
 
 # II. Why Cilium as your CNI?
 
