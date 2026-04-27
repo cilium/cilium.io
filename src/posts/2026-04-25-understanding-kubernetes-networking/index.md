@@ -79,7 +79,7 @@ The following are key capabilities that Cilium offers to support the Kubernetes 
 2. Identity-based security: Instead of managing security via ephemeral IP addresses, Cilium assigns a unique security identity to pods based on metadata. Most CNIs can enforce network policies at L3 and L4, but Cilium extends this capability to provide L7 control capabilities too.
 3. Multi-cluster connectivity: Cilium provides the ability to connect multiple clusters across different clouds.
 4. Transparent Encryption: Kubernetes lacks native pod-to-pod encryption. Two common solutions to this problem are embedding encryption within the application or using a service mesh. Embedding encryption within the app is complex and requires application and security expertise. Cilium provides a straightforward solution for enabling the encryption of all node-to-node traffic with just one switch, no application changes, or additional proxies.
-5. Observability: Cilium's Metrics and Tracing export feature provides a seamless and integrated solution, empowering users to monitor, analyze, and optimize their Kubernetes environments with ease. By leveraging the power of Prometheus metrics, combined with Hubble's network behavior insights, Cilium enables users to gain deep visibility into their applications and network while simplifying the setup and configuration process.
+5. Observability: Cilium's Hubble empowers users to monitor, analyze, and optimize their Kubernetes networking environments with ease. With both a CLI and service map, Hubble helps quickly identify problems in the network.
 
 ![Observability with Cilium](./images/image1.png)
 
