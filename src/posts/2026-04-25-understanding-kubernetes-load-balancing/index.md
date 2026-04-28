@@ -61,7 +61,7 @@ By default, Virtual IPs are managed by kube-proxy, a network agent running on ea
 
 Originally, this was done using iptables, which relies on sequential list processing, or IPVS, which improved performance through hash tables and advanced algorithms like Round-robin and Least Connection.
 
-However, as clusters scale, the overhead of managing thousands of iptables rules can degrade performance. To improve performance, Cilium can replace kube-proxy and its iptables. By using eBPF, Cilium processes packets at the lowest level of the network stack without the context switching required by iptables. This provides significantly higher throughput, lower latency, and more granular security (Network Policies).
+However, as clusters scale, the overhead of managing thousands of iptables rules can degrade performance. To improve performance, Cilium can replace kube-proxy and iptables. By using eBPF, Cilium processes packets at the lowest level of the network stack without the context switching required by iptables. This provides significantly higher throughput, lower latency, and more granular security.
 
 While kube-proxy is limited to Layer 4 (IP/Port), Cilium can perform Layer 7 (HTTP/gRPC) load balancing and observability, providing a more identity-aware networking layer that is both faster and more resilient at scale.
 
