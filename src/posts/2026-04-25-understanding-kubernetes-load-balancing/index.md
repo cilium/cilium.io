@@ -45,7 +45,7 @@ Load balancing ensures reliability by using health checks and readiness probes t
 
 # II.How does Kubernetes Load Balancing Work?
 
-Speaking of Load Balancing in Kubernetes, clusters can be split into two perspectives.
+Load Balancing in Kubernetes clusters can be split into two perspectives.
 
 ## Types of Load Balancing
 
