@@ -148,7 +148,7 @@ Read More: [https://cilium.io/blog/2020/11/10/cilium-19/](https://cilium.io/blog
 
 ## Operating Modes
 
-L4 LoadBalancers work in two modes:
+L4 Load Balancers work in two modes:
 
 ### Passthrough Mode
 
