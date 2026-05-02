@@ -3,7 +3,7 @@ path: /blog/2026/04/25/understanding-kubernetes-networking
 date: 2026-04-25T09:13:00.000Z
 title: 'Understanding Kubernetes Networking'
 isFeatured: false
-ogImage: images/understanding-kubernetes-networking-cover.png
+ogImage: images/kubernetes-cluster-network.svg
 ogSummary: 'Explore the Kubernetes networking model. This comprehensive guide demystifies CNIs, pod-to-pod communication, service connectivity, and how eBPF optimizes the entire datapath for performance.'
 categories:
   - Technology
@@ -31,7 +31,7 @@ Kubernetes is all about orchestrating applications across machines. Kubernetes n
 
 A CNI plugin is not built into Kubernetes itself. Instead, Kubernetes calls the network plugin when pods are created. A CNI plugin ensures all pods are assigned IPs, configures routes, and ensures that traffic reaches the destination.
 
-![Cluster Layout](./images/image4.png)
+![Cluster Layout](./images/network-model.png)
 
 ### Fundamental Rules of Kubernetes Networking
 
@@ -65,7 +65,7 @@ Containerised environments often run resources with an ephemeral nature, and tra
 
 Container Network Interface is a CNCF project that specifies the relationship between a Container Runtime interface (CRI), such as containerd, responsible for container creation, and a CNI plugin tasked with configuring network interfaces within the container upon execution.
 
-![Cilium as a CNI](./images/image2.png)
+![Cilium as a CNI](./images/cilium-cni.png)
 
 Read More: [https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/)
 [https://isovalent.com/blog/post/demystifying-cni/](https://isovalent.com/blog/post/demystifying-cni/)
@@ -81,7 +81,7 @@ The following are key capabilities that Cilium offers to support the Kubernetes 
 4. Transparent Encryption: Kubernetes lacks native pod-to-pod encryption. Two common solutions to this problem are embedding encryption within the application or using a service mesh. Embedding encryption within the app is complex and requires application and security expertise. Cilium provides a straightforward solution for enabling the encryption of all node-to-node traffic with just one switch, no application changes, or additional proxies.
 5. Observability: Cilium's Hubble empowers users to monitor, analyze, and optimize their Kubernetes networking environments with ease. With both a CLI and service map, Hubble helps quickly identify problems in the network.
 
-![Observability with Cilium](./images/image1.png)
+![Observability with Cilium](./images/hubble_sw_service_map.webp)
 
 # III.How do packets move?
 
@@ -102,7 +102,7 @@ Virtual Ethernet (veth) pairs are connected virtual Ethernet interfaces that act
 When packets are sent from pod A to pod B on the same host, packets exit the pod A namespace through the peer interface.
 
 With a traditional CNI, this packet might be passed through slow iptables chains. Cilium instead intercepts this packet immediately using the eBPF program running on the veth pair interfaces. It then consults internal maps for security policies and identity. Hence, decisions are made directly in the data path at the earliest possible moment. This gives Cilium the capability to scale without CPU overhead. Finally, the packet is forwarded to pod B’s interface.
-![Intra-node Networking](./images/image5.png)
+![Intra-node Networking](./images/intra-node-networking.png)
 
 ## Layer 2: Inter-Node Networking
 
@@ -114,11 +114,15 @@ In native routing, the underlying network is aware of your Pod IP address. In th
 
 In native routing mode, when a packet from pod A in node A is dispatched, it’s routed through the host network stack and placed directly onto the physical network without any encapsulation. The underlying fabric uses the destination pod IP to route the traffic.
 
+![Native Routing](./images/native-routing.png)
+
 Read More: [https://docs.cilium.io/en/latest/network/concepts/routing/\#native-routing](https://docs.cilium.io/en/latest/network/concepts/routing/#native-routing)
 
 2. ### Encapsulation/Overlay Mode
 
 In overlay mode, Cilium creates a virtual “mesh” of tunnels over your existing physical network. By using UDP-based encapsulation protocols like VXLAN or Geneve, Cilium effectively abstracts the Pod network from the underlying infrastructure. Overlay mode hides the complexity of Pod IP addresses, meaning the physical switch or router only needs to know how to reach the Nodes, not the individual Pods.
+
+![VXLAN / Encapsulation Routing](./images/encapsulation-routing.png)
 
 #### How does the Data Travel
 
@@ -140,8 +144,6 @@ Read More: [https://docs.cilium.io/en/latest/network/concepts/routing/\#encapsul
 | Complexity  | High (requires configuration on physical network) | Lower (Works out of the box)      |
 | Performance | High (no overhead)                                | Moderate (encapsulation overhead) |
 | Visibility  | Pod IPs visible to the network                    | Pod IPs hidden from the network   |
-
-![Encapsulation vs Native Routing](./images/image3.png)
 
 # IV. Service, Service Discovery & Cluster DNS
 
@@ -207,7 +209,6 @@ While Kubernetes manages DNS records, Cilium handles high-performance routing th
 The Kubernetes networking model requires an understanding of the shift from static, physical infrastructure to dynamic, software-defined environments. While the fundamental rules, such as the IP-per-Pod model and Flat Network Structure, provide the necessary consistency for distributed applications, traditional networking tools often struggle to keep pace with the ephemeral nature of containers.
 
 Cilium doesn't just fulfill the CNI specification; it has become the industry-standard foundation for cloud native infrastructure by moving networking logic directly into the Linux kernel via eBPF. This shift has led to massive adoption across the ecosystem, with major cloud providers (including Google, AWS, and Azure) choosing Cilium as their default networking layer. As a CNCF-graduated project with a vibrant, global community, Cilium has effectively set the new benchmark for networking, security, observability, and scale in the modern enterprise.
-
 
 [^1]: Flat network is a network architecture where all devices can communicate to each other without going through any NAT.
 
