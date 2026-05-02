@@ -3,7 +3,7 @@ path: /blog/2026/04/25/understanding-kubernetes-networking
 date: 2026-04-25T09:13:00.000Z
 title: 'Understanding Kubernetes Networking'
 isFeatured: false
-ogImage: images/kubernetes-cluster-network.svg
+ogImage: images/kubernetes-cluster-network.png
 ogSummary: 'Explore the Kubernetes networking model. This comprehensive guide demystifies CNIs, pod-to-pod communication, service connectivity, and how eBPF optimizes the entire datapath for performance.'
 categories:
   - Technology
@@ -122,7 +122,7 @@ Read More: [https://docs.cilium.io/en/latest/network/concepts/routing/\#native-r
 
 In overlay mode, Cilium creates a virtual “mesh” of tunnels over your existing physical network. By using UDP-based encapsulation protocols like VXLAN or Geneve, Cilium effectively abstracts the Pod network from the underlying infrastructure. Overlay mode hides the complexity of Pod IP addresses, meaning the physical switch or router only needs to know how to reach the Nodes, not the individual Pods.
 
-![VXLAN / Encapsulation Routing](./images/encapsulation-routing.png)
+![VXLAN or Encapsulation Routing](./images/encapsulation-routing.png)
 
 #### How does the Data Travel
 
