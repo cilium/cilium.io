@@ -36,7 +36,7 @@ To ensure proper utilization and desired performance, each healthy running insta
 
 Services are used to expose applications running inside the cluster behind a single outward-facing endpoint, even when the workload is split across multiple backends. This is what makes load balancing possible.
 
-![Load Balancer](./images/image1.png)
+![Load Balancer](./images/services.png)
 
 ## Why Kubernetes Load Balancing?
 
@@ -65,7 +65,7 @@ However, as clusters scale, the overhead of managing thousands of iptables rules
 
 While kube-proxy is limited to Layer 4 (IP/Port), Cilium can perform Layer 7 (HTTP/gRPC) load balancing and observability, providing a more identity-aware networking layer that is both faster and more resilient at scale.
 
-![Internal Load Balancing](./images/image2.png)
+![Internal Load Balancing](./images/internal-load-balancing.png)
 
 ### External Load Balancing
 
@@ -76,6 +76,9 @@ This is achieved through three primary methods:
 - NodePort, which exposes a specific port on every node's IP.
 - LoadBalancer, which integrates with infrastructure providers.
 - Ingress, which acts as a Layer 7 smart router (handling hostnames and SSL), sits behind one of the aforementioned service types.
+- Gateway API is a family of API kinds that provide dynamic infrastructure provisioning and advanced traffic routing. Gateway API is the successor to Ingress. Cilium has native Gateway API support built directly into its eBPF datapath; no separate ingress controller is needed. A Gateway resource backed by Cilium gets L7 routing, native load balancing, and full Hubble observability on every request without an additional proxy in the path.
+
+![Gateway API](./images/gateway-api.png)
 
 For users not running in a cloud environment, such as those on bare metal or on-premises data centers, Kubernetes does not have a native "out-of-the-box" load balancer implementation.
 
@@ -95,7 +98,6 @@ L2-Awareness allows Kubernetes services to be reachable via Address Resolution P
 Before Kubernetes can distribute traffic to pods, the external network must first know which physical node in the cluster owns the Service IP. In cloud environments, this is handled by the provider’s Software Defined Network. However, in on-premises or bare-metal environments, the cluster must manage its own physical identity.
 
 #### L2-Aware Load Balancing and Service Announcement in Cilium
-
 
 L2-Aware Load Balancer introduces the ability for Kubernetes services to be reachable via Address Resolution Protocol (ARP) announcements. L2 Announcements is a feature that makes services visible and reachable on the local area network. This feature is primarily intended for on-premises deployments within networks without BGP-based routing, such as office or campus networks or home labs.
 
@@ -131,7 +133,7 @@ The Cilium XDP L4LB comes with full IPv4/v6 dual-stack support that can be deplo
 
 Read More: [https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/](https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/)
 
-![XDP](./images/image3.png)
+![XDP](./images/xdp.png)
 
 ## How Cilium Implements XDP L4LB
 
@@ -144,7 +146,7 @@ In a Cilium-managed cluster, the XDP load balancer operates as a "stand-alone" o
 3. Encapsulation/DSR: The packet is either encapsulated (VXLAN/Geneve) or sent via Direct Server Return (DSR) to the target node.
 4. XDP_TX: The modified packet is sent back out the same interface immediately, completely bypassing the host's networking stack. XDP_TX is an XDP action that involves TX bouncing the received packet page back out the same NIC it arrived on.
 
-Read More: [https://cilium.io/blog/2020/11/10/cilium-19/](https://cilium.io/blog/2020/11/10/cilium-19/)
+Read More: [https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/](https://cilium.io/blog/2022/04/12/cilium-standalone-L4LB-XDP/)
 
 ## Operating Modes
 
