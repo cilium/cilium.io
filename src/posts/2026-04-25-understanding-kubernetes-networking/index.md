@@ -102,6 +102,7 @@ Virtual Ethernet (veth) pairs are connected virtual Ethernet interfaces that act
 When packets are sent from pod A to pod B on the same host, packets exit the pod A namespace through the peer interface.
 
 With a traditional CNI, this packet might be passed through slow iptables chains. Cilium instead intercepts this packet immediately using the eBPF program running on the veth pair interfaces. It then consults internal maps for security policies and identity. Hence, decisions are made directly in the data path at the earliest possible moment. This gives Cilium the capability to scale without CPU overhead. Finally, the packet is forwarded to pod B’s interface.
+
 ![Intra-node Networking](./images/intra-node-networking.png)
 
 ## Layer 2: Inter-Node Networking
@@ -200,7 +201,7 @@ Every node runs a kube proxy (if not replaced completely). Kube proxy implements
 
 While Kubernetes manages DNS records, Cilium handles high-performance routing that makes discovery work at scale.
 
-- eBPF vs. iptables: traditionally kube-proxy uses iptables rules to route traffic. Cilium replaces this with eBPF hash lookup tables, which are very optimized.
+- eBPF vs. iptables: Traditionally, kube-proxy uses iptables rules to route traffic. Cilium replaces this with eBPF hash lookup tables, which are very optimized.
 - DNS queries visibility: With Hubble, you can see which pods are querying DNS records and whether those queries are succeeding or not.
 - DNS proxy: Cilium uses a DNS proxy to listen for DNS traffic. This adds a layer of granularity for security enforcement. This allows you to write security policies based on FQDN and not only IPs.
 
@@ -210,6 +211,6 @@ The Kubernetes networking model requires an understanding of the shift from stat
 
 Cilium doesn't just fulfill the CNI specification; it has become the industry-standard foundation for cloud native infrastructure by moving networking logic directly into the Linux kernel via eBPF. This shift has led to massive adoption across the ecosystem, with major cloud providers (including Google, AWS, and Azure) choosing Cilium as their default networking layer. As a CNCF-graduated project with a vibrant, global community, Cilium has effectively set the new benchmark for networking, security, observability, and scale in the modern enterprise.
 
-[^1]: Flat network is a network architecture where all devices can communicate to each other without going through any NAT.
+[^1]: A flat network is a network architecture where all devices can communicate to each other without going through any NAT.
 
 <BlogAuthor {...authors.CharityMbisi} />
