@@ -76,7 +76,7 @@ This is achieved through three primary methods:
 - NodePort, which exposes a specific port on every node's IP.
 - LoadBalancer, which integrates with infrastructure providers.
 - Ingress, which acts as a Layer 7 smart router (handling hostnames and SSL), sits behind one of the aforementioned service types.
-- Gateway API is a family of API kinds that provide dynamic infrastructure provisioning and advanced traffic routing. Gateway API is the successor to Ingress. Cilium has native Gateway API support built directly into its eBPF datapath; no separate ingress controller is needed. A Gateway resource backed by Cilium gets L7 routing, native load balancing, and full Hubble observability on every request without an additional proxy in the path.
+- Gateway API is a family of API kinds that provide dynamic infrastructure provisioning and advanced traffic routing. Gateway API is the successor to Ingress. Cilium has native Gateway API support built directly into its Envoy and eBPF data path; no separate ingress controller is needed. A Gateway resource backed by Cilium gets L7 routing, native load balancing, and full Hubble observability on every request without an additional proxy in the path.
 
 ![Gateway API](./images/gateway-api.png)
 
