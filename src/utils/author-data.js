@@ -35,9 +35,9 @@ export default {
   },
   sergeyGeneralov: {
     header: `Sergey Generalov`,
-    bio: `Sergey is a member of the technical staff at Isovalent 
-    and focuses on helping Cilium users solve challenges related 
-    to network policies, monitoring, and connectivity troubleshooting 
+    bio: `Sergey is a member of the technical staff at Isovalent
+    and focuses on helping Cilium users solve challenges related
+    to network policies, monitoring, and connectivity troubleshooting
     by building tools like Network Policy Editor, Hubble UI and more.`,
   },
   liWenquan: {
@@ -51,7 +51,7 @@ export default {
   },
   alexanderAlemayhu: {
     header: `Alexander Alemayhu`,
-    bio: `Alexander Alemayhu is a software engineer at Isovalent, 
+    bio: `Alexander Alemayhu is a software engineer at Isovalent,
     the company behind Cilium. He has been working on eBPF and Linux
      kernel technologies for several years, focusing on networking and observability solutions.`,
   },
@@ -69,7 +69,7 @@ export default {
   },
   JedSalazarandJoeStringer: {
     header: `Jed Salazar and Joe Stringer`,
-    bio: `Jed Salazar is a Senior Solutions Architect at Isovalent 
+    bio: `Jed Salazar is a Senior Solutions Architect at Isovalent
     and Joe Stringer is a Principal Engineer, Isovalent at Cisco`,
   },
   JosephIrving: {
@@ -78,7 +78,7 @@ export default {
   },
   BillMulligan: {
     header: `Bill Mulligan`,
-    bio: `Bill Mulligan is a Cilium and eBPF Community Pollinator, 
+    bio: `Bill Mulligan is a Cilium and eBPF Community Pollinator,
     Isovalent at Cisco and a Governing Board Member of the eBPF Foundation.`,
   },
   OndrejBlazek: {
@@ -99,7 +99,7 @@ export default {
   },
   ShedrackAkintayo: {
     header: `Shedrack Akintayo`,
-    bio: `Shedrack Akintayo is a Community Manager at 
+    bio: `Shedrack Akintayo is a Community Manager at
     Isovalent helping build the eBPF and Cilium open source communities`,
   },
   AmirKheirkhahan: {
@@ -123,17 +123,22 @@ export default {
   },
   KatieMeinders: {
     header: `Katie Meinders`,
-    bio: `Katie Meinders is a Community Builder at Isovalent where 
-    she helps grow the Cilium and eBPF communities through storytelling, 
+    bio: `Katie Meinders is a Community Builder at Isovalent where
+    she helps grow the Cilium and eBPF communities through storytelling,
     social media, showcasing user success, and building connections across the open source ecosystem.`,
   },
   PeaceSandy: {
     header: `Peace Sandy`,
-    bio: `Peace Sandy is an LFX mentee who contributed to improving Cilium SEO, AEO, and 
+    bio: `Peace Sandy is an LFX mentee who contributed to improving Cilium SEO, AEO, and
     AIO during her mentorship period.`,
   },
   NehaAggarwal: {
     header: `Neha Aggarwal`,
     bio: `Neha Aggarwal is a Principal Engineer at Microsoft.`,
+  },
+  CharityMbisi: {
+    header: `Charity Mbisi`,
+    bio: `Charity Mbisi is an LFX mentee who contributed to improving Cilium's SEO, AEO, and AIO during his mentorship period.
+    Professionally, Charity Mbisi is a Software Engineer consulting in the Fin-tech and banking industry, specializing in building cloud native computing solutions and optimized service delivery.`,
   },
 };
