@@ -141,4 +141,9 @@ export default {
     bio: `Charity Mbisi is an LFX mentee who contributed to improving Cilium's SEO, AEO, and AIO during his mentorship period.
     Professionally, Charity Mbisi is a Software Engineer consulting in the Fin-tech and banking industry, specializing in building cloud native computing solutions and optimized service delivery.`,
   },
+  andreMartinsAndFerozSalam: {
+    header: `André Martins and Feroz Salam`,
+    bio: `André Martins is a Cilium maintainer and Software Engineer, Isovalent at Cisco.
+    Feroz Salam is a member of the Cilium Security Team and a Security Engineer, Isovalent at Cisco.`,
+  },
 };
