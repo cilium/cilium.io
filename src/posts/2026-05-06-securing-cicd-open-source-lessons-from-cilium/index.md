@@ -2,7 +2,7 @@
 path: '/blog/2026/05/06/securing-cicd-open-source-lessons-from-cilium'
 date: '2026-05-06T16:00:00.000Z'
 title: 'Securing CI/CD for an open source project: lessons from Cilium'
-isFeatured: false
+isFeatured: true
 ogImage: cover.png
 ogSummary: 'A case study of how Cilium secures its CI/CD pipeline end to end: SHA-pinned actions, two-phase checkouts for pull_request_target, Renovate cooldowns, CODEOWNERS gates, vendored Go modules, Cosign signing, and the gaps we still need to close.'
 categories:
