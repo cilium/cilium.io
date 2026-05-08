@@ -1752,6 +1752,21 @@ export default {
     iconName: 'celonis',
     text: '<b>Celonis</b> has standardized on Cilium as the primary CNI across its entire global cluster fleet',
   },
+  mogenius: {
+    iconName: 'mogenius',
+    text: '<b>mogenius</b> uses Cilium for network observability across their AI-powered Kubernetes platform',
+  },
+  cleverCloud: {
+    iconName: 'cleverCloud',
+    text: '<b>Clever Cloud</b> uses Cilium as the default CNI for their managed Kubernetes offering (CKE)',
+    links: [
+      {
+        linkText: 'Read Blog',
+        linkUrl: 'https://blog.littlejo.link/cilium/clever/intro/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
   telefonica: {
     iconName: 'telefonica',
     text: "<b>Telefónica's acens</b> uses Cilium to drive next-generation cloud native services",

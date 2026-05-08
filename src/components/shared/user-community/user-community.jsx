@@ -50,6 +50,7 @@ import CanopusLogo from './images/canopus.inline.svg';
 import CelonisLogo from './images/celonis.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
+import CleverCloudLogo from './images/clevercloud.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CloudEraLogo from './images/cloudera.inline.svg';
 import CloutomateLogo from './images/cloutomate.inline.svg';
@@ -113,6 +114,7 @@ import MagicLeapLogo from './images/magic-leap.inline.svg';
 import MelenionLogo from './images/melenion.inline.svg';
 import MeltwaterLogo from './images/meltwater.inline.svg';
 import MobilabLogo from './images/mobilab.inline.svg';
+import MogeniusLogo from './images/mogenius.inline.svg';
 import MuxLogo from './images/mux.inline.svg';
 import MyFitnessPalLogo from './images/myfitnesspal.inline.svg';
 import NemligLogo from './images/nemlig.inline.svg';
@@ -179,6 +181,7 @@ import SyselfLogo from './images/syself.inline.svg';
 import TSILogo from './images/t-systems.inline.svg';
 import TailorBrandsLogo from './images/tailor-brands.inline.svg';
 import TanzuLogo from './images/tanzu.inline.svg';
+import TelefonicaLogo from './images/telefonica.inline.svg';
 import TestifysecLogo from './images/testifysec.inline.svg';
 import TietoevryLogo from './images/tietoevry.inline.svg';
 import TiktokLogo from './images/tiktok.inline.svg';
@@ -195,7 +198,6 @@ import VkcloudLogo from './images/vkcloud.inline.svg';
 import VnptLogo from './images/vnpt.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
-import TelefonicaLogo from './images/telefonica.inline.svg';
 import ZyngaLogo from './images/zynga.inline.svg';
 
 const icons = {
@@ -387,6 +389,8 @@ const icons = {
   tiktok: TiktokLogo,
   bedrock: BedrockLogo,
   zynga: ZyngaLogo,
+  mogenius: MogeniusLogo,
+  cleverCloud: CleverCloudLogo,
   telefonica: TelefonicaLogo,
 };
 

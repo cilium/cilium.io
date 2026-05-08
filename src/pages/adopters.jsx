@@ -199,6 +199,8 @@ const {
   celonis,
   zynga,
   telefonica,
+  mogenius,
+  cleverCloud,
 } = caseStudiesData;
 
 const hero = {
@@ -307,6 +309,7 @@ const userCommunity1 = {
     ovh,
     zynga,
     telefonica,
+    cleverCloud,
   ],
 };
 
@@ -409,6 +412,7 @@ const userCommunity2 = {
     fptTelecom,
     ionx,
     vnpt,
+    mogenius,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
@@ -447,6 +451,7 @@ const logos1 = {
     'coreweave',
     'outscale',
     'ovh',
+    'cleverCloud',
   ],
   spaceXSize: 'sm',
 };

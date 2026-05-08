@@ -131,6 +131,7 @@ const cloudAdoptersLogo = [
   'infomaniak',
   'scaleway',
   'ovh',
+  'clevercloud',
 ];
 
 const cloudResouces = [

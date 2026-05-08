@@ -14,6 +14,7 @@ import AWSLogo from './images/aws.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
 import AzureKsLogo from './images/azureks.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
+import CleverCloudLogo from './images/clevercloud.inline.svg';
 import ConstellationLogo from './images/constellation.inline.svg';
 import CoreweaveLogo from './images/coreweave.inline.svg';
 import CraneLogo from './images/crane.inline.svg';
@@ -110,6 +111,7 @@ const logos = {
   ionx: IONXLogo,
   vnpt: VnptLogo,
   zynga: ZyngaLogo,
+  cleverCloud: CleverCloudLogo,
 };
 
 const spaceXClassNames = {
