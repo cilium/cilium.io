@@ -21,17 +21,6 @@ etraveli: {
     },
   ],
 },
-s3ns: {
-  iconName: 's3ns',
-  text: '<b>S3NS</b> uses Cilium ClusterMesh and MCS-API to build a secure, multi-cluster sovereign cloud platform',
-  links: [
-    {
-      linkText: 'Talk',
-      linkUrl: 'https://www.youtube.com/watch?v=ENgE6V1M3zg&list=PLDg_GiBbAx-mSQHa1y9Z9sjBYUmG2FBCZ&index=6',
-      linkTarget: '_blank',
-    },
-  ],
-},
 suse: {
   iconName: 'suse',
   text: '<b>SUSE</b> uses Tetragon to enforce and scale security policies across production clusters',
