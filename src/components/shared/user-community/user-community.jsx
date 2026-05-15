@@ -150,7 +150,6 @@ import RapyutaRoboticsLogo from './images/rapyuta-robotics.inline.svg';
 import RedditLogo from './images/reddit.inline.svg';
 import RobinhoodLogo from './images/robinhood.inline.svg';
 import RocheLogo from './images/roche.inline.svg';
-import S3nsLogo from './images/s3ns.inline.svg';
 import SamsungAdsLogo from './images/samsungads.inline.svg';
 import SantaLogo from './images/santa.inline.svg';
 import SapLogo from './images/sap.inline.svg';
@@ -392,7 +391,6 @@ const icons = {
   zynga: ZyngaLogo,
   asana: AsanaLogo,
   etraveli: EtraveliLogo,
-  s3ns: S3nsLogo,
   suse: SuseLogo,
 };
 
