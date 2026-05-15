@@ -233,4 +233,112 @@ The only thing we found missing in Cilium, before we can fully switch to L4LB XD
 
 With this we would like to thank the Cilium community for building such a great project and for their support!
 
+## Edit: 2026 updates
+
+Briefly after this blogpost was released we finished implementing backend weights ([#PR18306](https://github.com/cilium/cilium/pull/18306)) and have been using the standalone LB for many years now without any hiccups. Since cilium release v1.18+, cilium no longer supports flag `--datapath-mode=lb-only` and ServiceAPI which we used previously (`cilium service update...`). The same functionality can be fortunately achieved using following flags:
+
+```
+--bpf-lb-algorithm=maglev
+--bpf-lb-mode=dsr
+--bpf-lb-acceleration=native
+--bpf-lb-dsr-dispatch=ipip
+--enable-l2-neigh-discovery=true
+--routing-mode=native
+--devices=<node_ext_device>
+--direct-routing-device=<node_ext_device>
+--enable-l7-proxy=false
+--install-iptables-rules=false
+--enable-bandwidth-manager=false
+--enable-local-redirect-policy=false
+--enable-hubble=false
+--preallocate-bpf-maps=false
+--disable-envoy-version-check=true
+--auto-direct-node-routes=false
+--enable-ipv4=true
+--enable-ipv6=true
+--enable-xdp-prefilter=true
+--prometheus-serve-addr=<node_IP>:9962
+--enable-k8s=false
+--kube-proxy-replacement=true
+--lb-state-file=/var/run/cilium/lbstate.json
+--lb-state-file-interval=1s
+--enable-ipv4-masquerade=false
+--enable-ipv6-masquerade=false
+```
+
+_Note: the important flags in the newer cilium versions are_ `--enable-k8s=false`, `--lb-state-file=...`
+
+The code/functionality still exists, but the burden of maintaining a separate flag in control plane part is no longer needed. Also the ServiceAPI has been modified and it's previous functionality is now fully replaced in this context by `--lb-state-file`. It has support for inotify/fsnotify which watches for updates of the state file which we update frequently.
+
+An example state can be this:
+
+```
+{
+  "services": [
+    {
+      "metadata": {
+        "name": "lbdor",
+        "namespace": "lbr-stable"
+      },
+      "spec": {
+        "ports": [
+          {
+            "name": "8080",
+            "protocol": "TCP",
+            "port": 8080,
+            "targetPort": 0
+          }
+        ],
+        "type": "LoadBalancer"
+      },
+      "status": {
+        "loadBalancer": {
+          "ingress": [
+            {
+              "ip": "10.3.3.1",
+              "ipMode": "VIP"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "endpoints": [
+    {
+      "metadata": {
+        "name": "epslice-lbdor",
+        "namespace": "lbr-stable",
+        "labels": {
+          "kubernetes.io/service-name": "lbdor"
+        }
+      },
+      "addressType": "IPv4",
+      "endpoints": [
+        {
+          "addresses": [
+            "10.0.0.1"
+          ],
+          "conditions": {
+            "ready": true,
+            "serving": true,
+            "terminating": false
+          }
+        }
+      ],
+      "ports": [
+        {
+          "name": "8080",
+          "protocol": "TCP",
+          "port": 8080
+        }
+      ]
+    }
+  ]
+}
+```
+
+With the move from ServiceAPI to the state file, we observed a significant improvement in state-handling speed, so in this case "new is always better". :)
+
+A big shoutout to [Jussi](https://github.com/joamaki) (one of the maintainers) for the support and work on this.
+
 <BlogAuthor {...authors.OndrejBlazek} />

@@ -20,6 +20,7 @@ import CapitalOneLogo from './images/capitalone.inline.svg';
 import CengnLogo from './images/cengn.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
+import CleverCloudLogo from './images/clevercloud.inline.svg';
 import ClickHouseLogo from './images/clickhouse.inline.svg';
 import CosmonicLogo from './images/cosmonic.inline.svg';
 import DatadogLogo from './images/datadog.inline.svg';
@@ -78,6 +79,7 @@ import SportRadarLogo from './images/sportradar.inline.svg';
 import SuperOrbitalLogo from './images/superorbital.inline.svg';
 import SysElevenLogo from './images/syseleven.inline.svg';
 import TailorBrandsLogo from './images/tailorbrands.inline.svg';
+import TelefonicaLogo from './images/telefonica.inline.svg';
 import TelenorLogo from './images/telenor.inline.svg';
 import TencentCloudLogo from './images/tencentcloud.inline.svg';
 import TestifyLogo from './images/testify.inline.svg';
@@ -112,6 +114,7 @@ const logos = {
   cistec: CistecLogo,
   civo: CivoLogo,
   clickhouse: ClickHouseLogo,
+  clevercloud: CleverCloudLogo,
   cosmonic: CosmonicLogo,
   datadog: DatadogLogo,
   dbschenker: DbSchenkerLogo,
@@ -182,6 +185,7 @@ const logos = {
   tsystems: TsystemsLogo,
   docaposte: DocaposteLogo,
   zynga: ZyngaLogo,
+  telefonica: TelefonicaLogo,
 };
 
 const AdoptersLogo = ({ items, className }) => (
