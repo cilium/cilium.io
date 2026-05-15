@@ -2,7 +2,7 @@
 path: /blog/2026/03/23/native-mtls-cilium
 date: 2026-03-23T09:00:00.000Z
 title: "Native mTLS for Cilium: Transparent Encryption Meets Cloud Native Identity with ztunnel"
-isFeatured: true
+isFeatured: false
 ogImage: native-mtls-cover.png
 ogSummary: "Cilium now brings native, inline mTLS to the Kubernetes datapath with ztunnel, unifying authentication and encryption in a single step, with zero application changes."
 categories:
