@@ -200,7 +200,6 @@ const {
   zynga,
   asana,
   etraveli,
-  s3ns,
   suse,
 } = caseStudiesData;
 
@@ -311,7 +310,6 @@ const userCommunity1 = {
     zynga,
     asana,
     etraveli,
-    s3ns,
     suse,
   ],
 };
