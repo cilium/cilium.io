@@ -113,8 +113,8 @@ const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
   return (
     <div className="bg-gray-4 dark:bg-gray-900">
       <TopBanner
-        text="Join us for KubeCon Europe and CiliumCon 2026"
-        url="https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/co-located-events/ciliumcon/"
+        text="Join us for KubeCon North America and CiliumCon 2026"
+        url="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/ciliumcon/"
       />
       <div className="sticky top-0 z-50 w-full">
       <Header

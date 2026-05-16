@@ -36,6 +36,7 @@ import AcossLogo from './images/acoss.inline.svg';
 import AenixLogo from './images/aenix.inline.svg';
 import AirbnbLogo from './images/airbnb.inline.svg';
 import AlaudaLogo from './images/alauda.inline.svg';
+import AsanaLogo from './images/asana.inline.svg';
 import ArangoDbLogo from './images/arangodb.inline.svg';
 import AyedoLogo from './images/ayedo.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
@@ -71,6 +72,7 @@ import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
 import EntrywanLogo from './images/entrywan.inline.svg';
+import EtraveliLogo from './images/etraveli.inline.svg';
 import ESnetLogo from './images/esnet.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FHNWLogo from './images/fhnw.inline.svg';
@@ -176,6 +178,7 @@ import SportradarLogo from './images/sportradar.inline.svg';
 import SproutfiLogo from './images/sproutfi.inline.svg';
 import StreamSecurityLogo from './images/streamsecurity.inline.svg';
 import SuperorbitalLogo from './images/superorbital.inline.svg';
+import SuseLogo from './images/suse.inline.svg';
 import SyselevenLogo from './images/syseleven.inline.svg';
 import SyselfLogo from './images/syself.inline.svg';
 import TSILogo from './images/t-systems.inline.svg';
@@ -389,6 +392,9 @@ const icons = {
   tiktok: TiktokLogo,
   bedrock: BedrockLogo,
   zynga: ZyngaLogo,
+  asana: AsanaLogo,
+  etraveli: EtraveliLogo,
+  suse: SuseLogo,
   mogenius: MogeniusLogo,
   cleverCloud: CleverCloudLogo,
   telefonica: TelefonicaLogo,
