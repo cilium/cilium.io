@@ -3,7 +3,7 @@ path: /blog/2026/05/24/understanding-kubernetes-network-observability
 date: 2026-05-24T09:13:00.000Z
 title: 'Understanding Kubernetes Network Observability'
 isFeatured: false
-ogImage: images/kubernetes-cluster-network.png
+ogImage: images/network-observability-cover.png
 ogSummary: 'Learn how eBPF and Cilium provide deep network observability in Kubernetes. This guide covers how to gain L3-L7 visibility to troubleshoot microservices, debug DNS, and analyze latency in real-time without sidecars.'
 categories:
   - Technology
