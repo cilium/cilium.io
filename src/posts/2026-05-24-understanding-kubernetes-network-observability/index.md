@@ -147,7 +147,7 @@ Without L7 visibility, you can't tell. With Hubble, you can observe the HTTP res
 Network transit time within a cluster is typically sub-millisecond. If Hubble shows 220 ms HTTP latency on a specific service-to-service call, the latency is inside the destination service's code, not the network. That's the conversation you need to have with the backend team, armed with data instead of speculation.
 ![Decision Tree](./images/decision-tree.png)
 
-Fig: A Hubble-based diagnostic decision tree. Each branch maps directly to a Hubble observing filter flag.
+_Fig: A Hubble-based diagnostic decision tree. Each branch maps directly to a Hubble observing filter flag._
 
 Read More:
 
