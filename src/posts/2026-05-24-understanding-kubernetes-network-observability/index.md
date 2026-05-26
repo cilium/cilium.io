@@ -82,7 +82,7 @@ Traffic is intercepted and redirected through this proxy before being forwarded 
 
 Under load, that overhead compounds. Implementing HTTP visibility with eBPF has a dramatically lower latency impact than the sidecar approach, especially at the p99 percentile that matters most during incidents.
 
-eBPF sidesteps this entirely because it can observe traffic passively at the kernel level without intercepting it, without redirecting it, and without any changes to the application or pod configuration.
+eBPF sidesteps this entirely because it instruments traffic inside the kernel transparently, observing and profiling packets within the execution path without having to redirect or copy them to a user-space proxy daemon.
 
 eBPF-based visibility is ground-truth accurate. If a packet is dropped, the kernel knows exactly why, whether it was a network policy verdict, a routing failure, or a conntrack miss, and Hubble surfaces that reason directly. Sidecar proxies only see what reaches them; they're blind to drops that happen before the packet arrives.
 
