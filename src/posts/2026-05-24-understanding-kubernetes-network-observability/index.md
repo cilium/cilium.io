@@ -40,7 +40,7 @@ Answering that requires a fundamentally different kind of observability tool, on
 
 _Fig: In a monolith, one log file is enough. In Kubernetes, a 404 can originate anywhere in the call chain. Traditional tools give you IPs, not service names._
 
-ReadMore: [https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/](https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/)
+[Read the Introduction to Network Observabilityw with Hubble](https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/](https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/)
 
 ## 2\. Three Layers of Kubernetes Network Observability
 
