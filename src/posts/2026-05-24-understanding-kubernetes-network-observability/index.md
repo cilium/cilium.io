@@ -49,7 +49,7 @@ To be confident about your network observability, it must span three layers.
 ### L3/L4 \- Flow visibility
 
 The foundation of network observability is the flow layer. At Layer 3 and 4, you can answer the most basic questions: which source IP is talking to which destination IP, on which port, using which protocol, and how many bytes are being transferred. This is the data that classic tools like netstat and iptables were built to surface.
-In a Kubernetes cluster, this layer alone is nearly useless without enrichment. A typical production cluster might have hundreds of pods all sharing a /16 subnet.
+In a Kubernetes cluster, this layer alone is nearly useless without enrichment. A typical production cluster might have thousands of pods scattered across nodes, with individual IP allocations abstracted from a massive, shared /16 cluster CIDR block.
 
 ### L7 \- Application Visibility
 
