@@ -54,7 +54,7 @@ In a Kubernetes cluster, this layer alone is nearly useless without enrichment. 
 ### L7 \- Application Visibility
 
 Layer 7 is where observability gets genuinely useful for debugging. Instead of knowing that an application on port 80 is talking to something else on port 80, you can see the HTTP method (GET, POST, PUT), the URL path (/api/v1/orders), the gRPC service and method, and critically, HTTP response codes.
-This is the difference between "_packets are moving between these two pods_" and "t*he frontend is calling POST /v1/checkout on cart-service and getting 503 Service Unavailable back at 40 requests per second.*" One of those sentences lets you page the right team immediately.
+This is the difference between "_packets are moving between these two pods_" and "*the frontend is calling POST /v1/checkout on cart-service and getting 503 Service Unavailable back at 40 requests per second.*" One of those sentences lets you page the right team immediately.
 
 ### Identity Enrichment
 
