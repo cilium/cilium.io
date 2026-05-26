@@ -32,7 +32,7 @@ From just being able to answer, “_Is the network up?_” to “_Why is the bac
 
 Traditional networking tools, such as tcpdump and iptables, were designed for a different world. In Kubernetes environments, resources are ephemeral, IP addresses change frequently, and pods can be moved between nodes. We aren’t able to gather much context of what is happening in the networking layer with tcpdump or ping.
 
-In a microservices architecture, a single user request can now be orchestrated to 3 different services, of which each might be running across different pods, namespaces, and nodes before it ever reaches a response. When that request returns a 500 error, where exactly do you start looking?.
+In a microservices architecture, a single user request can now be orchestrated to 3 different services, of which each might be running across different pods, namespaces, and nodes before it ever reaches a response. When that request returns a 500 error, where exactly do you start looking?
 
 Answering that requires a fundamentally different kind of observability tool, one that understands the language the Kubernetes networking model actually speaks.
 
