@@ -38,7 +38,7 @@ Answering that requires a fundamentally different kind of observability tool, on
 
 ![Monolith VS Microservice](./images/monolith-vs-microservice.png)
 
-Fig: In a monolith, one log file is enough. In Kubernetes, a 404 can originate anywhere in the call chain. Traditional tools give you IPs, not service names.
+_Fig: In a monolith, one log file is enough. In Kubernetes, a 404 can originate anywhere in the call chain. Traditional tools give you IPs, not service names._
 
 ReadMore: [https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/](https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/)
 
