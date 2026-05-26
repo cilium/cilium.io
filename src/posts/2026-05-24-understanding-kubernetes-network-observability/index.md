@@ -95,7 +95,7 @@ eBPF programs run with near-zero overhead, which means Cilium can observe every 
 
 Fig: Sidecars intercept and redirect traffic before passing it on, adding latency hops. eBPF instruments traffic inside the kernel at the moment; it's processed with no redirection or application changes needed.
 
-Read More: [https://isovalent.com/blog/post/2021-12-08-ebpf-servicemesh/](https://isovalent.com/blog/post/2021-12-08-ebpf-servicemesh/)
+[Read about the difference removing the sidecars for eBPF makes for a service mesh](https://isovalent.com/blog/post/2021-12-08-ebpf-servicemesh)
 
 ## 4\. Real-time Network Observability with Hubble for Cilium
 
