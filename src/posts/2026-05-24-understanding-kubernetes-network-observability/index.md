@@ -115,7 +115,7 @@ It is a command-line interface for interacting with Hubble, think of Hubble obse
 
 You can also trace DNS queries, filter to only HTTP traffic for a specific pod, or watch policy verdicts as policies are applied.
 ![Hubble CLI](./images/hubble-cli.png)
-Fig: Hubble Relay aggregates flow data from every Cilium agent, making the full cluster network visible through a single CLI command or web interface.
+_Fig: Hubble Relay aggregates flow data from every Cilium agent, making the full cluster network visible through a single CLI command or web interface._
 
 Read More:
 
