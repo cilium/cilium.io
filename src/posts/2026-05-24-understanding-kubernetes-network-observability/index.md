@@ -163,9 +163,8 @@ Hubble is not a silo. The flow data it collects can be exported into the tools y
 Cilium exports a rich set of Prometheus metrics out of the box: packet rates, drop counts, policy verdict distributions, DNS query latency, and HTTP response code breakdowns per service pair. These turn the raw event stream into time-series data you can graph, alert on, and trend over time.
 
 Cilium ships pre-built Grafana dashboards that surface the four golden signals: latency, traffic, errors, and saturation at the service level. You don't need to build them from scratch. Connect your Prometheus instance, import the dashboards, and you have production-grade SLO visibility within minutes.
-Read More:
 
-1. [https://docs.cilium.io/en/stable/observability/metrics/](https://docs.cilium.io/en/stable/observability/metrics/)
+[Read the official Cilium observability metrics documentation](https://docs.cilium.io/en/stable/observability/metrics/)
 
 ## 7\. Reducing Incident Response Time with Network Observability
 
