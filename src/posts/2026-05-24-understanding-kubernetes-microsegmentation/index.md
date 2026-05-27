@@ -217,7 +217,7 @@ Depending on the size of the cluster and the number of workloads running, it wil
 
 ### Cross-Namespace Communication
 
-By default, Kubernetes NetworkPolicy is namespace-scoped. Cilium Use **_CiliumClusterwideNetworkPolicy_**, which allows you to define a single security rule that applies across the entire cluster, regardless of namespace. It’s perfect for enforcing global rules, like ensuring no pod in any namespace can reach a specific sensitive database unless explicitly permitted.
+By default, Kubernetes NetworkPolicy is namespace-scoped. Cilium uses the **_CiliumClusterwideNetworkPolicy_** resource, which allows you to define a single security rule that applies across the entire cluster, regardless of namespace. It’s perfect for enforcing global rules, like ensuring no pod in any namespace can reach a specific sensitive database unless explicitly permitted.
 
 ### Egress Gateways: Bridging the New and the Old
 
