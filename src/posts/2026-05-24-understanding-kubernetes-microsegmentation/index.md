@@ -237,7 +237,7 @@ Cilium helps satisfy audit requirements by enforcing strict segmentation and pro
 
 Tetragon further extends these capabilities by offering visibility into runtime behaviors and system calls, facilitating the enforcement of runtime security policies, and supporting potential work around anomaly detection or streamlined compliance reporting.
 
-[Read More about implementing Cilium for Compliance Use Cases](https://isovalent.com/blog/post/implementing-cilium-for-compliance-use-cases-controlplane-isovalent-whitepaper/)
+[Read the complete Whitepaper on Implementing Cilium for Compliance Use Cases](https://isovalent.com/blog/post/implementing-cilium-for-compliance-use-cases-controlplane-isovalent-whitepaper/)
 
 ## 8\. Summary
 
