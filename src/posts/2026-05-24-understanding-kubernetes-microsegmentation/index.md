@@ -30,6 +30,8 @@ import authors from 'utils/author-data';
 Kubernetes Microsegmentation is the security practice of dividing a cluster into small, isolated segments to limit the blast radius of a potential breach. Kubernetes microsegmentation leverages workload identity, which encompasses metadata such as labels and namespaces, making it possible to define granular security policies that follow the application, regardless of where it is scheduled or what IP it is assigned.
 ![Segmentation Spectrum](./images/segmentation-spectrum.png)
 
+_Figure 1. The Segmentation Spectrum. This diagram outlines three levels of security isolation, moving from broad to granular: Macro (compute regions), Micro (workloads and containers), and Nano (kernel-level processes via eBPF)._
+
 ## 1\. Why traditional firewalls don’t work in cloud native environments
 
 When the first network firewalls appeared in the late 1980s and early 1990s, they served as barriers at the edge, acting as controls between inside and outside networks. That perimeter model worked when most traffic was north–south (entering or leaving the data centre).
@@ -97,6 +99,8 @@ If you have 100 replicas of a frontend pod, they all share the same numeric iden
 Cilium maintains a map across the cluster that links every IP address to its current Numeric Identity. When a packet is sent, Cilium stamps the packet with this identity.
 ![Identity Table](./images/identity-table.png)
 
+_Figure 2. The Cilium Identity Table. This diagram shows how Cilium uses a central Key-Value store to map workload labels to unique numeric identities, sharing this cluster-wide mapping across individual nodes for identity-aware networking._
+
 ### iii) O(1) Efficiency in the eBPF Datapath
 
 The eBPF datapath achieves high-speed enforcement by performing lookups in kernel-level eBPF maps, which function like high-performance hash tables. In legacy systems, as you add more pods, the firewall has to check more rules (this is known as O(n) complexity). With Cilium and eBPF, security enforcement happens in constant time, or O(1).
@@ -109,7 +113,10 @@ Instead of scanning complex lists of firewall rules, the datapath consults a Pol
 
 **Packet Marking**
 For cross-node traffic, the source identity is often embedded directly into the packet header (using VXLAN or Geneve metadata) so that the receiving node doesn’t have to resolve it.
+
 ![Packet Marking](./images/packet-marking.png)
+
+_Figure 3. Identity-Based Policy Interface in Hubble UI. This dashboard visualizes how network rules are constructed and monitored using logical workload identities._
 
 ## 4\. Kubernetes vs Cilium Network Policies
 
@@ -119,7 +126,7 @@ Kubernetes Network Policies are application-centric constructs for defining netw
 
 We can define network security policies at layers 3 and 4 of the OSI model, i.e., IP, TCP, UDP, and SCTP. Although the network policy specification is part of Kubernetes, the implementation is handled by a Container Network Interface (CNI); therefore, using a CNI that supports network policies is imperative.
 
-Read Me: [https://isovalent.com/blog/post/intro-to-cilium-network-policies/](https://isovalent.com/blog/post/intro-to-cilium-network-policies/)
+[Read More about Cilium Network Policies](https://isovalent.com/blog/post/intro-to-cilium-network-policies/)
 
 ### The Layer 4 Limitation
 
@@ -150,7 +157,11 @@ Kubernetes Native Network policy only supports IP, TCP, UDP, and SCTP protocols.
 | Observability     |      Only "Allow/Deny" logs.      | Deep visibility into API paths, headers, and status codes. |
 | Scope             |          Namespace-only.          |                Namespace and Cluster-wide.                 |
 
+_Table 1: Kubernetes Native Network Policies vs Cilium Network Policies._
+
 ![Native Policies Vs Cilium Policies](./images/native-vs-cilium-policies.png)
+
+_Figure 4. Kubernetes vs. Cilium Network Policies. This Venn diagram compares standard Kubernetes network policies with Cilium's extended capabilities._
 
 ## 5\. Implementing a "Default Deny" Strategy
 
@@ -166,7 +177,10 @@ Visualizes exactly which services are talking to each other.
 Audit every connection attempt, including metadata like which labels were used and which protocol was detected.
 **Identify Shadow Traffic**
 Discover forgotten connections like a legacy monitoring agent or an external API call that would be broken by a blind security policy.
+
 ![shadow Traffic](./images/shadow-traffic.png)
+
+_Figure 5. Network Policy Visualization and Flow Auditing in Hubble UI. This dashboard provides a unified interface for authoring and monitoring security rules._
 
 ### Phase 2: Refine Your Labels
 
@@ -194,10 +208,8 @@ When you deploy a policy in Audit Mode, Cilium will log what would have been dro
 
 Once you are confident in your rules, you move to true Microsegmentation. At this stage, any packet that doesn't match an "Allow" rule is silently dropped by the eBPF datapath. This ensures that even if a new, malicious process starts in a Pod, it has nowhere to go.
 
-Read More:
-
-1. [https://isovalent.com/blog/post/kubernetes-network-policies-ebook/](https://isovalent.com/blog/post/kubernetes-network-policies-ebook/)
-2. [https://docs.cilium.io/en/stable/security/policy/intro/](https://docs.cilium.io/en/stable/security/policy/intro/)
+1. [Read Kubernetes Network Policies Comprehensive Guide](https://isovalent.com/blog/post/kubernetes-network-policies-ebook/)
+2. [Read about Cilium Network Policies & Enforcement Modes](https://docs.cilium.io/en/stable/security/policy/intro/)
 
 ## 6\. Advanced Microsegmentation Architectures
 
@@ -225,7 +237,7 @@ Cilium helps satisfy audit requirements by enforcing strict segmentation and pro
 
 Tetragon further extends these capabilities by offering visibility into runtime behaviors and system calls, facilitating the enforcement of runtime security policies, and supporting potential work around anomaly detection or streamlined compliance reporting.
 
-Read More: [https://isovalent.com/blog/post/implementing-cilium-for-compliance-use-cases-controlplane-isovalent-whitepaper/](https://isovalent.com/blog/post/implementing-cilium-for-compliance-use-cases-controlplane-isovalent-whitepaper/)
+[Read More about implementing Cilium for Compliance Use Cases](https://isovalent.com/blog/post/implementing-cilium-for-compliance-use-cases-controlplane-isovalent-whitepaper/)
 
 ## 8\. Summary
 
