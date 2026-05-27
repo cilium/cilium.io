@@ -92,7 +92,7 @@ To keep the network fast, Cilium’s control plane translates complex strings of
 **Assignment of Numeric Identity:**
 The local Cilium agent collects the pod's labels upon creation. These security-relevant labels are sorted and hashed, and the Cilium control plane assigns a globally synchronized Numeric Identity to that unique label footprint.
 
-**Grouping**
+**Grouping:**
 If you have 100 replicas of a frontend pod, they all share the same numeric identity; that is to say, all pods sharing the same security-relevant labels receive the same numeric identity.
 
 **The Identity Table**
