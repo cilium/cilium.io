@@ -111,7 +111,7 @@ When a packet enters or leaves a pod, the eBPF program retrieves the source iden
 **Policy Verification:**
 Instead of scanning complex lists of firewall rules, the datapath consults a Policy Map. A combination of source identity and destination identity is used as a key.
 
-**Packet Marking**
+**Packet Marking:**
 For cross-node traffic, the source identity is often embedded directly into the packet header (using VXLAN or Geneve metadata) so that the receiving node doesn’t have to resolve it.
 
 ![Packet Marking](./images/packet-marking.png)
