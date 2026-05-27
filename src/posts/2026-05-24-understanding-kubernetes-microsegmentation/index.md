@@ -152,7 +152,7 @@ Kubernetes Native Network policy only supports IP, TCP, UDP, and SCTP protocols.
 | Feature           |     Kubernetes Network Policy     |                   Cilium Network Policy                    |
 | ----------------- | :-------------------------------: | :--------------------------------------------------------: |
 | Enforcement Layer |        L3 / L4 (IP & Port)        |                    L3, L4, and L7 (API)                    |
-| Protocol Support  |          TCP, UDP, SCTP           |                   HTTP, gRPC, DNS, Go-T3                   |
+| Protocol Support  |          TCP, UDP, SCTP           |                   HTTP, gRPC, DNS                   |
 | Granularity       | All traffic on a port is allowed. |        Only specific API methods/paths are allowed.        |
 | Observability     |      Only "Allow/Deny" logs.      | Deep visibility into API paths, headers, and status codes. |
 | Scope             |          Namespace-only.          |                Namespace and Cluster-wide.                 |
