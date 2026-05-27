@@ -38,9 +38,9 @@ Answering that requires a fundamentally different kind of observability tool, on
 
 ![Monolith VS Microservice](./images/monolith-vs-microservice.png)
 
-_Fig: In a monolith, one log file is enough. In Kubernetes, a 404 can originate anywhere in the call chain. Traditional tools give you IPs, not service names._
+_Fig 1: In a monolith, one log file is enough. In Kubernetes, a 404 can originate anywhere in the call chain. Traditional tools give you IPs, not service names._
 
-[Read the Introduction to Network Observabilityw with Hubble](https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/](https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/)
+[Read the Introduction to Network Observability with Hubble](https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/)
 
 ## 2\. Three Layers of Kubernetes Network Observability
 
@@ -54,19 +54,20 @@ In a Kubernetes cluster, this layer alone is nearly useless without enrichment. 
 ### L7 \- Application Visibility
 
 Layer 7 is where observability gets genuinely useful for debugging. Instead of knowing that an application on port 80 is talking to something else on port 80, you can see the HTTP method (GET, POST, PUT), the URL path (/api/v1/orders), the gRPC service and method, and critically, HTTP response codes.
-This is the difference between "_packets are moving between these two pods_" and "*the frontend is calling POST /v1/checkout on cart-service and getting 503 Service Unavailable back at 40 requests per second.*" One of those sentences lets you page the right team immediately.
+This is the difference between "_packets are moving between these two pods_" and "_the frontend is calling POST /v1/checkout on cart-service and getting 503 Service Unavailable back at 40 requests per second._" One of those sentences lets you page the right team immediately.
 
 ### Identity Enrichment
 
 This is Cilium's key differentiator. Every single network flow at both L3/L4 and L7 is annotated with Kubernetes-native identity metadata: the Pod name, Namespace, Deployment label selectors, Node, and the Cilium security identity assigned to that workload. This is what makes Hubble actually readable in a large cluster
 
 ![Identity Enrichment](./images/identity-enrichment.png)
+_Fig 2: Cilium’s key differentiator is identity-aware observability. Every L3/L4 and L7 flow is enriched with Kubernetes-native context: pod, namespace, labels, node, and Cilium security identity. That turns Hubble from a packet log into an understandable map of workload behavior across a large cluster._
 
 That is actionable. You understand the conversation in terms of the services your team actually owns IP addresses become secondary.
 
 True Kubernetes network observability is a stack. All three layers are necessary; Cilium provides them from a single eBPF-based data plane.
 
-ReadMore:[https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/](https://cilium.io/blog/2024/08/14/hubble-for-network-security-and-observability-part-1/)
+[Read about Cilium Identities](https://docs.cilium.io/en/stable/security/network/identity/)
 
 ## 3\. How does eBPF enable Kernel-level Network Visibility
 
@@ -91,15 +92,14 @@ eBPF-based visibility is ground-truth accurate. If a packet is dropped, the kern
 Traditional monitoring often relies on sampling, capturing 1 in N packets to keep overhead manageable. This works for steady-state analysis but falls apart during the exact moments you care about most: traffic spikes, brief error storms, and intermittent policy violations.
 
 eBPF programs run with near-zero overhead, which means Cilium can observe every single network event in a cluster without sampling, giving you an accurate record during an incident, not a statistical approximation.
-![Sidecar VS eBPF](./images/sidecar-vs-ebpf.png)
-
-Fig: Sidecars intercept and redirect traffic before passing it on, adding latency hops. eBPF instruments traffic inside the kernel at the moment; it's processed with no redirection or application changes needed.
+![Kernel-level network visibility with eBPF](./images/ebpf.png)
+_Fig 3: Cilium eBPF programs observe packet handling inside the Linux kernel, enrich each flow with Kubernetes identity and policy context, and export it to Hubble without injecting sidecars or redirecting traffic._
 
 [Read about the difference removing the sidecars for eBPF makes for a service mesh](https://isovalent.com/blog/post/2021-12-08-ebpf-servicemesh)
 
 ## 4\. Real-time Network Observability with Hubble for Cilium
 
-Hubble is the observability component of Cilium. It sits directly on top of the eBPF datapath and gives you three interfaces into the same stream of network truth: a service map, a command-line interface.
+Hubble is the observability component of Cilium. Hubble sits directly on top of the eBPF datapath and gives you three interfaces into the same stream of network truth: a graphical service map (Hubble UI) for visualizing real-time traffic flows between services, a command-line interface (Hubble CLI) for querying and filtering network flows at the node or cluster level, and a Prometheus metrics endpoint for integrating network observability data into your existing monitoring and alerting stack.
 
 Each of them aligns with the Kubernetes networking context; they know about pods, namespaces, labels, and policies, which is what separates Hubble from anything you could approximate with raw packet capture.
 
@@ -107,7 +107,12 @@ Hubble can operate at the node level via the local Hubble API on each Cilium age
 
 ### Service Map & Hubble UI
 
-Hubble UI gives platform teams a graphical layer over the same flow data. The service map is a live, automatically generated graph of every service-to-service communication in your cluster, a dependency graph. The service map is a visual component of Hubble UI. Hubble observes actual traffic and draws connections as they happen, annotating each edge with request rates and error percentages. In practice, this is useful for two things: understanding what you actually built (the real dependency graph, not the one from last quarter's architecture diagram) and spotting unexpected relationships of services talking to things they shouldn't.
+Hubble UI gives platform teams a graphical layer over the same flow data. The service map is a live, automatically generated graph of every service-to-service communication in your cluster, a dependency graph. The service map is a visual component of Hubble UI.
+Hubble observes actual traffic and draws connections as they happen, annotating each edge with request rates and error percentages.
+In practice, this is useful for two things: understanding what you actually built (the real dependency graph, not the one from last quarter's architecture diagram) and spotting unexpected relationships of services talking to things they shouldn't.
+
+![Service Map & Hubble UI](./images/hubble_sw_service_map.png)
+_Fig 4: Hubble UI displaying the Service Map and underlying granular flow data. The upper panel shows the Service Map, a live, automatically generated dependency graph of service-to-service communication._
 
 ### The Hubble CLI
 
@@ -115,13 +120,11 @@ It is a command-line interface for interacting with Hubble, think of Hubble obse
 
 You can also trace DNS queries, filter to only HTTP traffic for a specific pod, or watch policy verdicts as policies are applied.
 ![Hubble CLI](./images/hubble-cli.png)
-_Fig: Hubble Relay aggregates flow data from every Cilium agent, making the full cluster network visible through a single CLI command or web interface._
+_Fig 5: Hubble Relay aggregates flow data from every Cilium agent, making the full cluster network visible through a single CLI command or web interface._
 
-Read More:
-
-1. [https://docs.cilium.io/en/stable/observability/hubble/setup/](https://docs.cilium.io/en/stable/observability/hubble/setup/)
-2. [https://cilium.io/blog/2024/08/19/hubble-for-network-security-and-observability-part-2/](https://cilium.io/blog/2024/08/19/hubble-for-network-security-and-observability-part-2/)
-3. [https://cilium.io/blog/2019/11/19/announcing-hubble/](https://cilium.io/blog/2019/11/19/announcing-hubble/)
+1. [Read about setting up Hubble Observability](https://docs.cilium.io/en/stable/observability/hubble/setup/)
+2. [Read about Hubble for Network Observability & Security](https://cilium.io/blog/2024/08/19/hubble-for-network-security-and-observability-part-2/)
+3. [Read about Hubble](https://cilium.io/blog/2019/11/19/announcing-hubble/)
 
 ## 5\. Troubleshooting Day 2 Problems
 
@@ -147,12 +150,10 @@ Without L7 visibility, you can't tell. With Hubble, you can observe the HTTP res
 Network transit time within a cluster is typically sub-millisecond. If Hubble shows 220 ms HTTP latency on a specific service-to-service call, the latency is inside the destination service's code, not the network. That's the conversation you need to have with the backend team, armed with data instead of speculation.
 ![Decision Tree](./images/decision-tree.png)
 
-_Fig: A Hubble-based diagnostic decision tree. Each branch maps directly to a Hubble observing filter flag._
+_Fig 6: A Hubble-based diagnostic decision tree. Each branch maps directly to a Hubble observing filter flag._
 
-Read More:
-
-1. [https://docs.cilium.io/en/stable/observability/hubble/hubble-cli/](https://docs.cilium.io/en/stable/observability/hubble/hubble-cli/)
-2. [https://cilium.io/blog/2024/08/27/hubble-for-network-security-and-observability-part-3/](https://cilium.io/blog/2024/08/27/hubble-for-network-security-and-observability-part-3/)
+1. [Read about Hubble CLI](https://docs.cilium.io/en/stable/observability/hubble/hubble-cli/)
+2. [Read about Hubble Network Security and Observability](https://cilium.io/blog/2024/08/27/hubble-for-network-security-and-observability-part-3/)
 
 ## 6\. Integrating with Your Observability Stack
 
