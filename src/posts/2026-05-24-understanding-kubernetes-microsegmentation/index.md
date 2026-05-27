@@ -90,7 +90,7 @@ Cilium doesn't care what the IP address is. If a Pod has the label role: fronten
 To keep the network fast, Cilium’s control plane translates complex strings of labels into a simple Numeric Identity (e.g., role: frontend might become ID 501).
 
 **Assignment of Numeric Identity**
-Cilium agent collects labels from pods once they are created, and a hash is computed by sorting, concatenating, and hashing to produce a unique fingerprint.
+The local Cilium agent collects the pod's labels upon creation. These security-relevant labels are sorted and hashed, and the Cilium control plane assigns a globally synchronized Numeric Identity to that unique label footprint.
 
 **Grouping**
 If you have 100 replicas of a frontend pod, they all share the same numeric identity; that is to say, all pods sharing the same security-relevant labels receive the same numeric identity.
