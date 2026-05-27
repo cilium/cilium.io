@@ -21,6 +21,8 @@ tags:
   - Hubble
 ---
 
+import authors from 'utils/author-data';
+
 # Understanding Kubernetes Microsegmentation
 
 ## Introduction
