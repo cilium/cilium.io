@@ -128,7 +128,7 @@ We can define network security policies at layers 3 and 4 of the OSI model, i.e.
 
 [Read More about Cilium Network Policies](https://isovalent.com/blog/post/intro-to-cilium-network-policies/)
 
-### The Layer 4 Limitation
+### The Layer 3/4 Limitation
 
 Native Kubernetes Network Policies operate at Layer 3 (IP) and Layer 4 (Port/Protocol). This means you can write a rule that says:
 "_Allow the Frontend Pod to talk to the Carts Service on Port 8080/TCP_."
