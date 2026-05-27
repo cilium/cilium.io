@@ -95,7 +95,7 @@ The local Cilium agent collects the pod's labels upon creation. These security-r
 **Grouping:**
 If you have 100 replicas of a frontend pod, they all share the same numeric identity; that is to say, all pods sharing the same security-relevant labels receive the same numeric identity.
 
-**The Identity Table**
+**The Identity Table:**
 Cilium maintains a map across the cluster that links every IP address to its current Numeric Identity. When a packet is sent, Cilium stamps the packet with this identity.
 ![Identity Table](./images/identity-table.png)
 
