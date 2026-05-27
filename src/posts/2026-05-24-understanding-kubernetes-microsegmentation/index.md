@@ -55,7 +55,7 @@ The "_What_" Matters; Security teams need to define rules like "_The Payment Ser
 ### iii) Scalability and Performance
 
 Traditional Linux networking relies on iptables to manage IP-based rule chains.
-iptables checks rules sequentially. In a cluster with thousands of Pods, an IP-based rule list can grow so long that network latency increases significantly because the system has to "read" through thousands of lines for every single packet. Cilium uses eBPF to move away from long chains of iptables rules towards efficient hashmaps. Instead of checking IP addresses, it checks Security Identities assigned to workloads, which allows for a near-instant lookup, regardless of the number of pods.
+iptables checks rules sequentially. In a cluster with thousands of Pods, an IP-based rule list can grow so long that network latency increases significantly because the system has to "read" through thousands of lines for every single packet. Cilium uses eBPF to replace sequential iptables rule evaluations with high-performance BPF hash maps. When a packet arrives, eBPF instantly maps the source and destination IP addresses to their corresponding Numeric Security Identities using a cluster-wide cache, then executes a constant-time $O(1)$ policy check.
 
 ## 2\. What is Kubernetes Microsegmentation?
 
