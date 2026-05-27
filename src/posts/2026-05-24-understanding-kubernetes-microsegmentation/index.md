@@ -108,7 +108,7 @@ The eBPF datapath achieves high-speed enforcement by performing lookups in kerne
 **Identity Lookup:**
 When a packet enters or leaves a pod, the eBPF program retrieves the source identity from a local eBPF Endpoint Map. It simply looks at the numeric ID stamped on the packet and checks it against a HashMap.
 
-**Policy Verification**
+**Policy Verification:**
 Instead of scanning complex lists of firewall rules, the datapath consults a Policy Map. A combination of source identity and destination identity is used as a key.
 
 **Packet Marking**
