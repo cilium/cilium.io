@@ -139,7 +139,7 @@ At Layer 4, the network is blind to the actual intent of the traffic.
 ### Layer 7 API-Aware Segmentation
 
 Cilium extends the Kubernetes network policy model by adding Layer 7 (Application Layer) visibility. This allows you to define policies based on the specific API calls being made.
-Instead of just opening a port, you can enforce the Principle of The Least Privilege at the API level.
+Instead of just opening a port, you can enforce the Principle of Least Privilege at the API level.
 
 Example of policy granularity
 HTTP: Allow GET /public/ but block POST /admin/.
