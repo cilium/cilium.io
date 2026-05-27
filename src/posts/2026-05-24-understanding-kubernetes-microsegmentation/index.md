@@ -171,12 +171,14 @@ The default deny strategy is an aggressive network policy strategy that involves
 
 Before you can restrict traffic, you must first identify the existing traffic. Hubble is Cilium's observability layer, providing a real-time service map of your cluster.
 
-**Service Map**
+**Service Map:**
 Visualizes exactly which services are talking to each other.
-**Flow Logs**
+
+**Flow Logs:**
 Audit every connection attempt, including metadata like which labels were used and which protocol was detected.
-**Identify Shadow Traffic**
-Discover forgotten connections like a legacy monitoring agent or an external API call that would be broken by a blind security policy.
+
+**Identify Shadow Traffic:**
+Discover forgotten connections like a legacy monitoring agent or an external API call that would be broken by a new security policy.
 
 ![shadow Traffic](./images/shadow-traffic.png)
 
