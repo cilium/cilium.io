@@ -105,7 +105,7 @@ _Figure 2. The Cilium Identity Table. This diagram shows how Cilium uses a centr
 
 The eBPF datapath achieves high-speed enforcement by performing lookups in kernel-level eBPF maps, which function like high-performance hash tables. In legacy systems, as you add more pods, the firewall has to check more rules (this is known as O(n) complexity). With Cilium and eBPF, security enforcement happens in constant time, or O(1).
 
-**Identity Lookup**
+**Identity Lookup:**
 When a packet enters or leaves a pod, the eBPF program retrieves the source identity from a local eBPF Endpoint Map. It simply looks at the numeric ID stamped on the packet and checks it against a HashMap.
 
 **Policy Verification**
