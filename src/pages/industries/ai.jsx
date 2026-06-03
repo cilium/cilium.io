@@ -17,6 +17,7 @@ import GresearchOfficeImage from 'images/pages/industries/ai/gresearch-office.jp
 import MeltwaterOfficeImage from 'images/pages/industries/ai/meltwater-office.jpeg';
 import RouterBee from 'images/pages/industries/ai/router-bee.png';
 import EccoOfficeImage from 'images/pages/industries/e-commerce/ecco-office.webp';
+import OpenAILogoImage from 'images/pages/industries/ai/openai-logo.png';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
@@ -105,12 +106,13 @@ const bulletSection5 = {
 
 const aiResouces = [
   {
+    imageSrc: OpenAILogoImage,
+    imageAlt: 'OpenAI logo',
     title: 'OpenAI Uses Cilium as the CNI for Their Kubernetes Clusters',
+    buttonText: 'Read The Case Study',
+    buttonLink: 'https://isovalent.com/blog/post/openai-isovalent-networking-kubernetes-case-study/',
     description:
       'OpenAI uses Cilium as the CNI for their Kubernetes clusters, leveraging its high-performance networking capabilities to support their large-scale AI workloads.',
-    buttonText: 'Read The Case Study',
-    buttonLink:
-      'https://isovalent.com/blog/post/openai-isovalent-networking-kubernetes-case-study/',
   },
   {
     imageSrc: EccoOfficeImage,
