@@ -25,9 +25,9 @@ const Issues = () => {
   const items = data.allHubspotEmail.nodes.filter((item) => item.name.match(/^eCHO news \d{1,3}$/));
 
   items.forEach((item) => {
-    item.year = getYear(Number(item.publishDate));
+    item.year = getYear(item.publishDate);
     item.title = `eCHO News Episode #${item.name.split(' ')[2]}`;
-    item.date = getMonthAndDay(Number(item.publishDate));
+    item.date = getMonthAndDay(item.publishDate);
   });
 
   const getIssues = () =>

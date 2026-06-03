@@ -494,9 +494,14 @@ async function getHubspotEmails({ actions: { createNode }, createContentDigest }
   const getObjects = async () => {
     if (process.env.NODE_ENV === 'production' && process.env.HUBSPOT_ACCESS_TOKEN) {
       let hubspotEmailsData;
+
       try {
+        const searchParams = new URLSearchParams({
+          limit: '100',
+          sort: '-publishDate',
+        });
         const hubspotEmails = await fetch(
-          `https://api.hubapi.com/marketing-emails/v1/emails?limit=150&name__icontains=eCHO+news&orderBy=-publish_date`,
+          `https://api.hubapi.com/marketing/v3/emails?${searchParams}`,
           {
             method: 'GET',
             headers: {
@@ -505,20 +510,31 @@ async function getHubspotEmails({ actions: { createNode }, createContentDigest }
             },
           }
         );
+        if (!hubspotEmails.ok) {
+          throw new Error(`Hubspot API responded with status: ${hubspotEmails.status}`);
+        }
         hubspotEmailsData = await hubspotEmails.json();
       } catch (error) {
-        console.log(error);
         return [];
       }
 
-      return hubspotEmailsData.objects
-        .filter(({ isPublished }) => isPublished !== false)
-        .map(({ name, publishDate, isPublished, publishedUrl }) => ({
-          name,
-          publishDate,
-          isPublished,
-          publishedUrl,
-        }));
+      const emails = hubspotEmailsData.results || [];
+
+      const eCHOemails = emails
+        .filter((email) => {
+          const hasEchoInName = email.name && email.name.toLowerCase().includes('echo news');
+          const isPublished = email.publishDate && email.publishDate !== null;
+          return hasEchoInName && isPublished;
+        })
+        .map((email) => ({
+          name: email.name,
+          publishDate: email.publishDate,
+          isPublished: true,
+          publishedUrl:
+            email.webversion.url || `isovalent-9197153.hs-sites.com/${email.webversion.slug}`,
+        }))
+        .slice(0, 150);
+      return eCHOemails;
     }
 
     return [];
@@ -596,6 +612,10 @@ exports.createSchemaCustomization = ({ actions }) => {
       publishDate: String
       isPublished: Boolean
       publishedUrl: String
+    }
+    
+    type GithubStars implements Node {
+      githubStars: String
     }
   `;
   createTypes(typeDefs);
