@@ -1384,6 +1384,11 @@ zynga: {
         linkUrl: 'https://www.youtube.com/watch?v=wuO4nREXu4Y&t=251s',
         linkTarget: '_blank',
       },
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://isovalent.com/blog/post/openai-isovalent-networking-kubernetes-case-study/',
+        linkTarget: '_blank',
+      },
     ],
   },
   scigility: {
