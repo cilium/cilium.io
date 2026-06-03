@@ -105,6 +105,14 @@ const bulletSection5 = {
 
 const aiResouces = [
   {
+    title: 'OpenAI Uses Cilium as the CNI for Their Kubernetes Clusters',
+    description:
+      'OpenAI uses Cilium as the CNI for their Kubernetes clusters, leveraging its high-performance networking capabilities to support their large-scale AI workloads.',
+    buttonText: 'Read The Case Study',
+    buttonLink:
+      'https://isovalent.com/blog/post/openai-isovalent-networking-kubernetes-case-study/',
+  },
+  {
     imageSrc: EccoOfficeImage,
     imageAlt: 'ecco office building',
     title: 'Transforming Networking with Cilium at Ecco',
