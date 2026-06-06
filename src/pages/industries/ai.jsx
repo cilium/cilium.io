@@ -16,6 +16,7 @@ import BackendOfficeImage from 'images/pages/industries/ai/backed-office.jpeg';
 import GresearchOfficeImage from 'images/pages/industries/ai/gresearch-office.jpg';
 import MeltwaterOfficeImage from 'images/pages/industries/ai/meltwater-office.jpeg';
 import RouterBee from 'images/pages/industries/ai/router-bee.png';
+import OpenaiOfficeImage from 'images/pages/industries/ai/openai-office.jpg';
 import EccoOfficeImage from 'images/pages/industries/e-commerce/ecco-office.webp';
 import MainLayout from 'layouts/main/main';
 
@@ -113,8 +114,17 @@ const aiResouces = [
     description:
       'ECCO Data & AI implemented Cilium, leveraging its eBPF-based capabilities to simplify and enhance networking. The team used Cilium Cluster Mesh to create a single networking layer covering multiple Kubernetes clusters, enabling seamless communication between applications and storage without relying on costly cloud-specific solutions.',
   },
-
   {
+    imageSrc: OpenaiOfficeImage,
+    imageAlt: 'openai office building',
+    title: 'OpenAI Uses Cilium for a Common Networking Foundation for AI Infrastructure',
+    buttonText: 'Read The Case Study',
+    buttonLink:
+      'https://isovalent.com/blog/post/openai-isovalent-networking-kubernetes-case-study/',
+    description:
+      'OpenAI uses Isovalent Networking for Kubernetes, built on Cilium, as a common networking foundation across their AI infrastructure. Cilium provides consistent networking, policy enforcement, and troubleshooting capabilities across their Kubernetes clusters.',
+  },
+{
     title: 'Building the core fabric of accelerated hybrid AI clusters using Cilium',
     description:
       "Backend.ai switched from the Docker's own overlay network driver to Cilium. As a result, they observed significant throughput and latency improvements in specific inter-container networking scenarios, including application proxy to auto-scale and load balance the ML inference traffic at a large scale.",
