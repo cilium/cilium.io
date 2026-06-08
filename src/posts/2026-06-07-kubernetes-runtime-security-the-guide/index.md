@@ -1,7 +1,7 @@
 ---
 path: /blog/2026/06/07/kubernetes-runtime-security-the-guide
 date: 2026-06-07T09:00:00.000Z
-title: 'Kubernetes Runtime security : The Guide'
+title: 'Kubernetes Runtime Security : The Guide'
 isFeatured: false
 ogImage: images/runtime-security.png
 ogSummary: 'A complete guide to Kubernetes runtime security. Learn how to move beyond static scanning to actively defend live workloads, detect zero-day exploits, and monitor real-time system calls.'
