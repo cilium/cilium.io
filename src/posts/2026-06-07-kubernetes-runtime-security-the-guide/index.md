@@ -182,7 +182,7 @@ A reverse shell is a remote access technique where a compromised target machine 
 Tetragon’s ability to correlate process execution and network activity can help to easily detect what is actually initiating those outbound connections.
 
 **Detecting Fileless Execution**
-Most anti-virus scanners and sanitising programs rely on examining files on a disk. Attackers know this, which changes their strategies to fileless malware.
+Most anti-virus scanners and sanitizing programs rely on examining files on a disk. Attackers know this, which changes their strategies to fileless malware.
 Using utilities like memfd_create, attackers can create anonymous files and return the file descriptor that references them. This makes it possible to download payloads/scripts directly into RAM and execute them without writing the file to disk.
 
 Up to that point, the attackers can clearly bypass scanners and anti-virus; the only point to catch them is in the kernel.
