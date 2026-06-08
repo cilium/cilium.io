@@ -1385,7 +1385,7 @@ zynga: {
         linkTarget: '_blank',
       },
       {
-        linkText: 'Watch Interview',
+        linkText: 'Interview',
         linkUrl: 'https://www.youtube.com/watch?v=wuO4nREXu4Y&t=251s',
         linkTarget: '_blank',
       },
