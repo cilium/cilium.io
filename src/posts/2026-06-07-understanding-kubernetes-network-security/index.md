@@ -139,7 +139,7 @@ Rules control the flow of traffic _into_ the workload (Ingress) and _out of_ the
 
 ## Layer 7 Inspection
 
-This capability extends security beyond Layer 3/4 filtering to address the Layer 7 Blindness in Network Policies. It allows for fine-grained, API-aware security (e.g., DNS-aware rules) by enabling policies to inspect the application content. For instance, a policy can allow a _GET /public_ request while explicitly blocking a sensitive _POST /admin/shutdown_ command, strictly enforcing the Principle of Least Privilege.
+This capability extends security beyond Layer 3/4 filtering to address the Layer 7 blindness in network policies. It allows for fine-grained, API-aware security (e.g., DNS-aware rules) by enabling policies to inspect the application content. For instance, a policy can allow a _GET /public_ request while explicitly blocking a sensitive _POST /admin/shutdown_ command, strictly enforcing the Principle of Least Privilege.
 
 [Read More About Cilium Network Policies](https://isovalent.com/blog/post/intro-to-cilium-network-policies/)
 
