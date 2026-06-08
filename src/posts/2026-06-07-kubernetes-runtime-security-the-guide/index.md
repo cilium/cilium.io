@@ -283,7 +283,7 @@ i) Hook Point: The exact location in the Linux kernel where Tetragon will attach
 
 ii) Selectors: The in-kernel BPF filtering logic that determines if the hooked event should be processed or ignored.
 
-iii) Actions: specific response Tetragon executes when an event matches the hook and selectors criteria.
+iii) Actions: The specific response Tetragon executes when an event matches the hook and selectors criteria.
 
 ## **Selector Types**
 
