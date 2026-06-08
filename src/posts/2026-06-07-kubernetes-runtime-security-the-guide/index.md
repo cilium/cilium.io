@@ -33,7 +33,7 @@ This highlights the need for deep visibility into all system calls and processes
 
 ![Aspects of Runtime Security](./images/runtime-security.png)
 
-**\*Figure 1:** Key aspects of Runtime Security that the Cilium ecosystem offers.\*
+_Figure 1: Key aspects of Runtime Security that the Cilium ecosystem offers._
 
 ## **Why Scanned Images Still Need Active Runtime Monitoring**
 
