@@ -1380,7 +1380,7 @@ zynga: {
     text: '<b>OpenAI</b> uses Cilium as the CNI for their Kubernetes clusters',
     links: [
       {
-        linkText: 'Read Case Study',
+        linkText: 'Case Study',
         linkUrl: 'https://isovalent.com/blog/post/openai-isovalent-networking-kubernetes-case-study/',
         linkTarget: '_blank',
       },
