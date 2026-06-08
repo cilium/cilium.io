@@ -212,7 +212,7 @@ Scenario B tells a drastically different story: the web server was exploited to 
 
 ![Process To Network Correlation](./images/process-network-correlation.png)
 
-**\*Figure 5\. Process to Network Correlation.** Tetragon visualizes the exact process ancestry for every network connection, instantly distinguishing legitimate application traffic from suspicious spawned child processes.\*
+_Figure 5. Process to Network Correlation. Tetragon visualizes the exact process ancestry for every network connection, instantly distinguishing legitimate application traffic from suspicious spawned child processes._
 
 ## **Detecting Unexpected Outbound Connections**
 
