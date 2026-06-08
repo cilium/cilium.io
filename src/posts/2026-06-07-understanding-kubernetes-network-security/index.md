@@ -184,7 +184,7 @@ For regulated industries (FinTech, Healthcare), meeting compliance frameworks li
 It's important to have Day 2 operations in mind when laying the groundwork for your software in Day 0 and Day 1, especially for cloud-native technologies. Having the right maintenance tools in place earlier on will help your organization avoid issues in the future.
 Some common challenges during Day 2 operations include having trouble visualizing the performance of your software and difficulty integrating updates. Managing all the moving parts of your software is especially challenging with cloud-native systems such as Kubernetes, as they become increasingly more complex with scale.
 
-# 9\. Summary
+# 8\. Summary
 
 Kubernetes network security works best as a layered model, rather than relying on a single feature or firewall rule. Because workloads are dynamic, short-lived, and constantly moving across nodes, teams need security controls that follow workload identity rather than static IP addresses. A strong approach combines identity-based network policies, microsegmentation, transparent encryption, application-aware controls, observability, and host-level protection. Together, these layers reduce unnecessary access, limit lateral movement, and facilitate the enforcement of the least privilege across the cluster.
 
