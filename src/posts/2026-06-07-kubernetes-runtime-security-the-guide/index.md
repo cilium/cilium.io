@@ -106,7 +106,7 @@ To understand why Cilium Tetragon is so highly regarded for runtime security, yo
 
 ![Kernel Visibility With eBPF](./images/ebpf-kernel-visibility.png)
 
-**\*Figure 3\. Tetragon's eBPF-Based Kernel Visibility.** This diagram demonstrates how Tetragon bypasses user-space limitations by operating directly inside the Linux kernel.\*
+_Figure 3. Tetragon's eBPF-Based Kernel Visibility. This diagram demonstrates how Tetragon bypasses user-space limitations by operating directly inside the Linux kernel._
 
 ## **Kernel is a Zero Ground**
 
