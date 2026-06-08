@@ -242,7 +242,7 @@ Using both together creates a zero-trust architecture that secures both the netw
 
 ![Runtime Network Enforcement](./images/runtime-network-enforcement.png)
 
-**\*Figure 6\. Runtime Network Enforcement.** Tetragon operates at the granular process layer via eBPF to filter system calls and file access, blocking malicious application behaviors even if network-layer policies technically permit the connection.\*
+_Figure 6. Runtime Network Enforcement. Tetragon operates at the granular process layer via eBPF to filter system calls and file access, blocking malicious application behaviors even if network-layer policies technically permit the connection._
 
 1. [Read More About Hyperscaling Security With Isovalent Enterprise](https://isovalent.com/blog/post/hyperscaler-security/)
 2. [Read About Top Tetragon Use Cases (1)](https://isovalent.com/blog/post/top-tetragon-use-cases/)
