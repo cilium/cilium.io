@@ -523,7 +523,7 @@ async function getHubspotEmails({ actions: { createNode }, createContentDigest }
       const eCHOemails = emails
         .filter((email) => {
           const hasEchoInName = email.name && email.name.toLowerCase().includes('echo news');
-          const isPublished = email.publishDate && email.publishDate !== null;
+          const isPublished = email.isPublished && email.state === 'PUBLISHED';
           return hasEchoInName && isPublished;
         })
         .map((email) => ({
