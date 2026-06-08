@@ -60,7 +60,7 @@ Tetragon brings the following capabilities:
 
 ![Tetragon Architecture](./images/tetragon-architecture.png)
 
-**\*Figure 2\. Tetragon Architecture for Real-Time Enforcement.** This diagram illustrates how Tetragon leverages eBPF within the Linux kernel to monitor deep system activities like process execution, file access, and network traffic.\*
+_Figure 2. Tetragon Architecture for Real-Time Enforcement. This diagram illustrates how Tetragon leverages eBPF within the Linux kernel to monitor deep system activities like process execution, file access, and network traffic._
 
 [Read More about Runtime Security](https://isovalent.com/blog/post/what-is-runtime-security/)
 
