@@ -351,7 +351,7 @@ Tetragon’s eBPF visibility does not stop at the container boundary; it extends
 
 ![Tetragon File Integrity Monitoring](./images/tetragon-fim.png)
 
-**\*Figure 10\. File Integrity Monitoring.** File Monitoring with eBPF and Tetragon\*
+_Figure 10. File Integrity Monitoring. File Monitoring with eBPF and Tetragon._
 
 [Read About Top Tetragon Use Cases (2)](https://isovalent.com/blog/post/top-tetragon-use-cases-part-2/)
 
