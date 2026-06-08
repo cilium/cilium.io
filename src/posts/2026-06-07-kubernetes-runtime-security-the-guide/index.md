@@ -154,7 +154,7 @@ It continuously maps raw PIDs, network namespaces, and cgroups to high-level Kub
 
 ![Tetragon Context Enrichment](./images/tetragon-context-enrichment.png)
 
-**\*Figure 4\. Kubernetes Context Enrichment.** This enriched process tree illustrates how Tetragon translates meaningless, low-level kernel events (like raw PIDs) into actionable security insights mapped directly to specific Kubernetes resources.\*
+_Figure 4. Kubernetes Context Enrichment. This enriched process tree illustrates how Tetragon translates meaningless, low-level kernel events (like raw PIDs) into actionable security insights mapped directly to specific Kubernetes resources._
 
 [Read More About Tetragon Events](https://tetragon.io/docs/concepts/events/)
 
