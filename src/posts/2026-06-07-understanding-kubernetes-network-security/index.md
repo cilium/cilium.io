@@ -32,7 +32,7 @@ Kubernetes network security is transitioning from IP/port-based rules to intent-
 
 ![Cilium Node Agent](./images/cilium-node-agent.png)
 
-**\*Figure 1:** Cilium Agent node-level architecture translating Kubernetes network policies and identities into eBPF enforcement rules for pod traffic.\*
+_Figure 1: Cilium Agent node-level architecture translating Kubernetes network policies and identities into eBPF enforcement rules for pod traffic._
 
 ## Network Attack Surfaces
 
@@ -70,7 +70,7 @@ The Linux kernel is the primary handler for all networking traffic. eBPF allows 
 
 ![Runtime Observability](./images/runtime-observability.png)
 
-**\*Figure 2:** Runtime observability interface correlating container process trees with specific network connection events.\*
+_Figure 2: Runtime observability interface correlating container process trees with specific network connection events._
 
 ## Cilium Network Policies and Layer 7
 
@@ -78,7 +78,7 @@ Cilium leverages eBPF to extend basic Layer 3/4 Kubernetes Network Policies to L
 
 ![Network Policies in OSI Layers ](./images/osi-layers.png)
 
-**\*Figure 3:** Comparison of L3, L4, and L7 network policies, illustrating Cilium's ability to enforce fine-grained, API-aware security controls.\*
+_Figure 3: Comparison of L3, L4, and L7 network policies, illustrating Cilium's ability to enforce fine-grained, API-aware security controls._
 
 # 4\. Pillars of Kubernetes Network Security
 
@@ -86,7 +86,7 @@ Kubernetes network security is strongest when it is treated as a layered model, 
 
 ![Core Networking Layers](./images/core-networking-layers.png)
 
-**\*Figure 4:** Core networking, security, and observability layers unifying multiple Kubernetes clusters into a single, seamless environment.\*
+_Figure 4: Core networking, security, and observability layers unifying multiple Kubernetes clusters into a single, seamless environment._
 
 ## Identity-Based Access Control
 
@@ -152,7 +152,7 @@ Kubernetes lacks native pod-to-pod encryption, often requiring complex service m
 
 ![mTLS Encryption](./images/m-tls-encryption.png)
 
-**\*Figure 5:** Transparent mTLS encryption and identity management for pod-to-pod communication powered by Cilium and eBPF.\*
+_Figure 5: Transparent mTLS encryption and identity management for pod-to-pod communication powered by Cilium and eBPF._
 
 **Host-Layer Segmentation**
 Security strategies must also extend to the Node itself to prevent attackers who compromise the host from bypassing pod-level controls. **Cilium Host Policies** apply the same identity-aware security logic used for applications to secure the host network namespace, segmenting control plane traffic and SSH access.
@@ -165,7 +165,7 @@ Day-2 operations can be succinctly characterized as 'business as usual' tasks, c
 
 ![IT Operation Cycle](./images/it-ops.png)
 
-**\*Figure 6:** The IT operational lifecycle illustrating the progression from initial Day 0 planning to continuous Day 2 operations and maintenance.\*
+_Figure 6: The IT operational lifecycle illustrating the progression from initial Day 0 planning to continuous Day 2 operations and maintenance._
 
 ## Hubble for Network Observability
 
@@ -173,7 +173,7 @@ As the observability layer built on eBPF, Hubble provides deep, real-time insigh
 
 ![Hubble UI Service Maps](./images/hubble.png)
 
-**\*Figure 7:** Hubble Service Map providing real-time, identity-aware visualization of Kubernetes network flows.\*
+_Figure 7: Hubble Service Map providing real-time, identity-aware visualization of Kubernetes network flows._
 
 ## Auditing and Compliance
 
