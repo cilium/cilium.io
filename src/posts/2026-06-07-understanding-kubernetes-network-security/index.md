@@ -127,7 +127,7 @@ A NetworkPolicy is a Kubernetes object, and its rule structure (the "anatomy") c
 
 ## Subject Selectors and Identity
 
-Cilium Network Policies shift from volatile IP addresses to Identity-Based Security. Policies use Kubernetes metadata and labels known as Subject Selectors to define the enforcement point for both source and destination workloads (e.g., _role: frontend_ talking to _role: backend_). This logical abstraction translates into a simple numeric identity within the eBPF data path, enabling O(1) high-speed policy enforcement regardless of cluster scale.
+Cilium Network Policies shift from volatile IP addresses to Identity-Based Security. Policies use Kubernetes metadata and labels known as Subject Selectors to define the enforcement point for both source and destination workloads (e.g., _role: frontend_ talking to _role: backend_). This logical abstraction is pre-computed by the control plane into a single, cluster-wide Numeric Security Identity ($O(1)$ lookup complexity), allowing the eBPF kernel maps to execute high-speed packet filtering instantly.
 
 ## Default Deny Posture
 
