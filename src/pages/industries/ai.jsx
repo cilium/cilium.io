@@ -16,6 +16,7 @@ import BackendOfficeImage from 'images/pages/industries/ai/backed-office.jpeg';
 import GresearchOfficeImage from 'images/pages/industries/ai/gresearch-office.jpg';
 import MeltwaterOfficeImage from 'images/pages/industries/ai/meltwater-office.jpeg';
 import RouterBee from 'images/pages/industries/ai/router-bee.png';
+import OpenaiOfficeImage from 'images/pages/industries/ai/openai-office.jpg';
 import EccoOfficeImage from 'images/pages/industries/e-commerce/ecco-office.webp';
 import MainLayout from 'layouts/main/main';
 
@@ -42,16 +43,16 @@ const eccoTestimonial = {
   CTAtext: 'Watch The Talk',
 };
 
-const ascendTestimonial = {
-  logo: 'ascend',
+const openaiTestimonial = {
+  logo: 'openai',
   description:
-    'Ascend.io uses Cilium Transparent Encryption to support their use of Apache Spark, the analytics engine for large-scale data processing.',
+    'OpenAI uses Isovalent Networking for Kubernetes, built on Cilium, as a common networking foundation across their AI infrastructure.',
   quotedText:
-    'Spark was the other reason that Cilium became a killer feature that we needed to roll out across every cloud. Spark is a great tool, but sometimes their built in encryption will fail at random. Statistically, at some point it will crash so if you’re dealing with a 12 hour job, it’s gonna fail on hour 11 and that is a terrible thing to try to explain to the customer. Cilium with IPsec doesn’t have that problem. Why have Spark be doing encryption when what we really want Spark to be doing is processing data. We chose to have a reasonable isolation of priorities and responsibilities and have Spark be focused on data processing and have the network layer that is responsible for encryption.',
+    'Cilium allows my team to move quickly working with GPU capacity in an extremely competitive market where bringing forward launches or compute by a day or week can have profound implications on the business. Having a single kube-native networking control plane lets us easily meet compliance or security requirements in a dynamically changing environment where agentic workflows have accelerated the rate of change using the full tooling, programmability and power of the Kubernetes ecosystem.',
   withPerson: true,
-  name: 'Joe Stevens',
-  role: 'Member of the Technical Staff, Ascend.',
-  url: 'https://www.cncf.io/case-studies/ascend/',
+  name: 'Fangyuan Li',
+  role: 'Fleet GPU Expansions tech lead, OpenAI',
+  url: 'https://isovalent.com/blog/post/openai-isovalent-networking-kubernetes-case-study/',
   CTAtext: 'Read The Case Study',
 };
 
@@ -113,8 +114,17 @@ const aiResouces = [
     description:
       'ECCO Data & AI implemented Cilium, leveraging its eBPF-based capabilities to simplify and enhance networking. The team used Cilium Cluster Mesh to create a single networking layer covering multiple Kubernetes clusters, enabling seamless communication between applications and storage without relying on costly cloud-specific solutions.',
   },
-
   {
+    imageSrc: OpenaiOfficeImage,
+    imageAlt: 'openai office building',
+    title: 'OpenAI Uses Cilium for a Common Networking Foundation for AI Infrastructure',
+    buttonText: 'Read The Case Study',
+    buttonLink:
+      'https://isovalent.com/blog/post/openai-isovalent-networking-kubernetes-case-study/',
+    description:
+      'OpenAI uses Isovalent Networking for Kubernetes, built on Cilium, as a common networking foundation across their AI infrastructure. Cilium provides consistent networking, policy enforcement, and troubleshooting capabilities across their Kubernetes clusters.',
+  },
+{
     title: 'Building the core fabric of accelerated hybrid AI clusters using Cilium',
     description:
       "Backend.ai switched from the Docker's own overlay network driver to Cilium. As a result, they observed significant throughput and latency improvements in specific inter-container networking scenarios, including application proxy to auto-scale and load balance the ML inference traffic at a large scale.",
@@ -168,7 +178,7 @@ const MediaEntertainmentPage = () => (
     <Testimonial {...eccoTestimonial} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection2} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection3} className="mt-10 md:mt-20 lg:mt-32" />
-    <Testimonial {...ascendTestimonial} className="my-10 md:my-20 lg:my-32" />
+    <Testimonial {...openaiTestimonial} className="my-10 md:my-20 lg:my-32" />
     <BulletSection {...bulletSection4} className="mt-10 md:mt-20 lg:mt-32" />
     <BulletSection {...bulletSection5} className="mt-10 px-10 md:mt-20 lg:mt-32" />
     <FeaturedTalks talks={aiTalks} className="mt-10" />

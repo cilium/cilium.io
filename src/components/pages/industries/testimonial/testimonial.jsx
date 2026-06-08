@@ -35,6 +35,7 @@ import UtmostLogo from 'icons/logo-utmost.inline.svg';
 import QuoteIcon from 'icons/quote.inline.svg';
 import SicrediLogo from 'icons/sicredi.inline.svg';
 import Wso2Logo from 'icons/wso2.inline.svg';
+import OpenaiLogo from 'components/shared/user-community/images/openai.inline.svg';
 
 const logos = {
   bell: BellLogo,
@@ -67,6 +68,7 @@ const logos = {
   trip: TripLogo,
   gdata: GDataLogo,
   esnet: EsnetLogo,
+  openai: OpenaiLogo,
 };
 
 const AdopterTestimonial = ({
