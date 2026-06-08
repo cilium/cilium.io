@@ -308,7 +308,7 @@ Once an event matches the hook and passes the selector filters, Tetragon execute
 
 ![Tetragon Hook Points](./images/tetragon-hook-points.png)
 
-**\*Figure 8:** Tetragon hook points across the Linux kernel file I/O and network execution paths\*
+_Figure 8: Tetragon hook points across the Linux kernel file I/O and network execution paths._
 
 [Read About How to Use Tetragon Without Cilium](https://isovalent.com/blog/post/can-i-use-tetragon-without-cilium-yes/)
 
