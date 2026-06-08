@@ -41,7 +41,7 @@ A clean container scan is a green light, not a lifetime guarantee. Relying solel
 
 - Zero-Day Vulnerabilities: An image scan only flags vulnerabilities that are already cataloged in public CVE databases. It cannot protect against zero-day exploits or vulnerabilities that exist in your running code but have not yet been discovered by the security community.
 - Configuration Drift and Runtime Injections: Even if an image is perfectly secure, the surrounding configuration can change. Attackers can exploit exposed Kubernetes APIs or environment variables to inject malicious payloads, modify binaries, or execute unauthorized code directly into memory at runtime.
-- Inside Threats and Credential Theft: If an attacker steals valid credentials or compromises a trusted third-party dependency (a supply chain attack), they can bypass perimeter checks entirely. In this case, without runtime monitoring, these events can’t be spotted and mitigated.
+- Insider Threats and Credential Theft: If an attacker steals valid credentials or compromises a trusted third-party dependency (a supply chain attack), they can bypass perimeter checks entirely. In this case, without runtime monitoring, these events can’t be spotted and mitigated.
 
 ## **Cilium Tetragon**
 
