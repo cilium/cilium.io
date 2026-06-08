@@ -157,7 +157,7 @@ Kubernetes lacks native pod-to-pod encryption, often requiring complex service m
 **Host-Layer Segmentation**
 Security strategies must also extend to the Node itself to prevent attackers who compromise the host from bypassing pod-level controls. **Cilium Host Policies** apply the same identity-aware security logic used for applications to secure the host network namespace, segmenting control plane traffic and SSH access.
 
-# 8\. Day 2 Operations: Observability, Auditing, and Compliance
+# 7\. Day 2 Operations: Observability, Auditing, and Compliance
 
 Day 2 operations represent the ongoing, post-deployment phase of the IT lifecycle, focused on managing, monitoring, and optimizing systems already in production. Day 2 Operations include the longest operational phase after software has been deployed and operationalized.
 
