@@ -112,7 +112,7 @@ _Figure 3. Tetragon's eBPF-Based Kernel Visibility. This diagram demonstrates ho
 
 In any Linux-based system (which includes virtually all Kubernetes worker nodes), the kernel is the zero ground. Applications and containers cannot access the network, read a file, or start a new process on their own. They must politely ask the kernel to do it for them via a System Call (syscall).
 
-Because every single action must pass through the kernel, it is the ideal place for security enforcement. If a security tool lives in user-space, a compromised container with root privileges can blind, bypass, or kill the tool. But when security is embedded in the kernel via eBPF, it is effectively invisible and untouchable to the workloads running above it. Tetragon deploys eBPF programs as sensors, observing the entire system from a restricted vantage point.
+Because every single action must pass through the kernel, it is the ideal place for security enforcement. If a security tool lives in user-space, a compromised container with root privileges can blind, bypass, or kill the tool. But when security is embedded in the kernel via eBPF, it is effectively invisible and untouchable to the workloads running above it. Tetragon deploys eBPF programs as sensors, observing the entire system from a privileged vantage point.
 
 ## **Probes**
 
