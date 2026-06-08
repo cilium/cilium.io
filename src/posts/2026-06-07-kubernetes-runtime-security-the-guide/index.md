@@ -260,7 +260,7 @@ When a pod is compromised, the attacker's immediate goal is to mutate their curr
 
 ![Kubernetes Privilege Escalation](./images/kubernetes-privilege-escalation.png)
 
-**\*Figure 7\. Kubernetes Privilege Escalation.** This diagram illustrates how an attacker exploits a compromised, non-secured pod to execute malicious commands and break out of container isolation to access underlying host resources.\*
+_Figure 7. Kubernetes Privilege Escalation. This diagram illustrates how an attacker exploits a compromised, non-secured pod to execute malicious commands and break out of container isolation to access underlying host resources._
 
 [Read More About Container Escape Attacks](https://isovalent.com/blog/post/2021-11-container-escape/)
 
