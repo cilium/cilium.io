@@ -204,6 +204,7 @@ const {
   telefonica,
   mogenius,
   cleverCloud,
+  xata,
 } = caseStudiesData;
 
 const hero = {
@@ -316,6 +317,7 @@ const userCommunity1 = {
     suse,
     telefonica,
     cleverCloud,
+    xata,
   ],
 };
 

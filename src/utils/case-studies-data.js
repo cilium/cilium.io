@@ -1822,4 +1822,8 @@ zynga: {
       },
     ],
   },
+  xata: {
+    iconName: 'xata',
+    text: '<b>Xata</b> uses Cilium as the CNI for their serverless database platform',
+  },
 };
