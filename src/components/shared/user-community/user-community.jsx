@@ -202,6 +202,7 @@ import VnptLogo from './images/vnpt.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 import ZyngaLogo from './images/zynga.inline.svg';
+import XataLogo from './images/xata.inline.svg';
 
 const icons = {
   fhnw: FHNWLogo,
@@ -398,6 +399,7 @@ const icons = {
   mogenius: MogeniusLogo,
   cleverCloud: CleverCloudLogo,
   telefonica: TelefonicaLogo,
+  xata: XataLogo,
 };
 
 const UserCommunity = ({
