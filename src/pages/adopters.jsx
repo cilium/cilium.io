@@ -317,7 +317,6 @@ const userCommunity1 = {
     suse,
     telefonica,
     cleverCloud,
-    xata,
   ],
 };
 
@@ -421,6 +420,7 @@ const userCommunity2 = {
     ionx,
     vnpt,
     mogenius,
+    xata,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',
