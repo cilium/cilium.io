@@ -1,0 +1,603 @@
+# Cilium Website (cilium.io)
+
+> cilium.io is the official website for the Cilium project, a CNCF graduation-level project providing eBPF-based networking, observability, and security for Kubernetes. Built with Gatsby 5, Tailwind CSS 3, deployed on Netlify.
+
+---
+
+## Project layout
+
+```
+src/
+  components/
+    pages/           # components scoped to a single page (one subfolder per page)
+      adopters/
+        logos/       # cloud and k8s distribution logo grids
+      blog/
+        featured-posts/
+        posts-board/
+      blog-post/
+        content/     # MDX renderer, tags, date, share buttons
+      brand/
+        brand-features/
+        colors/
+        hero/
+        legal-box/
+        logos/
+      enterprise/
+        distributions/
+        training/
+      events/
+        cta-card/
+        cta-section/
+        events-board/
+        events-subscribe/
+        featured-event/
+      get-help/
+        cilium-story/
+        event-box/
+        faq/
+      get-involved/
+        calendar-integration/
+        guidelines/
+        report-bugs/
+        subscribe/
+      get-started/
+        architecture/
+        hero/
+        learn/
+        news/
+        related-projects/
+      home/
+        featured-talks/
+        hero/
+        highlights/
+        in-production/
+        learn/
+        platforms/
+      industries/
+        Community.jsx
+        adopters-logo/
+        bullet-section/
+        cards/
+        featured-talks/
+        hero/
+        industry-usecase/
+        resources/
+        stats/
+        testimonial/
+      labs/
+        banner/
+        card/
+      newsletter/
+        cards/
+        hero/
+        issues/
+      telling-story/
+        hero/
+      use-cases/
+        feature-section/
+        hero/
+        join-us-cards/
+        use-case-card/
+    shared/
+      banner/
+      blog-author/
+      blog-post-card/
+      button/
+      card-item/
+      cards/
+      checkbox/
+      cncf-banner/
+      community/
+      container/
+      featured-story/
+      featured-talks/
+      field/
+      footer/
+      github-stars/
+      hands-on/
+      header/
+      heading/
+      hero/
+      hero-with-image/
+      hero-without-image/
+      inviter/
+      link/
+      list/
+      logos/
+      mobile-menu/
+      pagination/
+      popular-posts/
+      search/
+      seo/
+      subscribe-form/
+      tabs/
+      top-banner/
+      type-label/
+      user-community/
+  hooks/
+  images/          # processed by gatsby-plugin-image; mirrors src/components/ structure
+  icons/           # SVGs imported as React components via @svgr/webpack
+  layouts/
+    main.jsx       # wraps every page with <Header> and <Footer>; accepts headerWithSearch prop
+  pages/           # one .jsx = one route
+    index.jsx
+    adopters.jsx
+    brand.jsx
+    enterprise.jsx
+    get-help.jsx
+    get-involved.jsx
+    get-started.jsx
+    newsletter.jsx
+    telling-story.jsx
+    404.jsx
+    industries/
+      ai.jsx
+      cloud-providers.jsx
+      consulting.jsx
+      e-commerce.jsx
+      edge-computing.jsx
+      financial-services.jsx
+      media-entertainment.jsx
+      security.jsx
+      software.jsx
+      telcos-datacenters.jsx
+    outcomes/
+      cost-and-carbon-savings.jsx
+      multi-cloud-connectivity.jsx
+      network-automation.jsx
+      tool-consolidation.jsx
+      zero-trust.jsx
+    use-cases/
+      bandwidth-optimization.jsx
+      bgp.jsx
+      cluster-mesh.jsx
+      cni.jsx
+      egress-gateway.jsx
+      gateway-api.jsx
+      host-firewall.jsx
+      ingress.jsx
+      ipv6.jsx
+      kube-proxy.jsx
+      load-balancer.jsx
+      metrics-export.jsx
+      multicast.jsx
+      network-flow-logs.jsx
+      network-policy.jsx
+      protocol-visibility.jsx
+      runtime-security.jsx
+      service-map.jsx
+      service-mesh.jsx
+      transparent-encryption.jsx
+  posts/           # blog posts; each post is a folder: src/posts/<slug>/index.md + assets
+  styles/
+  templates/       # Gatsby templates for programmatically generated pages
+    blog.jsx
+    blog-post.jsx
+    events.jsx
+    labs.jsx
+  utils/
+    algolia-queries.js
+    author-data.js
+    case-studies-data.js
+    create-meta-image-path.js
+    event-filters.js
+    events.js
+    get-month-and-day.js
+    get-year.js
+    is-ssr.js
+    routes.js
+    seo-metadata.js
+    slugify.js
+    submit-hubspot-form.js
+    wrap-root-element.jsx
+content/
+  events/          # each event: content/events/<slug>/index.md + ogImage
+  labs/            # each lab: content/labs/<slug>/index.md + cover image
+static/            # copied verbatim to build root (fonts, PDFs, images, _redirects)
+Annual-Reports/    # PDF reports, linked from pages but not served by Gatsby
+gatsby-config.js
+gatsby-node.js
+gatsby-browser.js
+gatsby-ssr.js
+tailwind.config.js
+netlify.toml
+```
+
+---
+
+## Pages in detail
+
+### `/`: index.jsx
+
+The homepage. Sections rendered in order:
+
+1. `Hero`: main headline and CTA
+2. `UserCommunity`: logo strip of featured production users: Google, NYT, Bell, Azure, Adobe, Airbnb, TikTok, Datadog, Bloomberg, Flipkart, Alibaba Cloud, Trip.com, DB Schenker, eBay. These are pulled from `case-studies-data.js` by key and passed as `type: 'simple'`.
+3. `Highlights`: feature highlights section
+4. `CNCFBanner`: CNCF graduation badge banner
+5. `HandsOn`: CTA linking to labs/interactive learning
+6. `InProduction`: deeper production user showcase
+7. `FeaturedTalks`: three hardcoded YouTube embeds: "The Cilium Story", "eBPF in 5 Minutes", "Introduction to Cilium with Liz Rice & Thomas Graf"
+8. `Learn`: what is Cilium / where to learn more
+9. `Community`: links to Slack, GitHub, Twitter, YouTube
+10. `CommunityInviter`: newsletter / community join CTA
+
+To change which companies appear in the homepage logo strip, edit the destructured keys from `caseStudiesData` in `src/pages/index.jsx`.
+
+---
+
+### `/adopters`: adopters.jsx
+
+Lists all known Cilium production users. Three visual sections:
+
+1. `HeroWithoutImage`: page title and description with a link to add your company via GitHub PR
+2. `UserCommunity` (first block): ~100 company logos sorted alphabetically by `iconName`, sourced from `case-studies-data.js`
+3. `Logos` (cloud providers): "Deploy on your preferred cloud": Google Cloud, AWS, Azure, DigitalOcean, Hetzner, Equinix, OpenStack, Alibaba Cloud, Scaleway, Sovereign, SysEleven, Civo, Nine, Tencent Cloud, DaoCloud, Exoscale, Appuio, VK Cloud, Netways, Sealos, Gcore, QingCloud, CoreWeave, Outscale, OVH, Clever Cloud
+4. `Logos` (k8s distributions): "Use your favorite Kubernetes distribution": Azure KS, OpenShift, Amazon EKS, Constellation, RKE2, Google KE, Gardener, Kind, Crane, KOPS, KubeKey, k8e, KubeASZ, KubeOne, Kubespray, Deckhouse, Alauda, KubeLift, Guida, Nutanix
+5. `UserCommunity` (second block, "Cilium is everywhere"): ~90 additional adopters sorted alphabetically, with an "Add Your Company" CTA button pointing to the cilium/cilium USERS.md
+
+Both `UserCommunity` blocks sort their items alphabetically by `iconName` at runtime using `.sort()`.
+
+---
+
+### `/get-started`: get-started.jsx
+
+The "What is Cilium?" learn page (SEO metadata key: `learn`). Sections:
+
+1. `Hero`: "What is Cilium?" headline with eBPF explanation and an SVG illustration. Includes a featured user community strip: AWS, Google, Bell, Sky, Adobe, Capital One, Datadog, GitLab.
+2. `Highlights`: same component as the homepage highlights
+3. `Architecture`: eBPF/Cilium architecture diagram section
+4. `HandsOn`: interactive labs CTA
+5. `CNCFBanner`
+6. `Faq`: imported from `components/pages/get-help/faq/` (shared between this page and get-help)
+7. `RelatedProjects`: links to Hubble, Tetragon, and other related projects
+8. `UserCommunity`: user community logos
+9. `News`: recent news / blog posts
+10. `Community`: Slack/GitHub/YouTube links
+
+---
+
+### `/enterprise`: enterprise.jsx
+
+Enterprise distributions and training partners page. Uses `theme="gray"`. Sections:
+
+1. `Hero`: "Cilium Enterprise Distributions & Training" with SVG illustration and text noting Isovalent origins and CNCF graduation
+2. `Distributions`: enterprise distribution partners
+3. `Training`: training partner listings
+4. `Community`: community links
+
+---
+
+### `/get-involved`: get-involved.jsx
+
+Community joining page. Uses `theme="gray"`. Fetches the hero image via GraphQL static query. Sections:
+
+1. `HeroWithImage`: "Join the Cilium community" with decorative SVG overlays
+2. `Cards` (first set): four community channel cards: Slack, Bluesky, Newsletter (links to `/newsletter`), YouTube
+3. `Guidelines`: contribution guidelines
+4. `Cards` (second set, "Develop and contribute"): GitHub issues, Devstats, Code of Conduct
+5. `CalendarIntegration`: how to add the Cilium community calendar
+6. `ReportBugs`: how to file bugs
+7. `HandsOn`: labs CTA
+8. `Subscribe`: newsletter subscription form
+
+---
+
+### `/get-help`: get-help.jsx
+
+Help and support page. Uses `theme="gray"`. Fetches the hero image via GraphQL static query. Sections:
+
+1. `HeroWithImage`: "Find out how to get help with Cilium" with decorative SVGs
+2. `Cards`: three help channels: Slack, Training & Support (links to `/enterprise`), GitHub issues
+3. `CiliumStory`: about the Cilium project story
+4. `EventBox`: upcoming events callout
+5. `Community`: Slack/GitHub/YouTube links
+
+---
+
+### `/brand`: brand.jsx
+
+Brand guidelines and asset downloads. Uses `theme="gray"` and `footerWithTopBorder`. All color values are hardcoded in the page file itself. Sections:
+
+1. `Hero`: brand guidelines hero
+2. `BrandFeatures`: brand usage rules
+3. `Logos`: "Responsive logo" section with download link for `/data/cilium-logos.zip`
+4. `Colors`: Cilium brand colors (8 logo colors + 15 website colors), with link to `/data/cilium-brandbook.pdf`
+5. `Logos`: Hubble sub-project logos, download `/data/hubble-logos.zip`
+6. `Colors`: Hubble colors (9 colors)
+7. `Logos`: Tetragon sub-project logos, download `/data/tetragon-logos.zip`
+8. `Colors`: Tetragon colors (9 colors)
+9. `LegalBox`: trademark and legal usage notes
+10. `Community`
+
+The actual color hex/RGB/HSL/CMYK values live directly in `brand.jsx`, not in a separate data file.
+
+---
+
+### `/newsletter`: newsletter.jsx
+
+Newsletter subscription page. Uses `theme="gray"` and `footerWithTopBorder`. Sections:
+
+1. `Hero`: "Subscribe to bi-weekly eCHO News"
+2. `Cards`: what the newsletter covers
+3. `Issues`: past newsletter issues, populated from `HubspotEmail` nodes fetched at build time by `gatsby-node.js` (production only, requires `HUBSPOT_ACCESS_TOKEN`)
+
+---
+
+### `/telling-story`: telling-story.jsx
+
+A single-section page for community members who want help telling their Cilium story. Uses `theme="gray"`. Contains only a `Hero` component from `components/pages/telling-story/hero/`.
+
+---
+
+### `404.jsx`
+
+Custom 404 page. Shows a bee illustration (`static/images/404-page-bee.png`) against a patterned background. Offers three navigation links: blog, getting-started labs, and use cases.
+
+---
+
+### `/blog` and `/blog/categories/<category>`: template: blog.jsx
+
+Generated by `createBlogPages` in `gatsby-node.js`. Paginated at 9 posts per page. Categories are derived dynamically from all post frontmatter. Sections:
+
+1. `FeaturedPosts`: the single post with `isFeatured: true` shown prominently at top; build panics if more than one post has this flag
+2. `PostsBoard`: paginated grid of post cards, filterable by category tabs
+3. `Cards`: community channel cards: Slack, LinkedIn, GitHub
+
+Blog category URLs follow the pattern `/blog/categories/<slugified-category>/`.
+
+---
+
+### `/blog/<path>`: template: blog-post.jsx
+
+Individual blog post pages. The URL is set by the `path` frontmatter field, not the folder name. Renders:
+
+1. `Content`: MDX body, title, date, tags, social share buttons. Header has Algolia search enabled (`headerWithSearch` prop).
+2. `PopularPosts`: sidebar/section showing posts with `isPopular: true`
+
+The OG image is resized to 1200x630 JPEG at build time. Description is auto-truncated to 133 chars from `ogSummary`.
+
+---
+
+### `/events`: template: events.jsx
+
+Generated by `createEventsPage`. Paginated at 8 events per page. All event data is passed via `pageContext` (not re-queried at render time). Sections:
+
+1. `FeaturedEvent`: the single event with `isFeatured: true`
+2. `EventsBoard`: paginated grid of event cards, filterable by `type` (Conference, Meetup, etc.) and `region` (North America, Europe, etc.)
+3. `CtaSection`: CTA to submit events or follow on social
+
+---
+
+### `/labs` and `/labs/categories/<category>`: template: labs.jsx
+
+Generated by `createLabsPage`. Paginated at 12 labs per page, sorted alphabetically by title. Sections:
+
+1. Heading: "Learn about Cilium with interactive courses"
+2. `Tabs`: category filter tabs
+3. Lab `Card` grid: each card links out to `externalUrl`
+4. `Pagination`
+5. `Banner`: CTA to add more labs
+
+---
+
+### `/use-cases/*`: individual use-case pages
+
+Each file in `src/pages/use-cases/` is an independent static page. All share the same component primitives from `src/components/pages/use-cases/`: `Hero`, `FeatureSection`, `UseCaseCard`, and `Community`. Most also include `JoinUsCards`.
+
+| Route | File | Topic |
+|-------|------|-------|
+| `/use-cases/bandwidth-optimization` | `bandwidth-optimization.jsx` | Bandwidth and latency optimization via Cilium's Bandwidth Manager |
+| `/use-cases/bgp` | `bgp.jsx` | BGP networking with Cilium |
+| `/use-cases/cluster-mesh` | `cluster-mesh.jsx` | Multi-cluster connectivity via Cluster Mesh |
+| `/use-cases/cni` | `cni.jsx` | Cilium as a CNI plugin for Kubernetes |
+| `/use-cases/egress-gateway` | `egress-gateway.jsx` | Egress Gateway for controlling outbound traffic |
+| `/use-cases/gateway-api` | `gateway-api.jsx` | Kubernetes Gateway API implementation |
+| `/use-cases/host-firewall` | `host-firewall.jsx` | Host-level firewall for nodes and pods |
+| `/use-cases/ingress` | `ingress.jsx` | Ingress controller with load balancing |
+| `/use-cases/ipv6` | `ipv6.jsx` | IPv6-native Kubernetes networking |
+| `/use-cases/kube-proxy` | `kube-proxy.jsx` | eBPF-based kube-proxy replacement |
+| `/use-cases/load-balancer` | `load-balancer.jsx` | L4 load balancing via XDP/eBPF |
+| `/use-cases/metrics-export` | `metrics-export.jsx` | Metrics and tracing export (Prometheus, OpenTelemetry) |
+| `/use-cases/multicast` | `multicast.jsx` | eBPF-based multicast support |
+| `/use-cases/network-flow-logs` | `network-flow-logs.jsx` | Identity-aware L3/L4/DNS network flow logs via Hubble |
+| `/use-cases/network-policy` | `network-policy.jsx` | Advanced network policy enforcement |
+| `/use-cases/protocol-visibility` | `protocol-visibility.jsx` | Deep protocol-level visibility into workload traffic |
+| `/use-cases/runtime-security` | `runtime-security.jsx` | Runtime security via Tetragon |
+| `/use-cases/service-map` | `service-map.jsx` | Service dependency map via Hubble |
+| `/use-cases/service-mesh` | `service-mesh.jsx` | Sidecar-free service mesh |
+| `/use-cases/transparent-encryption` | `transparent-encryption.jsx` | WireGuard/IPSec transparent encryption |
+
+---
+
+### `/industries/*`: industry vertical pages
+
+Each file in `src/pages/industries/` targets a specific industry or deployment context. They use components from `src/components/pages/industries/`: `Hero`, `BulletSection`, `Testimonial`, `FeaturedTalks`, `Resources`, `Stats`, `AdoptersLogo`, `Cards`, `IndustryUsecase`, and `Community`.
+
+| Route | File | Topic |
+|-------|------|-------|
+| `/industries/ai` | `ai.jsx` | AI infrastructure networking (features OpenAI, Ecco) |
+| `/industries/cloud-providers` | `cloud-providers.jsx` | Managed Kubernetes on cloud providers (Azure, AWS, GKE) |
+| `/industries/consulting` | `consulting.jsx` | Systems integrators and consulting firms (Tietoevry) |
+| `/industries/e-commerce` | `e-commerce.jsx` | E-commerce scale networking (Flipkart) |
+| `/industries/edge-computing` | `edge-computing.jsx` | Edge and IoT deployments with Cluster Mesh |
+| `/industries/financial-services` | `financial-services.jsx` | Financial sector compliance and encryption |
+| `/industries/media-entertainment` | `media-entertainment.jsx` | Media and streaming (TikTok IPv6, Yahoo L4 LB) |
+| `/industries/security` | `security.jsx` | Security-focused deployments using Tetragon |
+| `/industries/software` | `software.jsx` | Software companies and SaaS platforms |
+| `/industries/telcos-datacenters` | `telcos-datacenters.jsx` | Telecom and datacenter use (SRv6, dual-stack IPv6) |
+
+---
+
+### `/outcomes/*`: business outcome pages
+
+Outcome-focused pages that frame Cilium benefits in terms of business results rather than technical features. Use the same industry component set.
+
+| Route | File | Topic |
+|-------|------|-------|
+| `/outcomes/cost-and-carbon-savings` | `cost-and-carbon-savings.jsx` | Reducing networking cost and carbon overhead |
+| `/outcomes/multi-cloud-connectivity` | `multi-cloud-connectivity.jsx` | Seamless connectivity across clouds and regions |
+| `/outcomes/network-automation` | `network-automation.jsx` | Automating network operations at scale |
+| `/outcomes/tool-consolidation` | `tool-consolidation.jsx` | Replacing multiple networking tools with Cilium |
+| `/outcomes/zero-trust` | `zero-trust.jsx` | Implementing zero-trust security with Cilium |
+
+---
+
+## Templates
+
+Templates live in `src/templates/` and are used exclusively by `gatsby-node.js` to generate pages programmatically.
+
+**`blog-post.jsx`**: renders a single MDX blog post. Receives the post `id` via `pageContext`, queries frontmatter fields (`date`, `title`, `path`, `tags`, `ogSummary`, `ogImage`) via GraphQL. The `ogImage` is resized to 1200x630 at build time. Description in `<head>` is truncated to 133 chars from `ogSummary`. Enables `headerWithSearch`.
+
+**`blog.jsx`**: renders paginated blog listing pages. Receives `categories`, `currentCategory`, `basePath`, `currentPage`, `numPages`, `draftFilter` via `pageContext`. Queries posts via GraphQL filtered by category and draft status.
+
+**`events.jsx`**: renders paginated event listing pages. Unlike the blog template, all event data (`featuredEvent`, `postEvents`, `eventFilters`, `initialFilters`) is passed directly through `pageContext` rather than re-queried via GraphQL in the template.
+
+**`labs.jsx`**: renders paginated labs listing pages. Lab data passed via `pageContext`. Labs sorted alphabetically by title in `gatsby-node.js` before being passed.
+
+---
+
+## Key utility files
+
+**`gatsby-node.js`**: all programmatic page generation and external data sourcing. Four page creators: `createBlogPosts`, `createBlogPages`, `createEventsPage`, `createLabsPage`. Two source node functions: `getHubspotEmails` (fetches published eCHO News emails from HubSpot API, production-only, requires `HUBSPOT_ACCESS_TOKEN`, filters by name containing "echo news" and `isPublished: true`, creates `HubspotEmail` nodes), `getGithubStars` (fetches cilium/cilium star count from GitHub API, caches in Gatsby cache for 24 hours, creates `GithubStars` node). Also defines `onCreateNode` to promote frontmatter fields (`categories`, `isFeatured`, `isPopular`, `draft`, `ogImageUrl`, `externalUrl`, `type`, `region`, `title`) into Gatsby node fields for querying.
+
+**`gatsby-config.js`**: `siteMetadata` (title, description, siteUrl, language, social image, Twitter handle), plugins: `gatsby-source-filesystem` (images, posts, events, labs, content), `gatsby-plugin-mdx`, `gatsby-plugin-sharp`, `gatsby-plugin-image`, `gatsby-transformer-sharp`, `gatsby-plugin-algolia-search`, `gatsby-plugin-sitemap`, `gatsby-plugin-feed`, `gatsby-plugin-canonical-urls`, `gatsby-adapter-netlify`, `gatsby-plugin-netlify`, `gatsby-plugin-svgr-svgo`, `gatsby-alias-imports`, `gatsby-plugin-postcss`, `gatsby-plugin-manifest`, `gatsby-plugin-offline`, `gatsby-plugin-hotjar`.
+
+**`src/utils/case-studies-data.js`**: ~1800 lines. Single default export object where each key is a camelCase company slug. Shape: `{ iconName, text, links[] }`. `iconName` maps to an SVG in `src/icons/`. `text` is an HTML string. `links` is optional. Used in `adopters.jsx`, `index.jsx`, `get-started.jsx`, and various use-case pages.
+
+**`src/utils/author-data.js`**: keyed by camelCase author handle. Each entry: `{ header, bio }`. Both support inline HTML. `header` may contain an anchor tag. Used in blog post frontmatter via the `author` field.
+
+**`src/utils/seo-metadata.js`**: named exports: `enterprise`, `homepage`, `learn`, `adopters`, `brand`, `getHelp`, `getInvolved`, `tellingStory`, `newsletter`. Each is `{ title, description }`. Imported by the corresponding page and spread into the `<SEO>` component.
+
+**`src/utils/routes.js`**: exports `USE_CASE_BASE_PATH = '/use-cases/'` and `EVENTS_BASE_PATH = '/events/'`.
+
+**`src/utils/events.js`**: exports `EVENT_PER_PAGE = 8` and `EVENT_REGEX = '/content/events/'`.
+
+**`src/utils/event-filters.js`**: exports `createEventFilters(types, regions)` which builds the filter config object passed to the events template. Creates two filter groups: "Types" (Conference, Meetup, etc.) and "Region" (North America, Europe, etc.).
+
+**`src/utils/submit-hubspot-form.js`**: form submission helper for the newsletter signup (called from `get-involved` subscribe component and newsletter page).
+
+**`src/layouts/main.jsx`**: wraps `<Header>` and `<Footer>` around every page. Accepts `headerWithSearch` (enables Algolia search bar, used on blog pages), `theme` (e.g. `"gray"` for gray background pages), `footerWithTopBorder`, and `pageMetadata`.
+
+**`src/html.js`**: custom Gatsby HTML document shell. Edit this to change anything in `<html>` or `<head>` globally (fonts, lang attribute, third-party scripts).
+
+---
+
+## Content schemas
+
+### Blog posts (`src/posts/<slug>/index.md`)
+
+Each post lives in its own folder. The folder name is just for organization; the URL comes from the `path` field.
+
+```yaml
+---
+path: '/blog/2024/01/15/my-post'       # sets the URL; required for hosted posts
+date: '2024-01-15T00:00:00.000Z'       # required
+title: 'My Post Title'                 # required
+categories:                            # required; drives category filter pages
+  - Release                            # valid: Release, Technology, Community, How-To
+tags:
+  - kubernetes
+  - ebpf
+ogSummary: 'One or two sentence description for meta tags and post cards.'
+ogImage: ogimage.png                   # relative to the post folder; resized to 1200x630
+isFeatured: false                      # only one post site-wide may be true; build fails otherwise
+isPopular: false                       # surfaces the post in PopularPosts component
+draft: false                           # excluded from production build when true
+externalUrl: 'https://...'            # if set, card links here; leave body empty
+author: thomasGraf                     # key in src/utils/author-data.js
+---
+```
+
+### Events (`content/events/<slug>/index.md`)
+
+```yaml
+---
+date: '2024-06-15T11:00:00.000Z'
+region: North America                  # drives the region filter: North America, Europe, Asia, etc.
+place: Seattle, Washington
+title: 'Event Title'
+ogSummary: 'Short description shown on event cards.'
+externalUrl: 'https://...'
+ogImage: ogImage.jpg
+type: Conference                       # drives the type filter: Conference, Meetup, Webinar, etc.
+isFeatured: false                      # one event shown as the featured hero at top
+draft: false
+---
+```
+
+### Labs (`content/labs/<slug>/index.md`)
+
+```yaml
+---
+date: '2023-03-01T00:00:00.000Z'
+externalUrl: 'https://...'            # all labs link externally; there are no hosted lab pages
+ogImage: cover.jpg
+categories:
+  - Getting Started                   # drives the category tabs on /labs
+place: Online
+title: 'Lab Title'
+ogSummary: 'What this lab teaches.'
+draft: false
+from: 'Linux Foundation'             # organization hosting the lab
+---
+```
+
+---
+
+## Common tasks
+
+**Adding an adopter**: drop the company logo SVG into `src/icons/`, add an entry to `src/utils/case-studies-data.js`. To feature them on the homepage logo strip, add the key to the destructured import in `src/pages/index.jsx`. The adopters page sorts alphabetically automatically.
+
+**Adding a blog post**: create a folder under `src/posts/` named `MM-DD-YYYY-slug`, add `index.md` with the frontmatter above, and put images alongside it. For external posts, set `externalUrl` and leave the body empty. Only one post can have `isFeatured: true` at a time.
+
+**Adding a use-case page**: add a `.jsx` file to `src/pages/use-cases/`. It appears at `/use-cases/<filename>` automatically. Model it on an existing file; all use-case pages use `Hero`, `FeatureSection`, `UseCaseCard`, and `Community` from `src/components/pages/use-cases/`.
+
+**Adding an industry page**: add a `.jsx` file to `src/pages/industries/`. Model it on an existing file; industry pages use `Hero`, `BulletSection`, `Testimonial`, `FeaturedTalks`, `Resources`, `AdoptersLogo`, `Stats`, `Cards`, `IndustryUsecase`, and `Community` from `src/components/pages/industries/`.
+
+**Adding an event**: create a folder under `content/events/` and add `index.md`. Events appear on `/events` sorted by date descending, paginated at 8 per page.
+
+**Adding a lab**: create a folder under `content/labs/` and add `index.md`. Labs appear on `/labs` sorted alphabetically by title, paginated at 12 per page.
+
+**Updating nav or footer**: edit `src/components/shared/header/` and `src/components/shared/footer/`.
+
+**Updating per-page SEO**: edit the relevant named export in `src/utils/seo-metadata.js`. For global defaults, edit `siteMetadata` in `gatsby-config.js`.
+
+**Updating brand colors**: color values are hardcoded directly in `src/pages/brand.jsx` in the `ciliumColors`, `hubbleColors`, and `tetragonColors` objects. There is no separate data file.
+
+**Updating the homepage featured talks**: the three YouTube embeds on the homepage are hardcoded in `src/pages/index.jsx` in the `talks` array. Edit the `title`, `description`, and `videoSrc` fields there directly.
+
+---
+
+## Running locally
+
+Requires Node.js. The `Makefile` wraps the common commands.
+
+```bash
+npm install
+cp .env.example .env      # fill in env vars
+npm start                 # gatsby develop, hot-reload at localhost:8000
+npm run build             # production build into /public
+npm run serve             # preview the production build locally
+npm run clean             # clear .cache and public/ when builds behave unexpectedly
+npm run lint              # ESLint (JS/JSX) + markdownlint (MD)
+npm run format            # Prettier
+```
+
+Required env vars in `.env`:
+- `GATSBY_DEFAULT_SITE_URL`: canonical URL (e.g. `https://cilium.io`); used in sitemap, OG tags, and RSS feed
+- Algolia env vars: needed to push the search index during `gatsby build`; Algolia search still works locally in dev without them (reads the existing index)
+- `HUBSPOT_ACCESS_TOKEN`: fetches eCHO News issues for the `/newsletter` page; only runs in production builds; the newsletter page renders without issues locally, just without past issues listed
+
+---
+
+## Links
+
+- Docs: https://docs.cilium.io
+- Main repo: https://github.com/cilium/cilium
+- Slack: https://slack.cilium.io
+- CNCF: https://www.cncf.io/projects/cilium/
+- YouTube: https://www.youtube.com/c/eBPFCiliumCommunity
+- Bluesky: https://bsky.app/profile/cilium.io
+- LinkedIn: https://www.linkedin.com/company/cilium
