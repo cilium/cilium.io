@@ -1,38 +1,40 @@
 export default {
   asana: {
-  iconName: 'asana',
-  text: '<b>Asana</b> uses Cilium for cloud native networking, observability, and security',
-  links: [
-    {
-      linkText: 'Talk',
-      linkUrl: 'https://www.youtube.com/watch?v=mxjiSCnrb3c',
-      linkTarget: '_blank',
-    },
-  ],
-},
-etraveli: {
-  iconName: 'etraveli',
-  text: '<b>Etraveli Group</b> uses Cilium to replace legacy on-premises hardware load balancers',
-  links: [
-    {
-      linkText: 'Talk',
-      linkUrl: 'https://www.youtube.com/watch?v=KWS-NaZd62M&list=PLDg_GiBbAx-mSQHa1y9Z9sjBYUmG2FBCZ&index=7',
-      linkTarget: '_blank',
-    },
-  ],
-},
-suse: {
-  iconName: 'suse',
-  text: '<b>SUSE</b> uses Tetragon to enforce and scale security policies across production clusters',
-  links: [
-    {
-      linkText: 'Talk',
-      linkUrl: 'https://www.youtube.com/watch?v=bgCg1tS72ME&list=PLDg_GiBbAx-mSQHa1y9Z9sjBYUmG2FBCZ&index=8',
-      linkTarget: '_blank',
-    },
-  ],
-},
-zynga: {
+    iconName: 'asana',
+    text: '<b>Asana</b> uses Cilium for cloud native networking, observability, and security',
+    links: [
+      {
+        linkText: 'Talk',
+        linkUrl: 'https://www.youtube.com/watch?v=mxjiSCnrb3c',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  etraveli: {
+    iconName: 'etraveli',
+    text: '<b>Etraveli Group</b> uses Cilium to replace legacy on-premises hardware load balancers',
+    links: [
+      {
+        linkText: 'Talk',
+        linkUrl:
+          'https://www.youtube.com/watch?v=KWS-NaZd62M&list=PLDg_GiBbAx-mSQHa1y9Z9sjBYUmG2FBCZ&index=7',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  suse: {
+    iconName: 'suse',
+    text: '<b>SUSE</b> uses Tetragon to enforce and scale security policies across production clusters',
+    links: [
+      {
+        linkText: 'Talk',
+        linkUrl:
+          'https://www.youtube.com/watch?v=bgCg1tS72ME&list=PLDg_GiBbAx-mSQHa1y9Z9sjBYUmG2FBCZ&index=8',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  zynga: {
     iconName: 'zynga',
     text: '<b>Zynga</b> uses Cilium for eBPF-native networking and to scale past connection tracking limits',
     links: [
@@ -1173,9 +1175,9 @@ zynga: {
         linkTarget: '_blank',
       },
       {
-      linkText: 'Talk 2',
-      linkUrl: 'https://www.youtube.com/watch?v=6rCzYpLEZg4',
-      linkTarget: '_blank',
+        linkText: 'Talk 2',
+        linkUrl: 'https://www.youtube.com/watch?v=6rCzYpLEZg4',
+        linkTarget: '_blank',
       },
     ],
   },
@@ -1381,7 +1383,8 @@ zynga: {
     links: [
       {
         linkText: 'Case Study',
-        linkUrl: 'https://isovalent.com/blog/post/openai-isovalent-networking-kubernetes-case-study/',
+        linkUrl:
+          'https://isovalent.com/blog/post/openai-isovalent-networking-kubernetes-case-study/',
         linkTarget: '_blank',
       },
       {
@@ -1825,5 +1828,9 @@ zynga: {
   xata: {
     iconName: 'xata',
     text: '<b>Xata</b> uses Cilium as the CNI for their serverless database platform',
+  },
+  pagali: {
+    iconName: 'pagali',
+    text: '<b>Pagali</b> uses Cilium on AWS EKS (aws-cni chaining) for networking, observability, security, Service Mesh (GAMMA), and Gateway API',
   },
 };

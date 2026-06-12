@@ -205,6 +205,7 @@ const {
   mogenius,
   cleverCloud,
   xata,
+  pagali,
 } = caseStudiesData;
 
 const hero = {
@@ -421,6 +422,7 @@ const userCommunity2 = {
     vnpt,
     mogenius,
     xata,
+    pagali,
   ],
   buttonText: 'Add Your Company',
   buttonUrl: 'https://github.com/cilium/cilium/blob/master/USERS.md',

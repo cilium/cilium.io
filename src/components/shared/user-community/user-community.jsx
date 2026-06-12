@@ -36,8 +36,8 @@ import AcossLogo from './images/acoss.inline.svg';
 import AenixLogo from './images/aenix.inline.svg';
 import AirbnbLogo from './images/airbnb.inline.svg';
 import AlaudaLogo from './images/alauda.inline.svg';
-import AsanaLogo from './images/asana.inline.svg';
 import ArangoDbLogo from './images/arangodb.inline.svg';
+import AsanaLogo from './images/asana.inline.svg';
 import AyedoLogo from './images/ayedo.inline.svg';
 import AzureLogo from './images/azure.inline.svg';
 import BatumbuLogo from './images/batumbu.inline.svg';
@@ -72,8 +72,8 @@ import EdgelessSystemsLogo from './images/edgeless-systems.inline.svg';
 import EficodeLogo from './images/eficode.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
 import EntrywanLogo from './images/entrywan.inline.svg';
-import EtraveliLogo from './images/etraveli.inline.svg';
 import ESnetLogo from './images/esnet.inline.svg';
+import EtraveliLogo from './images/etraveli.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FHNWLogo from './images/fhnw.inline.svg';
 import FinleapLogo from './images/finleap.inline.svg';
@@ -133,6 +133,7 @@ import OSTLogo from './images/ost.inline.svg';
 import OutscaleLogo from './images/outscale.inline.svg';
 import OverstockLogo from './images/overstock.inline.svg';
 import OVHcloudLogo from './images/ovh.inline.svg';
+import PagaliLogo from './images/pagali.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
 import ParseableLogo from './images/parseable.inline.svg';
 import PlaidLogo from './images/plaid.inline.svg';
@@ -200,9 +201,9 @@ import VirtuozzoLogo from './images/virtuozzo.inline.svg';
 import VkcloudLogo from './images/vkcloud.inline.svg';
 import VnptLogo from './images/vnpt.inline.svg';
 import Ws02Logo from './images/wso2.inline.svg';
+import XataLogo from './images/xata.inline.svg';
 import YahooLogo from './images/yahoo.inline.svg';
 import ZyngaLogo from './images/zynga.inline.svg';
-import XataLogo from './images/xata.inline.svg';
 
 const icons = {
   fhnw: FHNWLogo,
@@ -400,6 +401,7 @@ const icons = {
   cleverCloud: CleverCloudLogo,
   telefonica: TelefonicaLogo,
   xata: XataLogo,
+  pagali: PagaliLogo,
 };
 
 const UserCommunity = ({
