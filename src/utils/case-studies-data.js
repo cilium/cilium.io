@@ -1826,4 +1826,8 @@ zynga: {
     iconName: 'xata',
     text: '<b>Xata</b> uses Cilium as the CNI for their serverless database platform',
   },
+  pagali: {
+    iconName: 'pagali',
+    text: '<b>Pagali</b> uses Cilium on AWS EKS (aws-cni chaining) for networking, observability, security, Service Mesh (GAMMA), and Gateway API',
+  },
 };
