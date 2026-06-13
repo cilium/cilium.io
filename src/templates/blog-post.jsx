@@ -33,24 +33,67 @@ const BlogPostPage = (props) => {
   );
 };
 
-export const Head = ({ data: { mdx: postData }, location: { pathname } }) => {
+export const Head = ({ data: { mdx: postData, site }, location: { pathname } }) => {
   const {
-    frontmatter: { title, ogImage, ogSummary },
+    frontmatter: { title, ogImage, ogSummary, dateIso, tags },
   } = postData;
+  const { siteUrl } = site.siteMetadata;
+
+  const description = `${ogSummary.slice(0, 133)}...`;
+  const pageUrl = `${siteUrl}${pathname}`;
+  const imageUrl = ogImage?.childImageSharp?.resize?.src
+    ? `${siteUrl}${ogImage.childImageSharp.resize.src}`
+    : null;
+
   const pageMetadata = {
     title,
-    description: `${ogSummary.slice(0, 133)}...`,
+    description,
     image: ogImage || null,
     slug: pathname,
   };
-  return <SEO data={pageMetadata} />;
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: title,
+    description,
+    url: pageUrl,
+    datePublished: dateIso,
+    dateModified: dateIso,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cilium',
+      url: siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/images/social-preview.jpg`,
+      },
+    },
+    ...(imageUrl && {
+      image: {
+        '@type': 'ImageObject',
+        url: imageUrl,
+        width: 1200,
+        height: 630,
+      },
+    }),
+    ...(tags?.length > 0 && { keywords: tags.join(', ') }),
+  };
+
+  return <SEO data={pageMetadata} type="article" datePublished={dateIso} jsonLd={jsonLd} />;
 };
 
 export const query = graphql`
   query ($id: String!) {
+    site {
+      siteMetadata {
+        siteUrl
+      }
+    }
     mdx(id: { eq: $id }) {
       frontmatter {
         date(formatString: "MMM DD, yyyy")
+        dateIso: date(formatString: "YYYY-MM-DDTHH:mm:ssZ")
         title
         path
         tags
