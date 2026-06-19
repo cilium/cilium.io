@@ -61,7 +61,6 @@ const Footer = ({ withTopBorder }) => {
                       to={href}
                       target={target || null}
                       rel={target ? 'noopener noreferrer' : null}
-                      aria-label={target ? `${name}, opens in new tab` : undefined}
                     >
                       {name}
                       {target && (

@@ -79,7 +79,12 @@ const SEO = ({
       {author && <meta name="twitter:creator" content={author} />}
 
       {/* JSON-LD Structured Data */}
-      {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
 
       {/* Extra custom tags */}
       {children}
