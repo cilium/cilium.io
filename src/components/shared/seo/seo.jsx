@@ -17,7 +17,7 @@ const SEO = ({
 } = {}) => {
   const {
     site: {
-      siteMetadata: { siteTitle, siteDescription, siteUrl, siteImage },
+      siteMetadata: { siteTitle, siteDescription, siteUrl, siteImage, authorTwitterAccount },
     },
   } = useStaticQuery(graphql`
     query SEO {
@@ -28,6 +28,7 @@ const SEO = ({
           siteUrl
           siteImage
           siteLanguage
+          authorTwitterAccount
         }
       }
     }
@@ -72,6 +73,7 @@ const SEO = ({
 
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content={authorTwitterAccount} />
       <meta name="twitter:title" content={currentTitle} />
       <meta name="twitter:description" content={currentDescription} />
       <meta name="twitter:image" content={currentImagePath} />
