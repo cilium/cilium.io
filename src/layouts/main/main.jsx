@@ -112,6 +112,13 @@ const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
 
   return (
     <div className="bg-gray-4 dark:bg-gray-900">
+      {/* Skip to main content — WCAG 2.1 SC 2.4.1 (Bypass Blocks) */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-primary-1 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+      >
+        Skip to main content
+      </a>
       <TopBanner
         text="Join us for KubeCon North America and CiliumCon 2026"
         url="https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/ciliumcon/"
@@ -125,7 +132,7 @@ const MainLayout = ({ children, headerWithSearch, footerWithTopBorder }) => {
         handleCloseClick={handleCloseClick}
       />
       </div>
-      <main className="transition-colors duration-200">{children}</main>
+      <main id="main-content" className="transition-colors duration-200">{children}</main>
       <Footer withTopBorder={footerWithTopBorder} />
     </div>
   );
