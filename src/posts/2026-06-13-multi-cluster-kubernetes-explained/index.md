@@ -7,7 +7,6 @@ ogImage: images/multi-cluster-cover-image.jpg
 ogSummary: 'Discover the core architectures and strategies behind Multi-Cluster Kubernetes. This guide covers cluster federation, cross-cluster service meshes, high availability, and how to scale and secure traffic across multiple cloud regions.'
 
 categories:
-  - Architecture
   - Technology
 tags:
   - Kubernetes
