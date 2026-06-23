@@ -50,7 +50,7 @@ Organizations deploy Kubernetes across multiple clusters for various reasons suc
 
 ## **Active-Active**
 
-In an active-active topology, two or more clusters simultaneously serve live production traffic. Workloads are replicated across all clusters, and load is balanced between them. This pattern reduces blast radius and enables failover, supporting resilience through active-active approaches. With Cilium ClusterMesh, global services can span clusters so that pods in Cluster A and Cluster B both act as backends for the same service traffic flows to whichever is healthy.
+In an active-active topology, two or more clusters simultaneously serve live production traffic. Workloads are replicated across all clusters, and load is balanced between them. This pattern reduces blast radius and enables failover, supporting resilience through active-active approaches. With Cilium ClusterMesh, global services can span clusters so that pods in Cluster A and Cluster B both act as backends for the same service; traffic flows to whichever is healthy.
 
 **Best for:** High-availability applications, geo-distributed workloads, zero-downtime deployments.
 **Trade-off:** Requires state synchronization between clusters; data consistency logic adds complexity.
