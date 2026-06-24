@@ -63,6 +63,9 @@ const Footer = ({ withTopBorder }) => {
                       rel={target ? 'noopener noreferrer' : null}
                     >
                       {name}
+                      {target && (
+                        <span className="sr-only"> (opens in new tab)</span>
+                      )}
                     </Link>
                   </li>
                 ))}
