@@ -617,6 +617,10 @@ exports.createSchemaCustomization = ({ actions }) => {
     type GithubStars implements Node {
       githubStars: String
     }
+
+    type MdxFrontmatter {
+      author: String
+    }
   `;
   createTypes(typeDefs);
 };

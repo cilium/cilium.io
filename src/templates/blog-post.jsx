@@ -35,7 +35,7 @@ const BlogPostPage = (props) => {
 
 export const Head = ({ data: { mdx: postData, site }, location: { pathname } }) => {
   const {
-    frontmatter: { title, ogImage, ogSummary, dateIso, tags },
+    frontmatter: { title, ogImage, ogSummary, dateIso, tags, author },
   } = postData;
   const { siteUrl } = site.siteMetadata;
 
@@ -60,6 +60,16 @@ export const Head = ({ data: { mdx: postData, site }, location: { pathname } }) 
     url: pageUrl,
     datePublished: dateIso,
     dateModified: dateIso,
+    author: author
+      ? {
+          '@type': 'Person',
+          name: author,
+        }
+      : {
+          '@type': 'Organization',
+          name: 'Cilium',
+          url: siteUrl,
+        },
     publisher: {
       '@type': 'Organization',
       name: 'Cilium',
@@ -97,6 +107,7 @@ export const query = graphql`
         title
         path
         tags
+        author
         ogSummary
         ogImage {
           childImageSharp {
