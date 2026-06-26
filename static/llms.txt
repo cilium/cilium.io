@@ -16,7 +16,7 @@ Cilium graduated in the Cloud Native Computing Foundation (CNCF) in 2023 and is 
 
 - **Container networking (CNI):** Kubernetes pod networking with an eBPF dataplane, IPAM, overlay (VXLAN/Geneve) and native/direct routing modes, ENI/Azure delegated IPAM, and BIG TCP and netkit for high throughput.
 - **kube-proxy replacement:** eBPF-based service load balancing for ClusterIP, NodePort, and LoadBalancer services, with Maglev consistent hashing, Direct Server Return (DSR), and XDP acceleration — eliminating iptables scaling bottlenecks.
-- **Network policy and security:** identity-based microsegmentation with Kubernetes NetworkPolicy and CiliumNetworkPolicy (CNP) at L3/L4/L7, DNS/FQDN-aware policy, and zero-trust enforcement.
+- **Network policy and security:** identity-based microsegmentation with Kubernetes NetworkPolicy and CiliumNetworkPolicy (CNP) at L3/L4/L7, DNS/FQDN-aware policy, and host firewall for zero-trust networking.
 - **Observability with Hubble:** identity-aware L3/L4/L7 network flow logs, DNS visibility, Prometheus and OpenTelemetry metrics, Grafana dashboards, and a real-time service dependency map.
 - **Transparent encryption:** WireGuard and IPsec pod-to-pod in-transit encryption with no application changes, supporting compliance and FIPS requirements.
 - **Multi-cluster (Cluster Mesh):** cross-cluster service discovery, global services, and pod-to-pod connectivity across clusters, regions, and clouds.
