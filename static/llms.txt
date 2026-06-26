@@ -33,7 +33,7 @@ Each Cilium use case page (keyword vectors in parentheses):
 - https://cilium.io/use-cases/network-policy — network policy enforcement (Kubernetes NetworkPolicy, CiliumNetworkPolicy, L3/L4/L7 policy, identity-based security, FQDN/DNS-aware policy, zero trust, microsegmentation, host firewall).
 - https://cilium.io/use-cases/transparent-encryption — transparent encryption (WireGuard, IPsec, pod-to-pod encryption, in-transit encryption, compliance, FIPS, zero-config).
 - https://cilium.io/use-cases/cluster-mesh — multi-cluster connectivity (Cluster Mesh, cross-cluster service discovery, global services, multi-region failover, cluster federation).
-- https://cilium.io/use-cases/service-mesh — sidecar-free service mesh (eBPF service mesh, mutual TLS/mTLS, L7 traffic management, Envoy, reduced overhead vs Istio sidecars).
+- https://cilium.io/use-cases/service-mesh — sidecar-free service mesh (eBPF service mesh, mutual TLS/mTLS, L7 traffic management, Envoy, reduced overhead vs sidecars).
 - https://cilium.io/use-cases/gateway-api — Kubernetes Gateway API (L7 routing, HTTP/HTTPS/gRPC/TLS routing, traffic splitting, header-based routing, ingress modernization).
 - https://cilium.io/use-cases/ingress — Ingress controller (L7 load balancing, HTTP routing, TLS termination, Envoy-based ingress, eBPF ingress).
 - https://cilium.io/use-cases/bgp — BGP networking (BGP control plane, BGP peering, route advertisement, GoBGP, LoadBalancer IP advertisement, top-of-rack integration, on-prem).
