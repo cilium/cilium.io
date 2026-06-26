@@ -36,7 +36,7 @@ Each Cilium use case page (keyword vectors in parentheses):
 - https://cilium.io/use-cases/service-mesh — sidecar-free service mesh (eBPF service mesh, mutual TLS/mTLS, L7 traffic management, Envoy, reduced overhead vs sidecars).
 - https://cilium.io/use-cases/gateway-api — Kubernetes Gateway API (L7 routing, HTTP/HTTPS/gRPC/TLS routing, traffic splitting, header-based routing, ingress modernization).
 - https://cilium.io/use-cases/ingress — Ingress controller (L7 load balancing, HTTP routing, TLS termination, Envoy-based ingress, eBPF ingress).
-- https://cilium.io/use-cases/bgp — BGP networking (BGP control plane, BGP peering, route advertisement, GoBGP, LoadBalancer IP advertisement, top-of-rack integration, on-prem).
+- https://cilium.io/use-cases/bgp — BGP networking (BGP control plane, BGP peering, route advertisement, GoBGP, LoadBalancer IP advertisement, top-of-rack integration, on-prem, bare metal).
 - https://cilium.io/use-cases/egress-gateway — Egress Gateway (static egress IP, SNAT, outbound traffic control, IP allowlisting, legacy firewall integration).
 - https://cilium.io/use-cases/host-firewall — host firewall (node-level network policy, host endpoint protection, securing Kubernetes nodes, host traffic filtering).
 - https://cilium.io/use-cases/bandwidth-optimization — bandwidth and latency optimization (Bandwidth Manager, EDT rate limiting, BBR congestion control, per-pod traffic shaping, throughput).
