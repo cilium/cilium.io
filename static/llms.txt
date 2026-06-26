@@ -10,7 +10,7 @@ Cilium is a cloud native networking and security platform for Kubernetes built o
 
 Cilium operates at the network (L3/L4) and application (L7) layers. It assigns a security identity to each Kubernetes workload, enforces policy based on identity rather than IP address, and provides visibility into every network flow. The Hubble sub project adds flow logs, metrics, and a service dependency map; the Tetragon sub project adds eBPF-based runtime security and enforcement.
 
-Cilium graduated in the Cloud Native Computing Foundation (CNCF) in 2023 and is the default or recommended CNI for many managed Kubernetes platforms, including Google GKE Dataplane V2, Amazon EKS, Microsoft AKS, and others.
+Cilium graduated in the Cloud Native Computing Foundation (CNCF) in 2023 and is the default or recommended CNI for many managed Kubernetes platforms and distributions, including Google GKE Dataplane V2, Microsoft AKS, Digital Ocean Kubernetes, Red Hat OpenShift, kind, and more.
 
 ## Core capabilities
 
