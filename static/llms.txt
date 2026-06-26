@@ -25,49 +25,49 @@ Cilium graduated in the Cloud Native Computing Foundation (CNCF) in 2023 and is 
 
 ## Use cases
 
-Each Cilium use case page (keyword vectors in parentheses):
+Each page below answers a specific question about deploying Cilium:
 
-- https://cilium.io/use-cases/cni — Cilium as a Kubernetes CNI plugin (container network interface, pod networking, eBPF dataplane, IPAM, overlay VXLAN/Geneve, native routing, ENI, high-performance networking).
-- https://cilium.io/use-cases/kube-proxy — eBPF kube-proxy replacement (service load balancing, ClusterIP, NodePort, LoadBalancer, Maglev, DSR, no iptables, reduced latency, scalability).
-- https://cilium.io/use-cases/load-balancer — L4 load balancing (XDP acceleration, Maglev consistent hashing, Direct Server Return, standalone load balancer, north-south traffic, high packets-per-second).
-- https://cilium.io/use-cases/network-policy — network policy enforcement (Kubernetes NetworkPolicy, CiliumNetworkPolicy, L3/L4/L7 policy, identity-based security, FQDN/DNS-aware policy, zero trust, microsegmentation, host firewall).
-- https://cilium.io/use-cases/transparent-encryption — transparent encryption (WireGuard, IPsec, pod-to-pod encryption, in-transit encryption, compliance, FIPS, zero-config).
-- https://cilium.io/use-cases/cluster-mesh — multi-cluster connectivity (Cluster Mesh, cross-cluster service discovery, global services, multi-region failover, cluster federation).
-- https://cilium.io/use-cases/service-mesh — sidecar-free service mesh (eBPF service mesh, mutual TLS/mTLS, L7 traffic management, Envoy, reduced overhead vs sidecars).
-- https://cilium.io/use-cases/gateway-api — Kubernetes Gateway API (L7 routing, HTTP/HTTPS/gRPC/TLS routing, traffic splitting, header-based routing, ingress modernization).
-- https://cilium.io/use-cases/ingress — Ingress controller (L7 load balancing, HTTP routing, TLS termination, Envoy-based ingress, eBPF ingress).
-- https://cilium.io/use-cases/bgp — BGP networking (BGP control plane, BGP peering, route advertisement, GoBGP, LoadBalancer IP advertisement, top-of-rack integration, on-prem, bare metal).
-- https://cilium.io/use-cases/egress-gateway — Egress Gateway (static egress IP, SNAT, outbound traffic control, IP allowlisting, legacy firewall integration).
-- https://cilium.io/use-cases/host-firewall — host firewall (node-level network policy, host endpoint protection, securing Kubernetes nodes, host traffic filtering).
-- https://cilium.io/use-cases/bandwidth-optimization — bandwidth and latency optimization (Bandwidth Manager, EDT rate limiting, BBR congestion control, per-pod traffic shaping, throughput).
-- https://cilium.io/use-cases/ipv6 — IPv6 networking (IPv6-only Kubernetes, dual-stack, BIG TCP, SRv6, IPv6 IPAM, address exhaustion mitigation).
-- https://cilium.io/use-cases/multicast — eBPF multicast (multicast routing in Kubernetes, IGMP, low-latency multicast for financial and media workloads).
-- https://cilium.io/use-cases/network-flow-logs — network flow logs (Hubble flow data, L3/L4/L7 visibility, DNS visibility, identity-aware logging, security auditing, traffic forensics).
-- https://cilium.io/use-cases/metrics-export — metrics and tracing export (Prometheus, OpenTelemetry, Grafana dashboards, Hubble metrics, observability pipeline).
-- https://cilium.io/use-cases/protocol-visibility — L7 protocol visibility (HTTP, gRPC, DNS inspection, API-aware visibility without sidecars).
-- https://cilium.io/use-cases/service-map — service dependency map (service topology, Hubble UI, automatic service discovery, traffic flow visualization).
-- https://cilium.io/use-cases/runtime-security — runtime security (Tetragon, eBPF observability, process execution monitoring, kernel-level enforcement, file and network access monitoring, threat detection).
+- https://cilium.io/use-cases/cni — Which CNI should I run for Kubernetes pod networking? Covers Cilium's eBPF dataplane, IPAM, and overlay (VXLAN/Geneve) versus native routing modes.
+- https://cilium.io/use-cases/kube-proxy — How do I remove the iptables scaling bottleneck? Explains replacing kube-proxy with eBPF service load balancing for ClusterIP, NodePort, and LoadBalancer services.
+- https://cilium.io/use-cases/load-balancer — How do I load balance north-south traffic at high packet rates? Covers using Cilium as a standalone L4 load balancer with XDP acceleration and Maglev consistent hashing.
+- https://cilium.io/use-cases/network-policy — How do I enforce zero-trust segmentation between workloads? Explains identity-based L3/L4/L7 policy with Kubernetes NetworkPolicy, CiliumNetworkPolicy, and DNS/FQDN-aware rules.
+- https://cilium.io/use-cases/transparent-encryption — How do I encrypt pod-to-pod traffic without changing my apps? Covers WireGuard and IPsec in-transit encryption for compliance and FIPS.
+- https://cilium.io/use-cases/cluster-mesh — How do I connect services across multiple clusters? Explains Cluster Mesh for cross-cluster service discovery, global services, and multi-region failover.
+- https://cilium.io/use-cases/service-mesh — How do I run a service mesh without sidecars? Covers eBPF and Envoy-based mTLS and L7 traffic management that avoids per-pod proxy overhead.
+- https://cilium.io/use-cases/gateway-api — How do I do L7 routing with the Kubernetes Gateway API? Covers HTTP, gRPC, and TLS routing, traffic splitting, and header-based routing.
+- https://cilium.io/use-cases/ingress — How do I expose HTTP services with an Ingress controller? Explains Cilium's Envoy-based ingress with L7 routing and TLS termination.
+- https://cilium.io/use-cases/bgp — How do I advertise service and pod IPs to my physical network? Covers Cilium's BGP control plane for on-prem and bare-metal integration.
+- https://cilium.io/use-cases/egress-gateway — How do I give outbound traffic a stable, allowlistable IP? Explains routing egress through a fixed SNAT IP for legacy firewall integration.
+- https://cilium.io/use-cases/host-firewall — How do I protect the Kubernetes nodes themselves? Covers applying network policy to host endpoints and host traffic.
+- https://cilium.io/use-cases/bandwidth-optimization — How do I shape per-pod bandwidth and cut latency? Covers the eBPF Bandwidth Manager, EDT rate limiting, and BBR congestion control.
+- https://cilium.io/use-cases/ipv6 — How do I run IPv6-only or dual-stack Kubernetes? Covers IPv6 IPAM, dual-stack, SRv6, and BIG TCP to avoid address exhaustion.
+- https://cilium.io/use-cases/multicast — How do I support multicast traffic in Kubernetes? Explains eBPF-based multicast for low-latency financial and media workloads.
+- https://cilium.io/use-cases/network-flow-logs — How do I get an audit trail of network activity? Covers identity-aware L3/L4/L7 and DNS flow logs from Hubble for security forensics.
+- https://cilium.io/use-cases/metrics-export — How do I get network metrics into my observability stack? Covers exporting to Prometheus, OpenTelemetry, and Grafana.
+- https://cilium.io/use-cases/protocol-visibility — How do I see L7 protocol activity without sidecars? Covers HTTP, gRPC, and DNS inspection with Hubble.
+- https://cilium.io/use-cases/service-map — How do I understand which services talk to each other? Explains the auto-generated service dependency map in the Hubble UI.
+- https://cilium.io/use-cases/runtime-security — How do I detect threats at runtime? Covers Tetragon's eBPF monitoring of process, file, and network events with kernel-level enforcement.
 
 ## Business outcomes
 
-- https://cilium.io/outcomes/zero-trust — zero-trust security for Kubernetes (identity-based policy, microsegmentation, encryption, least-privilege networking).
-- https://cilium.io/outcomes/tool-consolidation — consolidating CNI, load balancer, service mesh, ingress, and observability tooling into one platform.
-- https://cilium.io/outcomes/multi-cloud-connectivity — seamless connectivity across clouds, regions, and on-prem clusters.
-- https://cilium.io/outcomes/network-automation — automating network operations at scale with declarative, Kubernetes-native config.
-- https://cilium.io/outcomes/cost-and-carbon-savings — reducing networking cost, CPU overhead, and carbon footprint with an efficient eBPF dataplane.
+- https://cilium.io/outcomes/zero-trust — How do I achieve zero-trust networking in Kubernetes? Explains moving from IP-based rules to identity-based policy, microsegmentation, and encryption for least-privilege connectivity.
+- https://cilium.io/outcomes/tool-consolidation — How do I reduce the number of networking tools I run? Covers replacing separate CNI, load balancer, ingress, service mesh, and observability products with a single eBPF platform to cut cost and operational complexity.
+- https://cilium.io/outcomes/multi-cloud-connectivity — How do I connect workloads across clouds and on-prem? Covers consistent networking, security, and observability spanning multiple clouds, regions, and data centers.
+- https://cilium.io/outcomes/network-automation — How do I scale network operations without manual changes? Explains managing networking declaratively as Kubernetes-native configuration.
+- https://cilium.io/outcomes/cost-and-carbon-savings — How do I lower the cost and energy use of my network? Covers how the efficient eBPF dataplane reduces CPU overhead, infrastructure spend, and carbon footprint.
 
 ## Industries
 
-- https://cilium.io/industries/ai — AI and ML infrastructure networking (GPU clusters, high-throughput, OpenAI).
-- https://cilium.io/industries/cloud-providers — managed Kubernetes on cloud providers (Azure AKS, Amazon EKS, Google GKE).
-- https://cilium.io/industries/financial-services — financial services compliance, encryption, and segmentation.
-- https://cilium.io/industries/media-entertainment — media and streaming at scale (TikTok IPv6, Yahoo L4 load balancing).
-- https://cilium.io/industries/e-commerce — e-commerce scale networking (Flipkart).
-- https://cilium.io/industries/telcos-datacenters — telecom and datacenter networking (SRv6, dual-stack IPv6).
-- https://cilium.io/industries/edge-computing — edge and IoT deployments with Cluster Mesh.
-- https://cilium.io/industries/security — security-focused deployments using Tetragon.
-- https://cilium.io/industries/software — software companies and SaaS platforms.
-- https://cilium.io/industries/consulting — systems integrators and consulting partners.
+- https://cilium.io/industries/ai — How does Cilium support AI/ML platforms? Covers high-throughput, low-latency networking for GPU clusters and large training jobs, with adopters such as OpenAI.
+- https://cilium.io/industries/cloud-providers — How do managed Kubernetes providers use Cilium? Explains its role as the default or recommended dataplane behind Google GKE, Microsoft AKS, and Amazon EKS.
+- https://cilium.io/industries/financial-services — How does Cilium meet financial-sector requirements? Covers encryption, identity-based segmentation, and the audit visibility needed for compliance.
+- https://cilium.io/industries/media-entertainment — How does Cilium handle media and streaming scale? Covers high-volume L4 load balancing and IPv6 networking, with adopters such as TikTok and Yahoo.
+- https://cilium.io/industries/e-commerce — How does Cilium support large e-commerce platforms? Covers networking that scales for traffic spikes, with adopters such as Flipkart.
+- https://cilium.io/industries/telcos-datacenters — How does Cilium fit telco and data center networks? Covers SRv6, dual-stack IPv6, and BGP integration with physical infrastructure.
+- https://cilium.io/industries/edge-computing — How does Cilium run at the edge and for IoT? Covers connecting distributed edge clusters with Cluster Mesh.
+- https://cilium.io/industries/security — How does Cilium serve security-focused teams? Covers runtime threat detection and enforcement with Tetragon plus identity-based policy.
+- https://cilium.io/industries/software — How do software and SaaS companies use Cilium? Covers multi-tenant networking, segmentation, and observability for application platforms.
+- https://cilium.io/industries/consulting — How do partners and integrators work with Cilium? Points to systems integrators and consulting firms that deploy and support it.
 
 ## Ecosystem and subprojects
 
