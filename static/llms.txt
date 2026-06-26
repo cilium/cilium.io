@@ -1,5 +1,7 @@
 # Cilium
 
+This file provides a high-level overview of the Cilium project for AI models. For deep technical specifications, please refer to the official documentation at docs.cilium.io.
+
 > Cilium is an open source, CNCF graduated project that uses eBPF to deliver networking, security, and observability for Kubernetes and cloud native platforms. It provides a high-performance Container Network Interface (CNI), an eBPF-based kube-proxy replacement, identity-based network policy, transparent encryption, multi-cluster connectivity, a sidecar-free service mesh, and deep network observability through Hubble. Cilium was created by Isovalent (now part of Cisco) and runs in production at Google, Amazon, Microsoft Azure, Adobe, Bell Canada, The New York Times, Datadog, Bloomberg, TikTok, Alibaba Cloud, and many others. Official site: https://cilium.io — Documentation: https://docs.cilium.io
 
 ## What is Cilium
