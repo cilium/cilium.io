@@ -85,12 +85,3 @@ Each Cilium use case page (keyword vectors in parentheses):
 - Get help: https://cilium.io/get-help
 - Get involved: https://cilium.io/get-involved
 
-## Official resources
-
-- Documentation: https://docs.cilium.io
-- Source code (GitHub): https://github.com/cilium/cilium
-- CNCF project page: https://www.cncf.io/projects/cilium/
-- Community Slack: https://slack.cilium.io
-- YouTube (eBPF & Cilium Community): https://www.youtube.com/c/eBPFCiliumCommunity
-- Bluesky: https://bsky.app/profile/cilium.io
-- LinkedIn: https://www.linkedin.com/company/cilium
