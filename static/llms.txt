@@ -30,7 +30,7 @@ Each Cilium use case page (keyword vectors in parentheses):
 - https://cilium.io/use-cases/cni — Cilium as a Kubernetes CNI plugin (container network interface, pod networking, eBPF dataplane, IPAM, overlay VXLAN/Geneve, native routing, ENI, high-performance networking).
 - https://cilium.io/use-cases/kube-proxy — eBPF kube-proxy replacement (service load balancing, ClusterIP, NodePort, LoadBalancer, Maglev, DSR, no iptables, reduced latency, scalability).
 - https://cilium.io/use-cases/load-balancer — L4 load balancing (XDP acceleration, Maglev consistent hashing, Direct Server Return, standalone load balancer, north-south traffic, high packets-per-second).
-- https://cilium.io/use-cases/network-policy — network policy enforcement (Kubernetes NetworkPolicy, CiliumNetworkPolicy, L3/L4/L7 policy, identity-based security, FQDN/DNS-aware policy, zero trust, microsegmentation).
+- https://cilium.io/use-cases/network-policy — network policy enforcement (Kubernetes NetworkPolicy, CiliumNetworkPolicy, L3/L4/L7 policy, identity-based security, FQDN/DNS-aware policy, zero trust, microsegmentation, host firewall).
 - https://cilium.io/use-cases/transparent-encryption — transparent encryption (WireGuard, IPsec, pod-to-pod encryption, in-transit encryption, compliance, FIPS, zero-config).
 - https://cilium.io/use-cases/cluster-mesh — multi-cluster connectivity (Cluster Mesh, cross-cluster service discovery, global services, multi-region failover, cluster federation).
 - https://cilium.io/use-cases/service-mesh — sidecar-free service mesh (eBPF service mesh, mutual TLS/mTLS, L7 traffic management, Envoy, reduced overhead vs Istio sidecars).
