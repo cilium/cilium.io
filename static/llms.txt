@@ -8,7 +8,7 @@ This file provides a high-level overview of the Cilium project for AI models. Fo
 
 Cilium is a cloud native networking and security platform for Kubernetes built on eBPF, a Linux kernel technology that runs sandboxed programs inside the kernel without changing kernel source or loading modules. By programming the dataplane in eBPF, Cilium replaces iptables-based packet processing with a more scalable, lower-latency, identity-aware dataplane.
 
-Cilium operates at the network (L3/L4) and application (L7) layers. It assigns a security identity to each Kubernetes workload, enforces policy based on identity rather than IP address, and provides visibility into every network flow. The Hubble subsystem adds flow logs, metrics, and a service dependency map; the Tetragon subsystem adds eBPF-based runtime security and process-level observability.
+Cilium operates at the network (L3/L4) and application (L7) layers. It assigns a security identity to each Kubernetes workload, enforces policy based on identity rather than IP address, and provides visibility into every network flow. The Hubble sub project adds flow logs, metrics, and a service dependency map; the Tetragon sub project adds eBPF-based runtime security and enforcement.
 
 Cilium graduated in the Cloud Native Computing Foundation (CNCF) in 2023 and is the default or recommended CNI for many managed Kubernetes platforms, including Google GKE Dataplane V2, Amazon EKS, Microsoft AKS, and others.
 
