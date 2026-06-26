@@ -44,7 +44,7 @@ Each Cilium use case page (keyword vectors in parentheses):
 - https://cilium.io/use-cases/multicast — eBPF multicast (multicast routing in Kubernetes, IGMP, low-latency multicast for financial and media workloads).
 - https://cilium.io/use-cases/network-flow-logs — network flow logs (Hubble flow data, L3/L4/L7 visibility, DNS visibility, identity-aware logging, security auditing, traffic forensics).
 - https://cilium.io/use-cases/metrics-export — metrics and tracing export (Prometheus, OpenTelemetry, Grafana dashboards, Hubble metrics, observability pipeline).
-- https://cilium.io/use-cases/protocol-visibility — L7 protocol visibility (HTTP, gRPC, Kafka, DNS inspection, API-aware visibility without sidecars).
+- https://cilium.io/use-cases/protocol-visibility — L7 protocol visibility (HTTP, gRPC, DNS inspection, API-aware visibility without sidecars).
 - https://cilium.io/use-cases/service-map — service dependency map (service topology, Hubble UI, automatic service discovery, traffic flow visualization).
 - https://cilium.io/use-cases/runtime-security — runtime security (Tetragon, eBPF observability, process execution monitoring, kernel-level enforcement, file and network access monitoring, threat detection).
 
