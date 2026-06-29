@@ -73,7 +73,7 @@ Each page below answers a specific question about deploying Cilium:
 
 ## Ecosystem and subprojects
 
-- **Hubble** — networking and security observability layer built on Cilium and eBPF: flow logs, metrics, and service map.
+- **Hubble** — networking and security observability layer built on Cilium and eBPF: flow logs, metrics, and service map. https://docs.cilium.io/en/stable/observability/hubble/
 - **Tetragon** — eBPF-based runtime security and observability for process, file, and network events. https://tetragon.io
 - **eBPF** — the Linux kernel technology Cilium is built on. https://ebpf.io
 
