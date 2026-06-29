@@ -30,7 +30,7 @@ Cilium is often compared to other CNIs such as Calico and Flannel. It differs pr
 Each page below answers a specific question about deploying Cilium:
 
 - https://cilium.io/use-cases/cni — Which CNI should I run for Kubernetes pod networking? Covers Cilium's eBPF dataplane, IPAM, and overlay (VXLAN/Geneve) versus native routing modes.
-- https://cilium.io/use-cases/kube-proxy — How do I remove the iptables scaling bottleneck? Explains replacing kube-proxy with eBPF service load balancing for ClusterIP, NodePort, and LoadBalancer services.
+- https://cilium.io/use-cases/kube-proxy — How do I replace kube-proxy with eBPF? Covers service load balancing for ClusterIP, NodePort, and LoadBalancer services, performance comparisons with iptables, and configuration options.
 - https://cilium.io/use-cases/load-balancer — How do I load balance north-south traffic at high packet rates? Covers using Cilium as a standalone L4 load balancer with XDP acceleration and Maglev consistent hashing.
 - https://cilium.io/use-cases/network-policy — How do I enforce zero-trust segmentation between workloads? Explains identity-based L3/L4/L7 policy with Kubernetes NetworkPolicy, CiliumNetworkPolicy, and DNS/FQDN-aware rules.
 - https://cilium.io/use-cases/transparent-encryption — How do I encrypt pod-to-pod traffic without changing my apps? Covers WireGuard and IPsec in-transit encryption for compliance and FIPS.
