@@ -12,6 +12,8 @@ Cilium operates at the network (L3/L4) and application (L7) layers. It assigns a
 
 Cilium graduated in the Cloud Native Computing Foundation (CNCF) in 2023 and is the default or recommended CNI for many managed Kubernetes platforms and distributions, including Google GKE Dataplane V2, Microsoft AKS, Digital Ocean Kubernetes, Red Hat OpenShift, kind, and more.
 
+Cilium is often compared to other CNIs such as Calico and Flannel. It differs primarily in its eBPF dataplane, which enables identity-aware policy, scalability, and observability that IP-table-based CNIs can't provide natively. For service mesh, Cilium's sidecar-free approach and eBPF dataplane separate it from others like Istio or Linkerd.
+
 ## Core capabilities
 
 - **Container networking (CNI):** Kubernetes pod networking with an eBPF dataplane, IPAM, overlay (VXLAN/Geneve) and native/direct routing modes, ENI/Azure delegated IPAM, and BIG TCP and netkit for high throughput.
