@@ -52,7 +52,7 @@ const testimonials = [
     CTAs: [
       {
         CTAtext: 'Watch the talk',
-        url: 'https://www.youtube.com/watch?v=YNDp7Id7Bb',
+        url: 'https://www.youtube.com/watch?v=YNDp7Id7Bbs',
       },
     ],
     title: "Don't Get Blown up! Avoiding Configuration Gotchas for Tetragon Newbies",
