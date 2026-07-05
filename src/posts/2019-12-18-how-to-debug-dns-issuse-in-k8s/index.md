@@ -287,7 +287,7 @@ identify and track down DNS issues in your Kubernetes cluster.
 
 To get started:
 
-- Install Cilium using any of the [Installation instrutions](http://docs.cilium.io/en/v1.6/gettingstarted/#installation)
+- Install Cilium using any of the [Installation instructions](http://docs.cilium.io/en/v1.6/gettingstarted/#installation)
 - Deploy Hubble with the metrics dashboard configured: [Setting up Hubble Metrics with Grafana](https://github.com/cilium/hubble/tree/v0.5/tutorials/deploy-hubble-and-grafana)
 - Enable [DNS visiblity](https://github.com/cilium/hubble/blob/v0.5/Documentation/dns_visibility.md)
 - Check out [Cilium Slack] for questions and answers
