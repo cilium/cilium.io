@@ -19,6 +19,8 @@ import authors from 'utils/author-data';
 
 # How k0rdent and Cilium Turn Kubernetes Sprawl into a Platform
 
+![cover-once-consistent-everywhere](images/ebee-k0rdent-header.png)
+
 If you have spent time running Kubernetes in the real world, you know the catch: standing up one cluster is the easy part. The hard part starts when one cluster becomes ten, then a hundred, spread across cloud providers, bare metal, and on-prem environments.
 
 That is where k0rdent and Cilium fit together very well.
