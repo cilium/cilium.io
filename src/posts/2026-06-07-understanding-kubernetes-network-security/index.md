@@ -4,7 +4,7 @@ date: 2026-06-07T09:00:00.000Z
 title: 'Understanding Kubernetes Network Security'
 isFeatured: false
 ogImage: images/cilium-node-agent.png
-ogSummary: 'A comprehensive guide to Understand Kubernetes Network Security. Explore how to move beyond traditional IP firewalls, enforce zero-trust microsegmentation, and secure cloud-native environments using modern eBPF-powered tools like Cilium and robust Network Policies.'
+ogSummary: 'A comprehensive guide to understanding Kubernetes Network Security. Explore how to move beyond traditional IP firewalls, enforce zero-trust microsegmentation, and secure cloud-native environments using modern eBPF-powered tools like Cilium and robust Network Policies.'
 
 categories:
   - Security

@@ -185,7 +185,7 @@ to all Cilium users as Kubernetes gains underlying support on the scheduler side
 
 ## Getting started with Cilium
 
-- Install Cilium using any of the [Installation instrutions](http://docs.cilium.io/en/v1.6/gettingstarted/#installation)
+- Install Cilium using any of the [Installation instructions](http://docs.cilium.io/en/v1.6/gettingstarted/#installation)
 - Getting started with AWS ENI: [AWS ENI guide](https://docs.cilium.io/en/v1.6/gettingstarted/aws-eni/)
 - Getting started with BGP: [BGP guide](https://docs.cilium.io/en/v1.6/gettingstarted/kube-router/) (Trip.com replaced kube-router with BIRD)
 
