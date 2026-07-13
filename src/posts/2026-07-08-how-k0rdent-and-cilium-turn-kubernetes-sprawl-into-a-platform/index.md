@@ -17,7 +17,6 @@ tags:
 
 import authors from 'utils/author-data';
 
-# How k0rdent and Cilium Turn Kubernetes Sprawl into a Platform
 
 ![cover-once-consistent-everywhere](images/ebee-k0rdent-header.png)
 
