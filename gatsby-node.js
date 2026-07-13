@@ -628,6 +628,6 @@ exports.createSchemaCustomization = ({ actions }) => {
 
 // Regenerate llms-full.txt from the current pages and posts on every build so the
 // published file never drifts from the site content it inlines.
-exports.onPostBuild = () => {
-  writeLlmsFull(Path.join(__dirname, 'public', 'llms-full.txt'));
+exports.onPostBuild = async () => {
+  await writeLlmsFull(Path.join(__dirname, 'public', 'llms-full.txt'));
 };

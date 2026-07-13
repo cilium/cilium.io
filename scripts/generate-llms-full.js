@@ -411,10 +411,10 @@ function generate() {
     .trimEnd()}\n`;
 }
 
-function writeLlmsFull(dest) {
+async function writeLlmsFull(dest) {
   const result = generate();
-  fs.mkdirSync(path.dirname(dest), { recursive: true });
-  fs.writeFileSync(dest, result);
+  await fs.promises.mkdir(path.dirname(dest), { recursive: true });
+  await fs.promises.writeFile(dest, result);
   return result.length;
 }
 
@@ -422,6 +422,7 @@ module.exports = { generate, writeLlmsFull };
 
 if (require.main === module) {
   const dest = process.argv[2] || path.join(ROOT, 'public/llms-full.txt');
-  const bytes = writeLlmsFull(dest);
-  console.error('WROTE', dest, bytes, 'bytes');
+  writeLlmsFull(dest).then((bytes) => {
+    console.error('WROTE', dest, bytes, 'bytes');
+  });
 }
