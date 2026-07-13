@@ -146,4 +146,8 @@ export default {
     bio: `André Martins is a Cilium maintainer and Software Engineer, Isovalent at Cisco.
     Feroz Salam is a member of the Cilium Security Team and a Security Engineer, Isovalent at Cisco.`,
   },
+  ChristianHernandez: {
+    header: `Christian Hernandez`,
+    bio: `Christian is a well rounded technologist with experience in infrastructure engineering, systems administration, enterprise architecture, tech support, advocacy, and product management. Passionate about OpenSource and containerizing the world one application at a time. He is currently a maintainer of the Argo Project and OpenGitops. Currently, he works as a Technical Marketing Engineer and Tech Lead at Cisco. He focuses on GitOps practices, DevOps, Kubernetes, Network Security, and Containers.`,
+  },
 };
