@@ -16,7 +16,7 @@ const cardItems = [
     description:
       'For live conversation and quick questions, join the Cilium Slack workspace. Don’t forget to say hi!',
     buttonText: 'Join slack workspace',
-    buttonUrl: 'https://slack.cilium.io',
+    buttonUrl: 'https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack',
     buttonTarget: '_blank',
   },
   {

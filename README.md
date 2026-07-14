@@ -9,7 +9,7 @@
 
 <!-- Horizontal badges -->
 <p align="center">
-  <a href="https://cilium.io">
+  <a href="https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack">
     <img src="https://img.shields.io/badge/Website-cilium.io-blue?style=for-the-badge">
   </a>
   <a href="https://docs.cilium.io/en/stable/">
@@ -18,7 +18,7 @@
   <a href="https://github.com/cilium/cilium">
     <img src="https://img.shields.io/badge/GitHub-cilium/cilium-black?style=for-the-badge&logo=github">
   </a>
-  <a href="https://slack.cilium.io/">
+  <a href="https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack">
     <img src="https://img.shields.io/badge/Slack-Join%20Community-purple?style=for-the-badge&logo=slack">
   </a>
   <a href="https://www.youtube.com/c/eBPFCiliumCommunity/">

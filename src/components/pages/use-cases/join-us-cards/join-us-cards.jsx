@@ -14,7 +14,7 @@ const items = [
     description:
       'Cilium is an open source project that anyone in the community can use, improve, and enjoy. We&apos;d love you to join us on Slack! Find out what&apos;s happening and get involved.',
     buttonText: 'Join the Slack',
-    buttonLink: 'https://slack.cilium.io',
+    buttonLink: 'https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack',
     buttonTarget: '_blank',
   },
   {

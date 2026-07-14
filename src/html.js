@@ -19,7 +19,7 @@ const orgSchema = {
     'https://github.com/cilium',
     'https://twitter.com/ciliumproject',
     'https://www.linkedin.com/company/cilium',
-    'https://slack.cilium.io',
+    'https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack',
     'https://www.youtube.com/channel/UCJFUxkVQTBJh3LD1wYBWvuQ',
   ],
   memberOf: {
