@@ -26,7 +26,7 @@ const links = [
   },
   {
     text: 'Reach out on Slack with questions',
-    url: 'https://slack.cilium.io',
+    url: 'https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack',
     target: '_blank',
   },
 ];

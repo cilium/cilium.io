@@ -18,7 +18,7 @@ const items = [
     icon: slackIcon,
     title: 'Join our Slack channel',
     titleWidth: 'xl:w-32',
-    url: 'https://slack.cilium.io',
+    url: 'https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack',
     target: '_blank',
   },
   {
