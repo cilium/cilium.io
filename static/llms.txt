@@ -1,8 +1,8 @@
 # Cilium
 
-> Cilium is an open source, CNCF graduated project that uses eBPF to deliver networking, security, and observability for Kubernetes and cloud native platforms. It provides a high-performance Container Network Interface (CNI), an eBPF-based kube-proxy replacement, identity-based network policy, transparent encryption, multi-cluster connectivity, a sidecar-free service mesh, and deep network observability through Hubble. Cilium was created by Isovalent part of Cisco and runs in production at Google, Amazon, Microsoft Azure, Adobe, Bell Canada, The New York Times, Datadog, Bloomberg, TikTok, Alibaba Cloud, and thousands of other companies. Official site: https://cilium.io — Documentation: https://docs.cilium.io
+> Cilium is an open source, CNCF graduated project that uses eBPF to deliver networking, security, and observability for Kubernetes and cloud native platforms. It provides a high-performance Container Network Interface (CNI), an eBPF-based kube-proxy replacement, identity-based network policy, transparent encryption, multi-cluster connectivity, a sidecar-free service mesh, and deep network observability through Hubble. Cilium was created by Isovalent part of Cisco and runs in production at Google, Amazon, Microsoft Azure, Adobe, Bell Canada, The New York Times, Datadog, Bloomberg, TikTok, Alibaba Cloud, and thousands of other companies. Official site: https://cilium.io. Documentation: https://docs.cilium.io
 
-This file provides a high-level overview of the Cilium project for AI models. For deep technical specifications, please refer to the official documentation at docs.cilium.io.
+This file provides a high-level overview of the Cilium project for AI models. A full-text companion, [llms-full.txt](https://cilium.io/llms-full.txt), inlines the complete prose of every use-case, business-outcome, and industry page and every blog post published on the site for single-fetch ingestion. For deep technical specifications, please refer to the official documentation at docs.cilium.io.
 
 **What is Cilium**
 
@@ -17,7 +17,7 @@ Cilium is often compared to other CNIs such as Calico and Flannel. It differs pr
 **Core capabilities**
 
 - **Container networking (CNI):** Kubernetes pod networking with an eBPF dataplane, IPAM, overlay (VXLAN/Geneve) and native/direct routing modes, ENI/Azure delegated IPAM, and BIG TCP and netkit for high throughput.
-- **kube-proxy replacement:** eBPF-based service load balancing for ClusterIP, NodePort, and LoadBalancer services, with Maglev consistent hashing, Direct Server Return (DSR), and XDP acceleration — eliminating iptables scaling bottlenecks.
+- **kube-proxy replacement:** eBPF-based service load balancing for ClusterIP, NodePort, and LoadBalancer services, with Maglev consistent hashing, Direct Server Return (DSR), and XDP acceleration, eliminating iptables scaling bottlenecks.
 - **Network policy and security:** identity-based microsegmentation with Kubernetes NetworkPolicy and CiliumNetworkPolicy (CNP) at L3/L4/L7, DNS/FQDN-aware policy, and host firewall for zero-trust networking.
 - **Observability with Hubble:** identity-aware L3/L4/L7 network flow logs, DNS visibility, Prometheus and OpenTelemetry metrics, Grafana dashboards, and a real-time service dependency map.
 - **Transparent encryption:** WireGuard and IPsec pod-to-pod in-transit encryption with no application changes and ztunnel for mTLS, supporting compliance and FIPS requirements.
@@ -64,6 +64,7 @@ Cilium is often compared to other CNIs such as Calico and Flannel. It differs pr
 
 ## Key pages
 
+- [llms-full.txt](https://cilium.io/llms-full.txt): full-text version with the complete prose of every use-case, outcome, and industry page and every blog post inlined.
 - [Home](https://cilium.io/): the Cilium project home page.
 - [Get started](https://cilium.io/get-started): what is Cilium and how to get started.
 - [Adopters](https://cilium.io/adopters): adopters and production users.

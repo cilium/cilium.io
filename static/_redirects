@@ -27,6 +27,7 @@
 /use-cases/runtime-enforcement/ /use-cases/runtime-security/ 301
 
 /llm.txt /llms.txt 301
+/llm-full.txt /llms-full.txt 301
 
 https://blog.cilium.io/ https://cilium.io/blog/ 301!
 

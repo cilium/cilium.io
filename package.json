@@ -10,6 +10,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "generate:llms-full": "node scripts/generate-llms-full.js",
     "format": "prettier --write .",
     "lint": "npm run lint:js & npm run lint:md",
     "lint:fix": "npm run lint:js:fix & npm run lint:md:fix",

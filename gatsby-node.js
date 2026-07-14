@@ -1,6 +1,7 @@
 const fetch = require(`node-fetch`);
 const Path = require('path');
 
+const { writeLlmsFull } = require('./scripts/generate-llms-full');
 const { createEventFilters } = require('./src/utils/event-filters');
 const { EVENT_REGEX, EVENT_PER_PAGE } = require('./src/utils/events');
 const { EVENTS_BASE_PATH } = require('./src/utils/routes');
@@ -623,4 +624,10 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `;
   createTypes(typeDefs);
+};
+
+// Regenerate llms-full.txt from the current pages and posts on every build so the
+// published file never drifts from the site content it inlines.
+exports.onPostBuild = async () => {
+  await writeLlmsFull(Path.join(__dirname, 'public', 'llms-full.txt'));
 };
