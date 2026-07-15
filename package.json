@@ -87,7 +87,7 @@
     "gatsby-transformer-sharp": "^5.14.0",
     "husky": "^8.0.3",
     "lint-staged": "^16.0.0",
-    "markdownlint-cli": "^0.44.0",
+    "markdownlint-cli": "^0.49.1",
     "postcss": "^8.5.19",
     "postcss-import": "^16.1.0",
     "postcss-nesting": "^13.0.1",
