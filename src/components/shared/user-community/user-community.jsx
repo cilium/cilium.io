@@ -115,6 +115,7 @@ import LiquidReplyLogo from './images/liquid-reply.inline.svg';
 import MagicLeapLogo from './images/magic-leap.inline.svg';
 import MelenionLogo from './images/melenion.inline.svg';
 import MeltwaterLogo from './images/meltwater.inline.svg';
+import MichelinLogo from './images/michelin.inline.svg';
 import MobilabLogo from './images/mobilab.inline.svg';
 import MogeniusLogo from './images/mogenius.inline.svg';
 import MuxLogo from './images/mux.inline.svg';
@@ -319,6 +320,7 @@ const icons = {
   form3: Form3Logo,
   kubesphere: KubesphereLogo,
   meltwater: MeltwaterLogo,
+  michelin: MichelinLogo,
   palantir: PalantirLogo,
   postfinance: PostfinanceLogo,
   scaleway: ScalewayLogo,
