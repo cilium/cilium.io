@@ -51,7 +51,7 @@ const Cards = () => {
       links: [
         {
           title: 'Send on Slack',
-          url: 'https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack',
+          url: 'https://slack.cilium.io',
           target: '_blank',
         },
         {

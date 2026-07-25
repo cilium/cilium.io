@@ -92,7 +92,7 @@ const MobileMenu = ({ navigation, isOpen, handleOverlay, handleCloseClick }) => 
           <GithubStars className="bg-white dark:bg-gray-800" />
           <Button
             className="inline-flex items-center leading-none bg-white dark:bg-gray-800"
-            to="https://communityinviter.com/apps/cilium/cilium-and-ebpf-slack"
+            to="https://slack.cilium.io"
             target="_blank"
             rel="noopener noreferrer"
             theme="outline-gray"
