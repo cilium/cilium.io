@@ -1,6 +1,6 @@
 ---
 date: '2023-04-19T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/cilium-gateway-api-advanced/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
+externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab#/lab/cilium-gateway-api-advanced'
 ogImage: cover.jpg
 categories:
   - Networking

@@ -1,6 +1,6 @@
 ---
 date: '2023-07-18T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/cilium-transparent-encryption-with-ipsec-and-wireguard/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
+externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab#/lab/cilium-transparent-encryption-with-ipsec-and-wireguard'
 ogImage: cover.jpg
 categories:
   - Security

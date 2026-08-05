@@ -1,6 +1,6 @@
 ---
 date: '2024-03-15T14:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/cilium-envoy-l7-proxy/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise'
+externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise#/lab/cilium-envoy-l7-proxy'
 ogImage: cover.png
 categories:
   - Networking

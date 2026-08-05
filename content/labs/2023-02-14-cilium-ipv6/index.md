@@ -1,6 +1,6 @@
 ---
 date: '2023-02-14T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/cilium-ipv6/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
+externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab#/lab/cilium-ipv6'
 ogImage: cover.jpg
 categories:
   - Networking

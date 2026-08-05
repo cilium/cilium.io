@@ -1,6 +1,6 @@
 ---
 date: '2023-07-23T12:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/cilium-lb-ipam-l2-announcements/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
+externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab#/lab/cilium-lb-ipam-l2-announcements'
 ogImage: cover.jpg
 categories:
   - Networking

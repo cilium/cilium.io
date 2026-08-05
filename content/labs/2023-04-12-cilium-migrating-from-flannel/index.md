@@ -1,6 +1,6 @@
 ---
 date: '2023-04-12T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/cilium-migrating-from-flannel/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
+externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab#/lab/cilium-migrating-from-flannel'
 ogImage: cover.jpg
 categories:
   - Networking

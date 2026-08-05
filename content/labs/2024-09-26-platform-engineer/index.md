@@ -1,6 +1,6 @@
 ---
 date: '2024-09-26T14:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/discovery-platform-engineer/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise'
+externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise#/lab/discovery-platform-engineer'
 ogImage: cover.png
 categories:
   - Getting Started

@@ -1,6 +1,6 @@
 ---
 date: '2024-09-26T14:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/cilium-traffic-optimization/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise'
+externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-enterprise#/lab/cilium-traffic-optimization'
 ogImage: cover.png
 categories:
   - Networking

@@ -1,6 +1,6 @@
 ---
 date: '2023-05-17T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/hubble-grafana-golden-signals/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
+externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab#/lab/hubble-grafana-golden-signals'
 ogImage: cover.jpg
 categories:
   - Observability

@@ -1,6 +1,6 @@
 ---
 date: '2022-11-21T11:00:00.000Z'
-externalUrl: 'https://isovalent.com/labs/cilium-egress-gateway/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab'
+externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab#/lab/cilium-egress-gateway'
 ogImage: cover.jpg
 categories:
   - Networking
