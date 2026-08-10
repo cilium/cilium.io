@@ -48,10 +48,10 @@ and IPv6 egress pod traffic and that ingress denial is not currently supported. 
 can return explicit responses such as HTTP 403 or DNS REFUSED. The quiet case is the L3/L4 default,
 which is also the most commonly deployed.
 
-Blast radius is decided by a selector rather than a percentage. In a namespaced
-`CiliumNetworkPolicy`, `endpointSelector: {}` selects all endpoints in that namespace. In a
-`CiliumClusterwideNetworkPolicy`, an empty selector can have cluster-wide scope. Neither is a
-gradual anything.
+Blast radius is decided by a selector rather than a percentage. A `CiliumNetworkPolicy` is
+namespaced, so `endpointSelector: {}` covers every endpoint in its namespace. A
+`CiliumClusterwideNetworkPolicy` is cluster-scoped, so an equally broad selector reaches endpoints
+across namespaces. Neither is a gradual anything.
 
 ## Cilium already ships something close to the missing primitive
 
@@ -138,8 +138,10 @@ spec:
 Label one deployment `rollout-group: canary`, watch it, then add the label to the next tranche. It is
 a coarse, deterministic rollout mechanism, but it requires a dedicated rollout label, a pre-apply
 endpoint count and list, representative dependency coverage, and validation against the full
-effective policy set. Multiple policy types can overlap and deny rules take precedence, so the
-candidate policy is never the only thing deciding the outcome.
+effective policy set. Multiple policy types can overlap, and the documentation is explicit that
+"deny policies take precedence over allow policies, regardless of whether they are a Cilium Network
+Policy, a Clusterwide Cilium Network Policy or even a Kubernetes Network Policy", so the candidate
+policy is never the only thing deciding the outcome.
 
 Give promotion an explicit gate: all intended endpoints matched, policy status valid, and no
 unexplained audit or drop verdicts across a representative traffic window.
