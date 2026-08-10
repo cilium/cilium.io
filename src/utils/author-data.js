@@ -150,4 +150,11 @@ export default {
     header: `Christian Hernandez`,
     bio: `Christian is a well rounded technologist with experience in infrastructure engineering, systems administration, enterprise architecture, tech support, advocacy, and product management. Passionate about OpenSource and containerizing the world one application at a time. He is currently a maintainer of the Argo Project and OpenGitops. Currently, he works as a Technical Marketing Engineer and Tech Lead at Cisco. He focuses on GitOps practices, DevOps, Kubernetes, Network Security, and Containers.`,
   },
+  SanthoshSomarapu: {
+    header: `Santhosh Kumar Somarapu`,
+    bio: `Santhosh is a Senior Software Engineer with ten years building and operating large-scale
+    distributed systems. He works on infrastructure reliability for revenue-critical platform services,
+    focusing on configuration safety, dependency resilience, and catching bad changes before they reach
+    production.`,
+  },
 };
