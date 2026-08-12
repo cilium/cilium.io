@@ -4,7 +4,6 @@ externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=r
 ogImage: cover.png
 categories:
   - Networking
-  - Security
 place: Online
 title: 'Cilium for Virtual Machines with KubeVirt'
 ogSummary: 'Run VMs and containers side by side with Cilium-powered networking.'
