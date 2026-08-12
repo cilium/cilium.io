@@ -1,6 +1,7 @@
 ---
 date: '2024-10-04T15:36:43.000Z'
 externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab#/lab/cilium-kubevirt'
+ogImage: cover.png
 categories:
   - Networking
   - Security

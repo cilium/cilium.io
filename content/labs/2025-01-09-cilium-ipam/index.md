@@ -1,6 +1,7 @@
 ---
 date: '2025-01-09T18:38:43.000Z'
 externalUrl: 'https://labs.isovalent.com/?utm_source=website-cilium&utm_medium=referral&utm_campaign=cilium-lab#/lab/cilium-ipam'
+ogImage: cover.png
 categories:
   - Networking
 place: Online
