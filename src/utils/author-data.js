@@ -150,4 +150,9 @@ export default {
     header: `Christian Hernandez`,
     bio: `Christian is a well rounded technologist with experience in infrastructure engineering, systems administration, enterprise architecture, tech support, advocacy, and product management. Passionate about OpenSource and containerizing the world one application at a time. He is currently a maintainer of the Argo Project and OpenGitops. Currently, he works as a Technical Marketing Engineer and Tech Lead at Cisco. He focuses on GitOps practices, DevOps, Kubernetes, Network Security, and Containers.`,
   },
+  AkilaInduranga: {
+    header: `Akila Induranga`,
+    bio: `Akila is a Senior Software Engineer at WSO2, and a maintainer of <a href="https://openchoreo.dev/" target="_blank" rel="noopener noreferrer">OpenChoreo</a>, an open-source internal developer platform for Kubernetes and a CNCF sandbox project.
+    He works on the platform's observability and networking layers, including the Cilium-based networking module that brings identity-based policy and Hubble observability to OpenChoreo cells.`,
+  },
 };
