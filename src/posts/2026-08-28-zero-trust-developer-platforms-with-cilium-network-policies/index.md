@@ -1,6 +1,6 @@
 ---
 path: /blog/2026/08/28/zero-trust-developer-platforms-with-cilium-network-policies
-date: 2026-08-28T12:00:00.000Z
+date: '2026-08-28T12:00:00.000Z'
 title: 'Zero-Trust Developer Platforms with Cilium Network Policies'
 isFeatured: false
 ogImage: images/cover.png
