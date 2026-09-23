@@ -2,7 +2,7 @@
 path: /blog/2026/09/23/cilium-at-kubecon-na-26
 date: '2026-09-23T12:00:00.000Z'
 title: 'Cilium at KubeCon + CloudNativeCon and CiliumCon North America 2026'
-isFeatured: true
+isPopular: true
 ogImage: ogimage.png
 ogSummary: 'Learn how to engage with Cilium at KubeCon + CloudNativeCon and CiliumCon North America 2026 in Salt Lake City.'
 
