@@ -70,10 +70,6 @@ Walmart Global Tech will share the hybrid migration strategy that moved hundreds
  
 A Maintainer Track session covering Cilium's latest development, from Gateway API features like TCPRoute and ListenerSet to new eBPF datapath plugins, plus community updates and how to get involved.
  
-**[Extending NetworkPolicy to RDMA: Hardware-Enforced Tenant Isolation for AI Clusters](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1249358)** Pavani Panakanti & Jayanth Varavani, AWS | Wednesday, November 11 | 1:20 - 2:20 PM | Poster Session
- 
-RDMA bypasses the kernel entirely, leaving policy engines like Cilium blind to it. This poster session will present a hardware-enforced pattern to close that gap on multi-tenant AI clusters.
- 
 **[Managing Network Security in Multi-Tenant Environments with Istio and Cilium](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247970)** Michael Bolot & Zaira Shaikh, GEICO | Thursday, November 12 | 11:00 - 11:30 AM
  
 GEICO will share how they layer Cilium Network Policies for broad network boundaries with Istio authorization policies for application-layer zero trust.
