@@ -59,6 +59,7 @@ import OverstockLogo from './images/overstock.inline.svg';
 import OvhCloudLogo from './images/ovh.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
 import PalarkLogo from './images/palark.inline.svg';
+import PaypalLogo from './images/paypal.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
 import PlusserverLogo from './images/plusserver.inline.svg';
 import PostFinanceLogo from './images/postfinance.inline.svg';
@@ -186,6 +187,7 @@ const logos = {
   docaposte: DocaposteLogo,
   zynga: ZyngaLogo,
   telefonica: TelefonicaLogo,
+  paypal: PaypalLogo,
 };
 
 const AdoptersLogo = ({ items, className }) => (

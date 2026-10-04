@@ -10,6 +10,10 @@ export default {
       },
     ],
   },
+  paypal: {
+    iconName: 'paypal',
+    text: '<b>PayPal</b> uses Cilium for cloud-native networking, scale, and security across their infrastructure.',
+  },
   etraveli: {
     iconName: 'etraveli',
     text: '<b>Etraveli Group</b> uses Cilium to replace legacy on-premises hardware load balancers',
