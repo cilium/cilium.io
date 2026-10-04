@@ -207,6 +207,7 @@ const {
   xata,
   pagali,
   michelin,
+  paypal,
 } = caseStudiesData;
 
 const hero = {
@@ -320,6 +321,7 @@ const userCommunity1 = {
     telefonica,
     cleverCloud,
     michelin,
+    paypal,
   ],
 };
 

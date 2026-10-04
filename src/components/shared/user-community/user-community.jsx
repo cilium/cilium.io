@@ -137,6 +137,7 @@ import OVHcloudLogo from './images/ovh.inline.svg';
 import PagaliLogo from './images/pagali.inline.svg';
 import PalantirLogo from './images/palantir.inline.svg';
 import ParseableLogo from './images/parseable.inline.svg';
+import PaypalLogo from './images/paypal.inline.svg';
 import PlaidLogo from './images/plaid.inline.svg';
 import PlanetscaleLogo from './images/planetscale.inline.svg';
 import PlusserverLogo from './images/plusserver.inline.svg';
@@ -404,6 +405,7 @@ const icons = {
   telefonica: TelefonicaLogo,
   xata: XataLogo,
   pagali: PagaliLogo,
+  paypal: PaypalLogo,
 };
 
 const UserCommunity = ({
