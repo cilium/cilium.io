@@ -177,6 +177,7 @@ import SoloLogo from './images/solo.inline.svg';
 import SonyLogo from './images/sony.inline.svg';
 import SpectroCloudLogo from './images/spectrocloud.inline.svg';
 import SpherityLogo from './images/spherity.inline.svg';
+import SplunkLogo from './images/splunk.inline.svg';
 import SportradarLogo from './images/sportradar.inline.svg';
 import SproutfiLogo from './images/sproutfi.inline.svg';
 import StreamSecurityLogo from './images/streamsecurity.inline.svg';
@@ -278,6 +279,7 @@ const icons = {
   schubergPhilis: SchubergPhilisLogo,
   plaid: PlaidLogo,
   superorbital: SuperorbitalLogo,
+  splunk: SplunkLogo,
   sproutfi: SproutfiLogo,
   solo: SoloLogo,
   melenion: MelenionLogo,

@@ -18,6 +18,7 @@ import ByteDanceLogo from './images/bytedance.inline.svg';
 import CanonicalLogo from './images/canonical.inline.svg';
 import CapitalOneLogo from './images/capitalone.inline.svg';
 import CengnLogo from './images/cengn.inline.svg';
+import CelonisLogo from './images/celonis.inline.svg';
 import CistecLogo from './images/cistec.inline.svg';
 import CivoLogo from './images/civo.inline.svg';
 import CleverCloudLogo from './images/clevercloud.inline.svg';
@@ -32,6 +33,7 @@ import EficodeLogo from './images/eficode.inline.svg';
 import ElasticPathLogo from './images/elasticpath.inline.svg';
 import EquinixLogo from './images/equinix.inline.svg';
 import Et888Logo from './images/et888.inline.svg';
+import EtraveliLogo from './images/etraveli.inline.svg';
 import F5Logo from './images/f5.inline.svg';
 import FlipkartLogo from './images/flipkart.inline.svg';
 import Form3Logo from './images/form3.inline.svg';
@@ -76,6 +78,7 @@ import SicrediLogo from './images/sicredi.inline.svg';
 import SkyBetLogo from './images/skybet.inline.svg';
 import SmartNewsLogo from './images/smartnews.inline.svg';
 import SovereignCloud from './images/sovereign.inline.svg';
+import SplunkLogo from './images/splunk.inline.svg';
 import SportRadarLogo from './images/sportradar.inline.svg';
 import SuperOrbitalLogo from './images/superorbital.inline.svg';
 import SysElevenLogo from './images/syseleven.inline.svg';
@@ -112,6 +115,7 @@ const logos = {
   capitalone: CapitalOneLogo,
   canonical: CanonicalLogo,
   cengn: CengnLogo,
+  celonis: CelonisLogo,
   cistec: CistecLogo,
   civo: CivoLogo,
   clickhouse: ClickHouseLogo,
@@ -124,6 +128,7 @@ const logos = {
   eficode: EficodeLogo,
   elasticpath: ElasticPathLogo,
   equinix: EquinixLogo,
+  etraveli: EtraveliLogo,
   et888: Et888Logo,
   f5: F5Logo,
   flipkart: FlipkartLogo,
@@ -168,6 +173,7 @@ const logos = {
   smartnews: SmartNewsLogo,
   skybet: SkyBetLogo,
   sovereigncloud: SovereignCloud,
+  splunk: SplunkLogo,
   sportradar: SportRadarLogo,
   superorbital: SuperOrbitalLogo,
   tailorbrands: TailorBrandsLogo,
