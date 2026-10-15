@@ -8,6 +8,7 @@ import UseCaseCard from 'components/pages/use-cases/use-case-card';
 import Community from 'components/shared/community';
 import Heading from 'components/shared/heading';
 import SEO from 'components/shared/seo';
+import CelonisLogo from 'icons/celonis.inline.svg';
 import DigitalOceanLogo from 'icons/digitalocean.inline.svg';
 import MeltwaterLogo from 'icons/logo-meltwater.inline.svg';
 import SysElevenLogo from 'icons/logo-syseleven.inline.svg';
@@ -93,6 +94,18 @@ const sectionContent4 = {
 };
 
 const testimonials = [
+    {
+    logo: CelonisLogo,
+    title: 'One Networking Stack Across Three Clouds',
+    description:
+      'Celonis replaced six different CNIs and separate mTLS implementations across AWS, Azure, and GCP with Cilium, standardizing networking, security, and observability for 150+ clusters in 22 regions with no customer downtime.',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/celonis/',
+      },
+    ],
+  },
   {
     logo: DigitalOceanLogo,
     title: 'One CNI to Power Customer and Internal Infrastructure',
