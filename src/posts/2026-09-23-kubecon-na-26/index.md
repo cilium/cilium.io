@@ -18,7 +18,7 @@ import authors from 'utils/author-data';
 
 Cilium is heading back to Salt Lake City this November for KubeCon + CloudNativeCon and CiliumCon North America 2026. Since coming together at CiliumCon Europe in Amsterdam this spring, the community has been busy building improvements and new features into the project. Cilium 1.20 was shipped in July, stabilizing multi-pool IPAM and adding Gateway API ExternalAuth and TCPRoute/UDPRoute support, and sub-project Tetragon shipped 1.7 in May, bringing more precise filtering and runtime context.
 
-The talks for the upcoming event reflect these advancements and shifts in the industry. While Amsterdam's sessions focused on general adoption and multi-cluster scale, the schedule in Salt Lake City has more of a focus on AI infrastructure, covering areas like sizing IPv6 address space for dense GPU clusters, enforcing NetworkPolicy-style isolation on RDMA traffic, debugging inference workloads with eBPF, and bringing netkit's zero-copy datapath to Pods running high-throughput workloads. There will also be end user talks from Walmart, OpenAI, GEICO, and more.
+The talks for the upcoming event reflect these advancements and shifts in the industry. While Amsterdam's sessions focused on general adoption and multi-cluster scale, the schedule in Salt Lake City has more of a focus on AI infrastructure, covering areas like sizing IPv6 address space for dense GPU clusters, running OBI alongside Cilium, debugging inference workloads with eBPF, and bringing netkit's zero-copy datapath to Pods running high-throughput workloads. There will also be end user talks from Walmart, OpenAI, GEICO, and more.
 
 ## CiliumCon
 
@@ -34,9 +34,11 @@ Sidecarless mTLS was shipped in Cilium 1.19. It allows users to label a namespac
  
 ESnet will return to CiliumCon to present the next chapter of running Kubernetes on an IPv6-only network. They will share what broke while they built ClusterMesh with native routing, BGP, and multi-pool IPAM entirely without IPv4, and how they resolved it.
  
-**[Keynote](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1311961)** TBC, Isovalent | 10:15 - 10:20 AM
+**[After Mythos: The CVE Firehose Meets Tetragon](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1311961)** Liz Rice, Isovalent at Cisco | 10:15 - 10:20 AM
+
+With vulnerabilities arriving faster than teams can patch, runtime protection has to fill the gap. This sponsored keynote will cover the latest Tetragon developments for deploying eBPF-based guardrails and mitigations with no downtime.
  
-**[Don't Make a Mesh of It: Multi-Cluster Networking at Cloud Scale](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1268169)** Anubhab Majumdar & Vanessa Chammas, Microsoft; Vamsi Kalapala, Palantir | 10:40 - 11:05 AM
+**[Don't Make a Mesh of It: Multi-Cluster Networking at Cloud Scale](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1268169)** Anubhab Majumdar, Microsoft; Vamsi Kalapala, Palantir | 10:40 - 11:05 AM
  
 Using Cilium Cluster Mesh as a case study, this talk will cover what makes multi-cluster networking practical at cloud scale, from scoped service export to aligning the data path with network topology.
  
@@ -48,7 +50,7 @@ OpenAI will trace through rare packet loss in latency-sensitive inference worklo
  
 Dense AI clusters can exhaust private IPv4 space faster than teams expect. This talk will make the case that IPv6 is the substrate that lets AI-scale Kubernetes keep growing, with production examples and a live demo.
  
-**[Lightning Talk: One Kernel, Two eBPF Stacks: Running OBI Alongside Cilium](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1255649)** Antonio Jimenez Martinez, Isovalent at Cisco | 12:00 - 12:10 PM
+**[Lightning Talk: One Kernel, Two eBPF Stacks: Running OBI Alongside Cilium](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1255649)** Antonio Jimenez Martinez, Cisco | 12:00 - 12:10 PM
  
 OpenTelemetry eBPF Instrumentation (OBI) and Cilium both run eBPF programs on the same node. This talk will look at what it takes to run them alongside each other.
  
