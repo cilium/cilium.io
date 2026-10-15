@@ -208,6 +208,7 @@ const {
   pagali,
   michelin,
   paypal,
+  splunk,
 } = caseStudiesData;
 
 const hero = {
@@ -316,11 +317,13 @@ const userCommunity1 = {
     ovh,
     zynga,
     asana,
-    etraveli,
     suse,
     telefonica,
     cleverCloud,
     michelin,
+    splunk,
+    celonis,
+    etraveli,
   ],
 };
 
@@ -362,7 +365,6 @@ const userCommunity2 = {
     arangodb,
     acoss,
     canonical,
-    celonis,
     melenion,
     civo,
     kubesphere,
