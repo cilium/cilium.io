@@ -178,6 +178,7 @@ import SonyLogo from './images/sony.inline.svg';
 import SpectroCloudLogo from './images/spectrocloud.inline.svg';
 import SpherityLogo from './images/spherity.inline.svg';
 import SportradarLogo from './images/sportradar.inline.svg';
+import SplunkLogo from './images/splunk.inline.svg';
 import SproutfiLogo from './images/sproutfi.inline.svg';
 import StreamSecurityLogo from './images/streamsecurity.inline.svg';
 import SuperorbitalLogo from './images/superorbital.inline.svg';
@@ -406,6 +407,7 @@ const icons = {
   xata: XataLogo,
   pagali: PagaliLogo,
   paypal: PaypalLogo,
+  splunk: SplunkLogo,
 };
 
 const UserCommunity = ({

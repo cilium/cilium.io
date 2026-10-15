@@ -10,7 +10,17 @@ export default {
       },
     ],
   },
-  paypal: {
+  splunk: {
+    iconName: 'splunk',
+    text: '<b>Splunk</b> uses Tetragon to unify security observability and reduce costs',
+    links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/splunk/',
+        linkTarget: '_blank',
+      },
+    ],
+  },paypal: {
     iconName: 'paypal',
     text: '<b>PayPal</b> uses Cilium as the CNI for its self-managed Kubernetes clusters',
   },
@@ -18,6 +28,10 @@ export default {
     iconName: 'etraveli',
     text: '<b>Etraveli Group</b> uses Cilium to replace legacy on-premises hardware load balancers',
     links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/etraveli-group/',
+      },
       {
         linkText: 'Talk',
         linkUrl:
@@ -1777,6 +1791,13 @@ export default {
   preferredNetworks: {
     iconName: 'preferredNetworks',
     text: '<b>Preferred Networks</b> uses Cilium for scalable and reliable Kubernetes networking with BGP.',
+    links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/preferred-networks-2/',
+        linkTarget: '_blank',
+      },
+    ],
   },
   batumbu: {
     iconName: 'batumbu',
@@ -1801,6 +1822,13 @@ export default {
   celonis: {
     iconName: 'celonis',
     text: '<b>Celonis</b> has standardized on Cilium as the primary CNI across its entire global cluster fleet',
+    links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/celonis/',
+        linkTarget: '_blank',
+      },
+    ],
   },
   mogenius: {
     iconName: 'mogenius',

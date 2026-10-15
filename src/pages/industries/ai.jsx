@@ -18,6 +18,7 @@ import MeltwaterOfficeImage from 'images/pages/industries/ai/meltwater-office.jp
 import RouterBee from 'images/pages/industries/ai/router-bee.png';
 import OpenaiOfficeImage from 'images/pages/industries/ai/openai-office.jpg';
 import EccoOfficeImage from 'images/pages/industries/e-commerce/ecco-office.webp';
+import PreferrednetworksOfficeImage from 'images/pages/industries/ai/preferred-networks-office.jpg';
 import MainLayout from 'layouts/main/main';
 
 const heroContent = {
@@ -105,6 +106,15 @@ const bulletSection5 = {
 };
 
 const aiResouces = [
+    {
+    imageSrc: PreferrednetworksOfficeImage,
+    imageAlt: 'preferred networks office',
+    title: 'Preferred Networks unifies container networking for AI clusters with Cilium',
+    buttonText: 'Read The Case Study',
+    buttonLink: 'https://www.cncf.io/case-studies/preferred-networks-2/',
+    description:
+      'Preferred Networks standardized on Cilium as its networking layer across 5 production Kunernetes clusters supporting 1,500+ GPUs.',
+  },
   {
     imageSrc: EccoOfficeImage,
     imageAlt: 'ecco office building',

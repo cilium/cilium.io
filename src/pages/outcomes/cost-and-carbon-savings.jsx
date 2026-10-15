@@ -12,6 +12,7 @@ import EccoLogo from 'icons/ecco.inline.svg';
 import KakaoLogo from 'icons/kakao.inline.svg';
 import MeltwaterLogo from 'icons/logo-meltwater.inline.svg';
 import SeznamLogo from 'icons/logo-seznam.inline.svg';
+import SplunkLogo from 'icons/splunk.inline.svg';
 import SmartnewsLogo from 'icons/smartnews.inline.svg';
 import SavingsImage1 from 'images/pages/outcomes/cost-and-carbon-savings/cc-image1.png';
 import SavingsImage2 from 'images/pages/outcomes/cost-and-carbon-savings/cc-image2.png';
@@ -97,6 +98,18 @@ const sectionContent4 = {
 };
 
 const testimonials = [
+   {
+    logo: SplunkLogo,
+    title: 'Reducing CPU and memory overhead with Tetragon',
+    description:
+      'Splunk replaced three separate security tools and their daemonset and sidecar overhead with Tetragon across 80+ Kubernetes clusters, cutting CPU utilization by 67% and memory utilization by 74% with no loss in security coverage.',
+    CTAs: [
+      {
+        CTAtext: 'Read The Case Study',
+        url: 'https://www.cncf.io/case-studies/splunk/',
+      },
+    ],
+  },
   {
     logo: SmartnewsLogo,
     title: 'Cutting networking overhead at scale',
