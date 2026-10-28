@@ -1,6 +1,6 @@
 ---
-path: '/blog/2026/09/10/tetragon-grpc'
-date: '2026-09-10T12:00:00.000Z'
+path: '/blog/2026/10/28/tetragon-grpc'
+date: '2026-10-28T12:00:00.000Z'
 title: 'Hardening Tetragon’s gRPC API with Tetragon'
 ogImage: cover.png
 isFeatured: false
