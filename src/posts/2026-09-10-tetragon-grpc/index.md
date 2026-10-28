@@ -4,7 +4,7 @@ date: '2026-09-10T12:00:00.000Z'
 title: 'Hardening Tetragon’s gRPC API with Tetragon'
 ogImage: cover.png
 isFeatured: false
-ogSummary: 'Tetragon before v1.7 exposes an unauthenticated gRPC API that hostNetwork pods can reach (CVE-2026-65960). Learn how a Tetragon tracing policy blocks that access until you can upgrade.'
+ogSummary: 'Tetragon versions before v1.7 exposes an unauthenticated gRPC API that hostNetwork pods can reach (CVE-2026-65960). Learn how a Tetragon tracing policy blocks that access until you can upgrade.'
 categories:
   - Technology
 tags:
