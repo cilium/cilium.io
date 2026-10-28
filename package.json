@@ -4,6 +4,9 @@
   "description": "Cilium.io - Public website",
   "version": "0.1.0",
   "author": "Cilium",
+  "engines": {
+    "node": ">=22 <26"
+  },
   "scripts": {
     "start": "npm run develop",
     "develop": "gatsby develop",
