@@ -1,6 +1,6 @@
 ---
 path: /blog/2026/07/08/how-k0rdent-and-cilium-turn-kubernetes-sprawl-into-a-platform
-date: 2026-07-08T14:00:00.000Z
+date: '2026-07-08T14:00:00.000Z'
 title: 'How k0rdent and Cilium Turn Kubernetes Sprawl into a Platform'
 isFeatured: false
 ogImage: images/ebee-k0rdent-header.png

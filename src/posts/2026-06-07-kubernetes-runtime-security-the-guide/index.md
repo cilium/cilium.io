@@ -1,6 +1,6 @@
 ---
 path: /blog/2026/06/07/kubernetes-runtime-security-the-guide
-date: 2026-06-07T09:00:00.000Z
+date: '2026-06-07T09:00:00.000Z'
 title: 'Kubernetes Runtime Security : The Guide'
 isFeatured: false
 ogImage: images/runtime-security.png
