@@ -1,6 +1,6 @@
 ---
 path: /blog/2026/04/25/understanding-kubernetes-networking
-date: 2026-04-25T09:13:00.000Z
+date: '2026-04-25T09:13:00.000Z'
 title: 'Understanding Kubernetes Networking'
 isFeatured: false
 ogImage: images/kubernetes-cluster-network.png

@@ -1,6 +1,6 @@
 ---
 path: /blog/2026/06/07/understanding-kubernetes-network-security
-date: 2026-06-07T09:00:00.000Z
+date: '2026-06-07T09:00:00.000Z'
 title: 'Understanding Kubernetes Network Security'
 isFeatured: false
 ogImage: images/cilium-node-agent.png

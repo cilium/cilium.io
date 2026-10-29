@@ -1,6 +1,6 @@
 ---
 path: /blog/2026/08/16/troubleshooting-kubernetes-networking
-date: 2026-08-16T09:00:00.000Z
+date: '2026-08-16T09:00:00.000Z'
 title: 'Troubleshooting Kubernetes Networking'
 isFeatured: false
 ogImage: images/troubleshooting-kubernetes-networking-cover.png

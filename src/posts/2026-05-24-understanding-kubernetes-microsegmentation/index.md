@@ -1,6 +1,6 @@
 ---
 path: /blog/2026/05/24/understanding-kubernetes-microsegmentation
-date: 2026-05-24T09:00:00.000Z
+date: '2026-05-24T09:00:00.000Z'
 title: 'Understanding Kubernetes Microsegmentation'
 isFeatured: false
 ogImage: images/microsegmentation-cover.png

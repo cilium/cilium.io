@@ -1,6 +1,6 @@
 ---
 path: /blog/2026/06/13/multi-cluster-kubernetes-explained
-date: 2026-06-13T14:00:00.000Z
+date: '2026-06-13T14:00:00.000Z'
 title: 'Multi-Cluster Kubernetes Explained'
 isFeatured: false
 ogImage: images/multi-cluster-cover-image.jpg

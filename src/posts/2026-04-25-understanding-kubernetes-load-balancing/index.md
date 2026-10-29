@@ -1,6 +1,6 @@
 ---
 path: /blog/2026/04/25/understanding-kubernetes-load-balancing
-date: 2026-04-25T09:13:00.000Z
+date: '2026-04-25T09:13:00.000Z'
 title: 'Understanding Kubernetes Load Balancing'
 isFeatured: false
 ogImage: images/understanding-kubernetes-load-balancing-cover.png

@@ -1,6 +1,6 @@
 ---
 path: /blog/2026/03/23/native-mtls-cilium
-date: 2026-03-23T09:00:00.000Z
+date: '2026-03-23T09:00:00.000Z'
 title: "Native mTLS for Cilium: Transparent Encryption Meets Cloud Native Identity with ztunnel"
 isFeatured: false
 ogImage: native-mtls-cover.png
