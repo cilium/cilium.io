@@ -2,6 +2,7 @@
 path: /blog/2026/09/23/cilium-at-kubecon-na-26
 date: '2026-09-23T12:00:00.000Z'
 title: 'Cilium at KubeCon + CloudNativeCon and CiliumCon North America 2026'
+isFeatured: true
 isPopular: true
 ogImage: ogimage.png
 ogSummary: 'Learn how to engage with Cilium at KubeCon + CloudNativeCon and CiliumCon North America 2026 in Salt Lake City.'
@@ -25,39 +26,39 @@ The talks for the upcoming event reflect these advancements and shifts in the in
 CiliumCon will take place Monday morning, November 9, featuring technical deep dives and end user production stories. The [full schedule](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?all-sessions=ciliumcon) includes:
 
 **[Welcome + Opening Remarks](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1312035)** Joe Stringer & Jordan Rife, CiliumCon Co-Chairs | 9:00 - 9:05 AM
- 
+
 **[Handing a Proxy the Keys to Your Pod: Inside Cilium's Sidecarless mTLS](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1268376)** Quang Nguyen, Microsoft & Robin Gögge, Isovalent at Cisco | 9:10 - 9:35 AM
- 
+
 Sidecarless mTLS was shipped in Cilium 1.19. It allows users to label a namespace, and traffic between its pods gets encrypted and identity-authenticated without needing to make any app changes. This talk will explain how it works under the hood, and give a live demo of the work being done upstream on SPIRE to bind certificates to a requesting process.
- 
+
 **[Cluster Mesh, Native Routing, and Multi-Pool IPAM in IPv6-Only Networks: What the Docs Don't Tell You](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1269739)** Kapil Agrawal & Luke Baker, ESnet | 9:45 - 10:10 AM
- 
+
 ESnet will return to CiliumCon to present the next chapter of running Kubernetes on an IPv6-only network. They will share what broke while they built ClusterMesh with native routing, BGP, and multi-pool IPAM entirely without IPv4, and how they resolved it.
- 
+
 **[After Mythos: The CVE Firehose Meets Tetragon](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1311961)** Liz Rice, Isovalent at Cisco | 10:15 - 10:20 AM
 
 With vulnerabilities arriving faster than teams can patch, runtime protection has to fill the gap. This sponsored keynote will cover the latest Tetragon developments for deploying eBPF-based guardrails and mitigations with no downtime.
- 
+
 **[Don't Make a Mesh of It: Multi-Cluster Networking at Cloud Scale](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1268169)** Anubhab Majumdar, Microsoft; Vamsi Kalapala, Palantir | 10:40 - 11:05 AM
- 
+
 Using Cilium Cluster Mesh as a case study, this talk will cover what makes multi-cluster networking practical at cloud scale, from scoped service export to aligning the data path with network topology.
- 
+
 **[When Packets Disappear in the Cloud: Debugging Inference Workloads with eBPF](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1248003)** Venkat Gattupalli & Haibing Zhou, OpenAI | 11:15 - 11:40 AM
- 
+
 OpenAI will trace through rare packet loss in latency-sensitive inference workloads using targeted eBPF probes, isolating a cloud-infrastructure issue outside their own stack.
- 
+
 **[Running Out of IPs Before You Run Out of GPUs: IPv6 for AI-Scale Kubernetes](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1269247)** Marino Wijay, Isovalent at Cisco | 11:45 - 11:55 AM
- 
+
 Dense AI clusters can exhaust private IPv4 space faster than teams expect. This talk will make the case that IPv6 is the substrate that lets AI-scale Kubernetes keep growing, with production examples and a live demo.
- 
+
 **[Lightning Talk: One Kernel, Two eBPF Stacks: Running OBI Alongside Cilium](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1255649)** Antonio Jimenez Martinez, Cisco | 12:00 - 12:10 PM
- 
+
 OpenTelemetry eBPF Instrumentation (OBI) and Cilium both run eBPF programs on the same node. This talk will look at what it takes to run them alongside each other.
- 
+
 **[Lightning Talk: A One-Way Valve to netkit: Migrating Cilium's Datapath Transparently at Scale](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1264636)** Hadrien Patte, Datadog | 12:15 - 12:25 PM
- 
+
 Datadog will share how they migrated hundreds of thousands of nodes across hundreds of production clusters from veth to netkit as a one-way valve, with rollback available at every step.
- 
+
 **[Closing Remarks](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/co-located-events/cncf-hosted-co-located-schedule/?id=1312055)** Joe Stringer & Jordan Rife, CiliumCon Co-Chairs | 12:25 PM
 
 ## Featured KubeCon + CloudNativeCon North America 2026 Talks
@@ -65,21 +66,21 @@ Datadog will share how they migrated hundreds of thousands of nodes across hundr
 Cilium shows up across the main conference schedule too, from a Maintainer Track deep dive into the project's evolution to end user stories from Walmart Global Tech, GEICO, and AWS. Highlights below:
 
 **[Zero Downtime CNI Migration at Scale: Canal to Cilium Across Hundreds of Production Clusters](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250187)** Prathamesh Bhope, Walmart Global Tech | Tuesday, November 10 | 4:40 - 5:10 PM
- 
+
 Walmart Global Tech will share the hybrid migration strategy that moved hundreds of production clusters from Canal to Cilium with zero downtime and a 2.27x throughput improvement.
- 
+
 **[From ListenerSets to eBPF Plugins: Cilium's Evolution Across the Stack](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1289674)** Christine Kim & Katie Meinders, Isovalent at Cisco; Hadrien Patte, Datadog | Wednesday, November 11 | 11:50 AM - 12:20 PM
- 
+
 A Maintainer Track session covering Cilium's latest development, from Gateway API features like TCPRoute and ListenerSet to new eBPF datapath plugins, plus community updates and how to get involved.
- 
+
 **[Managing Network Security in Multi-Tenant Environments with Istio and Cilium](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1247970)** Michael Bolot & Zaira Shaikh, GEICO | Thursday, November 12 | 11:00 - 11:30 AM
- 
+
 GEICO will share how they layer Cilium Network Policies for broad network boundaries with Istio authorization policies for application-layer zero trust.
- 
+
 **[Follow the GPUs: How a Regulated Fortune 100 Serves Customers When No Single Cloud Has Enough](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1250973)** Michael Kinsley & Yuva Peavler, GEICO | Thursday, November 12 | 11:50 AM - 12:20 PM
- 
+
 GEICO's platform team will detail their Hybrid Cloud Fabric, a multi-provider Kubernetes and zero trust overlay built on Istio, Cilium, and SPIFFE/SPIRE.
- 
+
 **[Here be DRAgons: Bringing Native Zero-Copy Networking to Pods with Cilium and netkit](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/program/schedule/?id=1244000)** Daniel Borkmann & Bernardo Soares, Isovalent at Cisco | Thursday, November 12 | 3:30 - 4:00 PM
 
 A look at two new Dynamic Resource Allocation drivers for Cilium, bringing native zero-copy networking to Pods for the first time via netkit.
