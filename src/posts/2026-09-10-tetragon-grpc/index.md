@@ -29,7 +29,7 @@ The gRPC API is administrative: it can modify tracing policies, change debug set
 
 Tetragon can expose the API over a Unix domain socket (UDS), where filesystem permissions control access, or over TCP. Before v1.7, the default was a TCP listener on `localhost:54321`. Since v1.7, the default is a UDS, and TCP is used only when operators configure it explicitly.
 
-![A malicious pod with hostNetwork: true shares the node's network namespace and connects to Tetragon's unauthenticated gRPC API on 127.0.0.1:54321, while other pods stay in isolated network namespaces](illustration1.png)
+![A compromised pod with hostNetwork: true shares the node's network namespace and loopback, so it can connect to Tetragon's unauthenticated gRPC admin API on 127.0.0.1:54321. Pods in their own network namespaces have a separate loopback where nothing listens on port 54321](illustration1.png)
 
 A TCP listener bound to `127.0.0.1` looks reachable only from the node itself. However, Kubernetes pods with `hostNetwork: true` share the node's network namespace, including its loopback interface. As the diagram shows, a compromised or malicious host-networked pod can therefore connect to the unauthenticated API on `127.0.0.1:54321`, while pods in their own network namespaces cannot.
 
