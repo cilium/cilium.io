@@ -71,7 +71,7 @@ docker-run-dev: ## Run Docker container (dev mode)
 		-w /app \
 		-p $(DOCKER_DEV_PORT):8000 \
 		-e NODE_OPTIONS="$(NODE_OPTIONS)" \
-		node:18-alpine sh -c "npm install && npm run start"
+		node:24-alpine sh -c "npm install && npm run start"
 
 ## Open a shell in the production container (useful for debugging)
 docker-shell: docker-build ## Open shell in Docker container
