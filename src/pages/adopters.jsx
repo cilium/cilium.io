@@ -208,6 +208,10 @@ const {
   pagali,
   michelin,
   paypal,
+  splunk,
+  celonis,
+  etraveli,
+  preferredNetworks,
 } = caseStudiesData;
 
 const hero = {
@@ -321,6 +325,10 @@ const userCommunity1 = {
     telefonica,
     cleverCloud,
     michelin,
+    splunk,
+    celonis,
+    etraveli,
+    preferredNetworks,
   ],
 };
 
@@ -362,7 +370,6 @@ const userCommunity2 = {
     arangodb,
     acoss,
     canonical,
-    celonis,
     melenion,
     civo,
     kubesphere,
@@ -418,7 +425,6 @@ const userCommunity2 = {
     guida,
     outscale,
     ost,
-    preferredNetworks,
     batumbu,
     fptTelecom,
     ionx,
