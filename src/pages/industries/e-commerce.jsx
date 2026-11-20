@@ -15,6 +15,7 @@ import CodeIcon from 'images/pages/industries/e-commerce/code.inline.svg';
 import DbIcon from 'images/pages/industries/e-commerce/db.inline.svg';
 import EccoOfficeImage from 'images/pages/industries/e-commerce/ecco-office.webp';
 import EcommerceImage1 from 'images/pages/industries/e-commerce/ecommerce-1.png';
+import EtraveliOfficeImage from 'images/pages/industries/e-commerce/etravelioffice.jpeg';
 import FlipkartOfficeImage from 'images/pages/industries/e-commerce/flipkart-office.png';
 import IkeaOfficeImage from 'images/pages/industries/e-commerce/ikeaoffice.png';
 import LockIcon from 'images/pages/industries/e-commerce/lock.inline.svg';
@@ -96,6 +97,15 @@ const dbSchenkerTestimonial = {
 
 const commerceResources = [
   {
+    imageSrc: EtraveliOfficeImage,
+    imageAlt: 'etraveli group office',
+    title: 'Etraveli Group Replaced Proprietary Load Balancers and Eliminated Production Downtime with Cilium',
+    buttonText: 'Read The Case Study',
+    buttonLink: 'https://www.cncf.io/case-studies/etraveli-group/',
+    description:
+      'Etraveli Group handles hundreds of millions of flight searches a day for 48 million customers across 75 markets. The team replaced proprietary hardware load balancers with Cilium BGP Control Plane, LB-IPAM, and Gateway API across 14 Kubernetes clusters, eliminating the appliance crashes that caused production downtime.',
+  },
+  {
     imageSrc: FlipkartOfficeImage,
     imageAlt: 'flipkart office building',
     title: 'How Flipkart Scales Kubernetes Networking to Millions of RPS with Cilium',
@@ -164,6 +174,7 @@ const ecommerceLogos = [
   'overstock',
   'tailorbrands',
   'flipkart',
+  'etraveli',
 ];
 
 const commerceUsecases = [
