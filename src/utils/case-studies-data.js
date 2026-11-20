@@ -19,9 +19,8 @@ export default {
     text: '<b>Etraveli Group</b> uses Cilium to replace legacy on-premises hardware load balancers',
     links: [
       {
-        linkText: 'Talk',
-        linkUrl:
-          'https://www.youtube.com/watch?v=KWS-NaZd62M&list=PLDg_GiBbAx-mSQHa1y9Z9sjBYUmG2FBCZ&index=7',
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/etraveli-group/',
         linkTarget: '_blank',
       },
     ],
@@ -1801,6 +1800,24 @@ export default {
   celonis: {
     iconName: 'celonis',
     text: '<b>Celonis</b> has standardized on Cilium as the primary CNI across its entire global cluster fleet',
+    links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/celonis/',
+        linkTarget: '_blank',
+      },
+    ],
+  },
+  splunk: {
+    iconName: 'splunk',
+    text: '<b>Splunk</b> deployed Tetragon across its Kubernetes clusters to serve as the foundation of its runtime security observability program, replacing three existing tools.',
+    links: [
+      {
+        linkText: 'Case Study',
+        linkUrl: 'https://www.cncf.io/case-studies/splunk/',
+        linkTarget: '_blank',
+      },
+    ],
   },
   mogenius: {
     iconName: 'mogenius',
